@@ -3,153 +3,369 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Granite City Digital | Websites, Resumes and Spreadsheets in Mount Airy, NC</title>
+<title>Granite City Digital | Small business websites in Mount Airy, NC from $150</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="description" content="Granite City Digital helps small businesses and job seekers in Mount Airy and Surry County with simple websites, resumes, Excel spreadsheets and ready to use templates.">
+<meta name="description" content="Clean, mobile friendly websites for small businesses in Mount Airy and Surry County, NC. Free sample first. $150 to build, $25 a month to keep it running, no contract.">
+<meta property="og:title" content="Granite City Digital | Small business websites in Mount Airy, NC">
+<meta property="og:description" content="See a free sample of your website before you pay anything. $150 to build, $25 a month, no contract. Built locally in Mount Airy.">
+<meta property="og:image" content="https://granitecitydigital.me/sample-preview.png">
+<meta property="og:url" content="https://granitecitydigital.me">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#1d2430;--muted:#5b6575;--stone:#eef0f3;--accent:#2f6f8f;--accent2:#b8862b;--card:#fff}
+:root{
+  --bg:#0b0b0c;
+  --bg-2:#111113;
+  --bg-3:#17171a;
+  --line:#232326;
+  --line-2:#303035;
+  --text:#ededea;
+  --text-2:#9a9a95;
+  --text-3:#5f5f5b;
+  --yellow:#f3c300;
+  --yellow-2:#ffd43a;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
-a{color:var(--accent)}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;background:rgba(255,255,255,.95);border-bottom:1px solid #e3e6ea;z-index:10}
-nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-weight:800;font-size:1.15rem;color:var(--ink);text-decoration:none}
-.logo span{color:var(--accent2)}
-.logo{display:inline-flex;align-items:center;gap:10px}.logo .mark{width:34px;height:34px;flex:none}
-.contact-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}.btn.alt{background:var(--accent)}
-.nav-call{font-weight:700;color:var(--accent2)!important}
-nav ul{display:flex;gap:22px;list-style:none}
-nav ul a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem}
-.hero{background:linear-gradient(135deg,#26313f,#3d4d61);color:#fff;padding:90px 0 80px}
-.hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;max-width:760px}
-.hero p{font-size:1.15rem;opacity:.9;max-width:640px;margin:18px 0 30px}
-.btn{display:inline-block;background:var(--accent2);color:#fff;padding:13px 26px;border-radius:8px;font-weight:700;text-decoration:none}
-.btn.ghost{background:transparent;border:2px solid #fff;margin-left:10px}
-section{padding:70px 0}
-h2{font-size:2rem;margin-bottom:10px}
-.lead{color:var(--muted);max-width:640px;margin-bottom:36px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
-.card{background:var(--card);border:1px solid #e3e6ea;border-radius:12px;padding:26px}
-.card h3{margin-bottom:6px}
-.price{color:var(--accent);font-weight:800;margin-bottom:10px}
-.alt{background:var(--stone)}
-.product img{width:100%;border-radius:8px;margin-bottom:12px;display:block}
-.product a.btn{margin-top:12px;padding:10px 20px;font-size:.95rem}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.contact{text-align:center}
-footer{background:#1d2430;color:#aab3c0;text-align:center;padding:28px 0;font-size:.9rem}
-@media(max-width:720px){nav ul{display:none}.about{grid-template-columns:1fr}.btn.ghost{margin:12px 0 0}}
-.steps{counter-reset:s}.step-n{width:42px;height:42px;border-radius:50%;background:var(--accent2);color:#fff;display:grid;place-items:center;font-weight:800;margin-bottom:10px}
-.tier{position:relative}.tier.pop{border:2px solid var(--accent2)}.tier .tag{position:absolute;top:-12px;left:20px;background:var(--accent2);color:#fff;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px}
-.tier ul{padding-left:18px;margin:10px 0 0}.tier li{margin-bottom:4px}.big{font-size:1.8rem;font-weight:800;color:var(--ink)}
-.work{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}.work>div{min-width:0}.work img{width:100%;border-radius:12px;border:1px solid #e3e6ea;box-shadow:0 10px 30px rgba(0,0,0,.08)}
-details{background:#fff;border:1px solid #e3e6ea;border-radius:10px;padding:14px 18px;margin-bottom:10px}summary{font-weight:700;cursor:pointer}details p{margin-top:10px;color:var(--muted)}
-.founding{background:#fff7e6;border:1px solid #f0d9a8;border-radius:10px;padding:14px 18px;margin-top:22px;font-weight:600}
-@media(max-width:720px){.work{grid-template-columns:1fr}}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;font-size:15px;font-weight:400;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-weight:400;letter-spacing:-.025em;line-height:1.1}
+h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:16px;max-width:22ch}
+h3{font-size:1.05rem;font-weight:600;letter-spacing:-.01em;margin-bottom:8px;color:var(--text)}
+p{max-width:56ch;color:var(--text-2)}
+a{color:var(--text);text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+.eyebrow{display:flex;align-items:center;gap:14px;font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--text-3);margin-bottom:22px;max-width:none}
+.eyebrow::before{content:"";width:24px;height:1px;background:var(--yellow)}
+section{padding:120px 0}
+.rule{border-top:1px solid var(--line)}
+.sub{font-size:1.05rem}
+
+header{position:sticky;top:0;z-index:20;background:rgba(11,11,12,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{display:inline-flex;align-items:baseline;gap:8px;font-weight:700;font-size:1.05rem;letter-spacing:-.03em}
+.logo b{font-weight:700}.logo i{font-style:normal;color:var(--yellow)}
+.logo span{color:var(--text-3);font-weight:500;font-size:.62rem;letter-spacing:.16em}
+nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+nav ul a{font-size:.85rem;color:var(--text-2)}
+nav ul a:hover{color:var(--text)}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:7px;font-weight:600;font-size:.88rem;border:1px solid transparent;transition:all .15s}
+.btn svg{width:13px;height:13px}
+.btn.y{background:var(--yellow);color:#111}
+.btn.y:hover{background:var(--yellow-2)}
+.btn.g{color:var(--text);border-color:var(--line-2)}
+.btn.g:hover{border-color:var(--text-2)}
+.btn.sm{padding:9px 14px;font-size:.82rem}
+.link{color:var(--text);font-weight:500;display:inline-flex;align-items:center;gap:8px}
+.link::after{content:"";width:12px;height:12px;background:currentColor;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17L17 7M9 7h8v8'/%3E%3C/svg%3E") center/100% no-repeat;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17L17 7M9 7h8v8'/%3E%3C/svg%3E") center/100% no-repeat}
+.link:hover{color:var(--yellow)}
+
+/* hero */
+.hero{padding:150px 0 130px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:72px 72px;opacity:.35;mask-image:radial-gradient(70% 80% at 30% 20%,#000,transparent);-webkit-mask-image:radial-gradient(70% 80% at 30% 20%,#000,transparent)}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(2.8rem,6.4vw,4.8rem);font-weight:300;margin-bottom:26px;max-width:14ch}
+.hero h1 span{color:var(--text-2)}
+.hero .sub{margin-bottom:36px;max-width:44ch}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
+.hero .fine{font-size:.8rem;color:var(--text-3);display:flex;align-items:center;gap:8px}
+.towns{font-size:.78rem;color:var(--text-3);margin-top:48px;letter-spacing:.02em}
+.who{display:flex;align-items:center;gap:14px;margin-top:40px;font-size:.9rem;color:var(--text-2)}
+.who b{color:var(--text);font-weight:600}
+.who small{font-size:.82rem;color:var(--text-3)}
+.avatar{width:48px;height:48px;border-radius:50%;background:var(--bg-3);border:1px solid var(--line-2);flex:none;overflow:hidden;display:grid;place-items:center}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.avatar:empty::after{content:"L";color:var(--yellow);font-weight:600}
+.hero .fine::before{content:"";width:12px;height:12px;background:var(--yellow);mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/100% no-repeat;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/100% no-repeat}
+
+/* numbered columns */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:64px}
+.trio .n{font-size:.68rem;letter-spacing:.2em;color:var(--text-3);margin-bottom:22px}
+.trio p{font-size:.92rem}
+
+/* work */
+.work{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.work p{margin-bottom:26px}
+.aside{font-size:.85rem;color:var(--text-3);margin-top:34px;padding-top:22px;border-top:1px solid var(--line)}
+.shot{border:1px solid var(--line-2);border-radius:10px;overflow:hidden;background:var(--bg-3)}
+.shot img{width:100%;aspect-ratio:5/4;object-fit:cover;object-position:top}
+
+/* pricing */
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:64px}
+.plan{border:1px solid var(--line);border-radius:12px;padding:36px;background:var(--bg-2)}
+.plan.main{border-color:var(--yellow)}
+.plan .kind{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-3);margin-bottom:22px}
+.plan.main .kind{color:var(--yellow)}
+.plan h3{font-size:1.15rem;font-weight:500}
+.plan .amt{display:flex;align-items:baseline;gap:10px;margin:6px 0 10px}
+.plan .amt b{font-size:2.8rem;font-weight:300;letter-spacing:-.04em;line-height:1}
+.plan .amt small{color:var(--text-3);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase}
+.plan .desc{font-size:.92rem;margin-bottom:26px}
+.plan ul{list-style:none;margin-bottom:30px}
+.plan li{padding:9px 0;border-top:1px solid var(--line);font-size:.9rem;color:var(--text-2)}
+.plan .foot{font-size:.78rem;color:var(--text-3);margin-top:18px}
+.spots{font-size:.85rem;color:var(--text-3);margin-top:-4px}
+.spots b{color:var(--yellow);font-weight:600}
+.terms{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:56px;padding-top:36px;border-top:1px solid var(--line)}
+.terms h3{font-size:.92rem;font-weight:500}
+.terms p{font-size:.88rem}
+
+/* templates */
+.shelf{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:56px}
+.item img{aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line);border-radius:8px;margin-bottom:12px;opacity:.9;transition:opacity .15s}
+.item:hover img{opacity:1}
+.item h3{font-size:.88rem;font-weight:500;margin-bottom:2px}
+.item .p{font-size:.82rem;color:var(--text-3)}
+.item a:hover h3{color:var(--yellow)}
+
+/* about */
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:64px;align-items:center}
+.about p{margin-bottom:16px}
+.photo{aspect-ratio:4/5;max-width:340px;border-radius:10px;background:var(--bg-3);border:1px solid var(--line);display:grid;place-items:center;color:var(--text-3);font-size:.8rem;overflow:hidden;justify-self:end}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo[hidden]{display:none}.about:has(.photo[hidden]){grid-template-columns:1fr}
+
+/* faq */
+.faq{max-width:720px;margin-top:48px}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;font-weight:500;font-size:.98rem;padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--text-3);font-weight:300;font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding:0 0 22px;font-size:.92rem}
+
+/* start */
+.start .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.ways{margin-top:36px}
+.ways a{display:block;padding:16px 0;border-top:1px solid var(--line);font-weight:500}
+.ways a small{display:block;font-weight:400;color:var(--text-3);font-size:.8rem}
+.ways a:hover{color:var(--yellow)}
+form{display:grid;gap:22px;padding-top:6px}
+label{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);display:grid;gap:8px}
+input,textarea{font:inherit;font-size:.95rem;color:var(--text);background:transparent;border:0;border-bottom:1px solid var(--line-2);padding:8px 0;width:100%;border-radius:0}
+input:focus,textarea:focus{outline:none;border-color:var(--yellow)}
+textarea{min-height:70px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+form .btn{justify-self:start;margin-top:6px}
+.form-note{font-size:.78rem;color:var(--text-3)}
+
+footer{padding:56px 0 110px;font-size:.85rem;color:var(--text-3);border-top:1px solid var(--line)}
+footer .wrap{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
+.fcol{display:grid;gap:9px;align-content:start}
+.fcol b{font-weight:700;color:var(--text);font-size:1rem;letter-spacing:-.03em}
+.fcol b i{font-style:normal;color:var(--yellow)}
+.fcol small{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-3);margin-bottom:4px}
+.fcol a{color:var(--text-2);display:inline-flex;align-items:center;gap:8px}
+.fcol a:hover{color:var(--text)}
+.fcol svg{width:15px;height:15px}
+@media(max-width:860px){footer .wrap{grid-template-columns:1fr 1fr}.fcol:first-child{grid-column:1/-1}}
+
+.callbar{display:none}
+@media(max-width:860px){
+  nav ul li:not(.keep){display:none}
+  section{padding:80px 0}
+  .hero{padding:90px 0 80px}
+  .trio,.work,.plans,.about,.start .wrap,.terms{grid-template-columns:1fr}
+  .terms{gap:24px}
+  .towns{margin-top:36px}
+  .trio{gap:36px}
+  .shelf{grid-template-columns:1fr 1fr}
+  .photo{justify-self:start;max-width:100%}
+  .two{grid-template-columns:1fr}
+  .callbar{display:grid;grid-template-columns:1fr 1.4fr;position:fixed;bottom:0;left:0;right:0;z-index:30;border-top:1px solid var(--line-2);background:var(--bg-2)}
+  .callbar a{text-align:center;padding:15px 10px;font-weight:600;font-size:.9rem}
+  .callbar a.y{background:var(--yellow);color:#111}
+}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Granite City Digital","url":"https://granitecitydigital.me","email":"lathan@granitecitydigital.me","telephone":"+1-743-222-0985","logo":"https://granitecitydigital.me/apple-touch-icon.png","address":{"@type":"PostalAddress","addressLocality":"Mount Airy","addressRegion":"NC","addressCountry":"US"},"areaServed":["Mount Airy","Surry County","Elkin","Dobson","Pilot Mountain"],"description":"Websites, resumes, Excel spreadsheets and templates for small businesses and job seekers in Mount Airy, NC."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Granite City Digital","url":"https://granitecitydigital.me","email":"lathan@granitecitydigital.me","telephone":"+1-743-222-0985","logo":"https://granitecitydigital.me/apple-touch-icon.png","image":"https://granitecitydigital.me/sample-preview.png","founder":{"@type":"Person","name":"Lathan Arnder"},"priceRange":"$","address":{"@type":"PostalAddress","addressLocality":"Mount Airy","addressRegion":"NC","postalCode":"27030","addressCountry":"US"},"areaServed":["Mount Airy","Surry County","Elkin","Dobson","Pilot Mountain","King"],"description":"Small business websites, resumes and Excel spreadsheets in Mount Airy, NC. Free sample first, $150 to build, $25 a month."}</script>
 </head>
 <body>
 <header><div class="wrap"><nav>
-<a class="logo" href="#"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1d2430"/><path d="M8 50 L26 18 L36 34 L42 26 L56 50 Z" fill="#2f6f8f"/><path d="M26 18 L36 34 L30 50 L8 50 Z" fill="#b8862b"/><path d="M42 26 L56 50 L44 50 L38 40 Z" fill="#3f86a8"/><path d="M26 18 L31 26.5 L27 30 L22.5 24.2 Z" fill="#f3e3c3"/></svg><b style="font-weight:800">Granite City <span>Digital</span></b></a>
-<ul><li><a href="#services">Services</a></li><li><a href="#work">Our Work</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#templates">Templates</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li><li><a class="nav-call" href="tel:+17432220985">(743) 222-0985</a></li></ul>
+<a class="logo" href="#"><b>GRANITE<i>.</i>CITY</b><span>DIGITAL</span></a>
+<ul>
+<li><a href="#services">Services</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#how">How it works</a></li><li><a href="#faq">FAQ</a></li>
+<li class="keep"><a class="btn g sm" href="#start">Get a free sample</a></li>
+</ul>
 </nav></div></header>
 
 <div class="hero"><div class="wrap">
-<h1>Simple digital help for Mount Airy businesses and job seekers.</h1>
-<p>Websites, resumes, spreadsheets and templates done right, at prices that make sense for a small business. Local, honest and quick to reply.</p>
-<a class="btn" href="#contact">Get a free sample website</a>
-<a class="btn ghost" href="#templates">Shop templates</a>
+<p class="eyebrow">Websites for small businesses in Mount Airy, NC</p>
+<h1>A better website.<br><span>Built right here.</span></h1>
+<p class="sub">A clean, mobile friendly website for your business. $150 to build, $25 a month to keep it running. You see a free sample before you pay a cent, no card, no obligation.</p>
+<div class="cta">
+<a class="btn y" href="#start">Get a free sample</a>
+<a class="btn g" href="#pricing">View pricing</a>
+</div>
+<p class="fine">Sample in 3 days. Live within a week of your OK. Replies the same day.</p>
+<div class="who"><span class="avatar" aria-hidden="true"><!-- PHOTO: <img src="lathan.jpg" alt=""> --></span><span><b>Lathan Arnder</b>, Mount Airy, NC<br><small>I build every site myself and answer my own phone.</small></span></div>
+<p class="towns">Mount Airy &middot; Dobson &middot; Pilot Mountain &middot; Elkin &middot; King &middot; all of Surry County</p>
 </div></div>
 
-<section id="services"><div class="wrap">
-<h2>Services</h2>
-<p class="lead">Every project starts with a quick conversation so you know exactly what you're getting and what it costs before any work begins.</p>
-<div class="grid">
-<div class="card"><h3>Small Business Websites</h3><p class="price">From $150 setup + $25/mo</p><p>A clean, mobile friendly site with a quote form, call and text buttons, before and after photos and an FAQ. I'll build you a free sample first so you can see it before you pay. <a href="#pricing">See plans</a></p></div>
-<div class="card"><h3>Resumes and Cover Letters</h3><p class="price">From $25</p><p>An ATS friendly, one page resume built from your real experience, plus cover letters and LinkedIn rewrites. Word and PDF files included.</p></div>
-<div class="card"><h3>Excel and Data Cleanup</h3><p class="price">From $20</p><p>Custom spreadsheets, budgets, trackers and calculators with working formulas, or messy data cleaned up and organized. Works in Excel or Google Sheets.</p></div>
-<div class="card"><h3>AI Chatbots</h3><p class="price">From $100 setup</p><p>A simple chatbot on your website that answers common customer questions like hours, pricing and booking, so you don't miss leads after closing time.</p></div>
+<section id="services" class="rule"><div class="wrap">
+<p class="eyebrow">What I do</p>
+<h2>Everything your website needs.</h2>
+<p>For contractors, cleaners, salons, shops, restaurants and every other local business around Mount Airy and Surry County.</p>
+<div class="trio">
+<div><div class="n">01</div><h3>Website design and build</h3><p>One custom page with your services, photos, hours and a clear way to reach you. Built for phones first, since that's where your customers are.</p></div>
+<div><div class="n">02</div><h3>Hosting and updates</h3><p>An optional monthly plan that keeps the site online and covers small changes. Text me new hours or prices and it's usually done the same day.</p></div>
+<div><div class="n">03</div><h3>Extras when you need them</h3><p>Extra pages, online booking, an after hours chatbot, Google Business Profile setup, resumes and Excel work. We agree on the price before I start.</p></div>
 </div>
 </div></section>
 
-
-<section id="work"><div class="wrap work">
-<div><img src="sample-preview.png" alt="Sample website for a pressure washing business"></div>
+<section id="work" class="rule"><div class="wrap work">
 <div>
-<h2>Recent work</h2>
-<p class="lead" style="margin-bottom:16px">Here's a sample site built for a pressure washing business. It has a quote form up top, a drag slider for before and after photos, a call and text bar on phones, and an FAQ that answers customers before they ask.</p>
-<a class="btn" href="sample-pressure-washing.html" target="_blank" rel="noopener">View the live sample</a>
+<p class="eyebrow">Recent work</p>
+<h2>See what $150 gets you.</h2>
+<p>I built this one for a pressure washing company so you can see a finished site instead of a screenshot. The business is made up. The site is real, and it works on your phone right now.</p>
+<a class="link" href="sample-pressure-washing.html" target="_blank" rel="noopener">Open the sample site</a>
+</div>
+<div class="shot"><img src="sample-preview.png" alt="Yadkin Valley Pressure Washing sample website"></div>
+</div></section>
+
+<section id="pricing" class="rule"><div class="wrap">
+<p class="eyebrow">Clear pricing</p>
+<h2>One price to build it. One small price to keep it.</h2>
+<p>No contracts, no hourly bills, no surprise invoices. Your whole first year is $450. Your monthly rate never goes up.</p>
+<p class="spots">Founding client pricing for my first five Surry County businesses. <b>5 of 5 spots open.</b></p>
+<div class="plans">
+<div class="plan main">
+<div class="kind">One time project</div>
+<h3>Website build</h3>
+<div class="amt"><small>From</small><b>$150</b></div>
+<p class="desc">A complete, finished page for your business, ready to launch.</p>
+<ul>
+<li>Custom design that fits your business</li>
+<li>Services, photos, hours, reviews and a contact form</li>
+<li>Call and text buttons that work on every phone</li>
+<li>Google setup, sitemap and launch handled for you</li>
+<li>Free sample first, so you decide after you've seen it</li>
+</ul>
+<a class="btn y" href="#start">Get a free sample</a>
+<p class="foot">Extra pages, booking and a chatbot are quoted separately. The Pro build with all three is $250.</p>
+</div>
+<div class="plan">
+<div class="kind">Optional, ongoing</div>
+<h3>Hosting and care</h3>
+<div class="amt"><b>$25</b><small>/ month</small></div>
+<p class="desc">Keeps the site online and covers the small changes every business needs.</p>
+<ul>
+<li>Hosting, security and backups</li>
+<li>Text, photo, hours and price updates</li>
+<li>Small updates usually done the same day</li>
+<li>Month to month, cancel anytime</li>
+<li>Or $250 a year and save $50</li>
+</ul>
+<a class="btn g" href="#start">Ask about care</a>
+<p class="foot">Pro sites are $35 a month. A web address like yourbusiness.com is about $12 a year and is registered in your name.</p>
+</div>
+</div>
+<div class="terms">
+<div><h3>If you don't like the sample</h3><p>You owe nothing and I delete it. No follow up calls.</p></div>
+<div><h3>If you want changes after launch</h3><p>Small updates are covered by the monthly. Bigger changes get a price before I start.</p></div>
+<div><h3>If you ever leave</h3><p>30 days notice. I hand you the files and the domain is already in your name.</p></div>
 </div>
 </div></section>
 
-<section id="how" class="alt"><div class="wrap">
-<h2>How it works</h2>
-<p class="lead">No risk, no tech headaches. You only pay if you love it.</p>
-<div class="grid">
-<div class="card"><div class="step-n">1</div><h3>We talk</h3><p>A quick call or text about your business, your services and what your customers ask most.</p></div>
-<div class="card"><div class="step-n">2</div><h3>Free sample</h3><p>I build a sample site with your info in about 2 to 3 days, free. You look it over on your phone.</p></div>
-<div class="card"><div class="step-n">3</div><h3>Go live</h3><p>Like it? We put it online and I keep it updated. Just text me when your hours or prices change.</p></div>
+<section id="how" class="rule"><div class="wrap">
+<p class="eyebrow">How it works</p>
+<h2>See the site before you commit.</h2>
+<p>You start with a free sample. You only pay once you like the direction.</p>
+<div class="trio">
+<div><div class="n">01</div><h3>Tell me about your business</h3><p>Fill out the short form below or text me. What you do, where you work, and any photos you have. I'll help organize the rest.</p></div>
+<div><div class="n">02</div><h3>Look at your free sample</h3><p>In about 3 days you get a link to a real site with your name on it. Open it on your phone and tell me what you'd change.</p></div>
+<div><div class="n">03</div><h3>Approve, then go live</h3><p>Like it? We agree on the price, you pay, and I finish it and launch it. Don't like it? You owe nothing.</p></div>
 </div>
 </div></section>
 
-<section id="pricing"><div class="wrap">
-<h2>Website pricing</h2>
-<p class="lead">Simple plans with no contracts. Cancel the monthly anytime.</p>
-<div class="grid">
-<div class="card tier"><h3>Starter</h3><div class="big">$150</div><p class="price">+ $25/mo</p>
-<ul><li>One page, mobile friendly site</li><li>Quote form and call and text buttons</li><li>Services, photos, hours and FAQ</li><li>Set up for Google search</li><li>Hosting and small updates included</li></ul></div>
-<div class="card tier pop"><span class="tag">Most popular</span><h3>Pro</h3><div class="big">$250</div><p class="price">+ $35/mo</p>
-<ul><li>Everything in Starter</li><li>Separate pages for each service and town you serve, so you show up in more searches</li><li>Online booking link</li><li>Google Business Profile setup</li><li>Website chatbot for common questions</li></ul></div>
-</div>
-<p class="founding">Founding client pricing: these rates are for my first few local clients while I build my portfolio.</p>
-<p style="color:var(--muted);margin-top:10px">Your own web address (like yourbusiness.com) is about $10 to $20 a year, paid to the domain company and always in your name.</p>
-</div></section>
-
-<section id="templates" class="alt"><div class="wrap">
-<h2>Ready to use Excel templates</h2>
-<p class="lead">Instant downloads with the formulas already built. Just fill in your numbers.</p>
-<div class="grid">
-<div class="card product"><img src="budget.png" alt="Monthly Budget Planner"><h3>Monthly Budget Planner</h3><p class="price">$6</p><a class="btn" href="https://lathanstone.gumroad.com/l/crtdn">Get it</a></div>
-<div class="card product"><img src="semester.png" alt="College Semester Planner"><h3>College Semester Planner</h3><p class="price">$7</p><a class="btn" href="https://lathanstone.gumroad.com/l/gwljja">Get it</a></div>
-<div class="card product"><img src="trading.png" alt="Trading Journal"><h3>Trading Journal</h3><p class="price">$9</p><a class="btn" href="https://lathanstone.gumroad.com/l/gjczho">Get it</a></div>
-<div class="card product"><img src="invoice.png" alt="Invoice and Expense Tracker"><h3>Invoice and Expense Tracker</h3><p class="price">$9</p><a class="btn" href="https://lathanstone.gumroad.com/l/spnzbm">Get it</a></div>
-<div class="card product"><img src="bundle.png" alt="The Money Bundle"><h3>The Money Bundle</h3><p class="price">$19 for all four</p><a class="btn" href="https://lathanstone.gumroad.com/l/lhefn">Get the bundle</a></div>
+<section id="templates" class="rule"><div class="wrap">
+<p class="eyebrow">Excel templates</p>
+<h2>Spreadsheets with the formulas already done.</h2>
+<p>Instant download. Fill in your numbers and go.</p>
+<div class="shelf">
+<div class="item"><a href="https://lathanstone.gumroad.com/l/crtdn"><img src="budget.png" alt="Monthly Budget Planner spreadsheet"><h3>Monthly Budget Planner</h3><div class="p">$6</div></a></div>
+<div class="item"><a href="https://lathanstone.gumroad.com/l/gwljja"><img src="semester.png" alt="College Semester Planner spreadsheet"><h3>College Semester Planner</h3><div class="p">$7</div></a></div>
+<div class="item"><a href="https://lathanstone.gumroad.com/l/gjczho"><img src="trading.png" alt="Trading Journal spreadsheet"><h3>Trading Journal</h3><div class="p">$9</div></a></div>
+<div class="item"><a href="https://lathanstone.gumroad.com/l/spnzbm"><img src="invoice.png" alt="Invoice and Expense Tracker spreadsheet"><h3>Invoice and Expense Tracker</h3><div class="p">$9</div></a></div>
+<div class="item"><a href="https://lathanstone.gumroad.com/l/lhefn"><img src="bundle.png" alt="The Money Bundle, all four spreadsheets"><h3>The Money Bundle</h3><div class="p">$19 for all four</div></a></div>
 </div>
 </div></section>
 
-<section id="about"><div class="wrap about">
+<section id="about" class="rule"><div class="wrap about">
 <div>
-<h2>About</h2>
-<p class="lead">Hi, I'm Lathan. I'm a Business Administration student at Surry Community College and I grew up right here in Mount Airy, the Granite City.</p>
-<p>I've spent years in customer service and logistics, I've been investing for about five years, and I build spreadsheets and tools for fun. Granite City Digital is how I help local businesses and neighbors get the online stuff handled so they can focus on their work.</p>
+<p class="eyebrow">About</p>
+<h2>One person. Direct communication.</h2>
+<p>I'm Lathan Arnder. I grew up in Mount Airy and I'll be heading to university next year. When you text this number, I'm the one who answers, and I'm the one who builds your site. No ticket queue, no account manager.</p>
+<p>Low overhead is why the price is low. No office, no staff, no agency markup. Just a clean site, a fair price, and a phone number that gets picked up.</p>
+<p class="aside" style="margin-top:28px">Already have a website that's out of date? Send me the address. Rebuilds are the same $150, and you see the free sample first just like a new site.</p>
 </div>
-<div class="card">
-<h3>Why work with me</h3>
-<p>Local and easy to reach. Fair, upfront pricing. Fast replies. I check every detail before anything goes to you, and if a project isn't a good fit I'll tell you honestly.</p>
+<div class="photo" hidden><!-- PHOTO: remove the hidden attribute and put <img src="lathan.jpg" alt="Lathan Arnder"> inside --></div>
+</div></section>
+
+<section id="faq" class="rule"><div class="wrap">
+<p class="eyebrow">Good to know</p>
+<h2>A few common questions.</h2>
+<div class="faq">
+<details><summary>Why is the price so low?</summary><p>No office, no employees, no ad budget. I build sites one at a time from Mount Airy, and the founding client prices are on purpose while I build a local portfolio.</p></details>
+<details><summary>What if I don't like the sample?</summary><p>Tell me what's off and I'll revise it. If it's still not right, we part ways and you owe nothing.</p></details>
+<details><summary>What does the $25 a month cover?</summary><p>Hosting, security, backups, and small changes like new hours, prices or photos. You text me, I handle it. Cancel anytime.</p></details>
+<details><summary>Do I need to know anything about computers?</summary><p>No. You never log in to anything. I take care of the technical side from start to finish.</p></details>
+<details><summary>Can you fix the website I already have?</summary><p>Usually. Send me the address and I'll tell you honestly whether it's worth fixing or faster to start fresh.</p></details>
+<details><summary>Who owns the site and the web address?</summary><p>You do. The domain is registered in your name, and if you ever leave, the site goes with you.</p></details>
+<details><summary>What does the first year actually cost, all in?</summary><p>$150 to build plus $25 a month comes to $450 for the first year, or $400 if you pay the year up front. Add about $12 for the domain. That's the whole number, there's nothing else.</p></details>
+<details><summary>Do you only do websites?</summary><p>Websites are the main thing. I also write resumes and cover letters from $25 and build Excel and Google Sheets tools from $20, mostly for people around Surry County who hear about me through the website work.</p></details>
 </div>
 </div></section>
 
-
-<section id="faq" class="alt"><div class="wrap" style="max-width:820px">
-<h2>Common questions</h2>
-<details><summary>Do I have to pay for the sample?</summary><p>No. The sample is free. You only pay if you like it and want it online.</p></details>
-<details><summary>Is there a contract?</summary><p>No contract. The monthly fee covers hosting and updates, and you can cancel anytime.</p></details>
-<details><summary>Do I need to know anything about computers?</summary><p>Nope. You text me changes like new hours, prices or photos, and I handle the rest.</p></details>
-<details><summary>Who owns the website address?</summary><p>You do. The domain is registered in your name, so it's always yours.</p></details>
-<details><summary>How long does it take?</summary><p>Most sites are ready to look at in 2 to 3 days after we talk.</p></details>
+<section id="start" class="rule start"><div class="wrap">
+<div>
+<p class="eyebrow">Let's get started</p>
+<h2>See what your website could be.</h2>
+<p>Tell me about your business and I'll start on a free sample. I usually reply the same day.</p>
+<div class="ways">
+<a href="sms:+17432220985?body=Hey%20Lathan%2C%20I%27d%20like%20a%20free%20sample%20site%20for%20my%20business.">Text (743) 222-0985<small>Fastest way to reach me</small></a>
+<a href="tel:+17432220985">Call (743) 222-0985<small>If I'm in class I'll call you right back</small></a>
+<a href="mailto:lathan@granitecitydigital.me">lathan@granitecitydigital.me<small>Email works too</small></a>
+</div>
+</div>
+<form id="req" onsubmit="return sendReq(event)">
+<label>Your name<input name="name" required autocomplete="name"></label>
+<div class="two">
+<label>Business name<input name="biz" required></label>
+<label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+</div>
+<label>What do you do, and where?<textarea name="about" placeholder="Lawn care in Mount Airy and Dobson. No website yet." required></textarea></label>
+<label>Current website, if any<input name="site" placeholder="Optional"></label>
+<button class="btn y" type="submit">Request my free sample</button>
+<p class="form-note">This opens an email to me with your details filled in.</p>
+</form>
 </div></section>
 
-<section id="contact" class="contact"><div class="wrap">
-<h2>Let's talk</h2>
-<p class="lead" style="margin:0 auto 26px">Tell me about your business or what you need, and I'll get back to you within a day.</p>
-<div class="contact-btns"><a class="btn" href="tel:+17432220985">Call or text (743) 222-0985</a><a class="btn alt" href="mailto:lathan@granitecitydigital.me?subject=Granite%20City%20Digital%20inquiry">Email lathan@granitecitydigital.me</a></div>
-</div></section>
+<footer><div class="wrap">
+<div class="fcol"><b>GRANITE<i>.</i>CITY</b><span>Websites for small businesses in Mount Airy and Surry County, NC.</span><span>&copy; 2026 Granite City Digital</span></div>
+<div class="fcol"><small>Pages</small><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#how">How it works</a><a href="#about">About</a><a href="#faq">FAQ</a></div>
+<div class="fcol"><small>Contact</small><a href="tel:+17432220985">(743) 222-0985</a><a href="sms:+17432220985">Text me</a><a href="mailto:lathan@granitecitydigital.me">lathan@granitecitydigital.me</a></div>
+<div class="fcol"><small>Follow</small>
+<!-- Personal socials for now; swap to business accounts later. Business Facebook page: https://www.facebook.com/profile.php?id=61595451055544 -->
+<a href="https://www.facebook.com/lathan.arnder" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.4H7.4V14h2.8v8h3.3z"/></svg>Facebook</a>
+<a href="https://www.instagram.com/iamlathn/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a>
+<a href="https://www.linkedin.com/in/lathan-arnder-7a14272aa/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 8.5H3V21h3.5V8.5zM4.8 3a2 2 0 100 4 2 2 0 000-4zM21 13.4c0-3.4-1.8-5.2-4.5-5.2-2 0-3 1.1-3.5 1.9V8.5H9.5V21H13v-6.6c0-1.8.7-2.9 2.2-2.9s2.2 1 2.2 2.9V21H21v-7.6z"/></svg>LinkedIn</a>
+</div>
+</div></footer>
 
-<footer>&copy; 2026 Granite City Digital &middot; Mount Airy, North Carolina &middot; <a href="tel:+17432220985" style="color:#d9c08a">(743) 222-0985</a> &middot; <a href="mailto:lathan@granitecitydigital.me" style="color:#d9c08a">lathan@granitecitydigital.me</a></footer>
+<div class="callbar"><a href="tel:+17432220985">Call</a><a class="y" href="#start">Get a free sample</a></div>
+
+<script>
+function sendReq(e){
+  e.preventDefault();
+  var f=e.target, g=function(n){return (f[n].value||'').trim()};
+  var body="Name: "+g('name')+"\nBusiness: "+g('biz')+"\nPhone: "+g('phone')+"\nCurrent site: "+(g('site')||'none')+"\n\nAbout the business:\n"+g('about')+"\n\nSent from granitecitydigital.me";
+  window.location.href="mailto:lathan@granitecitydigital.me?subject="+encodeURIComponent("Free sample request: "+g('biz'))+"&body="+encodeURIComponent(body);
+  return false;
+}
+</script>
 </body>
 </html>

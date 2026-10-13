@@ -1,611 +1,274 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yadkin Valley Pressure Washing | Sample by Granite City Digital</title>
-<meta name="description" content="Sample small business website by Granite City Digital.">
-
-<!--
-  ============================================================
-  GRANITE CITY DIGITAL  |  SMALL BUSINESS WEBSITE TEMPLATE v2
-  ============================================================
-  HOW TO FILL THIS IN (about 20 minutes per business):
-
-  1. Replace Yadkin Valley Pressure Washing | Sample by Granite City Digital and Sample small business website by Granite City Digital. above.
-     Title format: Business Name | Main Service in Town, ST
-  2. Edit the SITE block below. Anything still in {{BRACKETS}} shows a
-     yellow warning bar when you open the page.
-  3. Photos: put files next to this page (example "photos/job1.jpg").
-     beforeAfter pairs get a drag slider. Leave "" for a placeholder.
-  4. Reviews: ONLY real reviews the owner gave you permission to use.
-     reviewSummary is only shown when rating and count are filled in.
-  5. Leave any optional list empty ([]) and that section hides itself.
-  6. Google info (schema) is built automatically from the SITE block.
-  ============================================================
--->
-
-<script>
-/* ===== CONFIG START: edit everything in this block ===== */
-const SITE = {
-  "businessName": "Yadkin Valley Pressure Washing",
-  "tagline": "Make your home look new again",
-  "heroBlurb": "Gentle soft washing for siding and roofs, plus driveways, decks and patios. Free estimates, usually within a day.",
-  "phoneDisplay": "(336) 555 0193",
-  "phoneDigits": "3365550193",
-  "email": "info@example.com",
-  "cityState": "Elkin, NC",
-  "address": "",
-  "mapsLink": "https://www.google.com/maps/search/?api=1&query=Elkin+NC",
-  "reviewLink": "",
-  "facebookLink": "",
-  "siteUrl": "",
-  "brandColor": "#0f7a6c",
-  "brandDark": "#08483f",
-  "accentColor": "#ffc93c",
-  "badges": [
-    "Free estimates",
-    "Fully insured",
-    "Safe for siding and plants",
-    "Family owned"
-  ],
-  "guarantee": {
-    "title": "Our Clean Promise",
-    "text": "Not happy with any spot we cleaned? Tell us within 48 hours and we'll come back and fix it free."
-  },
-  "reviewSummary": {
-    "rating": "",
-    "count": "",
-    "source": "Google"
-  },
-  "services": [
-    {
-      "name": "Vinyl Siding Washing",
-      "price": "From $199",
-      "description": "Soft wash that removes green mildew, algae and dirt so your house looks fresh again.",
-      "type": "Residential"
-    },
-    {
-      "name": "Roof Cleaning",
-      "price": "From $249",
-      "description": "Clears the black streaks and moss that make a roof look older than it is.",
-      "type": "Residential"
-    },
-    {
-      "name": "Gutter Cleaning",
-      "price": "From $79",
-      "description": "Gutters cleaned out and the outside brightened to remove dark stripes.",
-      "type": "Residential"
-    },
-    {
-      "name": "Driveways and Patios",
-      "price": "From $99",
-      "description": "Concrete cleaned of oil stains, mold and years of grime.",
-      "type": "Residential"
-    },
-    {
-      "name": "Storefronts and Sidewalks",
-      "price": "From $149",
-      "description": "Keep your business entrance, walkways and dumpster pads looking clean for customers.",
-      "type": "Commercial"
-    },
-    {
-      "name": "Building Exteriors",
-      "price": "Custom quote",
-      "description": "Washing for shops, offices and rental properties around Surry County.",
-      "type": "Commercial"
-    }
-  ],
-  "pricingNote": "Every property is different. Text a photo of what needs cleaning and get a quick, free estimate.",
-  "steps": [
-    {
-      "title": "Send a photo",
-      "text": "Call, text or fill out the quote form and show us what needs cleaning."
-    },
-    {
-      "title": "Get your free quote",
-      "text": "You get a clear price, usually the same day. No pressure and no surprises."
-    },
-    {
-      "title": "We make it shine",
-      "text": "We show up on time, protect your plants and leave everything looking new."
-    }
-  ],
-  "beforeAfter": [
-    {
-      "label": "Vinyl siding mildew removal",
-      "before": "",
-      "after": ""
-    },
-    {
-      "label": "Driveway and walkway cleaning",
-      "before": "",
-      "after": ""
-    }
-  ],
-  "gallery": [
-    {
-      "label": "Roof cleaning",
-      "image": ""
-    },
-    {
-      "label": "Gutter brightening",
-      "image": ""
-    },
-    {
-      "label": "Patio refresh",
-      "image": ""
-    }
-  ],
-  "aboutTitle": "Careful work, clean results",
-  "about": "We are a small, local crew that treats every house like our own. We use the right pressure for each surface, protect your plants and let the results speak for themselves.",
-  "ownerName": "Chris Byrd",
-  "ownerPhoto": "",
-  "yearStarted": "2021",
-  "faq": [
-    {
-      "q": "How often should I wash my house?",
-      "a": "Most homes in our area look best with a wash once a year. Shady sides that grow mildew may need it a little more often."
-    },
-    {
-      "q": "Is it safe for my plants, pets and windows?",
-      "a": "Yes. We use low pressure soft washing on siding and roofs, and we rinse and protect plants before and after the job."
-    },
-    {
-      "q": "Do I need to be home?",
-      "a": "No. As long as we can reach an outside water spigot, you can go about your day. We'll text you when it's done."
-    },
-    {
-      "q": "How do I get a price?",
-      "a": "Text a photo or fill out the quote form. Most quotes are sent the same day and are always free."
-    }
-  ],
-  "paymentMethods": [
-    "Cash",
-    "Check",
-    "Card",
-    "Venmo"
-  ],
-  "serviceArea": [
-    "Elkin",
-    "Jonesville",
-    "Mount Airy",
-    "Dobson",
-    "Wilkesboro",
-    "Yadkinville"
-  ],
-  "serviceAreaNote": "Serving the Yadkin Valley and the surrounding area.",
-  "hours": [
-    [
-      "Monday",
-      "8:00 AM to 6:00 PM"
-    ],
-    [
-      "Tuesday",
-      "8:00 AM to 6:00 PM"
-    ],
-    [
-      "Wednesday",
-      "8:00 AM to 6:00 PM"
-    ],
-    [
-      "Thursday",
-      "8:00 AM to 6:00 PM"
-    ],
-    [
-      "Friday",
-      "8:00 AM to 6:00 PM"
-    ],
-    [
-      "Saturday",
-      "8:00 AM to 4:00 PM"
-    ],
-    [
-      "Sunday",
-      "Closed"
-    ]
-  ],
-  "reviews": [],
-  "sampleNotice": "Sample design by Granite City Digital. This business is fictional and shown only as an example.",
-  "creditLink": "https://granitecitydigital.me"
-};
-/* ===== CONFIG END ===== */
-</script>
-
+<title>Yadkin Valley Pressure Washing | House, roof and driveway washing in Elkin, NC</title>
+<meta name="description" content="House washing, roof cleaning and driveway cleaning around Elkin and Surry County. Two man crew, fully insured. Text a photo for a free quote.">
+<meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!--
+  GRANITE CITY DIGITAL sample site. The business and the owner are fictional.
+  To reuse for a real client: change the name, phone, town, owner, services and prices,
+  drop real photos into the before and after section, and remove the sample banner.
+-->
 <style>
-  :root { --brand:#1f5f8b; --brand-dark:#143f5e; --accent:#f2a541; --ink:#1c2430; --muted:#5b6676; --soft:#f4f6f9; --line:#e3e8ef; --radius:16px; --shadow:0 10px 30px rgba(20,30,50,.08); }
-  * { box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body { margin:0; font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; color:var(--ink); background:#fff; line-height:1.6; font-size:17px; -webkit-font-smoothing:antialiased; }
-  a { color:var(--brand); }
-  img { max-width:100%; display:block; }
-  [hidden] { display:none !important; }
-  .wrap { max-width:1120px; margin:0 auto; padding:0 20px; }
-  .section { padding:76px 0; }
-  .section.soft { background:var(--soft); }
-  .eyebrow { display:inline-block; font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--brand); margin-bottom:8px; }
-  h1,h2,h3 { line-height:1.15; margin:0 0 14px; letter-spacing:-.02em; }
-  h2 { font-size:clamp(28px,4vw,38px); }
-  h3 { font-size:20px; }
-  p { margin:0 0 14px; }
-  .lead { color:var(--muted); font-size:18px; max-width:640px; }
-  .center { text-align:center; } .center .lead { margin-left:auto; margin-right:auto; }
+:root{--navy:#14304a;--navy2:#0e2234;--blue:#1e6fb5;--blue2:#17588f;--sky:#e8f1f9;--ink:#1c1f22;--ink2:#5a6168;--line:#dfe3e7;--bg:#ffffff;--bg2:#f4f6f8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Barlow,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;font-size:17px}
+h1,h2,h3{font-weight:800;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(1.8rem,3.6vw,2.5rem);margin-bottom:12px;text-transform:uppercase}
+h3{font-size:1.15rem;margin-bottom:4px}
+p{color:var(--ink2);max-width:60ch}
+a{color:var(--blue);text-decoration:none}
+.wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+section{padding:64px 0}
+.gray{background:var(--bg2)}
+.kicker{font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;margin-bottom:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:6px;font-weight:700;font-size:1rem;border:2px solid transparent;cursor:pointer;font-family:inherit;text-transform:uppercase;letter-spacing:.02em}
+.btn.b{background:var(--blue);color:#fff}.btn.b:hover{background:var(--blue2)}
+.btn.w{background:#fff;color:var(--navy);border-color:#fff}.btn.w:hover{background:var(--sky)}
+.btn.o{background:transparent;color:var(--navy);border-color:var(--navy)}.btn.o:hover{background:var(--navy);color:#fff}
 
-  .notice { font-size:14px; text-align:center; padding:8px 16px; font-weight:500; }
-  .notice.todo { background:#fff3c4; color:#6b5200; }
-  .notice.sample { background:var(--ink); color:#fff; }
+.sample{background:#1c1f22;color:#aab2ba;font-size:.78rem;text-align:center;padding:7px 12px}
+.sample a{color:#f3c300}
 
-  header.top { position:sticky; top:0; z-index:50; background:rgba(255,255,255,.95); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
-  .top .wrap { display:flex; align-items:center; justify-content:space-between; height:66px; gap:16px; }
-  .logo { display:flex; align-items:center; gap:10px; font-weight:800; font-size:18px; color:var(--ink); text-decoration:none; }
-  .logo-mark { width:36px; height:36px; border-radius:10px; background:var(--brand); color:#fff; display:grid; place-items:center; font-weight:800; }
-  nav.links { display:flex; gap:22px; }
-  nav.links a { color:var(--muted); text-decoration:none; font-weight:500; font-size:15px; }
-  .top-actions { display:flex; gap:10px; align-items:center; }
-  .top-phone { font-weight:700; color:var(--ink); text-decoration:none; font-size:15px; }
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{line-height:1;color:var(--navy)}
+.brand b{display:block;font-weight:800;font-size:1.15rem;letter-spacing:.02em;text-transform:uppercase}
+.brand small{display:block;font-weight:600;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-top:3px}
+nav ul{display:flex;gap:22px;list-style:none;align-items:center}
+nav ul a{color:var(--ink);font-weight:600;font-size:.95rem}
+nav ul a:hover{color:var(--blue)}
+.navphone{background:var(--navy);color:#fff!important;padding:10px 14px;border-radius:6px}
 
-  .btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:14px 24px; border-radius:999px; font-weight:700; font-size:16px; text-decoration:none; border:2px solid transparent; cursor:pointer; font-family:inherit; transition:transform .15s ease; }
-  .btn:hover { transform:translateY(-1px); }
-  .btn.primary { background:var(--accent); color:#1c1300; box-shadow:0 8px 20px rgba(0,0,0,.18); }
-  .btn.ghost { border-color:rgba(255,255,255,.7); color:#fff; }
-  .btn.solid { background:var(--brand); color:#fff; }
-  .btn.small { padding:10px 18px; font-size:15px; }
-  .btn.block { width:100%; }
+/* hero */
+.hero{background:var(--navy);color:#fff;padding:72px 0 64px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-10%;top:-30%;width:55%;height:160%;background:radial-gradient(closest-side,rgba(30,111,181,.35),transparent);pointer-events:none}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);text-transform:uppercase;max-width:14ch;margin-bottom:18px}
+.hero h1 span{color:#8ec5f5}
+.hero p{color:#c7d4e0;font-size:1.15rem;max-width:48ch;margin-bottom:28px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.hero .fine{font-size:.95rem;color:#c7d4e0;display:flex;flex-wrap:wrap;gap:8px 24px;list-style:none}
+.hero .fine li::before{content:"✓";color:#8ec5f5;font-weight:800;margin-right:8px}
 
-  .hero { color:#fff; background:radial-gradient(circle at 85% 15%,rgba(255,255,255,.16),transparent 40%),linear-gradient(135deg,var(--brand),var(--brand-dark)); }
-  .hero .wrap { display:grid; grid-template-columns:1.15fr .85fr; gap:44px; align-items:center; padding-top:72px; padding-bottom:80px; }
-  .hero h1 { font-size:clamp(36px,6vw,58px); font-weight:800; }
-  .hero .tagline { font-size:clamp(19px,2.4vw,23px); font-weight:600; opacity:.95; }
-  .hero .blurb { opacity:.9; font-size:18px; max-width:560px; }
-  .hero-ctas { display:flex; flex-wrap:wrap; gap:12px; margin:22px 0; }
-  .stars { color:var(--accent); font-weight:700; margin-bottom:10px; }
-  .chips { display:flex; flex-wrap:wrap; gap:8px; }
-  .chip { background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.25); padding:6px 12px; border-radius:999px; font-size:14px; font-weight:600; }
-  .chip::before { content:"\2713  "; color:var(--accent); }
+/* owner */
+.owner{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:center;padding:28px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.owner .pic{width:150px;height:150px;border-radius:8px;background:var(--sky);display:grid;place-items:center;color:var(--blue);font-weight:800;font-size:2.2rem;overflow:hidden}
+.owner .pic img{width:100%;height:100%;object-fit:cover}
+.owner p{font-size:1.02rem;color:var(--ink)}
+.owner .sig{margin-top:10px;font-weight:700;color:var(--navy)}
+.owner .sig small{display:block;font-weight:500;color:var(--ink2);font-size:.85rem}
 
-  .quote-card { background:#fff; color:var(--ink); border-radius:var(--radius); padding:26px; box-shadow:0 20px 50px rgba(0,0,0,.25); }
-  .quote-card h3 { margin-bottom:4px; }
-  .quote-card .sub { color:var(--muted); font-size:15px; margin-bottom:14px; }
-  label { display:block; font-size:14px; font-weight:600; margin:10px 0 4px; }
-  input, select, textarea { width:100%; padding:11px 12px; border:1px solid var(--line); border-radius:10px; font:inherit; font-size:15px; background:var(--soft); }
-  textarea { min-height:80px; resize:vertical; }
-  .toggle { display:flex; gap:8px; margin-top:4px; }
-  .toggle button { flex:1; padding:10px; border-radius:10px; border:1px solid var(--line); background:#fff; font:inherit; font-weight:600; cursor:pointer; }
-  .toggle button.on { background:var(--brand); color:#fff; border-color:var(--brand); }
-  .form-note { font-size:13px; color:var(--muted); margin-top:10px; }
+/* price list */
+.list{margin-top:28px;border-top:2px solid var(--navy)}
+.row{display:grid;grid-template-columns:1.1fr 2fr auto;gap:20px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.row h3{margin:0}
+.row p{font-size:.95rem}
+.row .price{font-weight:800;font-size:1.15rem;color:var(--navy);white-space:nowrap}
+.row.head{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink2);padding:10px 0;font-weight:700}
+.note{margin-top:16px;font-size:.95rem}
+.note b{color:var(--ink)}
 
-  .trust { background:var(--ink); color:#fff; }
-  .trust .wrap { display:flex; flex-wrap:wrap; justify-content:center; gap:14px 34px; padding-top:18px; padding-bottom:18px; font-weight:600; font-size:15px; }
-  .trust span::before { content:"\2605  "; color:var(--accent); }
+/* before after */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.slider{position:relative;aspect-ratio:4/3;border-radius:8px;overflow:hidden;user-select:none;touch-action:none;background:#777;border:1px solid var(--line)}
+.slider .layer{position:absolute;inset:0}
+.slider .after{clip-path:inset(0 0 0 50%)}
+.slider .handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.25)}
+.slider .handle::after{content:"◂ DRAG ▸";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;color:var(--navy);font-size:.72rem;font-weight:800;padding:8px 10px;border-radius:4px;white-space:nowrap;letter-spacing:.08em}
+.slider .lab{position:absolute;bottom:12px;background:var(--navy);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:4px}
+.slider .lab.l{left:12px}.slider .lab.r{right:12px}
+.ba ul{list-style:none;margin-top:14px}
+.ba li{padding:8px 0;border-top:1px solid var(--line);color:var(--ink2)}
 
-  .grid { display:grid; gap:22px; }
-  .grid.four { grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); }
-  .grid.three { grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
-  .grid.two { grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); }
-  .card { background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:24px; box-shadow:var(--shadow); }
-  .svc-type { font-size:12px; font-weight:700; color:var(--brand); text-transform:uppercase; letter-spacing:.06em; }
-  .price { color:var(--brand-dark); font-weight:800; font-size:18px; margin-top:8px; }
-  .svc-group h3.group { margin:30px 0 14px; font-size:22px; }
-  .pricing-note { color:var(--muted); font-size:15px; margin-top:18px; }
+/* quote form band */
+.quoteband{background:var(--sky)}
+.quoteband .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+form{display:grid;gap:12px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px}
+label{font-size:.82rem;font-weight:700;color:var(--ink);display:grid;gap:5px}
+input,select,textarea{font:inherit;font-size:1rem;padding:11px 12px;border:1px solid #c9d0d7;border-radius:6px;background:#fff;width:100%;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue)}
+textarea{min-height:76px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form .btn{width:100%}
+form small{text-align:center;color:var(--ink2);font-size:.82rem}
 
-  .step-num { width:44px; height:44px; border-radius:50%; background:var(--accent); color:#1c1300; display:grid; place-items:center; font-weight:800; font-size:20px; margin-bottom:12px; }
+/* reviews */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:28px}
+.rev{border-left:4px solid var(--blue);padding:4px 0 4px 18px}
+.rev p{color:var(--ink);font-size:1.02rem;margin-bottom:8px}
+.rev small{color:var(--ink2);font-weight:600}
+.stars{color:#f0b429;letter-spacing:1px;font-size:.95rem;margin-bottom:6px}
+.disc{font-size:.82rem;margin-top:22px}
 
-  .guarantee { background:linear-gradient(135deg,var(--accent),#ffd77a); color:#1c1300; }
-  .guarantee .wrap { display:flex; align-items:center; gap:22px; padding-top:30px; padding-bottom:30px; }
-  .shield { font-size:44px; }
-  .guarantee h3 { margin:0 0 4px; font-size:24px; }
-  .guarantee p { margin:0; }
+/* area faq */
+.area{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.towns{columns:2;margin-top:12px;list-style:none}
+.towns li{padding:6px 0;border-bottom:1px solid var(--line);color:var(--ink2);break-inside:avoid}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--blue);font-size:1.4rem;line-height:1;font-weight:400}
+details[open] summary::after{content:"–"}
+details p{margin-top:8px;font-size:.95rem}
 
-  .ba { position:relative; border-radius:var(--radius); overflow:hidden; aspect-ratio:4/3; box-shadow:var(--shadow); user-select:none; touch-action:none; cursor:ew-resize; }
-  .ba .layer { position:absolute; inset:0; background-size:cover; background-position:center; display:flex; align-items:flex-end; }
-  .ba .before { clip-path:inset(0 50% 0 0); }
-  .ba .tag { position:absolute; top:12px; background:rgba(0,0,0,.6); color:#fff; font-size:12px; font-weight:700; padding:4px 10px; border-radius:999px; text-transform:uppercase; letter-spacing:.06em; }
-  .ba .before .tag { left:12px; } .ba .after .tag { right:12px; }
-  .ba .handle { position:absolute; top:0; bottom:0; left:50%; width:4px; margin-left:-2px; background:#fff; box-shadow:0 0 10px rgba(0,0,0,.4); }
-  .ba .handle::after { content:"\2194"; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:40px; height:40px; border-radius:50%; background:#fff; color:var(--ink); display:grid; place-items:center; font-weight:800; }
-  .ba-label { font-weight:700; margin-top:10px; }
-  .ph-before { background:linear-gradient(135deg,#6b6f5a,#3e4235); }
-  .ph-after { background:linear-gradient(135deg,#e8f1f7,#bcd7ea); }
-  .ph-note { position:absolute; z-index:3; bottom:14px; left:50%; transform:translateX(-50%); white-space:nowrap; background:rgba(0,0,0,.65); padding:5px 12px; border-radius:999px; font-size:13px; font-weight:600; color:#fff; }
-  .ba .handle { z-index:2; }
-  .gal { aspect-ratio:4/3; border-radius:var(--radius); background-size:cover; background-position:center; position:relative; overflow:hidden; background-color:var(--brand); }
-  .gal .cap { position:absolute; left:0; right:0; bottom:0; padding:30px 14px 12px; color:#fff; font-weight:600; font-size:14px; background:linear-gradient(transparent,rgba(0,0,0,.65)); }
+/* contact */
+.contact{background:var(--navy);color:#fff}
+.contact p{color:#c7d4e0}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.ways a{display:block;color:#fff;font-weight:800;font-size:1.6rem;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.ways a small{display:block;font-weight:500;font-size:.85rem;color:#c7d4e0}
+.ways a:hover{color:#8ec5f5}
+footer{background:var(--navy2);color:#8fa2b4;font-size:.85rem;padding:22px 0 96px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer a{color:#c7d4e0}
 
-  .about { display:grid; grid-template-columns:.8fr 1.2fr; gap:44px; align-items:center; }
-  .owner-photo { aspect-ratio:1; border-radius:var(--radius); background:linear-gradient(135deg,var(--brand),var(--brand-dark)); background-size:cover; background-position:center; display:grid; place-items:center; color:#fff; font-size:72px; font-weight:800; box-shadow:var(--shadow); }
-  .owner-line { font-weight:700; }
-
-  details { background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px 20px; margin-bottom:12px; }
-  summary { font-weight:700; cursor:pointer; list-style:none; display:flex; justify-content:space-between; gap:12px; }
-  summary::after { content:"+"; color:var(--brand); font-size:22px; line-height:1; }
-  details[open] summary::after { content:"\2212"; }
-  details p { margin:12px 0 0; color:var(--muted); }
-
-  .pill { display:inline-block; background:var(--soft); border:1px solid var(--line); padding:6px 12px; border-radius:999px; margin:4px; font-size:14px; font-weight:600; }
-  table.hours { width:100%; border-collapse:collapse; }
-  table.hours td { padding:9px 0; border-bottom:1px solid var(--line); }
-  table.hours td:last-child { text-align:right; color:var(--muted); }
-  table.hours tr.today td { font-weight:700; color:var(--brand); }
-
-  .review { font-style:italic; }
-  .review-name { font-style:normal; font-weight:700; margin-top:10px; }
-  .placeholder-box { border:2px dashed var(--line); border-radius:var(--radius); padding:34px; text-align:center; color:var(--muted); }
-
-  .contact-band { background:linear-gradient(135deg,var(--brand),var(--brand-dark)); color:#fff; border-radius:var(--radius); padding:34px; }
-  .contact-band a { color:#fff; font-weight:700; }
-  .pay { margin-top:16px; font-size:15px; opacity:.9; }
-
-  footer { background:var(--ink); color:#aab3c0; padding:30px 0 90px; font-size:14px; }
-  footer .wrap { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; }
-  footer a { color:var(--accent); }
-
-  .mobile-bar { display:none; position:fixed; left:0; right:0; bottom:0; z-index:60; background:#fff; border-top:1px solid var(--line); padding:10px; gap:10px; box-shadow:0 -6px 20px rgba(0,0,0,.08); }
-  .mobile-bar .btn { flex:1; padding:12px; font-size:15px; }
-
-  @media (max-width:860px) {
-    nav.links, .top-phone { display:none; }
-    .hero .wrap, .about { grid-template-columns:1fr; }
-    .mobile-bar { display:flex; }
-    .guarantee .wrap { flex-direction:column; text-align:center; }
-  }
+.callbar{display:none}
+@media(max-width:820px){
+  nav ul li:not(.keep){display:none}
+  section{padding:48px 0}
+  .hero{padding:44px 0 40px}
+  .owner{grid-template-columns:1fr}.owner .pic{width:110px;height:110px}
+  .row{grid-template-columns:1fr;gap:4px}.row.head{display:none}
+  .ba,.quoteband .wrap,.area,.contact .wrap{grid-template-columns:1fr}
+  .reviews{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .callbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;bottom:0;left:0;right:0;z-index:30;border-top:1px solid var(--line);background:#fff}
+  .callbar a{text-align:center;padding:15px 10px;font-weight:800;color:var(--navy);text-transform:uppercase}
+  .callbar a.b{background:var(--blue);color:#fff}
+}
 </style>
 </head>
 <body>
+<div class="sample">Sample website built by <a href="https://granitecitydigital.me">Granite City Digital</a>. This business and owner are fictional. Your site would have your name, your photos and your prices.</div>
 
-<div id="todoNotice" class="notice todo" hidden></div>
-<div id="sampleNotice" class="notice sample" hidden></div>
+<header><div class="wrap"><nav>
+<a class="brand" href="#"><b>Yadkin Valley</b><small>Pressure Washing</small></a>
+<ul>
+<li><a href="#prices">Prices</a></li><li><a href="#work">Before and after</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li>
+<li class="keep"><a class="navphone" href="tel:+11234567890">(123) 456-7890</a></li>
+</ul>
+</nav></div></header>
 
-<header class="top"><div class="wrap">
-  <a class="logo" href="#"><span class="logo-mark" id="logoMark"></span><span data-text="businessName"></span></a>
-  <nav class="links"><a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
-  <div class="top-actions"><a class="top-phone" data-tel></a><a class="btn solid small" href="#quote">Free Quote</a></div>
-</div></header>
-
-<section class="hero"><div class="wrap">
-  <div>
-    <div class="stars" id="heroStars" hidden></div>
-    <h1 data-text="businessName"></h1>
-    <p class="tagline" data-text="tagline"></p>
-    <p class="blurb" data-text="heroBlurb"></p>
-    <div class="hero-ctas">
-      <a class="btn primary" data-tel-btn>Call or Text <span data-text="phoneDisplay"></span></a>
-      <a class="btn ghost" href="#work">See Our Work</a>
-    </div>
-    <div class="chips" id="heroBadges"></div>
-  </div>
-  <div class="quote-card" id="quote">
-    <h3>Get a free quote</h3>
-    <p class="sub">Takes 30 seconds. We usually reply the same day.</p>
-    <form id="quoteForm">
-      <label>Property type</label>
-      <div class="toggle" id="propToggle"><button type="button" class="on">Residential</button><button type="button">Commercial</button></div>
-      <label for="qName">Your name</label><input id="qName" required>
-      <label for="qPhone">Phone</label><input id="qPhone" type="tel" required>
-      <label for="qService">What do you need?</label><select id="qService"></select>
-      <label for="qDetails">Address or details</label><textarea id="qDetails" placeholder="Town, size of the job, best time to reach you"></textarea>
-      <button class="btn primary block" type="submit" style="margin-top:14px">Get My Free Quote</button>
-      <p class="form-note">Pressing the button opens your email app with everything filled in. Or just text a photo to <a data-sms></a>.</p>
-    </form>
-  </div>
-</div></section>
-
-<div class="trust" id="trustStrip"><div class="wrap" id="trustItems"></div></div>
-
-<section class="section" id="services"><div class="wrap">
-  <span class="eyebrow">Services and pricing</span>
-  <h2>What we do</h2>
-  <p class="lead">Clear starting prices so you know what to expect before we show up.</p>
-  <div id="serviceGroups" class="svc-group"></div>
-  <p class="pricing-note" data-text="pricingNote"></p>
-</div></section>
-
-<section class="section soft" id="how"><div class="wrap center">
-  <span class="eyebrow">How it works</span>
-  <h2>Three easy steps</h2>
-  <div class="grid three" id="steps" style="text-align:left;margin-top:30px"></div>
-</div></section>
-
-<div class="guarantee" id="guaranteeBand"><div class="wrap">
-  <div class="shield">&#128737;</div>
-  <div><h3 id="gTitle"></h3><p id="gText"></p></div>
+<div class="hero"><div class="wrap">
+<p class="kicker" style="color:#8ec5f5">Elkin, NC and all of Surry County</p>
+<h1>We wash houses, roofs and driveways. <span>That's it, and we're good at it.</span></h1>
+<p>Two man crew out of Elkin. Low pressure on your siding, the right chemicals for the green stuff, and we rinse your flower beds before we leave.</p>
+<div class="cta"><a class="btn w" href="sms:+11234567890?body=Hey%2C%20can%20I%20get%20a%20quote%3F">Text us a photo</a><a class="btn b" href="tel:+11234567890">Call (123) 456-7890</a></div>
+<ul class="fine"><li>Free quotes, usually within the hour</li><li>Fully insured</li><li>Cash, card or Venmo after the job</li></ul>
 </div></div>
 
-<section class="section" id="work"><div class="wrap">
-  <span class="eyebrow">Our work</span>
-  <h2>See the difference</h2>
-  <p class="lead">Drag the slider to compare before and after.</p>
-  <div class="grid two" id="baGrid"></div>
-  <div class="grid three" id="galGrid" style="margin-top:22px"></div>
+<section><div class="wrap">
+<div class="owner">
+<div class="pic">TM</div>
+<div>
+<p>Hey, I'm Travis. I started this in 2019 with one pressure washer in the back of a Silverado, and now it's me and my brother in law Cody most days. We're not a franchise and we don't have a sales guy. You text me a photo, I text you a price, and the number I give you is the number on the bill.</p>
+<div class="sig">Travis Martin, owner<small>Fictional owner, shown as an example. Your photo and your story go here.</small></div>
+</div>
+</div>
 </div></section>
 
-<section class="section soft" id="about"><div class="wrap about">
-  <div class="owner-photo" id="ownerPhoto"></div>
-  <div>
-    <span class="eyebrow">About us</span>
-    <h2 data-text="aboutTitle"></h2>
-    <p class="lead" data-text="about"></p>
-    <p class="owner-line" id="ownerLine"></p>
-    <div class="chips" id="aboutBadges" style="margin-top:10px"></div>
-  </div>
+<section id="prices" class="gray"><div class="wrap">
+<p class="kicker">Prices</p>
+<h2>What it costs</h2>
+<p>These are starting prices for an average size house. Text a photo and you'll get an exact number before we come out.</p>
+<div class="list">
+<div class="row head"><span>Job</span><span>What we do</span><span>Starts at</span></div>
+<div class="row"><h3>House wash</h3><p>Soft wash for vinyl, brick or painted siding. Gets the green and black off without blasting your paint.</p><span class="price">$199</span></div>
+<div class="row"><h3>Roof cleaning</h3><p>Those black streaks are algae, not dirt. We treat it so it's gone for a few years, not a few weeks.</p><span class="price">$249</span></div>
+<div class="row"><h3>Driveway and sidewalks</h3><p>Surface cleaner on the concrete, oil spots pre treated, edges hand wanded.</p><span class="price">$99</span></div>
+<div class="row"><h3>Deck or fence</h3><p>Low pressure so we don't fuzz the wood. Add a stain and we'll quote it together.</p><span class="price">$129</span></div>
+<div class="row"><h3>Gutters</h3><p>Cleaned out inside and the outside brightened so the black stripes are gone.</p><span class="price">$79</span></div>
+<div class="row"><h3>Storefronts and lots</h3><p>Entrances, sidewalks, dumpster pads, rental properties. Early mornings so we're gone before you open.</p><span class="price">Quote</span></div>
+</div>
+<p class="note"><b>House plus driveway together: knock $40 off.</b> Most folks do both.</p>
 </div></section>
 
-<section class="section" id="reviews"><div class="wrap">
-  <span class="eyebrow">Reviews</span>
-  <h2>What customers say</h2>
-  <div id="reviewArea"></div>
+<section id="work"><div class="wrap ba">
+<div class="slider" id="slider">
+<div class="layer before"><svg width="100%" height="100%" preserveAspectRatio="none"><filter id="grit"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" seed="4"/><feColorMatrix values="0 0 0 0 .32  0 0 0 0 .31  0 0 0 0 .27  0 0 0 .9 0"/></filter><rect width="100%" height="100%" fill="#4a4740"/><rect width="100%" height="100%" filter="url(#grit)" opacity=".85"/><ellipse cx="38%" cy="60%" rx="22%" ry="14%" fill="#2b2a26" opacity=".55"/><ellipse cx="70%" cy="35%" rx="14%" ry="9%" fill="#3b4a2b" opacity=".5"/></svg></div>
+<div class="layer after"><svg width="100%" height="100%" preserveAspectRatio="none"><filter id="clean"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" seed="4"/><feColorMatrix values="0 0 0 0 .82  0 0 0 0 .80  0 0 0 0 .75  0 0 0 .9 0"/></filter><rect width="100%" height="100%" fill="#cfcac0"/><rect width="100%" height="100%" filter="url(#clean)" opacity=".8"/><line x1="0" y1="50%" x2="100%" y2="50%" stroke="#b8b2a6" stroke-width="2"/><line x1="50%" y1="0" x2="50%" y2="100%" stroke="#b8b2a6" stroke-width="2"/></svg></div>
+<div class="handle" id="handle"></div>
+<span class="lab l">Before</span><span class="lab r">After</span>
+</div>
+<div>
+<p class="kicker">Before and after</p>
+<h2>Same driveway, two hours apart</h2>
+<p>Most of what looks like permanent staining is years of mold, algae and tire grime. It comes off. Drag the line to see.</p>
+<ul><li>Oil and rust spots treated before we wash</li><li>Plants and siding wet down and rinsed</li><li>We can bring our own water if your well is low</li></ul>
+</div>
 </div></section>
 
-<section class="section soft" id="faq"><div class="wrap" style="max-width:820px">
-  <div class="center"><span class="eyebrow">FAQ</span><h2>Common questions</h2></div>
-  <div id="faqList" style="margin-top:24px"></div>
+<section id="quote" class="quoteband"><div class="wrap">
+<div>
+<p class="kicker">Free quote</p>
+<h2>Text a photo, get a price</h2>
+<p>Fastest way is to text a picture of the house or driveway to <a href="sms:+11234567890">(123) 456-7890</a>. Or fill this out and I'll text you back, usually within the hour.</p>
+</div>
+<form onsubmit="event.preventDefault();alert('This is a sample site, so the form is for show. On a real site this goes straight to the owner\'s phone and email.')">
+<div class="two"><label>Name<input required></label><label>Phone<input type="tel" required></label></div>
+<label>What needs cleaning?<select><option>House siding</option><option>Roof</option><option>Driveway or sidewalk</option><option>Deck or fence</option><option>Gutters</option><option>Business or rental</option></select></label>
+<label>Address and anything we should know<textarea placeholder="Town, two story or one, dogs in the yard, that kind of thing"></textarea></label>
+<button class="btn b" type="submit">Send it</button>
+<small>No sales calls. You get a price, that's it.</small>
+</form>
 </div></section>
 
-<section class="section" id="contact"><div class="wrap">
-  <div class="grid two">
-    <div class="card">
-      <span class="eyebrow">Service area</span>
-      <h3>Where we work</h3>
-      <p data-text="serviceAreaNote" style="color:var(--muted)"></p>
-      <div id="areaPills"></div>
-      <a class="btn solid small" id="mapsBtn" target="_blank" rel="noopener" style="margin-top:14px">Open in Google Maps</a>
-      <h3 style="margin-top:28px">Hours</h3>
-      <table class="hours" id="hoursTable"></table>
-    </div>
-    <div class="contact-band">
-      <span class="eyebrow" style="color:#fff;opacity:.8">Contact</span>
-      <h2>Ready for a free quote?</h2>
-      <p>The fastest way to reach us is a call or text.</p>
-      <p>&#128222; <a data-tel></a></p>
-      <p>&#9993; <a id="emailLink"></a></p>
-      <p>&#128205; <span data-text="cityState"></span></p>
-      <a class="btn primary" href="#quote" style="margin-top:8px">Get a Free Quote</a>
-      <p class="pay" id="payLine"></p>
-    </div>
-  </div>
+<section id="reviews"><div class="wrap">
+<p class="kicker">Reviews</p>
+<h2>What folks around here say</h2>
+<div class="reviews">
+<div class="rev"><div class="stars">★★★★★</div><p>"The north side of my house was solid green. Thought the siding was done for. Two hours later it looked like new and he didn't kill a single hosta."</p><small>Sample review, Elkin</small></div>
+<div class="rev"><div class="stars">★★★★★</div><p>"Texted a picture Monday night, had a price by breakfast, done Thursday. Price didn't change. That's rare."</p><small>Sample review, Jonesville</small></div>
+<div class="rev"><div class="stars">★★★★★</div><p>"Cody noticed a loose gutter and fixed it without being asked or charging me. Good people."</p><small>Sample review, State Road</small></div>
+</div>
+<p class="disc">These are sample reviews written for the demo. On a real site this pulls in your actual Google reviews with names and dates.</p>
 </div></section>
 
-<footer><div class="wrap">
-  <div><strong style="color:#fff" data-text="businessName"></strong><br><span data-text="cityState"></span> &middot; <a data-tel></a><br>&copy; <span id="yr"></span> <span data-text="businessName"></span></div>
-  <div>Website by <a id="creditLink">Granite City Digital</a></div>
-</div></footer>
+<section id="area" class="gray"><div class="wrap area">
+<div>
+<p class="kicker">Where we go</p>
+<h2>Elkin and about 30 minutes out</h2>
+<p>If you're not on the list, text anyway. We'll drive further for a bigger job or a couple of neighbors together.</p>
+<ul class="towns"><li>Elkin</li><li>Jonesville</li><li>State Road</li><li>Ronda</li><li>Boonville</li><li>Dobson</li><li>Mount Airy</li><li>Yadkinville</li></ul>
+</div>
+<div id="faq">
+<p class="kicker">Questions we get a lot</p>
+<details open><summary>Will it hurt my siding?</summary><p>Not the way we do it. Siding gets low pressure and a cleaning mix that does the work. The only thing that gets real pressure is concrete.</p></details>
+<details><summary>Do I need to be home?</summary><p>No. We need an outside spigot and the dogs inside. We'll text you a before and after when we're done.</p></details>
+<details><summary>Is the stuff you spray safe for plants?</summary><p>We wet everything down first and rinse after. Keep pets off the grass until it's dry and you're fine.</p></details>
+<details><summary>How do I pay?</summary><p>After the job, once you've walked around and looked at it. Cash, check, card or Venmo.</p></details>
+</div>
+</div></section>
 
-<div class="mobile-bar"><a class="btn solid" data-tel-btn>&#128222; Call</a><a class="btn primary" data-sms-btn>&#128172; Text</a><a class="btn solid" href="#quote" style="background:var(--ink)">Quote</a></div>
+<section id="contact" class="contact"><div class="wrap">
+<div><p class="kicker" style="color:#8ec5f5">Get a quote</p><h2>Text us a photo</h2><p>Daytime we're usually back within the hour. Evenings and weekends, by the next morning.</p></div>
+<div class="ways">
+<a href="sms:+11234567890">(123) 456-7890<small>Text is fastest. Send a photo of the job.</small></a>
+<a href="tel:+11234567890">Call us<small>If we're mid job, we'll call right back.</small></a>
+<a href="mailto:hello@example.com">travis@yadkinvalleywash.com<small>Email works too.</small></a>
+</div>
+</div></section>
+
+<footer><div class="wrap"><span>&copy; 2026 Yadkin Valley Pressure Washing &middot; Elkin, NC &middot; Fully insured</span><span>Website by <a href="https://granitecitydigital.me">Granite City Digital</a></span></div></footer>
+
+<div class="callbar"><a href="tel:+11234567890">Call</a><a class="b" href="sms:+11234567890">Text a photo</a></div>
 
 <script>
-(function () {
-  var S = SITE;
-  function has(v) { return v !== undefined && v !== null && String(v).trim() !== "" && String(v).indexOf("{{") === -1; }
-  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text !== undefined) e.textContent = text; return e; }
-  var root = document.documentElement.style;
-  root.setProperty("--brand", S.brandColor); root.setProperty("--brand-dark", S.brandDark); root.setProperty("--accent", S.accentColor);
-
-  document.querySelectorAll("[data-text]").forEach(function (n) { var v = S[n.getAttribute("data-text")]; if (v !== undefined) n.textContent = v; });
-  document.getElementById("logoMark").textContent = (S.businessName || "B").charAt(0);
-  var tel = "tel:" + S.phoneDigits, sms = "sms:" + S.phoneDigits;
-  document.querySelectorAll("[data-tel]").forEach(function (a) { a.href = tel; a.textContent = S.phoneDisplay; });
-  document.querySelectorAll("[data-tel-btn]").forEach(function (a) { a.href = tel; });
-  document.querySelectorAll("[data-sms]").forEach(function (a) { a.href = sms; a.textContent = S.phoneDisplay; });
-  document.querySelectorAll("[data-sms-btn]").forEach(function (a) { a.href = sms; });
-  var em = document.getElementById("emailLink"); em.href = "mailto:" + S.email; em.textContent = S.email;
-  document.getElementById("mapsBtn").href = S.mapsLink;
-  document.getElementById("creditLink").href = S.creditLink;
-  document.getElementById("yr").textContent = new Date().getFullYear();
-
-  // Badges
-  var badges = (S.badges || []).filter(has);
-  ["heroBadges", "aboutBadges"].forEach(function (id) { var c = document.getElementById(id); badges.forEach(function (b) { c.appendChild(el("span", "chip", b)); }); });
-  var trust = document.getElementById("trustItems");
-  if (badges.length) badges.forEach(function (b) { trust.appendChild(el("span", "", b)); }); else document.getElementById("trustStrip").hidden = true;
-  var aboutChips = document.getElementById("aboutBadges"); aboutChips.querySelectorAll(".chip").forEach(function (c) { c.style.background = "#fff"; c.style.color = "var(--ink)"; c.style.borderColor = "var(--line)"; });
-
-  // Rating
-  if (S.reviewSummary && has(S.reviewSummary.rating) && has(S.reviewSummary.count)) {
-    var hs = document.getElementById("heroStars"); hs.hidden = false;
-    hs.textContent = "★★★★★  " + S.reviewSummary.rating + " from " + S.reviewSummary.count + " " + S.reviewSummary.source + " reviews";
-  }
-
-  // Services grouped by type
-  var groups = {}; S.services.forEach(function (s) { var t = s.type || "Services"; (groups[t] = groups[t] || []).push(s); });
-  var sg = document.getElementById("serviceGroups"); var types = Object.keys(groups);
-  var sel = document.getElementById("qService");
-  types.forEach(function (t) {
-    if (types.length > 1) sg.appendChild(el("h3", "group", t));
-    var g = el("div", "grid four");
-    groups[t].forEach(function (s) {
-      var c = el("div", "card"); c.appendChild(el("div", "svc-type", t)); c.appendChild(el("h3", "", s.name));
-      c.appendChild(el("p", "", s.description)); c.appendChild(el("div", "price", s.price)); g.appendChild(c);
-      var o = el("option", "", s.name); sel.appendChild(o);
-    });
-    sg.appendChild(g);
-  });
-  sel.appendChild(el("option", "", "Something else"));
-
-  // Steps
-  var st = document.getElementById("steps");
-  (S.steps || []).forEach(function (s, i) { var c = el("div", "card"); c.appendChild(el("div", "step-num", String(i + 1))); c.appendChild(el("h3", "", s.title)); c.appendChild(el("p", "", s.text)); st.appendChild(c); });
-  if (!(S.steps || []).length) document.getElementById("how").hidden = true;
-
-  // Guarantee
-  if (S.guarantee && has(S.guarantee.title)) { document.getElementById("gTitle").textContent = S.guarantee.title; document.getElementById("gText").textContent = S.guarantee.text; }
-  else document.getElementById("guaranteeBand").hidden = true;
-
-  // Before and after sliders
-  var bg = document.getElementById("baGrid");
-  (S.beforeAfter || []).forEach(function (p) {
-    var wrap = el("div"); var ba = el("div", "ba");
-    var after = el("div", "layer after" + (p.after ? "" : " ph-after")); if (p.after) after.style.backgroundImage = "url('" + p.after + "')";
-    var before = el("div", "layer before" + (p.before ? "" : " ph-before")); if (p.before) before.style.backgroundImage = "url('" + p.before + "')";
-    after.appendChild(el("span", "tag", "After")); before.appendChild(el("span", "tag", "Before"));
-    if (!p.before || !p.after) ba.appendChild(el("div", "ph-note", "Your real before and after photos go here"));
-    var h = el("div", "handle");
-    ba.appendChild(after); ba.appendChild(before); ba.appendChild(h);
-    if (!p.before || !p.after) ba.appendChild(ba.querySelector(".ph-note"));
-    function setPos(x) { var r = ba.getBoundingClientRect(); var pct = Math.max(0, Math.min(100, (x - r.left) / r.width * 100)); before.style.clipPath = "inset(0 " + (100 - pct) + "% 0 0)"; h.style.left = pct + "%"; }
-    var down = false;
-    ba.addEventListener("pointerdown", function (e) { down = true; ba.setPointerCapture(e.pointerId); setPos(e.clientX); });
-    ba.addEventListener("pointermove", function (e) { if (down) setPos(e.clientX); });
-    ba.addEventListener("pointerup", function () { down = false; });
-    wrap.appendChild(ba); wrap.appendChild(el("div", "ba-label", p.label)); bg.appendChild(wrap);
-  });
-  var gg = document.getElementById("galGrid");
-  (S.gallery || []).forEach(function (g) { var d = el("div", "gal"); if (g.image) d.style.backgroundImage = "url('" + g.image + "')"; d.appendChild(el("div", "cap", g.label)); gg.appendChild(d); });
-
-  // About
-  var op = document.getElementById("ownerPhoto");
-  if (S.ownerPhoto) op.style.backgroundImage = "url('" + S.ownerPhoto + "')"; else op.textContent = (S.ownerName || S.businessName).charAt(0);
-  var line = []; if (has(S.ownerName)) line.push("Owner: " + S.ownerName);
-  var yr = parseInt(S.yearStarted, 10); if (yr) line.push("Serving the area since " + yr);
-  document.getElementById("ownerLine").textContent = line.join("  ·  ");
-
-  // Reviews
-  var ra = document.getElementById("reviewArea");
-  if ((S.reviews || []).length) {
-    var rg = el("div", "grid three");
-    S.reviews.forEach(function (r) { var c = el("div", "card"); c.appendChild(el("div", "stars", "★★★★★")); c.appendChild(el("p", "review", "“" + r.text + "”")); c.appendChild(el("div", "review-name", r.name + (r.source ? " · " + r.source : ""))); rg.appendChild(c); });
-    ra.appendChild(rg);
-  } else {
-    var pb = el("div", "placeholder-box"); pb.appendChild(el("strong", "", "Real customer reviews will go here"));
-    pb.appendChild(el("p", "", "This space is saved for genuine reviews from the business's Google profile, shown with permission."));
-    ra.appendChild(pb);
-  }
-  if (has(S.reviewLink)) { var rl = el("a", "btn solid small", "Leave us a Google review"); rl.href = S.reviewLink; rl.target = "_blank"; rl.style.marginTop = "18px"; ra.appendChild(rl); }
-
-  // FAQ
-  var fl = document.getElementById("faqList");
-  (S.faq || []).filter(function (f) { return has(f.q); }).forEach(function (f) { var d = el("details"); d.appendChild(el("summary", "", f.q)); d.appendChild(el("p", "", f.a)); fl.appendChild(d); });
-  if (!fl.children.length) document.getElementById("faq").hidden = true;
-
-  // Area and hours
-  var ap = document.getElementById("areaPills"); (S.serviceArea || []).forEach(function (t) { ap.appendChild(el("span", "pill", t)); });
-  var ht = document.getElementById("hoursTable"); var today = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][new Date().getDay()];
-  S.hours.forEach(function (h) { var tr = el("tr", h[0] === today ? "today" : ""); tr.appendChild(el("td", "", h[0])); tr.appendChild(el("td", "", h[1])); ht.appendChild(tr); });
-  if ((S.paymentMethods || []).length) document.getElementById("payLine").textContent = "We accept: " + S.paymentMethods.join(", ");
-
-  // Quote form
-  var propType = "Residential";
-  document.querySelectorAll("#propToggle button").forEach(function (b) { b.addEventListener("click", function () { document.querySelectorAll("#propToggle button").forEach(function (x) { x.classList.remove("on"); }); b.classList.add("on"); propType = b.textContent; }); });
-  document.getElementById("quoteForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    var body = "Name: " + qName.value + "\nPhone: " + qPhone.value + "\nProperty: " + propType + "\nService: " + qService.value + "\nDetails: " + qDetails.value;
-    location.href = "mailto:" + S.email + "?subject=" + encodeURIComponent("Quote request from website") + "&body=" + encodeURIComponent(body);
-  });
-
-  // Notices
-  if (has(S.sampleNotice)) { var sn = document.getElementById("sampleNotice"); sn.textContent = S.sampleNotice; sn.hidden = false; }
-  var left = (JSON.stringify(S) + document.title).match(/\{\{[A-Z0-9_]+\}\}/g) || [];
-  if (left.length) { var tn = document.getElementById("todoNotice"); tn.textContent = "Template preview: " + left.length + " placeholder fields still need to be filled in."; tn.hidden = false; }
-
-  // Google schema (LocalBusiness)
-  var schema = { "@context": "https://schema.org", "@type": "LocalBusiness", name: S.businessName, description: S.heroBlurb, telephone: S.phoneDisplay, email: S.email,
-    areaServed: S.serviceArea, address: { "@type": "PostalAddress", addressLocality: (S.cityState || "").split(",")[0], addressRegion: ((S.cityState || "").split(",")[1] || "").trim(), streetAddress: S.address || undefined, addressCountry: "US" },
-    url: S.siteUrl || location.href, paymentAccepted: (S.paymentMethods || []).join(", "),
-    makesOffer: S.services.map(function (s) { return { "@type": "Offer", itemOffered: { "@type": "Service", name: s.name } }; }) };
-  if (S.reviewSummary && has(S.reviewSummary.rating)) schema.aggregateRating = { "@type": "AggregateRating", ratingValue: S.reviewSummary.rating, reviewCount: S.reviewSummary.count };
-  var sc = document.createElement("script"); sc.type = "application/ld+json"; sc.textContent = JSON.stringify(schema); document.head.appendChild(sc);
+(function(){
+  var s=document.getElementById('slider'),a=s.querySelector('.after'),h=document.getElementById('handle');
+  function set(x){var r=s.getBoundingClientRect();var p=Math.max(0,Math.min(1,(x-r.left)/r.width));a.style.clipPath='inset(0 0 0 '+(p*100)+'%)';h.style.left=(p*100)+'%';}
+  var d=false;
+  s.addEventListener('pointerdown',function(e){d=true;set(e.clientX)});
+  window.addEventListener('pointermove',function(e){if(d)set(e.clientX)});
+  window.addEventListener('pointerup',function(){d=false});
 })();
 </script>
 </body>
