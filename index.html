@@ -114,15 +114,25 @@ nav ul a:hover{color:var(--text)}
 .terms p{font-size:.88rem}
 
 /* templates */
-.shelf{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:56px}
-.item img{aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line);border-radius:8px;margin-bottom:12px;opacity:.9;transition:opacity .15s}
-.item:hover img{opacity:1}
-.item h3{font-size:.88rem;font-weight:500;margin-bottom:2px}
-.item .p{font-size:.82rem;color:var(--text-3)}
-.item a:hover h3{color:var(--yellow)}
-
-.shelf4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}.shelf3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}.item img{aspect-ratio:16/9}.more{margin-top:36px}.more a{color:var(--yellow);border-bottom:1px solid var(--yellow)}
+.shelf4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+.shelf3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px}
+.item{display:flex}
+.item a{display:flex;flex-direction:column;width:100%;background:var(--bg-2,#111418);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .18s,border-color .18s,box-shadow .18s}
+.item a:hover{transform:translateY(-4px);border-color:var(--yellow);box-shadow:0 14px 34px rgba(0,0,0,.45)}
+.item .shot{display:block;aspect-ratio:16/9;background:#0b0d10;border-bottom:1px solid var(--line);overflow:hidden}
+.item img{display:block;width:100%;height:100%;aspect-ratio:16/9;object-fit:cover;margin:0;border:0;border-radius:0;opacity:1}
+.item .body{display:flex;flex-direction:column;gap:6px;padding:16px 18px 18px;flex:1}
+.item h3{font-size:.98rem;font-weight:600;margin:0;line-height:1.3}
+.item .d{font-size:.84rem;color:var(--text-2);line-height:1.5;flex:1}
+.item .row{display:flex;align-items:center;justify-content:space-between;margin-top:10px;padding-top:12px;border-top:1px solid var(--line)}
+.item .price{font-size:1.15rem;font-weight:600;color:var(--text)}
+.item .go{font-size:.8rem;color:var(--yellow);letter-spacing:.04em}
+.item a:hover .go{text-decoration:underline}
+.item .save{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);margin-bottom:2px}
+.more{margin-top:36px}.more a{color:var(--yellow);border-bottom:1px solid var(--yellow)}
+@media(max-width:1000px){.shelf4{grid-template-columns:1fr 1fr}}
 @media(max-width:860px){.shelf4{grid-template-columns:1fr 1fr}.shelf3{grid-template-columns:1fr}}
+@media(max-width:520px){.shelf4{grid-template-columns:1fr}}
 /* hero globe */
 .globe{position:absolute;right:-10px;top:50%;transform:translateY(-52%);width:min(46%,500px);aspect-ratio:1;pointer-events:none}
 .globe canvas{width:100%;height:100%;display:block}
@@ -246,7 +256,7 @@ requestAnimationFrame(draw);
 <p>Built for contractors, cleaners, salons, shops, restaurants and every other local business around Mount Airy and Surry County.</p>
 <div class="trio">
 <div><div class="n">01</div><h3>Website design and build</h3><p>One custom page with your services, photos, hours and a clear way to reach you. Built for phones first, since that's where your customers are.</p></div>
-<div><div class="n">02</div><h3>Hosting and updates</h3><p>An optional monthly plan that keeps the site online and covers small changes. Text me new hours or prices and it's usually done the same day.</p></div>
+<div><div class="n">02</div><h3>Hosting and updates</h3><p>An optional monthly plan that keeps the site online and covers small changes. Text me new hours or prices and it's done the same day.</p></div>
 <div><div class="n">03</div><h3>Extras when you need them</h3><p>Extra pages, online booking, a chatbot for after hours, Google Business Profile setup, resumes and Excel work. We agree on the price before I start.</p></div>
 </div>
 </div></section>
@@ -290,12 +300,12 @@ requestAnimationFrame(draw);
 <ul>
 <li>Hosting, security and backups</li>
 <li>Text, photo, hours and price updates</li>
-<li>Small updates usually done the same day</li>
+<li>Small updates done the same day</li>
 <li>Month to month, and you can cancel anytime</li>
 <li>Or $250 a year and save $50</li>
 </ul>
 <a class="btn g" href="#start">Ask about care</a>
-<p class="foot">Pro sites are $35 a month. A web address like yourbusiness.com is about $12 a year and is registered in your name.</p>
+<p class="foot">Pro sites are $35 a month. A web address like yourbusiness.com starts at $12 a year and is registered in your name.</p>
 </div>
 </div>
 <div class="terms">
@@ -321,16 +331,16 @@ requestAnimationFrame(draw);
 <h2>Spreadsheets with the formulas already done.</h2>
 <p>Instant download. Light and dark versions in every file. Works in Excel and Google Sheets.</p>
 <div class="shelf4">
-<div class="item"><a href="https://lathansone.gumroad.com/l/crtdn"><img src="https://public-files.gumroad.com/vmulb5o5fru3vsqltw5xmrnkd1le" loading="lazy" width="1005" height="565" alt="Annual Budget Planner spreadsheet"><h3>Annual Budget Planner</h3><div class="p">$14</div></a></div>
-<div class="item"><a href="https://lathansone.gumroad.com/l/gwljja"><img src="https://public-files.gumroad.com/m8xqkwljxizobnsjpwtbvo3urjbo" loading="lazy" width="1005" height="565" alt="College Student Planner spreadsheet"><h3>College Student Planner</h3><div class="p">$11</div></a></div>
-<div class="item"><a href="https://lathansone.gumroad.com/l/gjczho"><img src="https://public-files.gumroad.com/86bk3sa57opicywzf5yu0ewplt2d" loading="lazy" width="1005" height="565" alt="Trading Journal spreadsheet"><h3>Trading Journal</h3><div class="p">$19</div></a></div>
-<div class="item"><a href="https://lathansone.gumroad.com/l/spnzbm"><img src="https://public-files.gumroad.com/at76xpk278n6vw9z20hr60f2s3ey" loading="lazy" width="1005" height="565" alt="Freelancer Finance Kit spreadsheet"><h3>Freelancer Finance Kit</h3><div class="p">$19</div></a></div>
+<div class="item"><a href="https://lathansone.gumroad.com/l/crtdn"><span class="shot"><img src="https://public-files.gumroad.com/vmulb5o5fru3vsqltw5xmrnkd1le" loading="lazy" width="1005" height="565" alt="Annual Budget Planner spreadsheet"></span><span class="body"><h3>Annual Budget Planner</h3><span class="d">Bills, debt payoff, savings goals and net worth in one workbook.</span><span class="row"><span class="price">$14</span><span class="go">View template &rarr;</span></span></span></a></div>
+<div class="item"><a href="https://lathansone.gumroad.com/l/gwljja"><span class="shot"><img src="https://public-files.gumroad.com/m8xqkwljxizobnsjpwtbvo3urjbo" loading="lazy" width="1005" height="565" alt="College Student Planner spreadsheet"></span><span class="body"><h3>College Student Planner</h3><span class="d">GPA calculator, assignments, class schedule and scholarship tracker.</span><span class="row"><span class="price">$11</span><span class="go">View template &rarr;</span></span></span></a></div>
+<div class="item"><a href="https://lathansone.gumroad.com/l/gjczho"><span class="shot"><img src="https://public-files.gumroad.com/86bk3sa57opicywzf5yu0ewplt2d" loading="lazy" width="1005" height="565" alt="Trading Journal spreadsheet"></span><span class="body"><h3>Trading Journal</h3><span class="d">R multiples, profit factor, drawdown and setup breakdown for every trade.</span><span class="row"><span class="price">$19</span><span class="go">View template &rarr;</span></span></span></a></div>
+<div class="item"><a href="https://lathansone.gumroad.com/l/spnzbm"><span class="shot"><img src="https://public-files.gumroad.com/at76xpk278n6vw9z20hr60f2s3ey" loading="lazy" width="1005" height="565" alt="Freelancer Finance Kit spreadsheet"></span><span class="body"><h3>Freelancer Finance Kit</h3><span class="d">Invoices, quotes, mileage, time tracking and a tax estimate.</span><span class="row"><span class="price">$19</span><span class="go">View template &rarr;</span></span></span></a></div>
 </div>
 <p class="eyebrow" style="margin-top:56px">Save with a bundle</p>
 <div class="shelf3">
-<div class="item"><a href="https://lathansone.gumroad.com/l/kfqufj"><img src="https://public-files.gumroad.com/20287qt4ffj20f7lnhvamrh4zhr6" loading="lazy" width="1005" height="565" alt="Personal Finance Bundle spreadsheet"><h3>Personal Finance Bundle</h3><div class="p">$34 &middot; Budget, College, Trading Journal and more</div></a></div>
-<div class="item"><a href="https://lathansone.gumroad.com/l/mdygss"><img src="https://public-files.gumroad.com/by6lnesbh9gyeq77x14wdt3fb0ze" loading="lazy" width="1005" height="565" alt="Freelancer Bundle spreadsheet"><h3>Freelancer Bundle</h3><div class="p">$34 &middot; Five tools for a one person business</div></a></div>
-<div class="item"><a href="https://lathansone.gumroad.com/l/lhefn"><img src="https://public-files.gumroad.com/e78oulxn6aies2zk28usktvep5wk" loading="lazy" width="1005" height="565" alt="Complete Money Bundle spreadsheet"><h3>Complete Money Bundle</h3><div class="p">$59 &middot; All 8 templates in one download</div></a></div>
+<div class="item"><a href="https://lathansone.gumroad.com/l/kfqufj"><span class="shot"><img src="https://public-files.gumroad.com/20287qt4ffj20f7lnhvamrh4zhr6" loading="lazy" width="1005" height="565" alt="Personal Finance Bundle spreadsheet"></span><span class="body"><div class="save">Save $10</div><h3>Personal Finance Bundle</h3><span class="d">Annual Budget Planner, College Student Planner and Trading Journal together.</span><span class="row"><span class="price">$34</span><span class="go">View template &rarr;</span></span></span></a></div>
+<div class="item"><a href="https://lathansone.gumroad.com/l/mdygss"><span class="shot"><img src="https://public-files.gumroad.com/by6lnesbh9gyeq77x14wdt3fb0ze" loading="lazy" width="1005" height="565" alt="Freelancer Bundle spreadsheet"></span><span class="body"><div class="save">Five tools</div><h3>Freelancer Bundle</h3><span class="d">Finance Kit, Rate Calculator, Side Hustle Tracker, Content Calendar and Reselling Tracker.</span><span class="row"><span class="price">$34</span><span class="go">View template &rarr;</span></span></span></a></div>
+<div class="item"><a href="https://lathansone.gumroad.com/l/lhefn"><span class="shot"><img src="https://public-files.gumroad.com/e78oulxn6aies2zk28usktvep5wk" loading="lazy" width="1005" height="565" alt="Complete Money Bundle spreadsheet"></span><span class="body"><div class="save">Best value</div><h3>Complete Money Bundle</h3><span class="d">All 8 templates in one download, the best value in the shop.</span><span class="row"><span class="price">$59</span><span class="go">View template &rarr;</span></span></span></a></div>
 </div>
 <p class="more"><a href="https://lathansone.gumroad.com">See all 11 templates on Gumroad</a></p>
 </div></section>
@@ -354,9 +364,9 @@ requestAnimationFrame(draw);
 <details><summary>What if I don't like the sample?</summary><p>Tell me what's off and I'll revise it. If it's still not right, we part ways and you owe nothing.</p></details>
 <details><summary>What does the $25 a month cover?</summary><p>Hosting, security, backups, and small changes like new hours, prices or photos. You text me, I handle it. Cancel anytime.</p></details>
 <details><summary>Do I need to know anything about computers?</summary><p>No. You never log in to anything. I take care of the technical side from start to finish.</p></details>
-<details><summary>Can you fix the website I already have?</summary><p>Usually. Send me the address and I'll tell you honestly whether it's worth fixing or faster to start fresh.</p></details>
+<details><summary>Can you fix the website I already have?</summary><p>Yes. Send me the address and I'll tell you straight whether to fix it or start fresh.</p></details>
 <details><summary>Who owns the site and the web address?</summary><p>You do. The domain is registered in your name, and if you ever leave, the site goes with you.</p></details>
-<details><summary>What does the first year actually cost, all in?</summary><p>$150 to build plus $25 a month comes to $450 for the first year, or $400 if you pay for the year up front. Add about $12 for the domain. That's the whole cost, and there's nothing else.</p></details>
+<details><summary>What does the first year actually cost, all in?</summary><p>$150 to build plus $25 a month comes to $450 for the first year, or $400 if you pay for the year up front. Add $12 for the domain. That's the whole cost, and there's nothing else.</p></details>
 <details><summary>Do you only do websites?</summary><p>Websites are the main thing. I also write resumes and cover letters from $25 and build Excel and Google Sheets tools from $20, mostly for people around Surry County who hear about me through the website work.</p></details>
 </div>
 </div></section>
