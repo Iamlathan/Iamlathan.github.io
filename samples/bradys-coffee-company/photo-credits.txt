@@ -1,0 +1,13 @@
+Photo credits for samples/bradys-coffee-company/ (all free under the Unsplash License, https://unsplash.com/license)
+
+hero.jpg
+  Photographer: Kari Shea
+  Source: https://unsplash.com/photos/brown-liquid-on-white-ceramic-cup-and-saucer-pJn9WhMqFIs
+
+doughnuts.jpg
+  Photographer: Annie Spratt
+  Source: https://unsplash.com/photos/brown-and-white-doughnuts-on-white-tray-XyBeP4K9Vzs
+
+coffee-cup.jpg
+  Photographer: Kelly Sikkema
+  Source: https://unsplash.com/photos/white-and-brown-paper-cup-IhxM7w392e0
