@@ -296,6 +296,14 @@ nav ul a[aria-current="page"]{color:var(--text)}
 .care-box p{margin:0;max-width:72ch;font-size:.92rem}
 .care-box .care-fine{font-size:.8rem;color:var(--text-3)}
 @media(max-width:860px){.care-box{padding:24px}}
+@keyframes hero-settle{from{opacity:0;transform:translateY(8px);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+.hero h1,.hero .eyebrow,.hero .sub,.hero .cta,.hero .fine,.hero .who,.hero .towns{animation:hero-settle 620ms cubic-bezier(.2,.7,.2,1) both}
+.hero .eyebrow{animation-delay:60ms}
+.hero .sub{animation-delay:110ms}
+.hero .cta{animation-delay:160ms}
+.hero .fine{animation-delay:210ms}
+.hero .who,.hero .towns{animation-delay:250ms}
+@media (prefers-reduced-motion:reduce){.hero h1,.hero .eyebrow,.hero .sub,.hero .cta,.hero .fine,.hero .who,.hero .towns{animation:none}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Granite City Digital","url":"https://granitecitydigital.me","email":"lathan@granitecitydigital.me","telephone":"+1-743-222-0985","logo":"https://granitecitydigital.me/apple-touch-icon.png","image":"https://granitecitydigital.me/sample-preview-plumbing.png","founder":{"@type":"Person","name":"Lathan"},"priceRange":"$","address":{"@type":"PostalAddress","addressLocality":"Mount Airy","addressRegion":"NC","postalCode":"27030","addressCountry":"US"},"areaServed":["Mount Airy","Surry County","Elkin","Dobson","Pilot Mountain","King"],"description":"Small business websites, resumes and Excel spreadsheets in Mount Airy, NC. Free sample first, $150 to build, $25 a month."}</script>
 </head>
@@ -332,8 +340,8 @@ x.fillStyle=g;x.beginPath();x.arc(cx,cy,R*1.12,0,7);x.fill();
 x.strokeStyle="rgba("+DOT+",.09)";x.lineWidth=1;x.beginPath();x.arc(cx,cy,R,0,7);x.stroke();
 for(var i=0;i<P.length;i++){var q=proj(P[i][0],P[i][1],rot);if(q[2]<0)continue;
 x.fillStyle="rgba("+DOT+","+(.2+.6*q[2])+")";var s=1.1+1.2*q[2];x.fillRect(cx+q[0]*R-s/2,cy-q[1]*R-s/2,s,s)}
-var p=proj(PIN[0],PIN[1],rot);if(p[2]>0.05){var px=cx+p[0]*R,py=cy-p[1]*R,k=(t/1400)%1;
-x.strokeStyle="rgba("+ACC+","+(.7*(1-k))+")";x.lineWidth=1.5;x.beginPath();x.arc(px,py,5+22*k,0,7);x.stroke();
+var p=proj(PIN[0],PIN[1],rot);if(p[2]>0.05){var px=cx+p[0]*R,py=cy-p[1]*R,k=(t/2600)%1,e=1-Math.pow(1-k,3);
+if(!reduce){x.strokeStyle="rgba("+ACC+","+(.55*(1-k)*(1-k))+")";x.lineWidth=1.25;x.beginPath();x.arc(px,py,5+20*e,0,7);x.stroke()}
 x.fillStyle="rgb("+ACC+")";x.shadowColor="rgba("+ACC+",.9)";x.shadowBlur=14;x.beginPath();x.arc(px,py,4.5,0,7);x.fill();x.shadowBlur=0;
 x.textAlign="left";var tx=px+14;
 x.font="600 12px "+GF;x.fillStyle=LBL;x.fillText("Mount Airy, NC",tx,py-10);
