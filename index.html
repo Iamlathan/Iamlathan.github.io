@@ -98,7 +98,7 @@ nav ul a:hover{color:var(--text)}
 .plan{border:1px solid var(--line);border-radius:12px;padding:36px;background:var(--bg-2)}
 .plan.main{border-color:var(--yellow)}
 .plan .kind{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-3);margin-bottom:22px}
-.plan.main .kind{color:var(--yellow)}
+.plan .kind{color:var(--yellow)}
 .plan h3{font-size:1.15rem;font-weight:500}
 .plan .amt{display:flex;align-items:baseline;gap:10px;margin:6px 0 10px}
 .plan .amt b{font-size:2.8rem;font-weight:300;letter-spacing:-.04em;line-height:1}
@@ -279,6 +279,23 @@ form button.btn[disabled]{cursor:progress;opacity:.85}
 .page-head .sub{max-width:52ch}
 nav ul a[aria-current="page"]{color:var(--text)}
 @media(max-width:860px){.page-head{padding:72px 0 56px}}
+/* pricing: Starter and Pro */
+.plans{align-items:stretch}
+.plan .amt{margin:10px 0 26px}
+.plan .amt b{font-size:clamp(2.8rem,5vw,3.4rem)}
+.plan .plan-end{margin-top:auto;padding-top:8px}
+.plan .care{font-size:.88rem;color:var(--text-2);margin-bottom:20px;max-width:none}
+.plan .care b{color:var(--text);font-weight:600}
+.plan .plan-end .btn{transition:background-color .15s ease,border-color .15s ease,transform .16s cubic-bezier(.23,1,.32,1)}
+.plan .plan-end .btn:active{transform:scale(.97)}
+.plans-note{font-size:.88rem;margin-top:28px;max-width:72ch}
+@media(max-width:860px){.plan{padding:28px 24px}.plan .plan-end .btn{align-self:stretch;width:100%;justify-content:center}}
+.care-box{margin-top:24px;border:1px solid var(--yellow);border-radius:12px;padding:28px 32px;background:var(--bg-2);box-shadow:0 0 0 1px var(--yellow),0 24px 60px -30px rgba(243,195,0,.35);display:grid;gap:10px}
+.care-box .kind{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow);font-weight:600}
+.care-box h3{font-size:1.15rem;font-weight:500;margin:0}
+.care-box p{margin:0;max-width:72ch;font-size:.92rem}
+.care-box .care-fine{font-size:.8rem;color:var(--text-3)}
+@media(max-width:860px){.care-box{padding:24px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Granite City Digital","url":"https://granitecitydigital.me","email":"lathan@granitecitydigital.me","telephone":"+1-743-222-0985","logo":"https://granitecitydigital.me/apple-touch-icon.png","image":"https://granitecitydigital.me/sample-preview-plumbing.png","founder":{"@type":"Person","name":"Lathan"},"priceRange":"$","address":{"@type":"PostalAddress","addressLocality":"Mount Airy","addressRegion":"NC","postalCode":"27030","addressCountry":"US"},"areaServed":["Mount Airy","Surry County","Elkin","Dobson","Pilot Mountain","King"],"description":"Small business websites, resumes and Excel spreadsheets in Mount Airy, NC. Free sample first, $150 to build, $25 a month."}</script>
 </head>
@@ -306,7 +323,9 @@ size();window.addEventListener("resize",size);
 function proj(lat,lon,rot){var a=lat*Math.PI/180,b=(lon+rot)*Math.PI/180,X=Math.cos(a)*Math.sin(b),Y=Math.sin(a),Z=Math.cos(a)*Math.cos(b);
 var y2=Y*Math.cos(TILT)-Z*Math.sin(TILT),z2=Y*Math.sin(TILT)+Z*Math.cos(TILT);return[X,y2,z2]}
 function draw(t){
-var rot=reduce?80:80+Math.sin(t/9000)*48;
+x.font="500 10.5px "+GF;var lw=S>300?x.measureText("Your local web designer").width:(x.font="600 12px "+GF,x.measureText("Mount Airy, NC").width);
+var mx=Math.max(0,Math.min(.42,(S/2-14-lw-6)/(S*.44))),bm=Math.asin(Math.min(1,mx/Math.cos(PIN[0]*Math.PI/180)))*180/Math.PI;
+var rot=-PIN[1]+(reduce?bm/2:bm/2*(1+Math.sin(t/4775)));
 x.setTransform(D,0,0,D,0,0);x.clearRect(0,0,S,S);var R=S*.44,cx=S/2,cy=S/2;
 var g=x.createRadialGradient(cx,cy,R*.2,cx,cy,R*1.12);g.addColorStop(0,"rgba("+ACC+",.07)");g.addColorStop(.7,"rgba("+ACC+",.02)");g.addColorStop(1,"rgba("+ACC+",0)");
 x.fillStyle=g;x.beginPath();x.arc(cx,cy,R*1.12,0,7);x.fill();
@@ -316,7 +335,7 @@ x.fillStyle="rgba("+DOT+","+(.2+.6*q[2])+")";var s=1.1+1.2*q[2];x.fillRect(cx+q[
 var p=proj(PIN[0],PIN[1],rot);if(p[2]>0.05){var px=cx+p[0]*R,py=cy-p[1]*R,k=(t/1400)%1;
 x.strokeStyle="rgba("+ACC+","+(.7*(1-k))+")";x.lineWidth=1.5;x.beginPath();x.arc(px,py,5+22*k,0,7);x.stroke();
 x.fillStyle="rgb("+ACC+")";x.shadowColor="rgba("+ACC+",.9)";x.shadowBlur=14;x.beginPath();x.arc(px,py,4.5,0,7);x.fill();x.shadowBlur=0;
-var L=px+135<S,tx=L?px+14:px-14;x.textAlign=L?"left":"right";
+x.textAlign="left";var tx=px+14;
 x.font="600 12px "+GF;x.fillStyle=LBL;x.fillText("Mount Airy, NC",tx,py-10);
 if(S>300){x.font="500 10.5px "+GF;x.fillStyle=LBL2;x.fillText("Your local web designer",tx,py+5)}}
 if(!reduce)requestAnimationFrame(draw)}
@@ -396,34 +415,45 @@ if(!reduce)requestAnimationFrame(draw)}
 <p class="spots">Few spots left</p>
 <div class="plans">
 <div class="plan main">
-<div class="kind">One time project</div>
-<h3>Website build</h3>
-<div class="amt"><small>From</small><b>$150</b></div>
-<p class="desc">A complete, finished page for your business, ready to launch.</p>
+<div class="kind">One time payment</div>
+<h3>Starter</h3>
+<div class="amt"><b>$150</b></div>
 <ul>
 <li>Custom design that fits your business</li>
 <li>Services, photos, hours, reviews and a contact form</li>
 <li>Call and text buttons that work on every phone</li>
 <li>Google setup, sitemap and launch handled for you</li>
-<li>Free sample first, so you decide after you've seen it</li>
+<li>Free sample first</li>
 </ul>
+<div class="plan-end">
+<p class="care">Optional care: <b>$25 a month</b></p>
 <a class="btn y" href="#start">Get a free sample</a>
-<p class="foot">Extra pages, booking and a chatbot are quoted separately. The Pro build with all three is $250.</p>
+</div>
 </div>
 <div class="plan">
-<div class="kind">Optional, ongoing</div>
-<h3>Hosting and care</h3>
-<div class="amt"><b>$25</b><small>/ month</small></div>
-<p class="desc">Keeps the site online and covers the small changes every business needs.</p>
+<div class="kind">One time payment</div>
+<h3>Pro</h3>
+<div class="amt"><b>$599</b></div>
 <ul>
-<li>Hosting, security and backups</li>
-<li>Text, photo, hours and price updates</li>
-<li>Small updates done the same day</li>
-<li>Month to month, and you can cancel anytime</li>
+<li>Up to 5 pages</li>
+<li>Online booking</li>
+<li>After hours chatbot that answers common questions</li>
+<li>Google Business Profile setup</li>
+<li>Contact form straight to your phone and email</li>
+<li>Free homepage preview first</li>
+<li>Domain in your name</li>
 </ul>
-<a class="btn g" href="#start">Ask about care</a>
-<p class="foot">Pro sites are $35 a month. Your web address (yourbusiness.com) is included and registered in your name.</p>
+<div class="plan-end">
+<p class="care">Optional care: <b>$49 a month</b>, with same day priority updates</p>
+<a class="btn g" href="#start">Ask about Pro</a>
 </div>
+</div>
+</div>
+<div class="care-box">
+<div class="kind">Optional care</div>
+<h3>Keep your site online and up to date</h3>
+<p>Hosting, security, backups and small changes whenever you text me, plus a monthly website health report. Starter care is $25 a month, Pro care is $49 a month with same day priority updates. Month to month, cancel anytime. Without care, I hand you the files to host yourself.</p>
+<p class="care-fine">Your web address (yourbusiness.com) is included and registered in your name.</p>
 </div>
 <div class="terms">
 <div><h3>If you don't like the sample</h3><p>You owe nothing and I delete it. I won't keep calling you.</p></div>
@@ -465,7 +495,7 @@ if(!reduce)requestAnimationFrame(draw)}
 <details><summary>Do I need to know anything about computers?</summary><p>No. You never log in to anything. I take care of the technical side from start to finish.</p></details>
 <details><summary>Can you fix the website I already have?</summary><p>Yes. Send me the address and I'll tell you straight whether to fix it or start fresh.</p></details>
 <details><summary>Who owns the site and the web address?</summary><p>You do. The domain is registered in your name, and if you ever leave, the site goes with you.</p></details>
-<details><summary>What will I actually pay?</summary><p>$150 once to build it, then $25 a month if you want me to host and update it. Your web address is included, registered in your name. Nothing else.</p></details>
+<details><summary>What will I actually pay?</summary><p>Starter is $150 once, plus $25 a month if you want me to host and update it. Pro is $599 once, plus $49 a month for care. Your web address is included, registered in your name. Nothing else.</p></details>
 <details><summary>Do you only do websites?</summary><p>Websites are the main thing. I also write resumes and cover letters from $25 and build Excel and Google Sheets tools from $20, mostly for people around Surry County who hear about me through the website work.</p></details>
 </div>
 </div></section>
