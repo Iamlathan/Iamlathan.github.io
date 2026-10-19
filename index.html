@@ -244,6 +244,18 @@ footer{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
 .plan li{padding-left:22px;position:relative}
 .plan li::before{content:"";position:absolute;left:0;top:15px;width:11px;height:11px;background:var(--yellow);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/100% no-repeat}
 .ways a{padding:16px 0 16px 0}
+/* free website check */
+.check{background:var(--bg-2);scroll-margin-top:64px}
+.check input{background:var(--bg)}
+.check h2{text-wrap:balance}
+.check .btn{font-family:inherit;cursor:pointer;transition:background-color .15s,transform .16s cubic-bezier(.23,1,.32,1)}
+.check .due{color:var(--text);font-weight:500;margin-top:18px}
+.check h3{margin-top:40px}
+.checks{list-style:none;max-width:46ch}
+.checks li{position:relative;padding:11px 0 11px 24px;border-top:1px solid var(--line);font-size:.9rem;color:var(--text-2)}
+.checks li b{color:var(--text);font-weight:600}
+.checks li::before{content:"";position:absolute;left:0;top:18px;width:11px;height:11px;background:var(--yellow);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/100% no-repeat}
+.check .btn:active{transform:scale(.97)}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Granite City Digital","url":"https://granitecitydigital.me","email":"lathan@granitecitydigital.me","telephone":"+1-743-222-0985","logo":"https://granitecitydigital.me/apple-touch-icon.png","image":"https://granitecitydigital.me/sample-preview-plumbing.png","founder":{"@type":"Person","name":"Lathan"},"priceRange":"$","address":{"@type":"PostalAddress","addressLocality":"Mount Airy","addressRegion":"NC","postalCode":"27030","addressCountry":"US"},"areaServed":["Mount Airy","Surry County","Elkin","Dobson","Pilot Mountain","King"],"description":"Small business websites, resumes and Excel spreadsheets in Mount Airy, NC. Free sample first, $150 to build, $25 a month."}</script>
 </head>
@@ -295,6 +307,7 @@ if(!reduce)requestAnimationFrame(draw)}
 <div class="cta">
 <a class="btn y" href="#start">Get a free sample</a>
 <a class="btn g" href="#pricing">View pricing</a>
+<a class="btn g" href="#check">Free website check</a>
 </div>
 <p class="fine">Free sample in 3 days, guaranteed. Live within a week of your OK. I reply the same day.</p>
 <div class="who"><span class="avatar" aria-hidden="true"><!-- PHOTO: <img src="lathan.jpg" alt=""> --></span><span><b>Lathan</b>, Mount Airy, NC<br><small>I build every site myself and answer my own phone.</small></span></div>
@@ -320,6 +333,35 @@ if(!reduce)requestAnimationFrame(draw)}
 <a class="link" href="sample-plumbing.html" target="_blank" rel="noopener">Open the sample site</a>
 </div>
 <div class="shot"><img src="sample-preview-plumbing.png" alt="Ridgeline Plumbing sample website"></div>
+</div></section>
+
+<section id="check" class="rule start check"><div class="wrap">
+<div>
+<p class="eyebrow">Free website check</p>
+<h2>Is your website costing you customers?<br>Get a free check.</h2>
+<p>Send me the address and I'll go through your site the way your customers do, on a phone. It's free, and you're under no obligation.</p>
+<p class="due">Your report comes within 2 business days.</p>
+<h3>What I look at</h3>
+<ul class="checks">
+<li><b>Works on phones.</b> Easy to read and tap on a small screen.</li>
+<li><b>Loads fast.</b> Opens quickly, even on a weak signal.</li>
+<li><b>No broken links.</b> Every button and page goes where it should.</li>
+<li><b>Shows up on Google.</b> People searching for you can find you.</li>
+<li><b>Contact info works.</b> Your phone number and email are right and easy to tap.</li>
+</ul>
+</div>
+<form id="checkform" onsubmit="return sendCheck(event)">
+<div class="two">
+<label>Business name<input name="biz" required autocomplete="organization"></label>
+<label>Website address<input name="site" type="text" inputmode="url" required autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="yourbusiness.com"></label>
+</div>
+<div class="two">
+<label>Your name<input name="name" required autocomplete="name"></label>
+<label>Phone or email<input name="contact" type="text" required autocapitalize="off" spellcheck="false" oninput="this.setCustomValidity('')"></label>
+</div>
+<button class="btn y" type="submit">Get my free check</button>
+<p class="form-note">This opens an email to me with your details filled in.</p>
+</form>
 </div></section>
 
 <section id="pricing" class="rule"><div class="wrap">
@@ -468,6 +510,19 @@ function sendReq(e){
   var f=e.target, g=function(n){return (f[n].value||'').trim()};
   var body="Name: "+g('name')+"\nBusiness: "+g('biz')+"\nPhone: "+g('phone')+"\nCurrent site: "+(g('site')||'none')+"\n\nAbout the business:\n"+g('about')+"\n\nSent from granitecitydigital.me";
   window.location.href="mailto:lathan@granitecitydigital.me?subject="+encodeURIComponent("Free sample request: "+g('biz'))+"&body="+encodeURIComponent(body);
+  return false;
+}
+function sendCheck(e){
+  e.preventDefault();
+  var f=e.target, g=function(n){return (f.elements[n].value||'').trim()};
+  var c=g('contact'), box=f.elements['contact'];
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c) && c.replace(/\D/g,'').length<7){
+    box.setCustomValidity("Enter a phone number or an email address.");
+    box.reportValidity();
+    return false;
+  }
+  var body="Business: "+g('biz')+"\nWebsite: "+g('site')+"\nName: "+g('name')+"\nPhone or email: "+c+"\n\nPlease send me a free website check.\n\nSent from granitecitydigital.me";
+  window.location.href="mailto:lathan@granitecitydigital.me?subject="+encodeURIComponent("Free website check: "+g('biz'))+"&body="+encodeURIComponent(body);
   return false;
 }
 </script>
