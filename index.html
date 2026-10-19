@@ -152,7 +152,7 @@ details:last-child{border-bottom:1px solid var(--line)}
 summary{list-style:none;cursor:pointer;font-weight:500;font-size:.98rem;padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:20px}
 summary::-webkit-details-marker{display:none}
 summary::after{content:"+";color:var(--text-3);font-weight:300;font-size:1.4rem;line-height:1}
-details[open] summary::after{content:"–"}
+details[open] summary::after{content:"\2212"}
 details p{padding:0 0 22px;font-size:.92rem}
 
 /* start */
@@ -256,6 +256,29 @@ footer{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
 .checks li b{color:var(--text);font-weight:600}
 .checks li::before{content:"";position:absolute;left:0;top:18px;width:11px;height:11px;background:var(--yellow);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/100% no-repeat}
 .check .btn:active{transform:scale(.97)}
+/* form sending, sent and error states */
+form[hidden],.form-err[hidden]{display:none}
+.hp{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:inset(50%);opacity:0;pointer-events:none}
+form button.btn{font-family:inherit;cursor:pointer}
+form button.btn[disabled]{cursor:progress;opacity:.85}
+.spin{width:13px;height:13px;border-radius:50%;border:2px solid rgba(17,17,17,.25);border-top-color:#111;animation:spin .7s linear infinite;flex:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.form-err{font-size:.86rem;line-height:1.55;color:var(--text);max-width:46ch;background:rgba(229,96,84,.09);border:1px solid rgba(229,96,84,.32);border-radius:8px;padding:12px 14px}
+.form-err a{color:var(--yellow);font-weight:600}
+.sent{scroll-margin-top:88px;align-self:start;background:var(--bg-3);border-radius:12px;padding:34px 32px;display:grid;gap:12px;justify-items:start;outline:none;transition:opacity .26s cubic-bezier(.23,1,.32,1),transform .26s cubic-bezier(.23,1,.32,1)}
+@starting-style{.sent{opacity:0;transform:translateY(8px)}}
+.check .sent{background:var(--bg)}
+.sent .tick{width:44px;height:44px;border-radius:50%;background:rgba(74,190,120,.14);display:grid;place-items:center;margin-bottom:6px}
+.sent .tick svg{width:22px;height:22px;color:#4abe78}
+.sent h3{font-size:1.35rem;font-weight:500;letter-spacing:-.02em;margin:0}
+.sent p{color:var(--text-2);font-size:.95rem}
+@media (prefers-reduced-motion:reduce){.spin{animation-duration:1.6s}}
+/* templates page */
+.page-head{padding:120px 0 72px}
+.page-head h1{font-size:clamp(2.4rem,5.4vw,4rem);font-weight:300;letter-spacing:-.03em;line-height:1.05;margin-bottom:22px;max-width:16ch}
+.page-head .sub{max-width:52ch}
+nav ul a[aria-current="page"]{color:var(--text)}
+@media(max-width:860px){.page-head{padding:72px 0 56px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Granite City Digital","url":"https://granitecitydigital.me","email":"lathan@granitecitydigital.me","telephone":"+1-743-222-0985","logo":"https://granitecitydigital.me/apple-touch-icon.png","image":"https://granitecitydigital.me/sample-preview-plumbing.png","founder":{"@type":"Person","name":"Lathan"},"priceRange":"$","address":{"@type":"PostalAddress","addressLocality":"Mount Airy","addressRegion":"NC","postalCode":"27030","addressCountry":"US"},"areaServed":["Mount Airy","Surry County","Elkin","Dobson","Pilot Mountain","King"],"description":"Small business websites, resumes and Excel spreadsheets in Mount Airy, NC. Free sample first, $150 to build, $25 a month."}</script>
 </head>
@@ -264,7 +287,7 @@ footer{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
 <header><div class="wrap"><nav>
 <a class="logo" href="#"><b>GRANITE<i>.</i>CITY</b><span>DIGITAL</span></a>
 <ul id="site-nav">
-<li><a href="#services">Services</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#how">How it works</a></li><li><a href="#templates">Templates</a></li><li><a href="#about">About</a></li><li><a href="#faq">FAQ</a></li>
+<li><a href="#services">Services</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#how">How it works</a></li><li><a href="#about">About</a></li><li><a href="#faq">FAQ</a></li>
 <li class="keep"><a class="btn g sm" href="#start">Get a free sample</a></li>
 </ul>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" onclick="toggleMenu(this)">Menu</button>
@@ -359,8 +382,10 @@ if(!reduce)requestAnimationFrame(draw)}
 <label>Your name<input name="name" required autocomplete="name"></label>
 <label>Phone or email<input name="contact" type="text" required autocapitalize="off" spellcheck="false" oninput="this.setCustomValidity('')"></label>
 </div>
-<button class="btn y" type="submit">Get my free check</button>
-<p class="form-note">This opens an email to me with your details filled in.</p>
+<input type="checkbox" name="botcheck" class="hp" tabindex="-1" aria-hidden="true" autocomplete="off">
+<button class="btn y" type="submit"><span class="lbl">Get my free check</span></button>
+<p class="form-err" role="alert" hidden>That didn't go through, and everything you typed is still here. Try again, or text <a href="sms:+17432220985">(743) 222-0985</a> or email <a href="mailto:lathan@granitecitydigital.me">lathan@granitecitydigital.me</a> and I'll take it from there.</p>
+<p class="form-note">Goes straight to me. I reply the same day.</p>
 </form>
 </div></section>
 
@@ -418,30 +443,12 @@ if(!reduce)requestAnimationFrame(draw)}
 </div>
 </div></section>
 
-<section id="templates" class="rule"><div class="wrap">
-<p class="eyebrow">Excel templates</p>
-<h2>Spreadsheets with the formulas already done.</h2>
-<p>Instant download. Light and dark versions in every file. Works in Excel and Google Sheets.</p>
-<div class="shelf4">
-<div class="item"><a href="https://lathansone.gumroad.com/l/crtdn"><span class="shot"><img src="https://public-files.gumroad.com/vmulb5o5fru3vsqltw5xmrnkd1le" loading="lazy" width="1005" height="565" alt="Annual Budget Planner spreadsheet"></span><span class="body"><h3>Annual Budget Planner</h3><span class="d">Bills, debt payoff, savings goals and net worth in one workbook.</span><span class="row"><span class="price">$14</span><span class="go">View template &rarr;</span></span></span></a></div>
-<div class="item"><a href="https://lathansone.gumroad.com/l/gwljja"><span class="shot"><img src="https://public-files.gumroad.com/m8xqkwljxizobnsjpwtbvo3urjbo" loading="lazy" width="1005" height="565" alt="College Student Planner spreadsheet"></span><span class="body"><h3>College Student Planner</h3><span class="d">GPA calculator, assignments, class schedule and scholarship tracker.</span><span class="row"><span class="price">$11</span><span class="go">View template &rarr;</span></span></span></a></div>
-<div class="item"><a href="https://lathansone.gumroad.com/l/gjczho"><span class="shot"><img src="https://public-files.gumroad.com/86bk3sa57opicywzf5yu0ewplt2d" loading="lazy" width="1005" height="565" alt="Trading Journal spreadsheet"></span><span class="body"><h3>Trading Journal</h3><span class="d">R multiples, profit factor, drawdown and setup breakdown for every trade.</span><span class="row"><span class="price">$19</span><span class="go">View template &rarr;</span></span></span></a></div>
-<div class="item"><a href="https://lathansone.gumroad.com/l/spnzbm"><span class="shot"><img src="https://public-files.gumroad.com/at76xpk278n6vw9z20hr60f2s3ey" loading="lazy" width="1005" height="565" alt="Freelancer Finance Kit spreadsheet"></span><span class="body"><h3>Freelancer Finance Kit</h3><span class="d">Invoices, quotes, mileage, time tracking and a tax estimate.</span><span class="row"><span class="price">$19</span><span class="go">View template &rarr;</span></span></span></a></div>
-</div>
-<p class="eyebrow bundles">Save with a bundle</p>
-<div class="shelf3">
-<div class="item"><a href="https://lathansone.gumroad.com/l/kfqufj"><span class="shot"><img src="https://public-files.gumroad.com/20287qt4ffj20f7lnhvamrh4zhr6" loading="lazy" width="1005" height="565" alt="Personal Finance Bundle spreadsheet"></span><span class="body"><div class="save">Save $10</div><h3>Personal Finance Bundle</h3><span class="d">Annual Budget Planner, College Student Planner and Trading Journal together.</span><span class="row"><span class="price">$34</span><span class="go">View bundle &rarr;</span></span></span></a></div>
-<div class="item"><a href="https://lathansone.gumroad.com/l/mdygss"><span class="shot"><img src="https://public-files.gumroad.com/by6lnesbh9gyeq77x14wdt3fb0ze" loading="lazy" width="1005" height="565" alt="Freelancer Bundle spreadsheet"></span><span class="body"><div class="save">Five tools</div><h3>Freelancer Bundle</h3><span class="d">Finance Kit, Rate Calculator, Side Hustle Tracker, Content Calendar and Reselling Tracker.</span><span class="row"><span class="price">$34</span><span class="go">View bundle &rarr;</span></span></span></a></div>
-<div class="item"><a href="https://lathansone.gumroad.com/l/lhefn"><span class="shot"><img src="https://public-files.gumroad.com/e78oulxn6aies2zk28usktvep5wk" loading="lazy" width="1005" height="565" alt="Complete Money Bundle spreadsheet"></span><span class="body"><div class="save">Best value</div><h3>Complete Money Bundle</h3><span class="d">All 8 templates in one download, the best value in the shop.</span><span class="row"><span class="price">$59</span><span class="go">View bundle &rarr;</span></span></span></a></div>
-</div>
-<p class="more"><a href="https://lathansone.gumroad.com">See the whole shop on Gumroad</a></p>
-</div></section>
 
 <section id="about" class="rule"><div class="wrap about">
 <div>
 <p class="eyebrow">About</p>
 <h2>One person, and you deal with me directly.</h2>
-<p>I am Lathan. I grew up in Mount Airy, and I'm heading to university next year. When you text or call <a class="inline" href="sms:+17432220985">(743) 222-0985</a>, I'm the one who answers, and I'm the one who builds your site. There's no ticket queue and no account manager.</p>
+<p>I'm Lathan, a business major who grew up in Mount Airy. Next fall I'm transferring to App State, and Granite City Digital comes with me. Your site, your updates and your texts still come straight to me, same number, same day replies. When you text or call <a class="inline" href="sms:+17432220985">(743) 222-0985</a>, I'm the one who answers, and I'm the one who builds your site. There's no ticket queue and no account manager.</p>
 <p>You pay for your website and nothing else. There's no agency, no middleman and no markup, so every dollar goes into a clean, professional site built by the person you're actually talking to.</p>
 <p class="aside">Already have a website that's out of date? Send me the address. A rebuild costs the same $150, and you see the free sample first, just like with a new site.</p>
 </div>
@@ -482,8 +489,10 @@ if(!reduce)requestAnimationFrame(draw)}
 </div>
 <label>What do you do, and where?<textarea name="about" placeholder="Lawn care in Mount Airy and Dobson. No website yet." required></textarea></label>
 <label>Current website, if any<input name="site" placeholder="Optional"></label>
-<button class="btn y" type="submit">Request my free sample</button>
-<p class="form-note">This opens an email to me with your details filled in.</p>
+<input type="checkbox" name="botcheck" class="hp" tabindex="-1" aria-hidden="true" autocomplete="off">
+<button class="btn y" type="submit"><span class="lbl">Request my free sample</span></button>
+<p class="form-err" role="alert" hidden>That didn't go through, and everything you typed is still here. Try again, or text <a href="sms:+17432220985">(743) 222-0985</a> or email <a href="mailto:lathan@granitecitydigital.me">lathan@granitecitydigital.me</a> and I'll take it from there.</p>
+<p class="form-note">Goes straight to me. I reply the same day.</p>
 </form>
 </div></section>
 
@@ -491,7 +500,7 @@ if(!reduce)requestAnimationFrame(draw)}
 
 <footer><div class="wrap">
 <div class="fcol"><b>GRANITE<i>.</i>CITY</b><span>Websites for small businesses in Mount Airy and Surry County, NC.</span><span>&copy; 2026 Granite City Digital</span></div>
-<div class="fcol"><small>Pages</small><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#how">How it works</a><a href="#templates">Templates</a><a href="#about">About</a><a href="#faq">FAQ</a></div>
+<div class="fcol"><small>Pages</small><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#how">How it works</a><a href="#about">About</a><a href="#faq">FAQ</a></div>
 <div class="fcol"><small>Contact</small><a href="tel:+17432220985">(743) 222-0985</a><a href="sms:+17432220985">Text me</a><a href="mailto:lathan@granitecitydigital.me">lathan@granitecitydigital.me</a></div>
 <div class="fcol"><small>Follow</small>
 <a href="https://www.facebook.com/profile.php?id=61595451055544" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.4H7.4V14h2.8v8h3.3z"/></svg>Facebook</a>
@@ -505,24 +514,56 @@ if(!reduce)requestAnimationFrame(draw)}
 <script>
 function toggleMenu(b){var o=document.body.classList.toggle("menu-open");b.setAttribute("aria-expanded",o);b.textContent=o?"Close":"Menu"}
 document.addEventListener("click",function(e){if(e.target.closest&&e.target.closest("#site-nav a")&&document.body.classList.contains("menu-open")){var b=document.querySelector(".menu-btn");toggleMenu(b)}});
+var W3F_KEY="9e32707b-f0a0-4a7a-80fe-50b2923f04c7";
+function formVal(f,n){var el=f.elements[n];return el?(el.value||'').trim():''}
+function setSending(f,on){
+  var b=f.querySelector('button[type="submit"]'),l=b.querySelector('.lbl');
+  if(!b.dataset.label)b.dataset.label=l.textContent;
+  b.disabled=on;f.setAttribute('aria-busy',on?'true':'false');
+  var s=b.querySelector('.spin');
+  if(on){if(!s){s=document.createElement('span');s.className='spin';s.setAttribute('aria-hidden','true');b.insertBefore(s,l)}l.textContent='Sending'}
+  else{if(s)s.remove();l.textContent=b.dataset.label}
+}
+function showSent(f,name,next){
+  var p=document.createElement('div');p.className='sent';p.setAttribute('role','status');p.setAttribute('tabindex','-1');
+  p.innerHTML='<span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><h3></h3><p></p>';
+  p.querySelector('h3').textContent=name?'Thanks, '+name+'. Got it.':'Thanks. Got it.';
+  p.querySelector('p').textContent=next;
+  f.hidden=true;f.parentNode.insertBefore(p,f.nextSibling);p.focus();
+}
+function submitW3F(f,subject,fields,next){
+  var err=f.querySelector('.form-err');err.hidden=true;
+  if(f.elements['botcheck']&&f.elements['botcheck'].checked)return;
+  var data={access_key:W3F_KEY,subject:subject,from_name:"Granite City Digital website",botcheck:false};
+  for(var k in fields)data[k]=fields[k];
+  setSending(f,true);
+  var ctrl=window.AbortController?new AbortController():null,timer=ctrl?setTimeout(function(){ctrl.abort()},20000):0;
+  fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(data),signal:ctrl?ctrl.signal:undefined})
+  .then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j}},function(){return{ok:false,j:null}})})
+  .then(function(res){clearTimeout(timer);if(res.ok&&res.j&&res.j.success===true){showSent(f,fields.name,next)}else{fail()}})
+  .catch(function(){clearTimeout(timer);fail()});
+  function fail(){setSending(f,false);err.hidden=false}
+}
 function sendReq(e){
   e.preventDefault();
-  var f=e.target, g=function(n){return (f[n].value||'').trim()};
-  var body="Name: "+g('name')+"\nBusiness: "+g('biz')+"\nPhone: "+g('phone')+"\nCurrent site: "+(g('site')||'none')+"\n\nAbout the business:\n"+g('about')+"\n\nSent from granitecitydigital.me";
-  window.location.href="mailto:lathan@granitecitydigital.me?subject="+encodeURIComponent("Free sample request: "+g('biz'))+"&body="+encodeURIComponent(body);
+  var f=e.target, g=function(n){return formVal(f,n)};
+  submitW3F(f,"Free sample request: "+g('biz'),
+    {name:g('name'),business:g('biz'),phone:g('phone'),about:g('about'),current_site:g('site')||'none'},
+    "I'll text you today and your free sample is ready in 3 days, guaranteed.");
   return false;
 }
 function sendCheck(e){
   e.preventDefault();
-  var f=e.target, g=function(n){return (f.elements[n].value||'').trim()};
+  var f=e.target, g=function(n){return formVal(f,n)};
   var c=g('contact'), box=f.elements['contact'];
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c) && c.replace(/\D/g,'').length<7){
     box.setCustomValidity("Enter a phone number or an email address.");
     box.reportValidity();
     return false;
   }
-  var body="Business: "+g('biz')+"\nWebsite: "+g('site')+"\nName: "+g('name')+"\nPhone or email: "+c+"\n\nPlease send me a free website check.\n\nSent from granitecitydigital.me";
-  window.location.href="mailto:lathan@granitecitydigital.me?subject="+encodeURIComponent("Free website check: "+g('biz'))+"&body="+encodeURIComponent(body);
+  submitW3F(f,"Free website check: "+g('biz'),
+    {business:g('biz'),website:g('site'),name:g('name'),phone_or_email:c},
+    "Today I look at your site on a phone and a laptop. Within 2 business days you get a short report. No obligation.");
   return false;
 }
 </script>
