@@ -304,7 +304,15 @@ nav ul a[aria-current="page"]{color:var(--text)}
 .hero .fine{animation-delay:210ms}
 .hero .who,.hero .towns{animation-delay:250ms}
 @media (prefers-reduced-motion:reduce){.hero h1,.hero .eyebrow,.hero .sub,.hero .cta,.hero .fine,.hero .who,.hero .towns{animation:none}}
+.nojs{font-size:.95rem;color:var(--text);max-width:46ch}
+.nojs a{color:var(--yellow);font-weight:600}
+.nosite{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--text-2);margin-top:-4px}
+.nosite input{width:18px;height:18px;accent-color:var(--yellow);margin:0}
+.trio.four{grid-template-columns:repeat(4,1fr);gap:40px}
+@media(max-width:1000px){.trio.four{grid-template-columns:1fr 1fr}}
+@media(max-width:860px){.trio.four{grid-template-columns:1fr}}
 </style>
+<noscript><style>#checkform,#req{display:none}</style></noscript>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Granite City Digital","url":"https://granitecitydigital.me","email":"lathan@granitecitydigital.me","telephone":"+1-743-222-0985","logo":"https://granitecitydigital.me/apple-touch-icon.png","image":"https://granitecitydigital.me/sample-preview-plumbing.png","founder":{"@type":"Person","name":"Lathan"},"priceRange":"$","address":{"@type":"PostalAddress","addressLocality":"Mount Airy","addressRegion":"NC","postalCode":"27030","addressCountry":"US"},"areaServed":["Mount Airy","Surry County","Elkin","Dobson","Pilot Mountain","King"],"description":"Small business websites, resumes and Excel spreadsheets in Mount Airy, NC. Free sample first, $150 to build, $25 a month."}</script>
 </head>
 <body>
@@ -389,7 +397,7 @@ if(!reduce)requestAnimationFrame(draw)}
 <div>
 <p class="eyebrow">Free website check</p>
 <h2>Is your website costing you customers?<br>Get a free check.</h2>
-<p>Send me the address and I'll go through your site the way your customers do, on a phone. It's free, and you're under no obligation.</p>
+<p>Send me the address, or just your business name if you don't have a site yet, and I'll look at it the way your customers do, on a phone. It's free, and you're under no obligation.</p>
 <p class="due">Your report comes within 2 business days.</p>
 <h3>What I look at</h3>
 <ul class="checks">
@@ -400,15 +408,17 @@ if(!reduce)requestAnimationFrame(draw)}
 <li><b>Contact info works.</b> Your phone number and email are right and easy to tap.</li>
 </ul>
 </div>
+<noscript><p class="nojs">This form needs JavaScript, which is turned off in your browser. For a free check, text your website address (or just your business name if you don't have a site) to <a href="sms:+17432220985">(743) 222-0985</a>, call <a href="tel:+17432220985">(743) 222-0985</a>, or email <a href="mailto:lathan@granitecitydigital.me">lathan@granitecitydigital.me</a>. I reply the same day.</p></noscript>
 <form id="checkform" onsubmit="return sendCheck(event)">
 <div class="two">
 <label>Business name<input name="biz" required autocomplete="organization"></label>
-<label>Website address<input name="site" type="text" inputmode="url" required autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="yourbusiness.com"></label>
+<label>Website address<input name="site" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="yourbusiness.com (optional)"></label>
 </div>
 <div class="two">
 <label>Your name<input name="name" required autocomplete="name"></label>
 <label>Phone or email<input name="contact" type="text" required autocapitalize="off" spellcheck="false" oninput="this.setCustomValidity('')"></label>
 </div>
+<label class="nosite"><input type="checkbox" name="nosite" onchange="var s=this.form.elements.site;s.disabled=this.checked;if(this.checked)s.value=''">I don't have a website yet. Check my Google listing and Facebook page instead.</label>
 <input type="checkbox" name="botcheck" class="hp" tabindex="-1" aria-hidden="true" autocomplete="off">
 <button class="btn y" type="submit"><span class="lbl">Get my free check</span></button>
 <p class="form-err" role="alert" hidden>That didn't go through, and everything you typed is still here. Try again, or text <a href="sms:+17432220985">(743) 222-0985</a> or email <a href="mailto:lathan@granitecitydigital.me">lathan@granitecitydigital.me</a> and I'll take it from there.</p>
@@ -474,10 +484,11 @@ if(!reduce)requestAnimationFrame(draw)}
 <p class="eyebrow">How it works</p>
 <h2>See the site before you commit.</h2>
 <p>You start with a free sample, delivered in 3 days, guaranteed. You only pay once you like the direction.</p>
-<div class="trio">
-<div><div class="n">01</div><h3>Tell me about your business</h3><p>Fill out the short form below or text me. Tell me what you do and where you work, and send any photos you have. I'll help organize the rest.</p></div>
-<div><div class="n">02</div><h3>Look at your free sample</h3><p>In 3 days, guaranteed, you get a link to a real site with your name on it. Open it on your phone and tell me what you'd change.</p></div>
-<div><div class="n">03</div><h3>Approve, then go live</h3><p>Like it? We agree on the price, you pay, and I finish it and launch it. Don't like it? You owe nothing.</p></div>
+<div class="trio four">
+<div><div class="n">01</div><h3>Start with a free check</h3><p>Not sure what you need? Send your website, or just your business name if you don't have one. I look at what customers see and send a short report within 2 business days. Optional, and free.</p></div>
+<div><div class="n">02</div><h3>Tell me about your business</h3><p>Fill out the short form below or text me. Tell me what you do and where you work, and send any photos you have. I'll help organize the rest.</p></div>
+<div><div class="n">03</div><h3>Look at your free sample</h3><p>In 3 days, guaranteed, you get a link to a real site with your name on it. Open it on your phone and tell me what you'd change.</p></div>
+<div><div class="n">04</div><h3>Approve, then go live</h3><p>Like it? We agree on the price, you pay, and I finish it and launch it. Don't like it? You owe nothing.</p></div>
 </div>
 </div></section>
 
@@ -519,6 +530,7 @@ if(!reduce)requestAnimationFrame(draw)}
 <a href="mailto:lathan@granitecitydigital.me">lathan@granitecitydigital.me<small>Email works too</small></a>
 </div>
 </div>
+<noscript><p class="nojs">This form needs JavaScript, which is turned off in your browser. For a free sample, text <a href="sms:+17432220985">(743) 222-0985</a>, call <a href="tel:+17432220985">(743) 222-0985</a>, or email <a href="mailto:lathan@granitecitydigital.me">lathan@granitecitydigital.me</a>. I reply the same day.</p></noscript>
 <form id="req" onsubmit="return sendReq(event)">
 <label>Your name<input name="name" required autocomplete="name"></label>
 <div class="two">
@@ -599,8 +611,9 @@ function sendCheck(e){
     box.reportValidity();
     return false;
   }
-  submitW3F(f,"Free website check: "+g('biz'),
-    {business:g('biz'),website:g('site'),name:g('name'),phone_or_email:c},
+  var nosite=f.elements['nosite']&&f.elements['nosite'].checked;
+  submitW3F(f,(nosite?"Free check (no website yet): ":"Free website check: ")+g('biz'),
+    {business:g('biz'),website:nosite?'No website yet':(g('site')||'Not given'),name:g('name'),phone_or_email:c},
     "Today I look at your site on a phone and a laptop. Within 2 business days you get a short report. No obligation.");
   return false;
 }
