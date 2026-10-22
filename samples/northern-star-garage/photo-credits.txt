@@ -1,0 +1,16 @@
+Photo credits for northern-star-garage. All photos from Pexels, free to use under the Pexels License (https://www.pexels.com/license/).
+
+hero.jpg
+  Photographer: Pexels user 19x14 (https://www.pexels.com/@19x14/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/8478202/
+
+services.jpg
+  Photographer: Pexels user 19x14 (https://www.pexels.com/@19x14/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/8478259/
+
+steps.jpg
+  Photographer: Christian Buehner (https://www.pexels.com/@christian-buehner-336302433/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/27665740/
