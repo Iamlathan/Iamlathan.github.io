@@ -10,7 +10,7 @@ tires.jpg
   License: Pexels License
   Source: https://www.pexels.com/photo/19499388/
 
-steps.jpg
-  Photographer: Gustavo Fring (https://www.pexels.com/@gustavo-fring/)
+steps-buff.jpg
+  Photographer: Khunkorn Laowisit (https://www.pexels.com/@khunkorn-laowisit-1359149/)
   License: Pexels License
-  Source: https://www.pexels.com/photo/6870296/
+  Source: https://www.pexels.com/photo/5233261/

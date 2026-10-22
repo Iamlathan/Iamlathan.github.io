@@ -310,7 +310,7 @@ form[hidden]{display:none}
       <figure class="rv"><img src="services.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="A mechanic in overalls leans into an open engine bay to work on a part"></figure>
       <div>
         <ul class="list">
-          <li class="rv"><h3>Auto repair</h3></li>
+          <li class="rv"><h3>Auto repair</h3><p>Ask about getting your car looked at on N Franklin Rd.</p></li>
         </ul>
         <p class="note rv"><b>Not sure what is wrong?</b> Call (336) 789-1881 and ask.</p>
       </div>
@@ -326,8 +326,8 @@ form[hidden]{display:none}
       <figure class="rv"><img src="steps.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="Two hands under a raised hood, one holding a wrench over the engine"></figure>
       <ol class="steps">
         <li class="rv"><h3>Call or send a request</h3><p>Call (336) 789-1881 or use the form below.</p></li>
-        <li class="rv"><h3>Tell us what the car is doing</h3></li>
-        <li class="rv"><h3>Talk it through</h3></li>
+        <li class="rv"><h3>Tell us what the car is doing</h3><p>Mention any noises, warning lights or changes in how it drives.</p></li>
+        <li class="rv"><h3>Talk it through</h3><p>Ask your questions and decide what to do next.</p></li>
       </ol>
     </div>
   </section>
@@ -357,7 +357,11 @@ form[hidden]{display:none}
           </div>
           <div class="f full">
             <label for="q-town">Town</label>
-            <input id="q-town" name="town" type="text" autocomplete="address-level2" required aria-describedby="e-town">
+            <select id="q-town" name="town" required aria-describedby="e-town">
+              <option value="">Choose your town</option>
+              <option>Mount Airy</option>
+              <option>Somewhere else</option>
+            </select>
             <span class="err" id="e-town"></span>
           </div>
           <div class="f full">
