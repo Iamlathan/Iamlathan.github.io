@@ -1,0 +1,17 @@
+Photo credits for samples/dobson-handyman/
+All three photos are from Pexels under the Pexels License (free to use, no attribution required). Credited anyway, in the page footer and here.
+
+hero.jpg
+  Photographer: Ksenia Chernaya (@kseniachernaya)
+  Source: https://www.pexels.com/photo/anonymous-man-installing-window-in-room-5691503/
+  License: Pexels License
+
+services.jpg
+  Photographer: MART PRODUCTION (@mart-production)
+  Source: https://www.pexels.com/photo/a-person-in-plaid-long-sleeves-standing-near-the-toolbox-7641255/
+  License: Pexels License
+
+steps.jpg
+  Photographer: David Antonio Cruz Naira (@davidcruz)
+  Source: https://www.pexels.com/photo/close-up-of-hands-using-red-hand-tool-on-wooden-background-38801281/
+  License: Pexels License
