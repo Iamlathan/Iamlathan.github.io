@@ -1,0 +1,20 @@
+Photo credits for samples/carolina-roofing/
+All three photos are from Pexels under the Pexels License (free to use, no attribution required). Credited anyway, in the page footer and here. They are stock examples, not photos of Carolina Roofing work. Fetched with fetch_photo.py on 2026-10-27.
+
+hero.jpg
+  Photographer: Kamil Čičila (@cicosvk)
+  Source: https://www.pexels.com/photo/metal-roof-with-brick-chimney-against-blue-sky-39509195/
+  License: Pexels License
+  Saved size: 1600 x 1200 (original 6536 x 4902)
+
+services.jpg
+  Photographer: Jan van der Wolf (@jan-van-der-wolf-11680885)
+  Source: https://www.pexels.com/photo/drain-pipe-casting-shadow-on-wall-14040055/
+  License: Pexels License
+  Saved size: 1600 x 1067 (original 6000 x 4000)
+
+steps.jpg
+  Photographer: Joshua Mueller (@joshua-mueller-403440660)
+  Source: https://www.pexels.com/photo/a-shadow-on-white-wooden-wall-14887793/
+  License: Pexels License
+  Saved size: 1600 x 1067 (original 6000 x 4000)

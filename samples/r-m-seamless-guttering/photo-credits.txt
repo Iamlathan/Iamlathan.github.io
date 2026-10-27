@@ -1,0 +1,20 @@
+Photo credits for samples/r-m-seamless-guttering/
+All three photos are from Pexels under the Pexels License (free to use, no attribution required). Credited anyway, in the page footer and here. They are stock examples, not photos of R & M Seamless Guttering work.
+
+hero.jpg
+  Photographer: Adrien Olichon (@adrien-olichon-1257089)
+  Source: https://www.pexels.com/photo/photo-of-roof-while-raining-2663254/
+  License: Pexels License
+  Saved size: 1600 x 1067 (original 6000 x 4000)
+
+services.jpg
+  Photographer: Devin Brown (@devin-brown-254415220)
+  Source: https://www.pexels.com/photo/water-on-the-gutter-in-macro-shot-photography-13307118/
+  License: Pexels License
+  Saved size: 1600 x 1067 (original 5472 x 3648)
+
+steps.jpg
+  Photographer: Jan van der Wolf (@jan-van-der-wolf-11680885)
+  Source: https://www.pexels.com/photo/rain-gutter-on-a-wall-25907259/
+  License: Pexels License
+  Saved size: 1600 x 1067 (original 6000 x 4000)
