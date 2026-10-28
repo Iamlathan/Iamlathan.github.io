@@ -1,0 +1,26 @@
+Photo credits for samples/lambert-lawn-service/
+All three are from Pexels, under the Pexels License (free to use, no attribution required). They are shown as example photos, not Lambert Lawn Service's own work.
+
+hero.jpg
+  Photographer: Magic K (Pexels handle magic-k-24827758)
+  Source: https://www.pexels.com/photo/6728926/
+  Title on Pexels: A Person Mowing the Lawn
+  License: Pexels License
+  Shows: someone in work boots pushing a mower across a sunlit lawn
+
+services.jpg
+  Photographer: Pascal Küffer (Pexels handle pascal-kuffer-190126462)
+  Source: https://www.pexels.com/photo/11364122/
+  Title on Pexels: Person Using Lawn Mower
+  License: Pexels License
+  Shows: a string trimmer cutting long grass, clippings in the air
+
+steps.jpg
+  Photographer: Magic K (Pexels handle magic-k-24827758)
+  Source: https://www.pexels.com/photo/6728933/
+  Title on Pexels: Man Mowing Lawn
+  License: Pexels License
+  Shows: a push mower moving through green grass in low sun
+
+Fetched 2026-10-28 with fetch_photo.py at 1400 px wide. Each photo was previewed first; none shows readable text or a brand name, and none carries a rights holder in its metadata.
+Photographer names come from each Pexels photo page, opened with WebFetch after strip_hidden.py returned HTTP 403.

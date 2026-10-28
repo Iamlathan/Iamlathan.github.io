@@ -1,0 +1,23 @@
+Photo credits for samples/tree-tek-of-the-foothills/
+All three are from Pexels, under the Pexels License (free to use, no attribution required). They are shown as example photos, not Tree Tek of the Foothills' own work.
+
+hero.jpg
+  Photographer: Jacky (Pexels handle jacky-2803806)
+  Source: https://www.pexels.com/photo/a-man-cutting-a-tree-6218318/
+  License: Pexels License
+  Shows: a climber in a yellow helmet cutting a section off a tall trunk against a blue sky
+
+services.jpg
+  Photographer: Robert So (Pexels handle robertkso)
+  Source: https://www.pexels.com/photo/green-tree-under-blue-sky-12274112/
+  License: Pexels License
+  Shows: the crown of a tall oak against a blue sky
+
+steps.jpg
+  Photographer: Henk Schuurmans (Pexels handle henk-schuurmans-331483624)
+  Source: https://www.pexels.com/photo/arborist-cutting-down-tree-trunk-safely-with-chainsaw-31127615/
+  License: Pexels License
+  Shows: a climber on ropes cutting into a trunk, with sawdust in the air
+
+Fetched 2026-10-28 with fetch_photo.py. Each photo was previewed first, and none shows readable text or a brand name.
+Photographer names come from each Pexels photo page, opened with WebFetch after strip_hidden.py returned HTTP 403.
