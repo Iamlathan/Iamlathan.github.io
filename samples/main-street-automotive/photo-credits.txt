@@ -1,0 +1,20 @@
+Photo credits for the Main Street Automotive sample site
+All three photos are free to use under the Pexels License (https://www.pexels.com/license/). They are stock examples, not photos of this business.
+
+hero.jpg
+  Photographer: christian buehner (@christian-buehner-336302433) on Pexels
+  Source: https://www.pexels.com/photo/a-mechanic-working-on-a-car-engine-27665740/
+  License: Pexels License
+  Saved size: 1400 x 1050
+
+services.jpg
+  Photographer: Abasiakan (@abasiakan-255745439) on Pexels
+  Source: https://www.pexels.com/photo/close-up-of-hands-of-working-mechanics-12555014/
+  License: Pexels License
+  Saved size: 1400 x 927
+
+steps.jpg
+  Photographer: cottonbro studio (@cottonbro) on Pexels
+  Source: https://www.pexels.com/photo/person-passing-wrench-to-repairman-on-floor-7018498/
+  License: Pexels License
+  Saved size: 1400 x 933

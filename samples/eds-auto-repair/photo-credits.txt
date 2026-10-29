@@ -1,0 +1,20 @@
+Photo credits for the Ed's Auto Repair sample site
+All three photos are free to use under the Pexels License (https://www.pexels.com/license/). They are stock examples, not photos of this business.
+
+hero.jpg
+  Photographer: Sergey Meshkov (@19x14) on Pexels
+  Source: https://www.pexels.com/photo/8478201/
+  License: Pexels License
+  Saved size: 1400 x 933
+
+services.jpg
+  Photographer: Sergey Meshkov (@19x14) on Pexels
+  Source: https://www.pexels.com/photo/8478252/
+  License: Pexels License
+  Saved size: 1400 x 933
+
+steps.jpg
+  Photographer: Abasiakan (@abasiakan-255745439) on Pexels
+  Source: https://www.pexels.com/photo/12555016/
+  License: Pexels License
+  Saved size: 1400 x 927

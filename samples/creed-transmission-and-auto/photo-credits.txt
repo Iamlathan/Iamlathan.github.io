@@ -1,0 +1,20 @@
+Photo credits for the Creed Transmission & Auto sample site
+All three photos are free to use under the Pexels License (https://www.pexels.com/license/). They are stock examples, not photos of this business.
+
+hero.jpg
+  Photographer: Sergey Meshkov (@19x14) on Pexels
+  Source: https://www.pexels.com/photo/man-in-black-crew-neck-t-shirt-fixing-a-car-8478259/
+  License: Pexels License
+  Saved size: 1400 x 933
+
+services.jpg
+  Photographer: Artem Podrez (@artempodrez) on Pexels
+  Source: https://www.pexels.com/photo/man-checking-car-undercarriage-8985616/
+  License: Pexels License
+  Saved size: 1400 x 788
+
+steps.jpg
+  Photographer: Sergey Meshkov (@19x14) on Pexels
+  Source: https://www.pexels.com/photo/a-mechanic-holding-a-ratchet-over-an-engine-bay-8478205/
+  License: Pexels License
+  Saved size: 1400 x 933
