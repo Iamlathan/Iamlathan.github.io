@@ -1,0 +1,21 @@
+Photo credits for the Diamond Nails sample site
+All three photos are free to use under the Pexels License (https://www.pexels.com/license/). They are stock examples, not photos of this business.
+Photographer names were confirmed on each photo's own Pexels page (opened 2026-10-30).
+
+hero.jpg
+  Photographer: Artem Podrez (@artempodrez) on Pexels
+  Source: https://www.pexels.com/photo/4783332/
+  License: Pexels License
+  Saved size: 1600 x 900
+
+brush.jpg
+  Photographer: Chidi Young (@chidy) on Pexels
+  Source: https://www.pexels.com/photo/30576970/
+  License: Pexels License
+  Saved size: 1600 x 1067
+
+ring.jpg
+  Photographer: MiM Fathi (@mimfathi) on Pexels
+  Source: https://www.pexels.com/photo/10944916/
+  License: Pexels License
+  Saved size: 1600 x 1067
