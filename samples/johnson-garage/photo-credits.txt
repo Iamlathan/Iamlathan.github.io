@@ -1,0 +1,20 @@
+Photo credits for the Johnson Garage sample site
+All three photos are free to use under the Pexels License (https://www.pexels.com/license/). They are stock examples, not photos of this business.
+
+hero.jpg
+  Photographer: Anna Shvets (@shvetsa) on Pexels
+  Source: https://www.pexels.com/photo/4315570/
+  License: Pexels License
+  Saved size: 1400 x 933
+
+services.jpg
+  Photographer: Andrea Piacquadio (@olly) on Pexels
+  Source: https://www.pexels.com/photo/crop-mechanic-choosing-metal-tools-for-repair-in-garage-3855223/
+  License: Pexels License
+  Saved size: 1400 x 933
+
+steps.jpg
+  Photographer: Quentin Martinez (@quentin-martinez-2147503099) on Pexels
+  Source: https://www.pexels.com/photo/black-and-white-image-of-mechanic-repairing-engine-39823759/
+  License: Pexels License
+  Saved size: 1400 x 787

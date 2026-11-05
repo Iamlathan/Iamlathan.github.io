@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "high-limb-tree-service",
+    "name": "High Limb Tree Service",
+    "trade": "Tree service",
+    "town": "Dobson",
+    "state": "NC",
+    "alt": "Phone view of a sample design for a tree service in Dobson",
+    "shot": "/work/shots/high-limb-tree-service.webp",
+    "preview": "/designs/high-limb-tree-service/"
+  },
+  {
+    "slug": "rainline-seamless-gutters",
+    "name": "Rainline Seamless Gutters",
+    "trade": "Seamless gutters, roofing and siding",
+    "town": "Dobson",
+    "state": "NC",
+    "alt": "Phone view of a sample design for a gutter business in Dobson",
+    "shot": "/work/shots/rainline-seamless-gutters.webp",
+    "preview": "/designs/rainline-seamless-gutters/"
+  },
+  {
+    "slug": "true-line-painting",
+    "name": "True Line Painting",
+    "trade": "House painting",
+    "town": "Dobson",
+    "state": "NC",
+    "alt": "Phone view of a sample design for a house painter in Dobson",
+    "shot": "/work/shots/true-line-painting.webp",
+    "preview": "/designs/true-line-painting/"
+  },
+  {
+    "slug": "westbrook-body-and-tire",
+    "name": "Westbrook Body and Tire",
+    "trade": "Auto body, paint and tires",
+    "town": "Mount Airy",
+    "state": "NC",
+    "alt": "Phone view of a sample design for an auto body shop in Mount Airy",
+    "shot": "/work/shots/westbrook-body-and-tire.webp",
+    "preview": "/designs/westbrook-body-and-tire/"
+  },
+  {
+    "slug": "red-clay-concrete-grading",
+    "name": "Red Clay Concrete and Grading",
+    "trade": "Concrete and grading",
+    "town": "Yadkinville",
+    "state": "NC",
+    "alt": "Phone view of a sample design for a concrete contractor in Yadkinville",
+    "shot": "/work/shots/red-clay-concrete-grading.webp",
+    "preview": "/designs/red-clay-concrete-grading/"
+  },
+  {
+    "slug": "willow-lane-skin-studio",
+    "name": "Willow Lane Skin Studio",
+    "trade": "Esthetics studio",
+    "town": "Elkin",
+    "state": "NC",
+    "alt": "Phone view of a sample design for an esthetics studio in Elkin",
+    "shot": "/work/shots/willow-lane-skin-studio.webp",
+    "preview": "/designs/willow-lane-skin-studio/"
+  },
+  {
+    "slug": "steady-flow-plumbing",
+    "name": "Steady Flow Plumbing",
+    "trade": "Plumber",
+    "town": "Mount Airy",
+    "state": "NC",
+    "alt": "Phone view of a sample design for a plumber in Mount Airy",
+    "shot": "/work/shots/steady-flow-plumbing.webp",
+    "preview": "/designs/steady-flow-plumbing/"
+  },
+  {
+    "slug": "sunup-southern-breakfast",
+    "name": "Sunup Southern Breakfast",
+    "trade": "Southern breakfast and lunch",
+    "town": "Mount Airy",
+    "state": "NC",
+    "alt": "Phone view of a sample design for a breakfast restaurant in Mount Airy",
+    "shot": "/work/shots/sunup-southern-breakfast.webp",
+    "preview": "/designs/sunup-southern-breakfast/"
+  }
+]

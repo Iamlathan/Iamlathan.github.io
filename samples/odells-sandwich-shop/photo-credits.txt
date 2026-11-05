@@ -1,0 +1,13 @@
+Photo credits for samples/odells-sandwich-shop/ (all free under the Unsplash License, https://unsplash.com/license)
+
+hero.jpg
+  Photographer: Raphael Nogueira
+  Source: https://unsplash.com/photos/baked-bread-with-vegetable-on-brown-chopping-board-Znvxeud6sDc
+
+sandwiches.jpg
+  Photographer: Ola Mishchenko
+  Source: https://unsplash.com/photos/sandwich-with-lettuce-and-cheese-served-on-chopping-board-XqYlvd5DGKA
+
+club-sandwich.jpg
+  Photographer: David Foodphototasty
+  Source: https://unsplash.com/photos/a-sandwich-cut-in-half-on-a-plate-28PJT0FDua8

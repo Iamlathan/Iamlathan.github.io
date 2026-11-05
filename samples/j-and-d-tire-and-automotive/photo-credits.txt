@@ -1,0 +1,20 @@
+Photo credits for the J and D Tire and Automotive sample site
+All three photos are free to use under the Pexels License (https://www.pexels.com/license/). They are stock examples, not photos of this business.
+
+hero.jpg
+  Photographer: Javier Balseiro (@javierbalseiro) on Pexels
+  Source: https://www.pexels.com/photo/black-tires-in-close-up-shot-9576099/
+  License: Pexels License
+  Saved size: 1400 x 933
+
+services.jpg
+  Photographer: Artem Podrez (@artempodrez) on Pexels
+  Source: https://www.pexels.com/photo/a-man-holding-a-wheel-tire-8985666/
+  License: Pexels License
+  Saved size: 1400 x 788
+
+steps.jpg
+  Photographer: Fatih Erden (@fatih-erden-141946798) on Pexels
+  Source: https://www.pexels.com/photo/a-mechanic-opening-the-oil-filler-cap-of-a-car-engine-10490621/
+  License: Pexels License
+  Saved size: 1400 x 933

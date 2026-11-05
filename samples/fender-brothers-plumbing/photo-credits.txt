@@ -1,0 +1,19 @@
+Photo credits for the Fender Brothers Plumbing sample site. All photos are from Pexels under the Pexels License (free to use, no attribution required). Shown as examples only.
+
+hero.jpg
+  Shows: two hands fitting a brass valve onto steel water pipes in front of foil insulation
+  Photographer: Anıl Karakaya
+  License: Pexels License
+  Source: https://www.pexels.com/photo/plumber-installs-pipe-fittings-6419128/
+
+services.jpg
+  Shows: a chrome pull down kitchen faucet on a white counter
+  Photographer: Curtis Adams
+  License: Pexels License
+  Source: https://www.pexels.com/photo/close-up-photo-of-a-faucet-10099184/
+
+steps.jpg
+  Shows: a copper pipe T joint on a dark background
+  Photographer: Magda Ehlers
+  License: Pexels License
+  Source: https://www.pexels.com/photo/copper-pipes-on-black-background-3721272/

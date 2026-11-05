@@ -1,0 +1,28 @@
+Photo credits for designs/westbrook-body-and-tire (a sample design; the business name is made up)
+
+polish.jpg (Body and paint lane in the first screen, and the share image)
+  Photographer: Orhun Rüzgar Öz (@orhunruzgaroz)
+  Source: https://www.pexels.com/photo/6026083/
+  License: Pexels License, https://www.pexels.com/license/
+  Shows: a gloved hand running a polisher across a dark car hood
+
+tread.jpg (Tires lane in the first screen)
+  Photographer: cottonbro studio (@cottonbro)
+  Source: https://www.pexels.com/photo/a-close-up-photography-of-a-tire-with-pebbles-in-treads-7019611/
+  License: Pexels License, https://www.pexels.com/license/
+  Shows: close view of tire tread blocks in low light
+
+buffer.jpg (Body and paint section)
+  Photographer: Luke Miller (@bylukemiller)
+  Source: https://www.pexels.com/photo/14231684/
+  License: Pexels License, https://www.pexels.com/license/
+  Shows: a gloved hand holding a spinning buffer against glossy black trim beside a headlight
+
+tire-road.jpg (Tires section)
+  Photographer: Mike Bird (@mikebird)
+  Source: https://www.pexels.com/photo/20303832/
+  License: Pexels License, https://www.pexels.com/license/
+  Shows: close view of a car tire tread on rough pavement under a silver fender
+
+The tread divider between sections is drawn in code, not a photo.
+All are generic stock photos shown as examples.

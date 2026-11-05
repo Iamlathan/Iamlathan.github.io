@@ -1,0 +1,16 @@
+Photo credits for farris-enterprises. All photos from Pexels, free to use under the Pexels License (https://www.pexels.com/license/).
+
+hero.jpg
+  Photographer: cottonbro studio (https://www.pexels.com/@cottonbro/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/7564861/
+
+services.jpg
+  Photographer: Pexels user abasiakan (https://www.pexels.com/@abasiakan-255745439/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/12555016/
+
+steps.jpg
+  Photographer: Andrea Piacquadio (https://www.pexels.com/@olly/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/3855223/

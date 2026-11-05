@@ -1,0 +1,21 @@
+Photo credits for the La Nails sample site
+All three photos are free to use under the Pexels License (https://www.pexels.com/license/). They are stock examples, not photos of this business.
+Photographer names were confirmed on each photo's own Pexels page (opened 2026-10-30).
+
+salon.jpg (hero)
+  Photographer: Iva Prime (@ivaprime) on Pexels
+  Source: https://www.pexels.com/photo/5361139/
+  License: Pexels License
+  Saved size: 1600 x 1067
+
+linen.jpg
+  Photographer: cottonbro studio (@cottonbro) on Pexels
+  Source: https://www.pexels.com/photo/6941115/
+  License: Pexels License
+  Saved size: 1600 x 1067
+
+hands.jpg
+  Photographer: Zulfugar Karimov (@zulfugarkarimov) on Pexels
+  Source: https://www.pexels.com/photo/39365936/
+  License: Pexels License
+  Saved size: 1600 x 1067

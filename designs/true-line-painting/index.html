@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>True Line Painting | Interior and exterior painting, Dobson, NC</title>
+<meta name="description" content="True Line Painting paints rooms, trim and house exteriors in Dobson, NC. Call 336 555 0150 or send a request for an estimate.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://granitecitydigital.me/designs/true-line-painting/">
+<meta name="theme-color" content="#fafaf7">
+<meta property="og:title" content="True Line Painting | Dobson, NC">
+<meta property="og:description" content="True Line Painting paints rooms, trim and house exteriors in Dobson, NC. Call 336 555 0150.">
+<meta property="og:image" content="https://granitecitydigital.me/designs/true-line-painting/hero.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://granitecitydigital.me/designs/true-line-painting/">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --wall:#fafaf7;
+  --wall-2:#f0efe9;
+  --wall-3:#e6e4dc;
+  --ink:#17191c;
+  --soft:#4c5057;
+  --tape:#3c7dd9;
+  --tape-ink:#1d5bb3;
+  --danger:#a3392b;
+  /* paint chips (made up names) */
+  --c-linen:#e9e1cf;
+  --c-sage:#a7b39a;
+  --c-harbor:#4b6a80;
+  --c-clay:#9e5a3c;
+  --c-fog:#c9cdd0;
+  --c-white:#f4f3ee;
+
+  --serif:"DM Serif Display",Georgia,"Times New Roman",serif;
+  --sans:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --t-small:.875rem;
+  --t-body:1.0625rem;
+  --t-lead:clamp(1.125rem,1.04rem + .35vw,1.3125rem);
+  --t-h3:1.1875rem;
+  --t-h2:clamp(2rem,1.45rem + 2.3vw,3.4rem);
+  --t-h1:clamp(2.6rem,1.5rem + 4.4vw,5.6rem);
+
+  --wrap:1200px;
+  --m:clamp(18px,4vw,40px);
+  --sec:clamp(96px,11vw,176px);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --bar:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--wall);color:var(--ink);font-family:var(--sans);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased;caret-color:var(--tape-ink)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+::selection{background:var(--tape);color:#fff}
+:focus-visible{outline:2px solid var(--tape-ink);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.015em;line-height:1.04;text-wrap:balance}
+h3{font-family:var(--sans);font-weight:600;letter-spacing:-.01em;line-height:1.3}
+p{text-wrap:pretty}
+.wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--wall);padding:10px 14px;font-size:var(--t-small);text-decoration:none}
+.skip:focus{top:12px}
+.num{font-variant-numeric:tabular-nums}
+
+/* tape: a filled strip of painter's tape with torn ends */
+.tape{display:block;height:12px;background:var(--tape);clip-path:polygon(0 8%,1.2% 0,98.6% 6%,100% 30%,99.2% 100%,.6% 92%,1.4% 60%)}
+
+/* buttons: square, like a cut edge */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border:0;border-radius:0;background:var(--ink);color:var(--wall);font:600 1rem/1 var(--sans);text-decoration:none;cursor:pointer;transition:background-color 180ms ease,transform 140ms var(--ease)}
+.btn:active{transform:scale(.97)}
+.btn.alt{background:var(--wall-3);color:var(--ink)}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--tape-ink)}
+  .btn.alt:hover{background:#d9d6cc}
+}
+
+/* sample banner */
+.sample{background:var(--ink);color:#d7d8da;font-size:.8125rem;text-align:center;padding:8px var(--m);line-height:1.45}
+.sample a{color:#fff}
+
+/* header */
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.mark{display:inline-flex;align-items:center;gap:10px;text-decoration:none;min-height:44px;white-space:nowrap}
+.mark i{display:block;width:26px;height:9px;background:var(--tape);flex:none;clip-path:polygon(0 10%,6% 0,100% 8%,96% 100%,3% 90%)}
+.mark b{font-family:var(--serif);font-weight:400;font-size:1.375rem;letter-spacing:-.01em}
+.mark span{font-size:.9375rem;color:var(--soft)}
+.nav{display:flex;align-items:center;gap:28px;list-style:none;padding:0;font-size:.9375rem}
+.nav a{color:var(--soft);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 180ms ease}
+@media (hover:hover){.nav a:hover{color:var(--ink)}}
+.top .btn{min-height:44px;padding:0 16px;font-size:.9375rem}
+.top .short{display:none}
+@media (max-width:900px){.nav{display:none}}
+@media (max-width:480px){.top .long{display:none}.top .short{display:inline}}
+@media (max-width:400px){.mark span{display:none}}
+
+/* hero */
+.hero{padding-top:clamp(40px,6vw,88px)}
+.hero h1{font-size:var(--t-h1);max-width:12ch}
+.hero-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px 48px;align-items:end;margin-top:28px}
+.hero-row p{font-size:var(--t-lead);max-width:44ch}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.hero-pic{margin-top:clamp(36px,5vw,64px);position:relative}
+.hero-pic img{width:100%;aspect-ratio:1600/740;object-fit:cover;object-position:50% 20%}
+.hero .tape{margin-top:-6px;position:relative;width:min(78%,880px)}
+
+/* sections */
+.sec{padding-top:var(--sec)}
+.sec h2{font-size:var(--t-h2);max-width:16ch}
+.intro{font-size:var(--t-lead);max-width:52ch;margin-top:20px}
+
+/* where jobs go wrong */
+.wrong{padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;margin-top:48px}
+.wrong li{list-style:none;background:var(--wall-2);padding:clamp(24px,3vw,40px)}
+.wrong ol{padding:0}
+.wrong h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.625rem,1.3rem + 1vw,2.25rem);line-height:1.1;letter-spacing:-.01em}
+.wrong p{margin-top:14px;max-width:40ch}
+.wrong p b{font-weight:600}
+
+/* paint chips */
+.chips{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,28px);margin-top:48px;padding:0;list-style:none}
+.chip{background:#fff;display:grid;grid-template-rows:auto 1fr}
+.chip .sw{aspect-ratio:5/3;background:var(--c);display:flex;align-items:flex-end;padding:12px 14px;font-size:.8125rem;font-weight:500;color:var(--on,#17191c)}
+.chip .tx{padding:18px 18px 22px}
+.chip p{margin-top:6px;color:var(--soft);font-size:.9688rem}
+
+/* colour try on */
+.try{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,4vw,64px);margin-top:48px;align-items:center}
+.room{background:var(--wall-2);padding:clamp(12px,2vw,24px)}
+.room svg{display:block;width:100%;height:auto}
+.room .w{fill:var(--c-linen);transition:fill 420ms var(--ease)}
+.room .wobble{fill:var(--c-linen);opacity:0;transition:fill 420ms var(--ease),opacity 220ms ease}
+.try fieldset{border:0;padding:0;min-width:0}
+.try fieldset+fieldset{margin-top:28px}
+.try legend{font-weight:600;font-size:1rem;margin-bottom:12px;padding:0}
+.picks{display:flex;flex-wrap:wrap;gap:8px}
+.pick{position:relative}
+.pick input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.pick span{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 14px 0 8px;background:var(--wall-2);font-size:.9375rem;transition:background-color 160ms ease,box-shadow 160ms ease}
+.pick span::before{content:"";width:26px;height:26px;background:var(--c,#fff);box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+.edge .pick span{padding-left:14px}
+.edge .pick span::before{display:none}
+.pick input:checked+span{background:var(--ink);color:var(--wall)}
+.pick input:focus-visible+span{outline:2px solid var(--tape-ink);outline-offset:2px}
+@media (hover:hover){.pick input:not(:checked):hover+span{background:var(--wall-3)}}
+.try .fine{margin-top:24px;color:var(--soft);font-size:.9375rem;max-width:44ch}
+.try:has(#w-linen:checked) .room :is(.w,.wobble){fill:var(--c-linen)}
+.try:has(#w-sage:checked) .room :is(.w,.wobble){fill:var(--c-sage)}
+.try:has(#w-harbor:checked) .room :is(.w,.wobble){fill:var(--c-harbor)}
+.try:has(#w-clay:checked) .room :is(.w,.wobble){fill:var(--c-clay)}
+.try:has(#w-fog:checked) .room :is(.w,.wobble){fill:var(--c-fog)}
+.try:has(#w-white:checked) .room :is(.w,.wobble){fill:var(--c-white)}
+.try:has(#e-rushed:checked) .room .wobble{opacity:1}
+
+/* proof corner and steps band */
+.corner{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:24px 40px;align-items:end;margin-top:4px;background:var(--wall-2);padding:clamp(16px,2vw,24px)}
+.corner img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:60% 40%}
+.corner figcaption{font-family:var(--serif);font-size:clamp(1.375rem,1.15rem + .8vw,1.875rem);line-height:1.15;padding-bottom:6px;max-width:16ch}
+.band{margin-top:40px}
+.band img{width:100%;aspect-ratio:21/8;object-fit:cover;object-position:50% 45%}
+
+/* prep */
+.prep{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(28px,4vw,64px);align-items:center;margin-top:48px}
+.prep figure img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.verbs{list-style:none;padding:0;font-family:var(--serif);font-size:clamp(1.75rem,1.3rem + 1.6vw,2.75rem);line-height:1.15;letter-spacing:-.01em}
+.verbs li{display:inline}
+.verbs li:not(:last-child)::after{content:"";display:inline-block;width:.9em;height:.22em;margin:0 .3em .22em;background:var(--tape);vertical-align:middle;clip-path:polygon(0 15%,8% 0,100% 12%,94% 100%,4% 85%)}
+.verbs li:last-child{color:var(--tape-ink)}
+.prep .note{margin-top:22px;max-width:44ch}
+
+/* how it works: tape runs across the steps */
+.how{position:relative;margin-top:56px;padding:0;list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px}
+.how::before{content:"";position:absolute;left:0;right:0;top:0;height:10px;background:var(--tape);clip-path:polygon(0 10%,1% 0,99.4% 8%,100% 40%,99.5% 100%,.4% 90%)}
+.how li{padding-top:34px;position:relative}
+.how li::before{content:"";position:absolute;top:-6px;left:0;width:4px;height:22px;background:var(--ink)}
+.how h3{font-size:var(--t-h3)}
+.how p{margin-top:8px;color:var(--soft);font-size:.9688rem}
+
+/* questions: all answers open, side by side */
+.qa{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,4vw,64px);margin-top:48px;align-items:start}
+.qa figure img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.qa dl{display:grid;gap:30px}
+.qa dt{font-family:var(--serif);font-size:clamp(1.375rem,1.2rem + .6vw,1.75rem);line-height:1.15}
+.qa dd{margin:8px 0 0;max-width:52ch}
+
+/* contact */
+.contact{background:var(--wall-2);margin-top:var(--sec);padding-block:clamp(72px,9vw,128px)}
+.contact .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,5vw,72px);align-items:start}
+.contact h2{font-size:var(--t-h2)}
+.ways{list-style:none;padding:0;margin-top:32px;display:grid;gap:18px}
+.ways span{display:block;font-size:.875rem;color:var(--soft)}
+.ways a,.ways p{font-size:var(--t-lead);text-decoration:none;min-height:36px;display:inline-flex;align-items:center}
+.ways a{text-decoration:underline;text-decoration-color:var(--tape);text-decoration-thickness:2px}
+.contact figure{margin-top:36px}
+.contact figure img{width:100%;aspect-ratio:3/2;object-fit:cover}
+
+form{display:grid;grid-template-columns:1fr 1fr;gap:20px 16px;background:#fff;padding:clamp(20px,3vw,36px)}
+form[hidden]{display:none}
+.f{display:grid;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label{font-size:.9375rem;font-weight:600}
+.f .opt{font-weight:400;color:var(--soft)}
+.f input,.f select,.f textarea{width:100%;min-height:50px;padding:12px 13px;border:1px solid #cfccc3;border-radius:0;background:var(--wall);color:var(--ink);font:inherit;font-size:1rem;transition:border-color 160ms ease,box-shadow 160ms ease;appearance:none;-webkit-appearance:none}
+.f select{background:var(--wall) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%234c5057' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:40px}
+.f textarea{min-height:120px;resize:vertical;line-height:1.5}
+.f input::placeholder,.f textarea::placeholder{color:#6c6f74}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--tape-ink);box-shadow:0 0 0 1px var(--tape-ink)}
+.f [aria-invalid="true"]{border-color:var(--danger)}
+.err{font-size:.875rem;color:var(--danger)}
+.err:empty{display:none}
+.submit{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.submit p{font-size:.875rem;color:var(--soft)}
+.thanks{background:#fff;padding:clamp(24px,3vw,40px)}
+.thanks[hidden]{display:none}
+.thanks:focus{outline:none}
+.thanks h3{font-family:var(--serif);font-weight:400;font-size:var(--t-h2);line-height:1.05}
+.thanks p{margin-top:12px;max-width:46ch}
+.thanks .muted{font-size:var(--t-small);color:var(--soft)}
+.thanks .btn{margin-top:24px}
+
+/* footer */
+.foot{padding-block:clamp(56px,7vw,96px) 40px;font-size:.875rem;color:var(--soft)}
+.foot .big{font-family:var(--serif);color:var(--ink);font-size:clamp(2.5rem,1.2rem + 6vw,6.5rem);line-height:.95;letter-spacing:-.02em}
+.foot .tape{width:min(60%,520px);margin-top:14px}
+.foot .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;margin-top:32px}
+.foot a{color:var(--ink)}
+.foot .credit{margin-top:16px;max-width:none}
+
+/* footer mark: a 2 s logo build that plays once in view, muted; the still logo shows until it really plays and is the fallback */
+.gcd{display:inline-flex;align-items:center;gap:14px;margin-top:24px;padding:4px 10px 4px 4px;margin-left:-4px;text-decoration:none;color:var(--soft);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;overflow:hidden;background:#050505}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font-weight:600}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--tape-ink);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--wall-2)}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
+
+/* phone bar */
+.bar{display:none}
+
+/* motion */
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;transform:translateY(22px);transition:opacity 700ms var(--ease),transform 700ms var(--ease);transition-delay:var(--d,0ms)}
+  .js .rv.in{opacity:1;transform:none}
+  .hero h1,.hero-row{animation:rise 800ms var(--ease) both}
+  .hero-row{animation-delay:90ms}
+  .hero-pic img{animation:rise 900ms var(--ease) 160ms both}
+  .hero .tape{transform-origin:0 50%;animation:pull 1100ms var(--ease) 520ms both}
+  .js .how.rv::before{transform:scaleX(0);transform-origin:0 50%;transition:transform 1200ms var(--ease) 200ms}
+  .js .how.rv.in::before{transform:none}
+  .chip{transition:transform 220ms var(--ease)}
+  @media (hover:hover) and (pointer:fine){.chip:hover{transform:translateY(-4px) rotate(-.6deg)}}
+}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes pull{from{transform:scaleX(0)}to{transform:none}}
+
+/* tablet */
+@media (max-width:960px){
+  .hero-row,.try,.prep,.qa,.contact .grid,.corner{grid-template-columns:minmax(0,1fr)}
+  .band img{aspect-ratio:16/9}
+  .chips{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .how{grid-template-columns:minmax(0,1fr);gap:0;padding-left:28px}
+  .how::before{left:0;right:auto;top:0;bottom:0;width:10px;height:auto;clip-path:polygon(10% 0,100% .6%,90% 100%,0 99.4%)}
+  .js .how.rv::before{transform:scaleY(0);transform-origin:50% 0}
+  .how li{padding:0 0 28px}
+  .how li::before{top:6px;left:-34px;width:22px;height:4px}
+}
+
+/* phone */
+@media (max-width:640px){
+  :root{--bar:calc(60px + env(safe-area-inset-bottom))}
+  .hero-pic{margin-inline:calc(var(--m) * -1)}
+  .hero-pic img{aspect-ratio:4/3;object-position:62% 30%}
+  .hero .tape{margin-left:var(--m)}
+  .cta .btn{flex:1 1 auto}
+  .wrong{grid-template-columns:minmax(0,1fr)}
+  .chips{grid-template-columns:minmax(0,1fr);gap:12px}
+  .chip{grid-template-rows:none;grid-template-columns:96px minmax(0,1fr)}
+  .chip .sw{aspect-ratio:auto;min-height:100%;padding:10px}
+  .chip .tx{padding:14px 16px 16px}
+  form{grid-template-columns:minmax(0,1fr)}
+  .submit .btn{width:100%}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--wall);box-shadow:0 -1px 0 var(--wall-3);padding-bottom:env(safe-area-inset-bottom)}
+  .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:60px;font-weight:600;font-size:1rem;text-decoration:none;color:var(--ink)}
+  .bar a:first-child{background:var(--ink);color:var(--wall)}
+  .bar a:active{opacity:.85}
+  .bar svg{width:17px;height:17px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="sample" role="note">Sample design by <a href="https://granitecitydigital.me/">Granite City Digital</a>. The business name, phone number and details are made up.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="True Line Painting, back to top"><i aria-hidden="true"></i><b>True Line</b> <span>Painting</span></a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="#services">What we paint</a></li>
+        <li><a href="#colors">Colors</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#contact">Estimate</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="tel:+13365550150"><span class="long num">336 555 0150</span><span class="short">Call</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="wrap">
+      <h1 id="hero-h">Painted right up to the line.</h1>
+      <div class="hero-row">
+        <p>True Line Painting paints rooms, trim and house exteriors in and around Dobson. Floors covered, edges taped, and the furniture back where it was when we leave.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Request an estimate</a>
+          <a class="btn alt" href="tel:+13365550150">Call <span class="num">336 555 0150</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <figure class="hero-pic">
+        <img src="hero.jpg" width="1600" height="740" fetchpriority="high" alt="A painter reaching up to run a straight line of blue painter's tape where a white wall meets the ceiling, while a second person watches from below">
+      </figure>
+      <span class="tape" aria-hidden="true"></span>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="wrong" aria-labelledby="wrong-h">
+    <h2 class="rv" id="wrong-h">Where painting jobs go wrong.</h2>
+    <p class="intro rv" style="--d:80ms">Most people who call a painter have a story about the last one. Here is what we do about the usual problems.</p>
+    <ul class="wrong">
+      <li class="rv"><h3>Paint on the floor.</h3><p><b>Not on our watch.</b> Floors get drop cloths and furniture gets moved or covered before a single can is opened.</p></li>
+      <li class="rv" style="--d:70ms"><h3>Wavy lines at the ceiling.</h3><p><b>The line is the job.</b> Edges are taped or cut in by hand, so the wall stops exactly where the ceiling starts.</p></li>
+      <li class="rv"><h3>Nobody shows up.</h3><p><b>You hear from us.</b> We confirm the day before we start, and we call if a day has to move.</p></li>
+      <li class="rv" style="--d:70ms"><h3>A mess left behind.</h3><p><b>We pack it up.</b> Tape comes off, cloths get folded and the brushes leave with us at the end of each day.</p></li>
+    </ul>
+    <figure class="corner rv">
+      <img src="room.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="An empty room with one pale blue wall and one yellow wall meeting in a sharp corner under a white ceiling">
+      <figcaption>Two colors, one corner, no wobble.</figcaption>
+    </figure>
+  </section>
+
+  <section class="wrap sec" id="services" aria-labelledby="svc-h">
+    <h2 class="rv" id="svc-h">What we paint.</h2>
+    <p class="intro rv" style="--d:80ms">Inside and out, one room or the whole house. Not sure it's on the list? Call and ask.</p>
+    <ul class="chips">
+      <li class="chip rv" style="--c:var(--c-linen)"><span class="sw">Linen</span><div class="tx"><h3>Walls and ceilings</h3><p>Bedrooms, living rooms, hallways and stairwells. Walls, ceilings or both.</p></div></li>
+      <li class="chip rv" style="--c:var(--c-harbor);--on:#fafaf7;--d:60ms"><span class="sw">Harbor</span><div class="tx"><h3>Trim, doors and baseboards</h3><p>The parts that get bumped and scuffed, usually in a glossier finish that wipes clean.</p></div></li>
+      <li class="chip rv" style="--c:var(--c-sage);--d:120ms"><span class="sw">Sage</span><div class="tx"><h3>Kitchen cabinets</h3><p>Cleaned, sanded and primed first, so the new color has something to hold on to.</p></div></li>
+      <li class="chip rv" style="--c:var(--c-clay);--on:#fafaf7"><span class="sw">Clay</span><div class="tx"><h3>Siding and exterior trim</h3><p>Washed, scraped and primed where it needs it, then painted on dry, mild days.</p></div></li>
+      <li class="chip rv" style="--c:var(--c-fog);--d:60ms"><span class="sw">Fog</span><div class="tx"><h3>Porches, decks and railings</h3><p>Floors, steps and rails that take weather and foot traffic all year.</p></div></li>
+      <li class="chip rv" style="--c:var(--c-white);--d:120ms"><span class="sw">Patch</span><div class="tx"><h3>Drywall repair before paint</h3><p>Nail holes, dings and small cracks filled and sanded so they don't show through.</p></div></li>
+    </ul>
+  </section>
+
+  <section class="wrap sec" id="colors" aria-labelledby="colors-h">
+    <h2 class="rv" id="colors-h">Test a wall color.</h2>
+    <p class="intro rv" style="--d:80ms">Pick a chip and see the room change. Then see what a rushed ceiling line looks like next to a careful one.</p>
+    <div class="try">
+      <div class="room rv">
+        <svg viewBox="0 0 600 380" role="img" aria-labelledby="room-t">
+          <title id="room-t">A drawn room with a door, a window and white trim. The wall color and the ceiling line change with the choices next to it.</title>
+          <rect x="0" y="0" width="600" height="72" fill="#ffffff"/>
+          <rect class="w" x="0" y="72" width="600" height="252"/>
+          <path class="wobble" d="M0 72 C14 66 22 67 34 70 S58 63 74 69 S102 66 116 71 S140 62 158 68 S186 70 198 64 S226 66 240 70 S266 63 284 69 S312 71 326 65 S352 64 368 70 S394 66 410 63 S438 70 452 68 S480 62 496 69 S522 71 540 64 S566 67 580 70 S596 66 600 68 L600 74 L0 74 Z"/>
+          <rect x="0" y="72" width="600" height="2" fill="#000" opacity=".05"/>
+          <rect x="62" y="128" width="118" height="196" fill="#ffffff"/>
+          <rect x="72" y="138" width="98" height="186" fill="#f1f0ea"/>
+          <rect x="84" y="152" width="74" height="72" fill="#ffffff" opacity=".6"/>
+          <rect x="84" y="236" width="74" height="74" fill="#ffffff" opacity=".6"/>
+          <circle cx="158" cy="236" r="4" fill="#9a8f7c"/>
+          <rect x="346" y="116" width="176" height="150" fill="#ffffff"/>
+          <rect x="356" y="126" width="156" height="130" fill="#cfe0ea"/>
+          <rect x="432" y="126" width="4" height="130" fill="#ffffff"/>
+          <rect x="356" y="189" width="156" height="4" fill="#ffffff"/>
+          <rect x="336" y="264" width="196" height="10" fill="#ffffff"/>
+          <rect x="0" y="322" width="600" height="20" fill="#ffffff"/>
+          <rect x="0" y="342" width="600" height="38" fill="#cdbca3"/>
+          <rect x="0" y="342" width="600" height="3" fill="#000" opacity=".06"/>
+        </svg>
+      </div>
+      <div class="rv" style="--d:90ms">
+        <fieldset>
+          <legend>Wall color</legend>
+          <div class="picks">
+            <label class="pick" style="--c:var(--c-linen)"><input type="radio" name="wall" id="w-linen" checked><span>Linen</span></label>
+            <label class="pick" style="--c:var(--c-sage)"><input type="radio" name="wall" id="w-sage"><span>Sage</span></label>
+            <label class="pick" style="--c:var(--c-harbor)"><input type="radio" name="wall" id="w-harbor"><span>Harbor</span></label>
+            <label class="pick" style="--c:var(--c-clay)"><input type="radio" name="wall" id="w-clay"><span>Clay</span></label>
+            <label class="pick" style="--c:var(--c-fog)"><input type="radio" name="wall" id="w-fog"><span>Fog</span></label>
+            <label class="pick" style="--c:var(--c-white)"><input type="radio" name="wall" id="w-white"><span>Plain white</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="edge">
+          <legend>Ceiling line</legend>
+          <div class="picks">
+            <label class="pick"><input type="radio" name="edge" id="e-clean" checked><span>Taped and cut in</span></label>
+            <label class="pick"><input type="radio" name="edge" id="e-rushed"><span>Rushed</span></label>
+          </div>
+        </fieldset>
+        <p class="fine">A screen only gets you close. Before you choose, we tape a real sample to your wall so you can see it in morning and evening light.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="prep" aria-labelledby="prep-h">
+    <h2 class="rv" id="prep-h">Most of the job is the prep.</h2>
+    <div class="prep">
+      <figure class="rv"><img src="prep.jpg" width="1100" height="733" loading="lazy" decoding="async" alt="A hand running blue tape along a baseboard, with a paint spattered drop cloth on the floor and a wooden stepladder beside it"></figure>
+      <div class="rv" style="--d:90ms">
+        <ol class="verbs">
+          <li>Move and cover</li>
+          <li>wash</li>
+          <li>scrape and sand</li>
+          <li>fill and caulk</li>
+          <li>prime</li>
+          <li>tape</li>
+          <li>then paint.</li>
+        </ol>
+        <p class="note">Paint only looks as good as the surface under it. Skip a step and it shows up later as peeling, cracks along the trim, or a patch you can see from across the room.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" aria-labelledby="how-h">
+    <h2 class="rv" id="how-h">How it works.</h2>
+    <figure class="band rv" style="--d:80ms"><img src="brush.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="A hand with paint on its fingers holding a wide brush up to a plain pale wall"></figure>
+    <ol class="how rv" id="how">
+      <li><h3>Call, text or send a request</h3><p>Tell us which rooms or which sides of the house, and roughly when you'd like it done.</p></li>
+      <li><h3>We walk the job with you</h3><p>We look at the surfaces, talk through colors and finishes, and note anything that needs repair first.</p></li>
+      <li><h3>You get a written estimate</h3><p>It lists each room or surface, the prep, and the number of coats. Ask about anything that isn't clear.</p></li>
+      <li><h3>We paint</h3><p>Floors covered and edges taped. At the end of each day we tell you what's next.</p></li>
+      <li><h3>A last walk through</h3><p>We go room by room with you before we pack up and touch up anything you point out.</p></li>
+    </ol>
+  </section>
+
+  <section class="wrap sec" id="questions" aria-labelledby="q-h">
+    <h2 class="rv" id="q-h">Questions people ask.</h2>
+    <div class="qa">
+      <figure class="rv"><img src="trim.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="Three rolls of masking tape stacked on a wood floor against a clean gray wall and white baseboard"></figure>
+      <dl class="rv" style="--d:90ms">
+        <div><dt>Do I need to move my furniture?</dt><dd>Move small things and anything fragile if you can. We shift the heavy pieces to the middle of the room and cover them.</dd></div>
+        <div><dt>Can you help me pick a color?</dt><dd>Yes. We talk colors on the walk through and tape samples up, so you can see them in your own light before you decide.</dd></div>
+        <div><dt>How long will my room take?</dt><dd>That comes down to the size of the room, the prep and the number of coats. The estimate gives you the days.</dd></div>
+        <div><dt>Do you paint outside in winter?</dt><dd>Outside paint needs dry days and mild temperatures, so exterior work is planned around the weather. Inside work goes on all year.</dd></div>
+        <div><dt>Do I need to be home?</dt><dd>Not the whole time. We work out how we get in when we set the start day.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <div class="wrap grid">
+      <div>
+        <h2 class="rv" id="contact-h">Tell us about the job.</h2>
+        <ul class="ways rv" style="--d:80ms">
+          <li><span>Call or text</span><a class="num" href="tel:+13365550150">336 555 0150</a></li>
+          <li><span>Where we work from</span><p>Dobson, NC</p></li>
+        </ul>
+        <figure class="rv" style="--d:140ms"><img src="roller.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="A hand rolling white paint onto a pale gray wall"></figure>
+      </div>
+
+      <div class="rv" style="--d:100ms">
+        <form id="qform" novalidate method="post">
+          <div class="f">
+            <label for="q-name">Your name</label>
+            <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+            <span class="err" id="e-name"></span>
+          </div>
+          <div class="f">
+            <label for="q-phone">Phone</label>
+            <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Your phone number" required aria-describedby="e-phone">
+            <span class="err" id="e-phone"></span>
+          </div>
+          <div class="f">
+            <label for="q-town">Town</label>
+            <input id="q-town" name="town" type="text" autocomplete="address-level2" required aria-describedby="e-town">
+            <span class="err" id="e-town"></span>
+          </div>
+          <div class="f">
+            <label for="q-where">Inside or outside? <span class="opt">(optional)</span></label>
+            <select id="q-where" name="where">
+              <option value="">Choose one</option>
+              <option>Inside</option>
+              <option>Outside</option>
+              <option>Both</option>
+            </select>
+          </div>
+          <div class="f full">
+            <label for="q-msg">What needs painting?</label>
+            <textarea id="q-msg" name="message" required aria-describedby="e-msg" placeholder="For example, two bedrooms and a hallway, walls and trim"></textarea>
+            <span class="err" id="e-msg"></span>
+          </div>
+          <div class="submit">
+            <button class="btn" type="submit">Request an estimate</button>
+            <p>We call you back to set up a walk through.</p>
+          </div>
+        </form>
+        <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
+          <h3 id="t-title">Thanks. We have it.</h3>
+          <p id="t-body">Your request is noted.</p>
+          <p class="muted">This is a sample site, so nothing was actually sent.</p>
+          <button class="btn alt" type="button" id="t-again">Send another request</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="big">True Line Painting</p>
+    <span class="tape" aria-hidden="true"></span>
+    <div class="row">
+      <p>Interior and exterior painting from Dobson, NC</p>
+      <p><a class="num" href="tel:+13365550150">336 555 0150</a></p>
+    </div>
+    <p class="credit">Photos by Blue Bird, hi room, La Miko, Sergey Meshkov and Malte Luk on Pexels, shown as examples. Paint chip names are made up.</p>
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../../samples/mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../../samples/mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../../samples/mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../../samples/mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../../samples/mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a href="tel:+13365550150"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>
+  <a href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M5 4h14v16H5z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M8.5 9h7M8.5 12.5h7M8.5 16h4"/></svg>Estimate</a>
+</nav>
+
+<script>
+(function(){
+  /* reveal once per element */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+  addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+
+  /* estimate form (demo only, nothing is sent) */
+  var f=document.getElementById('qform');
+  if(!f)return;
+  var F=f.elements,thanks=document.getElementById('thanks');
+  function setErr(id,msg){var i=document.getElementById(id),e=document.getElementById(i.getAttribute('aria-describedby'));e.textContent=msg;if(msg){i.setAttribute('aria-invalid','true')}else{i.removeAttribute('aria-invalid')}return !msg}
+  function check(){
+    var ok=true,first=null;
+    function run(id,msg){var good=setErr(id,msg);if(!good&&!first)first=id;ok=ok&&good}
+    var name=F['name'].value.trim(),phone=F['phone'].value.replace(/\D/g,''),msg=F['message'].value.trim();
+    run('q-name',name.length<2?'Please tell us your name.':'');
+    run('q-phone',phone.length<10?'Please enter a 10 digit phone number.':'');
+    run('q-town',!F['town'].value.trim()?'Please tell us your town.':'');
+    run('q-msg',msg.length<5?'A few words about the rooms or the house help us plan the walk through.':'');
+    if(first)document.getElementById(first).focus();
+    return ok;
+  }
+  ['q-name','q-phone','q-town','q-msg'].forEach(function(id){
+    var el=document.getElementById(id);
+    el.addEventListener('input',function(){if(el.getAttribute('aria-invalid'))setErr(id,'')});
+  });
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!check())return;
+    var name=F['name'].value.trim().split(' ')[0],d=F['phone'].value.replace(/\D/g,'').slice(-10);
+    var nice=d.slice(0,3)+'\u00a0'+d.slice(3,6)+'\u00a0'+d.slice(6);
+    document.getElementById('t-title').textContent='Thanks, '+name+'. We have it.';
+    document.getElementById('t-body').textContent='We will call you at '+nice+' to set up a walk through.';
+    f.hidden=true;thanks.hidden=false;thanks.focus();
+  });
+  document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+Photo credits for bel-vue-trophy. All photos from Pexels, free to use under the Pexels License (https://www.pexels.com/license/). Shown as examples only. Downloaded 2026-10-24.
+
+hero.jpg
+  Shows: two hands lift a silver cup with gold handles against a clear blue sky
+  Photographer: Anna Tarazevich (https://www.pexels.com/@anntarazevich/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/a-person-holding-a-trophy-6412253/
+
+shelf.jpg
+  Shows: a hand sets a small gold cup among other trophies on a wooden shelf
+  Photographer: cottonbro studio (https://www.pexels.com/@cottonbro/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/a-person-holding-a-trophy-6565255/
+
+cup-ribbons.jpg
+  Shows: a gold cup with ribbons tied to its lid on a red backdrop
+  Photographer: RDNE Stock project (https://www.pexels.com/@rdne/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/a-trophy-with-tied-ribbons-on-red-background-7005687/

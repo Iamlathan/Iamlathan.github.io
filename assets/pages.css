@@ -1,0 +1,97 @@
+/* Granite City Digital: extra styles for the FAQ, service area, privacy and terms pages.
+   Loaded after site.css. Same tokens, no new colors. */
+
+/* phone callbar with Call, Text and the free sample button */
+@media(max-width:860px){
+  .callbar.three{grid-template-columns:1fr 1fr 1.6fr}
+  .callbar.three a+a{border-left:1px solid var(--line-2)}
+  .callbar.three a.y{border-left:0}
+}
+
+/* keep phone numbers and the email on one line */
+a[href^="tel:"],a[href^="sms:"],a[href^="mailto:"]{white-space:nowrap}
+
+/* text links inside paragraphs are underlined, not only colored */
+a.inline{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+
+/* page head without a CTA row */
+.page-head.slim{padding-bottom:88px}
+.page-head .since{font-size:.85rem;color:var(--text-3);margin-top:22px;animation:settle 620ms cubic-bezier(.2,.7,.2,1) 180ms both}
+.page-head .since b{color:var(--text);font-weight:600}
+
+/* FAQ: grouped questions, every answer open */
+.qa-group{display:grid;grid-template-columns:.7fr 1.3fr;gap:72px;align-items:start}
+.qa-group+.qa-group{margin-top:96px}
+.qa-head{position:sticky;top:104px}
+.qa-head h2{font-size:clamp(1.5rem,2.6vw,2rem)}
+.qa-head p{font-size:.92rem}
+.qa{list-style:none}
+.qa li{padding:28px 0;border-top:1px solid var(--line);scroll-margin-top:88px}
+.qa li:last-child{border-bottom:1px solid var(--line)}
+.qa h3{font-size:1.12rem;font-weight:600;margin-bottom:10px;text-wrap:balance}
+.qa p{font-size:.95rem;max-width:62ch}
+.qa p+p{margin-top:10px}
+.qa a:not(.btn){color:var(--yellow);font-weight:500}
+.qa a:not(.btn):hover{text-decoration:underline;text-underline-offset:3px}
+
+/* ask band at the end of the FAQ and the legal pages */
+.ask{background:var(--bg-2)}
+.ask .wrap{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.ask h2{margin-bottom:10px}
+.ask .cta{justify-content:flex-end}
+
+/* service area */
+.map{margin:0;background:var(--bg-2);border-radius:14px;overflow:hidden}
+.map img{width:100%;height:auto}
+.map figcaption{font-size:.8rem;color:var(--text-3);padding:4px 24px 20px;max-width:none}
+.area-note{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:start;margin-top:72px}
+.area-note h2{font-size:clamp(1.6rem,3vw,2.3rem);margin:0}
+.area-note p{font-size:.98rem}
+.area-note p+p{margin-top:14px}
+.towns-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 56px;margin-top:56px}
+.towns-list li{border-top:1px solid var(--line)}
+.towns-list a{display:block;padding:24px 0 26px;transition:color .15s ease}
+.towns-list h3{font-size:1.2rem;font-weight:600;margin-bottom:2px;display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+.towns-list h3 span{font-size:.78rem;font-weight:500;color:var(--text-3);letter-spacing:0;white-space:nowrap}
+.towns-list .county{font-size:.82rem;color:var(--text-3);margin-bottom:10px}
+.towns-list p{font-size:.92rem}
+.towns-list .go{display:inline-flex;margin-top:12px;font-size:.85rem;font-weight:600;color:var(--text-2)}
+.towns-list .go::after{content:"";width:11px;height:11px;margin-left:8px;align-self:center;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17L17 7M9 7h8v8'/%3E%3C/svg%3E") center/100% no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17L17 7M9 7h8v8'/%3E%3C/svg%3E") center/100% no-repeat}
+@media(hover:hover){.towns-list a:hover h3{color:var(--yellow)}.towns-list a:hover .go{color:var(--yellow)}}
+.towns-list li.home h3{color:var(--text)}
+.towns-list li.home h3 span{color:var(--yellow)}
+
+/* privacy and terms: plain reading pages */
+.legal{display:grid;grid-template-columns:.62fr 1.38fr;gap:72px;align-items:start}
+.legal-toc{position:sticky;top:104px;font-size:.85rem}
+.legal-toc h2{font-size:.95rem;font-weight:600;letter-spacing:-.01em;color:var(--text);margin-bottom:12px}
+.legal-toc ol{list-style:none;display:grid;gap:2px}
+.legal-toc a{display:block;padding:6px 0;color:var(--text-2);transition:color .15s ease}
+.legal-toc a:hover{color:var(--yellow)}
+.prose{max-width:66ch}
+.prose section{padding:0;scroll-margin-top:88px}
+.prose section+section{margin-top:56px}
+.prose h2{font-size:clamp(1.35rem,2.2vw,1.7rem);margin-bottom:14px;max-width:none}
+.prose p,.prose li{font-size:.98rem;color:var(--text-2);max-width:none}
+.prose p+p,.prose p+ul,.prose ul+p{margin-top:12px}
+.prose ul{list-style:none;display:grid;gap:10px}
+.prose li{position:relative;padding-left:22px}
+.prose li::before{content:"";position:absolute;left:2px;top:.72em;width:7px;height:7px;border-radius:50%;background:var(--yellow)}
+.prose b{color:var(--text);font-weight:600}
+.prose a{color:var(--yellow);font-weight:500}
+.prose a:hover{text-decoration:underline;text-underline-offset:3px}
+.updated{display:inline-block;font-size:.85rem;color:var(--text);background:var(--bg-3);border-radius:7px;padding:7px 12px;margin-top:6px;animation:settle 620ms cubic-bezier(.2,.7,.2,1) 130ms both}
+
+@media(max-width:860px){
+  .qa-group,.area-note,.legal,.ask .wrap{grid-template-columns:1fr;gap:20px}
+  .area-note{margin-top:48px}
+  .map figcaption{padding:2px 16px 16px}
+  .qa-group+.qa-group{margin-top:72px}
+  .qa-head,.legal-toc{position:static}
+  .ask .cta{justify-content:flex-start}
+  .towns-list{grid-template-columns:1fr;margin-top:40px}
+  .legal-toc{background:var(--bg-2);border-radius:12px;padding:20px 22px}
+}
+@media (prefers-reduced-motion:reduce){
+  .page-head .since,.updated{animation:none}
+}

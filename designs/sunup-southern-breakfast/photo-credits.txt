@@ -1,0 +1,35 @@
+Photo credits for designs/sunup-southern-breakfast (a sample design; the business name is made up)
+These photos show food and tables in general. They are not this business's food or room.
+
+breakfast-800.webp, breakfast-1400.webp
+  Photographer: Roman Odintsov (@roman-odintsov)
+  Shows: two fried eggs, home fries, bacon, a sausage, toast and a small cup of sauce on a white plate, seen from above
+  Source: https://www.pexels.com/photo/5836427/
+  License: Pexels License, https://www.pexels.com/license/
+
+biscuit-plate-700.webp, biscuit-plate-1100.webp
+  Photographer: Gu Ko (@gu-ko-2150570603)
+  Shows: golden biscuits piled on a round wooden plate
+  Source: https://www.pexels.com/photo/36903815/
+  License: Pexels License, https://www.pexels.com/license/
+
+syrup-stack-700.webp, syrup-stack-1100.webp
+  Photographer: Jahra Tasfia Reza (@jahratreza)
+  Shows: a stack of pancakes with syrup and a pat of butter on a dark plate
+  Source: https://www.pexels.com/photo/39832908/
+  License: Pexels License, https://www.pexels.com/license/
+
+table-700.webp, table-1200.webp
+  Photographer: The Design Lady
+  Shows: a mug and pancakes on a checked tablecloth by a sunny window
+  Source: https://www.pexels.com/photo/19837087/
+  License: Pexels License, https://www.pexels.com/license/
+
+coffee-600.webp
+  Photographer: Nano Erdozain
+  Shows: steam rising from a dark mug of coffee
+  Source: https://www.pexels.com/photo/31710615/
+  License: Pexels License, https://www.pexels.com/license/
+
+All are generic stock photos shown as examples.
+Fonts: Fraunces and Rubik from Google Fonts (SIL Open Font License).

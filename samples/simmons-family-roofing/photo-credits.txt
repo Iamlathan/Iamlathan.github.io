@@ -1,0 +1,19 @@
+Photo credits for this sample page
+
+hero.jpg
+  A house with a metal roof in front of a wooded hillside
+  Photographer: adriana ramos (@adriana-ramos-826927925)
+  Source: https://www.pexels.com/photo/35639811/
+  License: Pexels License (free to use, no attribution required), https://www.pexels.com/license/
+
+services.jpg
+  Rows of brown asphalt shingles up close
+  Photographer: Martin Leitgeb
+  Source: https://unsplash.com/photos/5IilXEIe9hU
+  License: Unsplash License (free to use, no attribution required), https://unsplash.com/license
+
+steps.jpg
+  A long metal roof painted in white, blue and black stripes under a blue sky
+  Photographer: Jan van der Wolf (@jan-van-der-wolf-11680885)
+  Source: https://www.pexels.com/photo/30035715/
+  License: Pexels License (free to use, no attribution required), https://www.pexels.com/license/

@@ -1,0 +1,41 @@
+Photo credits for samples/inmans-land-enhancement/
+All are from Pexels, under the Pexels License (free to use, no attribution required). They are shown as example photos, not Inman's Land Enhancement LLC's own work.
+
+hero.jpg
+  Photographer: Petr Ganaj
+  Source: https://www.pexels.com/photo/a-green-grass-field-with-trees-under-the-blue-sky-and-white-clouds-13282351/
+  Title on Pexels: A Green Grass Field with Trees Under the Blue Sky and White Clouds
+  License: Pexels License
+  Shows: a wide open field sloping down to a dark tree line under a blue sky with white clouds
+
+services-ground.jpg
+  Photographer: Engin Akyurt
+  Source: https://www.pexels.com/photo/brown-soil-3859201/
+  Title on Pexels: Brown Soil
+  License: Pexels License
+  Shows: a close view of red soil and small stones
+
+lawn.jpg
+  Photographer: Michael Fallarme
+  Source: https://www.pexels.com/photo/green-grass-413195/
+  Title on Pexels: Green Grass
+  License: Pexels License
+  Shows: a close view of thick green lawn grass
+
+Two more photos sit in this folder and are not shown on the page:
+
+services.jpg
+  Photographer: Max Vakhtbovych
+  Source: https://www.pexels.com/photo/house-backyard-with-lawn-green-grass-7546775/
+  Title on Pexels: House Backyard with Lawn Green Grass
+  License: Pexels License
+  Shows: a mowed back lawn behind a single story house with a covered patio
+
+services-work.jpg
+  Photographer: Binyamin Mellish
+  Source: https://www.pexels.com/photo/man-planting-plant-169523/
+  Title on Pexels: Man Planting Plant
+  License: Pexels License
+  Shows: a man kneeling in a plot of worked soil, hands in the dirt
+
+Downloaded 2026-11-04.

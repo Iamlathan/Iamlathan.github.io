@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free website check for small businesses | Granite City Digital</title>
+<meta name="description" content="Free website check for small businesses in Mount Airy and Surry County. Send your site or Facebook link and see how it does on a phone, or I check it by hand.">
+<link rel="canonical" href="https://granitecitydigital.me/free-check/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free website check | Granite City Digital">
+<meta property="og:description" content="Send your site or Facebook link and see how it does on a phone. It's free.">
+<meta property="og:image" content="https://granitecitydigital.me/sample/preview.png">
+<meta property="og:url" content="https://granitecitydigital.me/free-check/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/free-check.css">
+<noscript><style>#fc-form{display:none}</style></noscript>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"Free website check","url":"https://granitecitydigital.me/free-check/","provider":{"@type":"ProfessionalService","name":"Granite City Digital","url":"https://granitecitydigital.me","telephone":"+1-743-222-0985","email":"lathan@granitecitydigital.me"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://granitecitydigital.me/"},{"@type":"ListItem","position":2,"name":"Free check","item":"https://granitecitydigital.me/free-check/"}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap"><nav>
+<a class="logo" href="/"><b>GRANITE<i>.</i>CITY</b><span>DIGITAL</span></a>
+<ul class="nav-links" id="site-nav">
+<li><a href="/#services">Services</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#how">How it works</a></li><li><a href="/#about">About</a></li><li><a href="/#faq">FAQ</a></li>
+</ul>
+<div class="nav-actions">
+<a class="textlink" href="sms:+17432220985">Text <span class="num">(743) 222-0985</span></a>
+<a class="btn g sm" href="/#start">Get a free sample</a>
+</div>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+</nav></div></header>
+
+<main id="main">
+<div class="page-head fc-head"><div class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><ol>
+<li><a href="/">Home</a></li>
+<li><span aria-current="page">Free check</span></li>
+</ol></nav>
+<h1>How does your site do<br><span>on a customer's phone?</span></h1>
+<div class="fc-top">
+<div class="fc-intro">
+<p class="sub">Type your business name and your website or Facebook link. It's free.</p>
+<p class="fc-how">An automatic check runs right away. If it can't run, I check it by hand and text you back the same day.</p>
+</div>
+
+<div class="fc-panel" id="fc-panel">
+<noscript><p class="nojs">This check needs JavaScript, which is turned off in your browser. For a free check, text your website address (or your business name if you don't have a site) to <a href="sms:+17432220985">(743) 222-0985</a>, call <a href="tel:+17432220985">(743) 222-0985</a>, or email <a href="mailto:lathan@granitecitydigital.me">lathan@granitecitydigital.me</a>. I reply the same day.</p></noscript>
+<form id="fc-form" method="post" novalidate>
+<label><span>Business name</span><input name="biz" required autocomplete="organization" maxlength="120"></label>
+<label><span>Your website or Facebook link</span><input name="site" type="text" required inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" maxlength="300" placeholder="yourbusiness.com"></label>
+<label><span>Phone so I can text you back <small>(optional)</small></span><input name="phone" type="tel" autocomplete="tel" maxlength="30"></label>
+<input type="checkbox" name="botcheck" class="hp" tabindex="-1" aria-hidden="true" autocomplete="off">
+<p class="fc-err" id="fc-err" role="alert" hidden></p>
+<button class="btn y" type="submit"><span class="lbl">Check my site</span></button>
+<p class="fc-wait" id="fc-wait" role="status" aria-live="polite"></p>
+<p class="form-note">Goes straight to me. Your name and phone are never sent to the checking service, only the site address.</p>
+</form>
+<div class="sent fc-manual" id="fc-manual" hidden tabindex="-1">
+<span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+<h2>Got it. I check it myself and text you back the same day.</h2>
+<p id="fc-manual-why" hidden></p>
+<p id="fc-manual-nophone" hidden>You didn't leave a phone number, so text me at <a href="sms:+17432220985">(743) 222-0985</a> and I'll send it there.</p>
+<button class="btn g fc-again" type="button">Check another site</button>
+</div>
+<div class="fc-done" id="fc-done" hidden><p>Checked <b id="fc-done-site"></b>. Your result is below.</p><button class="btn g fc-again" type="button">Check another site</button></div>
+</div>
+</div>
+</div></div>
+
+<section class="fc-result" id="fc-result" hidden tabindex="-1" aria-labelledby="fc-result-h"><div class="wrap">
+<div class="fc-score">
+<h2 id="fc-result-h">Your quick check</h2>
+<p class="fc-site" id="fc-site"></p>
+<p class="fc-num"><b id="fc-num">0</b><span>out of 100</span></p>
+<ul class="fc-lines" id="fc-lines"></ul>
+<details class="fc-works">
+<summary>How this score works</summary>
+<p>Six checks, out of 100. It is a quick automatic check, not a full review. If the page does not load, the other checks count as missed.</p>
+<ul class="fc-break" id="fc-break"></ul>
+<p>Load time is an estimate. It is how long the checking service took to open your page and take the picture, so it runs slower than a real visit.</p>
+</details>
+</div>
+<div class="fc-shots">
+<figure><div class="fc-frame" id="fc-theirs"></div><figcaption>Your site on a phone</figcaption></figure>
+<figure><a class="fc-frame" id="fc-ours-link" href="/designs/steady-flow-plumbing/" target="_blank" rel="noopener"><img id="fc-ours" src="/work/shots/steady-flow-plumbing.webp" alt="Phone view of one of my sample sites" width="390" height="736" loading="lazy" decoding="async"></a><figcaption>One of my samples</figcaption></figure>
+</div>
+<div class="fc-next">
+<h2>Text me and I'll send a free preview in 3 days</h2>
+<p>Send your business name and I build a preview of your new site. You decide after you've seen it.</p>
+<div class="cta"><a class="btn y" href="sms:+17432220985">Text (743) 222-0985</a><button class="btn g fc-again" type="button">Check another site</button></div>
+<p class="fc-sentnote" id="fc-sentnote"></p>
+</div>
+</div></section>
+
+<section class="rule fc-looks"><div class="wrap needs">
+<div class="needs-head">
+<h2>What the check looks at</h2>
+<p>The same things a customer notices in the first few seconds on a phone.</p>
+</div>
+<ul class="ticks">
+<li><h3>It loads</h3><p>The address opens a working page, not an error.</p></li>
+<li><h3>It's secure</h3><p>The address starts with https, so phones don't warn people away.</p></li>
+<li><h3>It fits a phone</h3><p>The page is set up for a small screen instead of a shrunk desktop page.</p></li>
+<li><h3>One tap to call</h3><p>Your number is a button that rings you when someone taps it.</p></li>
+<li><h3>Hours are on the page</h3><p>People can see when you're open without calling first.</p></li>
+<li><h3>It opens fast</h3><p>An estimated load time, since people give up on slow pages.</p></li>
+</ul>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<div class="fcol"><b>GRANITE<i>.</i>CITY</b><span>Websites for small businesses in Mount Airy, Surry County and nearby.</span><span>&copy; 2026 Granite City Digital</span></div>
+<div class="fcol"><small>Pages</small><a href="/faq/">FAQ</a><a href="/service-area/">Service Area</a><a href="/free-check/">Free Check</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
+<div class="fcol"><small>Contact</small><a href="tel:+17432220985">(743) 222-0985</a><a href="sms:+17432220985">Text me</a><a href="mailto:lathan@granitecitydigital.me">lathan@granitecitydigital.me</a></div>
+<div class="fcol"><small>Follow</small>
+<a href="https://www.facebook.com/profile.php?id=61595451055544" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.4H7.4V14h2.8v8h3.3z"/></svg>Facebook</a>
+<a href="https://www.instagram.com/iamlathn/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a>
+<a href="https://www.linkedin.com/in/lathan-arnder-7a14272aa/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 8.5H3V21h3.5V8.5zM4.8 3a2 2 0 100 4 2 2 0 000-4zM21 13.4c0-3.4-1.8-5.2-4.5-5.2-2 0-3 1.1-3.5 1.9V8.5H9.5V21H13v-6.6c0-1.8.7-2.9 2.2-2.9s2.2 1 2.2 2.9V21H21v-7.6z"/></svg>LinkedIn</a>
+</div>
+</div></footer>
+
+<div class="callbar three"><a href="tel:+17432220985">Call</a><a href="sms:+17432220985">Text</a><a class="y" href="/#start">Get a free sample</a></div>
+
+<script>
+(function(){var b=document.querySelector(".menu-btn");if(!b)return;function t(){var o=document.body.classList.toggle("menu-open");b.setAttribute("aria-expanded",o);b.textContent=o?"Close":"Menu"}b.addEventListener("click",t);document.getElementById("site-nav").addEventListener("click",function(e){if(e.target.closest("a")&&document.body.classList.contains("menu-open"))t()})})();
+</script>
+<script src="/assets/free-check.js" defer></script>
+</body>
+</html>

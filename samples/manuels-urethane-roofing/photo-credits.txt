@@ -1,0 +1,17 @@
+Photo credits for this sample page
+License for all three: Pexels License (free to use, no attribution required), https://www.pexels.com/license/
+
+hero.jpg
+  Two workers carrying a long panel across a metal roof under a blue sky
+  Photographer: Krista Glīzdeniece (@krista-glizdeniece-2150567376)
+  Source: https://www.pexels.com/photo/32050401/
+
+services.jpg
+  An unfinished attic with bare rafters and a block wall, lit by a work lamp
+  Photographer: Simon (@simon-156919716)
+  Source: https://www.pexels.com/photo/18335689/
+
+steps.jpg
+  Corrugated metal roofing in warm evening light
+  Photographer: Dương Nhân (@d-ng-nhan-324384)
+  Source: https://www.pexels.com/photo/9704349/

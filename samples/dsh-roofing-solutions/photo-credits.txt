@@ -1,0 +1,23 @@
+Photo credits for this sample page
+All three are generic stock photos shown as examples. None shows DSH Roofing Solutions, its people or its work.
+
+hero.jpg
+  A roofer standing on the roof of a brick house, with a ladder against the edge
+  Photographer: Zohair Mirza
+  Source: https://unsplash.com/photos/-1l0iZaM8ms
+  License: Unsplash License (free to use, no attribution required), https://unsplash.com/license
+  Saved size: 1600 x 790
+
+services.jpg
+  Frost on a rounded roof surface, up close
+  Photographer: Calvin Seng (@calvinseng)
+  Source: https://www.pexels.com/photo/31141321/
+  License: Pexels License (free to use, no attribution required), https://www.pexels.com/license/
+  Saved size: 1200 x 857
+
+steps.jpg
+  Workers along the top of a long curved roof under a dark storm sky
+  Photographer: H&CO (@hngstrm)
+  Source: https://www.pexels.com/photo/2454697/
+  License: Pexels License (free to use, no attribution required), https://www.pexels.com/license/
+  Saved size: 1400 x 933

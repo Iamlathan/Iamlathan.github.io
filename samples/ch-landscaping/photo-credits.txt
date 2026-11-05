@@ -1,0 +1,46 @@
+Photo credits for samples/ch-landscaping/
+All are from Pexels, under the Pexels License (free to use, no attribution required). They are shown as example photos, not C&H Landscaping LLC's own work.
+
+yard.jpg
+  Photographer: Curtis Adams
+  Source: https://www.pexels.com/photo/plants-planted-outside-a-house-8031890/
+  Title on Pexels: Plants Planted Outside a House
+  License: Pexels License
+  Width: 1200 px
+  Shows: a white brick house with a green lawn and young shrubs in a dark mulch bed
+
+services-beds.jpg
+  Photographer: Dylan Shaw
+  Source: https://www.pexels.com/photo/field-summer-bed-garden-6414145
+  Title on Pexels: Yellow Flowers in a Flowerbed
+  License: Pexels License
+  Width: 1000 px
+  Shows: a planted bed of orange and yellow marigolds and red blanket flowers
+
+contact-lawn.jpg
+  Photographer: Martin Banov
+  Source: https://www.pexels.com/photo/close-up-of-lawn-and-sun-rising-among-trees-in-a-park-16630712/
+  Title on Pexels: Close-up of Lawn and Sun Rising among Trees in a Park
+  License: Pexels License
+  Width: 1100 px
+  Shows: green lawn in low sun with trees behind it
+
+Two more photos sit in this folder and are not shown on the page:
+
+services.jpg
+  Photographer: Get Lost Mike
+  Source: https://www.pexels.com/photo/green-grass-lawn-near-white-and-brown-house-under-blue-sky-6267516/
+  Title on Pexels: Green Grass Lawn Near White and Brown House Under Blue Sky
+  License: Pexels License
+  Width: 1200 px
+  Shows: a brick house with a mowed front lawn and shrubs in a mulch bed beside the walk
+
+hero.jpg
+  Photographer: Max Vakhtbovych
+  Source: https://www.pexels.com/photo/house-near-plants-and-trees-on-lawn-7174107/
+  Title on Pexels: House near plants and trees on lawn
+  License: Pexels License
+  Width: 1200 px
+  Shows: a lawn and rounded shrubs in a planted garden beside a large brick house
+
+Downloaded 2026-11-04.

@@ -1,0 +1,23 @@
+Photo credits for designs/steady-flow-plumbing (a sample design; the business name is made up)
+These photos show plumbing in general. They are not this business's work, and nobody in them works for it.
+
+valves-800.webp, valves-1400.webp
+  Photographer: La Miko
+  Source: https://www.pexels.com/photo/3616761/
+  License: Pexels License, https://www.pexels.com/license/
+  Shows: two shutoff valves with red handles coming out of a clean white wall
+
+faucet-700.webp, faucet-1100.webp
+  Photographer: Andrea Davis
+  Source: https://www.pexels.com/photo/6253786/
+  License: Pexels License, https://www.pexels.com/license/
+  Shows: a black pull down kitchen faucet over a steel sink
+
+fit-700.webp, fit-1200.webp
+  Photographer: Sergei Starostin (Pexels @sejio402)
+  Source: https://www.pexels.com/photo/professional-plumber-installing-a-radiator-pipe-29226620/
+  License: Pexels License, https://www.pexels.com/license/
+  Shows: gloved hands threading a steel pipe fitting into a white radiator, blue pipe wrenches on the bench
+
+All are generic stock photos shown as examples.
+Fonts: Bitter and Nunito Sans from Google Fonts (SIL Open Font License).

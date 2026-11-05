@@ -1,0 +1,20 @@
+Photo credits for samples/the-plumber-llc/
+All photos are from Unsplash under the Unsplash License (free to use, no permission needed). Saved locally, shown as examples only.
+
+hero.jpg
+  Photographer: Timur Shakerzianov
+  Shows: a plumber in a red shirt reaching into a lit cabinet under a sink to work on white drain pipes
+  Source page: https://unsplash.com/photos/a-man-working-on-a-pipe-in-a-wall-c314Gh8dXAo
+  License: Unsplash License, https://unsplash.com/license
+
+faucet.jpg
+  Photographer: Jacek Dylag
+  Shows: water running from a kitchen faucet into a glass
+  Source page: https://unsplash.com/photos/person-opening-faucet-Vve7XkiUq_Y
+  License: Unsplash License, https://unsplash.com/license
+
+how.jpg
+  Photographer: bhagya laxmi
+  Shows: a plumber working on pipes behind a bathroom wall panel
+  Source page: https://unsplash.com/photos/a-plumber-repairs-plumbing-in-a-bathroom-jaP5ClBdIyU
+  License: Unsplash License, https://unsplash.com/license

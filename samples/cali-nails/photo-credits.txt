@@ -1,0 +1,20 @@
+Photo credits for the Cali Nails sample site
+All three photos are free to use under the Pexels License (https://www.pexels.com/license/). They are stock examples, not photos of this business.
+
+hero.jpg
+  Photographer: Gustavo Fring (@gustavo-fring) on Pexels
+  Source: https://www.pexels.com/photo/7446915/
+  License: Pexels License
+  Saved size: 1400 x 933
+
+polish.jpg
+  Photographer: Karola G (@karola-g) on Pexels
+  Source: https://www.pexels.com/photo/5238075/
+  License: Pexels License
+  Saved size: 1400 x 933
+
+hands.jpg
+  Photographer: Karola G (@karola-g) on Pexels
+  Source: https://www.pexels.com/photo/5238015/
+  License: Pexels License
+  Saved size: 1400 x 933

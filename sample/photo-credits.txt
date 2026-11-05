@@ -1,0 +1,22 @@
+Photo credits for the Stonecrop Stoneworks sample site
+Stonecrop Stoneworks is a made up business. These photos show stonework in general.
+They are not its work, and nobody in them works for it.
+
+All photos come from Pexels and are used under the Pexels License
+(free to use, no attribution required): https://www.pexels.com/license/
+
+Files in img/                         Pexels photo                                   Photographer
+patio-arch-*, house-wall-400          https://www.pexels.com/photo/30280876/         Gene Samit
+stone-close-*                         https://www.pexels.com/photo/170461/           paulita
+wall-curve-*                          https://www.pexels.com/photo/7671270/          Anastasia Shuraeva
+firepit-*                             https://www.pexels.com/photo/34580059/         Taylor Thompson
+firebowl-tall-640                     https://www.pexels.com/photo/12900048/         Valerie Voila
+steps-grass-*                         https://www.pexels.com/photo/39045225/         thehungphoto
+steps-garden-*                        https://www.pexels.com/photo/33692879/         Magda Ehlers
+mason-*                               https://www.pexels.com/photo/33497127/         tahir
+foothills-road-*                      https://www.pexels.com/photo/29062647/         Kaiwalya Limaye
+wall-field-640                        https://www.pexels.com/photo/33689536/         Petra Nesti
+shovel-640                            https://www.pexels.com/photo/11963550/         Alexey Demidov
+flag-path-*                           https://www.pexels.com/photo/30229429/         A rvin
+
+Fonts: Cormorant and Karla from Google Fonts (SIL Open Font License).

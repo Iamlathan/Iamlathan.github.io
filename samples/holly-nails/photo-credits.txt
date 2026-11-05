@@ -1,0 +1,20 @@
+Photo credits for the Holly Nails sample site
+All three photos are free to use under the Pexels License (https://www.pexels.com/license/). They are stock examples, not photos of this business.
+
+hero.jpg
+  Photographer: freestocks.org (@freestocks) on Pexels
+  Source: https://www.pexels.com/photo/332046/
+  License: Pexels License
+  Saved size: 1600 x 1067
+
+polish.jpg
+  Photographer: Gabriel Puyén (@gabrielpuyen) on Pexels
+  Source: https://www.pexels.com/photo/6135686/
+  License: Pexels License
+  Saved size: 1600 x 1067
+
+filing.jpg
+  Photographer: RDNE Stock project (@rdne) on Pexels
+  Source: https://www.pexels.com/photo/7755212/
+  License: Pexels License
+  Saved size: 1600 x 1067

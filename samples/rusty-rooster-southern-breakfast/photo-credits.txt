@@ -1,0 +1,13 @@
+Photo credits for samples/rusty-rooster-southern-breakfast/ (all free under the Unsplash License, https://unsplash.com/license)
+
+hero.jpg
+  Photographer: Roman Matovsky
+  Source: https://unsplash.com/photos/egg-omelet-on-white-ceramic-plate-4NdNhu9HxbE
+
+biscuits.jpg
+  Photographer: Elijah Crouch
+  Source: https://unsplash.com/photos/golden-brown-biscuits-baked-in-a-cast-iron-skillet-NcsdLcklhMQ
+
+pancakes.jpg
+  Photographer: Luke Pennystan
+  Source: https://unsplash.com/photos/pancakes-on-palte-09FcOqmi8R0

@@ -1,0 +1,13 @@
+Photo credits for samples/leons-burger-express/ (all free under the Unsplash License, https://unsplash.com/license)
+
+hero.jpg
+  Photographer: Joshua Kantarges
+  Source: https://unsplash.com/photos/burger-patty-being-cooked-wO4CyWnIzz4
+
+cheeseburger.jpg
+  Photographer: Ilya Mashkov
+  Source: https://unsplash.com/photos/cheeseburger-with-fresh-vegetables-_qxbJUr9RqI
+
+breakfast.jpg
+  Photographer: Snappr
+  Source: https://unsplash.com/photos/a-white-plate-topped-with-eggs-bacon-and-toast-vN0UyWCeZJs

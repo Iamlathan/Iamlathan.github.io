@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stonecrop Stoneworks | Sample site by Granite City Digital</title>
+<meta name="description" content="A sample website by Granite City Digital for a made up stone mason in Mount Airy, NC: stone patios, retaining walls, steps and fire pits, on one page.">
+<link rel="canonical" href="https://granitecitydigital.me/sample/">
+<meta name="theme-color" content="#eeebe4">
+<meta property="og:title" content="Stonecrop Stoneworks | Sample site by Granite City Digital">
+<meta property="og:description" content="Stone patios, walls and steps in Mount Airy, NC. A one page sample site built by Granite City Digital.">
+<meta property="og:image" content="https://granitecitydigital.me/sample/preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://granitecitydigital.me/sample/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1e1b'/%3E%3Cpath d='M5 22h9v5H5zM16 22h11v5H16zM5 15h13v5H5zM20 15h7v5h-7zM9 8h10v5H9z' fill='%23e6e3dc'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="img/patio-arch-900.webp" imagesrcset="img/patio-arch-600.webp 600w, img/patio-arch-900.webp 900w" imagesizes="(min-width: 900px) 45vw, 72vw" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --bg:#eeebe4;
+  --surface:#e3dfd6;
+  --surface-2:#d4cfc4;
+  --mortar:#cbc5b8;
+  --ink:#2b2b2a;
+  --muted:#4f4d48;
+  --accent:#4f5b3a;
+  --accent-hover:#414b2f;
+  --accent-ink:#f3f0e8;
+  --dark:#2b2b2a;
+  --dark-ink:#ece8df;
+  --dark-muted:#b7b2a7;
+  --dark-accent:#bcc6a3;
+
+  --display:"Cormorant",Georgia,"Times New Roman",serif;
+  --text:"Karla",system-ui,-apple-system,"Segoe UI",sans-serif;
+
+  --step-small:clamp(.9375rem,.9rem + .1vw,1rem);
+  --step-body:clamp(1rem,.96rem + .2vw,1.125rem);
+  --step-lead:clamp(1.375rem,1.1rem + 1.1vw,2rem);
+  --step-head:clamp(2.125rem,1.4rem + 3vw,4.25rem);
+  --step-giant:clamp(3rem,18vw,16rem);
+
+  --m:max(20px,5vw);
+  --gap:24px;
+  --ease-out:cubic-bezier(.23,1,.32,1);
+  --ease-io:cubic-bezier(.77,0,.175,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:var(--step-body);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.01em;line-height:1;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+::selection{background:var(--accent);color:var(--accent-ink)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:var(--bg);padding:12px 16px;z-index:50}
+.skip:focus{left:12px;top:12px}
+.g{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);padding-inline:var(--m)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.nw{white-space:nowrap}
+
+/* buttons and links */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;background:var(--accent);color:var(--accent-ink);font:500 1rem/1 var(--text);text-decoration:none;border:0;border-radius:0;cursor:pointer;transition:background-color .2s ease,transform .16s var(--ease-out)}
+.btn:hover{background:var(--accent-hover)}
+.btn:active{transform:scale(.97)}
+.btn svg{width:18px;height:18px;flex:none}
+.tlink{font-weight:500;text-decoration:underline;text-decoration-color:color-mix(in srgb,currentColor 40%,transparent);transition:text-decoration-color .2s ease,color .2s ease}
+.tlink:hover{text-decoration-color:currentColor;color:var(--accent)}
+
+/* sample note */
+.note-bar{background:var(--surface);color:var(--muted);font-size:var(--step-small);padding:9px var(--m);line-height:1.4}
+.note-bar a{color:var(--ink)}
+
+/* nav */
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px var(--m)}
+.mark{display:inline-block;padding:11px 0;font-family:var(--display);font-size:1.625rem;font-weight:700;letter-spacing:0;text-decoration:none;line-height:1}
+.mark span{color:var(--muted)}
+.nav ul{display:flex;gap:32px;list-style:none;margin:0;padding:0;font-size:1rem}
+.nav ul a{text-decoration:none;color:var(--muted);transition:color .2s ease}
+.nav ul a:hover{color:var(--ink)}
+.nav .btn{min-height:44px;padding:0 18px;font-size:.9375rem}
+.nav .short{display:none}
+
+/* hero: three prints on one rail */
+.hero{grid-template-rows:auto 1fr;padding-top:clamp(16px,3vh,40px);padding-bottom:clamp(96px,14vh,160px);row-gap:0;align-items:start;overflow-x:clip}
+/* the wide photo bleeds 4vw past the edge so its slow drift never shows a gap; clip it here so the page itself is never wider than the window */
+.h-square{grid-column:1/3;grid-row:1}
+.h-copy{grid-column:1/5;grid-row:2;padding-top:44px;padding-right:12px}
+.h-tall{grid-column:5/11;grid-row:1/3}
+.h-wide{grid-column:11/13;grid-row:1/3;margin-top:96px;margin-right:calc(-1 * var(--m) - 4vw)}
+.hero figure,.frame{margin:0}
+.hero .h-wide{margin-right:calc(-1 * var(--m) - 4vw);margin-top:120px}
+.h-wide figcaption{max-width:calc(100% - var(--m) - 4vw - 8px)}
+.hero figcaption,.cap,.gal figcaption{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin-top:12px;line-height:1.6}
+.ph{overflow:hidden;background:var(--surface)}
+.ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) sepia(.1) contrast(1.03)}
+.r-1{aspect-ratio:1/1}.r-34{aspect-ratio:3/4}.r-45{aspect-ratio:4/5}.r-1610{aspect-ratio:16/10}
+h1{font-size:clamp(2.25rem,4.1vw,4rem);line-height:.98;letter-spacing:-.015em}
+.h-lead{margin-top:20px;max-width:34ch}
+.h-acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:28px}
+.h-facts{margin-top:28px;font-size:var(--step-small);color:var(--muted);max-width:36ch}
+.h-wide .ph{animation:drift 22s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-3%)}}
+.h-wide .ph img{transform:scale(1.06)}
+
+/* shutter on the main photograph */
+.js .shutter{clip-path:inset(100% 0 0 0);animation:shut 1.1s var(--ease-io) .15s forwards}
+.js .shutter img{transform:scale(1.12);animation:settle 1.4s var(--ease-out) .15s forwards}
+@keyframes shut{to{clip-path:inset(0 0 0 0)}}
+@keyframes settle{to{transform:scale(1)}}
+
+/* intro statement */
+.intro{padding-block:clamp(48px,8vh,96px) clamp(120px,16vh,200px)}
+.intro .st{grid-column:7/13;grid-row:1;font-family:var(--display);font-weight:500;font-size:var(--step-lead);line-height:1.3;letter-spacing:-.01em;text-indent:3em;max-width:40ch}
+.intro .lone{grid-column:2/5;grid-row:2;margin-top:-56px}
+.intro .aside{grid-column:7/10;grid-row:2;align-self:start;margin-top:72px;font-size:var(--step-small);color:var(--muted);max-width:34ch}
+.intro .aside b{color:var(--ink);font-weight:500}
+
+/* showcase band */
+.show{padding-bottom:clamp(120px,16vh,200px)}
+.show h2{grid-column:3/11;font-size:var(--step-head);margin-bottom:56px}
+.band{display:flex;height:68svh;min-height:460px;max-height:760px}
+.band a{position:relative;flex:var(--grow) 1 0;overflow:hidden;background:var(--dark);color:#fff;text-decoration:none;transition:flex-grow .5s var(--ease-io)}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.8) sepia(.1) contrast(1.03);transition:transform .8s var(--ease-out)}
+.band a::after{content:"";position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(to top,rgba(14,15,13,.62),rgba(14,15,13,0));pointer-events:none}
+.band .bt{position:absolute;left:24px;right:20px;bottom:22px;z-index:1;font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,1.1rem + .9vw,1.875rem);line-height:1.1;text-wrap:balance}
+.band b{display:block;font-weight:600}
+.band small{display:block;font-family:var(--text);font-size:var(--step-small);margin-top:8px;color:rgba(255,255,255,.86)}
+@media (hover:hover) and (pointer:fine){
+  .band a:hover{flex-grow:6}
+  .band a:hover img{transform:scale(1.03)}
+}
+.show .cap{padding-inline:var(--m);margin-top:16px}
+
+/* how a job goes: drag row */
+.how{padding-bottom:clamp(120px,16vh,200px)}
+.how-top{display:flex;align-items:end;justify-content:space-between;gap:24px;padding-inline:var(--m)}
+.how h2{font-size:var(--step-head)}
+.how-btns{display:flex;gap:8px}
+.how-btns button{width:48px;height:48px;border:0;border-radius:0;background:var(--ink);color:var(--bg);display:grid;place-items:center;cursor:pointer;transition:transform .16s var(--ease-out),opacity .2s ease}
+.how-btns button:active{transform:scale(.94)}
+.how-btns button:disabled{opacity:.3;cursor:default}
+.how-btns svg{width:18px;height:18px}
+.bar{margin:28px var(--m) 0;height:6px;background:var(--surface-2)}
+.bar i{display:block;height:100%;width:100%;background:var(--ink);transform-origin:left;transform:scaleX(var(--p,.17));transition:transform .2s ease-out}
+.row{display:flex;gap:32px;overflow-x:auto;scroll-snap-type:x mandatory;padding:40px var(--m) 8px;scroll-padding-inline:var(--m);scrollbar-width:none;overscroll-behavior-x:contain}
+.row::-webkit-scrollbar{display:none}
+.row ol{display:contents}
+.mo{flex:0 0 300px;scroll-snap-align:start;display:flex;flex-direction:column;list-style:none;margin:0}
+.mo h3{font-family:var(--display);font-weight:700;font-size:1.5rem;letter-spacing:0;line-height:1.15}
+.mo p{margin-top:8px;color:var(--muted);font-size:1rem;line-height:1.5}
+.mo .sp{flex:none;height:calc(var(--sp) * 1px)}
+.mo .ph{margin-top:0}
+
+/* photos of stonework: a tight masonry with mortar gaps */
+.gal{padding-block:clamp(96px,12vh,160px);background:var(--surface)}
+.gal-top{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px 40px;padding-inline:var(--m)}
+.gal h2{font-size:var(--step-head)}
+.gal-top p{max-width:40ch}
+.wall{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(3,clamp(180px,17vw,260px));grid-template-areas:"a b b c" "a d d e" "f g g e";gap:6px;margin:48px var(--m) 0;padding:6px;background:var(--mortar)}
+.wall figure{position:relative;margin:0;overflow:hidden;background:var(--surface-2)}
+.wall .ph{position:absolute;inset:0}
+.wall .ph img{transition:transform .8s var(--ease-out)}
+.wall .ga{grid-area:a}.wall .gb{grid-area:b}.wall .gc{grid-area:c}.wall .gd{grid-area:d}.wall .ge{grid-area:e}.wall .gf{grid-area:f}.wall .gg{grid-area:g}
+.wall figcaption{position:absolute;left:0;bottom:0;margin:0;padding:7px 12px 6px;background:var(--bg);color:var(--ink);max-width:calc(100% - 12px)}
+@media (hover:hover) and (pointer:fine){.wall figure:hover .ph img{transform:scale(1.03)}}
+.gal .note{padding-inline:var(--m);margin-top:20px;font-size:var(--step-small);color:var(--muted);max-width:60ch}
+
+/* where I work: table pushed right */
+.where{padding-block:clamp(120px,16vh,200px);align-items:end}
+.where h2{grid-column:1/13;font-size:clamp(2.5rem,1.4rem + 4.2vw,4.25rem);line-height:.98;text-indent:3vw;margin-bottom:96px;max-width:16ch}
+.where .ph-w{grid-column:1/5;grid-row:2}
+.where .tbl-name{grid-column:7/8;grid-row:2;align-self:start;font-size:var(--step-small);color:var(--muted);padding-top:2px}
+.towns{grid-column:8/13;grid-row:2;margin:0;padding:0;list-style:none}
+.towns li{display:grid;grid-template-columns:30% 1fr auto;gap:12px;align-items:baseline;font-size:1.0625rem;margin-bottom:22px}
+.towns li:nth-child(5){margin-top:44px}
+.towns li:last-child{margin-top:44px;margin-bottom:0}
+.towns .k{color:var(--muted)}
+.towns .v{text-align:right;font-variant-numeric:tabular-nums}
+
+/* questions beside a tall photograph */
+.faq{background:var(--surface);padding-top:clamp(96px,12vh,140px);padding-bottom:clamp(96px,12vh,140px);align-items:start}
+.faq-l{grid-column:1/6}
+.faq h2{font-size:var(--step-head)}
+.facts{list-style:none;margin:28px 0 0;padding:0;font-size:1.125rem;line-height:1.5}
+.facts li{margin-bottom:6px}
+.qs{margin-top:44px}
+.qs details{margin-bottom:6px}
+.qs summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:52px;padding:8px 0;font-size:1.1875rem;font-weight:500;line-height:1.35}
+.qs summary::-webkit-details-marker{display:none}
+.chev{position:relative;flex:none;width:14px;height:14px;transition:transform .25s var(--ease-out)}
+.chev::before,.chev::after{content:"";position:absolute;top:6px;width:9px;height:2px;background:var(--ink)}
+.chev::before{left:0;transform:rotate(45deg)}
+.chev::after{right:0;transform:rotate(-45deg)}
+.qs details[open] .chev{transform:rotate(180deg)}
+.qs details p{color:var(--muted);font-size:1.0625rem;max-width:52ch;padding:2px 0 18px}
+.faq-acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-top:36px}
+.faq-r{grid-column:7/13;position:relative;margin-top:calc(-1 * clamp(96px,12vh,140px) - 64px);padding-bottom:40px}
+.faq-r .tall{aspect-ratio:3/4}
+.faq-r .sq{position:absolute;left:-40px;bottom:0;width:34%;aspect-ratio:1/1;outline:10px solid var(--surface)}
+
+/* contact */
+.contact{padding-block:clamp(120px,16vh,200px) clamp(96px,12vh,140px);align-items:start;row-gap:40px}
+.c-say{grid-column:1/6}
+.c-say p.big{font-family:var(--display);font-weight:500;font-size:clamp(1.875rem,1.4rem + 1.8vw,2.625rem);line-height:1.15;letter-spacing:-.01em;max-width:20ch}
+.c-ways{margin-top:36px;display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start}
+.c-ways .ph{aspect-ratio:1/1}
+.c-ways a{display:block;font-size:1.125rem;font-weight:500;margin-bottom:8px}
+.c-ways .when{font-size:var(--step-small);color:var(--muted);margin-top:6px}
+form{grid-column:7/13;display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+.f{display:flex;flex-direction:column;gap:7px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label{font-size:.9375rem;font-weight:500}
+.f label i{font-style:normal;color:var(--muted);font-weight:400}
+input[type=text],input[type=tel],select,textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--bg);border:1px solid #b9b5ab;border-radius:0;padding:13px 14px;min-height:50px;width:100%;transition:border-color .2s ease,box-shadow .2s ease}
+textarea{min-height:120px;resize:vertical}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%231c1e1b' stroke-width='1.6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:12px;padding-right:38px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.f .err{display:none;color:#8a2c1d;font-size:.9375rem}
+.f.bad input,.f.bad select{border-color:#8a2c1d}
+.f.bad .err{display:block}
+.f-end{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
+.f-end p{font-size:var(--step-small);color:var(--muted);max-width:42ch}
+.sent{grid-column:1/-1;background:var(--surface);padding:18px 20px;font-size:1rem}
+.sent[hidden]{display:none}
+html:not(.js) #quote{display:none} /* the demo form only runs with script; call and text links stay */
+
+/* footer */
+footer{background:var(--dark);color:var(--dark-ink);padding:clamp(64px,10vh,120px) var(--m) 32px;overflow:hidden}
+.f-name{font-family:var(--display);font-weight:600;font-size:var(--step-giant);line-height:.86;letter-spacing:-.03em;margin:0 0 0 -.04em;white-space:nowrap}
+.f-row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gap);margin-top:72px;align-items:start}
+.f-places{grid-column:1/6;list-style:none;margin:0;padding:0}
+.f-places a{display:inline-block;padding:4px 0;font-family:var(--display);font-weight:500;font-size:clamp(1.625rem,1.2rem + 1.2vw,2.25rem);color:var(--dark-accent);text-decoration:none;line-height:1.3;transition:color .2s ease}
+.f-places a:hover{color:var(--dark-ink)}
+.f-places li + li{margin-top:6px}
+.f-places .when{display:block;font-size:var(--step-small);color:var(--dark-muted);margin-top:14px}
+.f-cols{grid-column:7/13;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;font-size:.9375rem}
+.f-cols h3{font-family:var(--text);font-size:.9375rem;font-weight:500;letter-spacing:0;color:var(--dark-muted);margin-bottom:12px;line-height:1.4}
+.f-cols ul{list-style:none;margin:0;padding:0}
+.f-cols li{margin-bottom:8px;line-height:1.4}
+.f-cols a{color:var(--dark-ink);text-decoration:none}
+.f-cols a:hover{text-decoration:underline}
+.legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;margin-top:96px;font-size:var(--step-small);color:var(--dark-muted)}
+.legal p{max-width:70ch}
+.legal a{color:var(--dark-ink)}
+
+/* a course of stone between sections */
+.course{height:22px;margin-inline:var(--m);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='22' viewBox='0 0 300 22'%3E%3Cg fill='%23d4cfc4'%3E%3Crect x='0' y='0' width='46' height='10' rx='1.5'/%3E%3Crect x='49' y='0' width='31' height='10' rx='1.5'/%3E%3Crect x='83' y='0' width='58' height='10' rx='1.5'/%3E%3Crect x='144' y='0' width='37' height='10' rx='1.5'/%3E%3Crect x='184' y='0' width='52' height='10' rx='1.5'/%3E%3Crect x='239' y='0' width='26' height='10' rx='1.5'/%3E%3Crect x='268' y='0' width='29' height='10' rx='1.5'/%3E%3C/g%3E%3Cg fill='%23c3bdb0'%3E%3Crect x='-14' y='12' width='40' height='10' rx='1.5'/%3E%3Crect x='29' y='12' width='55' height='10' rx='1.5'/%3E%3Crect x='87' y='12' width='34' height='10' rx='1.5'/%3E%3Crect x='124' y='12' width='47' height='10' rx='1.5'/%3E%3Crect x='174' y='12' width='29' height='10' rx='1.5'/%3E%3Crect x='206' y='12' width='60' height='10' rx='1.5'/%3E%3Crect x='269' y='12' width='45' height='10' rx='1.5'/%3E%3C/g%3E%3Crect x='83' y='0' width='58' height='10' rx='1.5' fill='%234f5b3a' opacity='.55'/%3E%3C/svg%3E") repeat-x left center}
+.course + .show{padding-top:clamp(56px,8vh,96px)}
+.course.dark{margin:0 0 56px;opacity:.35}
+
+/* phone call bar */
+.callbar{display:none}
+
+/* section entrances */
+.js [data-r]{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease-out),transform .8s var(--ease-out);transition-delay:calc(var(--d,0) * 80ms)}
+.js [data-r].in{opacity:1;transform:none}
+
+@media (max-width:1100px){
+  .nav ul{gap:22px}
+}
+
+@media (max-width:899px){
+  :root{--gap:16px}
+  .nav{padding-block:16px}
+  .nav ul{display:none}
+  .nav .long{display:none}
+  .nav .short{display:inline}
+  .mark{font-size:1.25rem;white-space:nowrap}
+  .nb-more{display:none}
+  .hero{display:grid;grid-template-rows:none;grid-template-columns:62% 1fr;column-gap:0;padding-top:8px;padding-bottom:96px}
+  .h-tall{grid-column:1/2;grid-row:1;width:116%;max-width:400px}
+  .h-tall figcaption{display:none}
+  .h-square{grid-column:2/3;grid-row:1;align-self:end;justify-self:end;width:100%;max-width:210px;margin-bottom:-40px;position:relative;z-index:1;outline:8px solid var(--bg)}
+  .h-copy{grid-column:1/3;grid-row:2;padding:64px 0 0}
+  .h-copy h1{font-size:clamp(1.875rem,8.4vw,2.625rem)}
+  .h-lead{margin-top:28px;max-width:none}
+  .hero .h-wide{grid-column:1/3;grid-row:4;margin:56px calc(-1 * var(--m)) 0}
+  .h-wide figcaption{padding-inline:var(--m);max-width:none}
+  .intro{display:block;padding-top:24px}
+  .intro .st{font-size:1.375rem;text-indent:0;max-width:none}
+  .intro .lone{width:62%;margin:40px 0 0 auto}
+  .intro .lone .ph{aspect-ratio:4/5}
+  .intro .aside{margin-top:24px;max-width:none}
+  .show h2{grid-column:1/13;margin-bottom:32px}
+  .band{display:grid;grid-template-columns:36fr 28fr 36fr;grid-template-rows:1fr 1fr;height:84svh;min-height:520px;max-height:720px}
+  .band a:nth-child(1){grid-column:1/3;grid-row:1}
+  .band a:nth-child(2){grid-column:3;grid-row:1}
+  .band a:nth-child(3){grid-column:1;grid-row:2}
+  .band a:nth-child(4){grid-column:2/4;grid-row:2}
+  .band .bt{left:14px;right:10px;bottom:14px;font-size:1.125rem}
+  .band small{display:none}
+  .how h2{font-size:clamp(2rem,9vw,2.75rem)}
+  .how-btns{display:none}
+  .wall{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(5,150px);grid-template-areas:"a c" "a f" "b b" "e d" "e g";margin-inline:0;gap:4px;padding:4px}
+  .wall figcaption{padding:6px 8px 5px;letter-spacing:.1em;font-size:.6875rem}
+  .row{gap:16px;padding-top:28px}
+  .mo{flex-basis:72vw}
+  .mo .sp{height:calc(var(--sp) * .4px)}
+  .where{display:block}
+  .where h2{font-size:9.5vw;text-indent:0;margin-bottom:48px}
+  .where .tbl-name{display:none}
+  .towns li{grid-template-columns:1fr auto;gap:2px 12px}
+  .towns .k{grid-column:1/-1;font-size:.9375rem}
+  .towns .t{grid-column:1}
+  .where .ph-w{width:60%;margin:48px 0 0 auto}
+  .faq{display:flex;flex-direction:column-reverse;padding-top:0}
+  .faq-r{margin:0 calc(-1 * var(--m)) 64px;padding-bottom:0}
+  .faq-r .tall{aspect-ratio:4/5}
+  .faq-r .sq{left:auto;right:var(--m);bottom:-36px;width:38%;outline-width:8px}
+  .faq h2{font-size:1.875rem}
+  .facts{font-size:1.0625rem}
+  .qs summary{font-size:1.0625rem}
+  .faq-acts .btn{width:100%}
+  .contact{display:block}
+  .c-say p.big{font-size:1.5rem}
+  .c-ways{grid-template-columns:96px 1fr;margin-top:28px}
+  form{margin-top:48px;grid-template-columns:1fr}
+  .f-end .btn{width:100%}
+  .f-row{display:block;margin-top:48px}
+  .f-places a{font-size:1.625rem}
+  .f-cols{grid-template-columns:1fr 1fr;margin-top:48px}
+  .f-cols div:last-child{grid-column:1/-1}
+  .legal{margin-top:56px}
+  footer{padding-bottom:110px}
+  .callbar{display:grid;grid-template-columns:1fr 1fr;position:sticky;bottom:0;z-index:20;background:var(--dark);padding:10px 12px calc(10px + env(safe-area-inset-bottom));gap:8px}
+  .callbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;font-weight:500;text-decoration:none;color:var(--dark-ink);background:#2c2f2b;transition:transform .16s var(--ease-out)}
+  .callbar a:first-child{background:var(--accent);color:var(--accent-ink)}
+  .callbar a:active{transform:scale(.97)}
+  .callbar svg{width:18px;height:18px}
+}
+@media (max-width:360px){
+  .mark{font-size:1.0625rem}
+  .nav{gap:12px}
+  .nav .btn{padding:0 14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .shutter,.js .shutter img{animation:none;clip-path:none;transform:none}
+  .h-wide .ph{animation:none}
+  .js [data-r]{transform:none;transition:opacity .4s ease}
+  .band a,.band img{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<p class="note-bar">A sample design by <a href="https://granitecitydigital.me/">Granite City Digital</a>. Stonecrop Stoneworks is a made up business.<span class="nb-more"> Your real site gets your own photos, colors and services.</span></p>
+
+<header class="nav">
+  <a class="mark" href="#top" aria-label="Stonecrop Stoneworks, back to top">Stonecrop <span>Stoneworks</span></a>
+  <nav aria-label="Sections">
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#photos">Photos</a></li>
+      <li><a href="#how">How it goes</a></li>
+      <li><a href="#questions">Questions</a></li>
+    </ul>
+  </nav>
+  <a class="btn" href="tel:+13365550182"><span class="long">Call <span class="nw">336&nbsp;555&nbsp;0182</span></span><span class="short">Call</span></a>
+</header>
+
+<main id="main">
+<section class="hero g" id="top" aria-labelledby="h1">
+  <figure class="h-square">
+    <div class="ph r-1"><img src="img/stone-close-400.webp" srcset="img/stone-close-400.webp 400w, img/stone-close-700.webp 700w" sizes="(min-width: 900px) 15vw, 38vw" width="400" height="400" alt="Close up of flat stones stacked in a dry wall, warm orange and tan"></div>
+  </figure>
+  <div class="h-copy">
+    <h1 id="h1">Stone patios, walls and steps.</h1>
+    <p class="h-lead">Laid by hand for homes in Mount Airy and across Surry County. Tell me what you have in mind and I will come look at the spot.</p>
+    <div class="h-acts">
+      <a class="btn" href="tel:+13365550182"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="nw">Call 336&nbsp;555&nbsp;0182</span></a>
+      <a class="tlink" href="sms:+13365550182">Or text me a photo of the spot</a>
+    </div>
+    <p class="h-facts">Monday to Friday, 7 to 5. Saturday visits by appointment.</p>
+  </div>
+  <figure class="h-tall">
+    <div class="ph r-45 shutter"><img src="img/patio-arch-900.webp" srcset="img/patio-arch-600.webp 600w, img/patio-arch-900.webp 900w" sizes="(min-width: 900px) 45vw, 72vw" width="900" height="1200" fetchpriority="high" alt="Flagstone patio in reds, tans and grays in front of a fieldstone house with arched glass doors"></div>
+    <figcaption>Flagstone patio laid to the doors, with stone sills.</figcaption>
+  </figure>
+  <figure class="h-wide">
+    <div class="ph r-1610"><img src="img/wall-curve-1000.webp" srcset="img/wall-curve-1000.webp 1000w, img/wall-curve-1600.webp 1600w" sizes="(min-width: 900px) 26vw, 100vw" width="1000" height="625" alt="Curved dry stacked stone wall holding back a grassy slope planted with lavender and rosemary" loading="lazy" decoding="async"></div>
+    <figcaption>Dry stacked wall, curved to follow the slope.</figcaption>
+  </figure>
+</section>
+
+<section class="intro g" aria-label="About the work">
+  <p class="st" data-r>Walls, steps, patios, fire pits. Each one starts with a packed base and drainage behind the stone, then every piece is set by hand.</p>
+  <figure class="lone frame" data-r style="--d:1">
+    <div class="ph r-45"><img src="img/mason-640.webp" srcset="img/mason-640.webp 640w, img/mason-900.webp 900w" sizes="(min-width: 900px) 24vw, 62vw" width="640" height="800" loading="lazy" decoding="async" alt="A mason in safety glasses and gloves fitting a cut stone into a step"></div>
+  </figure>
+  <p class="aside" data-r style="--d:2"><b>Why Stonecrop.</b> It is a small plant that can take root in the cracks of an old stone wall and live on very little soil, which is the whole idea.</p>
+</section>
+
+<div class="course" aria-hidden="true"></div>
+<section class="show" id="work" aria-labelledby="work-h">
+  <div class="g"><h2 id="work-h" data-r>What I build</h2></div>
+  <div class="band" data-r style="--d:1">
+    <a href="#photos" style="--grow:5"><img src="img/firepit-1000.webp" srcset="img/firepit-1000.webp 1000w, img/firepit-1600.webp 1600w" sizes="(min-width: 900px) 50vw, 64vw" width="1000" height="625" loading="lazy" decoding="async" alt="Wide stone patio with a seat wall and a stone fire table, looking out over farm fields"><span class="bt"><b>Patios</b><small>Flagstone, fieldstone and pavers</small></span></a>
+    <a href="#photos" style="--grow:2"><img src="img/wall-curve-tall-640.webp" width="640" height="800" loading="lazy" decoding="async" alt="Curved dry stone retaining wall with herbs growing along the top"><span class="bt"><b>Retaining walls</b><small>Dry stacked or mortared</small></span></a>
+    <a href="#photos" style="--grow:3"><img src="img/steps-grass-640.webp" srcset="img/steps-grass-640.webp 640w, img/steps-grass-1000.webp 1000w" sizes="(min-width: 900px) 30vw, 36vw" width="640" height="800" loading="lazy" decoding="async" alt="Stone steps climbing a green lawn"><span class="bt"><b>Steps and walkways</b><small>Set on a packed base</small></span></a>
+    <a href="#photos" style="--grow:2"><img src="img/firebowl-tall-640.webp" width="640" height="800" loading="lazy" decoding="async" alt="A steel fire bowl filled with split logs on a patio of fitted flat stones"><span class="bt"><b>Fire pits</b><small>And seat walls to match</small></span></a>
+  </div>
+  <p class="cap">Plus repairs: sunken patios reset, leaning walls rebuilt, loose steps reset.</p>
+</section>
+
+<section class="how" id="how" aria-labelledby="how-h">
+  <div class="how-top">
+    <h2 id="how-h" data-r>How a job goes</h2>
+    <div class="how-btns">
+      <button type="button" data-dir="-1" aria-label="Previous step" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button type="button" data-dir="1" aria-label="Next step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <div class="row" tabindex="0" aria-label="Steps of a job, scroll sideways">
+    <ol>
+      <li class="mo"><h3>You call or text</h3><p>Tell me what you have in mind. A photo of the spot helps.</p><div class="sp" style="--sp:120"></div><div class="ph r-45"><img src="img/wall-field-640.webp" width="640" height="800" loading="lazy" decoding="async" alt="An old dry stone wall winding across green pasture hills"></div></li>
+      <li class="mo"><h3>I walk the yard</h3><p>I look at the slope, the soil and where the water goes, then measure.</p><div class="sp" style="--sp:56"></div><div class="ph r-45"><img src="img/steps-grass-640.webp" width="640" height="800" loading="lazy" decoding="async" alt="Stone steps set into a sloped lawn"></div></li>
+      <li class="mo"><h3>The price</h3><p>You get a price for the whole job, with the stone, the base, hauling and cleanup in it.</p><div class="sp" style="--sp:140"></div><div class="ph r-45"><img src="img/stone-close-tall-640.webp" width="640" height="800" loading="lazy" decoding="async" alt="Flat stones stacked in a wall"></div></li>
+      <li class="mo"><h3>Dig and base</h3><p>I dig out, lay fabric and pack crushed stone in layers. Nobody sees this part, but the stone sits on it.</p><div class="sp" style="--sp:80"></div><div class="ph r-45"><img src="img/shovel-640.webp" width="640" height="800" loading="lazy" decoding="async" alt="A worn shovel leaning on a big boulder in patchy grass"></div></li>
+      <li class="mo"><h3>Stone goes down</h3><p>Each piece is fitted and leveled by hand. Walls get drain pipe and clean gravel behind them.</p><div class="sp" style="--sp:130"></div><div class="ph r-45"><img src="img/mason-640.webp" width="640" height="800" loading="lazy" decoding="async" alt="A mason in work gloves fitting a stone into a step"></div></li>
+      <li class="mo"><h3>Clean up and walk through</h3><p>I haul off the dirt and scraps, sweep the joints and walk the finished work with you.</p><div class="sp" style="--sp:64"></div><div class="ph r-45"><img src="img/firebowl-tall-640.webp" width="640" height="800" loading="lazy" decoding="async" alt="Finished flat stone patio with a steel fire bowl, swept clean"></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="gal" id="photos" aria-labelledby="photos-h">
+  <div class="gal-top">
+    <h2 id="photos-h" data-r>Photos of stonework</h2>
+    <p data-r style="--d:1">Patios, walls, steps and fire pits, each set by hand. These are example photos for this sample site.</p>
+  </div>
+  <div class="wall" data-r style="--d:1">
+    <figure class="ga"><div class="ph"><img src="img/patio-arch-600.webp" width="600" height="800" loading="lazy" decoding="async" alt="Flagstone patio in reds, tans and grays laid up to arched glass doors"></div><figcaption>Flagstone patio</figcaption></figure>
+    <figure class="gb"><div class="ph"><img src="img/wall-curve-1000.webp" width="1000" height="625" loading="lazy" decoding="async" alt="Curved dry stacked stone wall holding back a grassy slope"></div><figcaption>Dry stacked retaining wall</figcaption></figure>
+    <figure class="gc"><div class="ph"><img src="img/stone-close-700.webp" width="700" height="700" loading="lazy" decoding="async" alt="Close up of flat stones stacked tight in a dry wall"></div><figcaption>Fieldstone, close up</figcaption></figure>
+    <figure class="ge"><div class="ph"><img src="img/steps-garden-700.webp" width="700" height="933" loading="lazy" decoding="async" alt="Wide stone steps rising to an old brick garden wall"></div><figcaption>Stone steps</figcaption></figure>
+    <figure class="gd"><div class="ph"><img src="img/firepit-1000.webp" width="1000" height="625" loading="lazy" decoding="async" alt="Stone patio with a seat wall and a stone fire table above farm fields"></div><figcaption>Patio and fire table</figcaption></figure>
+    <figure class="gf"><div class="ph"><img src="img/flag-path-640.webp" width="640" height="800" loading="lazy" decoding="async" alt="Flat flagstones set as a stepping stone path through dry leaves"></div><figcaption>Stepping stone path</figcaption></figure>
+    <figure class="gg"><div class="ph"><img src="img/wall-field-640.webp" width="640" height="800" loading="lazy" decoding="async" alt="An old dry stone wall winding across green pasture hills"></div><figcaption>Dry stone wall</figcaption></figure>
+  </div>
+  <p class="note">Every yard is different, so every job is priced after I see it.</p>
+</section>
+
+<div class="course" aria-hidden="true"></div>
+<section class="where g" aria-labelledby="where-h">
+  <h2 id="where-h" data-r>I work within an hour of Mount Airy.</h2>
+  <figure class="ph-w frame" data-r style="--d:1">
+    <div class="ph r-45"><img src="img/foothills-road-640.webp" srcset="img/foothills-road-640.webp 640w, img/foothills-road-900.webp 900w" sizes="(min-width: 900px) 30vw, 60vw" width="640" height="800" loading="lazy" decoding="async" alt="Road through fall woods beside a long stone wall"></div>
+  </figure>
+  <p class="tbl-name" aria-hidden="true">Towns</p>
+  <ul class="towns" data-r style="--d:2" aria-label="Towns and drive times">
+    <li><span class="k">Home base</span><span class="t">Mount Airy</span><span class="v">0 min</span></li>
+    <li><span class="k">Close by</span><span class="t">Ararat</span><span class="v">15 min</span></li>
+    <li><span class="k">Close by</span><span class="t">Pilot Mountain</span><span class="v">20 min</span></li>
+    <li><span class="k">Close by</span><span class="t">Lowgap</span><span class="v">20 min</span></li>
+    <li><span class="k">A short drive</span><span class="t">Dobson</span><span class="v">20 min</span></li>
+    <li><span class="k">A short drive</span><span class="t">Westfield</span><span class="v">25 min</span></li>
+    <li><span class="k">A short drive</span><span class="t">Elkin</span><span class="v">35 min</span></li>
+    <li><span class="k">A short drive</span><span class="t">King</span><span class="v">35 min</span></li>
+    <li><span class="k">Further out</span><span class="t">Rest of Surry County</span><span class="v"><a class="tlink" href="sms:+13365550182">Ask me</a></span></li>
+  </ul>
+</section>
+
+<section class="faq g" id="questions" aria-labelledby="faq-h">
+  <div class="faq-l">
+    <h2 id="faq-h" data-r>Before you call</h2>
+    <ul class="facts" data-r style="--d:1">
+      <li>Based in Mount Airy, NC</li>
+      <li>Monday to Friday, 7 to 5. Saturday visits by appointment.</li>
+      <li>Patios, walls, steps, fire pits and repairs</li>
+    </ul>
+    <div class="qs" data-r style="--d:2">
+      <details><summary>Can you fix a wall someone else built?<span class="chev" aria-hidden="true"></span></summary><p>Yes. Leaning walls get rebuilt and sunken patios get reset. I tell you which it needs after I see it.</p></details>
+      <details><summary>How long does a patio take?<span class="chev" aria-hidden="true"></span></summary><p>It depends on the size, the ground and the weather. You get a day count along with the price.</p></details>
+      <details><summary>Do you work through the winter?<span class="chev" aria-hidden="true"></span></summary><p>Yes, until the ground freezes. Mortar needs days above 40 degrees, so I plan dry stone and base work for the cold stretches.</p></details>
+      <details><summary>What stone do you use?<span class="chev" aria-hidden="true"></span></summary><p>Fieldstone, flagstone and granite, picked to suit the house. I bring samples so you can choose.</p></details>
+      <details><summary>Do you haul away the dirt?<span class="chev" aria-hidden="true"></span></summary><p>Yes. Digging out, hauling and cleanup are part of the job.</p></details>
+      <details><summary>Does a retaining wall need a permit?<span class="chev" aria-hidden="true"></span></summary><p>Tall walls can need an engineer and a permit. I tell you at the visit if yours does, so you can check with the county.</p></details>
+    </div>
+    <div class="faq-acts" data-r style="--d:3">
+      <a class="btn" href="tel:+13365550182">Call about your project</a>
+      <a class="tlink" href="#contact">Or send a message</a>
+    </div>
+  </div>
+  <div class="faq-r" data-r style="--d:1">
+    <div class="ph tall"><img src="img/steps-garden-700.webp" srcset="img/steps-garden-700.webp 700w, img/steps-garden-902.webp 902w" sizes="(min-width: 900px) 42vw, 100vw" width="700" height="933" loading="lazy" decoding="async" alt="Wide stone steps rising to an old brick garden wall with a sunburst pattern set into it"></div>
+    <div class="ph sq"><img src="img/house-wall-400.webp" width="400" height="400" loading="lazy" decoding="async" alt="Fieldstone arch over a glass door, each stone cut to the curve"></div>
+  </div>
+</section>
+
+<section class="contact g" id="contact" aria-labelledby="contact-h">
+  <div class="c-say">
+    <h2 id="contact-h" class="vh">Ask about your project</h2>
+    <p class="big" data-r>Send a photo of the spot and a rough size. I will tell you what it takes.</p>
+    <div class="c-ways" data-r style="--d:1">
+      <div class="ph"><img src="img/foothills-road-640.webp" width="640" height="800" loading="lazy" decoding="async" alt="Country road in fall beside an old stone wall"></div>
+      <div>
+        <a class="tlink" href="tel:+13365550182">Call 336&nbsp;555&nbsp;0182</a>
+        <a class="tlink" href="sms:+13365550182">Text a photo</a>
+        <p class="when">Mount Airy, NC. Calls and texts come straight to me.</p>
+      </div>
+    </div>
+  </div>
+  <form id="quote" method="post" novalidate data-r style="--d:2">
+    <div class="f"><label for="f-name">Your name</label><input id="f-name" type="text" autocomplete="name" required><span class="err">Please add your name.</span></div>
+    <div class="f"><label for="f-phone">Phone</label><input id="f-phone" type="tel" autocomplete="tel" inputmode="tel" required><span class="err">Please add a number I can call or text.</span></div>
+    <div class="f"><label for="f-job">What you need</label><select id="f-job" required><option value="">Choose one</option><option>Patio</option><option>Retaining wall</option><option>Steps or walkway</option><option>Fire pit or seat wall</option><option>A repair</option><option>Something else</option></select><span class="err">Please pick one.</span></div>
+    <div class="f"><label for="f-town">Town</label><select id="f-town"><option>Mount Airy</option><option>Ararat</option><option>Pilot Mountain</option><option>Lowgap</option><option>Dobson</option><option>Westfield</option><option>Elkin</option><option>King</option><option>Somewhere else in Surry County</option></select></div>
+    <div class="f full"><label for="f-msg">Tell me about it <i>(optional)</i></label><textarea id="f-msg" placeholder="Rough size, the slope, when you would like it done"></textarea></div>
+    <div class="f-end">
+      <button class="btn" type="submit">Send it</button>
+      <p>Photos are easier to send by text.</p>
+    </div>
+    <p class="sent" id="sent" role="status" hidden>This is a sample site, so nothing was sent. On a real site this form goes straight to the owner's phone and email.</p>
+  </form>
+</section>
+</main>
+
+<footer>
+  <div class="course dark" aria-hidden="true"></div>
+  <p class="f-name" aria-hidden="true">Stonecrop</p>
+  <div class="f-row">
+    <ul class="f-places">
+      <li><a href="tel:+13365550182"><span class="nw">336&nbsp;555&nbsp;0182</span></a></li>
+      <li><a href="sms:+13365550182">Text a photo</a></li>
+      <li><span class="when">Stonecrop Stoneworks, Mount Airy, NC. Monday to Friday, 7 to 5.</span></li>
+    </ul>
+    <div class="f-cols">
+      <div><h3>On this page</h3><ul><li><a href="#work">What I build</a></li><li><a href="#photos">Photos</a></li><li><a href="#how">How a job goes</a></li><li><a href="#questions">Questions</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h3>Towns</h3><ul><li>Mount Airy</li><li>Pilot Mountain</li><li>Dobson</li><li>Elkin</li><li>King</li></ul></div>
+      <div><h3>Work</h3><ul><li>Patios</li><li>Retaining walls</li><li>Steps and walkways</li><li>Fire pits</li><li>Repairs</li></ul></div>
+    </div>
+  </div>
+  <div class="legal">
+    <p>Sample site designed and built by <a href="https://granitecitydigital.me/">Granite City Digital</a>. Stonecrop Stoneworks, its phone number and its details are made up. Photos are free stock from Pexels (<a href="photo-credits.txt">credits</a>).</p>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<div class="callbar" aria-label="Call or text">
+  <a href="tel:+13365550182"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+  <a href="sms:+13365550182"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Text a photo</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // section entrances
+  var els = document.querySelectorAll('[data-r]');
+  if (!('IntersectionObserver' in window)) { els.forEach(function(e){ e.classList.add('in'); }); }
+  else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    els.forEach(function(e){ io.observe(e); });
+  }
+
+  // drag row
+  var row = document.querySelector('.row'), bar = document.querySelector('.bar i');
+  var prev = document.querySelector('[data-dir="-1"]'), next = document.querySelector('[data-dir="1"]');
+  function prog(){
+    var max = row.scrollWidth - row.clientWidth;
+    var p = max > 0 ? row.scrollLeft / max : 1;
+    var share = max > 0 ? row.clientWidth / row.scrollWidth : 1;
+    bar.style.setProperty('--p', Math.min(1, share + (1 - share) * p).toFixed(3));
+    prev.disabled = row.scrollLeft < 4;
+    next.disabled = row.scrollLeft > max - 4;
+  }
+  row.addEventListener('scroll', prog, { passive: true });
+  window.addEventListener('resize', prog);
+  [prev, next].forEach(function(b){
+    b.addEventListener('click', function(){
+      var step = row.querySelector('.mo').getBoundingClientRect().width + 32;
+      row.scrollBy({ left: step * +b.dataset.dir, behavior: reduce ? 'auto' : 'smooth' });
+    });
+  });
+  prog();
+
+  // sample form: check the fields, then say plainly that nothing is sent
+  var form = document.getElementById('quote'), sent = document.getElementById('sent');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var ok = true, first = null;
+    form.querySelectorAll('[required]').forEach(function(f){
+      var bad = !f.value.trim() || (f.type === 'tel' && f.value.replace(/\D/g, '').length < 7);
+      f.closest('.f').classList.toggle('bad', bad);
+      f.setAttribute('aria-invalid', bad ? 'true' : 'false');
+      if (bad && !first) first = f;
+      if (bad) ok = false;
+    });
+    if (!ok) { first.focus(); sent.hidden = true; return; }
+    sent.hidden = false;
+  });
+})();
+</script>
+</body>
+</html>

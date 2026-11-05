@@ -1,0 +1,17 @@
+Photo credits for samples/lr-construction/
+All three photos are from Pexels under the Pexels License (free to use, no attribution required). Credited anyway, in the page footer and here. They are stock examples, not photos of LR Construction, LLC work.
+
+hero.jpg
+  Photographer: D Goug (@d-goug-211350543)
+  Source: https://www.pexels.com/photo/new-home-construction-framing-in-suburban-area-39367475/
+  License: Pexels License
+
+services.jpg
+  Photographer: morgan (@morgantakesphotos)
+  Source: https://www.pexels.com/photo/selective-focus-of-black-and-brown-rocks-237907/
+  License: Pexels License
+
+steps.jpg
+  Photographer: Scott Webb (@scottwebb)
+  Source: https://www.pexels.com/photo/white-wall-1890416/
+  License: Pexels License

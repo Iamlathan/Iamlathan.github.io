@@ -1,0 +1,17 @@
+Photo credits for samples/j-m-painting/
+All three photos are from Pexels under the Pexels License (free to use, no attribution required). Credited anyway, in the page footer and here.
+
+hero.jpg
+  Photographer: Craig Adderley (@thatguycraig000)
+  Source: https://www.pexels.com/photo/man-painting-a-house-1917849/
+  License: Pexels License
+
+services.jpg
+  Photographer: Polina Tankilevitch (@polina-tankilevitch)
+  Source: https://www.pexels.com/photo/a-person-painting-a-wall-5583116/
+  License: Pexels License
+
+steps.jpg
+  Photographer: Anete Lusina (@anete-lusina)
+  Source: https://www.pexels.com/photo/unrecognizable-creative-decorator-preparing-paintbrush-4792518/
+  License: Pexels License

@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+
+# Local only
+_tools/data/designs.private.json
+_tools/hooks/blocked.private.txt

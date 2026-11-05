@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sunup Southern Breakfast | Breakfast and lunch in Mount Airy, NC</title>
+<meta name="description" content="Sunup Southern Breakfast serves breakfast and lunch in Mount Airy, NC. Eggs, pancakes and biscuits in the morning, plates and sandwiches at lunch. Call 336 555 0159.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://granitecitydigital.me/designs/sunup-southern-breakfast/">
+<meta name="theme-color" content="#f7eedc">
+<meta property="og:title" content="Sunup Southern Breakfast | Mount Airy, NC">
+<meta property="og:description" content="Biscuits, eggs and a plate lunch in Mount Airy, NC. Call 336 555 0159.">
+<meta property="og:image" content="https://granitecitydigital.me/designs/sunup-southern-breakfast/breakfast-1400.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://granitecitydigital.me/designs/sunup-southern-breakfast/">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="breakfast-800.webp" imagesrcset="breakfast-800.webp 800w, breakfast-1400.webp 1400w" imagesizes="(min-width: 960px) 1180px, 100vw" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,700..900,100&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --bg:#f7eedc;
+  --card:#fffaf0;
+  --tint:#efe1c4;
+  --ink:#3b2a20;
+  --muted:#6b5546;
+  --jam:#9e2b47;
+  --jam-dark:#82213a;
+  --board:#3b2a20;
+  --board-ink:#f7eedc;
+  --board-muted:#d8c6a8;
+  --danger:#a3392b;
+
+  --head:"Fraunces",Georgia,serif;
+  --body:"Rubik",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --t-small:.9375rem;
+  --t-body:1.0625rem;
+  --t-lead:clamp(1.125rem,1.05rem + .4vw,1.3125rem);
+  --t-h2:clamp(2rem,1.4rem + 2.6vw,3.5rem);
+  --t-h1:clamp(2.5rem,1.4rem + 5vw,5.5rem);
+
+  --wrap:1180px;
+  --m:clamp(18px,4vw,36px);
+  --sec:clamp(80px,10vw,140px);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --bar:0px;
+  --check:repeating-linear-gradient(90deg,rgba(158,43,71,.55) 0 10px,transparent 10px 20px),repeating-linear-gradient(0deg,rgba(158,43,71,.55) 0 10px,transparent 10px 20px);
+}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:20px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:2px}
+::selection{background:var(--jam);color:#fff}
+:focus-visible{outline:3px solid var(--jam);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--head);font-weight:900;font-variation-settings:"SOFT" 100;letter-spacing:-.02em;line-height:1;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:8px}
+.skip:focus{top:12px}
+.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* gingham strip, top and bottom */
+.gingham{height:20px;background-color:var(--bg);background-image:var(--check)}
+
+/* buttons: a little diner sticker */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:12px;border:2px solid var(--ink);background:var(--jam);color:#fff;font:600 1rem/1 var(--body);text-decoration:none;cursor:pointer;box-shadow:3px 3px 0 var(--ink);transition:transform 140ms var(--ease),box-shadow 140ms var(--ease),background-color 180ms ease}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--ink)}
+.btn.plain{background:var(--card);color:var(--ink)}
+.tl{font-weight:600;text-decoration:underline;text-decoration-color:var(--jam)}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--jam-dark)}
+  .btn.plain:hover{background:#fff}
+  .tl:hover{color:var(--jam)}
+}
+
+/* sample banner */
+.sample{background:var(--tint);color:var(--muted);font-size:.875rem;text-align:center;padding:8px var(--m);line-height:1.45}
+.sample a{color:var(--ink)}
+
+/* header */
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:80px}
+.mark{display:inline-flex;align-items:baseline;gap:10px;text-decoration:none;min-height:44px;align-items:center;white-space:nowrap}
+.mark b{font-family:var(--head);font-weight:900;font-variation-settings:"SOFT" 100;font-size:1.75rem;letter-spacing:-.02em;line-height:1;color:var(--jam)}
+.mark span{font-size:.9375rem;font-weight:500;color:var(--muted)}
+.nav{display:flex;align-items:center;gap:28px;list-style:none;padding:0;font-weight:500}
+.nav a{text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 180ms ease}
+.nav a:hover{color:var(--jam)}
+.top .btn{min-height:46px;padding:0 18px;font-size:.9375rem}
+.top .short{display:none}
+@media (max-width:900px){.nav{display:none}}
+@media (max-width:560px){.mark span{display:none}}
+@media (max-width:480px){.top .long{display:none}.top .short{display:inline}}
+
+/* hero */
+.hero{padding-top:clamp(28px,5vw,64px)}
+.hero-top{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:32px 48px;align-items:end}
+.hero h1{font-size:var(--t-h1);line-height:.95}
+.hero .lead{margin-top:22px;font-size:var(--t-lead);max-width:44ch}
+.acts{display:flex;flex-wrap:wrap;gap:14px 16px;margin-top:28px}
+
+/* the open sign */
+.sign{background:var(--card);border:2px solid var(--ink);border-radius:18px;padding:20px 22px 22px;box-shadow:5px 5px 0 var(--ink);position:relative}
+.sign::before{content:"";position:absolute;left:50%;top:-22px;width:60px;height:22px;border:2px solid var(--ink);border-bottom:0;border-radius:30px 30px 0 0;transform:translateX(-50%)}
+.sign .state{font-family:var(--head);font-weight:900;font-variation-settings:"SOFT" 100;font-size:2rem;line-height:1;color:var(--jam)}
+.sign .state.closed{color:var(--ink)}
+.sign .when{margin-top:6px;font-weight:500}
+.sign dl{margin-top:14px;padding-top:12px;border-top:2px dotted var(--muted);display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:.9375rem}
+.sign dt{font-weight:600}
+.sign dd{margin:0;text-align:right}
+.sign dd.today,.sign dt.today{color:var(--jam)}
+
+.plates{position:relative;margin-top:clamp(36px,5vw,56px)}
+.plates .big{border-radius:28px;overflow:hidden;background:var(--tint);aspect-ratio:16/8}
+.plates .big img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.plates .saucer{position:absolute;right:clamp(18px,4vw,48px);bottom:-48px;width:clamp(120px,18vw,220px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:8px solid var(--bg);background:var(--tint)}
+.plates .saucer img{width:100%;height:100%;object-fit:cover;object-position:40% 50%}
+.cap{margin-top:14px;font-size:.875rem;color:var(--muted);max-width:60%}
+
+/* section heads */
+.sec{padding-top:var(--sec)}
+.sec h2{font-size:var(--t-h2)}
+.sub{margin-top:14px;font-size:var(--t-lead);max-width:48ch}
+
+/* menu board */
+.board{margin-top:var(--sec);background:var(--board);color:var(--board-ink);padding-block:clamp(64px,8vw,112px)}
+.board h2{color:var(--board-ink);font-size:var(--t-h2)}
+.board .sub{color:var(--board-muted)}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 72px;margin-top:48px}
+.cols h3{font-size:1.75rem;color:#f2c9a0;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.cols h3 small{font-family:var(--body);font-size:.9375rem;font-weight:500;color:var(--board-muted);letter-spacing:0}
+.items{list-style:none;padding:0;margin-top:20px;display:grid;gap:18px}
+.items li{display:grid;grid-template-columns:auto minmax(24px,1fr) auto;align-items:baseline;gap:10px;row-gap:2px}
+.items .n{font-family:var(--head);font-weight:700;font-variation-settings:"SOFT" 100;font-size:1.3125rem;line-height:1.2}
+.items .dots{border-bottom:2px dotted rgba(247,238,220,.45);transform:translateY(-5px)}
+.items .t{font-size:.9375rem;color:var(--board-muted);text-align:right}
+.items li.solo{grid-template-columns:minmax(0,1fr)}
+.items .d{grid-column:1/-1;font-size:.9375rem;color:var(--board-muted);max-width:44ch}
+.also{margin-top:40px;padding-top:20px;border-top:2px dotted rgba(247,238,220,.35);font-size:var(--t-lead)}
+.also b{font-family:var(--head);font-weight:700;color:#f2c9a0}
+
+/* photo row */
+.row3{display:grid;grid-template-columns:7fr 4fr;gap:20px;margin-top:40px;align-items:start}
+.row3 figure{margin:0}
+.row3 .ph{border-radius:22px;overflow:hidden;background:var(--tint)}
+.row3 figure:nth-child(1) .ph{aspect-ratio:4/3}
+.row3 figure:nth-child(2) .ph{aspect-ratio:4/5;margin-top:72px}
+.seat{margin:0 0 24px}
+.seat .ph{border-radius:22px 22px 120px 22px;overflow:hidden;background:var(--tint);aspect-ratio:4/3}
+.seat img{width:100%;height:100%;object-fit:cover}
+.seat figcaption{margin-top:10px;font-size:.875rem;color:var(--muted)}
+.row3 img{width:100%;height:100%;object-fit:cover}
+.row3 figcaption{margin-top:10px;font-size:.875rem;color:var(--muted)}
+
+/* visit */
+.visit{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px 64px;margin-top:40px;align-items:start}
+.facts{list-style:none;padding:0;display:grid;gap:0}
+.facts li{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:18px 0;border-bottom:2px dotted rgba(59,42,32,.35)}
+.facts li:first-child{padding-top:0}
+.facts span{font-weight:600;color:var(--jam)}
+.facts a{font-weight:500}
+
+/* pickup form */
+.pickup{margin-top:40px;background:var(--card);border:2px solid var(--ink);border-radius:22px;padding:clamp(22px,3vw,36px)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px 16px}
+form[hidden]{display:none}
+.f{display:grid;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label{font-size:var(--t-small);font-weight:600}
+.f input,.f select,.f textarea{width:100%;min-height:50px;padding:11px 14px;border:2px solid #cdb999;border-radius:12px;background:#fff;color:var(--ink);font:inherit;font-size:1rem;transition:border-color 160ms ease;appearance:none;-webkit-appearance:none}
+.f select{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%233b2a20' stroke-width='1.8'/%3E%3C/svg%3E") no-repeat right 16px center;padding-right:42px}
+.f textarea{min-height:110px;resize:vertical;line-height:1.5}
+.f input::placeholder,.f textarea::placeholder{color:#76604f}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--jam)}
+.f [aria-invalid="true"]{border-color:var(--danger)}
+.err{font-size:.875rem;color:var(--danger)}
+.err:empty{display:none}
+.submit{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.submit p{font-size:.9375rem;color:var(--muted)}
+.thanks[hidden]{display:none}
+.thanks:focus{outline:none}
+.thanks h3{font-size:2rem}
+.thanks p{margin-top:10px;max-width:50ch}
+.thanks .note{font-size:var(--t-small);color:var(--muted)}
+.thanks .btn{margin-top:22px}
+
+/* footer */
+.foot{margin-top:var(--sec)}
+.foot .in{padding-block:48px 36px}
+.foot .name{font-family:var(--head);font-weight:900;font-variation-settings:"SOFT" 100;font-size:clamp(3.5rem,2rem + 8vw,9rem);line-height:.9;letter-spacing:-.03em;color:var(--jam)}
+.foot .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;margin-top:20px;font-weight:500}
+.foot .credit{margin-top:24px;font-size:.875rem;color:var(--muted);max-width:80ch}
+
+/* footer mark: a 2 s logo build that plays once in view, muted; the still logo shows until it really plays and is the fallback */
+.gcd{display:inline-flex;align-items:center;gap:14px;margin-top:24px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;overflow:hidden;border-radius:6px;background:#050505}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font-weight:600}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--jam);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--tint)}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
+
+/* phone bar */
+.bar{display:none}
+
+/* motion */
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;transform:translateY(20px);transition:opacity 600ms var(--ease),transform 600ms var(--ease);transition-delay:calc(var(--d,0) * 70ms)}
+  .js .rv.in{opacity:1;transform:none}
+  .hero .rise{animation:rise 700ms var(--ease) both;animation-delay:calc(var(--d,0) * 80ms)}
+  .sign{animation:swing 1.2s var(--ease) 400ms both;transform-origin:50% -22px}
+  .saucer img{animation:steam 18s ease-in-out infinite alternate}
+}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes swing{0%{transform:rotate(-4deg)}45%{transform:rotate(2deg)}75%{transform:rotate(-.8deg)}100%{transform:none}}
+@keyframes steam{from{transform:scale(1)}to{transform:scale(1.08)}}
+
+/* tablet */
+@media (max-width:960px){
+  .hero-top,.visit{grid-template-columns:minmax(0,1fr)}
+  .sign{max-width:420px;margin-top:22px}
+  .cols{grid-template-columns:minmax(0,1fr)}
+}
+
+/* phone */
+@media (max-width:700px){
+  :root{--bar:calc(64px + env(safe-area-inset-bottom))}
+  .acts .btn{flex:1 1 100%}
+  .plates{margin-inline:calc(var(--m) * -1)}
+  .plates .big{border-radius:0;aspect-ratio:4/3}
+  .plates .saucer{bottom:-40px;width:120px;border-width:6px}
+  .cap{padding-inline:var(--m);max-width:62%}
+  .row3{grid-template-columns:minmax(0,1fr)}
+  .row3 figure:nth-child(2){width:72%;margin-left:auto}
+  .row3 figure:nth-child(2) .ph{margin-top:0}
+  .items .t{grid-column:1/-1;text-align:left}
+  .items li{grid-template-columns:minmax(0,1fr)}
+  .items .dots{display:none}
+  .facts li{grid-template-columns:minmax(0,1fr);gap:2px}
+  form{grid-template-columns:minmax(0,1fr)}
+  .submit .btn{width:100%}
+  .bar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--bg);border-top:2px solid var(--ink);padding:8px 10px calc(8px + env(safe-area-inset-bottom))}
+  .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:12px;border:2px solid var(--ink);font-weight:600;font-size:1rem;text-decoration:none;color:var(--ink);background:var(--card);transition:transform 140ms var(--ease)}
+  .bar a:first-child{background:var(--jam);color:#fff}
+  .bar a:active{transform:scale(.97)}
+  .bar svg{width:18px;height:18px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="sample" role="note">Sample design by <a href="https://granitecitydigital.me/">Granite City Digital</a>. The business name, phone number and details are made up.</div>
+<div class="gingham" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Sunup Southern Breakfast, back to top"><b>Sunup</b><span>Southern Breakfast</span></a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="#menu">The menu</a></li>
+        <li><a href="#visit">Visit</a></li>
+        <li><a href="#pickup">Pickup</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="tel:+13365550159"><span class="long num">336 555 0159</span><span class="short">Call</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap hero" id="top" aria-labelledby="hero-h">
+    <div class="hero-top">
+      <div>
+        <h1 class="rise" id="hero-h">Biscuits, eggs and a plate lunch.</h1>
+        <p class="lead rise" style="--d:1">Sunup Southern Breakfast cooks breakfast and lunch in Mount Airy, six days a week. Eggs, pancakes and biscuits in the morning, plates and sandwiches at lunch.</p>
+        <div class="acts rise" style="--d:2">
+          <a class="btn" href="tel:+13365550159"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call <span class="num">336 555 0159</span></a>
+          <a class="btn plain" href="#menu">See the menu</a>
+        </div>
+      </div>
+      <aside class="sign" aria-label="Hours" id="sign">
+        <p class="state" id="sign-state">Open six days</p>
+        <p class="when" id="sign-when">Closed Mondays</p>
+        <dl>
+          <dt data-d="2">Tuesday to Saturday</dt><dd data-d="2">7am to 2pm</dd>
+          <dt data-d="0">Sunday</dt><dd data-d="0">8am to 1pm</dd>
+          <dt data-d="1">Monday</dt><dd data-d="1">Closed</dd>
+        </dl>
+      </aside>
+    </div>
+    <figure class="plates rise" style="--d:2">
+      <div class="big"><img src="breakfast-800.webp" srcset="breakfast-800.webp 800w, breakfast-1400.webp 1400w" sizes="(min-width: 960px) 1180px, 100vw" width="800" height="600" fetchpriority="high" alt="Seen from above, a breakfast plate with two fried eggs, home fries, bacon, a sausage, toast and a small cup of sauce, with a coffee at the edge of the table"></div>
+      <div class="saucer"><img src="coffee-600.webp" width="600" height="513" loading="lazy" decoding="async" alt="Steam rising from a dark mug of coffee in warm morning light"></div>
+      <figcaption class="cap">A full breakfast plate and a hot coffee. Example photos.</figcaption>
+    </figure>
+  </section>
+
+  <section class="board" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <h2 class="rv" id="menu-h">What&rsquo;s on the menu</h2>
+      <p class="sub rv" style="--d:1">Breakfast in the morning, lunch from 11am. Call and ask about the soup of the day.</p>
+      <div class="cols">
+        <div class="rv">
+          <h3>Breakfast <small>every morning we are open</small></h3>
+          <ul class="items">
+            <li><span class="n">Eggs your way</span><span class="dots" aria-hidden="true"></span><span class="t">two eggs</span><span class="d">With grits, toast and bacon or sausage.</span></li>
+            <li><span class="n">Pancakes</span><span class="dots" aria-hidden="true"></span><span class="t">short or full stack</span><span class="d">With butter and warm syrup.</span></li>
+            <li><span class="n">Biscuits</span><span class="dots" aria-hidden="true"></span><span class="t">sausage, egg or country ham</span></li>
+            <li class="solo"><span class="n">Biscuits with gravy</span></li>
+          </ul>
+        </div>
+        <div class="rv" style="--d:1">
+          <h3>Lunch <small>from 11am</small></h3>
+          <ul class="items">
+            <li><span class="n">Meat and two</span><span class="dots" aria-hidden="true"></span><span class="t">a meat and two sides</span></li>
+            <li><span class="n">Soup of the day</span><span class="dots" aria-hidden="true"></span><span class="t">ask when you call</span></li>
+            <li class="solo"><span class="n">Burgers</span></li>
+            <li class="solo"><span class="n">Club sandwiches</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="also rv"><b>And</b> kids plates, coffee and sweet tea.</p>
+    </div>
+  </section>
+
+  <section class="wrap sec" aria-labelledby="look-h">
+    <h2 class="rv" id="look-h">Come hungry.</h2>
+    <div class="row3">
+      <figure class="rv"><div class="ph"><img src="biscuit-plate-700.webp" srcset="biscuit-plate-700.webp 700w, biscuit-plate-1100.webp 1100w" sizes="(min-width: 960px) 60vw, 100vw" width="700" height="525" loading="lazy" decoding="async" alt="Golden biscuits piled on a round wooden plate in warm light"></div><figcaption>Biscuits on a wooden plate. Example photo.</figcaption></figure>
+      <figure class="rv" style="--d:1"><div class="ph"><img src="syrup-stack-700.webp" srcset="syrup-stack-700.webp 700w, syrup-stack-1100.webp 1100w" sizes="(min-width: 960px) 34vw, 72vw" width="700" height="467" loading="lazy" decoding="async" alt="A stack of pancakes with syrup running down the side and a pat of butter, on a dark plate"></div><figcaption>A full stack. Example photo.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="visit" aria-labelledby="visit-h">
+    <h2 class="rv" id="visit-h">Pull up a chair</h2>
+    <p class="sub rv" style="--d:1">In Mount Airy, open Tuesday to Sunday.</p>
+    <div class="visit">
+      <ul class="facts rv">
+        <li><span>Hours</span><p>Tuesday to Saturday, 7am to 2pm<br>Sunday, 8am to 1pm<br>Monday, closed</p></li>
+        <li><span>Find us</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Mount+Airy+NC">Mount Airy, NC</a></li>
+        <li><span>Call</span><a class="num" href="tel:+13365550159">336 555 0159</a></li>
+        <li><span>Pickup</span><p>Call ahead and pick it up</p></li>
+      </ul>
+      <div class="rv" style="--d:1">
+        <figure class="seat"><div class="ph"><img src="table-700.webp" srcset="table-700.webp 700w, table-1200.webp 1200w" sizes="(min-width: 960px) 40vw, 100vw" width="700" height="467" loading="lazy" decoding="async" alt="A mug and a plate of pancakes on a checked tablecloth by a sunny window"></div><figcaption>A table by the window. Example photo.</figcaption></figure>
+        <a class="btn plain" href="https://www.google.com/maps/search/?api=1&amp;query=Mount+Airy+NC"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Get directions</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="pickup" aria-labelledby="pickup-h">
+    <h2 class="rv" id="pickup-h">Call ahead, pick it up</h2>
+    <p class="sub rv" style="--d:1">Call <a class="tl num" href="tel:+13365550159">336 555 0159</a>, or leave your order here and we will call you back.</p>
+    <div class="pickup rv" style="--d:2">
+      <form id="qform" novalidate method="post">
+        <div class="f">
+          <label for="q-name">Your name</label>
+          <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+          <span class="err" id="e-name"></span>
+        </div>
+        <div class="f">
+          <label for="q-phone">Phone</label>
+          <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Your phone number" required aria-describedby="e-phone">
+          <span class="err" id="e-phone"></span>
+        </div>
+        <div class="f full">
+          <label for="q-when">Pickup time</label>
+          <select id="q-when" name="when" required aria-describedby="e-when">
+            <option value="">Choose a time</option>
+            <option>As soon as it is ready</option>
+            <option>In about 30 minutes</option>
+            <option>In about an hour</option>
+          </select>
+          <span class="err" id="e-when"></span>
+        </div>
+        <div class="f full">
+          <label for="q-msg">Your order</label>
+          <textarea id="q-msg" name="order" required aria-describedby="e-msg" placeholder="Two sausage biscuits and a sweet tea"></textarea>
+          <span class="err" id="e-msg"></span>
+        </div>
+        <div class="submit">
+          <button class="btn" type="submit">Send my order</button>
+          <p>We call to confirm before we start cooking.</p>
+        </div>
+      </form>
+      <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
+        <h3 id="t-title">Thanks. Got it.</h3>
+        <p id="t-body">Your order is noted.</p>
+        <p class="note">This is a sample site, so nothing was actually sent.</p>
+        <button class="btn plain" type="button" id="t-again">Start another order</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="gingham" aria-hidden="true"></div>
+  <div class="wrap in">
+    <p class="name">Sunup</p>
+    <div class="row">
+      <p>Southern Breakfast &middot; Mount Airy, NC</p>
+      <p><a class="num" href="tel:+13365550159">336 555 0159</a></p>
+    </div>
+    <p class="credit">Photos by Roman Odintsov, Gu Ko, Jahra Tasfia Reza, The Design Lady and Nano Erdozain on Pexels, shown as examples (<a href="photo-credits.txt">credits</a>).</p>
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../../samples/mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../../samples/mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../../samples/mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../../samples/mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../../samples/mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a href="tel:+13365550159"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Mount+Airy+NC"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  /* reveal, once per element */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+  addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+
+  /* the open sign: reads the posted hours in Mount Airy time */
+  var HOURS={0:[8,13],1:null,2:[7,14],3:[7,14],4:[7,14],5:[7,14],6:[7,14]};
+  var NAMES=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  function fmt(h){return (h>12?h-12:h)+(h>=12?'pm':'am')}
+  function sign(){
+    var st=document.getElementById('sign-state'),wh=document.getElementById('sign-when');
+    var p;
+    try{p=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'short',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date())}catch(e){return}
+    var g={};p.forEach(function(x){g[x.type]=x.value});
+    var day=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g.weekday),now=(+g.hour)+(+g.minute)/60;
+    if(day<0)return;
+    var today=HOURS[day];
+    [].forEach.call(document.querySelectorAll('.sign [data-d]'),function(el){
+      var d=+el.getAttribute('data-d');
+      el.classList.toggle('today',d===day||(d===2&&day>=2));
+    });
+    if(today&&now>=today[0]&&now<today[1]){
+      st.textContent='Open now';st.classList.remove('closed');
+      wh.textContent='Until '+fmt(today[1])+' today';
+      return;
+    }
+    st.textContent='Closed now';st.classList.add('closed');
+    if(today&&now<today[0]){wh.textContent='Opens today at '+fmt(today[0]);return}
+    for(var i=1;i<8;i++){
+      var d=(day+i)%7;
+      if(HOURS[d]){wh.textContent='Opens '+(i===1?'tomorrow':NAMES[d])+' at '+fmt(HOURS[d][0]);return}
+    }
+  }
+  sign();setInterval(sign,60000);
+
+  /* pickup form */
+  var f=document.getElementById('qform');
+  if(!f)return;
+  var F=f.elements,thanks=document.getElementById('thanks');
+  function setErr(id,msg){var i=document.getElementById(id),e=document.getElementById(i.getAttribute('aria-describedby'));e.textContent=msg;if(msg){i.setAttribute('aria-invalid','true')}else{i.removeAttribute('aria-invalid')}return !msg}
+  function check(){
+    var ok=true,first=null;
+    function chk(id,msg){var good=setErr(id,msg);if(!good&&!first)first=id;ok=ok&&good}
+    var name=F['name'].value.trim(),phone=F['phone'].value.replace(/\D/g,''),msg=F['order'].value.trim();
+    chk('q-name',name.length<2?'Please tell us your name.':'');
+    chk('q-phone',phone.length<10?'Please enter a 10 digit phone number.':'');
+    chk('q-when',!F['when'].value?'Please choose a pickup time.':'');
+    chk('q-msg',msg.length<3?'Please tell us what you would like.':'');
+    if(first)document.getElementById(first).focus();
+    return ok;
+  }
+  ['q-name','q-phone','q-when','q-msg'].forEach(function(id){
+    var el=document.getElementById(id);
+    el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){if(el.getAttribute('aria-invalid'))setErr(id,'')});
+  });
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!check())return;
+    var name=F['name'].value.trim().split(' ')[0],d=F['phone'].value.replace(/\D/g,'').slice(-10);
+    var nice=d.slice(0,3)+'\u00a0'+d.slice(3,6)+'\u00a0'+d.slice(6);
+    document.getElementById('t-title').textContent='Thanks, '+name+'. Got it.';
+    document.getElementById('t-body').textContent='On a real site, the kitchen would get your order and call you at '+nice+' to confirm.';
+    f.hidden=true;thanks.hidden=false;thanks.focus();
+  });
+  document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
+})();
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
+})();
+</script>
+</body>
+</html>

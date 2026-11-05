@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "high-limb-tree-service",
+    "name": "High Limb Tree Service",
+    "trade": "Tree service",
+    "town": "Dobson",
+    "state": "NC"
+  },
+  {
+    "slug": "rainline-seamless-gutters",
+    "name": "Rainline Seamless Gutters",
+    "trade": "Seamless gutters, roofing and siding",
+    "town": "Dobson",
+    "state": "NC"
+  },
+  {
+    "slug": "true-line-painting",
+    "name": "True Line Painting",
+    "trade": "House painting",
+    "town": "Dobson",
+    "state": "NC"
+  },
+  {
+    "slug": "westbrook-body-and-tire",
+    "name": "Westbrook Body and Tire",
+    "trade": "Auto body, paint and tires",
+    "town": "Mount Airy",
+    "state": "NC"
+  },
+  {
+    "slug": "red-clay-concrete-grading",
+    "name": "Red Clay Concrete and Grading",
+    "trade": "Concrete and grading",
+    "town": "Yadkinville",
+    "state": "NC"
+  },
+  {
+    "slug": "willow-lane-skin-studio",
+    "name": "Willow Lane Skin Studio",
+    "trade": "Esthetics studio",
+    "town": "Elkin",
+    "state": "NC"
+  },
+  {
+    "slug": "steady-flow-plumbing",
+    "name": "Steady Flow Plumbing",
+    "trade": "Plumber",
+    "town": "Mount Airy",
+    "state": "NC"
+  },
+  {
+    "slug": "sunup-southern-breakfast",
+    "name": "Sunup Southern Breakfast",
+    "trade": "Southern breakfast and lunch",
+    "town": "Mount Airy",
+    "state": "NC"
+  }
+]

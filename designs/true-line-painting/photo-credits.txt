@@ -1,0 +1,40 @@
+Photo credits for designs/true-line-painting (a sample design; the business name is made up)
+
+hero.jpg
+  Photographer: Blue Bird (@blue-bird)
+  Source: https://www.pexels.com/photo/woman-putting-tape-on-wall-7217954/
+  License: Pexels License, https://www.pexels.com/license/
+  Shows: one person taping blue painter's tape along the line where a white wall meets the ceiling while a second person watches
+
+prep.jpg
+  Photographer: Blue Bird (@blue-bird)
+  Source: https://www.pexels.com/photo/crop-photo-of-person-putting-tape-on-wall-7217961/
+  License: Pexels License, https://www.pexels.com/license/
+  Shows: a hand running blue tape along a baseboard over a paint spattered drop cloth, a wooden stepladder beside it
+
+room.jpg
+  Photographer: hi room (@hiroom)
+  Source: https://www.pexels.com/photo/an-empty-room-with-blue-and-yellow-walls-17181940/
+  License: Pexels License, https://www.pexels.com/license/
+  Shows: an empty room with one pale blue wall and one yellow wall meeting at a sharp corner
+
+trim.jpg
+  Photographer: La Miko (@lamiko)
+  Source: https://www.pexels.com/photo/photo-of-a-white-masking-tape-3615720/
+  License: Pexels License, https://www.pexels.com/license/
+  Shows: three rolls of masking tape on a wood floor against a gray wall and white baseboard
+
+brush.jpg
+  Photographer: Sergey Meshkov (@19x14)
+  Source: https://www.pexels.com/photo/8481700/
+  License: Pexels License, https://www.pexels.com/license/
+  Shows: a hand with paint on its fingers holding a wide brush up to a plain pale wall
+
+roller.jpg
+  Photographer: Malte Luk (@maltelu)
+  Source: https://www.pexels.com/photo/1669754/
+  License: Pexels License, https://www.pexels.com/license/
+  Shows: a hand rolling white paint onto a pale gray wall
+
+The room drawing in the color section is drawn in code, not a photo. Paint chip names on the page are made up.
+All are generic stock photos shown as examples.

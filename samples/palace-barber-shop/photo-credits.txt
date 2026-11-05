@@ -1,0 +1,20 @@
+Photo credits for the Palace Barber Shop sample site
+All three photos are free to use under the Pexels License (https://www.pexels.com/license/). They are stock examples, not photos of this business.
+
+hero.jpg
+  Photographer: RDNE Stock project (@rdne) on Pexels
+  Source: https://www.pexels.com/photo/7697712/
+  License: Pexels License
+  Saved size: 1600 x 1067
+
+haircut.jpg
+  Photographer: Brian Silva (@brian-silva-2158909901) on Pexels
+  Source: https://www.pexels.com/photo/39559303/
+  License: Pexels License
+  Saved size: 1600 x 1067
+
+comb.jpg
+  Photographer: Brian Silva (@brian-silva-2158909901) on Pexels
+  Source: https://www.pexels.com/photo/39559306/
+  License: Pexels License
+  Saved size: 1600 x 1067

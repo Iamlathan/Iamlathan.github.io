@@ -1,0 +1,13 @@
+Photo credits for samples/barneys-cafe/ (all free under the Unsplash License, https://unsplash.com/license)
+
+hero.jpg
+  Photographer: Mạnh Ngô
+  Source: https://unsplash.com/photos/empty-restaurant-interior-with-warm-lighting-and-brown-booths-r-_2WytZV-8
+
+burger.jpg
+  Photographer: Jonathan Borba
+  Source: https://unsplash.com/photos/burger-with-fries-8l8Yl2ruUsg
+
+diner-stools.jpg
+  Photographer: T
+  Source: https://unsplash.com/photos/retro-diner-bar-stools-with-red-seats-and-chrome-y6DhUE1_D0w
