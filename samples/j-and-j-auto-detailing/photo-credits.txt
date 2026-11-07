@@ -1,0 +1,4 @@
+hero.jpg: Tima Miroshnichenko, Pexels, https://www.pexels.com/photo/water-droplets-on-a-white-car-6873177/
+sponge.jpg: Tima Miroshnichenko, Pexels, https://www.pexels.com/photo/a-person-using-a-sponge-in-washing-car-6872575/
+cloth.jpg: Tima Miroshnichenko, Pexels, https://www.pexels.com/photo/a-person-wiping-a-car-with-a-cleaning-cloth-6872572/
+Pexels License, free to use. Shown as examples.

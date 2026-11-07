@@ -1,0 +1,20 @@
+Photo credits for the Main Street Coffee LLC sample site
+All three photos are free to use under the Pexels License (https://www.pexels.com/license/). They are stock examples, not photos of this business.
+
+hero.jpg
+  Photographer: Jack Atkinson on Pexels
+  Source: https://www.pexels.com/photo/24613535/
+  License: Pexels License
+  Saved size: 1600 x 1067
+
+ice-cream.jpg
+  Photographer: Lukas Blazek on Pexels
+  Source: https://www.pexels.com/photo/1352245/
+  License: Pexels License
+  Saved size: 1600 x 1067
+
+smoothie.jpg
+  Photographer: Daria Andrievskaya on Pexels
+  Source: https://www.pexels.com/photo/11066839/
+  License: Pexels License
+  Saved size: 1600 x 1067

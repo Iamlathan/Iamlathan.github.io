@@ -1,0 +1,20 @@
+Photo credits for the East Main Tire & Automotive, LLC sample site
+All three photos are free to use under the Pexels License (https://www.pexels.com/license/). They are stock examples, not photos of this business.
+
+hero.jpg
+  Photographer: Mike Bird on Pexels
+  Source: https://www.pexels.com/photo/car-tire-closeup-photo-116676/
+  License: Pexels License
+  Saved size: 1600 x 900
+
+services.jpg
+  Photographer: Jae Park on Pexels
+  Source: https://www.pexels.com/photo/disk-brake-in-car-service-workshop-4022545/
+  License: Pexels License
+  Saved size: 1400 x 935
+
+steps.jpg
+  Photographer: Artem Podrez on Pexels
+  Source: https://www.pexels.com/photo/a-man-using-a-wrench-while-repairing-a-car-8985615/
+  License: Pexels License
+  Saved size: 1400 x 788
