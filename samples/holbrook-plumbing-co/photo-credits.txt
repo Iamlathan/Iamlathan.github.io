@@ -1,0 +1,23 @@
+Photo credits for the Holbrook Plumbing Co sample site
+All three photos are free to use under the Pexels License (https://www.pexels.com/license/). They are stock examples, not photos of this business. Saved locally, not hotlinked.
+
+hero.jpg
+  Shows: two wall valves with red handles on a white wall
+  Photographer: La Miko (@lamiko) on Pexels
+  Source: https://www.pexels.com/photo/3616761/
+  License: Pexels License
+  Saved size: 1600 x 1067
+
+services.jpg
+  Shows: a row of old brass taps over a long metal sink
+  Photographer: ravencrow BI (@biravencrow) on Pexels
+  Source: https://www.pexels.com/photo/38336727/
+  License: Pexels License
+  Saved size: 1400 x 1050
+
+steps.jpg
+  Shows: water spraying from a joint on a black pipe outdoors
+  Photographer: aamir dukanwala (@aamir) on Pexels
+  Source: https://www.pexels.com/photo/18274115/
+  License: Pexels License
+  Saved size: 1400 x 1050
