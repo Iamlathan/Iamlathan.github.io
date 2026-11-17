@@ -1,28 +1,88 @@
 Photo credits for designs/westbrook-body-and-tire (a sample design; the business name is made up)
+All photos: Pexels License, https://www.pexels.com/license/
+All are generic stock photos shown as examples. Nobody in them works for this business.
 
-polish.jpg (Body and paint lane in the first screen, and the share image)
-  Photographer: Orhun Rüzgar Öz (@orhunruzgaroz)
+Photos on the page
+
+hero-shop-800.webp, hero-shop-1600.webp (cropped to leave out lettering on a lift post)
+  Photographer: Pexels @gustavo-fring
+  Source: https://www.pexels.com/photo/6870331/
+  Shows: a mechanic in blue coveralls fitting a wheel to a car on a lift
+
+hood-polish-800.webp (same photo as polish.jpg)
+  Photographer: Orhun Rüzgar Öz
   Source: https://www.pexels.com/photo/6026083/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: a gloved hand running a polisher across a dark car hood
+  Shows: a gloved hand polishing a dark hood
 
-tread.jpg (Tires lane in the first screen)
-  Photographer: cottonbro studio (@cottonbro)
-  Source: https://www.pexels.com/photo/a-close-up-photography-of-a-tire-with-pebbles-in-treads-7019611/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: close view of tire tread blocks in low light
+tread-close-800.webp (same photo as tread.jpg)
+  Photographer: cottonbro studio
+  Source: https://www.pexels.com/photo/7019611/
+  Shows: tire tread blocks close up
 
-buffer.jpg (Body and paint section)
-  Photographer: Luke Miller (@bylukemiller)
+tire-check-800.webp (cropped to the coveralls, hands and tire)
+  Photographer: Pexels @gustavo-fring
+  Source: https://www.pexels.com/photo/6870311/
+  Shows: a mechanic turning a tire in his hands
+
+polish-arch-800.webp (cropped to the hand, polisher and fender)
+  Photographer: Pexels @gustavo-fring
+  Source: https://www.pexels.com/photo/6870310/
+  Shows: a polisher on a dark fender above the wheel
+
+trim-buffer-800.webp, trim-buffer-1400.webp (same photo as buffer.jpg)
+  Photographer: Luke Miller
   Source: https://www.pexels.com/photo/14231684/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: a gloved hand holding a spinning buffer against glossy black trim beside a headlight
+  Shows: a buffer on black trim by a headlight
 
-tire-road.jpg (Tires section)
-  Photographer: Mike Bird (@mikebird)
+tire-fender-800.webp, tire-fender-1400.webp (same photo as tire-road.jpg)
+  Photographer: Mike Bird
   Source: https://www.pexels.com/photo/20303832/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: close view of a car tire tread on rough pavement under a silver fender
+  Shows: a tire on rough pavement under a fender
 
-The tread divider between sections is drawn in code, not a photo.
-All are generic stock photos shown as examples.
+tire-roll-800.webp (cropped to the hands, legs and tire)
+  Photographer: Pexels @gustavo-fring
+  Source: https://www.pexels.com/photo/6870316/
+  Shows: a mechanic rolling a tire across a shop floor
+
+cracked-bumper-800.webp
+  Photographer: Pexels @jorgeromeroortiz
+  Source: https://www.pexels.com/photo/33749906/
+  Shows: a cracked yellow front bumper by a headlight
+
+dent-tools-800.webp
+  Photographer: Pexels @papaz
+  Source: https://www.pexels.com/photo/35149611/
+  Shows: dent repair on a white door panel under a light
+
+tire-shop-800.webp, tire-shop-1300.webp (cropped to the wheel and the shop floor)
+  Photographer: Artem Podrez (Pexels @artempodrez)
+  Source: https://www.pexels.com/photo/8985925/
+  Shows: a steel wheel and tire on a white car on a tiled shop floor
+
+spray-gun-800.webp
+  Photographer: Pexels @gustavo-fring
+  Source: https://www.pexels.com/photo/6870314/
+  Shows: a spray gun beside a panel in a paint booth
+
+bumper-spray-800.webp
+  Photographer: Pexels @mohammad-hammad-2148098658
+  Source: https://www.pexels.com/photo/30250199/
+  Shows: a painter in a suit and mask spraying a loose bumper
+
+polisher-800.webp
+  Photographer: Pexels @gustavo-fring
+  Source: https://www.pexels.com/photo/6870296/
+  Shows: hands running a polisher over dark paint
+
+parts-spray-800.webp, parts-spray-1600.webp
+  Photographer: Pexels @dextarstudio
+  Source: https://www.pexels.com/photo/14615263/
+  Shows: trim parts on a stand being sprayed
+
+Older files still in the folder (no longer on the page)
+polish.jpg: Orhun Rüzgar Öz, https://www.pexels.com/photo/6026083/
+tread.jpg: cottonbro studio, https://www.pexels.com/photo/7019611/
+buffer.jpg: Luke Miller, https://www.pexels.com/photo/14231684/
+tire-road.jpg: Mike Bird, https://www.pexels.com/photo/20303832/
+alignment-800.webp, alignment-1600.webp: Pexels @gustavo-fring, https://www.pexels.com/photo/6720507/
+tire-swap-800.webp, tire-swap-1600.webp: Gregory Costa (Pexels @gregory-costa), https://www.pexels.com/photo/5733659/

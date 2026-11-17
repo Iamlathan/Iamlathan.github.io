@@ -1,23 +1,86 @@
 Photo credits for designs/steady-flow-plumbing (a sample design; the business name is made up)
+All photos: Pexels License, https://www.pexels.com/license/
 These photos show plumbing in general. They are not this business's work, and nobody in them works for it.
+Fonts: Bitter and Nunito Sans from Google Fonts (SIL Open Font License).
 
-valves-800.webp, valves-1400.webp
-  Photographer: La Miko
-  Source: https://www.pexels.com/photo/3616761/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: two shutoff valves with red handles coming out of a clean white wall
+Photos on the page
 
-faucet-700.webp, faucet-1100.webp
-  Photographer: Andrea Davis
-  Source: https://www.pexels.com/photo/6253786/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: a black pull down kitchen faucet over a steel sink
-
-fit-700.webp, fit-1200.webp
+hero-fit-800.webp, hero-fit-1600.webp (same photo as fit-*.webp)
   Photographer: Sergei Starostin (Pexels @sejio402)
   Source: https://www.pexels.com/photo/professional-plumber-installing-a-radiator-pipe-29226620/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: gloved hands threading a steel pipe fitting into a white radiator, blue pipe wrenches on the bench
+  Shows: gloved hands threading a pipe fitting, blue wrenches on the bench
 
-All are generic stock photos shown as examples.
-Fonts: Bitter and Nunito Sans from Google Fonts (SIL Open Font License).
+drip-tap-800.webp
+  Photographer: Pranjall Kumar (Pexels @pranjall-kumar-150768)
+  Source: https://www.pexels.com/photo/tap-with-dropping-water-8719044/
+  Shows: a drop of water falling from a chrome faucet spout, black and white
+
+under-sink-800.webp
+  Photographer: cottonbro studio
+  Source: https://www.pexels.com/photo/7220892/
+  Shows: a hand on a pipe fitting under a sink
+
+pipe-join-800.webp
+  Photographer: Pexels @taha-kose-342796148
+  Source: https://www.pexels.com/photo/14598653/
+  Shows: gloved hands joining water pipe outdoors
+
+yard-leak-800.webp, yard-leak-1600.webp
+  Photographer: Pexels @aamir-18274115
+  Source: https://www.pexels.com/photo/18274115/
+  Shows: water spraying from a leaking outdoor pipe
+
+faucet-run-800.webp
+  Photographer: Pexels @zulfugarkarimov
+  Source: https://www.pexels.com/photo/34295401/
+  Shows: a faucet running into a round steel sink
+
+frozen-tap-800.webp
+  Photographer: Pexels @mcphotographer-1139603240
+  Source: https://www.pexels.com/photo/35915028/
+  Shows: a frozen outdoor tap in snow
+
+rusty-tap-800.webp
+  Photographer: Pexels @qtheilespy
+  Source: https://www.pexels.com/photo/34158878/
+  Shows: a rusty outdoor tap with a drop falling
+
+shutoffs-800.webp, valves-1400.webp (same photo)
+  Photographer: La Miko
+  Source: https://www.pexels.com/photo/3616761/
+  Shows: two shutoff valves with red handles on a white wall
+
+brass-taps-800.webp
+  Photographer: Pexels @biravencrow
+  Source: https://www.pexels.com/photo/38336727/
+  Shows: a row of old brass taps over a deep sink
+
+Older files still in the folder (no longer on the page)
+valves-800.webp: La Miko, https://www.pexels.com/photo/3616761/
+faucet-700.webp, faucet-1100.webp: Andrea Davis, https://www.pexels.com/photo/6253786/
+fit-700.webp, fit-1200.webp: Sergei Starostin, https://www.pexels.com/photo/professional-plumber-installing-a-radiator-pipe-29226620/
+
+old-sink-800.webp
+  Photographer: Pexels @ron-lach
+  Source: https://www.pexels.com/photo/10473003/
+  Shows: an old style bathroom sink and chrome faucet
+
+tap-hand-800.webp (cropped)
+  Photographer: Diva Plavalaguna (Pexels @diva-plavalaguna)
+  Source: https://www.pexels.com/photo/person-holding-stainless-steel-faucet-5710334/
+  Shows: a hand on the lever of a chrome bathroom faucet, water running
+
+black-faucet-800.webp (same photo as faucet-*.webp)
+  Photographer: Andrea Davis
+  Source: https://www.pexels.com/photo/6253786/
+  Shows: a black pull down faucet over a steel sink
+
+tub-filler-800.webp (cropped)
+  Photographer: Pexels @introspectivedsgn
+  Source: https://www.pexels.com/photo/4048080/
+  Shows: a chrome tub filler with cross handles
+
+kitchen-drip-800.webp
+  Photographer: Pexels @chuck
+  Source: https://www.pexels.com/photo/3787025/
+  Shows: water dripping from a kitchen faucet spout

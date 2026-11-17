@@ -1,27 +1,82 @@
 Photo credits for designs/high-limb-tree-service (a sample design; the business name is made up)
-
-climber.jpg
-  Photographer: Dmytro Glazunov (Pexels @glazun0v)
-  Source: https://www.pexels.com/photo/arborist-climbing-tall-bare-tree-in-winter-35089307/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: a roped climber with a saw high in the crown of a tall bare tree under a gray overcast sky
-
-crown.jpg
-  Photographer: İdil Ceren Çelikler (Pexels @idilcelikler)
-  Source: https://www.pexels.com/photo/lush-green-oak-tree-canopy-against-blue-sky-38263335/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: looking up into the spreading limbs of an oak in full leaf
-
-ropes.jpg
-  Photographer: Zak Bentley (Pexels @zak-bentley-1504167)
-  Source: https://www.pexels.com/photo/photo-of-man-climbing-on-tree-2902892/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: a climber in a helmet and spikes tied in on two ropes beside a pine trunk
-
-rounds.jpg
-  Photographer: Leila Abboud (Pexels @5lfilm)
-  Source: https://www.pexels.com/photo/tree-logs-by-wooden-fence-19782046/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: short cut logs piled by a wooden fence at the edge of a gravel drive
-
+All photos: Pexels License, https://www.pexels.com/license/
 All are generic stock photos shown as examples. Nobody in them works for this business.
+
+Photos on the page
+
+hero-climber-800.webp, hero-climber-1600.webp (same photo as climber.jpg)
+  Photographer: Dmytro Glazunov (@glazun0v)
+  Source: https://www.pexels.com/photo/35089307/
+  Shows: a roped climber high in a bare crown under a gray sky
+  Also shown dimmed behind the services band
+
+oak-crown-800.webp, oak-crown-1200.webp (same photo as crown.jpg)
+  Photographer: İdil Ceren Çelikler
+  Source: https://www.pexels.com/photo/38263335/
+  Shows: looking up into an oak in full leaf
+
+look-up-800.webp
+  Photographer: Pexels @ron-lach
+  Source: https://www.pexels.com/photo/8821016/
+  Shows: a worker with a saw looking up at tall pines
+
+two-ropes-800.webp, two-ropes-1200.webp (same photo as ropes.jpg)
+  Photographer: Zak Bentley
+  Source: https://www.pexels.com/photo/2902892/
+  Shows: a climber on two ropes beside a pine trunk
+
+storm-uprooted-800.webp
+  Photographer: Pexels @april-yang-2152726722
+  Source: https://www.pexels.com/photo/32394146/
+  Shows: an uprooted tree across a lawn and street edge after a storm
+
+storm-aerial-800.webp
+  Photographer: Pexels @kelly-4170427
+  Source: https://www.pexels.com/photo/4170427/
+  Shows: wind thrown trees across a field, from above
+
+rounds-fence-800.webp, rounds-fence-1100.webp (same photo as rounds.jpg)
+  Photographer: Leila Abboud (@5lfilm)
+  Source: https://www.pexels.com/photo/19782046/
+  Shows: cut logs by a fence on a gravel drive
+
+cart-logs-800.webp
+  Photographer: Pexels @matreding
+  Source: https://www.pexels.com/photo/6835325/
+  Shows: a garden cart heaped with cut rounds on a lawn
+
+log-pile-800.webp
+  Photographer: Pexels @matreding
+  Source: https://www.pexels.com/photo/6835310/
+  Shows: cut rounds lying on the grass
+
+climber-saw-800.webp
+  Photographer: Pexels @john-robertson-1100376905
+  Source: https://www.pexels.com/photo/34674271/
+  Shows: a climber with a saw working between limbs
+
+chipper-brush-800.webp (cropped to leave out the lettering on the chipper)
+  Photographer: Pexels @john-robertson-1100376905
+  Source: https://www.pexels.com/photo/34581908/
+  Shows: a worker dragging a limb toward a chipper on a street
+
+cut-face-800.webp
+  Photographer: Pexels @luoqing
+  Source: https://www.pexels.com/photo/29803729/
+  Shows: the cut face of a log with sawdust
+
+saw-carry-800.webp
+  Photographer: Pexels @ron-lach
+  Source: https://www.pexels.com/photo/8821017/
+  Shows: a worker carrying a saw on a wooded path
+
+fresh-stump-800.webp
+  Photographer: Pexels @plato-terentev-3804555
+  Source: https://www.pexels.com/photo/9806894/
+  Shows: a fresh stump ringed in sawdust
+
+Older files still in the folder (no longer on the page)
+climber.jpg: Dmytro Glazunov, https://www.pexels.com/photo/35089307/
+crown.jpg: İdil Ceren Çelikler, https://www.pexels.com/photo/38263335/
+ropes.jpg: Zak Bentley, https://www.pexels.com/photo/2902892/
+rounds.jpg: Leila Abboud, https://www.pexels.com/photo/19782046/

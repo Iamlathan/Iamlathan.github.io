@@ -1,5 +1,5 @@
 /* Granite City Digital free website check (/free-check/).
-   Every submission goes to Lathan through Web3Forms, the same way as the home page forms.
+   Every submission goes to us through Web3Forms, the same way as the home page forms.
    The automatic layer asks Microlink (keyless, from the visitor's browser) for a phone screenshot
    and a few page facts. Only the site address is sent to Microlink, never the name or phone. */
 (function(){
@@ -18,7 +18,7 @@ var WEIGHTS = {loads:25, call:20, phone:20, hours:15, https:10, speed:10};
 var ORDER = ["loads","call","phone","hours","https","speed"];
 var NAMES = {loads:"It loads", call:"Call button", phone:"Fits a phone", hours:"Hours shown", https:"Secure address", speed:"Load time estimate"};
 
-/* Pick one of my samples by words in the business name. */
+/* Pick one of our samples by words in the business name. */
 var SAMPLES = [
   /* \b at the start of each group: a word only counts where it begins, so "Street" never matches "tree". */
   [/\b(?:plumb|drain|septic|water heater)/i, "steady-flow-plumbing", "a plumber"],
@@ -188,33 +188,33 @@ function scoreIt(j, url, ms){
 function secText(s){ return "about " + (s >= 10 ? Math.round(s) : s) + " seconds"; }
 function linesFor(r){
   var bad = {
-    loads: "Your site address did not work when I checked it.",
-    call: "There is no button that calls you when someone taps it on a phone.",
-    phone: "On a phone the page comes up shrunk like a desktop page, so the words are tiny.",
-    hours: "I could not find your hours on the page.",
+    loads: "Your site address didn't work when we checked it.",
+    call: "There is no button that calls you when a customer taps it.",
+    phone: "On a small screen the page comes up shrunk like a desktop page, so the words are tiny.",
+    hours: "We couldn't find your hours on the page.",
     https: "Your site shows as not secure in the address bar.",
-    speed: "It took " + secText(r.secs) + " to open when I checked it."
+    speed: "It took " + secText(r.secs) + " to open when we checked it."
   };
   var good = {
-    loads: "Your site opened fine when I checked it.",
-    call: "There is a button that calls you when someone taps it on a phone.",
-    phone: "Your site is set up to fit a phone screen.",
+    loads: "Your site opened fine when we checked it.",
+    call: "There is a button that calls you when a customer taps it.",
+    phone: "Your site is set up to fit a small screen.",
     hours: "Your hours are on the page.",
     https: "The address is secure and starts with https.",
-    speed: "It opened in " + secText(r.secs) + " when I checked it."
+    speed: "It opened in " + secText(r.secs) + " when we checked it."
   };
   if(!r.answered){
     return [
       {bad:true, text:bad.loads},
-      {bad:true, text:"Nothing came back from the address, so I could not see your call button or your hours."},
-      {bad:true, text:"I could not tell how it looks on a phone or whether it is secure."}
+      {bad:true, text:"Nothing came back from the address, so we couldn't see your call button or your hours."},
+      {bad:true, text:"We couldn't tell how it looks on a small screen or whether it is secure."}
     ];
   }
   if(!r.loaded){
     return [
       {bad:true, text:bad.loads},
       {bad:!r.pass.https, text:r.pass.https ? good.https : bad.https},
-      {bad:true, text:"Because the page did not open, I could not see your call button, hours or how it fits a phone."}
+      {bad:true, text:"Because the page didn't open, we couldn't see your call button, hours or how it fits a small screen."}
     ];
   }
   var out = [];
@@ -257,6 +257,8 @@ function leftEarly(e){
   fd.append("business", job.biz);
   fd.append("website", job.site);
   fd.append("phone", job.phone || "Not given");
+  fd.append("Text messages", job.sms);
+  fd.append("Privacy Policy and Terms", "Agreed");
   fd.append("check", "Visitor left during the automatic check");
   var queued = false;
   try { queued = navigator.sendBeacon("https://api.web3forms.com/submit", fd); } catch(err){ queued = false; }
@@ -277,11 +279,9 @@ function setSending(on, label){
 function showErr(msg, withContact){
   errBox.textContent = msg;
   if(withContact){
-    errBox.appendChild(document.createTextNode(" Try again, or text "));
+    errBox.appendChild(document.createTextNode(" Send it again, or text "));
     var a = document.createElement("a"); a.href = "sms:+17432220985"; a.textContent = "(743) 222-0985"; errBox.appendChild(a);
-    errBox.appendChild(document.createTextNode(" or email "));
-    var m = document.createElement("a"); m.href = "mailto:lathan@granitecitydigital.me"; m.textContent = "lathan@granitecitydigital.me"; errBox.appendChild(m);
-    errBox.appendChild(document.createTextNode(" and I'll take it from there."));
+    errBox.appendChild(document.createTextNode(" and we'll take it from there."));
   }
   errBox.hidden = false;
 }
@@ -333,23 +333,23 @@ function renderResult(r, biz, site, sent){
     img.referrerPolicy = "no-referrer";
     img.alt = "Phone view of the site for " + biz;
     img.width = 393; img.height = 736; img.decoding = "async";
-    img.onerror = function(){ noPic("The picture of your site did not come back."); };
+    img.onerror = function(){ noPic("The picture of your site didn't come back."); };
     img.src = r.shot;
     theirs.appendChild(img);
   } else {
-    noPic(r.loaded ? "The picture of your site did not come back." : "No picture, because the page did not open.");
+    noPic(r.loaded ? "The picture of your site didn't come back." : "No picture, because the page didn't open.");
   }
   var sm = pickSample(biz);
   $("fc-ours").src = "/work/shots/" + sm[1] + ".webp";
-  $("fc-ours").alt = "Phone view of one of my samples, a site for " + sm[2];
+  $("fc-ours").alt = "Phone view of one of our sample designs, a site for " + sm[2];
   $("fc-ours-link").href = "/designs/" + sm[1] + "/";
   var note = $("fc-sentnote"); note.textContent = "";
-  if(sent){ note.textContent = "Your details reached me too, so I can follow up."; }
+  if(sent){ note.textContent = "Your details reached us too, so we can follow up."; }
   else {
     note.className = "fc-sentnote warn";
-    note.appendChild(document.createTextNode("Your details didn't reach me this time, so text me at "));
+    note.appendChild(document.createTextNode("Your details didn't reach us this time, so text us at "));
     var a = document.createElement("a"); a.href = "sms:+17432220985"; a.textContent = "(743) 222-0985"; note.appendChild(a);
-    note.appendChild(document.createTextNode(" and I'll take it from there."));
+    note.appendChild(document.createTextNode(" and we'll take it from there."));
   }
   form.hidden = true;
   $("fc-done-site").textContent = prettySite(site);
@@ -372,19 +372,20 @@ function renderManual(reason, hasPhone){
 function resetAll(){
   if(job) job.done = true;
   job = null;
-  form.reset(); form.hidden = false; errBox.hidden = true;
+  form.reset(); form.hidden = false; errBox.hidden = true; errBox.textContent = "";
   ["fc-result", "fc-manual", "fc-done"].forEach(function(id){ $(id).hidden = true; });
   var note = $("fc-sentnote"); note.className = "fc-sentnote";
   window.scrollTo({top:0, behavior: reduced ? "auto" : "smooth"});
   form.elements.biz.focus({preventScroll:true});
 }
 Array.prototype.forEach.call(document.querySelectorAll(".fc-again"), function(b){ b.addEventListener("click", resetAll); });
-Array.prototype.forEach.call(form.querySelectorAll("input"), function(i){ i.addEventListener("input", function(){ i.removeAttribute("aria-invalid"); errBox.hidden = true; }); });
+/* the fields point at the error box (aria-describedby), so a hidden box is emptied too, or an old message would still be read out */
+Array.prototype.forEach.call(form.querySelectorAll("input"), function(i){ i.addEventListener("input", function(){ i.removeAttribute("aria-invalid"); errBox.hidden = true; errBox.textContent = ""; }); });
 
 form.addEventListener("submit", function(e){
   e.preventDefault();
   if(busy) return;
-  errBox.hidden = true;
+  errBox.hidden = true; errBox.textContent = "";
   if(form.elements.botcheck && form.elements.botcheck.checked) return;
   var biz = form.elements.biz.value.trim();
   var rawSite = form.elements.site.value.trim();
@@ -392,20 +393,22 @@ form.addEventListener("submit", function(e){
   if(!biz) return bad(form.elements.biz, "Type your business name.");
   if(!rawSite) return bad(form.elements.site, "Type your website address or your Facebook page link.");
   var site = normalizeUrl(rawSite);
-  if(!site) return bad(form.elements.site, "That doesn't look like a website address. Try something like yourbusiness.com, or paste your Facebook page link.");
+  if(!site) return bad(form.elements.site, "That doesn't look like a website address. Type it like yourbusiness.com, or paste your Facebook page link.");
   if(!phoneOk(phone)) return bad(form.elements.phone, "That phone number looks short or long. Check it, or leave it empty.");
+  if(!form.elements.agree.checked) return bad(form.elements.agree, "Check this box to agree to the Privacy Policy and Terms.");
+  var sms = form.elements.sms_consent.checked ? "Yes, agreed to text messages" : "No";
 
   busy = true;
   var walled = loginWalled(site);
   var auto = AUTO_CHECK && !walled && !blockedToday();
   setSending(true, auto ? "Checking your site" : "Sending");
-  waitBox.textContent = auto ? "Looking at your site on a phone. This can take up to 25 seconds." : "";
-  var mine = auto ? (job = {biz:biz, site:site, phone:phone, beaconed:false, done:false}) : null;
+  waitBox.textContent = auto ? "Looking at your site the way a customer would. This can take up to 25 seconds." : "";
+  var mine = auto ? (job = {biz:biz, site:site, phone:phone, sms:sms, beaconed:false, done:false}) : null;
   var checking = walled ? Promise.resolve({ok:false, reason:"Facebook or Instagram page (behind a login)"}) : runCheck(site);
 
   checking.then(function(chk){
-    if(auto) waitBox.textContent = "Sending it to me.";
-    var fields = {business:biz, website:site, phone:phone || "Not given"};
+    if(auto) waitBox.textContent = "Sending it to us.";
+    var fields = {business:biz, website:site, phone:phone || "Not given", "Text messages":sms, "Privacy Policy and Terms":"Agreed"};
     if(chk.ok){
       var r = chk.result;
       fields.check = "Automatic";

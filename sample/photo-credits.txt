@@ -5,18 +5,31 @@ They are not its work, and nobody in them works for it.
 All photos come from Pexels and are used under the Pexels License
 (free to use, no attribution required): https://www.pexels.com/license/
 
-Files in img/                         Pexels photo                                   Photographer
-patio-arch-*, house-wall-400          https://www.pexels.com/photo/30280876/         Gene Samit
-stone-close-*                         https://www.pexels.com/photo/170461/           paulita
-wall-curve-*                          https://www.pexels.com/photo/7671270/          Anastasia Shuraeva
-firepit-*                             https://www.pexels.com/photo/34580059/         Taylor Thompson
-firebowl-tall-640                     https://www.pexels.com/photo/12900048/         Valerie Voila
-steps-grass-*                         https://www.pexels.com/photo/39045225/         thehungphoto
-steps-garden-*                        https://www.pexels.com/photo/33692879/         Magda Ehlers
-mason-*                               https://www.pexels.com/photo/33497127/         tahir
-foothills-road-*                      https://www.pexels.com/photo/29062647/         Kaiwalya Limaye
-wall-field-640                        https://www.pexels.com/photo/33689536/         Petra Nesti
-shovel-640                            https://www.pexels.com/photo/11963550/         Alexey Demidov
-flag-path-*                           https://www.pexels.com/photo/30229429/         A rvin
+Files in img/            Pexels photo                                 Photographer
+hero-*, firepit-dusk-*   https://www.pexels.com/photo/36777969/       Curtis Adams
+courtyard-patio-*        https://www.pexels.com/photo/30280876/       Gene Samit
+wall-close-*             https://www.pexels.com/photo/170461/         paulita
+fire-table-*             https://www.pexels.com/photo/34580059/       Taylor Thompson
+fire-bowl-*              https://www.pexels.com/photo/12900048/       Valerie Voila
+steps-lawn-*             https://www.pexels.com/photo/39045225/       thehungphoto
+bench-steps-*            https://www.pexels.com/photo/33692879/       Magda Ehlers
+wall-pasture-*           https://www.pexels.com/photo/33689536/       Petra Nesti
+shovel-*                 https://www.pexels.com/photo/11963550/       Alexey Demidov
+garden-path-*            https://www.pexels.com/photo/30229429/       A rvin
+shade-patio-*            https://www.pexels.com/photo/37785078/       brett-a-2161021813
+dry-stack-*              https://www.pexels.com/photo/34727204/       david-coleman-55953153
+pond-wall-*              https://www.pexels.com/photo/12763046/       zahid
+walkway-fence-*          https://www.pexels.com/photo/36866669/       daniel-agundiz-2159069831
+veneer-*                 https://www.pexels.com/photo/1189223/        Magda Ehlers
+stacked-texture-*        https://www.pexels.com/photo/9654674/        didsss
+flagstone-texture-*      https://www.pexels.com/photo/34253503/       udatommo
+flat-rocks-*             https://www.pexels.com/photo/9654656/        didsss
+stone-terrace-*          https://www.pexels.com/photo/39009170/       Arlind D
+gate-wall-*              https://www.pexels.com/photo/39381581/       Gene Samit
+farmhouse-*              https://www.pexels.com/photo/16879647/       Gene Samit
+cobble-wall-*            https://www.pexels.com/photo/38843820/       Karen F
+lily-wall-*              https://www.pexels.com/photo/38297062/       Karen F
+
+Crops: pond-wall is trimmed at the top and gate-wall at the right so no sign shows.
 
 Fonts: Cormorant and Karla from Google Fonts (SIL Open Font License).

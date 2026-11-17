@@ -3,56 +3,64 @@
     "slug": "high-limb-tree-service",
     "name": "High Limb Tree Service",
     "trade": "Tree service",
-    "town": "Dobson",
-    "state": "NC"
+    "town": "Springfield",
+    "state": "MO",
+    "line": "A clean website for a Springfield tree service."
   },
   {
     "slug": "rainline-seamless-gutters",
     "name": "Rainline Seamless Gutters",
     "trade": "Seamless gutters, roofing and siding",
-    "town": "Dobson",
-    "state": "NC"
+    "town": "Eau Claire",
+    "state": "WI",
+    "line": "A crisp website for an Eau Claire gutter, roofing and siding crew."
   },
   {
     "slug": "true-line-painting",
     "name": "True Line Painting",
     "trade": "House painting",
-    "town": "Dobson",
-    "state": "NC"
+    "town": "Fort Collins",
+    "state": "CO",
+    "line": "A bright website for a Fort Collins house painter."
   },
   {
     "slug": "westbrook-body-and-tire",
     "name": "Westbrook Body and Tire",
     "trade": "Auto body, paint and tires",
-    "town": "Mount Airy",
-    "state": "NC"
+    "town": "Waco",
+    "state": "TX",
+    "line": "A sturdy website for a Waco auto body and tire shop."
   },
   {
     "slug": "red-clay-concrete-grading",
     "name": "Red Clay Concrete and Grading",
     "trade": "Concrete and grading",
-    "town": "Yadkinville",
-    "state": "NC"
+    "town": "Gainesville",
+    "state": "GA",
+    "line": "A bold website for a Gainesville concrete and grading crew."
   },
   {
     "slug": "willow-lane-skin-studio",
     "name": "Willow Lane Skin Studio",
     "trade": "Esthetics studio",
-    "town": "Elkin",
-    "state": "NC"
+    "town": "Bend",
+    "state": "OR",
+    "line": "A calm website for a Bend esthetics studio."
   },
   {
     "slug": "steady-flow-plumbing",
     "name": "Steady Flow Plumbing",
     "trade": "Plumber",
-    "town": "Mount Airy",
-    "state": "NC"
+    "town": "Columbus",
+    "state": "OH",
+    "line": "A friendly website for a Columbus plumber."
   },
   {
     "slug": "sunup-southern-breakfast",
     "name": "Sunup Southern Breakfast",
     "trade": "Southern breakfast and lunch",
-    "town": "Mount Airy",
-    "state": "NC"
+    "town": "Oxford",
+    "state": "MS",
+    "line": "A warm website for an Oxford breakfast and lunch spot."
   }
 ]

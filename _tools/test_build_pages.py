@@ -3,9 +3,11 @@ written. Only the Tracked tests read it (the tracked designs.json and .gitignore
 Run from the site folder:  python3 -m unittest discover -s _tools -p "test_*.py"
 """
 import contextlib
+import html
 import io
 import json
 import os
+import re
 import shutil
 import sys
 import tempfile
@@ -41,10 +43,14 @@ def put(root, relpath, text):
         f.write(text)
 
 
-class Site(unittest.TestCase):
+class SiteBase(unittest.TestCase):
+    """A small made up site in a temp folder, and helpers. Holds no tests."""
+
     def setUp(self):
         self.root = tempfile.mkdtemp(prefix="gcd-test-")
         bp.set_root(self.root)
+        self.shipped_town_switch = bp.SHOW_SAMPLE_TOWN
+        self.addCleanup(setattr, bp, "SHOW_SAMPLE_TOWN", self.shipped_town_switch)
         put(self.root, "index.html", '<a href="/work/">Sample designs</a>')
         put(self.root, "faq/index.html", "faq")
         put(self.root, "_tools/templates/work.html", TEMPLATE)
@@ -74,6 +80,12 @@ class Site(unittest.TestCase):
         with open(os.path.join(self.root, relpath), encoding="utf-8") as f:
             return f.read()
 
+    def town(self, on):
+        """Set the SHOW_SAMPLE_TOWN switch for one test (setUp puts the shipped value back after)."""
+        bp.SHOW_SAMPLE_TOWN = on
+
+
+class Site(SiteBase):
     # ---- check
 
     def test_clean_site_passes_check(self):
@@ -402,16 +414,18 @@ class Site(unittest.TestCase):
         self.assertFalse(os.path.exists(os.path.join(self.root, "work")))
 
     def test_alt_text_uses_a_business_noun(self):
+        self.town(True)
         self.designs([dict(ENTRY, trade="Lawn maintenance")])
         put(self.root, "designs/bluebird-roofing/index.html", with_ld('{"@type":"HomeAndConstructionBusiness"}'))
         code, out = self.run_main("--no-shots")
         self.assertEqual(code, 0, out)
         page = self.read("work/index.html")
-        self.assertIn('alt="Phone view of a sample design for a lawn care business in Testville"', page)
+        self.assertIn('alt="Desktop view of a sample design for a lawn care business in Testville"', page)
         self.assertNotIn("home repair business", page)
         self.assertNotIn("a lawn maintenance in", page)
 
     def test_alt_text_ignores_plain_page_types(self):
+        self.town(True)
         self.designs([dict(ENTRY, trade="Pet grooming")])
         code, out = self.run_main("--no-shots")
         self.assertEqual(code, 0, out)
@@ -464,12 +478,207 @@ class Site(unittest.TestCase):
                 self.assertEqual(bp.alt_noun("made-up-real", trade, ""), want)
 
     def test_alt_text_on_the_card_for_a_food_trade(self):
+        self.town(True)
         self.designs([dict(ENTRY, trade="Sandwiches")])
         code, out = self.run_main("--no-shots")
         self.assertEqual(code, 0, out)
         page = self.read("work/index.html")
-        self.assertIn('alt="Phone view of a sample design for a sandwich shop in Testville"', page)
+        self.assertIn('alt="Desktop view of a sample design for a sandwich shop in Testville"', page)
         self.assertNotIn("sandwiches business", page)
+
+    # ---- card markup
+
+    def test_card_has_three_tags_line_and_browser_frame(self):
+        self.town(True)
+        self.designs([dict(ENTRY, line="A bold website for a Testville roofer.")])
+        code, out = self.run_main("--no-shots")
+        self.assertEqual(code, 0, out)
+        page = self.read("work/index.html")
+        self.assertIn('<div class="tag-row"><span class="tag tag-sample">Sample design</span>'
+                      '<span class="tag">Roofing</span><span class="tag">Testville, NC</span></div>', page)
+        self.assertIn("<h2>Bluebird Roofing</h2>", page)
+        self.assertIn('<p class="card-line">A bold website for a Testville roofer.</p>', page)
+        self.assertIn('<div class="frame"><div class="frame-bar"><span></span><span></span><span></span>'
+                      '<span class="frame-url">granitecitydigital.me/designs/bluebird-roofing/</span></div><img ', page)
+        self.assertIn('<li class="work-card feature">', page)       # no featured.json: the first design leads
+        self.assertIn('<a class="link" href="/designs/bluebird-roofing/"', page)
+        self.assertNotIn("Roofing in Testville, NC</p>", page)      # the old trade line is gone
+
+    def test_card_frame_shows_the_desktop_shot(self):
+        self.town(True)
+        code, out = self.run_main("--no-shots")
+        self.assertEqual(code, 0, out)
+        page = self.read("work/index.html")
+        # the only design leads (no featured.json), so its picture is on the first screen: not lazy
+        self.assertIn('<img src="/work/shots/desktop/bluebird-roofing.webp" '
+                      'alt="Desktop view of a sample design for a roofer in Testville" width="1200" height="750" '
+                      'decoding="async"></div>', page)
+        self.assertNotIn('loading="lazy"', page)
+        self.assertNotIn('src="/work/shots/bluebird-roofing.webp"', page)
+        # samples.json (read by the free check) keeps the phone shot
+        self.assertEqual(json.loads(self.read("work/samples.json"))[0]["shot"], "/work/shots/bluebird-roofing.webp")
+        # the card alt names the desktop shot; samples.json keeps the phone alt for the free check
+        self.assertNotIn('alt="Phone view of', page)
+        self.assertEqual(json.loads(self.read("work/samples.json"))[0]["alt"],
+                         "Phone view of a sample design for a roofer in Testville")
+        self.assertNotIn("desktop_alt", self.read("work/samples.json"))
+        self.assertFalse(os.path.exists(os.path.join(self.root, "work/shots/desktop")))
+
+    # ---- which shots the build asks for (Chrome is never started here)
+
+    def shots_asked(self, *args):
+        asked = []
+        real = bp.take_shots
+        bp.take_shots = lambda phone, desktop=(), pages=None: asked.append((list(phone), list(desktop))) or []
+        try:
+            code, out = self.run_main(*args)
+        finally:
+            bp.take_shots = real
+        self.assertEqual(code, 0, out)
+        return asked
+
+    def test_build_takes_missing_desktop_shots_only(self):
+        self.assertEqual(self.shots_asked(), [(["bluebird-roofing"], ["bluebird-roofing"])])
+        put(self.root, "work/shots/bluebird-roofing.webp", "phone")
+        self.assertEqual(self.shots_asked(), [([], ["bluebird-roofing"])])
+        put(self.root, "work/shots/desktop/bluebird-roofing.webp", "desktop")
+        self.assertEqual(self.shots_asked(), [([], [])])
+        self.assertEqual(self.shots_asked("--shots"), [(["bluebird-roofing"], ["bluebird-roofing"])])
+        self.assertEqual(self.shots_asked("--no-shots"), [])
+
+    def test_check_notes_a_missing_desktop_shot(self):
+        code, out = self.run_main("--check")
+        self.assertEqual(code, 0, out)
+        self.assertIn("work/shots/desktop/bluebird-roofing.webp", out)
+        put(self.root, "work/shots/desktop/bluebird-roofing.webp", "desktop")
+        code, out = self.run_main("--check")
+        self.assertEqual(code, 0, out)
+        self.assertNotIn("work/shots/desktop/bluebird-roofing.webp", out)
+
+    def test_build_notes_a_missing_desktop_shot(self):
+        code, out = self.run_main("--no-shots")
+        self.assertEqual(code, 0, out)
+        self.assertIn("no desktop shot yet for bluebird-roofing", out)
+
+    def test_card_line_falls_back_when_missing(self):
+        self.town(True)
+        self.designs([dict(ENTRY, trade="Tree service")])
+        code, out = self.run_main("--no-shots")
+        self.assertEqual(code, 0, out)
+        page = self.read("work/index.html")
+        self.assertIn('<p class="card-line">A sample website for a Testville tree service.</p>', page)
+
+    def test_card_line_falls_back_when_blank(self):
+        self.town(True)
+        self.designs([dict(ENTRY, line="   ")])
+        code, out = self.run_main("--no-shots")
+        self.assertEqual(code, 0, out)
+        self.assertIn('<p class="card-line">A sample website for a Testville roofing.</p>', self.read("work/index.html"))
+
+    # ---- town switch (SHOW_SAMPLE_TOWN): off keeps where a sample is set off /work/
+
+    def test_town_off_card_shows_no_town_or_state(self):
+        self.town(False)
+        self.designs([dict(ENTRY, line="A bold website for a Testville roofer.")])
+        code, out = self.run_main("--no-shots")
+        self.assertEqual(code, 0, out)
+        page, data = self.read("work/index.html"), self.read("work/samples.json")
+        self.assertIn('<div class="tag-row"><span class="tag tag-sample">Sample design</span>'
+                      '<span class="tag">Roofing</span></div>', page)
+        self.assertIn('<p class="card-line">A bold website for a roofer.</p>', page)
+        self.assertIn('alt="Desktop view of a sample design for a roofer"', page)
+        self.assertIn('aria-label="Preview the sample design for Bluebird Roofing, a roofer"', page)
+        self.assertEqual(json.loads(data), [{"slug": "bluebird-roofing", "name": "Bluebird Roofing", "trade": "Roofing",
+                                             "alt": "Phone view of a sample design for a roofer",
+                                             "shot": "/work/shots/bluebird-roofing.webp",
+                                             "preview": "/designs/bluebird-roofing/"}])
+        for text in (page, data):
+            self.assertNotIn("testville", text.lower())
+            self.assertNotRegex(text, r"\bNC\b")
+        # the design page and designs.json keep the town
+        self.assertIn("Testville", self.read("designs/bluebird-roofing/index.html"))
+        self.assertEqual(json.loads(self.read("_tools/data/designs.json"))[0]["town"], "Testville")
+
+    def test_town_on_brings_the_town_back(self):
+        self.town(True)
+        self.designs([dict(ENTRY, line="A bold website for a Testville roofer.")])
+        code, out = self.run_main("--no-shots")
+        self.assertEqual(code, 0, out)
+        page, data = self.read("work/index.html"), json.loads(self.read("work/samples.json"))
+        self.assertIn('<span class="tag">Testville, NC</span>', page)
+        self.assertIn('<p class="card-line">A bold website for a Testville roofer.</p>', page)
+        self.assertIn('aria-label="Preview the sample design for Bluebird Roofing, a roofer in Testville"', page)
+        self.assertEqual((data[0]["town"], data[0]["state"]), ("Testville", "NC"))
+        self.assertEqual(data[0]["alt"], "Phone view of a sample design for a roofer in Testville")
+
+    def test_town_off_fallback_line_names_the_kind_only(self):
+        self.town(False)
+        for line in (None, "   "):
+            with self.subTest(line=line):
+                entry = dict(ENTRY, trade="Tree service")
+                if line is not None:
+                    entry["line"] = line
+                self.designs([entry])
+                code, out = self.run_main("--no-shots")
+                self.assertEqual(code, 0, out)
+                self.assertIn('<p class="card-line">A sample website for a tree service.</p>', self.read("work/index.html"))
+
+    def test_town_free_line(self):
+        cases = [
+            ("A clean website for a Testville tree service.", "Testville", "tree service",
+             "A clean website for a tree service."),
+            ("A sturdy website for a Mount Airy auto body and tire shop.", "Mount Airy", "auto body shop",
+             "A sturdy website for an auto body and tire shop."),
+            ("A calm website for an Elkin esthetics studio.", "Elkin", "esthetics studio",
+             "A calm website for an esthetics studio."),
+            ("A website for an Oak Hill bakery.", "Oak Hill", "bakery", "A website for a bakery."),
+            ("A website for a Testville, NC roofer.", "Testville", "roofer", "A website for a roofer."),
+            ("A website for a TESTVILLE roofer.", "Testville", "roofer", "A website for a roofer."),
+            ("A friendly website for a plumber in Testville, NC.", "Testville", "plumber",
+             "A friendly website for a plumber."),
+            ("A website for a roofer from Testville.", "Testville", "roofer", "A website for a roofer."),
+            ("A website for a Testville stone mason who builds patios, walls and steps.", "Testville", "stone mason",
+             "A website for a stone mason who builds patios, walls and steps."),
+            ("A bold website for a roofer.", "Testville", "roofer", "A bold website for a roofer."),
+            ("A website for an Elkin roofer.", "Elk", "roofer", "A website for an Elkin roofer."),
+            # the town anywhere else, or the state left alone: the plain line instead
+            ("Testville's favorite roofer.", "Testville", "roofer", "A sample website for a roofer."),
+            ("Testville roofing, done right.", "Testville", "roofer", "A sample website for a roofer."),
+            ("The best roofer in NC.", "Testville", "roofer", "A sample website for a roofer."),
+            ("Serving Testville and nearby towns.", "Testville", "HVAC company", "A sample website for an HVAC company."),
+        ]
+        for line, town, kind, want in cases:
+            with self.subTest(line=line):
+                self.assertEqual(bp.town_free_line(line, town, "NC", kind), want)
+
+    def test_town_off_check_flags_a_town_left_in_the_cards(self):
+        self.town(False)
+        self.designs([dict(ENTRY, name="Testville Roofing")])
+        code, out = self.run_main("--check")
+        self.assertEqual(code, 1, out)
+        self.assertIn("Sample towns or states still on /work/ with SHOW_SAMPLE_TOWN off: 1", out)
+        self.assertIn("Testville", out)
+        self.town(True)
+        code, out = self.run_main("--check")
+        self.assertEqual(code, 0, out)
+        self.assertNotIn("Sample towns or states still on", out)
+
+    def test_town_off_clean_site_passes_check(self):
+        self.town(False)
+        code, out = self.run_main("--check")
+        self.assertEqual(code, 0, out)
+        self.assertIn("Sample towns or states still on /work/ with SHOW_SAMPLE_TOWN off: none", out)
+
+    def test_card_text_is_escaped(self):
+        self.designs([dict(ENTRY, name="Bluebird & Sons", trade="Roofing & <b>gutters</b>",
+                           line='A "bold" website & more <i>.')])
+        code, out = self.run_main("--no-shots")
+        self.assertEqual(code, 0, out)
+        page = self.read("work/index.html")
+        self.assertIn("<h2>Bluebird &amp; Sons</h2>", page)
+        self.assertIn('<span class="tag">Roofing &amp; &lt;b&gt;gutters&lt;/b&gt;</span>', page)
+        self.assertIn('<p class="card-line">A &quot;bold&quot; website &amp; more &lt;i&gt;.</p>', page)
+        self.assertNotIn("<b>gutters", page)
 
     def test_sitemap_only(self):
         code, _ = self.run_main("--sitemap")
@@ -480,6 +689,522 @@ class Site(unittest.TestCase):
         self.assertIn("<loc>https://granitecitydigital.me/faq/</loc>", sitemap)
         # the sitemap it writes passes its own check
         self.assertEqual(self.run_main("--check")[0], 0)
+
+    def test_sitemap_page_list_and_order(self):
+        self.assertEqual(bp.SITEMAP_PAGES, [
+            "/", "/services/website-design/", "/services/website-rebuild/", "/services/care-plan/",
+            "/services/free-website-check/", "/services/google-business-profile/", "/services/local-seo/",
+            "/services/logo-and-brand-kit/", "/websites-for/home-services/", "/websites-for/auto-shops/",
+            "/websites-for/food-and-coffee/", "/websites-for/beauty-and-wellness/", "/work/", "/sample/", "/about/",
+            "/contact/", "/faq/", "/service-area/", "/get-started/", "/free-check/", "/privacy/", "/terms/"])
+
+    def test_sitemap_lists_get_started_but_not_client_portal(self):
+        for p in ("/get-started/", "/client-portal/"):
+            put(self.root, p.strip("/") + "/index.html", "x")
+        self.assertIn("/get-started/", bp.SITEMAP_PAGES)
+        self.assertNotIn("/client-portal/", bp.SITEMAP_PAGES)
+        self.assertEqual(self.run_main("--sitemap")[0], 0)
+        sitemap = self.read("sitemap.xml")
+        self.assertIn("<loc>https://granitecitydigital.me/get-started/</loc>", sitemap)
+        self.assertNotIn("/client-portal/", sitemap)
+
+    def test_sitemap_lists_new_service_and_trade_pages_on_disk_only(self):
+        for p in ("services/website-design", "services/free-website-check", "services/local-seo",
+                  "websites-for/auto-shops", "websites-for/beauty-and-wellness", "work"):
+            put(self.root, p + "/index.html", "x")
+        code, out = self.run_main("--sitemap")
+        self.assertEqual(code, 0, out)
+        locs = [ln.split("<loc>")[1].split("</loc>")[0] for ln in self.read("sitemap.xml").splitlines() if "<loc>" in ln]
+        base = "https://granitecitydigital.me"
+        self.assertEqual(locs, [base + p for p in (
+            "/", "/services/website-design/", "/services/free-website-check/", "/services/local-seo/",
+            "/websites-for/auto-shops/", "/websites-for/beauty-and-wellness/", "/work/", "/faq/")])
+        for p in ("/services/google-business-profile/", "/websites-for/home-services/"):
+            self.assertIn("left out, no page on disk yet: " + p, out)
+
+    def test_check_notes_a_sitemap_page_that_is_noindex(self):
+        put(self.root, "get-started/index.html", '<head><meta name="robots" content="noindex"></head>')
+        code, out = self.run_main("--check")
+        self.assertEqual(code, 0, out)
+        self.assertIn("Note: sitemap pages that still carry a noindex robots meta: 1", out)
+        self.assertIn("  /get-started/", out)
+        put(self.root, "get-started/index.html", "<head></head>")
+        code, out = self.run_main("--check")
+        self.assertIn("Note: sitemap pages that still carry a noindex robots meta: none", out)
+
+    def test_sitemap_lists_about_after_sample(self):
+        for p in ("work", "sample", "about"):
+            put(self.root, p + "/index.html", "x")
+        self.assertEqual(self.run_main("--sitemap")[0], 0)
+        locs = [ln.split("<loc>")[1].split("</loc>")[0] for ln in self.read("sitemap.xml").splitlines() if "<loc>" in ln]
+        base = "https://granitecitydigital.me"
+        self.assertEqual(locs, [base + "/", base + "/work/", base + "/sample/", base + "/about/", base + "/faq/"])
+        self.assertEqual(self.run_main("--check")[0], 0)
+
+    def test_sitemap_lists_service_pages_in_order(self):
+        for p in ("services/care-plan", "services/website-design", "work"):
+            put(self.root, p + "/index.html", "x")
+        self.assertEqual(self.run_main("--sitemap")[0], 0)
+        locs = [ln.split("<loc>")[1].split("</loc>")[0] for ln in self.read("sitemap.xml").splitlines() if "<loc>" in ln]
+        base = "https://granitecitydigital.me"
+        self.assertEqual(locs, [base + "/", base + "/services/website-design/", base + "/services/care-plan/",
+                                base + "/work/", base + "/faq/"])
+
+    def test_real_name_or_phone_in_new_folders_fails(self):
+        for folder in ("services/care-plan", "get-started", "client-portal", "about", "websites-for/home-services",
+                       "contact", "faq", "free-check", "privacy", "terms", "service-area"):
+            for text, want in (("<p>Formerly Acme Roof Pros.</p>", "acme roof pros"),
+                               ("Call 555.404.0123", "phone number ending 0123")):
+                with self.subTest(folder=folder, text=text):
+                    put(self.root, folder + "/index.html", text)
+                    code, out = self.run_main("--check")
+                    os.remove(os.path.join(self.root, folder, "index.html"))
+                    self.assertEqual(code, 1, out)
+                    self.assertIn(folder + "/index.html: ", out)
+                    self.assertIn(want, out)
+
+    def test_real_name_or_phone_in_root_pages_fails(self):
+        for name in ("index.html", "404.html"):
+            for text, want in (("<p>Formerly Acme Roof Pros.</p>", "acme roof pros"),
+                               ("Call 555.404.0123", "phone number ending 0123"),
+                               ('<img src="/work/shots/acme-roof-pros.webp">', "private slug acme-roof-pros")):
+                with self.subTest(name=name, text=text):
+                    put(self.root, name, text)
+                    code, out = self.run_main("--check")
+                    os.remove(os.path.join(self.root, name))
+                    self.assertEqual(code, 1, out)
+                    self.assertIn("\n  %s: " % name, out)
+                    self.assertIn(want, out)
+
+    def test_root_scan_skips_samples_and_tool_folders(self):
+        # the lead pages carry their own names and phones; the root scan covers only the two root pages
+        put(self.root, "samples/acme-roof-pros/about.html", NOINDEX + "<p>Acme Roof Pros. Call 555.404.0123</p>")
+        put(self.root, "_tools/notes.md", "acme-roof-pros is Acme Roof Pros")
+        put(self.root, "index.html", '<a href="/work/">Sample designs</a>')
+        code, out = self.run_main("--check")
+        self.assertEqual(code, 0, out)
+        self.assertIn("index.html, 404.html", out)
+
+
+def put_bytes(root, relpath, data):
+    path = os.path.join(root, relpath)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "wb") as f:
+        f.write(data)
+
+
+def png_head(w, h):
+    """The first bytes of a PNG file of w x h: enough for the size reader."""
+    return (b"\x89PNG\r\n\x1a\n" + (13).to_bytes(4, "big") + b"IHDR" + w.to_bytes(4, "big") + h.to_bytes(4, "big")
+            + b"\x08\x02\x00\x00\x00" + b"\x00" * 4)
+
+
+FEATURE = {"page": "/sample/", "shot": "granite-ridge-test", "image": "/sample/card.png",
+           "name": "Granite Ridge Masonry", "trade": "Stone mason", "town": "Testville", "state": "NC",
+           "line": "A website for a Testville stone mason who builds patios, walls and steps."}
+FEATURE_PAGE = '<!doctype html><html><head><title>Granite Ridge Masonry | Sample</title></head><body>x</body></html>'
+
+
+class Feature(SiteBase):
+    """The feature card (_tools/data/featured.json): a made up sample page outside designs/, shown first and wide."""
+
+    def setUp(self):
+        super().setUp()
+        put(self.root, "sample/index.html", FEATURE_PAGE)
+        put_bytes(self.root, "sample/card.png", png_head(1000, 800))
+        self.feature(FEATURE)
+
+    def feature(self, data):
+        put(self.root, "_tools/data/featured.json", json.dumps(data))
+
+    def build(self, *args):
+        code, out = self.run_main("--no-shots", *args)
+        self.assertEqual(code, 0, out)
+        return self.read("work/index.html"), out
+
+    def test_feature_card_comes_first_with_tags_line_and_link(self):
+        self.town(True)
+        page, _ = self.build()
+        first = page.index('<li class="work-card feature">')
+        self.assertLess(first, page.index('<li class="work-card', first + 1))
+        card = page[first:page.index("</li>", first)]
+        self.assertIn('<div class="tag-row"><span class="tag tag-sample">Sample design</span>'
+                      '<span class="tag">Stone mason</span><span class="tag">Testville, NC</span></div>', card)
+        self.assertIn("<h2>Granite Ridge Masonry</h2>", card)
+        self.assertIn('<p class="card-line">A website for a Testville stone mason who builds patios, walls and steps.</p>',
+                      card)
+        self.assertIn('<span class="frame-url">granitecitydigital.me/sample/</span>', card)
+        self.assertIn('<a class="link" href="/sample/" target="_blank" rel="noopener" aria-label="Preview the sample '
+                      'design for Granite Ridge Masonry, a stone mason in Testville">Preview</a>', card)
+        # the design card after it is a plain card, not the feature
+        self.assertEqual(page.count("work-card feature"), 1)
+        self.assertIn('href="/designs/bluebird-roofing/"', page)
+
+    def test_town_off_feature_card_shows_no_town_or_state(self):
+        self.town(False)
+        page, _ = self.build()
+        first = page.index('<li class="work-card feature">')
+        card = page[first:page.index("</li>", first)]
+        self.assertIn('<div class="tag-row"><span class="tag tag-sample">Sample design</span>'
+                      '<span class="tag">Stone mason</span></div>', card)
+        self.assertIn('<p class="card-line">A website for a stone mason who builds patios, walls and steps.</p>', card)
+        self.assertIn('alt="Desktop view of a sample design for a stone mason"', card)
+        self.assertIn('aria-label="Preview the sample design for Granite Ridge Masonry, a stone mason"', card)
+        self.assertNotIn("Testville", page)
+        self.assertNotRegex(page, r"\bNC\b")
+        self.assertEqual(json.loads(self.read("_tools/data/featured.json"))["town"], "Testville")
+
+    def test_feature_uses_its_page_image_until_a_desktop_shot_exists(self):
+        self.town(True)
+        page, _ = self.build()
+        self.assertIn('<img src="/sample/card.png" alt="Desktop view of a sample design for a stone mason in Testville" '
+                      'width="1000" height="800" decoding="async">', page)
+        put(self.root, "work/shots/desktop/granite-ridge-test.webp", "desktop")
+        page, _ = self.build()
+        self.assertIn('<img src="/work/shots/desktop/granite-ridge-test.webp" alt="Desktop view of a sample design for '
+                      'a stone mason in Testville" width="1200" height="750"', page)
+        self.assertNotIn("/sample/card.png", page)
+
+    def test_only_the_lead_card_picture_is_not_lazy(self):
+        # the lead card (the feature, or the first design with no featured.json) is on the first screen,
+        # so its picture loads right away; every other card picture stays lazy
+        entries = [dict(ENTRY, real="real-shop-%d" % i, slug="test-shop-%d" % i, name="Test Shop %d" % i)
+                   for i in range(1, 4)]
+        for e in entries:
+            put(self.root, "designs/%s/index.html" % e["slug"], DESIGN)
+        shutil.rmtree(os.path.join(self.root, "designs", "bluebird-roofing"))
+        self.designs(entries)
+        lead_img = r'<img src="[^"]+" alt="[^"]+" width="\d+" height="\d+" decoding="async">'
+        lazy_img = r'<img src="[^"]+" alt="[^"]+" width="\d+" height="\d+" loading="lazy" decoding="async">'
+        for featured, lead_src in ((True, "/sample/card.png"), (False, "/work/shots/desktop/test-shop-1.webp")):
+            with self.subTest(featured=featured):
+                if not featured:
+                    os.remove(os.path.join(self.root, "_tools/data/featured.json"))
+                page, _ = self.build()
+                cards = re.findall(r'<li class="([^"]*)">(.*?)</li>', page, re.S)
+                self.assertEqual(len(cards), 4 if featured else 3)
+                self.assertEqual(cards[0][0], "work-card feature")
+                imgs = [re.findall(r"<img [^>]*>", body) for _, body in cards]
+                self.assertTrue(all(len(i) == 1 for i in imgs), imgs)
+                self.assertRegex(imgs[0][0], "^%s$" % lead_img)
+                self.assertIn('src="%s"' % lead_src, imgs[0][0])
+                self.assertNotIn("loading=", imgs[0][0])
+                for i in imgs[1:]:
+                    self.assertRegex(i[0], "^%s$" % lazy_img)
+                self.assertEqual(page.count('loading="lazy"'), len(cards) - 1)
+
+    def test_feature_image_is_not_written_or_changed(self):
+        folder = os.path.join(self.root, "sample")
+
+        def snapshot():
+            files = {}
+            for n in os.listdir(folder):
+                with open(os.path.join(folder, n), "rb") as f:
+                    files[n] = f.read()
+            return files
+
+        before = snapshot()
+        self.build()
+        after = snapshot()
+        self.assertEqual(before, after)
+
+    def test_feature_is_not_in_samples_json(self):
+        self.build()
+        self.assertEqual([c["slug"] for c in json.loads(self.read("work/samples.json"))], ["bluebird-roofing"])
+
+    def test_build_takes_the_feature_desktop_shot_from_its_page(self):
+        asked = []
+        real = bp.take_shots
+
+        def fake(phone, desktop=(), pages=None):
+            asked.append((list(phone), list(desktop), dict(pages or {})))
+            return []
+        bp.take_shots = fake
+        try:
+            self.assertEqual(self.run_main()[0], 0)
+            put(self.root, "work/shots/desktop/granite-ridge-test.webp", "desktop")
+            self.assertEqual(self.run_main()[0], 0)
+            self.assertEqual(self.run_main("--shots")[0], 0)
+            self.assertEqual(self.run_main("--no-shots")[0], 0)
+        finally:
+            bp.take_shots = real
+        page = os.path.join(self.root, "sample", "index.html")
+        self.assertEqual(asked[0], (["bluebird-roofing"], ["bluebird-roofing", "granite-ridge-test"],
+                                    {"granite-ridge-test": page}))
+        self.assertEqual(asked[1][1], ["bluebird-roofing"])                   # feature shot on disk: not retaken
+        self.assertEqual(asked[2][1], ["bluebird-roofing", "granite-ridge-test"])
+        self.assertEqual(len(asked), 3)                                       # --no-shots takes none
+
+    def test_desktop_shot_page_defaults_to_the_design_page(self):
+        self.assertEqual(bp.desktop_page("bluebird-roofing", {}),
+                         os.path.join(self.root, "designs", "bluebird-roofing", "index.html"))
+        self.assertEqual(bp.desktop_page("granite-ridge-test", {"granite-ridge-test": "/x/index.html"}), "/x/index.html")
+
+    def test_check_notes_a_missing_feature_desktop_shot(self):
+        code, out = self.run_main("--check")
+        self.assertEqual(code, 0, out)
+        self.assertIn("work/shots/desktop/granite-ridge-test.webp", out)
+        self.assertIn("Feature card: Granite Ridge Masonry (/sample/)", out)
+
+    def test_no_featured_file_leads_with_the_first_design(self):
+        os.remove(os.path.join(self.root, "_tools/data/featured.json"))
+        page, _ = self.build()
+        self.assertIn('<li class="work-card feature"><div class="tag-row"><span class="tag tag-sample">Sample design'
+                      '</span><span class="tag">Roofing</span>', page)
+        self.assertNotIn('href="/sample/"', page)
+
+    def test_feature_page_missing_is_a_note(self):
+        os.remove(os.path.join(self.root, "sample/index.html"))
+        page, out = self.build()
+        self.assertIn("sample/index.html does not exist", out)
+        self.assertNotIn('href="/sample/"', page)
+
+    def test_feature_without_any_image_is_left_out_with_a_note(self):
+        os.remove(os.path.join(self.root, "sample/card.png"))
+        page, out = self.build()
+        self.assertIn("no desktop shot and no sample/card.png", out)
+        self.assertNotIn('href="/sample/"', page)
+        self.assertNotIn("/sample/card.png", page)
+
+    def test_bad_featured_json_stops_and_writes_nothing(self):
+        cases = [dict(FEATURE, page="/samples/acme-roof-pros/"), dict(FEATURE, page="/designs/bluebird-roofing/"),
+                 dict(FEATURE, page="https://example.com/"), dict(FEATURE, page="/../outside/"),
+                 dict(FEATURE, page="sample/"), dict(FEATURE, page="/web-design/"),
+                 dict(FEATURE, shot="bluebird-roofing"), dict(FEATURE, shot="acme-roof-pros"),
+                 dict(FEATURE, shot="Bad Slug"), dict(FEATURE, image="/../card.png"),
+                 dict(FEATURE, image="/sample/notes.txt"), dict(FEATURE, image="/samples/acme-roof-pros/a.png"),
+                 {k: v for k, v in FEATURE.items() if k != "name"}, dict(FEATURE, name="  "),
+                 dict(FEATURE, real="acme-roof-pros"), dict(FEATURE, line=3), [FEATURE]]
+        for data in cases:
+            with self.subTest(data=data):
+                self.feature(data)
+                code, out = self.run_main("--no-shots")
+                self.assertEqual(code, 2, out)
+                self.assertIn("featured.json", out)
+                self.assertFalse(os.path.exists(os.path.join(self.root, "work")))
+                self.assertFalse(os.path.exists(os.path.join(self.root, "sitemap.xml")))
+
+    def test_feature_with_a_private_name_stops_the_build(self):
+        self.feature(dict(FEATURE, line="Built by Acme Roof Pros."))
+        code, out = self.run_main("--no-shots")
+        self.assertEqual(code, 1, out)
+        self.assertIn("acme roof pros", out)
+        self.assertFalse(os.path.exists(os.path.join(self.root, "work")))
+
+    def test_feature_text_is_escaped(self):
+        self.feature(dict(FEATURE, name="Granite & <b>Ridge</b>", line='A "stone" site.'))
+        page, _ = self.build()
+        self.assertIn("<h2>Granite &amp; &lt;b&gt;Ridge&lt;/b&gt;</h2>", page)
+        self.assertIn('<p class="card-line">A &quot;stone&quot; site.</p>', page)
+
+    def test_image_size_reads_png_and_webp(self):
+        put_bytes(self.root, "a.png", png_head(640, 480))
+        self.assertEqual(bp.image_size(os.path.join(self.root, "a.png")), (640, 480))
+        vp8 = b"RIFF" + b"\x00" * 4 + b"WEBPVP8 " + b"\x00" * 4 + b"\x00" * 3 + b"\x9d\x01\x2a" + \
+            (1000).to_bytes(2, "little") + (800).to_bytes(2, "little")
+        put_bytes(self.root, "b.webp", vp8)
+        self.assertEqual(bp.image_size(os.path.join(self.root, "b.webp")), (1000, 800))
+        vp8x = b"RIFF" + b"\x00" * 4 + b"WEBPVP8X" + b"\x00" * 8 + (1199).to_bytes(3, "little") + (749).to_bytes(3, "little")
+        put_bytes(self.root, "c.webp", vp8x)
+        self.assertEqual(bp.image_size(os.path.join(self.root, "c.webp")), (1200, 750))
+        put_bytes(self.root, "d.webp", b"not an image")
+        self.assertIsNone(bp.image_size(os.path.join(self.root, "d.webp")))
+
+
+def webp_head(w, h):
+    """The first bytes of a WebP file of w x h: enough for the size reader."""
+    return (b"RIFF" + b"\x00" * 4 + b"WEBPVP8X" + b"\x00" * 8 + (w - 1).to_bytes(3, "little")
+            + (h - 1).to_bytes(3, "little"))
+
+
+SIZES = 'sizes="(max-width: 599px) 93vw, 801px"'
+ROOFER_ALT = 'alt="Desktop view of a sample design for a roofer in Testville"'
+MASON_ALT = 'alt="Desktop view of a sample design for a stone mason in Testville"'
+
+
+class SmallShots(SiteBase):
+    """The 800 px copy of a card picture (work/shots/desktop/<slug>-800.webp): the card offers it to small
+    screens with srcset and sizes when it is on disk, and the tag is the old one when it is not."""
+
+    def setUp(self):
+        super().setUp()
+        self.town(True)
+        put(self.root, "sample/index.html", FEATURE_PAGE)
+        put_bytes(self.root, "sample/card.png", png_head(1000, 800))
+        put(self.root, "_tools/data/featured.json", json.dumps(FEATURE))
+
+    def shot(self, name, w, h):
+        put_bytes(self.root, "work/shots/desktop/%s.webp" % name, webp_head(w, h))
+
+    def imgs(self):
+        code, out = self.run_main("--no-shots")
+        self.assertEqual(code, 0, out)
+        return re.findall(r"<img [^>]*>", self.read("work/index.html"))
+
+    def test_card_with_an_800_copy_gets_srcset_and_sizes_after_height(self):
+        self.shot("bluebird-roofing", 1200, 750)
+        self.shot("bluebird-roofing-800", 800, 500)
+        self.assertEqual(self.imgs()[1],
+                         '<img src="/work/shots/desktop/bluebird-roofing.webp" ' + ROOFER_ALT +
+                         ' width="1200" height="750" srcset="/work/shots/desktop/bluebird-roofing-800.webp 800w, '
+                         '/work/shots/desktop/bluebird-roofing.webp 1200w" ' + SIZES +
+                         ' loading="lazy" decoding="async">')
+
+    def test_lead_card_with_an_800_copy_gets_srcset_and_stays_not_lazy(self):
+        os.remove(os.path.join(self.root, "_tools/data/featured.json"))
+        self.shot("bluebird-roofing", 1200, 750)
+        self.shot("bluebird-roofing-800", 800, 500)
+        self.assertEqual(self.imgs(),
+                         ['<img src="/work/shots/desktop/bluebird-roofing.webp" ' + ROOFER_ALT +
+                          ' width="1200" height="750" srcset="/work/shots/desktop/bluebird-roofing-800.webp 800w, '
+                          '/work/shots/desktop/bluebird-roofing.webp 1200w" ' + SIZES + ' decoding="async">'])
+
+    def test_card_without_an_800_copy_keeps_the_old_tag(self):
+        self.shot("bluebird-roofing", 1200, 750)
+        self.shot("granite-ridge-test", 1920, 1200)
+        self.assertEqual(self.imgs(),
+                         ['<img src="/work/shots/desktop/granite-ridge-test.webp" ' + MASON_ALT +
+                          ' width="1200" height="750" decoding="async">',
+                          '<img src="/work/shots/desktop/bluebird-roofing.webp" ' + ROOFER_ALT +
+                          ' width="1200" height="750" loading="lazy" decoding="async">'])
+
+    def test_a_1920_wide_shot_says_1920w_and_keeps_its_width_and_height(self):
+        # the feature shot is kept at 1920 x 1200 on purpose; the tag still says 1200 x 750 (same shape)
+        self.shot("granite-ridge-test", 1920, 1200)
+        self.shot("granite-ridge-test-800", 800, 500)
+        self.shot("bluebird-roofing", 1200, 750)
+        imgs = self.imgs()
+        self.assertEqual(imgs[0],
+                         '<img src="/work/shots/desktop/granite-ridge-test.webp" ' + MASON_ALT +
+                         ' width="1200" height="750" srcset="/work/shots/desktop/granite-ridge-test-800.webp 800w, '
+                         '/work/shots/desktop/granite-ridge-test.webp 1920w" ' + SIZES + ' decoding="async">')
+        # only the card that has a copy gets it
+        self.assertNotIn("srcset", imgs[1])
+
+    def test_only_a_real_800_copy_of_a_readable_wider_shot_is_offered(self):
+        cases = {
+            "the copy is not 800 px wide (another design's own shot)": ((1200, 750), (1200, 750)),
+            "the copy is a different shape": ((1200, 750), (800, 800)),
+            "the big shot is not wider than the copy": ((800, 500), (800, 500)),
+        }
+        for why, (big, small) in cases.items():
+            with self.subTest(why=why):
+                self.shot("bluebird-roofing", *big)
+                self.shot("bluebird-roofing-800", *small)
+                self.assertNotIn("srcset", "".join(self.imgs()))
+        with self.subTest(why="the big shot cannot be read"):
+            put(self.root, "work/shots/desktop/bluebird-roofing.webp", "desktop")
+            self.shot("bluebird-roofing-800", 800, 500)
+            self.assertNotIn("srcset", "".join(self.imgs()))
+        with self.subTest(why="the copy cannot be read"):
+            self.shot("bluebird-roofing", 1200, 750)
+            put(self.root, "work/shots/desktop/bluebird-roofing-800.webp", "small")
+            self.assertNotIn("srcset", "".join(self.imgs()))
+
+    def test_feature_on_its_page_picture_never_gets_a_stray_800_copy(self):
+        # no desktop shot yet, so the feature card shows /sample/card.png: a left over -800 file is another picture
+        self.shot("granite-ridge-test-800", 800, 500)
+        imgs = self.imgs()
+        self.assertEqual(imgs[0], '<img src="/sample/card.png" ' + MASON_ALT +
+                         ' width="1000" height="800" decoding="async">')
+
+    def test_a_copy_one_pixel_off_in_height_still_counts(self):
+        # 1200 x 751 scaled to 800 wide is 500.67 high: 500 or 501 are both the same picture
+        self.shot("bluebird-roofing", 1200, 751)
+        self.shot("bluebird-roofing-800", 800, 501)
+        self.assertIn("bluebird-roofing-800.webp 800w", self.imgs()[1])
+
+    # ---- the note when a desktop shot that has an 800 px copy is retaken
+
+    def retake(self, new_bytes, *args):
+        real = bp.take_shots
+
+        def fake(phone, desktop=(), pages=None):
+            for slug in desktop:
+                if new_bytes is not None:
+                    put_bytes(self.root, "work/shots/desktop/%s.webp" % slug, new_bytes)
+            return []
+        bp.take_shots = fake
+        try:
+            code, out = self.run_main(*args)
+        finally:
+            bp.take_shots = real
+        self.assertEqual(code, 0, out)
+        return out
+
+    def test_retaking_a_shot_that_has_an_800_copy_says_to_remake_the_copy(self):
+        self.shot("bluebird-roofing", 1200, 750)
+        self.shot("bluebird-roofing-800", 800, 500)
+        self.shot("granite-ridge-test", 1920, 1200)
+        out = self.retake(webp_head(1200, 750) + b"new picture", "--shots")
+        self.assertIn("Note: bluebird-roofing was retaken and its 800 px copy is from the old picture; "
+                      "run python3 _tools/make_small_shots.py", out)
+        # the feature shot was retaken too, but it has no copy, so no line names it
+        self.assertEqual([ln for ln in out.splitlines() if "make_small_shots" in ln and "granite-ridge-test" in ln], [])
+        self.assertEqual(out.count("make_small_shots"), 1)
+
+    def test_no_remake_note_when_nothing_was_retaken(self):
+        self.shot("bluebird-roofing", 1200, 750)
+        self.shot("bluebird-roofing-800", 800, 500)
+        self.shot("granite-ridge-test", 1920, 1200)
+        self.assertNotIn("make_small_shots", self.retake(None, "--shots"))       # asked, but no new file came back
+        self.assertNotIn("make_small_shots", self.retake(webp_head(1200, 750) + b"new", "--no-shots"))
+        put(self.root, "work/shots/bluebird-roofing.webp", "phone")
+        self.assertNotIn("make_small_shots", self.retake(webp_head(1200, 750) + b"new"))  # nothing missing
+
+    def test_no_remake_note_for_a_first_shot_without_a_copy(self):
+        out = self.retake(webp_head(1200, 750))
+        self.assertNotIn("make_small_shots", out)
+
+
+class Layout(SiteBase):
+    """Mixed card sizes: which design cards run two columns wide so every grid row is full."""
+
+    def test_wide_cards_fill_three_column_rows(self):
+        cases = {0: set(), 1: set(), 2: {0}, 3: set(), 4: {0, 3}, 5: {3}, 6: set(), 7: {3, 6}, 8: {3}, 9: set(),
+                 11: {3}}
+        for n, want in cases.items():
+            with self.subTest(n=n):
+                wide = bp.wide_cards(n, 3)
+                self.assertEqual(wide, want)
+                if n >= 2:
+                    self.assertEqual((n + len(wide)) % 3, 0)
+
+    def test_wide_cards_fill_two_column_rows(self):
+        for n, want in {0: set(), 1: {0}, 2: set(), 7: {6}, 8: set(), 9: {8}}.items():
+            with self.subTest(n=n):
+                self.assertEqual(bp.wide_cards(n, 2), want)
+
+    def test_cards_carry_the_wide_classes(self):
+        entries = [dict(ENTRY, real="real-shop-%d" % i, slug="test-shop-%d" % i, name="Test Shop %d" % i)
+                   for i in range(1, 9)]
+        for e in entries:
+            put(self.root, "designs/%s/index.html" % e["slug"], DESIGN)
+        shutil.rmtree(os.path.join(self.root, "designs", "bluebird-roofing"))
+        self.designs(entries)
+        put(self.root, "sample/index.html", FEATURE_PAGE)
+        put_bytes(self.root, "sample/card.png", png_head(1000, 800))
+        put(self.root, "_tools/data/featured.json", json.dumps(FEATURE))
+        code, out = self.run_main("--no-shots")
+        self.assertEqual(code, 0, out)
+        classes = re.findall(r'<li class="([^"]*)">', self.read("work/index.html"))
+        self.assertEqual(classes, ["work-card feature"] + ["work-card"] * 3 + ["work-card wide-3"] + ["work-card"] * 4)
+        # one design less: odd count, so the last card runs wide in two columns too
+        self.designs(entries[:7])
+        code, out = self.run_main("--no-shots")
+        self.assertEqual(code, 0, out)
+        classes = re.findall(r'<li class="([^"]*)">', self.read("work/index.html"))
+        self.assertEqual(classes, ["work-card feature"] + ["work-card"] * 3 + ["work-card wide-3"] + ["work-card"] * 2
+                         + ["work-card wide-3 wide-2"])
+
+
+def visible(markup):
+    return " ".join(html.unescape(re.sub(r"<[^>]+>", " ", markup)).split())
+
+
+def faq_pairs(markup):
+    return [(visible(q), visible(a)) for q, a in
+            re.findall(r'<details class="faq-item"><summary>(.*?)</summary><p>(.*?)</p></details>', markup, re.S)]
 
 
 class Tracked(unittest.TestCase):
@@ -496,6 +1221,33 @@ class Tracked(unittest.TestCase):
         with open(os.path.join(REAL_ROOT, ".gitignore"), encoding="utf-8") as f:
             lines = [ln.strip() for ln in f]
         self.assertIn("_tools/data/designs.private.json", lines)
+
+
+    def work_template(self):
+        with open(os.path.join(REAL_ROOT, "_tools", "templates", "work.html"), encoding="utf-8") as f:
+            return f.read()
+
+    def test_work_faq_is_copied_word_for_word_from_the_faq_page(self):
+        tpl = self.work_template()
+        with open(os.path.join(REAL_ROOT, "faq", "index.html"), encoding="utf-8") as f:
+            faq_page = dict(faq_pairs(f.read()))
+        m = re.search(r'<section class="section(?: grid-bg)?" id="faq" aria-labelledby="faq-title">(.*?)</section>', tpl, re.S)
+        self.assertIsNotNone(m, "no FAQ section on /work/")
+        pairs = faq_pairs(m.group(1))
+        self.assertIn(len(pairs), (3, 4))
+        for q, a in pairs:
+            self.assertIn(q, faq_page)
+            self.assertEqual(a, faq_page[q])
+        self.assertIn('<div class="faq center">', m.group(1))
+        self.assertIn('<a class="link-arrow" href="/faq/">', m.group(1))
+        self.assertNotIn('href="/work/"', m.group(1))                    # no link back to the same page
+        self.assertNotRegex(visible(m.group(1)), "[-‐-―−]")
+
+    def test_work_faq_sits_after_the_cards_and_before_the_closing_card(self):
+        tpl = self.work_template()
+        self.assertEqual(tpl.count("{{CARDS}}"), 1)
+        self.assertLess(tpl.index("{{CARDS}}"), tpl.index('id="faq"'))
+        self.assertLess(tpl.index('id="faq"'), tpl.index('class="section work-close"'))
 
 
 if __name__ == "__main__":

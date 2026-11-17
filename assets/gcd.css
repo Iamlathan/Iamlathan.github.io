@@ -1,0 +1,945 @@
+/*
+  Granite City Digital shared styles.
+
+  Components (class names):
+  Layout ........ .container  .section  .section-band  .section-head  .label  .lead  .muted
+  Buttons ....... .btn  .btn-primary  .btn-glass  .btn-outline  .btn-sm  .btn-block  .link-arrow
+  Surfaces ...... .glass  .glass-strong  .glass-light  .card  .glow  .glow-hero  .glow-corner  .hairline
+  Header ........ .site-header  .bar  .brand  .brand-mark  .nav  .bar-actions  .menu-btn  .menu-panel
+  Footer ........ .site-footer  .footer-top  .footer-line  .badges  .badge  .footer-links  .footer-bottom
+  Call bar ...... .callbar  .callbar-num  .callbar-actions  (only /get-started/ now)
+  Floating bar .. .fbar  .fbar-panel  .fbar-icon  .fbar-text  .fbar-line  .fbar-sub  .fbar-actions  .fbar-call  .fbar-x  (.dismissed  .is-ready  .is-entering  .is-away)
+  Home hero ..... .hero  .hero-media  .hero-stone  .hero-sweep  .hero-lit  .hero-veil  .hero-inner
+                  .pill  .pill-dot  .hero-title  .hero-sub  .hero-actions  .hero-checks  .checks
+  Inner hero .... .page-hero  .page-hero-inner
+  Trust row ..... .trust  .badges
+  Why ........... .why  .why-photo  .why-list  .why-item
+  Services ...... .service-grid  .service-card  .icon-tile
+  Steps ......... .steps  .step  .step-num
+  Proof ......... .proof-card  .proof-text  .tags  .tag  .browser  .browser-bar  .browser-dots  .browser-url  .browser-view
+  Arguments ..... .args  .arg
+  Included ...... .included  .included-item
+  Related ....... .chips  .chip
+  FAQ ........... .faq  .faq-item (details)  .faq-more
+  Closing card .. .closing
+  Contact ....... .contact-card  .contact-ways  .contact-way  .area
+  Forms ......... .form-card  .step-tabs  .step-tab  .form-step  .field  .field-row  .field-note  .choice-grid  .choice
+                  .form-actions  .form-error  .form-thanks  .hp
+  Reveal ........ .reveal (one block per section, timed, shown by nav.js; visible without script)
+*/
+
+/* ---------- font ---------- */
+/* Manrope, served from this site (SIL Open Font License 1.1, see /assets/fonts/OFL.txt).
+   The same files, weights and character ranges Google Fonts serves for Manrope 400, 500 and 600. */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/manrope-v23-cyrillic-ext.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F} /* cyrillic-ext */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/manrope-v23-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116} /* cyrillic */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/manrope-v23-greek.woff2) format('woff2');unicode-range:U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF} /* greek */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/manrope-v23-vietnamese.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB} /* vietnamese */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/manrope-v23-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF} /* latin-ext */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/manrope-v23-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD} /* latin */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/manrope-v23-cyrillic-ext.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F} /* cyrillic-ext */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/manrope-v23-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116} /* cyrillic */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/manrope-v23-greek.woff2) format('woff2');unicode-range:U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF} /* greek */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/manrope-v23-vietnamese.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB} /* vietnamese */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/manrope-v23-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF} /* latin-ext */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/manrope-v23-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD} /* latin */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/manrope-v23-cyrillic-ext.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F} /* cyrillic-ext */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/manrope-v23-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116} /* cyrillic */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/manrope-v23-greek.woff2) format('woff2');unicode-range:U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF} /* greek */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/manrope-v23-vietnamese.woff2) format('woff2');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB} /* vietnamese */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/manrope-v23-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF} /* latin-ext */
+@font-face{font-family:'Manrope';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/manrope-v23-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD} /* latin */
+
+/* ---------- tokens ---------- */
+:root{
+  --bg:#0b0b0c;
+  --bg-2:#111113;
+  --bg-3:#17171a;
+  --surface:#131315;
+  --text:#f2f1ec;
+  --text-2:#a6a59e;
+  --text-3:#9a9992;
+  --yellow:#f3c300;
+  --yellow-light:#ffe27a;
+  --yellow-deep:#d9a400;
+  --yellow-soft:#f5d978;
+  --gold-muted:#c9a54a;
+  --line:rgba(255,255,255,.08);
+  --line-2:rgba(255,255,255,.12);
+  --grad-yellow:linear-gradient(135deg,var(--yellow-light) 0%,var(--yellow) 48%,var(--yellow-deep) 100%);
+  --shadow-glow:0 20px 60px -18px rgba(243,195,0,.55);
+  --shadow-glow-sm:0 10px 34px -14px rgba(243,195,0,.6);
+  --shadow-card:0 10px 40px -12px rgba(0,0,0,.55);
+  /* three layers, one light from straight above, the drop grows with the level: page (flat), raised card, floating (bars, menus, panels) */
+  --shadow-page:none;
+  --shadow-raised:0 24px 60px -30px rgba(0,0,0,.7);
+  --shadow-float:0 30px 80px -20px rgba(0,0,0,.72);
+  --shadow-elevated:var(--shadow-float);
+  /* the page backdrop, shared by body::before and by the heroes and bands that cover the grid with an exact copy of it */
+  --backdrop:radial-gradient(90% 60% at 50% -8%,rgba(92,72,22,.32) 0%,rgba(40,32,14,.18) 38%,transparent 66%),linear-gradient(180deg,#0a0a0b 0%,#0f0e0c 48%,#17140f 100%);
+  --glass-bg:rgba(20,20,22,.55);
+  --glass-strong-bg:rgba(14,14,16,.72);
+  --r-card:28px;
+  --r-panel:24px;
+  --r-input:16px;
+  --container:1280px;
+  --pad:24px;
+  --space:96px;
+  --grid-alpha:.018;
+  --ease-out:cubic-bezier(.23,1,.32,1);
+  --ease-in-out:cubic-bezier(.77,0,.175,1);
+  --ease-lift:cubic-bezier(.4,0,.2,1);
+  --ease-reveal:cubic-bezier(.16,1,.3,1);
+  --font:Manrope,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+
+/* ---------- base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;font-family:var(--font);font-size:16px;line-height:1.6;color:var(--text);background:transparent;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;overflow-x:hidden}
+/* page backdrop: fixed behind every screen, near black at the top to a dark warm charcoal, one warm light from above */
+body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:var(--backdrop)}
+/* the grid cover: one faint 64px grid fixed to the screen behind the whole page (lines at screen x 0, 64 ... and y 0, 64 ...),
+   1px white lines at --grid-alpha. Open sections let it show; heroes, bands and solid cards sit on top and cover it. */
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,var(--grid-alpha)) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,var(--grid-alpha)) 1px,transparent 1px);background-size:64px 64px}
+/* mouse glow (made by nav.js, real mouse only): a soft flashlight on the granite grid, behind every card, band and photo.
+   Two parts under one round mask that fades to nothing (no edge, no ring): a faint pool of warm white light (5% at the
+   centre) and the same 64px grid lines much brighter (18% at the centre, ten times the still grid). Warm white is --text.
+   nav.js moves the round layer to the cursor by transform and moves the lines inside it back by the opposite transform,
+   so the lines stay exactly on the page grid. Both are painted once; following the mouse is transform only (no repaint). */
+.grid-glow{position:fixed;left:0;top:0;z-index:-1;width:720px;height:720px;overflow:hidden;pointer-events:none;opacity:0;transform:translate3d(-2000px,-2000px,0);background:rgba(242,241,236,.05);-webkit-mask-image:radial-gradient(closest-side,#000 0%,rgba(0,0,0,.62) 34%,rgba(0,0,0,.24) 64%,rgba(0,0,0,.06) 86%,transparent 100%);mask-image:radial-gradient(closest-side,#000 0%,rgba(0,0,0,.62) 34%,rgba(0,0,0,.24) 64%,rgba(0,0,0,.06) 86%,transparent 100%);transition:opacity 600ms ease;will-change:transform}
+.grid-glow-lines{position:absolute;left:0;top:0;width:100vw;height:100vh;background-image:linear-gradient(rgba(242,241,236,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(242,241,236,.18) 1px,transparent 1px);background-size:64px 64px;will-change:transform}
+.grid-glow.is-on{opacity:1}
+@media (hover:none),(pointer:coarse){.grid-glow{display:none}}
+main{overflow-x:clip}
+h1,h2,h3,h4,p,ul,ol,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+h1,h2,h3,h4{font-weight:500;letter-spacing:-.025em;line-height:1.08;text-wrap:balance}
+p{text-wrap:pretty}
+::selection{background:rgba(243,195,0,.32);color:#fff}
+:focus-visible{outline:2px solid var(--yellow);outline-offset:3px;border-radius:8px}
+[id]{scroll-margin-top:24px}
+html{scrollbar-color:#2a2a2e var(--bg)}
+.skip{position:absolute;left:12px;top:-80px;z-index:100;background:var(--yellow);color:#111;padding:10px 16px;border-radius:999px;font-weight:600;font-size:14px}
+.skip:focus{top:12px}
+.nowrap{white-space:nowrap}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- layout ---------- */
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 var(--pad)}
+.section{position:relative;padding:var(--space) 0}
+.section-band{background:linear-gradient(90deg,transparent,rgba(243,195,0,.22),transparent) top/100% 1px no-repeat,rgba(26,23,17,.4);border-top:1px solid rgba(255,255,255,.09);border-bottom:1px solid rgba(255,255,255,.09)}
+/* bands cover the grid: a fixed copy of the backdrop under the fill, clipped to the band; edges and hairline redrawn above */
+.section-band{position:relative;isolation:isolate;-webkit-clip-path:inset(0);clip-path:inset(0)}
+.section-band::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(rgba(26,23,17,.4),rgba(26,23,17,.4)),var(--backdrop)}
+.section-band::after{content:"";position:absolute;inset:-1px 0;z-index:-1;pointer-events:none;border-top:1px solid rgba(255,255,255,.09);border-bottom:1px solid rgba(255,255,255,.09);background:linear-gradient(90deg,transparent,rgba(243,195,0,.22),transparent) top/100% 1px no-repeat}
+.section-band + .section-band::after{top:0;border-top:0}
+/* the clip path clips the glows; overflow hidden would also clip the redrawn edges */
+.section-band.section-band{overflow:visible}
+/* .grid-bg once drew its own grid on chosen sections; the one site wide layer (body::after) does it now, so lines never stack */
+.grid-bg{position:relative;isolation:isolate}
+/* big soft yellow glows placed behind key sections */
+.has-blob{isolation:isolate}
+.blob{position:absolute;z-index:-1;pointer-events:none;border-radius:50%;background:rgba(243,190,30,.11);filter:blur(110px)}
+.blob-why{width:520px;height:520px;left:-180px;top:12%}
+.blob-process{width:min(900px,90vw);height:340px;left:50%;top:46%;transform:translate(-50%,-50%);background:rgba(243,190,30,.12);filter:blur(120px)}
+.section-band + .section-band{border-top:0}
+#services{padding:112px 0}
+.section-head{max-width:768px;margin-bottom:56px}
+/* laptop heading and lead caps, tighter to match the reference measurements (Why 584 and 512, services and process 672) */
+#why .section-head h2{max-width:584px}
+#why .section-head .lead{max-width:512px}
+:is(#services,#process) .section-head h2{max-width:672px}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.label{display:inline-block;font-size:12px;line-height:16px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow);margin-bottom:20px}
+.section-head h2,.h2{font-size:clamp(32px,4.2vw,50px);font-weight:500;letter-spacing:-.03em;line-height:1.04}
+.lead{font-size:17px;line-height:1.65;color:var(--text-2);max-width:672px;margin-top:18px}
+.section-head.center .lead{margin-left:auto;margin-right:auto}
+.muted{color:var(--text-2)}
+.hairline{height:1px;border:0;margin:0;background:linear-gradient(90deg,transparent,rgba(243,195,0,.45),transparent)}
+
+/* ---------- buttons ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:14px 26px;border-radius:999px;border:1px solid transparent;font-family:inherit;font-size:15px;font-weight:600;line-height:1.1;letter-spacing:-.005em;white-space:nowrap;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform 160ms var(--ease-out),box-shadow 200ms ease,background-color 200ms ease,border-color 200ms ease,color 200ms ease,filter 200ms ease}
+.btn svg{width:17px;height:17px;flex:none}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--grad-yellow);color:#141106;box-shadow:var(--shadow-glow),inset 0 1px 0 rgba(255,255,255,.45)}
+.btn-primary .arrow{transition:transform 200ms var(--ease-out)}
+.btn-glass{background:rgba(255,255,255,.05);color:var(--text);border-color:var(--line-2);-webkit-backdrop-filter:blur(32px) saturate(160%);backdrop-filter:blur(32px) saturate(160%)}
+.btn-outline{background:transparent;color:var(--text-2);border-color:var(--line-2)}
+.btn-sm{min-height:40px;padding:10px 18px;font-size:14px}
+.btn-block{width:100%}
+@media (hover:hover) and (pointer:fine){
+  .btn-primary:hover{filter:brightness(1.06);box-shadow:0 22px 64px -16px rgba(243,195,0,.7),inset 0 1px 0 rgba(255,255,255,.5)}
+  .btn-primary:hover .arrow{transform:translateX(3px)}
+  .btn-glass:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.22)}
+  .btn-outline:hover{color:var(--text);border-color:rgba(255,255,255,.22)}
+}
+/* every button and chip grows a touch on hover (1.03) and still presses to .97; the pulsing top bar button does the same through its own numbers */
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  :is(.btn,.chip):not(.bar-actions .btn-primary,[disabled]):hover{transform:scale(1.03)}
+  :is(.btn,.chip):not(.bar-actions .btn-primary,[disabled]):hover:active{transform:scale(.97)}
+}
+.link-arrow{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--yellow);transition:color 200ms ease,opacity 160ms var(--ease-out)}
+.link-arrow svg{width:15px;height:15px;transition:transform 200ms var(--ease-out)}
+.link-arrow:active{opacity:.75}
+/* text links, one way: the colour brightens on hover in 200 ms and the link dims to 75% while pressed, in 160 ms (it never snaps) */
+:is(.footer-col a,.faq-item p a,.check a,.legal-body .legal a:not(.btn),.form-error a,.noscript-note a,.fc-err a,.sent p a,.included-item p a){transition:color 200ms ease,opacity 160ms var(--ease-out)}
+:is(.footer-col a,.faq-item p a,.check a,.legal-body .legal a:not(.btn),.form-error a,.noscript-note a,.fc-err a,.sent p a,.included-item p a):active{opacity:.75}
+@media (hover:hover) and (pointer:fine){:is(.faq-item p a,.check a,.form-error a,.noscript-note a,.fc-err a,.sent p a,.included-item p a):hover{color:var(--yellow-light)}}
+/* a link inside card copy looks like every other link in running text: yellow, thin underline */
+.included-item p a{color:var(--yellow);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+/* the logo link presses like a button; the name is already full white and the bird mark and its glow stay exactly as they are */
+.brand{transition:transform 160ms var(--ease-out)}
+.brand:active{transform:scale(.97)}
+/* 44px tall tap area; the negative margin keeps the text exactly where it was */
+.link-arrow{min-height:44px;margin-block:-11px}
+@media (hover:hover) and (pointer:fine){.link-arrow:hover{color:var(--yellow-light)}.link-arrow:hover svg{transform:translateX(3px)}}
+
+/* ---------- surfaces ---------- */
+.glass{background:var(--glass-bg);border:1px solid var(--line);-webkit-backdrop-filter:blur(32px) saturate(160%);backdrop-filter:blur(32px) saturate(160%);box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.glass-strong{background:var(--glass-strong-bg);border:1px solid rgba(255,255,255,.1);-webkit-backdrop-filter:blur(40px) saturate(180%);backdrop-filter:blur(40px) saturate(180%);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),var(--shadow-card)}
+.glass-light{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.008)),rgba(12,11,10,.55);border:1px solid var(--line);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.card{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.04) 0%,rgba(255,255,255,.012) 45%,rgba(255,255,255,.008) 100%),rgba(17,16,14,.74);border:1px solid rgba(255,255,255,.08);border-radius:var(--r-card);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),var(--shadow-raised);overflow:hidden;isolation:isolate}
+/* hairline gold top edge for highlighted cards */
+.hl-top::after{content:"";position:absolute;left:12%;right:12%;top:0;height:1px;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(243,195,0,.6),transparent);z-index:2}
+.glow{position:absolute;pointer-events:none;border-radius:999px;background:rgba(255,196,20,.2);filter:blur(110px);z-index:0}
+.glow-hero{width:min(760px,90vw);height:320px;left:50%;top:70px;transform:translateX(-50%);background:rgba(255,190,24,.2)}
+.glow-corner{width:300px;height:300px;right:-120px;top:-120px;background:rgba(243,195,0,.16);filter:blur(70px);transition:opacity 300ms ease,transform 600ms var(--ease-out)}
+
+/* ---------- header ---------- */
+.site-header{position:absolute;top:20px;left:0;right:0;z-index:50}
+/* the header box grows with the closed phone menu below 961px; only the bar and the open menu take taps, so the hero buttons under it stay tappable */
+.site-header{pointer-events:none}
+.site-header .bar,.site-header .menu-panel{pointer-events:auto}
+.bar{display:flex;align-items:center;gap:16px;height:64px;padding:0 12px 0 18px;border-radius:var(--r-panel)}
+/* the top bar's blur lives on a layer behind it, so the Services panel inside the bar can blur and cover the page on its own (a blurred parent hides a blurred child's backdrop in Chrome) */
+.site-header .bar{position:relative;isolation:isolate;background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
+.site-header .bar::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--glass-strong-bg);-webkit-backdrop-filter:blur(40px) saturate(180%);backdrop-filter:blur(40px) saturate(180%);pointer-events:none}
+.brand{display:inline-flex;align-items:center;gap:11px;min-height:44px;margin-block:-5px;font-size:17px;font-weight:600;letter-spacing:-.02em;white-space:nowrap;flex:none}
+.brand-mark{width:34px;height:34px;filter:drop-shadow(0 0 16px rgba(243,195,0,.38))}
+.nav{display:flex;align-items:center;gap:4px;margin:0 auto}
+.nav > a,.nav-dd-btn{display:inline-flex;align-items:center;min-height:40px;padding:0 14px;border-radius:999px;font-size:14px;font-weight:500;color:var(--text-2);transition:color 200ms ease,background-color 200ms ease}
+.nav > a[aria-current="page"],.nav-dd-btn.is-current{color:var(--text)}
+.nav > a:active,.nav-dd-btn:active{background:rgba(255,255,255,.08)}
+@media (hover:hover) and (pointer:fine){.nav > a:hover,.nav-dd-btn:hover{color:var(--text);background:rgba(255,255,255,.05)}.nav > a:hover:active,.nav-dd-btn:hover:active{background:rgba(255,255,255,.08)}}
+
+/* ---------- Services dropdown (top bar) ---------- */
+.nav-dd{position:static}
+.nav-dd-btn{gap:6px;padding:0 11px 0 14px;border:0;background:transparent;font-family:inherit;line-height:1;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.nav-dd-btn svg{width:14px;height:14px;flex:none;opacity:.8;transition:transform 200ms var(--ease-out)}
+.nav-dd.is-open .nav-dd-btn{color:var(--text);background:rgba(255,255,255,.06)}
+.nav-dd.is-open .nav-dd-btn:active{background:rgba(255,255,255,.08)}
+.nav-dd.is-open .nav-dd-btn svg{transform:rotate(180deg)}
+/* the panel hangs from the top bar and is centered on it; it starts at the Services button's bottom edge (12px above the bar's), so its top padding is the hover bridge */
+.dd{position:absolute;top:calc(100% - 12px);left:50%;z-index:70;width:min(820px,calc(100vw - 48px));padding-top:16px;transform:translateX(-50%);visibility:hidden;opacity:0;pointer-events:none;transition:opacity 150ms ease,visibility 0s linear 150ms}
+.dd-panel{position:relative;padding:22px;border-radius:var(--r-panel);background:linear-gradient(90deg,transparent,rgba(243,195,0,.5),transparent) top/100% 1px no-repeat,linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,0) 40%),rgba(13,12,11,.985);border:1px solid rgba(255,255,255,.1);-webkit-backdrop-filter:blur(40px) saturate(150%);backdrop-filter:blur(40px) saturate(150%);box-shadow:var(--shadow-elevated),inset 0 1px 0 rgba(255,255,255,.06);transform:translateY(6px) scale(.985);transform-origin:50% 0;transition:transform 200ms var(--ease-out)}
+.nav-dd.is-open .dd{visibility:visible;opacity:1;pointer-events:auto;transition:opacity 150ms ease,visibility 0s}
+.nav-dd.is-open .dd-panel{transform:none}
+.dd-head{padding:0 8px 16px;margin-bottom:12px;border-bottom:1px solid rgba(255,255,255,.07)}
+.dd-label{font-size:11px;line-height:16px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow)}
+.dd-title{margin-top:4px;font-size:18px;line-height:1.4;font-weight:600;letter-spacing:-.015em;color:var(--text)}
+.dd-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,296px);grid-template-areas:"svc grp" "ft ft";gap:10px 14px}
+.dd-grid{grid-area:svc;display:grid;gap:2px}
+.dd-group{grid-area:grp;align-self:start;display:flex;flex-direction:column;padding:16px 8px 8px;border-radius:18px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06)}
+.dd-group-h{padding:0 10px 10px;font-size:11px;line-height:16px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--text-3)}
+.dd-trades{display:grid;gap:2px}
+.dd-trade .dd-icon{width:36px;height:36px;border-radius:11px}
+.dd-trade .dd-icon svg{width:17px;height:17px}
+.dd-feature{grid-area:ft;margin-top:4px}
+.dd-item{display:flex;align-items:flex-start;gap:14px;padding:9px 10px;border-radius:16px;color:var(--text);transition:background-color 200ms ease,border-color 200ms ease}
+.dd-icon{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:12px;background:rgba(243,195,0,.1);border:1px solid rgba(243,195,0,.25);color:var(--yellow);margin-top:1px}
+.dd-icon svg{width:18px;height:18px}
+.dd-text{display:grid;gap:3px;min-width:0}
+.dd-text b{font-size:14px;line-height:1.35;font-weight:600;letter-spacing:-.01em}
+.dd-text small{font-size:12.5px;line-height:1.5;color:var(--text-2)}
+.dd-item[aria-current="page"] b{color:var(--yellow-soft)}
+.dd-feature{align-items:center;border:1px solid rgba(243,195,0,.2);background:rgba(243,195,0,.05)}
+.dd-feature .dd-icon{background:var(--grad-yellow);border-color:transparent;color:#141106}
+.dd-go{width:18px;height:18px;margin-left:auto;margin-right:6px;flex:none;color:var(--yellow);transition:transform 200ms var(--ease-out)}
+.dd-item:active{background:rgba(255,255,255,.08)}
+@media (hover:hover) and (pointer:fine){
+  .dd-item:hover{background:rgba(255,255,255,.05)}
+  .dd-item:hover b{color:#fff}
+  .dd-feature:hover{background:rgba(243,195,0,.09);border-color:rgba(243,195,0,.32)}
+  .dd-feature:hover .dd-go{transform:translateX(3px)}
+  .dd-item:hover:active{background:rgba(255,255,255,.08)}
+  .dd-feature:hover:active{background:rgba(243,195,0,.13)}
+}
+.dd-item:focus-visible{outline-offset:3px;border-radius:16px}
+.bar-actions{display:flex;align-items:center;gap:8px;flex:none}
+.bar-actions .btn-primary{--cta-rest:0 0 0 1px rgba(255,226,122,.35),0 8px 30px -8px rgba(243,195,0,.65),inset 0 1px 0 rgba(255,255,255,.45);box-shadow:var(--cta-rest)}
+/* living pulse, top bar Contact us only: a ring of our yellow at 55% grows 0 to 12px as it fades out, with scale 1 to 1.04, every 2.2 s.
+   The scale runs on a registered number. On hover the pulse pauses and a second number blends the button from wherever
+   the pulse stopped to 1.03 (the hover of every button) over .2s, and back into the running pulse on leave, so it never snaps.
+   A third number presses it to .97 in 160 ms, like every other button */
+@property --gcd-pulse-scale{syntax:"<number>";inherits:false;initial-value:1}
+@property --gcd-hover{syntax:"<number>";inherits:false;initial-value:0}
+@property --gcd-press{syntax:"<number>";inherits:false;initial-value:0}
+.bar-actions .btn-primary{--gcd-hover:0;--gcd-press:0;transform:scale(calc((var(--gcd-pulse-scale) * (1 - var(--gcd-hover)) + 1.03 * var(--gcd-hover)) * (1 - var(--gcd-press)) + .97 * var(--gcd-press)));transition:--gcd-hover .2s ease,--gcd-press 160ms var(--ease-out),box-shadow 200ms ease,background-color 200ms ease,border-color 200ms ease,color 200ms ease,filter 200ms ease;animation:gcd-cta-pulse 2.2s ease-in-out infinite}
+.bar-actions .btn-primary:active{--gcd-press:1}
+@keyframes gcd-cta-pulse{
+  0%,100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--yellow) 55%,transparent),var(--cta-rest);--gcd-pulse-scale:1}
+  50%{box-shadow:0 0 0 12px color-mix(in srgb,var(--yellow) 0%,transparent),var(--cta-rest);--gcd-pulse-scale:1.04}
+}
+@media (hover:hover) and (pointer:fine){.bar-actions .btn-primary:hover{animation-play-state:paused;--gcd-hover:1}}
+.menu-btn{display:none;align-items:center;justify-content:center;width:44px;height:44px;margin-left:auto;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.03);cursor:pointer;transition:background-color 200ms ease,transform 160ms var(--ease-out)}
+.menu-btn:active{transform:scale(.97)}
+.menu-btn svg{width:20px;height:20px}
+.menu-btn .i-close{display:none}
+.site-header.is-open .menu-btn .i-open{display:none}
+.site-header.is-open .menu-btn .i-close{display:block}
+.menu-panel{display:none}
+@media (max-width:960px){
+  .nav,.bar-actions{display:none}
+  .menu-btn{display:inline-flex}
+  .bar{padding:0 10px 0 14px}
+  .menu-panel{display:block;margin-top:10px;padding:10px;border-radius:var(--r-panel);background:rgba(12,12,14,.94);border:1px solid rgba(255,255,255,.1);-webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);box-shadow:var(--shadow-elevated);opacity:0;transform:translateY(-6px) scale(.98);transform-origin:top right;visibility:hidden;transition:opacity 180ms ease,transform 220ms var(--ease-out),visibility 0s linear 220ms}
+  .site-header.is-open .menu-panel{opacity:1;transform:none;visibility:visible;transition:opacity 180ms ease,transform 220ms var(--ease-out),visibility 0s}
+  .menu-panel .menu-link{display:flex;align-items:center;width:100%;min-height:48px;padding:0 14px;border:0;border-radius:14px;background:transparent;font-family:inherit;font-size:16px;font-weight:500;color:var(--text);text-align:left;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background-color 200ms ease}
+  .menu-panel .menu-link[aria-current="page"],.menu-panel .menu-sub-btn.is-current{color:var(--yellow-soft)}
+  .menu-panel .menu-link:active{background:rgba(255,255,255,.06)}
+  .menu-sub-btn{justify-content:space-between}
+  .menu-sub-btn svg{width:18px;height:18px;color:var(--text-2);transition:transform 220ms var(--ease-out)}
+  .menu-sub-btn[aria-expanded="true"]{background:rgba(255,255,255,.04)}
+  .menu-sub-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+  .menu-sub{margin:4px 0 8px 14px;padding-left:10px;border-left:1px solid rgba(255,255,255,.1)}
+  .menu-sub-list{display:grid;gap:2px}
+  .menu-group-h{margin:14px 10px 6px;font-size:11px;line-height:16px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--text-3)}
+  .menu-sub[hidden]{display:none}
+  .menu-sub-item{display:flex;align-items:flex-start;gap:12px;padding:10px 10px;border-radius:14px;color:var(--text);transition:background-color 200ms ease}
+  .menu-sub-item:active{background:rgba(255,255,255,.06)}
+  .menu-sub-item .dd-icon{width:34px;height:34px;border-radius:10px}
+  .menu-sub-item .dd-icon svg{width:16px;height:16px}
+  .menu-sub-item .dd-text b{font-size:15px}
+  .menu-sub-item .dd-text small{font-size:13px}
+  .menu-sub-item[aria-current="page"] b{color:var(--yellow-soft)}
+  .menu-panel .menu-actions{display:grid;gap:8px;padding:10px 4px 4px}
+}
+
+/* ---------- footer ---------- */
+.site-footer{position:relative;isolation:isolate;margin-top:128px;padding:64px 0;border-top:1px solid var(--line);background:linear-gradient(90deg,transparent,rgba(243,195,0,.22),transparent) top/100% 1px no-repeat,linear-gradient(180deg,rgba(20,18,14,.5),rgba(12,11,10,.75));color:var(--text-2);font-size:14px;overflow:hidden}
+/* the footer is open: its fill sits under the grid layer, so the grid shows over it at full strength */
+.site-footer{isolation:auto;background:none}
+.site-footer::before{content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(243,195,0,.22),transparent) top/100% 1px no-repeat,linear-gradient(180deg,rgba(20,18,14,.5),rgba(12,11,10,.75))}
+.footer-cols{display:grid;grid-template-columns:repeat(2,minmax(140px,auto));gap:32px 72px}
+.footer-h{margin-bottom:12px;font-size:12px;line-height:16px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--text)}
+.footer-col ul{display:grid;gap:2px}
+.footer-col a{display:inline-flex;align-items:center;min-height:36px;min-width:44px;padding-inline:8px;margin-inline:-8px;font-size:15px;color:var(--text-2);transition:color 200ms ease}
+.footer-col a[aria-current="page"]{color:var(--yellow-soft)}
+.footer-col a:active{color:var(--text)}
+@media (hover:hover) and (pointer:fine){.footer-col a:hover{color:var(--text)}}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
+/* four text levels: the name in full white, the pitch, a small serving line, then the accent line in the site yellow */
+.footer-brand{max-width:460px;display:grid}
+.footer-brand .brand{font-size:22px;letter-spacing:-.025em;color:var(--text)}
+.footer-pitch{margin-top:18px;font-size:15px;line-height:1.6;color:var(--text-2)}
+.footer-base{margin-top:14px;font-size:13px;line-height:1.5;color:var(--text-3)}
+.footer-line{margin-top:8px;font-size:13px;line-height:1.5;font-weight:600;color:var(--gold-muted);text-wrap:balance}
+.footer-links{display:flex;gap:6px;flex-wrap:wrap}
+.footer-links a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:999px;color:var(--text-2);transition:color 200ms ease,background-color 200ms ease}
+.footer-links a:active{background:rgba(255,255,255,.06)}
+@media (hover:hover) and (pointer:fine){.footer-links a:hover{color:var(--text)}}
+.site-footer .badges{margin-top:48px}
+.footer-bottom{margin-top:40px;padding-top:24px;border-top:1px solid var(--line);font-size:13px;color:var(--text-3);text-align:center}
+
+/* ---------- badges ---------- */
+/* side room so a pill never sits flush with the container edge, even just before the row wraps */
+.badges{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding-inline:16px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.035);border:1px solid rgba(243,195,0,.3);color:var(--yellow-soft);font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;line-height:1.2;white-space:nowrap}
+.badge svg{width:13px;height:13px;color:var(--yellow)}
+
+/* ---------- phone call bar ---------- */
+.callbar{display:none}
+@media (max-width:767px){
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+  .callbar{display:flex;align-items:center;gap:10px;position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:60;padding:8px 8px 8px 16px;border-radius:22px}
+  .callbar-num{display:grid;line-height:1.2;min-width:0;flex:1}
+  .callbar-num small{font-size:11px;color:var(--text-3);font-weight:500}
+  .callbar-num span{font-size:15px;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+  .callbar-actions{display:flex;gap:6px;flex:none}
+  .callbar .btn{min-height:44px;padding:10px 16px;font-size:14px}
+  .callbar .btn svg{width:15px;height:15px}
+  .callbar .btn-primary{box-shadow:var(--shadow-glow-sm),inset 0 1px 0 rgba(255,255,255,.45)}
+  .callbar{transition:opacity 180ms ease,transform 220ms var(--ease-out)}
+  .site-header.is-open ~ .callbar{opacity:0;transform:translateY(12px);pointer-events:none;visibility:hidden}
+  /* the bar holds the Call and Text buttons and rides over the moving sample strip, so it is solid: no glass blur behind them */
+  .callbar.glass-strong{background:rgb(16,16,18);-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+@media (max-width:767px){html{scroll-padding-bottom:88px}}
+@media (max-width:359px){
+  .callbar{padding-left:12px;gap:6px}
+  .callbar-num span{font-size:14px}
+  .callbar .btn{padding:10px 12px}
+  .callbar .btn svg{display:none}
+}
+
+/* ---------- floating bar (every page but /get-started/ and the samples) ----------
+   Laptop: one glass bar at the bottom, icon, line, Get my free preview, X (closes the bar for the visit).
+   Phone (767px and under): it takes the call bar's place: the line with its X on top, Call and Get my free preview below; the X hides only the line. */
+.fbar{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:0 24px calc(20px + env(safe-area-inset-bottom));pointer-events:none;transition:opacity 240ms ease,transform 240ms var(--ease-out),visibility 0s}
+.fbar-panel{pointer-events:auto;display:flex;align-items:center;gap:16px;max-width:1024px;margin:0 auto;padding:14px 16px;border-radius:var(--r-panel);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),var(--shadow-elevated)}
+.fbar-icon{display:inline-flex;align-items:center;justify-content:center;flex:none;width:36px;height:36px;border-radius:50%;background:rgba(243,195,0,.15);box-shadow:0 0 0 1px rgba(243,195,0,.3);color:var(--yellow)}
+.fbar-icon svg{width:16px;height:16px}
+.fbar-text{flex:1;min-width:0}
+.fbar-line{font-size:15px;line-height:1.25;font-weight:500;letter-spacing:-.005em;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* small second line under the main one: 12px regular at 16px leading, muted, no gap */
+.fbar-sub{font-size:12px;line-height:16px;font-weight:400;color:var(--text-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fbar-actions{display:flex;align-items:center;gap:8px;flex:none}
+.fbar-actions .btn-primary{box-shadow:var(--shadow-glow-sm),inset 0 1px 0 rgba(255,255,255,.45)}
+/* its glow grows on hover like every yellow button (the rule above would otherwise replace the hover glow) */
+@media (hover:hover) and (pointer:fine){.fbar-actions .btn-primary:hover{box-shadow:0 22px 64px -16px rgba(243,195,0,.7),inset 0 1px 0 rgba(255,255,255,.5)}}
+.fbar-call{display:none}
+.fbar-x{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none;width:28px;height:28px;padding:0;border:0;border-radius:50%;background:transparent;color:var(--text-2);cursor:pointer;-webkit-tap-highlight-color:transparent;transition:color 200ms ease,background-color 200ms ease,transform 160ms var(--ease-out)}
+.fbar-x::after{content:"";position:absolute;inset:-8px}
+.fbar-x svg{width:16px;height:16px}
+.fbar-x:active{transform:scale(.97)}
+.fbar-x:focus-visible{outline-offset:3px;border-radius:50%}
+@media (hover:hover) and (pointer:fine){.fbar-x:hover{color:var(--text);background:rgba(255,255,255,.1)}}
+@keyframes gcd-fbar-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+/* the bar steps aside instead of covering things (nav.js does the looking):
+   - until the script has run its first check the bar is invisible, so it never flashes over a button while the page loads
+   - .is-entering: its spot was clear at that first check, so it rises in the way it always has
+   - .is-away: a button, link, field, question row or form sits in its spot, or the visitor is typing in a form. A calm
+     160 ms fade with a 6 px drop, no clicks from the first frame, and hidden from the keyboard and screen readers once faded.
+     It comes back with the 240 ms fade on .fbar above. The X keeps its own class (.dismissed). */
+.fbar:not(.is-ready){visibility:hidden}
+.fbar.is-entering{animation:gcd-fbar-in 520ms var(--ease-out) 250ms backwards}
+.fbar.is-away{opacity:0;transform:translateY(6px);visibility:hidden;transition:opacity 160ms ease,transform 160ms var(--ease-out),visibility 0s linear 160ms}
+.fbar.is-away .fbar-panel{pointer-events:none}
+@media (min-width:768px){
+  /* the X closes the whole bar for the visit */
+  .fbar.dismissed{opacity:0;transform:translateY(16px);visibility:hidden;pointer-events:none;transition:opacity 160ms ease,transform 200ms var(--ease-out),visibility 0s linear 200ms}
+  /* room under the page so nothing sits behind the bar */
+  body:has(.fbar:not(.dismissed)){padding-bottom:calc(104px + env(safe-area-inset-bottom))}
+  html:has(.fbar:not(.dismissed)){scroll-padding-bottom:110px}
+}
+@media (max-width:767px){
+  .fbar{padding:0 12px calc(12px + env(safe-area-inset-bottom))}
+  /* on phones the panel holds the Call button, so it is solid: no glass blur behind the Call button */
+  .fbar .fbar-panel{background:rgb(16,16,18);-webkit-backdrop-filter:none;backdrop-filter:none}
+  .fbar-panel{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"line x" "act act";align-items:center;gap:4px 12px;padding:8px}
+  .fbar-icon{display:none}
+  .fbar-text{grid-area:line}
+  .fbar-line{line-height:24px;padding-left:6px;font-size:14px}
+  .fbar-sub{display:none}
+  .fbar-x{grid-area:x;width:44px;height:44px;margin:-10px -4px -10px 0}
+  .fbar-x::after{display:none}
+  .fbar-actions{grid-area:act;gap:6px}
+  .fbar-actions .btn{min-height:44px;padding:10px 16px;font-size:14px}
+  .fbar-actions .btn svg{width:15px;height:15px}
+  .fbar-call{display:inline-flex;flex:none}
+  .fbar-actions .btn-primary{flex:1}
+  /* the X hides only the line; Call and Get my free preview stay */
+  .fbar.dismissed .fbar-text,.fbar.dismissed .fbar-x{display:none}
+  .fbar.dismissed .fbar-panel{grid-template-areas:"act act"}
+  .site-header.is-open ~ .fbar{opacity:0;transform:translateY(12px);pointer-events:none;visibility:hidden;transition:opacity 180ms ease,transform 220ms var(--ease-out),visibility 0s}
+  body:has(.fbar){padding-bottom:calc(112px + env(safe-area-inset-bottom))}
+  body:has(.fbar.dismissed){padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+  html:has(.fbar){scroll-padding-bottom:120px}
+  html:has(.fbar.dismissed){scroll-padding-bottom:88px}
+  /* /get-started/ keeps its own Call and Text bar on phones; the floating bar there is for laptops only */
+  .callbar ~ .fbar{display:none}
+  body:has(.callbar):has(.fbar){padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+  html:has(.callbar):has(.fbar){scroll-padding-bottom:88px}
+}
+@media (max-width:359px){
+  .fbar-actions .btn{padding:10px 12px}
+  .fbar-actions .btn svg{display:none}
+}
+/* scripts off (in browsers that can tell): the bar cannot step aside, so it is not fixed. It is a plain block after the footer,
+   without the X (which needs the script), and the page keeps no empty room for a fixed bar. */
+@media (scripting:none){
+  .fbar:not(.is-ready){position:static;visibility:visible;padding-top:20px}
+  .fbar-x{display:none}
+  body:has(.fbar:not(.is-ready)){padding-bottom:env(safe-area-inset-bottom)}
+}
+@media (scripting:none) and (max-width:767px){
+  .fbar:not(.is-ready){padding-top:12px}
+  /* /get-started/ still has its fixed Call and Text bar on phones */
+  body:has(.callbar):has(.fbar:not(.is-ready)){padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+}
+
+/* ---------- home hero ---------- */
+.hero{position:relative;min-height:min(940px,100svh);display:flex;align-items:center;padding:168px 0 120px;overflow:hidden;isolation:isolate;background:var(--bg)}
+/* isolation flattens the screen blend inside the media layer, so nothing above it ever reads the moving layers one by one */
+.hero-media{position:absolute;inset:0;z-index:-1;overflow:hidden;isolation:isolate}
+.hero-stone{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+/* second mask layer fades the box's own left and right edges, so on narrow phones the band never ends in a hard line at the box edge */
+.hero-sweep{position:absolute;inset:0;overflow:hidden;-webkit-mask-image:linear-gradient(105deg,transparent 34%,rgba(0,0,0,.55) 44%,#000 50%,rgba(0,0,0,.55) 56%,transparent 66%),linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);mask-image:linear-gradient(105deg,transparent 34%,rgba(0,0,0,.55) 44%,#000 50%,rgba(0,0,0,.55) 56%,transparent 66%),linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);-webkit-mask-composite:source-in;mask-composite:intersect;transform:translateX(-90%);mix-blend-mode:screen;opacity:.68}
+.hero-lit{filter:brightness(2.4) sepia(1) saturate(3.4) hue-rotate(4deg) contrast(1.15);transform:translateX(90%)}
+.hero-sweep::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(243,195,0,.12) 50%,transparent 60%)}
+/* the endless sweep runs only inside the home hero (.hero), which pauses it off screen; elsewhere it is a still frame.
+   The light glides slowly across and back without a rest: 12 s each way on a soft sine ease, turning near the edges while the band is still in view.
+   Both layers share one duration, delay and ease so they always mirror each other. */
+.hero .hero-sweep{will-change:transform;animation:gcd-sweep 12s cubic-bezier(.37,0,.63,1) 1.2s infinite alternate both}
+.hero .hero-lit{will-change:transform;animation:gcd-sweep-counter 12s cubic-bezier(.37,0,.63,1) 1.2s infinite alternate both}
+@keyframes gcd-sweep{from{transform:translateX(-48%)}to{transform:translateX(48%)}}
+@keyframes gcd-sweep-counter{from{transform:translateX(48%)}to{transform:translateX(-48%)}}
+.hero.is-paused .hero-sweep,.hero.is-paused .hero-lit{animation-play-state:paused}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,.62) 0%,rgba(11,11,12,.48) 45%,rgba(11,11,12,.86) 82%,var(--bg) 100%),radial-gradient(70% 60% at 50% 42%,rgba(11,11,12,.35),transparent 70%)}
+.hero .glow-hero{z-index:0}
+/* glass over moving layers (hero sweep, area drift, and the phone bar Call button that rides over them) gets a solid dark fill and no backdrop blur: a blur reading animated layers can show false colour in some Chromium builds */
+.hero .btn-glass,.area-scene .btn-glass,.hero .pill.glass,.fbar .btn-glass{background:rgba(20,19,17,.85);border-color:rgba(255,255,255,.14);-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+@media (hover:hover) and (pointer:fine){.hero .btn-glass:hover,.area-scene .btn-glass:hover{background:rgba(34,32,29,.9);border-color:rgba(255,255,255,.22)}}
+/* every call button and call card on every page is solid: no backdrop blur, no filter and no blend on it, and its icon is painted
+   from a colour set on the button itself, never an inherited default. Call buttons never read the layers behind them. */
+.btn:is([href^="tel:"],[href^="sms:"]),.contact-way:is([href^="tel:"],[href^="sms:"]){filter:none;mix-blend-mode:normal;-webkit-backdrop-filter:none;backdrop-filter:none}
+.btn:is([href^="tel:"],[href^="sms:"]){transition:transform 160ms var(--ease-out),box-shadow 200ms ease,background-color 200ms ease,border-color 200ms ease,color 200ms ease}
+.btn-glass:is([href^="tel:"],[href^="sms:"]){background:rgba(20,19,17,.85);color:var(--text);border-color:rgba(255,255,255,.14);box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+.btn-primary:is([href^="tel:"],[href^="sms:"]){color:#141106}
+.contact-way:is([href^="tel:"],[href^="sms:"]){color:var(--text)}
+.contact-way:is([href^="tel:"],[href^="sms:"]) .icon-tile{color:var(--yellow)}
+.btn:is([href^="tel:"],[href^="sms:"]) svg,.contact-way:is([href^="tel:"],[href^="sms:"]) svg{fill:none;stroke:currentColor}
+/* panels that hold a phone or text link keep their fill, border and highlight but drop the backdrop blur */
+.legal-contact.glass,.side-card.glass:has(a[href^="tel:"],a[href^="sms:"]){-webkit-backdrop-filter:none;backdrop-filter:none}
+@media (hover:hover) and (pointer:fine){
+  .btn-glass:is([href^="tel:"],[href^="sms:"]):hover{background:rgba(34,32,29,.9);border-color:rgba(255,255,255,.22)}
+  .btn-primary:is([href^="tel:"],[href^="sms:"]):hover{filter:none}
+}
+/* the hero action rows hold a Call button, so their entrance leaves no filter behind once it ends (a kept blur(0) is still a filter layer) */
+body :is(.hero-inner,.page-hero-inner) > .hero-actions{animation-fill-mode:backwards}
+/* and their entrance never uses a filter at all: opacity and transform only */
+@media (prefers-reduced-motion:no-preference){body :is(.hero-inner,.page-hero-inner) > .hero-actions{animation-name:gcd-rise-plain}}
+@keyframes gcd-rise-plain{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:7px 14px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-2);line-height:1.3}
+.pill-dot{width:6px;height:6px;border-radius:50%;background:var(--yellow);box-shadow:0 0 10px rgba(243,195,0,.8);flex:none}
+/* the one heading at 600 on the site: every word in full white, a touch bolder than the 500 headings */
+.hero-title{margin-top:28px;font-size:clamp(44px,7vw,84px);font-weight:600;letter-spacing:-.04em;line-height:1;max-width:14ch;color:var(--text)}
+.hero-sub{margin-top:26px;max-width:600px;font-size:clamp(17px,1.6vw,20px);line-height:1.6;color:var(--text-2)}
+/* home hero: the moving light passes behind the sub line, so there it is the warm white thinned instead of the flat grey
+   (lighter on phones, where the lit granite is brightest): it keeps 4.5 to 1 on every pixel the light can reach */
+.hero .hero-sub{color:rgba(242,241,236,.74)}
+@media (max-width:767px){.hero .hero-sub{color:rgba(242,241,236,.86)}}
+.hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:40px}
+.hero-checks{margin-top:44px;display:grid;justify-items:center;gap:14px}
+.hero-checks > p{font-size:15px;font-weight:600;color:var(--text);letter-spacing:-.01em}
+.checks{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px}
+.checks li{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--text-2);white-space:nowrap}
+.checks svg{width:16px;height:16px;flex:none;padding:2px;border-radius:50%;background:rgba(243,195,0,.14);color:var(--yellow)}
+/* hero settle on load */
+.hero-inner > *{animation:gcd-rise 900ms cubic-bezier(.16,1,.3,1) both}
+.hero-inner > :nth-child(2){animation-delay:70ms}
+.hero-inner > :nth-child(3){animation-delay:140ms}
+.hero-inner > :nth-child(4){animation-delay:210ms}
+.hero-inner > :nth-child(5){animation-delay:280ms}
+@keyframes gcd-rise{from{opacity:0;transform:translateY(18px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+
+/* ---------- inner page hero ---------- */
+.page-hero{position:relative;padding:144px 0 80px;overflow:hidden;isolation:isolate;background:radial-gradient(80% 70% at 50% 0%,rgba(243,195,0,.07),transparent 60%)}
+/* heroes cover the grid the same way; the hero's yellow wash is redrawn above the copy, still sized by the hero box */
+.page-hero{-webkit-clip-path:inset(0);clip-path:inset(0)}
+.page-hero::after{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:var(--backdrop)}
+.page-hero > .container::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(80% 70% at 50% 0%,rgba(243,195,0,.07),transparent 60%)}
+/* inner heroes without their own photo get a dimmed granite still under a veil */
+.page-hero:not(:has(.page-stone,.about-stone))::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url(/assets/hero/granite-800.webp) 50% 35%/cover no-repeat;opacity:.16;-webkit-mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.5) 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.5) 55%,transparent 100%)}
+@media (min-width:801px){.page-hero:not(:has(.page-stone,.about-stone))::before{background-image:url(/assets/hero/granite-1440.webp)}}
+/* phones get the tall crop (full 1250px height), retina laptops the 2000 file, so the granite stays sharp when the hero is taller than it is wide */
+@media (max-width:600px){.page-hero:not(:has(.page-stone,.about-stone))::before{background-image:url(/assets/hero/granite-tall-1000.webp)}}
+@media (min-width:1201px) and (min-resolution:1.5dppx){.page-hero:not(:has(.page-stone,.about-stone))::before{background-image:url(/assets/hero/granite-2000.webp)}}
+/* the picture wrappers around the hero, still and scene images take no box of their own */
+:is(.hero-media,.hero-sweep,.page-stone,.about-stone,.area-media) > picture{display:contents}
+.page-hero .glow-hero{top:40px;height:260px;opacity:.8}
+.page-hero-inner{position:relative;z-index:1;max-width:860px}
+.page-hero-inner.center{margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center}
+.page-hero h1{margin-top:24px;font-size:clamp(38px,5.6vw,68px);letter-spacing:-.035em;line-height:1.03}
+.page-hero .hero-sub{margin-top:24px;max-width:672px}
+.page-hero .hero-actions{margin-top:34px;justify-content:flex-start}
+.page-hero-inner.center .hero-actions{justify-content:center}
+/* one hero rise on every page, the same as the home hero: 900 ms on the reveal curve, each part 70 ms after the one before
+   (pages with their own hero rule below use the same numbers) */
+:is(.page-hero-inner,.page-hero .legal) > *{animation:gcd-rise 900ms var(--ease-reveal) both}
+:is(.page-hero-inner,.page-hero .legal) > :nth-child(2){animation-delay:70ms}
+:is(.page-hero-inner,.page-hero .legal) > :nth-child(3){animation-delay:140ms}
+:is(.page-hero-inner,.page-hero .legal) > :nth-child(4){animation-delay:210ms}
+:is(.page-hero-inner,.page-hero .legal) > :nth-child(5){animation-delay:280ms}
+
+/* ---------- trust row ---------- */
+.trust{padding:80px 0}
+.trust .badges{gap:12px}
+.trust .badge{font-size:13px;padding:12px 22px;gap:10px}
+/* phones: the longest badge ("Serving local businesses nationwide") fits on one line down to about 370 px; below that, and
+   in the footer row on the smallest screens, a badge may wrap to two balanced, centred lines instead of running off the edge */
+@media (max-width:767px){
+  .trust .badges{padding-inline:0}
+  .trust .badge{font-size:12px;letter-spacing:.1em;line-height:1.45;padding:10px 16px}
+  .badge{max-width:100%;white-space:normal;text-align:center;text-wrap:balance}
+  .badge:has(svg){text-align:left}
+}
+
+/* ---------- why ---------- */
+/* photo card left, centred beside heading and points; phones stack heading, photo, points */
+.why{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-areas:"photo head" "photo list";column-gap:64px;row-gap:40px;align-items:start}
+.why .section-head{grid-area:head;margin-bottom:0}
+.why-list{grid-area:list;display:grid;gap:12px}
+/* the card holds its square until nav.js loads the photo, so nothing moves */
+.why-photo{grid-area:photo;align-self:center;position:relative;margin:0;aspect-ratio:1;border-radius:var(--r-card);background:var(--bg-3);box-shadow:var(--shadow-elevated)}
+.why-photo::before{content:"";position:absolute;inset:-16px;z-index:-1;border-radius:44px;background:rgba(243,195,0,.1);filter:blur(80px);pointer-events:none}
+.why-photo img{display:block;width:100%;height:100%;object-fit:cover;border-radius:inherit;transition:opacity 400ms ease}
+.why-photo img[data-src]{display:none}
+.why-photo img.is-loading{opacity:0}
+.why-photo::after{content:"";position:absolute;inset:0;border-radius:var(--r-card);box-shadow:inset 0 0 0 1px rgba(255,255,255,.09),inset 0 1px 0 rgba(255,255,255,.07);pointer-events:none}
+.why-item{display:grid;grid-template-columns:44px 1fr;gap:18px;align-items:start;padding:22px 24px;border-radius:var(--r-panel);transition:border-color 300ms ease,background-color 300ms ease,translate 300ms var(--ease-lift)}
+.why-item h3{font-size:18px;font-weight:600;letter-spacing:-.015em;line-height:1.3}
+.why-item p{margin-top:6px;font-size:15px;line-height:1.6;color:var(--text-2)}
+.icon-tile{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:rgba(243,195,0,.08);border:1px solid rgba(243,195,0,.22);color:var(--yellow)}
+.icon-tile svg{width:20px;height:20px}
+@media (hover:hover) and (pointer:fine){.why-item:hover{border-color:rgba(243,195,0,.22);translate:0 -4px}}
+
+/* ---------- services ---------- */
+.service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.service-card{display:flex;flex-direction:column;gap:14px;padding:30px;min-height:290px;transition:border-color 300ms ease,translate 300ms var(--ease-lift),scale 160ms var(--ease-out)}
+.service-card .icon-tile{margin-bottom:10px}
+.service-card h3{font-size:26px;letter-spacing:-.025em}
+.service-card p{font-size:15px;line-height:1.65;color:var(--text-2);max-width:44ch}
+.service-card .link-arrow{margin-top:auto;margin-bottom:-11px}
+.service-card .stretch::after{content:"";position:absolute;inset:0;z-index:1;border-radius:inherit}
+/* lift and press are separate properties, so the press still shows while the card is lifted (the /work/ card pattern) */
+.service-card:active{scale:.99}
+/* the keyboard ring goes round the whole card, not just its small link */
+@supports selector(:has(a)){.service-card .stretch:focus-visible{outline:none}.service-card:has(.stretch:focus-visible){outline:2px solid var(--yellow);outline-offset:3px}}
+@media (hover:hover) and (pointer:fine){
+  .service-card:hover{border-color:rgba(243,195,0,.3);translate:0 -4px}
+  .service-card:hover .glow-corner{opacity:1;transform:scale(1.15)}
+}
+.service-card .glow-corner{opacity:.28;z-index:-1}
+/* home holds 8 services: two across in four rows on laptops and tablets, one across on phones, the same sizes at every width */
+
+/* ---------- steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:none}
+.step{position:relative;padding:28px 26px 30px;border-radius:var(--r-panel);display:flex;flex-direction:column;gap:10px}
+.step-num{font-size:30px;font-weight:500;letter-spacing:-.03em;color:var(--yellow);font-variant-numeric:tabular-nums;line-height:1;margin-bottom:14px}
+.step h3{font-size:19px;font-weight:600;letter-spacing:-.015em;line-height:1.3}
+.step p{font-size:15px;line-height:1.6;color:var(--text-2)}
+.step::after{content:"";position:absolute;left:26px;right:26px;top:0;height:1px;background:linear-gradient(90deg,rgba(243,195,0,.55),transparent)}
+/* the four steps: deeper glass, lift on hover */
+.steps .step{background:linear-gradient(180deg,rgba(255,255,255,.055) 0%,rgba(255,255,255,.015) 55%,rgba(0,0,0,.12) 100%),rgba(14,13,11,.8);border-color:rgba(255,255,255,.085);box-shadow:inset 0 1px 0 rgba(255,255,255,.07),inset 0 -24px 40px -30px rgba(0,0,0,.6),var(--shadow-raised);transition:transform 300ms var(--ease-lift),border-color 300ms ease,box-shadow 300ms ease}
+.steps .step-num{font-size:34px}
+/* on hover a step lifts from the raised level to the floating one */
+@media (hover:hover) and (pointer:fine){.steps .step:hover{transform:translateY(-4px);border-color:rgba(243,195,0,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),inset 0 -24px 40px -30px rgba(0,0,0,.6),var(--shadow-float),0 0 0 1px rgba(243,195,0,.06)}}
+
+/* ---------- proof ---------- */
+.proof-card{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;align-items:center;padding:56px}
+.proof-card .glow{width:420px;height:420px;right:-60px;bottom:-160px;background:rgba(243,195,0,.15);filter:blur(100px);z-index:-1}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{display:inline-flex;align-items:center;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--text-2);background:rgba(255,255,255,.04);border:1px solid var(--line-2)}
+.tag.tag-y{color:var(--yellow-soft);border-color:rgba(243,195,0,.32);background:rgba(243,195,0,.06)}
+.proof-text h3{margin-top:22px;font-size:clamp(28px,3vw,38px);letter-spacing:-.03em}
+.proof-text p{margin-top:14px;font-size:16px;line-height:1.65;color:var(--text-2);max-width:46ch}
+.proof-text .note{margin-top:10px;font-size:13px;color:var(--text-3)}
+.proof-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.browser{display:block;border-radius:20px;overflow:hidden;background:#0f0f11;border:1px solid var(--line-2);box-shadow:var(--shadow-elevated),0 0 0 1px rgba(0,0,0,.4);transition:translate 300ms var(--ease-lift),scale 160ms var(--ease-out),box-shadow 300ms ease}
+.browser-bar{display:flex;align-items:center;gap:12px;height:40px;padding:0 14px;background:#18181b;border-bottom:1px solid var(--line)}
+.browser-dots{display:flex;gap:6px;flex:none}
+.browser-dots i{width:9px;height:9px;border-radius:50%;background:#3a3a3f}
+.browser-url{flex:1;min-width:0;height:24px;display:flex;align-items:center;justify-content:center;gap:6px;border-radius:999px;background:rgba(255,255,255,.05);font-size:11.5px;color:var(--text-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 10px}
+.browser-url svg{width:11px;height:11px;flex:none}
+.browser-view{display:block;aspect-ratio:5/4;overflow:hidden;background:var(--bg-3)}
+.browser-view img{width:100%;height:100%;object-fit:cover;object-position:top}
+.proof-shot{display:block;width:100%;max-width:620px;justify-self:end}
+.proof-shot:active .browser{scale:.99}
+@media (hover:hover) and (pointer:fine){.proof-shot:hover .browser{translate:0 -4px;box-shadow:var(--shadow-elevated),0 0 0 1px rgba(243,195,0,.3)}}
+
+/* ---------- argument blocks (service pages) ---------- */
+.args{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.arg{padding:32px;border-radius:var(--r-card)}
+.arg h3{font-size:24px;letter-spacing:-.025em}
+.arg p{margin-top:12px;font-size:16px;line-height:1.65;color:var(--text-2)}
+
+/* ---------- what's included ---------- */
+.included{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.included-item{padding:26px;border-radius:var(--r-panel);background:var(--glass-bg);border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.05),var(--shadow-raised);transition:border-color 300ms ease,transform 300ms var(--ease-lift)}
+@media (hover:hover) and (pointer:fine){.included-item:hover{border-color:rgba(243,195,0,.22);transform:translateY(-4px)}}
+.included-item h3{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:600;letter-spacing:-.015em}
+.included-item h3 svg{width:18px;height:18px;color:var(--yellow);flex:none}
+.included-item p{margin-top:8px;font-size:15px;line-height:1.6;color:var(--text-2)}
+
+/* ---------- related chips ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 20px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid var(--line);font-size:14px;font-weight:500;color:var(--text);transition:border-color 200ms ease,background-color 200ms ease,transform 160ms var(--ease-out)}
+.chip:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){.chip:hover{border-color:rgba(243,195,0,.35);background:rgba(243,195,0,.06)}}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;gap:12px;max-width:768px}
+.faq.center{margin:0 auto}
+.faq-item{border-radius:20px;background:rgba(20,20,22,.55);border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.05);transition:border-color 250ms ease,background-color 250ms ease}
+.faq-item[open]:not(.is-closing){border-color:rgba(243,195,0,.25);background:rgba(24,23,20,.7)}
+.faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:70px;padding:18px 22px 18px 24px;cursor:pointer;list-style:none;font-size:16px;font-weight:600;letter-spacing:-.01em;line-height:1.4;border-radius:20px;-webkit-tap-highlight-color:transparent}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"";flex:none;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.06) center/14px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f3c300' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M12 5v14M5 12h14'/%3E%3C/svg%3E");transition:transform 200ms var(--ease-lift),background-color 200ms ease}
+.faq-item[open]:not(.is-closing) summary::after{transform:rotate(45deg);background-color:rgba(243,195,0,.12)}
+/* question rows: a faint lift of the row on hover, a little more while pressed, both in 200 ms */
+.faq-item summary{transition:background-color 200ms ease}
+@media (hover:hover) and (pointer:fine){.faq-item summary:hover{background:rgba(255,255,255,.03)}}
+.faq-item summary:active,.faq-item summary:hover:active{background:rgba(255,255,255,.05)}
+.faq-item p{padding:0 24px 22px;font-size:15px;line-height:1.7;color:var(--text-2);max-width:68ch}
+.faq-item[open]:not(.is-closing) p{animation:gcd-fade 200ms var(--ease-out)}
+@keyframes gcd-fade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.faq-more{margin-top:28px;text-align:center}
+/* the glass FAQ pill over each FAQ heading, like the About page */
+.about-faq-pill{margin-bottom:24px}
+
+/* ---------- closing card ---------- */
+.closing{position:relative;padding:64px;border-radius:var(--r-card);text-align:center;overflow:hidden;isolation:isolate}
+/* closing cards (every page): elevated shadow, gold hairline on top, two corner glows clipped by the card */
+.closing,.contact-card{background:linear-gradient(90deg,transparent,rgba(243,195,0,.5),transparent) top/100% 1px no-repeat,linear-gradient(180deg,rgba(255,255,255,.045) 0%,rgba(255,255,255,.01) 50%),rgba(19,17,14,.86);border:1px solid rgba(255,255,255,.09);box-shadow:var(--shadow-elevated),inset 0 1px 0 rgba(255,255,255,.06)}
+.closing::before,.contact-card::before,.closing::after,.contact-card::after{content:"";position:absolute;width:384px;height:384px;border-radius:50%;pointer-events:none;z-index:-1;filter:blur(64px)}
+.closing::before,.contact-card::before{right:-128px;top:-128px;background:rgba(243,195,0,.2)}
+.closing::after,.contact-card::after{left:-128px;bottom:-128px;background:rgba(243,195,0,.1)}
+.closing > .glow,.contact-card > .glow{display:none}
+.closing h2{font-size:clamp(30px,4vw,48px);letter-spacing:-.03em;max-width:18ch;margin:0 auto}
+.closing p{margin:20px auto 0;max-width:54ch;font-size:17px;color:var(--text-2)}
+.closing .hero-actions{margin-top:32px}
+
+/* ---------- contact ---------- */
+.contact-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center;padding:64px}
+.contact-card .glow{width:560px;height:300px;left:-120px;top:-160px;background:rgba(243,195,0,.2);filter:blur(110px);z-index:-1}
+.contact-card h2{font-size:clamp(32px,4.2vw,50px);letter-spacing:-.03em;line-height:1.04}
+.contact-card .lead{margin-top:16px}
+.area{margin-top:22px;display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.6;color:var(--text-2);max-width:52ch}
+.area svg{width:18px;height:18px;color:var(--yellow);flex:none;margin-top:2px}
+.contact-ways{display:grid;gap:12px}
+.contact-way{display:flex;align-items:center;gap:16px;padding:18px 20px;border-radius:20px;background:rgba(255,255,255,.035);border:1px solid var(--line);transition:border-color 300ms ease,background-color 300ms ease,translate 300ms var(--ease-lift),scale 160ms var(--ease-out)}
+a.contact-way:active{scale:.99}
+.contact-way .icon-tile{flex:none}
+.contact-way small{display:block;font-size:13px;color:var(--text-3);font-weight:500}
+.contact-way b{display:block;font-size:19px;font-weight:600;letter-spacing:-.015em;white-space:nowrap}
+.contact-way .go{margin-left:auto;width:18px;height:18px;color:var(--text-3);transition:transform 200ms var(--ease-out),color 200ms ease}
+@media (hover:hover) and (pointer:fine){a.contact-way:hover{border-color:rgba(243,195,0,.3);background:rgba(243,195,0,.05);translate:0 -4px}a.contact-way:hover .go{color:var(--yellow);transform:translateX(3px)}}
+.contact-way:is(.contact-email,.contact-where) b{font-size:17px;line-height:1.35;white-space:normal;overflow-wrap:anywhere}
+.contact-ways .btn{margin-top:8px}
+/* home contact area, laid out like the reference homepage contact area: a centred label, heading and one line, then one
+   768px form card (40px inside, 32 on phones). Rows: Full name and Email side by side, Phone and Website URL side by side,
+   Message, the hairline, the two consent boxes and the note, then the button on the left. Phones stack every field.
+   Under the card, one quiet Serving box the same width. */
+.hc-head{max-width:960px;margin-bottom:40px}
+.hc-head .lead{max-width:none}
+.hc-head .lead a{color:var(--yellow);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;transition:color 200ms ease,opacity 160ms var(--ease-out)}
+.hc-head .lead a:active{opacity:.75}
+@media (hover:hover) and (pointer:fine){.hc-head .lead a:hover{color:var(--yellow-light)}}
+.home-contact{display:grid;gap:16px;max-width:768px;margin:0 auto}
+.hc-form{min-width:0;overflow:hidden}
+.hc-form::before{content:"";position:absolute;left:40px;right:40px;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(243,195,0,.55),transparent)}
+.hc-form .form-step{gap:20px}
+.hc-form .field-row{gap:20px}
+.hc-form .consent{margin-top:2px;margin-bottom:-6px}
+.hc-form .field-label{display:block}
+.hc-form .field .opt{font-weight:400;color:var(--text-3)}
+.hc-form .form-actions{justify-content:flex-start}
+.hc-form .form-actions .btn{min-width:160px}
+.hc-form .btn .spin{width:16px;height:16px;border-radius:50%;border:2px solid rgba(20,17,6,.25);border-top-color:#141106;animation:gcd-hc-spin 700ms linear infinite}
+@keyframes gcd-hc-spin{to{transform:rotate(360deg)}}
+.hc-form .btn[disabled]{cursor:progress;opacity:.85}
+.hc-form .form-thanks:not([hidden]){animation:gcd-rise-plain 320ms var(--ease-out)}
+.hc-form .form-thanks :is(h2,h3):focus{outline:none}
+.hc-form .form-thanks .icon-tile svg{width:24px;height:24px}
+.hc-form .noscript-note{padding:16px;border-radius:16px;background:rgba(243,195,0,.06);border:1px solid rgba(243,195,0,.2);font-size:15px}
+.hc-form :is(.noscript-note,.form-error) a{color:var(--yellow);text-decoration:underline;text-underline-offset:3px}
+/* the Serving box (home, under the form; /contact/, under Call, Text and Email): a solid contact card, no link */
+.contact-where{background:var(--surface);box-shadow:var(--shadow-card)}
+
+/* ---------- forms (step form, change request) ---------- */
+.form-card{position:relative;padding:40px;border-radius:var(--r-card);background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow-elevated)}
+.step-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:5px;margin-bottom:32px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.step-tab{display:flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:6px 10px;border-radius:999px;font-size:13px;font-weight:600;color:var(--text-3);text-align:center;transition:background-color 250ms ease,color 250ms ease}
+.step-tab .n{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;font-size:11px;background:rgba(255,255,255,.08);font-variant-numeric:tabular-nums}
+.step-tab[aria-current="step"]{background:var(--grad-yellow);color:#141106;box-shadow:var(--shadow-glow-sm)}
+.step-tab[aria-current="step"] .n{background:rgba(0,0,0,.14)}
+.step-tab.is-done{color:var(--text)}
+.step-tab.is-done .n{background:rgba(243,195,0,.2);color:var(--yellow)}
+.form-step[hidden],.field[hidden]{display:none}
+.form-step{display:grid;gap:20px}
+.form-step h3{font-size:22px;letter-spacing:-.02em}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:grid;gap:8px;font-size:14px;font-weight:500;color:var(--text)}
+.field .req{color:var(--yellow)}
+/* short labels stay on one line at every width; the few long ones (.label-wrap) may wrap between words, and every star is
+   joined to its last word with a no break space so it never sits alone */
+.field-label{line-height:1.6;white-space:nowrap}
+.field-label.label-wrap,.choice-set legend.label-wrap{white-space:normal}
+.field input,.field textarea,.field select{width:100%;min-height:50px;padding:13px 16px;border-radius:var(--r-input);border:1px solid rgba(255,255,255,.11);background:#0d0d0f;color:var(--text);font:inherit;font-size:16px;font-weight:400;transition:border-color 200ms ease,box-shadow 200ms ease}
+.field textarea{min-height:120px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:#8a8982}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:rgba(243,195,0,.7);box-shadow:0 0 0 4px rgba(243,195,0,.14)}
+.field input[aria-invalid="true"],.field textarea[aria-invalid="true"]{border-color:#e5786c}
+.field-note{font-size:13px;font-weight:400;line-height:1.5;color:var(--text-3)}
+.field-error{font-size:13px;color:#f0a198}
+.choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.choice{position:relative;display:flex;align-items:center;gap:12px;min-height:54px;padding:12px 16px;border-radius:var(--r-input);border:1px solid rgba(255,255,255,.11);background:#0d0d0f;font-size:15px;font-weight:500;cursor:pointer;transition:border-color 200ms ease,background-color 200ms ease,transform 160ms var(--ease-out)}
+.choice:active{transform:scale(.98)}
+.choice input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.choice .tick{width:18px;height:18px;flex:none;border-radius:50%;border:1.5px solid rgba(255,255,255,.25);transition:border-color 200ms ease,background-color 200ms ease,box-shadow 200ms ease}
+.choice:has(input:checked){border-color:rgba(243,195,0,.6);background:rgba(243,195,0,.07)}
+.choice:has(input:checked) .tick{border-color:var(--yellow);background:var(--yellow);box-shadow:inset 0 0 0 3px #0d0d0f}
+.choice:has(input:focus-visible){outline:2px solid var(--yellow);outline-offset:3px}
+/* choices and checkboxes react alike: the edge turns yellow on hover in 200 ms (a step below the checked edge), they press in a touch */
+@media (hover:hover) and (pointer:fine){.choice:not(:has(input:checked)):hover{border-color:rgba(243,195,0,.35)}}
+.form-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:8px}
+.form-error{padding:12px 16px;border-radius:14px;background:rgba(229,96,84,.09);border:1px solid rgba(229,96,84,.32);font-size:14px;line-height:1.55}
+.form-error[hidden],.form-thanks[hidden]{display:none}
+.form-thanks{display:grid;gap:12px;justify-items:center;text-align:center;padding:24px 8px}
+.form-thanks .icon-tile{width:56px;height:56px;border-radius:50%}
+.form-thanks :is(h2,h3){font-size:26px;letter-spacing:-.02em;overflow-wrap:anywhere}
+.form-thanks p{color:var(--text-2);max-width:44ch}
+.hp{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:inset(50%);opacity:0;pointer-events:none}
+/* consent block, laid out to the reference measurements (empty box edge white 45%: at least 3 to 1 on the dark cards): hairline (white 9%) above, 16px drawn boxes 2px below the text top, 12px to the
+   text, 12.5/20.3 text, 16 between rows, 20 to the note. Each label row is its own tap area: 8px padding pulled back with
+   an equal negative margin, so neighbouring rows meet without changing the look; the real checkbox (44px, invisible)
+   sits over the drawn square. Links open in a new tab so nothing typed is lost. */
+.consent{display:grid;gap:16px;margin-bottom:-8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.09)}
+/* the -8px bottom margin takes the 20px step gap plus the 8px button row margin down to his 20px from the note to the button */
+.check{display:flex;align-items:flex-start;gap:12px;margin:-8px 0;padding:8px 0;font-size:12.5px;font-weight:400;line-height:1.625;color:#cfcec8;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.check-box{position:relative;flex:none;width:16px;height:16px;margin-top:2px}
+.check-box input{position:absolute;left:50%;top:50%;z-index:1;width:44px;height:44px;margin:0;transform:translate(-50%,-50%);opacity:0;cursor:pointer}
+.check-mark{position:absolute;inset:0;display:grid;place-items:center;border-radius:4px;border:1.5px solid rgba(255,255,255,.45);background:#0d0d0f;color:#141106;transition:background-color 200ms ease,border-color 200ms ease,transform 160ms var(--ease-out)}
+.check:active .check-mark{transform:scale(.9)}
+.check-mark svg{width:11px;height:11px;opacity:0;transform:scale(.6);transition:opacity 160ms ease,transform 200ms var(--ease-out)}
+.check-box input:checked + .check-mark{background:var(--yellow);border-color:var(--yellow)}
+.check-box input:checked + .check-mark svg{opacity:1;transform:none}
+.check-box input:focus-visible + .check-mark{outline:2px solid var(--yellow);outline-offset:3px}
+.check-box input[aria-invalid="true"] + .check-mark{border-color:#e5786c}
+.check a{color:var(--yellow);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+.consent .field-error{margin-top:-8px;padding-left:28px}
+.consent-note{margin-top:4px;font-size:12px;line-height:1.56;color:var(--text-3)}
+.field-error[hidden]{display:none}
+@media (hover:hover) and (pointer:fine){.check:hover .check-mark{border-color:rgba(243,195,0,.6)}}
+
+/* ---------- reveal: one block per section glides in on a timer, once ----------
+   Hidden only under html.rv-on, which nav.js sets in the same step that shows every block already on screen, so with
+   scripts off, an old browser or reduce motion everything is simply there. nav.js adds .is-in when about 10% of the block
+   is on screen (or its top is 15% of the screen above the bottom edge) and when scrolling stops, and never takes it away.
+   .rv-now shows a block with no glide (anchor jumps, keyboard focus, print). */
+@media (prefers-reduced-motion:no-preference){
+  .rv-on .reveal:not(.is-in){opacity:0;transform:translateY(24px)}
+  .rv-on .reveal{transition:opacity .9s var(--ease-reveal),transform .9s var(--ease-reveal)}
+  .rv-on .reveal.rv-now{transition:none}
+}
+@media print{.rv-on .reveal{opacity:1!important;transform:none!important;transition:none!important}.grid-glow{display:none}}
+
+/* ---------- page to page: a soft cross fade (Chrome and Safari; Firefox simply loads the page) ---------- */
+@media (prefers-reduced-motion:no-preference){
+  @view-transition{navigation:auto}
+  ::view-transition-old(root),::view-transition-new(root){animation-duration:.35s;animation-timing-function:cubic-bezier(.16,1,.3,1)}
+  /* the top bar and floating bar are not given their own names: the floating bar would rise a second time when the fade
+     ends (its entrance restarts), so both simply cross fade with the page; the top bar is the same picture on both pages */
+}
+
+/* ---------- Granite City area scene (home, and the Where we work hero) ---------- */
+.area-scene{position:relative;isolation:isolate;overflow:hidden;padding:clamp(128px,13vw,196px) 0;border-top:1px solid rgba(255,255,255,.09);border-bottom:1px solid rgba(255,255,255,.09);background:#0c0b0a}
+.area-media{position:absolute;inset:0;z-index:-3;overflow:hidden}
+.area-media img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;transform:scale(-1.06,1.06)}
+.area-veil{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(11,10,9,.9) 0%,rgba(11,10,9,.72) 38%,rgba(11,10,9,.3) 72%,rgba(11,10,9,.22) 100%),linear-gradient(180deg,rgba(11,10,9,.85) 0%,rgba(11,10,9,.12) 26%,rgba(11,10,9,.18) 70%,rgba(11,10,9,.9) 100%)}
+/* under 1200 px the copy fills more of the width than the dark side of the veil (set in % above) reaches, so there the
+   dark side is set in px: the copy keeps the dark backing it has on a laptop, and the lead line and small label keep 4.5 to 1.
+   Phones use this veil too (they had a lighter one of their own, which left the small label at 2.6 to 1). */
+@media (max-width:1199px){.area-veil{background:linear-gradient(90deg,rgba(11,10,9,.92) 0,rgba(11,10,9,.88) 240px,rgba(11,10,9,.72) 486px,rgba(11,10,9,.3) 922px,rgba(11,10,9,.22) 1280px),linear-gradient(180deg,rgba(11,10,9,.85) 0%,rgba(11,10,9,.12) 26%,rgba(11,10,9,.18) 70%,rgba(11,10,9,.9) 100%)}}
+.area-glow{width:560px;height:340px;left:-60px;top:22%;background:rgba(243,190,30,.15);filter:blur(120px);z-index:-1}
+.area-copy{position:relative;max-width:600px}
+.area-copy h2{font-size:clamp(34px,4.6vw,58px);font-weight:500;letter-spacing:-.035em;line-height:1.02}
+.area-copy .lead{color:rgba(242,241,236,.78)}
+.area-trades-h{margin-top:30px;font-size:12px;line-height:16px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--text-3)}
+.area-trades{margin-top:14px}
+.area-trades .chip svg{width:16px;height:16px;flex:none;color:var(--yellow)}
+.area-scene .chip{background:rgba(12,11,10,.55);border-color:rgba(255,255,255,.12);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+/* the trade chips over the photo light their edge on hover like every chip (the rule above would otherwise hold the rest look) */
+@media (hover:hover) and (pointer:fine){.area-scene .chip:hover{border-color:rgba(243,195,0,.35)}}
+.area-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    .area-scene .area-media img{animation:gcd-area-drift linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
+  }
+}
+@keyframes gcd-area-drift{from{transform:scale(-1.12,1.12) translateY(-3%)}to{transform:scale(-1.12,1.12) translateY(3%)}}
+/* Where we work page (/service-area/): the same scene as its hero background */
+.page-stone.area-stone{-webkit-mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.75) 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.75) 55%,transparent 100%)}
+.page-stone.area-stone img{opacity:.5;object-position:50% 55%;transform:scaleX(-1)}
+/* phones: the photo is a touch dimmer so the grey sub line over it keeps 4.5 to 1 */
+@media (max-width:767px){.page-stone.area-stone img{opacity:.42}}
+.page-stone.area-stone::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,9,.55) 0%,rgba(11,10,9,.35) 50%,rgba(11,10,9,.8) 100%)}
+
+/* ---------- 404 page ---------- */
+.nf-hero{min-height:calc(100svh - 120px);display:flex;align-items:center;padding:150px 0 96px}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:960px){
+  .why{grid-template-columns:1fr;grid-template-areas:"head" "photo" "list";gap:40px}
+  .why-photo{align-self:auto;width:100%;max-width:480px}
+  .proof-card{grid-template-columns:1fr;padding:40px}
+  .contact-card{grid-template-columns:1fr;gap:36px;padding:48px}
+  .included{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:767px){
+  .site-header{top:20px}
+  .hero{min-height:0;padding:132px 0 88px}
+  .hero-title{margin-top:24px}
+  .hero-actions .btn{flex:1 1 auto}
+  .section-head{margin-bottom:56px}
+  /* question sections and the free preview page: 48 */
+  #faq .section-head,main:has(> .gs-hero) .section-head{margin-bottom:48px}
+  .section-head h2,.h2,.contact-card h2{line-height:1.11}
+  .steps{gap:16px}
+  .service-grid,.steps,.args,.included{grid-template-columns:1fr}
+  .service-card{min-height:0;padding:26px}
+  .service-card h3{font-size:24px}
+  .why-item{grid-template-columns:40px 1fr;gap:14px;padding:20px}
+  .why-item .icon-tile{width:40px;height:40px}
+  .proof-card{padding:24px;gap:32px}
+  .proof-actions .btn{flex:1 1 auto}
+  .contact-card{padding:32px}
+  .contact-way{padding:16px}
+  .contact-way b{font-size:17px}
+  /* the email card drops its arrow on phones so both halves of the email address each sit on one line, even at 320 */
+  .contact-email .go{display:none}
+  .contact-way.contact-email b{font-size:15px}
+  .closing{padding:40px}
+  .form-card{padding:32px}
+  .hc-form::before{left:20px;right:20px}
+  .field-row,.choice-grid{grid-template-columns:1fr}
+  .step-tab .t{display:none}
+  .step-tab[aria-current="step"] .t{display:inline}
+  .footer-top{flex-direction:column;gap:24px}
+  .footer-links{margin-left:-14px}
+  .footer-cols{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px;width:100%}
+  .footer-col a{min-height:44px}
+  .area-scene{padding:104px 0 96px}
+  .area-actions .btn{flex:1 1 auto}
+  .badge{letter-spacing:.12em}
+}
+/* the smallest phones: form cards and closing cards step down to 24 px sides so fields, placeholders and buttons keep their room */
+@media (max-width:360px){
+  .form-card,.contact-card,.closing{padding-left:24px;padding-right:24px}
+  .contact-way.contact-email b{font-size:14px}
+}
+@media (max-width:380px){
+  .hero-actions{width:100%}
+  .hero-actions .btn{width:100%}
+  .badge{font-size:10px;padding:8px 12px}
+  .checks li{font-size:13px}
+  .pill{font-size:11px;letter-spacing:.05em;padding:7px 12px;gap:8px}
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .hero .hero-sweep{animation:none;transform:translateX(24%);opacity:.55}
+  .hero .hero-lit{animation:none;transform:translateX(-24%)}
+  .bar-actions .btn-primary,.bar-actions .btn-primary:hover{animation:none;transform:none;box-shadow:0 0 0 4px color-mix(in srgb,var(--yellow) 22%,transparent),0 0 22px -2px color-mix(in srgb,var(--yellow) 45%,transparent),var(--cta-rest)}
+  .hero-inner > *{animation:none}
+  .steps .step:hover,.service-card:hover,.included-item:hover{transform:none}
+  .dd-panel{transform:none}
+  /* every hero is still, the floating bar is simply there (no 250 ms wait), cards never lift, the top bar button still presses */
+  :is(.page-hero-inner,.page-hero .legal) > *{animation:none}
+  .fbar.is-entering{animation:none}
+  .fbar.is-away{transform:none}
+  .service-card:hover,.why-item:hover,a.contact-way:hover,.proof-shot:hover .browser{translate:none}
+  .bar-actions .btn-primary:active{transform:scale(.97)}
+  .grid-glow{display:none}
+}

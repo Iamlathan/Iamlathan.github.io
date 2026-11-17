@@ -1,0 +1,77 @@
+/* Inner pages: service pages and the Where we work page. Loaded after gcd.css. */
+
+/* ---------- inner hero: soft granite under a glow ---------- */
+.svc-hero{padding:144px 0 80px}
+.page-stone{position:absolute;inset:0;z-index:-1;pointer-events:none;-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.55) 55%,transparent 100%);mask-image:linear-gradient(180deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.55) 55%,transparent 100%)}
+.page-stone img{width:100%;height:100%;object-fit:cover;object-position:50% 35%;opacity:.2}
+.svc-hero .glow-hero{top:20px;width:min(820px,95vw);height:300px;opacity:.9}
+.svc-hero h1{max-width:19ch}
+.svc-hero .hero-sub{max-width:620px}
+.svc-hero .page-hero-inner > *{animation:gcd-rise 900ms var(--ease-reveal) both}
+.svc-hero .page-hero-inner > :nth-child(2){animation-delay:70ms}
+.svc-hero .page-hero-inner > :nth-child(3){animation-delay:140ms}
+.svc-hero .page-hero-inner > :nth-child(4){animation-delay:210ms}
+.svc-hero .page-hero-inner > :nth-child(5){animation-delay:280ms}
+
+/* ---------- the real problem ---------- */
+.svc-problem-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}
+.svc-problem .h2{max-width:13ch}
+.svc-problem-text > p{font-size:19px;line-height:1.65;color:var(--text);max-width:58ch}
+.svc-problem-text > p + p{margin-top:18px;color:var(--text-2);font-size:17px}
+.svc-aside{margin-top:36px;padding:24px 26px;border-radius:var(--r-panel)}
+.svc-aside-title{font-size:13px;font-weight:600;color:var(--yellow-soft);letter-spacing:.02em}
+.svc-ticks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px;margin-top:16px}
+.svc-ticks li{display:flex;align-items:flex-start;gap:10px;font-size:15px;line-height:1.45;color:var(--text)}
+.svc-ticks svg{width:18px;height:18px;flex:none;margin-top:1px;padding:3px;border-radius:50%;background:rgba(243,195,0,.14);color:var(--yellow)}
+
+/* ---------- argument blocks ---------- */
+.svc-args{overflow:hidden;isolation:isolate}
+.svc-band-glow{width:520px;height:360px;right:-160px;top:-120px;background:rgba(243,195,0,.13);filter:blur(110px);z-index:-1}
+.svc-args .arg{display:flex;flex-direction:column;gap:0;transition:border-color 300ms ease,transform 300ms var(--ease-lift)}
+.svc-args .arg .icon-tile{margin-bottom:22px}
+.svc-args .arg h3{font-size:22px;line-height:1.2;max-width:22ch}
+.svc-args .arg p{font-size:15.5px}
+@media (hover:hover) and (pointer:fine){.svc-args .arg:hover{border-color:rgba(243,195,0,.22);transform:translateY(-4px)}}
+
+/* ---------- what's included ---------- */
+.svc-included .included-item{transition:border-color 300ms ease,transform 300ms var(--ease-lift)}
+.svc-included .included-item h3 svg{padding:3px;border-radius:50%;background:rgba(243,195,0,.14);width:20px;height:20px}
+@media (hover:hover) and (pointer:fine){.svc-included .included-item:hover{border-color:rgba(243,195,0,.22)}}
+
+/* ---------- related services ---------- */
+.svc-related{padding-top:0}
+.svc-related-row{display:flex;align-items:center;justify-content:space-between;gap:28px 40px;flex-wrap:wrap;padding:32px 36px;border-radius:var(--r-card)}
+.svc-related-row .label{margin-bottom:10px}
+.svc-related-row h2{font-size:clamp(24px,2.6vw,30px);letter-spacing:-.025em}
+.svc-related-cta{flex:none;min-height:44px}
+.chip svg{width:16px;height:16px;color:var(--yellow)}
+
+/* ---------- closing ---------- */
+.svc-close{padding-top:96px}
+.closing p.label{margin:0 auto 16px;font-size:12px;line-height:16px;color:var(--yellow);max-width:none}
+.closing .hero-actions{justify-content:center}
+
+
+/* ---------- responsive ---------- */
+@media (max-width:960px){
+  .svc-problem-grid{grid-template-columns:1fr;gap:36px}
+  .svc-related-row{padding:28px}
+}
+@media (max-width:767px){
+  .svc-problem-text > p{font-size:17.5px}
+  .svc-ticks{grid-template-columns:1fr}
+  .svc-aside{padding:28px}
+  .svc-args .arg{padding:26px 24px}
+  .svc-related-row{padding:24px 20px}
+  .svc-related-row .chips{width:100%}
+  .svc-related-row .chip{flex:1 1 auto;justify-content:center}
+  .svc-related-cta{width:100%}
+  .closing .hero-actions .btn{flex:1 1 100%}
+}
+@media (max-width:380px){
+  .svc-hero .hero-actions .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  .svc-hero .page-hero-inner > *{animation:none}
+  .svc-args .arg:hover,.svc-included .included-item:hover{transform:none}
+}

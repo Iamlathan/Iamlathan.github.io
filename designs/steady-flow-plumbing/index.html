@@ -3,24 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Steady Flow Plumbing | Plumber in Mount Airy, NC</title>
-<meta name="description" content="Steady Flow Plumbing is a plumber in Mount Airy, NC. Leaks, slow drains, water heaters, toilets and faucets. Call 336 555 0161 or send a request.">
+<title>Steady Flow Plumbing | Plumber in Columbus, Ohio</title>
+<meta name="description" content="Steady Flow Plumbing is a plumber in Columbus, Ohio. Leaks, slow drains, water heaters, toilets and faucets. Call 614 555 0161 or send a request.">
 <meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://granitecitydigital.me/designs/steady-flow-plumbing/">
 <meta name="theme-color" content="#0f3d44">
-<meta property="og:title" content="Steady Flow Plumbing | Mount Airy, NC">
-<meta property="og:description" content="Steady Flow Plumbing is a plumber in Mount Airy, NC. Call 336 555 0161 or send a request.">
-<meta property="og:image" content="https://granitecitydigital.me/designs/steady-flow-plumbing/valves-1400.webp">
+<meta property="og:title" content="Steady Flow Plumbing | Columbus, Ohio">
+<meta property="og:description" content="Steady Flow Plumbing is a plumber in Columbus, Ohio. Call 614 555 0161 or send a request.">
+<meta property="og:image" content="https://granitecitydigital.me/designs/steady-flow-plumbing/hero-fit-1600.webp">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://granitecitydigital.me/designs/steady-flow-plumbing/">
-<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230f3d44'/%3E%3Cpath d='M7 11h12a5 5 0 015 5v3' fill='none' stroke='%235ccad8' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M24 23c-1.6 0-2.6-1.2-2.6-2.4 0-1.4 2.6-4 2.6-4s2.6 2.6 2.6 4c0 1.2-1 2.4-2.6 2.4z' fill='%23fff'/%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preload" as="image" type="image/webp" imagesrcset="hero-fit-800.webp 800w, hero-fit-1600.webp 1600w" imagesizes="(max-width:1000px) 160vw, 100vw" fetchpriority="high">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="valves-800.webp" imagesrcset="valves-800.webp 800w, valves-1400.webp 1400w" imagesizes="(min-width: 960px) 50vw, 100vw" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 <style>
+/* Steady Flow design system
+   Colors: ink teal for type and dark bands, aqua for actions and key facts, pale teal panels.
+   Spacing: one scale (--s1 to --s7), the same --sec space at the top and bottom of every section.
+   Levels: page (white or the pale blueprint band), raised (white card, --sh1), floating (header, overlap cards, phone bar, --sh2).
+   Light comes from above: every shadow falls straight down and grows with the level.
+   Radius: --r for photos and cards, --r-sm for fields and small cards, full round for buttons (pipe ends). */
 :root{
   --bg:#ffffff;
   --panel:#eef3f4;
@@ -30,6 +36,8 @@
   --muted:#4a6267;
   --aqua:#1fa4b6;
   --aqua-ink:#0e7383;
+  --aqua-lt:#5ccad8;
+  --aqua-pale:#d5eef1;
   --on-ink:#ffffff;
   --danger:#a3392b;
 
@@ -38,26 +46,38 @@
   --t-small:.9375rem;
   --t-body:1.0625rem;
   --t-lead:clamp(1.125rem,1.05rem + .35vw,1.3125rem);
-  --t-h3:1.1875rem;
-  --t-h2:clamp(1.75rem,1.3rem + 1.9vw,2.75rem);
-  --t-h1:clamp(2.25rem,1.35rem + 4vw,4.5rem);
+  --t-h3:clamp(1.25rem,1.15rem + .4vw,1.5rem);
+  --t-h2:clamp(2.125rem,1.5rem + 2.3vw,3.5rem);
+  --t-h1:clamp(2.625rem,1.5rem + 4.2vw,5.5rem);
 
-  --wrap:1160px;
+  --s1:8px;--s2:12px;--s3:16px;--s4:24px;--s5:32px;--s6:48px;--s7:72px;
+  --wrap:1280px;
+  --head-h:76px;
   --m:clamp(18px,4vw,36px);
-  --sec:clamp(80px,10vw,140px);
-  --r:16px;
+  --sec:clamp(72px,8vw,120px);
+  --r:22px;
+  --r-sm:14px;
+  --sh1:0 1px 2px rgba(15,61,68,.06),0 10px 28px -14px rgba(15,61,68,.24);
+  --sh1h:0 2px 4px rgba(15,61,68,.07),0 18px 40px -16px rgba(15,61,68,.32);
+  --sh2:0 2px 6px rgba(15,61,68,.08),0 30px 60px -24px rgba(15,61,68,.42);
   --ease:cubic-bezier(.23,1,.32,1);
   --bar:0px;
 }
 *,*::before,*::after{box-sizing:border-box}
 *{margin:0}
-html{-webkit-text-size-adjust:100%;scroll-padding-top:20px}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--head-h) + 16px)}
+@media (min-width:1100px){body{font-size:1.125rem}}
+.ico{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+/* section label: a pipe coupling and a word */
+.label{display:flex;width:fit-content;align-items:center;gap:12px;margin-bottom:14px;font:700 .8125rem/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--aqua-ink)}
+.label::before{content:"";width:30px;height:6px;border-radius:3px;background:var(--aqua)}
+.hero .label,.towns .label{color:#8fdde7}.hero .label::before,.towns .label::before{background:var(--aqua-lt)}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
-body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased;caret-color:var(--aqua-ink)}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:1.5px}
-::selection{background:var(--aqua);color:var(--ink)}
-:focus-visible{outline:3px solid var(--aqua-ink);outline-offset:3px;border-radius:6px}
+::selection{background:var(--aqua-lt);color:var(--ink)}
+:focus-visible{outline:2px solid var(--aqua-ink);outline-offset:3px;border-radius:6px}
 h1,h2,h3{font-family:var(--head);color:var(--ink);font-weight:700;letter-spacing:-.015em;line-height:1.08;text-wrap:balance}
 p{text-wrap:pretty}
 .wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
@@ -67,72 +87,120 @@ p{text-wrap:pretty}
 .num{font-variant-numeric:tabular-nums;white-space:nowrap}
 
 /* buttons: round ends, like a pipe */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:2px solid var(--ink);background:var(--ink);color:var(--on-ink);font:700 1rem/1 var(--body);text-decoration:none;cursor:pointer;transition:background-color 180ms ease,color 180ms ease,transform 140ms var(--ease)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:2px solid var(--ink);background:var(--ink);color:var(--on-ink);font:700 1rem/1 var(--body);text-decoration:none;cursor:pointer;transition:background-color 180ms ease,border-color 180ms ease,color 180ms ease,box-shadow 180ms ease,transform 140ms var(--ease)}
 .btn svg{width:18px;height:18px;flex:none}
-.btn:active{transform:scale(.97)}
+.btn:active,.ask:active{transform:scale(.97)}
 .btn.line{background:transparent;color:var(--ink)}
 .tl{font-weight:700;color:var(--ink);text-decoration:underline;text-decoration-color:var(--aqua);transition:text-decoration-color 180ms ease}
 @media (hover:hover) and (pointer:fine){
-  .btn:hover{background:#0a2d33;border-color:#0a2d33}
-  .btn.line:hover{background:var(--panel);border-color:var(--ink)}
+  .btn:hover{background:#0a2d33;border-color:#0a2d33;box-shadow:0 10px 22px -12px rgba(15,61,68,.6)}
+  .btn.line:hover{background:var(--panel);border-color:var(--ink);box-shadow:none}
   .tl:hover{text-decoration-color:var(--ink)}
 }
 
 /* sample banner */
-.sample{background:var(--panel);color:var(--muted);font-size:.875rem;text-align:center;padding:8px var(--m);line-height:1.45}
+.sample{background:var(--panel);color:var(--muted);font-size:.875rem;text-align:center;padding:13px var(--m) 8px;line-height:1.45}
 .sample a{color:var(--ink)}
 
-/* header: a teal cap like a valve handle */
-.top{background:var(--bg);border-top:6px solid var(--ink)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}
+/* header: a teal cap like a valve handle (floating level when it sticks) */
+.top{background:#fff;border-top:6px solid var(--ink);z-index:30}
+@media (min-width:900px){.top{position:sticky;top:0;box-shadow:0 1px 0 var(--panel-2),0 12px 24px -20px rgba(15,61,68,.35)}}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:calc(var(--head-h) - 6px)}
 .mark{display:inline-flex;align-items:center;gap:10px;font-family:var(--head);font-weight:700;font-size:1.25rem;letter-spacing:-.01em;color:var(--ink);text-decoration:none;min-height:44px;white-space:nowrap}
-.mark i{display:block;width:12px;height:22px;border-radius:0 0 8px 8px;background:var(--aqua);flex:none}
+.mark svg{width:34px;height:34px;flex:none}
 .mark span{font-weight:600;color:var(--aqua-ink)}
 .nav{display:flex;align-items:center;gap:26px;list-style:none;padding:0;font-size:var(--t-small);font-weight:600}
 .nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 180ms ease}
-.nav a:hover{color:var(--ink)}
+@media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--ink)}}
+.top .acts-top{display:flex;align-items:center;gap:10px}
 .top .btn{min-height:44px;padding:0 18px;font-size:.9375rem}
 .top .short{display:none}
-@media (max-width:900px){.nav{display:none}}
+@media (max-width:1219px){.top .wrap > nav{display:none}.top .mark{min-width:0;white-space:normal}}
+@media (max-width:700px){.top .req{display:none}}
 @media (max-width:480px){.top .long{display:none}.top .short{display:inline}.mark span{display:none}}
 
-/* hero */
-.hero{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,10fr);gap:40px 56px;align-items:center;padding-top:clamp(32px,6vw,80px)}
-.hero h1{font-size:var(--t-h1);line-height:1.02}
-.hero .lead{margin-top:22px;font-size:var(--t-lead);max-width:40ch;color:var(--text)}
+/* hero: hands at work fill the screen */
+.hero{position:relative;min-height:calc(100svh - var(--head-h) - 34px);display:flex;align-items:flex-end;color:#fff;background:var(--ink);overflow:hidden}
+.hero-pic{position:absolute;inset:0;margin:0}
+.hero-pic img{width:100%;height:100%;object-fit:cover;object-position:60% 45%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,45,51,.92) 0%,rgba(10,45,51,.7) 40%,rgba(10,45,51,.15) 75%,rgba(10,45,51,0) 100%),linear-gradient(0deg,rgba(10,45,51,.6) 0%,rgba(10,45,51,0) 40%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-block:clamp(48px,9vh,112px)}
+.hero h1{font-size:var(--t-h1);line-height:1.02;color:#fff;max-width:11ch}
+.hero .lead{margin-top:22px;font-size:var(--t-lead);max-width:42ch;color:#dcecef}
 .acts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:30px}
-.hours{margin-top:26px;font-size:var(--t-small);color:var(--muted)}
-.hero-pic{position:relative;margin:0}
-.hero-pic .ph{border-radius:var(--r);overflow:hidden;background:var(--panel);aspect-ratio:5/4}
-.hero-pic img{width:100%;height:100%;object-fit:cover;object-position:72% 50%}
-.hero-pic figcaption{margin-top:12px;font-size:.875rem;color:var(--muted)}
+.hero .btn{background:var(--aqua-lt);border-color:var(--aqua-lt);color:var(--ink)}
+.hero .tl{color:#fff;text-decoration-color:var(--aqua-lt)}
+@media (hover:hover) and (pointer:fine){.hero .btn:hover{background:#fff;border-color:#fff}}
 
-/* section heads with a pipe coupling */
-.sec{padding-top:var(--sec)}
-.head{display:flex;align-items:center;gap:16px}
-.head::before{content:"";flex:none;width:36px;height:6px;background:var(--aqua);border-radius:3px}
-.head h2{font-size:var(--t-h2)}
-.intro{margin-top:16px;max-width:52ch;color:var(--text);font-size:var(--t-lead)}
-
-/* signs: a ticket list, one row per problem */
-.signs{margin-top:44px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:28px 48px;align-items:start}
-.signs figure{margin:0;position:sticky;top:24px}
-.signs figure .ph{border-radius:var(--r);overflow:hidden;background:var(--panel);aspect-ratio:3/4}
-.signs figure img{width:100%;height:100%;object-fit:cover;object-position:40% 50%}
-.signs figcaption{margin-top:10px;font-size:.875rem;color:var(--muted)}
-.tickets{list-style:none;padding:0;display:grid;gap:12px}
-.ticket{background:var(--panel);border-radius:var(--r);padding:22px 24px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;align-items:center;transition:background-color 200ms ease}
-.ticket h3{font-size:var(--t-h3);line-height:1.25}
-.ticket p{grid-column:1;font-size:1rem;color:var(--text);max-width:52ch}
-.ticket p b{font-weight:700;color:var(--ink)}
-.ticket .ask{grid-column:2;grid-row:1/3;min-height:44px;padding:0 18px;border-radius:999px;border:2px solid var(--ink);background:transparent;color:var(--ink);font:700 .9375rem/1 var(--body);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;white-space:nowrap;transition:background-color 180ms ease,color 180ms ease,transform 140ms var(--ease)}
-.ticket .ask:active{transform:scale(.97)}
-@media (hover:hover) and (pointer:fine){
-  .ticket:hover{background:var(--panel-2)}
-  .ticket .ask:hover{background:var(--ink);color:#fff}
+/* good to know: a floating card that overlaps the bottom of the hero on wide screens */
+.trust{position:relative;z-index:3}
+.trust ul{list-style:none;margin:0;padding:var(--s4) var(--s5);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s3) var(--s5);background:#fff;border-radius:var(--r);box-shadow:var(--sh2)}
+.trust li{display:flex;gap:14px;align-items:flex-start}
+.trust .ico{color:var(--aqua-ink);margin-top:2px;width:40px;height:40px;padding:9px;border-radius:12px;background:var(--aqua-pale)}
+.trust b{display:block;font:700 1.0625rem/1.25 var(--head);color:var(--ink)}
+.trust span{display:block;font-size:.9375rem;color:var(--muted);margin-top:2px}
+.trust a{color:var(--ink);font-weight:700}
+@media (min-width:961px){
+  .hero .wrap{padding-bottom:calc(clamp(48px,9vh,112px) + 64px)}
+  .trust{margin-top:-64px}
 }
-.unsure{margin-top:18px;font-size:1rem;color:var(--muted)}
+
+/* sections: the same space above and below every one, open and contained bands take turns */
+.sec{padding-block:var(--sec)}
+.band{background-color:var(--panel);background-image:linear-gradient(rgba(15,61,68,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(15,61,68,.05) 1px,transparent 1px);background-size:32px 32px;background-position:-1px -1px}
+.head h2{font-size:var(--t-h2);max-width:20ch}
+.intro{margin-top:16px;max-width:52ch;color:var(--text);font-size:var(--t-lead)}
+.after-trust{padding-top:calc(var(--sec) - 8px)}
+
+/* photo treatment: one radius, one tint, an offset aqua block behind */
+.frame{position:relative;isolation:isolate}
+.frame::before{content:"";position:absolute;z-index:-1;inset:28px -20px -20px 28px;border-radius:var(--r);background:var(--aqua-pale)}
+.frame.flip::before{inset:28px 28px -20px -20px}
+.ph{position:relative;border-radius:var(--r);overflow:hidden;background:var(--panel);box-shadow:var(--sh1)}
+.ph::after{content:"";position:absolute;inset:0;background:rgba(15,61,68,.06);pointer-events:none}
+.ph img{width:100%;height:100%;object-fit:cover}
+/* small card that sits over a photo edge */
+.tag{position:absolute;z-index:2;left:-24px;bottom:-28px;max-width:300px;background:#fff;border-radius:var(--r-sm);padding:var(--s3) var(--s4);box-shadow:var(--sh2);font-size:.9375rem;line-height:1.45;color:var(--text)}
+.tag b{display:block;font:700 .8125rem/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--aqua-ink);margin-bottom:6px}
+.frame.flip .tag{left:auto;right:-24px}
+
+/* services: three full rows with photos, then three more in one raised panel */
+.svc{display:grid;gap:clamp(72px,8vw,112px);margin-top:var(--s7)}
+.svc-row{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:var(--s6) clamp(48px,6vw,96px);align-items:center}
+.svc-row.flip .frame{order:2}
+.svc-row .ph{aspect-ratio:4/3}
+.svc-row h3{font-size:clamp(1.625rem,1.3rem + 1.1vw,2.25rem)}
+.see{margin-top:var(--s2);font-size:var(--t-lead);max-width:44ch}
+.see b,.more .see b{font-weight:700;color:var(--ink)}
+.local{margin-top:var(--s3);max-width:46ch;color:var(--text)}
+.covers{margin-top:var(--s4)}
+.covers h4{font:700 .8125rem/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--aqua-ink)}
+.covers ul{list-style:none;padding:0;margin-top:var(--s2);display:grid;gap:10px}
+.covers li{display:flex;gap:12px;align-items:flex-start;line-height:1.45}
+.covers li::before{content:"";flex:none;width:20px;height:20px;margin-top:2px;border-radius:50%;background:var(--aqua-pale) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M6 10.5l2.6 2.6L14 7.6' fill='none' stroke='%230e7383' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
+.ask{display:inline-flex;align-items:center;min-height:44px;margin-top:var(--s4);padding:0 20px;border-radius:999px;border:2px solid var(--ink);background:transparent;color:var(--ink);font:700 .9375rem/1 var(--body);cursor:pointer;text-decoration:none;white-space:nowrap;transition:background-color 180ms ease,color 180ms ease,transform 140ms var(--ease)}
+@media (hover:hover) and (pointer:fine){.ask:hover{background:var(--ink);color:#fff}}
+.more{margin-top:clamp(72px,8vw,112px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:#fff;border-radius:var(--r);box-shadow:var(--sh2);overflow:hidden}
+.more article{padding:var(--s5);display:flex;flex-direction:column}
+.more article + article{box-shadow:inset 1px 0 0 var(--panel-2)}
+.more h3{font-size:var(--t-h3)}
+.more .see{font-size:1rem}
+.more .covers{margin-top:var(--s3);margin-bottom:var(--s4)}
+.more .fact{margin-top:auto;padding:var(--s3);border-radius:var(--r-sm);background:var(--panel);font-size:.9375rem;line-height:1.45}
+.more .fact b{display:block;font:700 .8125rem/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--aqua-ink);margin-bottom:6px}
+.more .ask{margin-top:var(--s4);align-self:flex-start}
+.unsure{margin-top:var(--s5);font-size:1rem;color:var(--muted)}
 .unsure a{color:var(--ink);font-weight:700}
+
+/* before we get there: a checklist card on the blueprint band */
+.ready{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s6) clamp(48px,6vw,96px);align-items:center}
+.ready .frame{margin-top:var(--s6);max-width:460px}
+.ready .ph{aspect-ratio:3/2}
+.check{list-style:none;padding:var(--s5);margin:0;background:#fff;border-radius:var(--r);box-shadow:var(--sh2);display:grid;gap:var(--s4)}
+.check li{display:grid;grid-template-columns:36px minmax(0,1fr);gap:var(--s3);align-items:start}
+.check li::before{content:"";width:36px;height:36px;border-radius:50%;background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3L14.5 7' fill='none' stroke='%235ccad8' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/22px no-repeat}
+.check b{display:block;font:700 1.125rem/1.3 var(--head);color:var(--ink)}
+.check span{display:block;margin-top:4px;font-size:1rem;color:var(--text);max-width:52ch}
 
 /* how we help: three stops on one line */
 .flowwrap{position:relative;margin-top:52px}
@@ -143,41 +211,56 @@ p{text-wrap:pretty}
 .flow li::before{content:"";position:absolute;left:0;top:0;width:36px;height:36px;border-radius:12px;background:#fff;border:6px solid var(--ink)}
 .flow h3{font-size:1.375rem}
 .flow p{margin-top:8px;max-width:34ch}
-.how-pic{margin:56px 0 0;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px 48px;align-items:end}
-.how-pic .ph{border-radius:var(--r);overflow:hidden;background:var(--panel);aspect-ratio:3/2}
-.how-pic img{width:100%;height:100%;object-fit:cover}
-.how-pic figcaption{font-size:var(--t-lead);color:var(--text);max-width:36ch}
-.how-pic figcaption small{display:block;margin-top:12px;font-size:.875rem;color:var(--muted)}
 
-/* questions: two columns of plain answers */
-.qa{margin-top:44px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.qa details{background:var(--panel);border-radius:var(--r);padding:0 22px}
+/* photo strip: rounded tiles in a gentle wave */
+.strip{list-style:none;padding:0;margin-top:var(--s6);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s4);align-items:start}
+.strip li:nth-child(even){margin-top:var(--s7)}
+.strip .ph{aspect-ratio:3/4}
+.strip figure{margin:0}
+.strip figcaption{margin-top:12px;font:600 1.0625rem/1.3 var(--head);color:var(--ink)}
+.strip img{transition:transform 700ms var(--ease)}
+@media (hover:hover) and (pointer:fine){.strip li:hover img{transform:scale(1.04)}}
+
+/* crew: plain words and a work photo */
+.crew{margin-top:var(--s7);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s6) clamp(48px,6vw,96px);align-items:center}
+.crew .ph{aspect-ratio:3/2}
+.crew .ph img{object-position:50% 40%}
+.crew h3{font-size:clamp(1.5rem,1.2rem + 1vw,2.125rem);line-height:1.2;max-width:20ch}
+.crew p{margin-top:var(--s3);max-width:40ch}
+
+/* questions: two columns of plain answers on raised cards */
+.qa{margin-top:var(--s6);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s2);align-items:start}
+.qa details{background:#fff;border-radius:var(--r-sm);padding:0 22px;box-shadow:var(--sh1);transition:box-shadow 200ms ease}
 .qa summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:68px;padding:16px 0;cursor:pointer;font-family:var(--head);font-weight:600;font-size:1.125rem;color:var(--ink);line-height:1.3}
 .qa summary::-webkit-details-marker{display:none}
 .qa summary::after{content:"";flex:none;width:22px;height:22px;border-radius:50%;background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M6 2v8M2 6h8' stroke='%23fff' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E") center/11px no-repeat;transition:transform 200ms var(--ease)}
 .qa details[open] summary::after{transform:rotate(45deg)}
 .qa details p{padding:0 0 20px;max-width:58ch}
+@media (hover:hover) and (pointer:fine){.qa details:hover{box-shadow:var(--sh1h)}}
 
 /* contact */
-.contact{margin-top:44px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px 56px;align-items:start}
-.ways{background:var(--ink);color:#e6f1f3;border-radius:var(--r);padding:28px}
+.contact{margin-top:var(--s6);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px 56px;align-items:start}
+.ways{background:var(--ink);color:#e6f1f3;border-radius:var(--r);padding:var(--s5);box-shadow:var(--sh2)}
 .ways h3{color:#fff;font-size:1.375rem}
 .ways a.big{display:inline-flex;margin-top:14px;font-family:var(--head);font-weight:700;font-size:clamp(1.5rem,1.2rem + 1.2vw,2rem);color:#fff;text-decoration:none;min-height:44px;align-items:center}
-.ways a.big:hover{text-decoration:underline;text-decoration-color:var(--aqua)}
+@media (hover:hover) and (pointer:fine){.ways a.big:hover{text-decoration:underline;text-decoration-color:var(--aqua)}}
 .ways p{margin-top:10px;font-size:1rem}
 .ways .where{margin-top:22px;padding-top:18px;border-top:2px solid rgba(255,255,255,.14)}
+.formcard{background:#fff;border-radius:var(--r);padding:clamp(20px,3vw,36px);box-shadow:var(--sh1)}
 
-form{display:grid;grid-template-columns:1fr 1fr;gap:20px 16px}
-form[hidden]{display:none}
+#qform{display:grid;grid-template-columns:1fr 1fr;gap:20px 16px}
+#qform[hidden]{display:none}
 .f{display:grid;gap:6px;min-width:0}
 .f.full{grid-column:1/-1}
 .f label{font-size:var(--t-small);font-weight:700;color:var(--ink)}
-.f input,.f select,.f textarea{width:100%;min-height:52px;padding:12px 14px;border:2px solid #c9d6d9;border-radius:12px;background:#fff;color:var(--text);font:inherit;font-size:1rem;transition:border-color 160ms ease;appearance:none;-webkit-appearance:none}
+.f input,.f select,.f textarea{width:100%;min-height:52px;padding:12px 14px;border:2px solid #c9d6d9;border-radius:var(--r-sm);background:#fff;color:var(--text);font:inherit;font-size:1rem;transition:border-color 160ms ease,box-shadow 160ms ease;appearance:none;-webkit-appearance:none}
 .f select{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%230f3d44' stroke-width='1.8'/%3E%3C/svg%3E") no-repeat right 16px center;padding-right:42px}
 .f textarea{min-height:120px;resize:vertical;line-height:1.5}
 .f input::placeholder,.f textarea::placeholder{color:#5e7175}
-.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--aqua-ink)}
+@media (hover:hover) and (pointer:fine){.f input:hover,.f select:hover,.f textarea:hover{border-color:#9fb4b8}}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--aqua-ink);box-shadow:0 0 0 2px var(--aqua-ink)}
 .f [aria-invalid="true"]{border-color:var(--danger)}
+.f [aria-invalid="true"]:focus{border-color:var(--danger);box-shadow:0 0 0 1px var(--danger);outline:2px solid var(--danger);outline-offset:3px}
 .err{font-size:.875rem;color:var(--danger)}
 .err:empty{display:none}
 .submit{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
@@ -186,232 +269,491 @@ form[hidden]{display:none}
 .picked:empty{display:none}
 .thanks[hidden]{display:none}
 .thanks:focus{outline:none}
-.thanks h3{font-size:var(--t-h2)}
+.thanks h3{font-size:var(--t-h2);overflow-wrap:anywhere}
 .thanks p{margin-top:12px;max-width:46ch}
 .thanks .note{font-size:var(--t-small);color:var(--muted)}
 .thanks .btn{margin-top:24px}
 
+/* towns: dark band with a dim job photo behind it */
+.towns{position:relative;isolation:isolate;overflow:hidden;background:var(--ink);color:#fff;padding-block:var(--sec)}
+.towns::before{content:"";position:absolute;inset:0;z-index:-1;background:url("pipe-join-800.webp") 50% 40%/cover no-repeat;opacity:.16;filter:grayscale(1)}
+.towns .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:28px clamp(32px,5vw,80px);align-items:center}
+.towns h2{color:#fff;font-size:var(--t-h2)}
+.towns .intro{color:#c4d6d9}
+.townlist{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.townlist li{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);font:700 clamp(1.0625rem,1rem + .4vw,1.375rem)/1 var(--head)}
+.townlist li.home{background:var(--aqua-lt);color:var(--ink)}
+.townlist .ico{width:16px;height:16px}
+
 /* footer */
-.foot{margin-top:var(--sec);background:var(--ink);color:#cfe0e3;padding-block:56px 40px;font-size:.9375rem}
+.foot{border-top:1px solid rgba(255,255,255,.12);background:var(--ink);color:#cfe0e3;padding-block:56px 40px;font-size:.9375rem}
 .foot .name{font-family:var(--head);font-weight:700;color:#fff;font-size:clamp(2rem,1.2rem + 3.6vw,4rem);line-height:1;letter-spacing:-.02em}
-.foot .name span{color:#5ccad8}
+.foot .name span{color:var(--aqua-lt)}
 .foot .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 40px;margin-top:28px}
 .foot a{color:#fff}
-.foot .credit{margin-top:28px;font-size:.875rem;color:#c4d6d9;max-width:80ch}
-.foot .credit a{color:#e6f1f3}
-/* footer mark: a 2 s logo build that plays once in view, muted; the still logo shows until it really plays */
-.gcd{display:inline-flex;align-items:center;gap:14px;margin-top:20px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:#cfe0e3;transition:background-color 180ms ease,transform 140ms var(--ease)}
-.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505}
-.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.gcd-mark video{opacity:0;transition:opacity 160ms ease}
-.gcd-mark.live video{opacity:1}
-.gcd-text{line-height:1.35}
-.gcd-text b{display:block;color:#fff;font-weight:700}
-.gcd:active{transform:scale(.98)}
-.gcd:focus-visible{outline:2px solid #5ccad8;outline-offset:2px}
-@media (hover:hover) and (pointer:fine){.gcd:hover{background:#164a52}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
 
 /* phone bar */
 .bar{display:none}
 
-/* motion */
+/* motion: slow reveals once, a drop that runs the step line once */
 @media (prefers-reduced-motion:no-preference){
   .js .rv{opacity:0;transform:translateY(18px);transition:opacity 560ms var(--ease),transform 560ms var(--ease);transition-delay:calc(var(--d,0) * 70ms)}
   .js .rv.in{opacity:1;transform:none}
-  .hero .rise{animation:rise 700ms var(--ease) both;animation-delay:calc(var(--d,0) * 80ms)}
+  .hero-pic img{animation:settle 1600ms var(--ease) both}
+  .hero .rise{animation:rise 700ms var(--ease) both;animation-delay:calc(var(--d,0) * 80ms + 100ms)}
   .flowwrap.in .drop{animation:flowdrop 2.4s cubic-bezier(.65,0,.35,1) 300ms 1 both}
+  .js .frame.rv .tag{opacity:0;transform:translateY(10px);transition:opacity 500ms var(--ease) 280ms,transform 500ms var(--ease) 280ms}
+  .js .frame.rv.in .tag{opacity:1;transform:none}
 }
+@keyframes settle{from{transform:scale(1.06)}to{transform:none}}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 @keyframes flowdrop{0%{opacity:0;transform:translateX(0)}10%{opacity:1}90%{opacity:1}100%{opacity:0;transform:translateX(var(--run,600px))}}
 
 /* tablet */
 @media (max-width:960px){
-  .hero,.signs,.contact,.how-pic{grid-template-columns:minmax(0,1fr)}
-  .hero-pic{order:-1}
-  .signs figure{position:static;max-width:520px}
-  .signs figure .ph{aspect-ratio:16/10}
+  .contact,.towns .wrap,.ready,.crew,.svc-row{grid-template-columns:minmax(0,1fr)}
+  .svc-row.flip .frame{order:0}
+  .svc-row .frame{max-width:620px}
+  .trust{margin-top:var(--s4)}
+  .trust ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .more{grid-template-columns:minmax(0,1fr)}
+  .more article + article{box-shadow:inset 0 1px 0 var(--panel-2)}
+  .strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .strip li:nth-child(even){margin-top:var(--s6)}
   .qa{grid-template-columns:minmax(0,1fr)}
+  .ready .frame{margin-top:var(--s5)}
 }
 
 /* phone */
 @media (max-width:700px){
-  :root{--bar:calc(64px + env(safe-area-inset-bottom))}
-  .hero{padding-top:20px;gap:28px}
-  .hero-pic{margin-inline:calc(var(--m) * -1)}
-  .hero-pic .ph{border-radius:0;aspect-ratio:16/11}
-  .hero-pic figcaption{padding-inline:var(--m)}
+  :root{--bar:calc(64px + env(safe-area-inset-bottom));--head-h:68px;--r:18px;--r-sm:12px}
+  .hero{min-height:calc(100svh - var(--head-h) - 52px - var(--bar))}
+  .hero::after{background:linear-gradient(180deg,rgba(10,45,51,.25) 0%,rgba(10,45,51,.45) 26%,rgba(10,45,51,.9) 46%,rgba(10,45,51,.96) 100%)}
+  .hero .label{color:#d4f2f6}
+  .hero-pic img{height:58%;object-position:22% 50%;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent);mask-image:linear-gradient(180deg,#000 70%,transparent)}
+  .trust ul{grid-template-columns:minmax(0,1fr);gap:14px;padding:var(--s4)}
   .acts .btn{flex:1 1 100%}
-  .ticket{grid-template-columns:minmax(0,1fr);padding:20px}
-  .ticket .ask{grid-column:1;grid-row:auto;justify-self:start;margin-top:8px}
+  .frame::before{inset:18px -10px -10px 18px}
+  .frame.flip::before{inset:18px -10px -10px 18px}
+  .tag,.frame.flip .tag{position:relative;left:auto;right:auto;bottom:auto;margin:-36px 14px 0;max-width:none}
+  .more article{padding:var(--s4)}
+  .check{padding:var(--s4)}
+  .strip{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:var(--s2);margin-inline:calc(var(--m) * -1);padding:4px var(--m) 16px;scroll-padding-inline:var(--m);scrollbar-width:thin}
+  .strip li{flex:0 0 64%;scroll-snap-align:start;margin-top:0!important}
   .flow{grid-template-columns:minmax(0,1fr);gap:28px;padding-left:52px}
   .flow::before{left:15px;right:auto;top:12px;bottom:12px;width:6px;height:auto}
   .flowwrap .drop{display:none}
   .flow li{padding-top:0}
   .flow li::before{left:-52px}
-  form{grid-template-columns:minmax(0,1fr)}
+  #qform{grid-template-columns:minmax(0,1fr)}
   .submit .btn{width:100%}
-  .bar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--ink);padding:8px 10px calc(8px + env(safe-area-inset-bottom))}
+  .bar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--ink);padding:8px 10px calc(8px + env(safe-area-inset-bottom));box-shadow:0 -10px 24px -16px rgba(15,61,68,.6)}
   .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:999px;font-weight:700;font-size:1rem;text-decoration:none;color:#fff;border:2px solid rgba(255,255,255,.35);transition:transform 140ms var(--ease)}
-  .bar a:first-child{background:#5ccad8;border-color:#5ccad8;color:var(--ink)}
+  .bar a:first-child{background:var(--aqua-lt);border-color:var(--aqua-lt);color:var(--ink)}
   .bar a:active{transform:scale(.97)}
   .bar svg{width:18px;height:18px}
 }
 @media (max-width:340px){
   .mark{font-size:1.0625rem;gap:8px}
   .top .btn{padding:0 14px}
+  .top .btn .ico{display:none}
+}
+/* call links stay solid: no blur, filter or blend on them, icons take the link's own color */
+a[href^="tel:"]{-webkit-backdrop-filter:none;backdrop-filter:none;filter:none;mix-blend-mode:normal}
+a[href^="tel:"] svg:not(.ico){fill:currentColor;stroke:none}
+a[href^="tel:"] svg.ico{fill:none;stroke:currentColor}
+/* keyboard focus never lands under the phone bar */
+html{scroll-padding-bottom:calc(var(--bar) + 16px)}
+/* small text links get a 44px tap area without moving the text */
+.hit{position:relative;display:inline;padding:0;margin:0}.hit::after{content:"";position:absolute;left:0;right:0;top:50%;height:44px;transform:translateY(-50%)}
+.hero :focus-visible,.ways :focus-visible,.foot :focus-visible,.bar :focus-visible{outline-color:var(--aqua-lt)}
+.sample{overflow:hidden}.sample a{position:relative;display:inline;padding:0;margin:0}.sample a::after{content:"";position:absolute;left:0;right:0;top:50%;height:44px;transform:translateY(-50%)}
+/* a label that wraps keeps its marker on the first line */
+.label{line-height:1.35;align-items:flex-start;text-wrap:balance}
+.label::before{flex:none;margin-top:calc((1.35em - 6px)/2)}
+.hero .tl{display:inline-flex;align-items:center;min-height:44px}
+/* phones: the hero buttons sit just above the phone bar on the first screen */
+@media (max-width:700px){
+  .hero{min-height:calc(100svh - var(--pin-bar,var(--bar)) - var(--pin-top,150px))}
+  .hero .wrap{padding-bottom:clamp(14px,14px + (100svh - 640px) * 0.05,24px)}
+  .hero .wrap{padding-top:clamp(16px,16px + (100svh - 640px) * 0.16,48px)}
+  .hero .lead{margin-top:clamp(10px,10px + (100svh - 640px) * 0.06,22px)}
+  .acts{margin-top:clamp(12px,12px + (100svh - 640px) * 0.09,30px);row-gap:clamp(6px,6px + (100svh - 640px) * 0.04,14px)}
 }
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></symbol>
+  <symbol id="i-text" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0114 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 10h8M8 14h5"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.6 6 11a6 6 0 01-12 0c0-4.4 6-11 6-11z"/></symbol>
+</svg>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="sample" role="note">Sample design by <a href="https://granitecitydigital.me/">Granite City Digital</a>. The business name, phone number and details are made up.</div>
+<aside class="sample" aria-label="About this sample">Sample design by <a href="https://granitecitydigital.me/">Granite City Digital</a>. The business name, phone number and details are made up.</aside>
 
 <header class="top">
   <div class="wrap">
-    <a class="mark" href="#top" aria-label="Steady Flow Plumbing, back to top"><i aria-hidden="true"></i>Steady Flow <span>Plumbing</span></a>
+    <a class="mark" href="#top" aria-label="Steady Flow Plumbing, back to top"><svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="9" fill="#0f3d44"/><path d="M7 12h13a5 5 0 015 5v3" fill="none" stroke="#5ccad8" stroke-width="4" stroke-linecap="round"/><path d="M25 25c-1.7 0-2.8-1.3-2.8-2.6 0-1.5 2.8-4.2 2.8-4.2s2.8 2.7 2.8 4.2c0 1.3-1.1 2.6-2.8 2.6z" fill="#fff"/></svg>Steady Flow <span>Plumbing</span></a>
     <nav aria-label="Main">
       <ul class="nav">
-        <li><a href="#signs">What is going on</a></li>
+        <li><a href="#signs">What we fix</a></li>
+        <li><a href="#ready">Before we arrive</a></li>
         <li><a href="#how">How we help</a></li>
         <li><a href="#questions">Questions</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <a class="btn" href="tel:+13365550161"><span class="long num">336 555 0161</span><span class="short">Call</span></a>
+    <div class="acts-top">
+      <a class="btn line req" href="#contact">Send a request</a>
+      <a class="btn" href="tel:+16145550161"><svg class="ico" aria-hidden="true" style="width:18px;height:18px"><use href="#i-phone"/></svg><span class="long num">614 555 0161</span><span class="short">Call</span></a>
+    </div>
   </div>
 </header>
 
 <main id="main">
-  <section class="wrap hero" id="top" aria-labelledby="hero-h">
-    <div>
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <figure class="hero-pic">
+      <img src="hero-fit-1600.webp" srcset="hero-fit-800.webp 800w, hero-fit-1600.webp 1600w" sizes="(max-width:1000px) 160vw, 100vw" width="1600" height="1067" fetchpriority="high" alt="Gloved hands threading a steel fitting at a workbench, two blue pipe wrenches beside it">
+    </figure>
+    <div class="wrap">
+      <p class="label rise">Plumbing in Columbus, Ohio</p>
       <h1 class="rise" id="hero-h">A drip, a clog, a cold shower?</h1>
-      <p class="lead rise" style="--d:1">Steady Flow Plumbing fixes plumbing in Mount Airy, NC. Tell us what you are seeing and we will explain the next step in plain words.</p>
+      <p class="lead rise" style="--d:1">Steady Flow Plumbing fixes leaks, drains and water heaters in Columbus, Ohio. Tell us what you are seeing and we will explain the next step in plain words.</p>
       <div class="acts rise" style="--d:2">
-        <a class="btn" href="tel:+13365550161"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call <span class="num">336 555 0161</span></a>
+        <a class="btn" href="tel:+16145550161"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call <span class="num">614 555 0161</span></a>
         <a class="tl" href="#contact">Or send a request</a>
       </div>
     </div>
-    <figure class="hero-pic rise" style="--d:1">
-      <div class="ph"><img src="valves-800.webp" srcset="valves-800.webp 800w, valves-1400.webp 1400w" sizes="(min-width: 960px) 50vw, 100vw" width="800" height="534" fetchpriority="high" alt="Two shutoff valves with red handles coming out of a clean white wall"></div>
-      <figcaption>Shutoff valves on a clean wall. Example photo.</figcaption>
-    </figure>
+  </section>
+<script>
+/* phones: the hero fills the screen down to the phone bar, so its buttons sit just above the bar.
+   When a short screen cannot hold the hero text and a button above the bar, that button starts below the bar instead of being cut by it. */
+(function(){
+  var d=document,root=d.documentElement,hero=d.querySelector('.hero'),acts=hero&&hero.querySelector('.acts'),
+      mq=window.matchMedia&&matchMedia('(max-width:700px)'),probe=d.createElement('div'),raf=0;
+  if(!acts||!mq)return;
+  probe.style.cssText='position:absolute;top:0;left:0;width:1px;height:100vh;height:100svh;visibility:hidden;pointer-events:none';
+  function y(el){for(var t=0;el&&el!==hero;el=el.offsetParent)t+=el.offsetTop;return t}
+  function fit(){
+    raf=0;
+    var btns=acts.children,bar=d.querySelector('.bar'),i,j,b,t,lim,push,line;
+    for(i=0;i<btns.length;i++)btns[i].style.marginTop='';
+    if(!mq.matches){root.style.removeProperty('--pin-top');root.style.removeProperty('--pin-bar');return}
+    var top=hero.getBoundingClientRect().top+window.pageYOffset;
+    root.style.setProperty('--pin-top',top+'px');
+    if(!bar||!bar.offsetHeight||!d.body)return;
+    root.style.setProperty('--pin-bar',bar.offsetHeight+'px');
+    d.body.appendChild(probe);lim=probe.offsetHeight-bar.offsetHeight-top;d.body.removeChild(probe);
+    for(i=0;i<btns.length;i++){
+      b=btns[i];if(!b.offsetHeight)continue;t=y(b);
+      if(t+b.offsetHeight<=lim-1)continue;
+      if(t<lim+1){
+        line=[];for(j=i;j<btns.length;j++)if(btns[j].offsetHeight&&y(btns[j])===t)line.push(btns[j]);
+        push=Math.ceil(lim-t)+2;
+        for(j=0;j<line.length;j++)line[j].style.marginTop=parseFloat(getComputedStyle(line[j]).marginTop)+push+'px';
+      }
+      break;
+    }
+  }
+  function later(){if(!raf)raf=requestAnimationFrame(fit)}
+  fit();
+  d.addEventListener('DOMContentLoaded',fit);
+  addEventListener('load',fit);
+  addEventListener('resize',later);
+  if(d.fonts&&d.fonts.ready)d.fonts.ready.then(fit);
+  if(mq.addEventListener)mq.addEventListener('change',fit);else if(mq.addListener)mq.addListener(fit);
+}());
+</script>
+
+  <section class="trust" aria-label="Good to know">
+    <div class="wrap">
+      <ul>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg><div><b>Tell us what you see</b><span>We look first, then explain.</span></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><div><b>Call or text</b><span><a class="num hit" href="tel:+16145550161">614 555 0161</a></span></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><div><b>Based in Columbus</b><span>Neighborhoods and nearby cities.</span></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-drop"/></svg><div><b>Plain words</b><span>You decide what gets done.</span></div></li>
+      </ul>
+    </div>
   </section>
 
-  <section class="wrap sec" id="signs" aria-labelledby="signs-h">
-    <div class="head rv"><h2 id="signs-h">What is going on?</h2></div>
-    <p class="intro rv" style="--d:1">Most calls start with something you noticed. Find yours below, then ask about it.</p>
-    <div class="signs">
-      <figure class="rv">
-        <div class="ph"><img src="faucet-700.webp" srcset="faucet-700.webp 700w, faucet-1100.webp 1100w" sizes="(min-width: 960px) 30vw, 90vw" width="700" height="466" loading="lazy" decoding="async" alt="A black pull down kitchen faucet over a steel sink on a light counter"></div>
-        <figcaption>A kitchen faucet over a steel sink. Example photo.</figcaption>
-      </figure>
+  <section class="sec after-trust" id="signs" aria-labelledby="signs-h">
+    <div class="wrap">
+      <p class="label rv">Pick your problem</p>
+      <div class="head rv"><h2 id="signs-h">What is going on?</h2></div>
+      <p class="intro rv" style="--d:1">Most calls start with something you noticed. Find yours, see what a visit covers, then ask us about it.</p>
+
+      <div class="svc">
+        <article class="svc-row" aria-labelledby="s-leaks">
+          <div class="frame rv">
+            <div class="ph"><img src="yard-leak-800.webp" srcset="yard-leak-800.webp 800w, yard-leak-1600.webp 1600w" sizes="(max-width:960px) 100vw, 46vw" width="800" height="534" loading="lazy" decoding="async" alt="Water spraying from a leaking joint in an outdoor pipe, green plants behind"></div>
+            <p class="tag"><b>First step</b>Close the shutoff under the sink, or the main valve, and wipe up standing water.</p>
+          </div>
+          <div class="rv" style="--d:1">
+            <h3 id="s-leaks">Leaks and drips</h3>
+            <p class="see"><b>What you might see:</b> a faucet that drips after it is shut off, a wet spot under the sink or a water bill that jumped.</p>
+            <div class="covers">
+              <h4>What a visit covers</h4>
+              <ul>
+                <li>Finding where the water comes from, not just where it shows up</li>
+                <li>Faucet parts, supply lines and pipe joints</li>
+                <li>What we found and what it takes, before any work starts</li>
+              </ul>
+            </div>
+            <a class="ask" href="#contact" data-topic="Leaks and drips">Ask about this</a>
+          </div>
+        </article>
+
+        <article class="svc-row flip" aria-labelledby="s-drains">
+          <div class="frame flip rv">
+            <div class="ph"><img src="faucet-run-800.webp" width="800" height="534" loading="lazy" decoding="async" alt="A chrome faucet running a steady stream into a round steel sink"></div>
+            <p class="tag"><b>Good to know</b>A clog that keeps coming back usually sits farther down the line.</p>
+          </div>
+          <div class="rv" style="--d:1">
+            <h3 id="s-drains">Slow or clogged drains</h3>
+            <p class="see"><b>What you might see:</b> water that sits in the tub, gurgling sounds in the pipes or the same clog coming back.</p>
+            <div class="covers">
+              <h4>What a visit covers</h4>
+              <ul>
+                <li>Kitchen and bathroom sinks, tubs and showers</li>
+                <li>Clearing the line, not just the top of the drain</li>
+                <li>Telling you what caused it, so it is less likely to come back</li>
+              </ul>
+            </div>
+            <a class="ask" href="#contact" data-topic="Slow or clogged drains">Ask about this</a>
+          </div>
+        </article>
+
+        <article class="svc-row" aria-labelledby="s-cold">
+          <div class="frame rv">
+            <div class="ph"><img src="frozen-tap-800.webp" width="800" height="1200" loading="lazy" decoding="async" alt="An outdoor tap on a post with icicles hanging from it in the snow" style="object-position:50% 45%"></div>
+            <p class="tag"><b>Stay safe</b>Never thaw a frozen pipe with an open flame.</p>
+          </div>
+          <div class="rv" style="--d:1">
+            <h3 id="s-cold">Pipes in cold weather</h3>
+            <p class="see"><b>What you might see:</b> no water from a tap on a cold morning, or a pipe in an unheated space that drips.</p>
+            <p class="local">Columbus winters bring hard freezes. January nights average a low of about 22 degrees, well below freezing.</p>
+            <div class="covers">
+              <h4>What a visit covers</h4>
+              <ul>
+                <li>Thawing a frozen line the safe way</li>
+                <li>Repairing a pipe that split in the cold</li>
+                <li>Outdoor taps that leak once the weather turns</li>
+              </ul>
+            </div>
+            <a class="ask" href="#contact" data-topic="Pipes in cold weather">Ask about this</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="more">
+        <article class="rv" aria-labelledby="s-heat">
+          <h3 id="s-heat">Water heater trouble</h3>
+          <p class="see"><b>What you might see:</b> no hot water, a shower that turns cold fast or a puddle around the base of the tank.</p>
+          <div class="covers">
+            <h4>What a visit covers</h4>
+            <ul>
+              <li>Finding why the water is not getting hot</li>
+              <li>Checking where a leaking tank is wet</li>
+              <li>Repair or replace, explained before you choose</li>
+            </ul>
+          </div>
+          <p class="fact"><b>Good to know</b>Water around the base of the tank is worth a call, not a wait.</p>
+          <a class="ask" href="#contact" data-topic="Water heater trouble">Ask about this</a>
+        </article>
+        <article class="rv" style="--d:1" aria-labelledby="s-toilet">
+          <h3 id="s-toilet">Toilets</h3>
+          <p class="see"><b>What you might see:</b> a toilet that keeps running, rocks when you sit or clogs more than it should.</p>
+          <div class="covers">
+            <h4>What a visit covers</h4>
+            <ul>
+              <li>Running toilets and worn parts in the tank</li>
+              <li>A toilet that rocks or leaks at the base</li>
+              <li>Clogs that a plunger will not clear</li>
+            </ul>
+          </div>
+          <p class="fact"><b>Good to know</b>Tell us if it runs, rocks or clogs, so we know what to look at first.</p>
+          <a class="ask" href="#contact" data-topic="Toilets">Ask about this</a>
+        </article>
+        <article class="rv" style="--d:2" aria-labelledby="s-tap">
+          <h3 id="s-tap">Faucets and fixtures</h3>
+          <p class="see"><b>What you might see:</b> a worn faucet, a stiff handle or low pressure at one tap.</p>
+          <div class="covers">
+            <h4>What a visit covers</h4>
+            <ul>
+              <li>Kitchen and bathroom faucets</li>
+              <li>Worn parts, stiff handles and drips</li>
+              <li>Low pressure at a single tap</li>
+            </ul>
+          </div>
+          <p class="fact"><b>Good to know</b>A steady drip wastes water every day, and the cause is often a worn part inside the faucet.</p>
+          <a class="ask" href="#contact" data-topic="Faucets and fixtures">Ask about this</a>
+        </article>
+      </div>
+      <p class="unsure rv">Not sure which one it is? <a href="tel:+16145550161">Call <span class="num">614 555 0161</span></a> and describe it.</p>
+    </div>
+  </section>
+
+  <section class="sec band" id="ready" aria-labelledby="ready-h">
+    <div class="wrap ready">
       <div>
-        <ul class="tickets">
-          <li class="ticket rv"><h3>Leaks and drips</h3><p><b>Signs you need this:</b> a faucet that drips after it is shut off, a wet spot under the sink, or a water bill that jumped.</p><a class="ask" href="#contact" data-topic="Leaks and drips">Ask about this</a></li>
-          <li class="ticket rv"><h3>Slow or clogged drains</h3><p><b>Signs you need this:</b> water that sits in the tub, gurgling sounds in the pipes, or the same clog coming back.</p><a class="ask" href="#contact" data-topic="Slow or clogged drains">Ask about this</a></li>
-          <li class="ticket rv"><h3>Water heater trouble</h3><p><b>Signs you need this:</b> no hot water, hot water that runs out fast, or water around the base of the tank.</p><a class="ask" href="#contact" data-topic="Water heater trouble">Ask about this</a></li>
-          <li class="ticket rv"><h3>Toilets</h3><p><b>Signs you need this:</b> a toilet that keeps running, rocks when you sit, or clogs more than it should.</p><a class="ask" href="#contact" data-topic="Toilets">Ask about this</a></li>
-          <li class="ticket rv"><h3>Faucets and fixtures</h3><p><b>Signs you need this:</b> a new faucet to put in, a stiff handle, or low pressure at one tap.</p><a class="ask" href="#contact" data-topic="Faucets and fixtures">Ask about this</a></li>
-          <li class="ticket rv"><h3>Pipes in cold weather</h3><p><b>Signs you need this:</b> no water from a tap on a cold morning, or a pipe in the crawl space that drips.</p><a class="ask" href="#contact" data-topic="Pipes in cold weather">Ask about this</a></li>
-        </ul>
-        <p class="unsure rv">Not sure which one it is? <a href="tel:+13365550161">Call <span class="num">336 555 0161</span></a> and describe it.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap sec" id="how" aria-labelledby="how-h">
-    <div class="head rv"><h2 id="how-h">How we help</h2></div>
-    <p class="intro rv" style="--d:1">Three steps, and you decide at the end of each one.</p>
-    <div class="flowwrap rv" style="--d:2">
-    <span class="drop" aria-hidden="true"></span>
-    <ol class="flow">
-      <li><h3>Call or send a request</h3><p>Reach us at <a class="tl num" href="tel:+13365550161">336 555 0161</a>, or use the form below. A few words about the problem is enough.</p></li>
-      <li><h3>We look at the problem</h3><p>We find where the trouble starts, not just where the water shows up.</p></li>
-      <li><h3>We explain the next step</h3><p>You hear what we found and what it takes to fix it. Then you choose what to do.</p></li>
-    </ol>
-    </div>
-    <figure class="how-pic rv">
-      <div class="ph"><img src="fit-700.webp" srcset="fit-700.webp 700w, fit-1200.webp 1200w" sizes="(min-width: 960px) 56vw, 100vw" width="700" height="466" loading="lazy" decoding="async" alt="Gloved hands threading a steel pipe fitting into a white radiator, two blue pipe wrenches on the bench"></div>
-      <figcaption>Before any work starts, you know what we are doing and why.<small>Threading a pipe fitting. Example photo.</small></figcaption>
-    </figure>
-  </section>
-
-  <section class="wrap sec" id="questions" aria-labelledby="q-h">
-    <div class="head rv"><h2 id="q-h">Plumbing questions</h2></div>
-    <div class="qa rv" style="--d:1">
-      <details><summary>A pipe burst. What do I do first?</summary><p>Shut off the main water valve. In most homes it sits where the water line comes in, often in the crawl space, the basement or near the water heater. Then call.</p></details>
-      <details><summary>Is a dripping faucet worth fixing?</summary><p>Yes. A steady drip wastes water every day, and the cause is often a worn part inside the faucet.</p></details>
-      <details><summary>Why does my drain keep clogging?</summary><p>A clog that comes back means something is building up further down the line. Clearing the top of the drain only buys a little time.</p></details>
-      <details><summary>Can you give me a price over the phone?</summary><p>No. We see the job first, then give you the price. Tell us what is going on and we will tell you the next step.</p></details>
-      <details><summary>How do I keep pipes from freezing?</summary><p>On hard freezes, let a faucet on an outside wall drip, open the cabinet doors under sinks, and keep crawl space vents closed.</p></details>
-      <details><summary>Do you work outside Mount Airy?</summary><p>We are based in Mount Airy. Live nearby? Call with your town and we will give you a straight answer.</p></details>
-    </div>
-  </section>
-
-  <section class="wrap sec" id="contact" aria-labelledby="contact-h">
-    <div class="head rv"><h2 id="contact-h">Send a request</h2></div>
-    <p class="intro rv" style="--d:1">Tell us what is going on and how to reach you.</p>
-    <div class="contact">
-      <div class="ways rv">
-        <h3>Rather talk it through?</h3>
-        <a class="big num" href="tel:+13365550161">336 555 0161</a>
-        <p>Call and tell us what you are seeing.</p>
-        <p class="where">Based in Mount Airy, NC</p>
-      </div>
-
-      <div class="rv" style="--d:1">
-        <form id="qform" novalidate method="post">
-          <p class="picked" id="picked" aria-live="polite"></p>
-          <div class="f">
-            <label for="q-name">Your name</label>
-            <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
-            <span class="err" id="e-name"></span>
-          </div>
-          <div class="f">
-            <label for="q-phone">Phone</label>
-            <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Your phone number" required aria-describedby="e-phone">
-            <span class="err" id="e-phone"></span>
-          </div>
-          <div class="f">
-            <label for="q-topic">What is going on?</label>
-            <select id="q-topic" name="topic" required aria-describedby="e-topic">
-              <option value="">Choose one</option>
-              <option>Leaks and drips</option>
-              <option>Slow or clogged drains</option>
-              <option>Water heater trouble</option>
-              <option>Toilets</option>
-              <option>Faucets and fixtures</option>
-              <option>Pipes in cold weather</option>
-              <option>Something else</option>
-            </select>
-            <span class="err" id="e-topic"></span>
-          </div>
-          <div class="f">
-            <label for="q-town">Town</label>
-            <select id="q-town" name="town" required aria-describedby="e-town">
-              <option value="">Choose your town</option>
-              <option>Mount Airy</option>
-              <option>Somewhere else</option>
-            </select>
-            <span class="err" id="e-town"></span>
-          </div>
-          <div class="f full">
-            <label for="q-msg">Tell us more</label>
-            <textarea id="q-msg" name="message" required aria-describedby="e-msg" placeholder="Where it is and what you have noticed"></textarea>
-            <span class="err" id="e-msg"></span>
-          </div>
-          <div class="submit">
-            <button class="btn" type="submit">Send request</button>
-          </div>
-        </form>
-        <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
-          <h3 id="t-title">Thanks. We have it.</h3>
-          <p id="t-body">Your request is noted.</p>
-          <p class="note">This is a sample site, so nothing was actually sent.</p>
-          <button class="btn line" type="button" id="t-again">Send another request</button>
+        <p class="label rv">Before we get there</p>
+        <div class="head rv"><h2 id="ready-h">What to do while you wait</h2></div>
+        <p class="intro rv" style="--d:1">A few minutes now can save a floor. Here is what to do after you call.</p>
+        <div class="frame rv" style="--d:2">
+          <div class="ph"><img src="shutoffs-800.webp" srcset="shutoffs-800.webp 800w, valves-1400.webp 1400w" sizes="(max-width:960px) 90vw, 32vw" width="800" height="534" loading="lazy" decoding="async" alt="Two shutoff valves with red handles on a clean white wall"></div>
+          <p class="tag"><b>Know your shutoff</b>Find the main valve now, before you need it.</p>
         </div>
       </div>
+      <ol class="check rv" style="--d:1" aria-label="Checklist before we arrive">
+        <li><div><b>Shut off the water</b><span>Close the valve at the fixture if it has one. If you cannot find one, or water keeps coming, close the main valve.</span></div></li>
+        <li><div><b>Mop up what you can</b><span>Towels and a bucket keep standing water from spreading while you wait.</span></div></li>
+        <li><div><b>Clear the way</b><span>Empty the cabinet under the sink and move things away from the water heater, so we can get straight to work.</span></div></li>
+        <li><div><b>Take a photo</b><span>A picture of the leak or the part helps. Text it to <a class="tl num" href="sms:+16145550161" aria-label="Text 614 555 0161">614 555 0161</a>.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="how" aria-labelledby="how-h">
+    <div class="wrap">
+      <p class="label rv">How we help</p>
+      <div class="head rv"><h2 id="how-h">Three steps, your call at each one</h2></div>
+      <p class="intro rv" style="--d:1">No work starts until you say so.</p>
+      <div class="flowwrap rv" style="--d:2">
+      <span class="drop" aria-hidden="true"></span>
+      <ol class="flow">
+        <li><h3>Call or send a request</h3><p>Reach us at <a class="tl num" href="tel:+16145550161">614 555 0161</a>, or use the form below. A few words about the problem are enough.</p></li>
+        <li><h3>We look at the problem</h3><p>We trace the trouble to its source, not to the wet spot.</p></li>
+        <li><h3>We explain the next step</h3><p>You hear what we found and what it takes to fix it. Then you choose what to do.</p></li>
+      </ol>
+      </div>
+      <div class="crew">
+        <div class="frame rv">
+          <div class="ph"><img src="under-sink-800.webp" width="800" height="1200" loading="lazy" decoding="async" alt="A hand reaching up to a pipe fitting under a kitchen sink" style="object-position:50% 40%"></div>
+        </div>
+        <div class="rv" style="--d:1">
+          <h3 id="crew-h">Before any work starts, you know what we are doing and why.</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <p class="label rv">Gallery</p>
+      <div class="head rv"><h2 id="work-h">Taps, pipes and fittings</h2></div>
+      <ul class="strip" tabindex="0" aria-label="Photos of taps, pipes and fittings">
+        <li class="rv"><figure><div class="ph"><img src="drip-tap-800.webp" width="800" height="1000" loading="lazy" decoding="async" alt="A drop of water falling from the spout of a chrome faucet" style="object-position:40% 40%"></div><figcaption>A slow drip</figcaption></figure></li>
+        <li class="rv" style="--d:1"><figure><div class="ph"><img src="brass-taps-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="A row of old brass taps with long handles over a deep work sink"></div><figcaption>Old brass taps</figcaption></figure></li>
+        <li class="rv" style="--d:2"><figure><div class="ph"><img src="pipe-join-800.webp" width="800" height="1422" loading="lazy" decoding="async" alt="Gloved hands joining two pieces of water pipe outdoors"></div><figcaption>Joining pipe</figcaption></figure></li>
+        <li class="rv" style="--d:3"><figure><div class="ph"><img src="rusty-tap-800.webp" width="800" height="534" loading="lazy" decoding="async" alt="An old rusty outdoor tap with a red handle and a drop falling" style="object-position:40% 50%"></div><figcaption>An outdoor tap</figcaption></figure></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="questions" aria-labelledby="q-h">
+    <div class="wrap">
+      <p class="label rv">Questions</p>
+      <div class="head rv"><h2 id="q-h">Plumbing questions</h2></div>
+      <div class="qa rv" style="--d:1">
+        <details><summary>A pipe burst. What do I do first?</summary><p>Shut off the main water valve. In most homes it sits where the main line comes in, often in the basement, the crawl space or near the water heater. Then call.</p></details>
+        <details><summary>Is a dripping faucet worth fixing?</summary><p>Yes. A steady drip wastes water every day, and the cause is often a worn part inside the faucet.</p></details>
+        <details><summary>Why does my drain keep clogging?</summary><p>A clog that comes back means something is building up farther down the line. Clearing the top of the drain only buys a little time.</p></details>
+        <details><summary>Can you give me a price over the phone?</summary><p>Not a firm one. We see the job first, then give you the price. Tell us what is going on and we will talk it through.</p></details>
+        <details><summary>How do I keep pipes from freezing?</summary><p>On hard freezes, let a faucet on an outside wall drip and open the cabinet doors under sinks.</p></details>
+        <details><summary>Do you work outside Columbus?</summary><p>We are based in Columbus. Live in a nearby city? Call with your town and we will give you a straight answer.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <p class="label rv">Contact</p>
+      <div class="head rv"><h2 id="contact-h">Send a request</h2></div>
+      <p class="intro rv" style="--d:1">Tell us what is going on and how to reach you.</p>
+      <div class="contact">
+        <div class="ways rv">
+          <h3>Rather talk it through?</h3>
+          <a class="big num" href="tel:+16145550161">614 555 0161</a>
+          <p>Call or <a href="sms:+16145550161">text</a> and tell us what you are seeing.</p>
+          <p class="where">Based in Columbus, Ohio</p>
+        </div>
+
+        <div class="formcard rv" style="--d:1">
+          <form id="qform" novalidate method="post">
+            <p class="picked" id="picked" aria-live="polite"></p>
+            <div class="f">
+              <label for="q-name">Your name</label>
+              <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+              <span class="err" id="e-name"></span>
+            </div>
+            <div class="f">
+              <label for="q-phone">Phone</label>
+              <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Your phone number" required aria-describedby="e-phone">
+              <span class="err" id="e-phone"></span>
+            </div>
+            <div class="f">
+              <label for="q-topic">What is going on?</label>
+              <select id="q-topic" name="topic" required aria-describedby="e-topic">
+                <option value="">Choose one</option>
+                <option>Leaks and drips</option>
+                <option>Slow or clogged drains</option>
+                <option>Water heater trouble</option>
+                <option>Toilets</option>
+                <option>Faucets and fixtures</option>
+                <option>Pipes in cold weather</option>
+                <option>Something else</option>
+              </select>
+              <span class="err" id="e-topic"></span>
+            </div>
+            <div class="f">
+              <label for="q-town">Neighborhood or town</label>
+              <select id="q-town" name="town" required aria-describedby="e-town">
+                <option value="">Choose one</option>
+                <option>Columbus</option>
+                <option>German Village</option>
+                <option>Clintonville</option>
+                <option>Grandview Heights</option>
+                <option>Bexley</option>
+                <option>Upper Arlington</option>
+                <option>Worthington</option>
+                <option>Somewhere else</option>
+              </select>
+              <span class="err" id="e-town"></span>
+            </div>
+            <div class="f full">
+              <label for="q-msg">Tell us more</label>
+              <textarea id="q-msg" name="message" required aria-describedby="e-msg" placeholder="Where it is and what you have noticed"></textarea>
+              <span class="err" id="e-msg"></span>
+            </div>
+            <div class="submit">
+              <button class="btn" type="submit">Send request</button>
+            </div>
+          </form>
+          <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
+            <h3 id="t-title">Thanks. We have it.</h3>
+            <p id="t-body">Your request is noted.</p>
+            <p class="note">This is a sample site, so nothing was sent.</p>
+            <button class="btn line" type="button" id="t-again">Send another request</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="towns" aria-labelledby="towns-h">
+    <div class="wrap">
+      <div>
+        <p class="label rv">Where we work</p>
+        <h2 class="rv" id="towns-h">Columbus and nearby</h2>
+        <p class="intro rv" style="--d:1">From the brick homes of German Village up to Worthington. Close by and not on the list? Call with your town.</p>
+      </div>
+      <ul class="townlist rv" style="--d:1">
+        <li class="home"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Columbus</li>
+        <li>German Village</li><li>Grandview Heights</li><li>Bexley</li><li>Upper Arlington</li><li>Clintonville</li><li>Worthington</li>
+      </ul>
     </div>
   </section>
 </main>
@@ -420,33 +762,43 @@ form[hidden]{display:none}
   <div class="wrap">
     <p class="name">Steady Flow <span>Plumbing</span></p>
     <div class="row">
-      <p>Mount Airy, NC</p>
-      <p><a class="num" href="tel:+13365550161">336 555 0161</a></p>
+      <p>Columbus, Ohio</p>
+      <p><a class="num hit" href="tel:+16145550161">614 555 0161</a></p>
     </div>
-    <p class="credit">Photos by La Miko, Andrea Davis and Sergei Starostin on Pexels, shown as examples (<a href="photo-credits.txt">credits</a>).</p>
-    <a class="gcd" href="https://granitecitydigital.me/">
-      <span class="gcd-mark" id="gcd-mark">
-        <picture>
-          <source srcset="../../samples/mark/gcd-mark-still.webp" type="image/webp">
-          <img src="../../samples/mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
-        </picture>
-        <video muted playsinline preload="none" poster="../../samples/mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
-          <source src="../../samples/mark/gcd-mark-2s.webm" type="video/webm">
-          <source src="../../samples/mark/gcd-mark-2s.mp4" type="video/mp4">
-        </video>
-      </span>
-      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
-    </a>
   </div>
 </footer>
 
 <nav class="bar" aria-label="Quick contact">
-  <a href="tel:+13365550161"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>
+  <a href="tel:+16145550161"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>
   <a href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M5 4h14v16H5z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M8.5 9h7M8.5 12.5h7M8.5 16h4"/></svg>Request</a>
 </nav>
 
 <script>
 (function(){
+  /* Escape closes an open answer and leaves focus on its question */
+  document.addEventListener('keydown',function(e){
+    if(e.key!=='Escape')return;
+    var d=document.activeElement&&document.activeElement.closest?document.activeElement.closest('.qa details[open]'):null;
+    if(!d)return;
+    d.open=false;d.querySelector('summary').focus();
+  });
+  /* one answer open at a time: opening a question closes the open one, and the pressed question stays put on screen */
+  function closeOthers(d){
+    var list=[].filter.call(document.querySelectorAll('.qa details[open]'),function(o){return o!==d});
+    if(!list.length)return;
+    var s=d.querySelector('summary')||d,before=s.getBoundingClientRect().top;
+    list.forEach(function(o){o.open=false});
+    var shift=s.getBoundingClientRect().top-before;
+    if(Math.abs(shift)<1)return;
+    try{window.scrollBy({top:shift,behavior:'instant'})}catch(err){var hs=document.documentElement.style,was=hs.scrollBehavior;hs.scrollBehavior='auto';window.scrollBy(0,shift);hs.scrollBehavior=was}
+  }
+  document.addEventListener('click',function(e){
+    if(e.defaultPrevented||!e.target.closest)return;
+    var s=e.target.closest('.qa summary'),d=s&&s.parentElement;
+    if(!d||d.tagName!=='DETAILS'||d.querySelector('summary')!==s||d.open)return;
+    closeOthers(d);
+  });
+  document.addEventListener('toggle',function(e){var d=e.target;if(d&&d.open&&d.matches&&d.matches('.qa details'))closeOthers(d)},true);
   /* reveal, once per element */
   var els=[].slice.call(document.querySelectorAll('.rv'));
   if('IntersectionObserver' in window){
@@ -454,6 +806,21 @@ form[hidden]{display:none}
     els.forEach(function(el){io.observe(el)});
   }else{els.forEach(function(el){el.classList.add('in')})}
   addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+
+  /* keep a focused form field clear of the phone bar */
+  var qbar=document.querySelector('.bar');
+  function clearOfBar(t){
+    if(!qbar||!/^(INPUT|SELECT|TEXTAREA|SUMMARY)$/.test(t.tagName)||getComputedStyle(qbar).display==='none')return;
+    var r=t.getBoundingClientRect(),limit=qbar.getBoundingClientRect().top-16;
+    if(r.bottom>limit)window.scrollBy(0,Math.min(r.bottom-limit,Math.max(0,r.top-100)));
+  }
+  var barLook=0;
+  document.addEventListener('focusin',function(e){
+    var t=e.target;
+    clearOfBar(t);
+    /* Safari brings the field into view after this, so look once more when that has settled */
+    clearTimeout(barLook);barLook=setTimeout(function(){if(document.activeElement===t)clearOfBar(t)},500);
+  });
 
   /* the drop runs the length of the step line */
   var flow=document.querySelector('.flowwrap');
@@ -482,8 +849,8 @@ form[hidden]{display:none}
     chk('q-name',name.length<2?'Please tell us your name.':'');
     chk('q-phone',phone.length<10?'Please enter a 10 digit phone number.':'');
     chk('q-topic',!F['topic'].value?'Please choose what is going on.':'');
-    chk('q-town',!F['town'].value?'Please choose your town.':'');
-    chk('q-msg',msg.length<5?'A few words about the problem helps us call back with the right questions.':'');
+    chk('q-town',!F['town'].value?'Please choose your neighborhood or town.':'');
+    chk('q-msg',msg.length<5?'A few words about the problem help us call back with the right questions.':'');
     if(first)document.getElementById(first).focus();
     return ok;
   }
@@ -501,41 +868,6 @@ form[hidden]{display:none}
     f.hidden=true;thanks.hidden=false;thanks.focus();
   });
   document.getElementById('t-again').addEventListener('click',function(){f.reset();picked.textContent='';thanks.hidden=true;f.hidden=false;F['name'].focus()});
-})();
-</script>
-<script>
-/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
-(function(){
-  var box=document.getElementById('gcd-mark');
-  if(!box)return;
-  var v=box.querySelector('video');
-  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  var timer,failed=false;
-  v.muted=true;v.defaultMuted=true;
-  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
-  var srcs=v.querySelectorAll('source');
-  srcs[srcs.length-1].addEventListener('error',still);
-  v.addEventListener('error',still);
-  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
-  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
-  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
-  var io=new IntersectionObserver(function(es){
-    if(!es[0].isIntersecting)return;
-    io.disconnect();
-    timer=setTimeout(still,4000);
-    v.muted=true;v.defaultMuted=true;
-    var p=v.play();
-    if(p&&p.catch)p.catch(still);
-  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
-  io.observe(box);
-  /* fetch the small file a little before it is needed so it starts without a pause */
-  var near=new IntersectionObserver(function(es){
-    if(!es[0].isIntersecting)return;
-    near.disconnect();
-    v.preload='auto';
-  },{rootMargin:'0px 0px 400px 0px'});
-  near.observe(box);
-  addEventListener('beforeprint',still);
 })();
 </script>
 </body>

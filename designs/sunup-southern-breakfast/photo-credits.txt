@@ -1,35 +1,92 @@
 Photo credits for designs/sunup-southern-breakfast (a sample design; the business name is made up)
-These photos show food and tables in general. They are not this business's food or room.
+All photos: Pexels License, https://www.pexels.com/license/
+All are generic stock photos shown as examples. Nobody in them works for this business and none of the dishes come from it.
 
-breakfast-800.webp, breakfast-1400.webp
+Photos on the page
+
+hero-plate-800.webp, hero-plate-1600.webp (same photo as breakfast-*.webp)
   Photographer: Roman Odintsov (@roman-odintsov)
-  Shows: two fried eggs, home fries, bacon, a sausage, toast and a small cup of sauce on a white plate, seen from above
   Source: https://www.pexels.com/photo/5836427/
-  License: Pexels License, https://www.pexels.com/license/
+  Shows: a breakfast plate from above with eggs, home fries, bacon, sausage and toast
 
-biscuit-plate-700.webp, biscuit-plate-1100.webp
-  Photographer: Gu Ko (@gu-ko-2150570603)
-  Shows: golden biscuits piled on a round wooden plate
-  Source: https://www.pexels.com/photo/36903815/
-  License: Pexels License, https://www.pexels.com/license/
-
-syrup-stack-700.webp, syrup-stack-1100.webp
+pancake-stack-800.webp (same photo as syrup-stack-*.webp)
   Photographer: Jahra Tasfia Reza (@jahratreza)
-  Shows: a stack of pancakes with syrup and a pat of butter on a dark plate
   Source: https://www.pexels.com/photo/39832908/
-  License: Pexels License, https://www.pexels.com/license/
+  Shows: pancakes with syrup and butter on a dark plate
 
-table-700.webp, table-1200.webp
+biscuits-board-800.webp (same photo as biscuit-plate-*.webp)
+  Photographer: Gu Ko (@gu-ko-2150570603)
+  Source: https://www.pexels.com/photo/36903815/
+  Shows: golden biscuits on a round wooden plate
+
+window-table-800.webp (same photo as table-*.webp)
   Photographer: The Design Lady
-  Shows: a mug and pancakes on a checked tablecloth by a sunny window
   Source: https://www.pexels.com/photo/19837087/
-  License: Pexels License, https://www.pexels.com/license/
+  Shows: a mug and pancakes on a checked cloth by a window
 
-coffee-600.webp
+coffee-steam-800.webp (same photo as coffee-600.webp)
   Photographer: Nano Erdozain
-  Shows: steam rising from a dark mug of coffee
   Source: https://www.pexels.com/photo/31710615/
-  License: Pexels License, https://www.pexels.com/license/
+  Shows: steam rising off a dark mug
 
-All are generic stock photos shown as examples.
-Fonts: Fraunces and Rubik from Google Fonts (SIL Open Font License).
+eggs-hashbrowns-800.webp
+  Photographer: Pexels @snappr-29839738
+  Source: https://www.pexels.com/photo/29839738/
+  Shows: sunny side eggs, bacon, toast and hash browns
+
+skillet-800.webp
+  Photographer: Pexels @clayton-de-araujo-414048915
+  Source: https://www.pexels.com/photo/15200487/
+  Shows: eggs, bacon and grilled toast in a skillet
+
+griddle-egg-800.webp
+  Photographer: Pexels @mikegz-400576129
+  Source: https://www.pexels.com/photo/17377309/
+  Shows: eggs frying on a steel flat top
+
+eggs-pan-800.webp
+  Photographer: Pexels @ernandesalv
+  Source: https://www.pexels.com/photo/27965371/
+  Shows: several eggs frying in one pan
+
+biscuit-dough-800.webp, biscuit-dough-1600.webp
+  Photographer: Jahra Tasfia Reza (@jahratreza)
+  Source: https://www.pexels.com/photo/32201632/
+  Shows: rounds of biscuit dough on a floured pan
+
+biscuits-reach-800.webp
+  Photographer: Gu Ko (@gu-ko-2150570603)
+  Source: https://www.pexels.com/photo/36903814/
+  Shows: a hand lifting a biscuit off a wooden plate
+
+coffee-pour-800.webp
+  Photographer: Pexels @viniciusvieirafotografia
+  Source: https://www.pexels.com/photo/22608516/
+  Shows: coffee poured from a glass pot into a cup
+
+buttered-biscuit-800.webp
+  Photographer: Pexels @introspectivedsgn-9588908
+  Source: https://www.pexels.com/photo/9588908/
+  Shows: a hand holding a plate with a buttered biscuit
+
+biscuit-tray-800.webp
+  Photographer: Pexels @murat-bilgin-2160976514
+  Source: https://www.pexels.com/photo/38441689/
+  Shows: stacked biscuits on a tray
+
+counter-pot-800.webp (cropped to leave out wall posters)
+  Photographer: Pexels @airamdphoto
+  Source: https://www.pexels.com/photo/15487466/
+  Shows: a metal coffee pot and plates on a wooden counter
+
+pancakes-bacon-800.webp (cropped to leave out writing on the plate rim)
+  Photographer: Pexels @hebertsantos-22882256
+  Source: https://www.pexels.com/photo/22882256/
+  Shows: bacon and scrambled eggs on a plate with a red rim
+
+Older files still in the folder (no longer on the page)
+breakfast-800.webp, breakfast-1400.webp: Roman Odintsov, https://www.pexels.com/photo/5836427/
+biscuit-plate-700.webp, biscuit-plate-1100.webp: Gu Ko, https://www.pexels.com/photo/36903815/
+syrup-stack-700.webp, syrup-stack-1100.webp: Jahra Tasfia Reza, https://www.pexels.com/photo/39832908/
+table-700.webp, table-1200.webp: The Design Lady, https://www.pexels.com/photo/19837087/
+coffee-600.webp: Nano Erdozain, https://www.pexels.com/photo/31710615/

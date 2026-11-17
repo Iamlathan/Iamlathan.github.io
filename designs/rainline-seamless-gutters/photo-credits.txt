@@ -1,33 +1,97 @@
 Photo credits for designs/rainline-seamless-gutters (a sample design; the business name is made up)
+Pexels License: https://www.pexels.com/license/
+Unsplash License: https://unsplash.com/license
+All are generic stock photos shown as examples. Nobody in them works for this business.
 
-house.jpg (first screen, and the share image)
+Photos on the page
+
+hero-house-800.webp, hero-house-1600.webp (house number blurred)
+  Photographer: Curtis Adams (Pexels @curtis-adams-1694007)
+  Source: https://www.pexels.com/photo/8583932/
+  License: Pexels License
+  Shows: a two story house with white gutters, a lawn and trees
+
+gutter-blue-800.webp, gutter-blue-1200.webp (same photo as house.jpg)
   Photographer: Zachary Keimig (Unsplash @zacharykeimig)
   Source: https://unsplash.com/photos/a-blue-house-with-a-red-brick-chimney-gvt-wjGk4S4
-  License: Unsplash License, https://unsplash.com/license
-  Shows: a white gutter along a shingled roof edge and its downspout down slate blue lap siding, beside a red brick chimney
+  License: Unsplash License
+  Shows: a white gutter and downspout on slate blue siding by a brick chimney
 
-drip.jpg
+gutter-drip-800.webp (same photo as drip.jpg)
   Photographer: Zeynep Sude Emek (Pexels @zeynep-sude-emek-193601188)
   Source: https://www.pexels.com/photo/water-drops-in-gutter-20113440/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: the open end of a white gutter dripping water
+  License: Pexels License
+  Shows: the open end of a white gutter dripping
 
-siding.jpg
-  Photographer: Jan van der Wolf (Pexels @jan-van-der-wolf-11680885)
-  Source: https://www.pexels.com/photo/green-wooden-house-9687786/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: green lap siding and a small paned window under a clay tile roof, with white trim boards along the eave and up the wall
+white-eaves-800.webp
+  Photographer: Compagnons (Unsplash)
+  Source: https://unsplash.com/photos/white-building-eaves-against-a-blue-sky-7PmOAdczgdk
+  License: Unsplash License
+  Shows: white eaves and roof edge against blue sky
 
-corner.jpg
-  Photographer: Jan van der Wolf (Pexels @jan-van-der-wolf-11680885)
-  Source: https://www.pexels.com/photo/gutter-on-sunlit-building-wall-20560233/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: a white downspout on a pale wall under a clean roof edge, blue sky
+siding-house-800.webp (house number and mailbox blurred)
+  Photographer: Pexels @josh-pleaselinktoourwebsite-2165081770
+  Source: https://www.pexels.com/photo/40701217/
+  License: Pexels License
+  Shows: a two story house with pale blue vinyl siding
 
-edge.jpg
-  Photographer: Vladimir Srajber (Pexels @vladimirsrajber)
-  Source: https://www.pexels.com/photo/close-up-shot-of-a-roof-while-raining-13793186/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: rain on clay roof tiles running into the gutter along the roof edge
+copper-run-800.webp, copper-run-1600.webp
+  Photographer: Taylor Hammersla (Unsplash)
+  Source: https://unsplash.com/photos/a-gutter-gutter-attached-to-the-side-of-a-building-6QYiR0utkvA
+  License: Unsplash License
+  Shows: a gutter and downspout turning a building corner
 
-All are generic stock photos shown as examples.
+metal-gutter-800.webp
+  Photographer: Ian Talmacs (Unsplash)
+  Source: https://unsplash.com/photos/a-close-up-view-of-a-metal-gutter-ccJ_tLTYvpE
+  License: Unsplash License
+  Shows: a metal gutter close up from below
+
+dirty-gutter-800.webp
+  Photographer: Aleksi Partanen (Unsplash)
+  Source: https://unsplash.com/photos/dirty-gutters-and-roof-against-a-blue-sky-kBc9SXXjezA
+  License: Unsplash License
+  Shows: a dirty gutter on a roof edge against blue sky
+
+gutter-gray-800.webp
+  Photographer: Miles Smith (Unsplash)
+  Source: https://unsplash.com/photos/a-house-roof-and-gutter-system-against-a-grey-sky-kq3l2WLNp8Y
+  License: Unsplash License
+  Shows: a roof and gutter line against a gray sky
+
+overflow-800.webp
+  Photographer: Manoj Gopanapalli (Unsplash)
+  Source: https://unsplash.com/photos/water-cascading-from-metal-gutter-JlnBKQXsSv4
+  License: Unsplash License
+  Shows: water pouring off a metal gutter
+
+storm-spout-800.webp
+  Photographer: Pexels @terrance-moon-159773
+  Source: https://www.pexels.com/photo/529964/
+  License: Pexels License
+  Shows: rain flowing from a downspout in a storm
+
+barn-downspout-800.webp
+  Photographer: Pexels @robertkso
+  Source: https://www.pexels.com/photo/12343741/
+  License: Pexels License
+  Shows: a downspout on the side of an old barn
+
+icicle-800.webp
+  Photographer: Pexels @didsss
+  Source: https://www.pexels.com/photo/35382726/
+  License: Pexels License
+  Shows: an icicle on the end of a metal downspout
+
+house-drive-800.webp (house number blurred)
+  Photographer: Curtis Adams (Pexels @curtis-adams-1694007)
+  Source: https://www.pexels.com/photo/5071141/
+  License: Pexels License
+  Shows: a two story house with a garage and lawn
+
+Older files still in the folder (no longer on the page)
+house.jpg: Zachary Keimig, https://unsplash.com/photos/a-blue-house-with-a-red-brick-chimney-gvt-wjGk4S4
+drip.jpg: Zeynep Sude Emek, https://www.pexels.com/photo/water-drops-in-gutter-20113440/
+siding.jpg: Jan van der Wolf, https://www.pexels.com/photo/green-wooden-house-9687786/
+corner.jpg: Jan van der Wolf, https://www.pexels.com/photo/gutter-on-sunlit-building-wall-20560233/
+edge.jpg: Vladimir Srajber, https://www.pexels.com/photo/close-up-shot-of-a-roof-while-raining-13793186/

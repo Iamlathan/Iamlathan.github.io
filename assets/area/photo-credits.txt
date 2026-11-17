@@ -1,0 +1,11 @@
+Photo credits for assets/area (the area scene on the home page and the service area page)
+Pexels License, https://www.pexels.com/license/
+
+ridge-720.webp, ridge-1200.webp, ridge-1800.webp, ridge-2400.webp (one photo, cropped to 2:1)
+  Photographer: Todd Trapani (Pexels)
+  Source: https://www.pexels.com/photo/17757076/
+  Shows: misty mountain ridges at sunrise, with a hazy sun and a line of trees in front
+
+ridge-tall-1000.webp (a 1000 x 1200 crop from the middle of the same photo, served to phones)
+  Photographer: Todd Trapani (Pexels)
+  Source: https://www.pexels.com/photo/17757076/

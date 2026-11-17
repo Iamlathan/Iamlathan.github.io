@@ -1,33 +1,97 @@
 Photo credits for designs/red-clay-concrete-grading (a sample design; the business name is made up)
+All photos: Pexels License, https://www.pexels.com/license/
+All are generic stock photos shown as examples. Nobody in them works for this business.
+
+Photos on the page
+
+clay-aerial-800.webp, clay-aerial-1600.webp, clay-aerial-band-1400.webp (same photo as hero.jpg)
+  Photographer: Pok Rie (Pexels @pok-rie-33563)
+  Source: https://www.pexels.com/photo/aerial-view-of-trucks-on-an-orange-soil-terrain-12758027/
+  Shows: red clay ground from straight above, cut flat between two banks
+
+screed-close-800.webp, screed-close-1600.webp
+  Photographer: Pexels @betongsmcsg
+  Source: https://www.pexels.com/photo/37121398/
+  Shows: a power screed leveling a fresh slab between metal forms
+
+float-walk-800.webp (same photo as float.jpg)
+  Photographer: Rodolfo Quirós (Pexels @rquiros)
+  Source: https://www.pexels.com/photo/selective-focus-photography-cement-2219024/
+  Shows: a hand float smoothing wet concrete in a form, red clay along the edge
+
+excavator-lot-800.webp, excavator-lot-1600.webp
+  Photographer: Richard Revel (Pexels @hermaion)
+  Source: https://www.pexels.com/photo/12164798/
+  Shows: an excavator leveling a cleared dirt lot
+
+bucket-slope-800.webp (same photo as grade.jpg)
+  Photographer: Richard Revel (Pexels @hermaion)
+  Source: https://www.pexels.com/photo/the-bucket-of-a-power-shovel-excavator-on-the-ground-11576765/
+  Shows: an excavator bucket resting on a freshly graded slope
+
+dozer-aerial-800.webp
+  Photographer: Pexels @tomfisk
+  Source: https://www.pexels.com/photo/12267905/
+  Shows: a bulldozer from above cutting a dirt road
+
+dump-truck-800.webp
+  Photographer: Pexels @just-a-dream-pictures-393935092
+  Source: https://www.pexels.com/photo/14821922/
+  Shows: a dump truck crossing a dusty rural lot
+
+mixer-above-800.webp, mixer-above-1400.webp (same photo as truck.jpg)
+  Photographer: Sergei Skrynnik (Pexels @screeny42)
+  Source: https://www.pexels.com/photo/birds-eye-view-of-concrete-mixer-truck-12032961/
+  Shows: a mixer truck seen from straight above on a jointed slab
+
+shovels-800.webp (same photo as shovels.jpg)
+  Photographer: K (Pexels @kelly)
+  Source: https://www.pexels.com/photo/close-up-of-shovels-lying-down-16680729/
+  Shows: two worn shovels on a splashed concrete floor
+
+driveway-home-800.webp, driveway-home-1600.webp
+  Photographer: Pexels @curtis-adams-1694007
+  Source: https://www.pexels.com/photo/4832530/
+  Shows: a two story house with a wide new driveway (house number blurred)
+
+driveway-new-800.webp, driveway-new-1600.webp
+  Photographer: Pexels @curtis-adams-1694007
+  Source: https://www.pexels.com/photo/10827225/
+  Shows: a long new driveway in front of a house (house number blurred)
+
+forms-clay-800.webp, forms-clay-1400.webp, forms-clay-1600.webp, forms-clay-hero-1100.webp, forms-clay-hero-1440.webp, forms-clay-phone-720.webp
+  Photographer: Pexels @gaion
+  Source: https://www.pexels.com/photo/29735767/
+  Shows: a worker setting wooden forms against a red clay bank
+
+rebar-boots-800.webp
+  Photographer: Pexels @maren-ferraro-3055534
+  Source: https://www.pexels.com/photo/29257600/
+  Shows: work boots standing on rebar laid for a pour
+
+saw-joints-800.webp
+  Photographer: Pexels @chris-f-38966
+  Source: https://www.pexels.com/photo/7562952/
+  Shows: a worker saw cutting joints in a concrete slab
+
+Older files still in the folder (no longer on the page)
 
 hero.jpg
   Photographer: Pok Rie (Pexels @pok-rie-33563)
   Source: https://www.pexels.com/photo/aerial-view-of-trucks-on-an-orange-soil-terrain-12758027/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: red clay ground from straight above, cut flat between two banks, trucks parked along the edges
 
 grade.jpg
   Photographer: Richard Revel (Pexels @hermaion)
   Source: https://www.pexels.com/photo/the-bucket-of-a-power-shovel-excavator-on-the-ground-11576765/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: an excavator bucket resting on a freshly graded dirt slope
 
 float.jpg
   Photographer: Rodolfo Quirós (Pexels @rquiros)
   Source: https://www.pexels.com/photo/selective-focus-photography-cement-2219024/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: a hand float smoothing wet concrete in a form edged with a board and a white pipe, red clay soil along the edge
 
 shovels.jpg
   Photographer: K (Pexels @kelly)
   Source: https://www.pexels.com/photo/close-up-of-shovels-lying-down-16680729/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: two worn shovels lying on a concrete floor splashed with dried mix
 
 truck.jpg
   Photographer: Sergei Skrynnik (Pexels @screeny42)
   Source: https://www.pexels.com/photo/birds-eye-view-of-concrete-mixer-truck-12032961/
-  License: Pexels License, https://www.pexels.com/license/
-  Shows: a mixer truck seen from straight above on a jointed concrete slab
-
-All are generic stock photos shown as examples. Nobody in them works for this business.

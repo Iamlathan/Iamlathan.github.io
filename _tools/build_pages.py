@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the /work/ gallery (Sample designs), its phone screenshots, the sitemap and robots.txt,
+"""Build the /work/ gallery (Sample designs), its phone and desktop screenshots, the sitemap and robots.txt,
 and check that no private name, slug or phone number is public.
 
 Run from the site folder:
@@ -35,9 +35,26 @@ BASE_URL = "https://granitecitydigital.me"
 SITE_HOSTS = {"granitecitydigital.me", "www.granitecitydigital.me"}
 OWN_PHONE = "7432220985"
 
-# Public pages for the sitemap, in order. The designs/<slug>/ pages are noindex, so they are never listed;
-# /work/ (indexed) links them.
-SITEMAP_PAGES = ["/", "/work/", "/sample/", "/faq/", "/service-area/", "/free-check/", "/privacy/", "/terms/"]
+# Town switch. On since Nov 12 2026 (a card can name its town and state; it shows the nationwide reach).
+# True shows each sample's town and state on /work/: a "Town, ST" tag on every card, the fuller card lines from
+# designs.json and featured.json, alt text, link labels and work/samples.json. False takes them all off again
+# (the Nov 11 reach rule). The sample pages, designs.json and featured.json keep their towns either way.
+SHOW_SAMPLE_TOWN = True
+
+# Public pages for the sitemap, in order. Pages not on disk yet are left out until they exist.
+# The designs/<slug>/ pages are noindex, so they are never listed; /work/ (indexed) links them.
+# /client-portal/ is noindex too, so it is never listed.
+SITEMAP_PAGES = ["/", "/services/website-design/", "/services/website-rebuild/", "/services/care-plan/",
+                 "/services/free-website-check/", "/services/google-business-profile/", "/services/local-seo/",
+                 "/services/logo-and-brand-kit/", "/websites-for/home-services/", "/websites-for/auto-shops/",
+                 "/websites-for/food-and-coffee/", "/websites-for/beauty-and-wellness/", "/work/", "/sample/", "/about/",
+                 "/contact/", "/faq/", "/service-area/", "/get-started/", "/free-check/", "/privacy/", "/terms/"]
+# Site folders the private name and phone check scans, besides work/, designs/ and sitemap.xml.
+PRIVATE_SCAN_DIRS = ("services", "websites-for", "get-started", "client-portal", "about", "contact", "faq",
+                     "free-check", "privacy", "terms", "service-area")
+# Single files in the site root the same check scans. Only these two: the root also holds samples/ (lead pages that
+# carry their own names) and tool folders, so it is never walked as a whole.
+PRIVATE_SCAN_FILES = ("index.html", "404.html")
 
 # URL folders that must never be linked from a public page. The shared logo mark folder is allowed.
 PRIVATE_PREFIXES = ("/samples", "/web-design")
@@ -68,12 +85,35 @@ DESIGN_KEYS = ("real", "slug", "name", "trade", "town", "state")
 # never in the tracked designs.json (the repo is public).
 PRIVATE_DESIGN_KEYS = ("real", "block")
 PRIVATE_FILE = "designs.private.json"
+# Optional feature card: one made up sample page outside designs/ (the /sample/ page), shown first and full width
+# on /work/. Public facts only. Its desktop shot is work/shots/desktop/<shot>.webp, taken from its own page;
+# until that shot exists the card shows "image", a picture the page folder already has (never written to).
+FEATURE_FILE = "featured.json"
+FEATURE_KEYS = ("page", "shot", "image", "name", "trade", "town", "state", "line")
 
 # Screenshot settings
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 SHOT_W, SHOT_H, SHOT_SCALE = 390, 736, 2
-SHOT_QUALITIES = (80, 72, 64, 56, 48)
+# Phone shot file size: 2x the largest frame /get-started/ draws them in (233 x 440 css, cover),
+# so 468 x 883 instead of the full 780 x 1472 render. The page still renders at SHOT_SCALE.
+SHOT_IMG_W = 468
+SHOT_QUALITIES = (85, 80, 72, 64, 56, 48)
 SHOT_MAX_BYTES = 120 * 1024
+# Desktop shots for the browser frame on the /work/ cards: work/shots/desktop/<slug>.webp,
+# the first screen of a 1440x900 window, scaled by Chrome to 1200x750
+DESKTOP_W, DESKTOP_H = 1440, 900
+DESKTOP_IMG_W, DESKTOP_IMG_H = 1200, 750
+DESKTOP_QUALITIES = (72, 64, 56, 48)
+DESKTOP_MAX_BYTES = 80 * 1024
+# Smaller copy of a desktop shot for small and low density screens: work/shots/desktop/<slug>-800.webp, made from
+# the big file by _tools/make_small_shots.py. A card offers both files with srcset when the copy is on disk.
+# CARD_SIZES decides who gets the copy (measured Nov 13 2026). A phone width window (under 600 px) never draws
+# a card picture wider than 93 percent of the window, so a phone at device scale 2 or less gets the copy, with
+# pixels to spare. Every wider window is told 801 px, just over the copy, so it always keeps the big file it
+# gets without srcset: a card picture there is up to 794 px wide, and the copy drawn that close to 1 to 1 looks
+# softer than the big file.
+SMALL_SHOT_W = 800
+CARD_SIZES = "(max-width: 599px) 93vw, 801px"
 SETTLE_SECONDS = 3.0          # after the load event; the logo mark needs at least 2.5
 ALLOWED_HOSTS = {"fonts.googleapis.com", "fonts.gstatic.com"}
 FETCH_FILTER = {"patterns": [{"urlPattern": "*"}]}
@@ -127,7 +167,7 @@ PHONE_RE = re.compile(r"(?<!\d)(?:\+?1[\s.\-]?)?\(?(\d{3})\)?[\s.\-]?(\d{3})[\s.
 
 def set_root(root):
     """Point every path at one site folder (the tests use a temp copy)."""
-    global ROOT, TOOLS, TEMPLATES, DATA, SAMPLES, DESIGNS, WORK, SHOTS
+    global ROOT, TOOLS, TEMPLATES, DATA, SAMPLES, DESIGNS, WORK, SHOTS, DESKTOP_SHOTS
     ROOT = os.path.abspath(root)
     TOOLS = os.path.join(ROOT, "_tools")
     TEMPLATES = os.path.join(TOOLS, "templates")
@@ -136,6 +176,7 @@ def set_root(root):
     DESIGNS = os.path.join(ROOT, "designs")
     WORK = os.path.join(ROOT, "work")
     SHOTS = os.path.join(WORK, "shots")
+    DESKTOP_SHOTS = os.path.join(SHOTS, "desktop")
 
 
 set_root(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -397,6 +438,10 @@ def collect_cards(designs):
             continue
         trade, town, state = d["trade"].strip(), d["town"].strip(), d["state"].strip()
         kind = alt_noun(d["real"], trade, schema_type(read(page)))
+        line = card_line(d, trade, town)
+        if not SHOW_SAMPLE_TOWN:
+            line = town_free_line(line if has_line(d) else "", town, state, kind)
+            town = state = ""
         cards.append({
             "slug": slug,
             "name": d["name"].strip(),
@@ -404,18 +449,138 @@ def collect_cards(designs):
             "town": town,
             "state": state,
             "kind": kind,
-            "alt": "Phone view of a sample design for %s %s in %s" % (article(kind), kind, town),
+            "line": line,
+            "alt": "Phone view of a sample design for %s %s%s" % (article(kind), kind, in_town(town)),
+            "desktop_alt": "Desktop view of a sample design for %s %s%s" % (article(kind), kind, in_town(town)),
             "shot": "/work/shots/%s.webp" % slug,
+            "desktop": "/work/shots/desktop/%s.webp" % slug,
+            "img_w": DESKTOP_IMG_W,
+            "img_h": DESKTOP_IMG_H,
+            "url_text": "granitecitydigital.me/designs/%s/" % slug,
             "preview": "/designs/%s/" % slug,
         })
     return cards, warnings
+
+
+# ---------------------------------------------------------------- feature card (featured.json)
+
+def site_path_ok(path, folder):
+    """A plain site path: starts with /, no '..', '.' or '_' parts, and (folder=True) ends with /."""
+    if not isinstance(path, str) or not path.startswith("/") or "\\" in path or "//" in path:
+        return False
+    if folder != path.endswith("/"):
+        return False
+    parts = [p for p in path.strip("/").split("/") if p != ""]
+    if not parts:
+        return False
+    if any(p in (".", "..") or p.startswith(("_", ".")) for p in parts):
+        return False
+    return posixpath.normpath(path) == path.rstrip("/")
+
+
+def load_feature(designs, samples):
+    """Read the optional _tools/data/featured.json (one object, public facts only) and check its shape.
+    Returns the dict, or None when there is no file."""
+    path = os.path.join(DATA, FEATURE_FILE)
+    if not os.path.isfile(path):
+        return None
+    where = "_tools/data/%s" % FEATURE_FILE
+    f = load_json(path)
+    if not isinstance(f, dict):
+        raise BuildError("%s must be one JSON object" % where)
+    extra = sorted(set(f) - set(FEATURE_KEYS))
+    if extra:
+        raise BuildError("%s has fields it does not use: %s (it holds only %s)" % (where, ", ".join(extra),
+                                                                                 ", ".join(FEATURE_KEYS)))
+    for k in FEATURE_KEYS:
+        if not isinstance(f.get(k), str) or not f[k].strip():
+            raise BuildError("%s has no %s" % (where, k))
+    page = f["page"]
+    if not site_path_ok(page, True) or is_private_path(page) or page.startswith("/designs/"):
+        raise BuildError("%s: page %r must be a public site folder like /sample/ (not under /designs/, /samples/ "
+                         "or /web-design/)" % (where, page))
+    image = f["image"]
+    if not site_path_ok(image, False) or is_private_path(image) or not is_image(image):
+        raise BuildError("%s: image %r must be a picture on a public page, like /sample/card.webp" % (where, image))
+    shot = f["shot"]
+    taken = {d["slug"] for d in designs} | {d["real"] for d in designs} | set(samples) | {"mark", "_mark"}
+    if not SLUG_RE.fullmatch(shot) or shot in taken:
+        raise BuildError("%s: shot %r must be a new lowercase slug, not a design, private or samples/ name"
+                         % (where, shot))
+    return {k: f[k].strip() for k in FEATURE_KEYS}
+
+
+def collect_feature(f):
+    """The feature card from featured.json, or None with a note when its page is not on disk.
+    The picture is picked later by feature_image()."""
+    if f is None:
+        return None, []
+    page_html = page_file(f["page"])
+    if not os.path.isfile(page_html):
+        return None, ["%s does not exist yet, so the feature card is left out" % rel(page_html)]
+    kind = alt_noun("", f["trade"], "")
+    town, state, line = f["town"], f["state"], f["line"]
+    if not SHOW_SAMPLE_TOWN:
+        line = town_free_line(line, town, state, kind)
+        town = state = ""
+    return {
+        "slug": f["shot"],
+        "name": f["name"],
+        "trade": f["trade"],
+        "town": town,
+        "state": state,
+        "kind": kind,
+        "line": line,
+        "desktop_alt": "Desktop view of a sample design for %s %s%s" % (article(kind), kind, in_town(town)),
+        "url_text": "granitecitydigital.me" + f["page"],
+        "preview": f["page"],
+        "page_html": page_html,
+        "image": f["image"],
+    }, []
+
+
+def feature_image(fc):
+    """Point the feature card at its desktop shot, else at its page picture. Returns the card,
+    or None with a note when neither file is on disk."""
+    if fc is None:
+        return None, []
+    if os.path.isfile(os.path.join(DESKTOP_SHOTS, fc["slug"] + ".webp")):
+        return dict(fc, desktop="/work/shots/desktop/%s.webp" % fc["slug"], img_w=DESKTOP_IMG_W, img_h=DESKTOP_IMG_H), []
+    img = os.path.join(ROOT, fc["image"].lstrip("/"))
+    if os.path.isfile(img):
+        w, h = image_size(img) or (DESKTOP_IMG_W, DESKTOP_IMG_H)
+        return dict(fc, desktop=fc["image"], img_w=w, img_h=h), []
+    return None, ["the feature card %s is left out: no desktop shot and no %s yet" % (fc["preview"], fc["image"].lstrip("/"))]
+
+
+def image_size(path):
+    """(width, height) of a PNG or WebP file from its header, or None."""
+    try:
+        with open(path, "rb") as fh:
+            b = fh.read(32)
+    except OSError:
+        return None
+    if b[:8] == b"\x89PNG\r\n\x1a\n" and b[12:16] == b"IHDR" and len(b) >= 24:
+        return int.from_bytes(b[16:20], "big"), int.from_bytes(b[20:24], "big")
+    if len(b) < 30 or b[:4] != b"RIFF" or b[8:12] != b"WEBP":
+        return None
+    kind = b[12:16]
+    if kind == b"VP8 " and b[23:26] == b"\x9d\x01\x2a":
+        return int.from_bytes(b[26:28], "little") & 0x3fff, int.from_bytes(b[28:30], "little") & 0x3fff
+    if kind == b"VP8X":
+        return 1 + int.from_bytes(b[24:27], "little"), 1 + int.from_bytes(b[27:30], "little")
+    if kind == b"VP8L" and b[20] == 0x2f:
+        v = int.from_bytes(b[21:25], "little")
+        return (v & 0x3fff) + 1, ((v >> 14) & 0x3fff) + 1
+    return None
 
 
 PUBLIC_CARD_KEYS = ("slug", "name", "trade", "town", "state", "alt", "shot", "preview")
 
 
 def samples_json(cards):
-    return json.dumps([{k: c[k] for k in PUBLIC_CARD_KEYS} for c in cards], indent=2, ensure_ascii=False) + "\n"
+    keys = [k for k in PUBLIC_CARD_KEYS if SHOW_SAMPLE_TOWN or k not in ("town", "state")]
+    return json.dumps([{k: c[k] for k in keys} for c in cards], indent=2, ensure_ascii=False) + "\n"
 
 
 def shot_url(slug):
@@ -425,12 +590,106 @@ def shot_url(slug):
     return "/work/shots/%s.webp" % slug
 
 
-def card_html(c):
-    label = "Preview the sample design for %s, %s %s in %s" % (c["name"], article(c["kind"]), c["kind"], c["town"])
-    return ('<li class="work-card"><img src="%s" alt="%s" width="%d" height="%d" loading="lazy" decoding="async">'
-            '<h2>%s</h2><p>%s in %s, %s</p><a class="link" href="%s" target="_blank" rel="noopener" aria-label="%s">Preview</a></li>') % (
-        esc(c["shot"]), esc(c["alt"]), SHOT_W, SHOT_H, esc(c["name"]), esc(c["trade"]), esc(c["town"]), esc(c["state"]),
-        esc(c["preview"]), esc(label))
+def has_line(d):
+    line = d.get("line")
+    return isinstance(line, str) and bool(line.strip())
+
+
+def card_line(d, trade, town):
+    """The one line under the card name: designs.json "line", or a plain sample line when it is missing or blank."""
+    if has_line(d):
+        return d["line"].strip()
+    return "A sample website for a %s %s." % (town, trade.lower())
+
+
+def in_town(town):
+    """' in Town' for alt text and link labels, or '' when the town is not shown."""
+    return " in %s" % town if town else ""
+
+
+def town_free_line(line, town, state, kind):
+    """A card line without the sample's town and state, for SHOW_SAMPLE_TOWN off.
+    'A clean website for a Dobson tree service.' -> 'A clean website for a tree service.' (a or an fixed to the
+    next word), and 'a plumber in Dobson, NC.' -> 'a plumber.' A town anywhere else, the state left on its own,
+    or no line at all gives the plain line 'A sample website for a <kind>.'"""
+    plain = "A sample website for %s %s." % (article(kind), kind)
+    out = (line or "").strip()
+    if not out or not town.strip():
+        return plain
+    place = re.escape(town.strip()) + (r"(?:,?\s+%s)?" % re.escape(state.strip()) if state.strip() else "")
+    out = re.sub(r"\s+(?:in|from|near|around|of)\s+%s(?![A-Za-z0-9'’])" % place, "", out, flags=re.I)
+
+    def fix_article(m):
+        a = article(m.string[m.end():])
+        return (a[0].upper() + a[1:] if m.group(1)[0].isupper() else a) + " "
+    out = re.sub(r"\b(a|an)\s+%s\s+(?=[A-Za-z0-9])" % place, fix_article, out, flags=re.I)
+    out = re.sub(r"\s+([.,;:!?])", r"\1", re.sub(r"\s{2,}", " ", out)).strip()
+    left = re.search(r"(?<![A-Za-z0-9])%s(?![A-Za-z0-9])" % re.escape(town.strip()), out, re.I)
+    if left or (state.strip() and re.search(r"(?<![A-Za-z0-9])%s(?![A-Za-z0-9])" % re.escape(state.strip()), out)):
+        return plain
+    return out
+
+
+def small_shot(slug):
+    """Where the 800 px copy of a desktop shot lives: work/shots/desktop/<slug>-800.webp."""
+    return os.path.join(DESKTOP_SHOTS, "%s-%d.webp" % (slug, SMALL_SHOT_W))
+
+
+def card_srcset(c):
+    """The srcset and sizes attributes for a card picture (with a space after), or '' to leave the tag as it was.
+    Only for a card on its desktop shot, when the shot's real width can be read and is over 800 px, and the
+    -800 file beside it really is 800 px wide and the same shape (to within a pixel of height)."""
+    slug = c["slug"]
+    if c["desktop"] != "/work/shots/desktop/%s.webp" % slug:
+        return ""
+    big = image_size(os.path.join(DESKTOP_SHOTS, slug + ".webp"))
+    small = image_size(small_shot(slug))
+    if not big or not small or small[0] != SMALL_SHOT_W or big[0] <= SMALL_SHOT_W:
+        return ""
+    if abs(small[1] * big[0] - big[1] * small[0]) > big[0]:
+        return ""
+    return 'srcset="%s %dw, %s %dw" sizes="%s" ' % (
+        esc("/work/shots/desktop/%s-%d.webp" % (slug, SMALL_SHOT_W)), SMALL_SHOT_W, esc(c["desktop"]), big[0],
+        esc(CARD_SIZES))
+
+
+def card_html(c, classes="work-card", lazy=True):
+    label = "Preview the sample design for %s, %s %s%s" % (c["name"], article(c["kind"]), c["kind"], in_town(c["town"]))
+    place = '<span class="tag">%s, %s</span>' % (esc(c["town"]), esc(c["state"])) if SHOW_SAMPLE_TOWN else ""
+    return ('<li class="%s">'
+            '<div class="tag-row"><span class="tag tag-sample">Sample design</span>'
+            '<span class="tag">%s</span>%s</div>'
+            '<h2>%s</h2><p class="card-line">%s</p>'
+            '<div class="frame"><div class="frame-bar"><span></span><span></span><span></span>'
+            '<span class="frame-url">%s</span></div>'
+            '<img src="%s" alt="%s" width="%d" height="%d" %s%sdecoding="async"></div>'
+            '<a class="link" href="%s" target="_blank" rel="noopener" aria-label="%s">Preview</a></li>') % (
+        esc(classes), esc(c["trade"]), place, esc(c["name"]), esc(c["line"]),
+        esc(c["url_text"]), esc(c["desktop"]), esc(c["desktop_alt"]), c["img_w"], c["img_h"], card_srcset(c),
+        'loading="lazy" ' if lazy else "", esc(c["preview"]), esc(label))
+
+
+def wide_cards(n, cols):
+    """Which of n cards (after the full width feature) run two columns wide, so every grid row is full.
+    Two columns: the last card when n is odd. Three columns: one or two wide cards in the middle rows,
+    alternating left and right. One card alone in three columns stays one column."""
+    if cols == 2:
+        return {n - 1} if n % 2 else set()
+    w = (3 - n % 3) % 3
+    if n < 2 or w == 0:
+        return set()
+    rows = (n + w) // 3
+    order = list(range(1, rows, 2)) + [r for r in range(rows - 1, -1, -1) if r % 2 == 0]
+    wide_rows = set(order[:w])
+    out, idx, left = set(), 0, True
+    for r in range(rows):
+        if r in wide_rows:
+            out.add(idx if left else idx + 1)
+            left = not left
+            idx += 2
+        else:
+            idx += 3
+    return out
 
 
 def work_template():
@@ -441,9 +700,41 @@ def work_template():
     raise BuildError("no _tools/templates/work.html")
 
 
-def render_work(cards):
+def cards_markup(cards, feature=None):
+    """The card list items. The feature card (or, with none, the first design) leads full width; the rest fill
+    the grid, with wide-3 and wide-2 on the cards that run two columns wide in the three and two column grids."""
+    lead, rest = (feature, cards) if feature else (cards[0] if cards else None, cards[1:])
+    items = [card_html(lead, "work-card feature", lazy=False)] if lead else []
+    w3, w2 = wide_cards(len(rest), 3), wide_cards(len(rest), 2)
+    for i, c in enumerate(rest):
+        items.append(card_html(c, "work-card" + (" wide-3" if i in w3 else "") + (" wide-2" if i in w2 else "")))
+    return "\n".join(items)
+
+
+def render_work(cards, feature=None):
     tpl, name = work_template()
-    return render(tpl, {"CARDS": Raw("\n".join(card_html(c) for c in cards))}, name), name
+    return render(tpl, {"CARDS": Raw(cards_markup(cards, feature))}, name), name
+
+
+def sample_places(designs, feature_data):
+    """Every sample town and every state from designs.json and featured.json: (towns, states)."""
+    rows = [(d["town"], d["state"]) for d in designs] + ([(feature_data["town"], feature_data["state"])]
+                                                         if feature_data else [])
+    return sorted({t.strip() for t, _ in rows if t.strip()}), sorted({s.strip() for _, s in rows if s.strip()})
+
+
+def town_leaks(places, texts):
+    """With SHOW_SAMPLE_TOWN off: each sample town (any case) or state (exact case) still in the /work/ card
+    markup or samples.json, as 'Town (in where, where)'. texts is a list of (where, text)."""
+    towns, states = places
+    found = {}
+    for where, text in texts:
+        plain = html.unescape(text)
+        for word in towns + states:
+            flags = re.I if word in towns else 0
+            if re.search(r"(?<![A-Za-z0-9])%s(?![A-Za-z0-9])" % re.escape(word), plain, flags):
+                found.setdefault(word, []).append(where)
+    return ["%s (in %s)" % (w, ", ".join(found[w])) for w in sorted(found)]
 
 
 # ---------------------------------------------------------------- screenshots (headless Chrome over DevTools)
@@ -594,8 +885,8 @@ WAIT_IMAGES = """
 """
 
 
-def capture(ses, page_path):
-    """Phone capture of the top of one sample. Returns (bytes, format, quality)."""
+def capture(ses, page_path, width=SHOT_W, height=SHOT_H, scale=1, qualities=SHOT_QUALITIES, max_bytes=SHOT_MAX_BYTES):
+    """Capture of the top of one sample (phone by default). Returns (bytes, format, quality)."""
     ses.events = []
     ses.call("Page.navigate", {"url": "file://" + urllib.parse.quote(os.path.realpath(page_path))})
     if not ses.wait_event("Page.loadEventFired", 30):
@@ -604,9 +895,9 @@ def capture(ses, page_path):
     ses.call("Runtime.evaluate", {"expression": WAIT_IMAGES, "awaitPromise": True, "returnByValue": True})
     ses.call("Runtime.evaluate", {"expression": "window.scrollTo(0,0)"})
     ses.pump(max(0.0, SETTLE_SECONDS - (time.time() - loaded)))
-    clip = {"x": 0, "y": 0, "width": SHOT_W, "height": SHOT_H, "scale": 1}
+    clip = {"x": 0, "y": 0, "width": width, "height": height, "scale": scale}
     data = None
-    for q in SHOT_QUALITIES:
+    for q in qualities:
         try:
             shot = ses.call("Page.captureScreenshot", {"format": "webp", "quality": q, "clip": clip})
         except Fail:
@@ -615,10 +906,10 @@ def capture(ses, page_path):
         if not (data[:4] == b"RIFF" and data[8:12] == b"WEBP"):
             data = None
             break
-        if len(data) <= SHOT_MAX_BYTES:
+        if len(data) <= max_bytes:
             return data, "webp", q
     if data is not None:
-        return data, "webp", SHOT_QUALITIES[-1]
+        return data, "webp", qualities[-1]
     shot = ses.call("Page.captureScreenshot", {"format": "png", "clip": clip})
     return base64.b64decode(shot["data"]), "png", None
 
@@ -638,13 +929,33 @@ def kill_group(proc):
     proc.poll()
 
 
-def take_shots(slugs):
-    """Returns a list of report lines. Writes work/shots/<slug>.webp (or .png on fallback)."""
-    if not slugs:
+def shot_marks(slugs):
+    """The sha256 of each desktop shot in slugs that has an 800 px copy ('' while the shot is not on disk),
+    so the build can tell which of them a retake changed."""
+    marks = {}
+    for slug in slugs:
+        if os.path.isfile(small_shot(slug)):
+            big = os.path.join(DESKTOP_SHOTS, slug + ".webp")
+            marks[slug] = sha256_of(big) if os.path.isfile(big) else ""
+    return marks
+
+
+def desktop_page(slug, pages):
+    """The page a desktop shot is taken from: pages[slug] (the feature card), else designs/<slug>/index.html."""
+    return (pages or {}).get(slug) or os.path.join(DESIGNS, slug, "index.html")
+
+
+def take_shots(slugs, desktop_slugs=(), pages=None):
+    """Returns a list of report lines. Writes work/shots/<slug>.webp (or .png on fallback) for slugs,
+    then work/shots/desktop/<slug>.webp (webp only) for desktop_slugs, each from desktop_page()."""
+    slugs, desktop_slugs = list(slugs), list(desktop_slugs)
+    if not slugs and not desktop_slugs:
         return []
     if not os.access(CHROME, os.X_OK):
         return ["SHOTS BLOCKED: no Google Chrome at " + CHROME]
     os.makedirs(SHOTS, exist_ok=True)
+    if desktop_slugs:
+        os.makedirs(DESKTOP_SHOTS, exist_ok=True)
     report = []
     profile = tempfile.mkdtemp(prefix="gcd-chrome-")
     proc = ws = None
@@ -653,7 +964,7 @@ def take_shots(slugs):
         raise Fail("screenshot timeout")
 
     signal.signal(signal.SIGALRM, on_alarm)
-    signal.alarm(60 + 25 * len(slugs))
+    signal.alarm(60 + 25 * (len(slugs) + len(desktop_slugs)))
     try:
         c_in, p_out = os.pipe()
         p_in, c_out = os.pipe()
@@ -686,7 +997,8 @@ def take_shots(slugs):
         for slug in slugs:
             ses.blocked = []
             try:
-                data, fmt, q = capture(ses, os.path.join(DESIGNS, slug, "index.html"))
+                data, fmt, q = capture(ses, os.path.join(DESIGNS, slug, "index.html"),
+                                       scale=SHOT_IMG_W / (SHOT_W * SHOT_SCALE))
             except Fail as e:
                 report.append("shot %s FAILED: %s" % (slug, e))
                 continue
@@ -697,6 +1009,30 @@ def take_shots(slugs):
                 line += " (PNG FALLBACK: Chrome would not make webp)"
             elif len(data) > SHOT_MAX_BYTES:
                 line += " (OVER 120 KB at the lowest quality tried)"
+            if ses.blocked:
+                line += "; blocked %d outside request(s): %s" % (len(ses.blocked), ", ".join(sorted(set(ses.blocked))[:3]))
+            report.append(line)
+        if desktop_slugs:
+            ses.call("Emulation.setTouchEmulationEnabled", {"enabled": False})
+            ses.call("Emulation.setDeviceMetricsOverride", {
+                "width": DESKTOP_W, "height": DESKTOP_H, "deviceScaleFactor": 1, "mobile": False,
+                "screenWidth": DESKTOP_W, "screenHeight": DESKTOP_H})
+        for slug in desktop_slugs:
+            ses.blocked = []
+            try:
+                data, fmt, q = capture(ses, desktop_page(slug, pages), DESKTOP_W, DESKTOP_H,
+                                       DESKTOP_IMG_W / DESKTOP_W, DESKTOP_QUALITIES, DESKTOP_MAX_BYTES)
+            except Fail as e:
+                report.append("desktop shot %s FAILED: %s" % (slug, e))
+                continue
+            if fmt != "webp":
+                report.append("desktop shot %s FAILED: Chrome would not make webp" % slug)
+                continue
+            path = os.path.join(DESKTOP_SHOTS, slug + ".webp")
+            write_atomic(path, data)
+            line = "desktop shot %s: webp q%d, %d KB" % (rel(path), q, len(data) // 1024)
+            if len(data) > DESKTOP_MAX_BYTES:
+                line += " (OVER 80 KB at the lowest quality tried)"
             if ses.blocked:
                 line += "; blocked %d outside request(s): %s" % (len(ses.blocked), ", ".join(sorted(set(ses.blocked))[:3]))
             report.append(line)
@@ -829,16 +1165,24 @@ def walk_files(top):
                 yield os.path.join(dirpath, name)
 
 
+def private_scan_label():
+    """Where scan_private looks, for the report lines."""
+    return ", ".join(["work/", "designs/"] + [d + "/" for d in PRIVATE_SCAN_DIRS] + list(PRIVATE_SCAN_FILES)
+                     + ["sitemap.xml"])
+
+
 def scan_private(terms, extra=()):
-    """Scan file names and text in work/, designs/ and sitemap.xml, plus extra (label, text) pairs that are
-    about to be written. Returns a list of 'where: what' lines."""
+    """Scan file names and text in work/, designs/, the PRIVATE_SCAN_DIRS folders, the PRIVATE_SCAN_FILES in the
+    site root and sitemap.xml, plus extra (label, text) pairs that are about to be written.
+    Returns a list of 'where: what' lines."""
     hits = []
     files = []
-    for top in (WORK, DESIGNS):
+    for top in (WORK, DESIGNS) + tuple(os.path.join(ROOT, d) for d in PRIVATE_SCAN_DIRS):
         if os.path.isdir(top):
             files.extend(walk_files(top))
-    if os.path.isfile(os.path.join(ROOT, "sitemap.xml")):
-        files.append(os.path.join(ROOT, "sitemap.xml"))
+    for name in PRIVATE_SCAN_FILES + ("sitemap.xml",):
+        if os.path.isfile(os.path.join(ROOT, name)):
+            files.append(os.path.join(ROOT, name))
     for path in files:
         r = rel(path)
         found = {f for f in leaks_in_text(r.replace(os.sep, "/"), terms) if f.startswith("private slug")}
@@ -1107,6 +1451,12 @@ def scan_reused_photos():
 
 # ---------------------------------------------------------------- check
 
+def missing_desktop_shots(cards):
+    """work/shots/desktop/<slug>.webp paths that the /work/ cards (and the feature card) want but are not on disk."""
+    return [rel(os.path.join(DESKTOP_SHOTS, c["slug"] + ".webp")) for c in cards
+            if not os.path.isfile(os.path.join(DESKTOP_SHOTS, c["slug"] + ".webp"))]
+
+
 def section(title, items, problem=True):
     print("\n%s: %s" % (title, "none" if not items else len(items)))
     for x in items[:40]:
@@ -1116,10 +1466,11 @@ def section(title, items, problem=True):
     return len(items) if problem else 0
 
 
-def run_check(designs, samples, cards, card_notes, work_html, json_text):
+def run_check(designs, samples, cards, card_notes, work_html, json_text, feature=None, places=None, markup=""):
     print("CHECK (nothing written)")
     problems = 0
     print("\ndesigns.json: %d entries, %d with a page in designs/ (cards on /work/)" % (len(designs), len(cards)))
+    print("Feature card: %s" % ("%s (%s)" % (feature["name"], feature["preview"]) if feature else "none"))
     for n in card_notes:
         print("  Note: " + n)
     mapped = {d["real"] for d in designs}
@@ -1131,6 +1482,11 @@ def run_check(designs, samples, cards, card_notes, work_html, json_text):
     section("Note: folders in designs/ with no designs.json entry (not on /work/)", stray, problem=False)
     left = sorted(set(TOKEN_RE.findall(work_html)))
     problems += section("Leftover {{TOKENS}} in the /work/ page", left)
+    if SHOW_SAMPLE_TOWN:
+        print("\nNote: SHOW_SAMPLE_TOWN is on, so /work/ shows each sample's town and state")
+    else:
+        problems += section("Sample towns or states still on /work/ with SHOW_SAMPLE_TOWN off",
+                            town_leaks(places or ([], []), [("work/ cards", markup), ("work/samples.json", json_text)]))
     problems += section("Pages in samples/ without a noindex robots meta", scan_noindex())
     problems += section("Pages in designs/ without a noindex robots meta", scan_design_noindex())
     problems += section("Business structured data on designs/ pages (LocalBusiness style JSON-LD or microdata)",
@@ -1141,16 +1497,20 @@ def run_check(designs, samples, cards, card_notes, work_html, json_text):
     problems += section("Images or stock photo IDs on designs/ or sample/ reused from a page in samples/",
                         scan_reused_photos())
     terms = private_terms(designs, samples)
-    problems += section("Private slugs, names or phone numbers in work/, designs/, sitemap.xml or the /work/ build",
+    problems += section("Private slugs, names or phone numbers in %s or the /work/ build" % private_scan_label(),
                         scan_private(terms, [("(built) work/index.html", work_html), ("(built) work/samples.json", json_text)]))
     have, missing = sitemap_paths()
     section("Note: sitemap pages with no page on disk yet (left out until they exist)", missing, problem=False)
+    section("Note: sitemap pages that still carry a noindex robots meta",
+            [p for p in have if has_noindex(read(page_file(p)))], problem=False)
     on_disk = os.path.join(ROOT, "sitemap.xml")
     current = re.findall(r"<loc>([^<]*)</loc>", read(on_disk)) if os.path.isfile(on_disk) else []
     problems += section("sitemap.xml lists noindex designs/ pages (run --sitemap to rewrite it)",
                         [u for u in current if "/designs/" in u])
     if current != [BASE_URL + p for p in have]:
         print("\nNote: sitemap.xml differs from what the build would write (%d URLs now, %d after a build)" % (len(current), len(have)))
+    section("Note: designs with no desktop shot yet (the build takes them)",
+            missing_desktop_shots(cards + ([feature] if feature else [])), problem=False)
     print("\nRESULT: %s" % ("OK" if not problems else "%d problem(s)" % problems))
     return 1 if problems else 0
 
@@ -1173,17 +1533,22 @@ def main(argv=None):
         if args.sitemap:
             write_sitemap()
             return 0
+        feature_data = load_feature(designs, samples)
         cards, card_notes = collect_cards(designs)
+        fc, notes = collect_feature(feature_data)
+        card_notes += notes
+        feature, notes = feature_image(fc)
         for c in cards:
             c["shot"] = shot_url(c["slug"])
-        work_html, work_name = render_work(cards)
+        work_html, work_name = render_work(cards, feature)
         json_text = samples_json(cards)
     except BuildError as e:
         print("ERROR: %s" % e)
         return 2
 
     if args.check:
-        return run_check(designs, samples, cards, card_notes, work_html, json_text)
+        return run_check(designs, samples, cards, card_notes + notes, work_html, json_text, fc,
+                         sample_places(designs, feature_data), cards_markup(cards, feature))
 
     for n in card_notes:
         print("Note: " + n)
@@ -1208,20 +1573,39 @@ def main(argv=None):
 
     if not args.no_shots:
         todo = [c["slug"] for c in cards if args.shots or not os.path.isfile(os.path.join(SHOTS, c["slug"] + ".webp"))]
-        for line in take_shots(todo):
+        desktop_todo = [c["slug"] for c in cards + ([fc] if fc else [])
+                        if args.shots or not os.path.isfile(os.path.join(DESKTOP_SHOTS, c["slug"] + ".webp"))]
+        pages = {fc["slug"]: fc["page_html"]} if fc else {}
+        marks = shot_marks(desktop_todo)
+        for line in take_shots(todo, desktop_todo, pages):
             print(line)
+        for slug in sorted(s for s, mark in shot_marks(desktop_todo).items() if mark and mark != marks.get(s)):
+            print("Note: %s was retaken and its 800 px copy is from the old picture; "
+                  "run python3 _tools/make_small_shots.py" % slug)
         for c in cards:
             c["shot"] = shot_url(c["slug"])
-        work_html, work_name = render_work(cards)
+        feature, notes = feature_image(fc)
+        work_html, work_name = render_work(cards, feature)
         json_text = samples_json(cards)
+    for n in notes:
+        print("Note: " + n)
     write_atomic(os.path.join(WORK, "index.html"), work_html)
     write_atomic(os.path.join(WORK, "samples.json"), json_text)
-    print("Wrote work/index.html from %s with %d cards, and work/samples.json" % (work_name, len(cards)))
+    print("Wrote work/index.html from %s with %d cards%s, and work/samples.json"
+          % (work_name, len(cards), " plus the feature card (%s)" % feature["preview"] if feature else ""))
+    if not SHOW_SAMPLE_TOWN:
+        for h in town_leaks(sample_places(designs, feature_data),
+                            [("work/ cards", cards_markup(cards, feature)), ("work/samples.json", json_text)]):
+            print("Note: a sample town or state is still on /work/ with SHOW_SAMPLE_TOWN off: " + h)
     for r in remove_old_shots(terms["slugs"]):
         print("Removed old shot " + r)
     missing_shots = [c["slug"] for c in cards if not os.path.isfile(os.path.join(ROOT, c["shot"].lstrip("/")))]
     if missing_shots:
         print("Note: no shot yet for %s" % ", ".join(missing_shots))
+    missing_desktop = [c["slug"] for c in cards + ([fc] if fc else [])
+                       if not os.path.isfile(os.path.join(DESKTOP_SHOTS, c["slug"] + ".webp"))]
+    if missing_desktop:
+        print("Note: no desktop shot yet for %s" % ", ".join(missing_desktop))
     write_sitemap()
 
     post = scan_private(terms) + scan_links()
@@ -1230,7 +1614,8 @@ def main(argv=None):
         for h in post:
             print("  " + h)
         return 1
-    print("\nAfter build: no private names, slugs or phone numbers in work/, designs/ or sitemap.xml; no public links to /samples/ or /web-design/;"
+    print("\nAfter build: no private names, slugs or phone numbers in %s;"
+          " no public links to /samples/ or /web-design/;" % private_scan_label() +
           "\nno images or stock photo IDs on designs/ or sample/ reused from samples/."
           "\nRun --check too: it also covers noindex and structured data on designs/ and old _mark/ links.")
     return 0

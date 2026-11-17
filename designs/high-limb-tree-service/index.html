@@ -3,124 +3,199 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>High Limb Tree Service | Tree service in Dobson, NC</title>
-<meta name="description" content="High Limb Tree Service takes down, trims and cleans up trees around Dobson, NC. Call 336 555 0162.">
+<title>High Limb Tree Service | Tree service in Springfield, MO</title>
+<meta name="description" content="High Limb Tree Service takes down, trims and cleans up trees around Springfield, MO. Call 417 555 0162.">
 <meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://granitecitydigital.me/designs/high-limb-tree-service/">
 <meta name="theme-color" content="#1e2b22">
-<meta property="og:title" content="High Limb Tree Service | Dobson, NC">
-<meta property="og:description" content="High Limb Tree Service takes down, trims and cleans up trees around Dobson, NC. Call 336 555 0162.">
-<meta property="og:image" content="https://granitecitydigital.me/designs/high-limb-tree-service/climber.jpg">
+<meta property="og:title" content="High Limb Tree Service | Springfield, MO">
+<meta property="og:description" content="High Limb Tree Service takes down, trims and cleans up trees around Springfield, MO. Call 417 555 0162.">
+<meta property="og:image" content="https://granitecitydigital.me/designs/high-limb-tree-service/hero-climber-1600.webp">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://granitecitydigital.me/designs/high-limb-tree-service/">
-<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231e2b22'/%3E%3Cpath d='M16 4v24M16 11l-7 6M16 16l7-5M16 21l-6 4' fill='none' stroke='%23e8661c' stroke-width='2.6'/%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="preload" as="image" type="image/webp" imagesrcset="hero-climber-800.webp 800w, hero-climber-1600.webp 1600w" imagesizes="(max-width: 640px) 1180px, (max-width: 1100px) 1340px, 100vw" fetchpriority="high">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&family=Oswald:wght@600&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 <style>
+/* fallback faces sized to the web fonts, so text keeps its line breaks while they load */
+@font-face{font-family:"Oswald fb";src:local("Arial Narrow Bold"),local("ArialNarrow-Bold"),local("Arial Narrow");size-adjust:91.6%}
+@font-face{font-family:"Franklin fb";src:local("Arial"),local("ArialMT"),local("Helvetica");size-adjust:102.6%}
 :root{
+  /* color: green shade is the page, bark is the contained band, orange is for calls and key facts only */
   --bg:#1e2b22;
+  --raised:#25362b;
   --deep:#16201a;
   --bark:#5a4632;
   --bark-deep:#46362a;
+  --bark-raised:#4c3b2c;
   --ink:#efebe2;
   --muted:#b7beb0;
-  --bark-muted:#d6cdbf;
+  --bark-muted:#ddd4c6;
   --line:#33443a;
   --orange:#e8661c;
   --orange-text:#f3843f;
+  --orange-soft:#ffae7a;
   --on-orange:#16100b;
   --rope:#8c7350;
   --danger:#ff9a7a;
 
-  --head:"Oswald","Arial Narrow",sans-serif;
-  --font:"Libre Franklin",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --head:"Oswald","Oswald fb","Arial Narrow",sans-serif;
+  --font:"Libre Franklin","Franklin fb",system-ui,-apple-system,"Segoe UI",sans-serif;
+  /* type: five steps */
   --t-small:.875rem;
   --t-body:1.0625rem;
   --t-lead:clamp(1.125rem,1.05rem + .35vw,1.3125rem);
-  --t-h3:1.375rem;
+  --t-h3:clamp(1.25rem,1.15rem + .4vw,1.5rem);
   --t-h2:clamp(2.25rem,1.6rem + 2.6vw,4rem);
-  --t-h1:clamp(2.75rem,1rem + 7.6vw,7rem);
+  --t-h1:clamp(2.75rem,1.4rem + 4.8vw,6rem);
 
-  --wrap:1184px;
+  /* spacing scale: every gap on the page is one of these */
+  --s1:8px;--s2:12px;--s3:16px;--s4:24px;--s5:32px;--s6:48px;--s7:64px;
+  --sec:clamp(88px,9vw,128px);
+  --gut:clamp(32px,5vw,80px);
+
+  /* one radius scale: photos, cards, controls */
+  --r-photo:24px;
+  --r-card:18px;
+  --r-ctl:10px;
+
+  /* three levels only. Light comes from above, so every shadow falls straight down and grows with the level.
+     page: no shadow. raised: cards and photos at rest. floating: what you can press or type into, and things on hover. */
+  --lv-raised:0 1px 2px rgba(6,10,7,.32),0 12px 28px -10px rgba(6,10,7,.55);
+  --lv-float:0 2px 6px rgba(6,10,7,.3),0 28px 56px -16px rgba(6,10,7,.7);
+
+  /* faint growth rings for the open sections */
+  --rings:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='760' viewBox='0 0 760 760' fill='none' stroke='%23efebe2' stroke-opacity='.045' stroke-width='1.5'%3E%3Cellipse cx='380' cy='384' rx='26' ry='22'/%3E%3Cellipse cx='378' cy='386' rx='62' ry='55'/%3E%3Cellipse cx='381' cy='383' rx='104' ry='94'/%3E%3Cellipse cx='377' cy='388' rx='150' ry='138'/%3E%3Cellipse cx='383' cy='384' rx='196' ry='182'/%3E%3Cellipse cx='379' cy='389' rx='246' ry='228'/%3E%3Cellipse cx='382' cy='385' rx='298' ry='278'/%3E%3Cellipse cx='378' cy='390' rx='350' ry='330'/%3E%3C/svg%3E");
+
+  --wrap:1280px;
+  --head-h:76px;
   --m:clamp(20px,4vw,40px);
-  --sec:clamp(96px,11vw,168px);
   --ease:cubic-bezier(.23,1,.32,1);
   --bar:0px;
   --notch:clamp(28px,4vw,56px);
+  --off:18px;
 }
 *,*::before,*::after{box-sizing:border-box}
 *{margin:0}
-html{-webkit-text-size-adjust:100%;scroll-padding-top:24px;background:var(--bg)}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--head-h) + 16px);background:var(--bg)}
+@media (min-width:1100px){body{font-size:1.125rem}}
+.ico{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:square;stroke-linejoin:miter}
+/* section label: a short orange cut and a word */
+.label{display:inline-flex;align-items:center;gap:10px;margin-bottom:var(--s3);font:600 .875rem/1.3 var(--head);letter-spacing:.2em;text-transform:uppercase;color:var(--orange-text)}
+@media (max-width:640px){.label{letter-spacing:.14em}}
+.label::before{content:"";width:22px;height:4px;border-radius:2px;background:var(--orange)}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
 ::selection{background:var(--orange);color:var(--on-orange)}
-:focus-visible{outline:2px solid var(--orange-text);outline-offset:3px;border-radius:2px}
-h1,h2,h3{font-family:var(--head);font-weight:600;text-transform:uppercase;letter-spacing:-.005em;line-height:.98;text-wrap:balance}
+:focus-visible{outline:2px solid var(--orange-text);outline-offset:3px;border-radius:4px}
+/* the big headline keeps its heavy condensed caps; section heads drop to sentence case so long lines read easier */
+h1,h2,h3{font-family:var(--head);font-weight:600;letter-spacing:-.005em;line-height:1;text-wrap:balance}
+h1{text-transform:uppercase;line-height:.98}
+h2{letter-spacing:-.01em;line-height:1.02}
+h3{font-family:var(--font);font-weight:600;letter-spacing:-.01em;line-height:1.2}
 p{text-wrap:pretty}
 .wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
 .vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:2px}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:var(--r-ctl)}
 .skip:focus{top:12px}
 .num{font-variant-numeric:tabular-nums;white-space:nowrap}
 
-/* buttons: square cut, like gear tags */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:0;border:2px solid transparent;background:var(--orange);color:var(--on-orange);font:600 1.0625rem/1 var(--head);text-transform:uppercase;letter-spacing:.02em;text-decoration:none;cursor:pointer;transition:background-color 180ms ease,border-color 180ms ease,color 180ms ease,transform 140ms var(--ease)}
+/* buttons: one shape, one press, one hover for the whole page */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:var(--r-ctl);border:2px solid transparent;background:var(--orange);color:var(--on-orange);font:600 1.0625rem/1 var(--head);text-transform:uppercase;letter-spacing:.02em;text-decoration:none;cursor:pointer;box-shadow:var(--lv-raised);transition:background-color 180ms ease,border-color 180ms ease,color 180ms ease,box-shadow 220ms ease,transform 140ms var(--ease)}
 .btn:active{transform:scale(.97)}
-.btn.line{background:transparent;color:var(--ink);border-color:#6f7d72}
+.btn.line{background:transparent;color:var(--ink);border-color:#6f7d72;box-shadow:none}
 @media (hover:hover) and (pointer:fine){
-  .btn:hover{background:#f07a33}
-  .btn.line:hover{background:transparent;border-color:var(--ink)}
+  .btn:hover{background:#f07a33;box-shadow:var(--lv-float)}
+  .btn.line:hover{background:rgba(239,235,226,.06);border-color:var(--ink);box-shadow:none}
 }
 
+/* photo frame: one treatment for every photo on the page.
+   Rounded wrapper clips the picture, a soft inner edge and the same light grade on each one. */
+.ph{position:relative;overflow:hidden;border-radius:var(--r-photo);background:var(--deep);box-shadow:var(--lv-raised);isolation:isolate}
+.ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.92) contrast(1.03)}
+.ph::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(239,235,226,.07);pointer-events:none}
+/* layered: an offset block sits behind the photo */
+.stack{position:relative;isolation:isolate}
+.stack::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--blk,var(--bark));transform:translate(var(--off),var(--off))}
+.stack.left::before{transform:translate(calc(var(--off) * -1),var(--off))}
+/* a small card that overlaps the photo edge */
+.pin{position:absolute;z-index:2;max-width:min(300px,78%);background:var(--raised);color:var(--ink);border-radius:var(--r-card);padding:var(--s3) var(--s4);box-shadow:var(--lv-float);font-size:.9375rem;line-height:1.45}
+.pin b{display:block;font:600 1rem/1.2 var(--head);text-transform:uppercase;letter-spacing:.03em;color:var(--orange-soft);margin-bottom:4px}
+.pin a{color:var(--ink);font-weight:600}
+
 /* sample banner */
-.sample{background:var(--deep);color:var(--muted);font-size:.8125rem;text-align:center;padding:8px var(--m);line-height:1.45}
-.sample a{color:var(--ink)}
+.sample{background:var(--deep);color:var(--muted);font-size:.8125rem;text-align:center;padding:8px var(--m);line-height:1.45;position:relative;overflow:clip}
+.sample a{color:var(--ink);position:relative}
+.sample a::after{content:"";position:absolute;left:-6px;right:-6px;top:-8px;height:48px}
 
 /* storm strip */
 .storm{background:var(--bark);color:var(--ink);font-size:.875rem;line-height:1.3}
 .storm .wrap{display:flex;justify-content:center;align-items:center;gap:6px 10px;flex-wrap:wrap;min-height:40px;padding-block:6px;text-align:center}
-.storm a{color:#ffd2b3;font-weight:600;text-decoration:underline;text-decoration-color:rgba(255,210,179,.5)}
+.storm a{color:#ffd2b3;font-weight:600;text-decoration:underline;text-decoration-color:rgba(255,210,179,.5);position:relative}
+.storm a::after{content:"";position:absolute;left:-6px;right:-6px;top:calc(50% - 22px);height:44px}
 
 /* header */
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}
-.mark{display:inline-flex;align-items:baseline;gap:10px;text-decoration:none;min-height:44px;align-items:center;white-space:nowrap}
+.top{background:var(--bg);z-index:30}
+@media (min-width:900px){.top{position:sticky;top:0;box-shadow:0 1px 0 var(--line),0 10px 24px -18px rgba(6,10,7,.8)}}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:var(--head-h)}
+.mark{display:inline-flex;gap:10px;text-decoration:none;min-height:44px;align-items:center;white-space:nowrap}
 .mark b{font:600 1.5rem/1 var(--head);text-transform:uppercase;letter-spacing:.01em}
 .mark span{font-size:.875rem;color:var(--muted)}
 .mark svg{width:16px;height:26px;flex:none;color:var(--orange)}
 .nav{display:flex;align-items:center;gap:30px;list-style:none;padding:0;font-size:.9375rem}
 .nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 180ms ease}
-.nav a:hover{color:var(--ink)}
+@media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--ink)}}
+.acts{display:flex;align-items:center;gap:10px}
 .top .btn{min-height:44px;padding:0 16px;font-size:1rem}
+.top .est{display:none}
+@media (min-width:1180px){.top .est{display:inline-flex}}
 .top .short{display:none}
 @media (max-width:960px){.nav{display:none}}
 @media (max-width:480px){.top .long{display:none}.top .short{display:inline}.mark span{display:none}}
+@media (max-width:340px){.top .mark{min-width:0;white-space:normal}}
 
-/* hero */
-.hero{padding-top:clamp(40px,6vw,88px)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px clamp(32px,5vw,72px);align-items:end}
-.hero h1{font-size:var(--t-h1)}
-.hero .lead{margin-top:28px;font-size:var(--t-lead);color:var(--muted);max-width:44ch}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.hero-pic{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--deep)}
-.hero-pic img{width:100%;height:100%;object-fit:cover;object-position:51% 45%}
-.cap{margin-top:12px;font-size:.8125rem;color:var(--muted);max-width:38ch}
+/* hero: the climber fills the screen */
+.hero{position:relative;min-height:calc(100svh - var(--head-h) - 74px);display:flex;align-items:flex-end;background:var(--deep);overflow:hidden}
+.hero-pic{position:absolute;inset:0}
+.hero-pic img{width:100%;height:100%;object-fit:cover;object-position:62% 40%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,32,26,.88) 0%,rgba(22,32,26,.6) 38%,rgba(22,32,26,.1) 70%,rgba(22,32,26,0) 100%),linear-gradient(0deg,rgba(22,32,26,.7) 0%,rgba(22,32,26,0) 40%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-block:clamp(48px,8vh,96px)}
+.hero .label{color:var(--orange-soft);background:rgba(22,32,26,.82);padding:8px 14px 8px 12px;border-radius:var(--r-ctl);margin-bottom:var(--s4)}
+.hero .label::before{background:var(--orange-soft)}
+.hero h1{font-size:var(--t-h1);max-width:4.89em}
+.hero .lead{margin-top:var(--s4);font-size:var(--t-lead);color:#dfe3d8;max-width:44ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+/* good to know: a floating card that overlaps the bottom of the hero on wide screens */
+.trust{position:relative;z-index:3}
+.trust ul{list-style:none;margin:0;padding:var(--s4) var(--s5);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px 28px;background:var(--raised);border-radius:var(--r-card);box-shadow:var(--lv-float)}
+.trust li{display:flex;gap:14px;align-items:flex-start}
+.trust .ico{color:var(--orange-text);margin-top:2px}
+.trust b{display:block;font:600 1.125rem/1.15 var(--head);text-transform:uppercase;letter-spacing:.02em}
+.trust span{display:block;font-size:.9375rem;color:var(--muted);margin-top:2px}
+.trust span a,.foot .right a{display:inline-block;padding-block:12px;margin-block:-12px}
+@media (hover:hover) and (pointer:fine){.trust span a:hover,.foot .right a:hover{color:var(--orange-text)}}
+@media (min-width:961px){
+  .hero .wrap{padding-bottom:calc(clamp(48px,8vh,96px) + 56px)}
+  .trust{margin-top:-56px}
+}
 
 /* rope down the page edge, crown at the top and ground at the bottom (wide screens) */
 .rope{display:none}
-@media (min-width:1360px){
-  .rope{display:block;position:fixed;z-index:5;top:96px;bottom:40px;left:calc((100vw - var(--wrap) - 80px) / 2 - 56px);width:64px;pointer-events:none}
+@media (min-width:1540px){
+  .rope{display:block;position:fixed;z-index:5;top:96px;bottom:40px;left:calc((100vw - var(--wrap) - 96px) / 2 - 64px);width:64px;pointer-events:none}
   .rope i{position:absolute;left:30px;top:0;bottom:0;width:4px;border-radius:2px;background:var(--rope)}
   .rope i+i{background:var(--orange);transform-origin:top;transform:scaleY(var(--p,0))}
   .rope ol{list-style:none;padding:0;position:absolute;inset:0}
   .rope li{position:absolute;left:0;width:64px;display:grid;justify-items:center;gap:8px;font-size:.75rem;color:var(--muted);transition:color 200ms ease}
   .rope li::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--bg);border:4px solid var(--rope);transition:border-color 200ms ease,background-color 200ms ease}
-  .rope li{text-shadow:none}
-  .rope li b{font-weight:500;background:var(--deep);padding:2px 6px;border-radius:2px}
+  .rope li b{font-weight:500;background:var(--deep);padding:2px 6px;border-radius:4px}
   .rope li.on{color:var(--ink)}
   .rope li.on::before{border-color:var(--orange);background:var(--orange)}
   .rope li:nth-child(1){top:0}
@@ -128,86 +203,151 @@ p{text-wrap:pretty}
   .rope li:nth-child(3){bottom:0}
 }
 
-/* section basics */
+/* section rhythm: open sections sit on the page with faint rings, contained bands hold color or a dim photo.
+   The space from a band edge or the last line of one section to the next heading is always --sec. */
 .sec{padding-top:var(--sec)}
+.ringed{background-image:var(--rings);background-repeat:no-repeat;background-position:right -260px top -120px}
+.ringed.lt{background-position:left -300px top 40px}
 h2{font-size:var(--t-h2)}
 .intro{font-size:var(--t-lead);color:var(--muted);max-width:46ch;margin-top:20px}
+.head2{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s4) var(--gut);align-items:end}
+.head2 .intro{margin-top:0}
 
-/* what we do: a bark band with a felling notch cut into its top edge */
-.band{background:var(--bark);margin-top:var(--sec);padding-block:calc(var(--sec) + var(--notch)) var(--sec);clip-path:polygon(0 0,58% 0,62% var(--notch),66% 0,100% 0,100% 100%,0 100%)}
+/* services: a bark band with a felling notch cut into its top edge and a dim climbing photo behind it */
+.band{position:relative;isolation:isolate;overflow:hidden;background:var(--bark);margin-top:var(--sec);padding-block:calc(var(--sec) + var(--notch)) var(--sec);clip-path:polygon(0 0,58% 0,62% var(--notch),66% 0,100% 0,100% 100%,0 100%)}
+.band-bg{position:absolute;left:0;right:0;top:0;width:100%;height:min(720px,70%);object-fit:cover;object-position:50% 20%;z-index:-1;opacity:.5;mix-blend-mode:multiply;filter:grayscale(1) contrast(1.1);-webkit-mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.6) 50%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.6) 50%,transparent 100%)}
 .band .intro{color:var(--bark-muted)}
-.work{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px clamp(32px,5vw,80px);align-items:start}
-.work figure{aspect-ratio:3/4;overflow:hidden;background:var(--bark-deep)}
-.work figure img{width:100%;height:100%;object-fit:cover;object-position:55% 40%}
-.jobs{list-style:none;padding:0;margin-top:40px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 40px}
-.jobs h3{font-size:var(--t-h3);line-height:1.05}
-.jobs p{margin-top:8px;color:var(--bark-muted);max-width:34ch}
-.jobs li:last-child{grid-column:1/-1;background:var(--bark-deep);padding:24px 28px}
-.jobs li:last-child p{max-width:56ch}
+.band .label{color:var(--orange-soft)}
+.band .label::before{background:var(--orange-soft)}
+.band .stack{--blk:var(--bark-deep)}
+.svc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s6) var(--gut);align-items:center;margin-top:var(--s7)}
+.svc+.svc{margin-top:calc(var(--s7) + var(--s4))}
+.svc.flip{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+.svc.flip .stack{order:2}
+.svc .ph{aspect-ratio:4/5}
+.svc h3{font:600 var(--t-h2)/1 var(--head);font-size:clamp(1.875rem,1.4rem + 1.6vw,2.75rem);letter-spacing:-.01em}
+.svc .lede{margin-top:var(--s3);color:var(--bark-muted);max-width:48ch}
+/* the fact panel: a raised card inside the band */
+.facts{margin-top:var(--s5);background:var(--bark-raised);border-radius:var(--r-card);padding:var(--s4) var(--s5);box-shadow:var(--lv-raised);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s4) var(--s5)}
+.facts div{min-width:0}
+.facts dt{font:600 .875rem/1.2 var(--head);letter-spacing:.12em;text-transform:uppercase;color:var(--orange-soft)}
+.facts dd{margin:6px 0 0;font-size:1rem;line-height:1.55;color:var(--ink)}
+.facts .wide{grid-column:1/-1}
+.facts .local{grid-column:1/-1;padding-top:var(--s3);border-top:1px solid rgba(239,235,226,.14)}
 
-/* signs: big list with orange blocks */
-.signs{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px clamp(32px,5vw,80px);align-items:start}
+/* signs: big list with orange blocks and a layered photo */
+.signs{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s6) var(--gut);align-items:center}
+.signs ul{margin-top:var(--s5)}
 .signs ul{list-style:none;padding:0;display:grid;gap:0}
 .signs li{display:grid;grid-template-columns:14px minmax(0,1fr);gap:20px;align-items:baseline;padding:18px 0;font-size:var(--t-lead);line-height:1.4}
-.signs li::before{content:"";width:14px;height:14px;background:var(--orange);transform:translateY(1px)}
-.signs li+li{border-top:2px solid var(--line)}
-.signs .note{margin-top:24px;color:var(--muted);max-width:52ch}
+.signs li::before{content:"";width:14px;height:14px;border-radius:4px;background:var(--orange);transform:translateY(1px)}
+.signs li+li{border-top:1px solid var(--line)}
+.signs .stack{max-width:460px;width:100%;justify-self:end;margin-bottom:var(--s6)}
+.signs .ph{aspect-ratio:4/5}
+.signs .ph img{object-position:50% 30%}
+.signs .pin{left:calc(var(--s5) * -1);bottom:calc(var(--s6) * -1)}
 
-/* how a job goes: photo bleeds left, steps on the right */
-.how{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:48px clamp(32px,5vw,80px);align-items:center;margin-top:48px}
-.how figure{aspect-ratio:1/1;overflow:hidden;background:var(--deep)}
-.how figure img{width:100%;height:100%;object-fit:cover;object-position:40% 50%}
-.steps{list-style:none;padding:0;counter-reset:s;display:grid;gap:28px}
+/* crew: a deep band with one plain statement from the page beside a tall photo */
+.crewband{background:var(--deep);margin-top:var(--sec);padding-block:var(--sec);background-image:var(--rings);background-repeat:no-repeat;background-position:left -280px bottom -300px}
+.crew{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:var(--s6) var(--gut);align-items:center}
+.crew .stack{--blk:var(--orange)}
+.crew .ph{aspect-ratio:3/4}
+.crew .ph img{object-position:50% 30%}
+.crew h2{font-size:clamp(2.5rem,1.6rem + 3.4vw,5rem);text-transform:uppercase;line-height:.96;max-width:9em}
+.crew .say{margin-top:var(--s5);font-size:clamp(1.25rem,1.1rem + .6vw,1.625rem);line-height:1.45;max-width:30ch}
+.crew .say::before{content:"";display:block;width:56px;height:4px;border-radius:2px;background:var(--orange);margin-bottom:var(--s3)}
+
+/* how a job goes: steps on the left, a layered photo with a text card on the right */
+.how{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--s6) var(--gut);align-items:center;margin-top:var(--s6)}
+.how .ph{aspect-ratio:1/1}
+.how .ph img{object-position:50% 45%}
+.how .stack{margin-bottom:var(--s6)}
+.how .pin{left:calc(var(--s4) * -1);bottom:calc(var(--s6) * -1)}
+.steps{list-style:none;padding:0;counter-reset:s;display:grid;gap:var(--s5)}
 .steps li{counter-increment:s;display:grid;grid-template-columns:56px minmax(0,1fr);gap:4px 20px}
 .steps li::before{content:counter(s);grid-row:1/span 2;font:600 2.75rem/1 var(--head);color:var(--orange-text)}
-.steps h3{font-size:var(--t-h3);line-height:1.1;padding-top:4px}
-.steps p{color:var(--muted);max-width:40ch}
+.steps h3{font-size:var(--t-h3);padding-top:4px}
+.steps p{color:var(--muted);max-width:44ch}
 
-/* storm: a full orange field */
-.stormband{background:var(--orange);color:var(--on-orange);margin-top:var(--sec);padding-block:clamp(64px,8vw,112px)}
-.stormband .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px clamp(32px,5vw,80px);align-items:end}
+/* storm: a full orange field with a dim storm photo pressed into it */
+.stormband{position:relative;isolation:isolate;overflow:hidden;background:var(--orange);color:var(--on-orange);margin-top:var(--sec);padding-block:var(--sec)}
+.stormband .label{color:var(--on-orange)}
+.stormband .label::before{background:var(--on-orange)}
+.stormtop{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px var(--gut);align-items:end}
 .stormband h2{font-size:var(--t-h2)}
-.stormband p{font-size:var(--t-lead);max-width:42ch;line-height:1.5}
-.stormband a.big{display:inline-flex;align-items:center;min-height:56px;margin-top:20px;padding:0 24px;background:var(--on-orange);color:#ffe3d0;font:600 1.25rem/1 var(--head);text-transform:uppercase;letter-spacing:.02em;text-decoration:none;transition:transform 140ms var(--ease),background-color 180ms ease}
+.stormtop p:not(.label){font-size:var(--t-lead);max-width:42ch;line-height:1.5}
+.stormband a.big{display:inline-flex;align-items:center;min-height:56px;margin-top:20px;padding:0 24px;border-radius:var(--r-ctl);background:var(--on-orange);color:#ffe3d0;font:600 1.25rem/1 var(--head);text-transform:uppercase;letter-spacing:.02em;text-decoration:none;box-shadow:0 12px 28px -12px rgba(60,20,0,.6);transition:transform 140ms var(--ease),background-color 180ms ease,box-shadow 220ms ease}
 .stormband a.big:active{transform:scale(.97)}
-@media (hover:hover) and (pointer:fine){.stormband a.big:hover{background:#2a1d13}}
+.stormband :focus-visible{outline-color:var(--on-orange)}
+@media (hover:hover) and (pointer:fine){.stormband a.big:hover{background:#2a1d13;box-shadow:0 22px 44px -16px rgba(60,20,0,.7)}}
+.stormgrid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:var(--s6) var(--gut);align-items:center;margin-top:var(--s7)}
+.stormpics{position:relative;padding-bottom:var(--s7)}
+.stormpics .ph{background:var(--on-orange);box-shadow:0 2px 4px rgba(60,20,0,.25),0 18px 40px -14px rgba(60,20,0,.55)}
+.stormpics .p1{aspect-ratio:3/2;width:86%}
+.stormpics .p2{position:absolute;right:0;bottom:0;width:52%;aspect-ratio:16/10;border:6px solid var(--orange);box-sizing:border-box}
+.stormfacts{background:var(--on-orange);color:#f6e6da;border-radius:var(--r-card);padding:var(--s5);box-shadow:0 2px 6px rgba(60,20,0,.3),0 28px 56px -18px rgba(60,20,0,.6);display:grid;gap:var(--s4)}
+.stormfacts dt{font:600 .875rem/1.2 var(--head);letter-spacing:.12em;text-transform:uppercase;color:var(--orange-soft)}
+.stormfacts dd{margin:6px 0 0;font-size:1rem;line-height:1.55}
+.stormfacts :focus-visible{outline-color:var(--orange-soft)}
 
-/* cleanup */
-.after{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px clamp(32px,5vw,80px);align-items:end}
-.after figure{aspect-ratio:3/2;overflow:hidden;background:var(--deep)}
-.after figure img{width:100%;height:100%;object-fit:cover;object-position:60% 70%}
+/* cleanup: one wide photo with a card over its corner */
+.after{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s6) var(--gut);align-items:center}
+.after .stack{margin-bottom:var(--s6)}
+.after .ph{aspect-ratio:3/2}
+.after .ph img{object-position:60% 70%}
+.after .pin{right:var(--s4);bottom:calc(var(--s6) * -1)}
 .after p{margin-top:20px;max-width:42ch}
 .after p+p{color:var(--muted)}
 
-/* questions: two columns, no accordion */
-.qa{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px clamp(32px,5vw,80px);margin-top:48px}
-.qa h3{font-size:1.25rem;line-height:1.15}
-.qa p{margin-top:10px;color:var(--muted);max-width:48ch}
+/* gallery: a wave of four columns, each set a little lower than the last, the two wide photos stacked in one */
+.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s4);margin-top:var(--s6);align-items:start}
+.strip .ph{aspect-ratio:4/5}
+.strip .pair{display:grid;gap:var(--s4)}
+.strip .pair .ph{aspect-ratio:3/2}
+.strip > :nth-child(2){margin-top:var(--s6)}
+.strip > :nth-child(3){margin-top:calc(var(--s7) + var(--s5))}
+.strip > :nth-child(4){margin-top:var(--s6)}
+.strip img{transition:transform 700ms var(--ease)}
+.strip figcaption{position:absolute;left:12px;bottom:12px;background:rgba(22,32,26,.9);color:var(--ink);font:600 .8125rem/1.2 var(--head);text-transform:uppercase;letter-spacing:.05em;padding:6px 12px;border-radius:999px}
+@media (hover:hover) and (pointer:fine){.strip .ph:hover img{transform:scale(1.04)}}
+
+/* questions: a deep band holding raised cards */
+.qaband{background:var(--deep);margin-top:var(--sec);padding-block:var(--sec)}
+.qa{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s4);margin-top:var(--s6)}
+.qa > div{background:var(--raised);border-radius:var(--r-card);padding:var(--s5);box-shadow:var(--lv-raised)}
+.qa h3{font-size:1.25rem}
+.qa p{margin-top:10px;color:var(--muted);max-width:52ch}
 
 /* contact */
-.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px clamp(32px,5vw,80px);margin-top:48px;align-items:start}
-.ways{list-style:none;padding:0;display:grid;gap:24px}
+.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s6) var(--gut);margin-top:var(--s6);align-items:start}
+.ways{list-style:none;padding:0;display:grid;gap:var(--s4)}
 .ways span{display:block;font-size:.875rem;color:var(--muted)}
-.ways a,.ways .plain{font:600 1.75rem/1.1 var(--head);text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
-.ways a:hover{color:var(--orange-text)}
-.formbox{background:var(--deep);padding:clamp(24px,4vw,40px)}
+.ways a,.ways .plain{font:600 1.75rem/1.1 var(--head);text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 180ms ease}
+@media (hover:hover) and (pointer:fine){.ways a:hover{color:var(--orange-text)}}
+.townlist{list-style:none;padding:0;margin-top:var(--s3);display:flex;flex-wrap:wrap;gap:var(--s1)}
+.townlist li{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:var(--r-ctl);background:var(--raised);font:600 1.125rem/1 var(--head);text-transform:uppercase;letter-spacing:.03em}
+.townlist li.home{background:var(--orange);color:var(--on-orange)}
+.townlist .ico{width:16px;height:16px}
+.formbox{background:var(--raised);border-radius:var(--r-card);padding:clamp(24px,4vw,40px);box-shadow:var(--lv-float)}
 
 form{display:grid;grid-template-columns:1fr 1fr;gap:20px 16px}
 form[hidden]{display:none}
 .f{display:grid;gap:6px;min-width:0}
 .f.full{grid-column:1/-1}
 .f label{font-size:var(--t-small);font-weight:500}
-.f input,.f select,.f textarea{width:100%;min-height:50px;padding:12px 14px;border:2px solid #3d4f43;border-radius:0;background:#223128;color:var(--ink);font:inherit;font-size:1rem;caret-color:var(--orange-text);transition:border-color 160ms ease;appearance:none;-webkit-appearance:none}
+.f input,.f select,.f textarea{width:100%;min-height:50px;padding:12px 14px;border:2px solid #3d4f43;border-radius:var(--r-ctl);background:var(--bg);color:var(--ink);font:inherit;font-size:1rem;caret-color:var(--orange-text);transition:border-color 160ms ease,box-shadow 160ms ease;appearance:none;-webkit-appearance:none}
 .f textarea{min-height:120px;resize:vertical;line-height:1.5}
 .f input::placeholder,.f textarea::placeholder{color:#93a093}
-.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--orange)}
+@media (hover:hover) and (pointer:fine){.f input:hover,.f textarea:hover{border-color:#5b6e60}}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--orange-text);box-shadow:0 0 0 2px var(--orange-text)}
 .f [aria-invalid="true"]{border-color:var(--danger)}
+.f [aria-invalid="true"]:focus{border-color:var(--danger);box-shadow:0 0 0 1px var(--danger);outline:2px solid var(--danger);outline-offset:3px}
 .err{font-size:.8125rem;color:var(--danger)}
 .err:empty{display:none}
 .submit{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
 .thanks[hidden]{display:none}
 .thanks:focus{outline:none}
-.thanks h3{font-size:var(--t-h2)}
+.thanks h3{font:600 var(--t-h2)/1 var(--head);overflow-wrap:anywhere}
 .thanks p{margin-top:12px;max-width:46ch}
 .thanks .muted{font-size:var(--t-small);color:var(--muted)}
 .thanks .btn{margin-top:24px}
@@ -218,20 +358,7 @@ form[hidden]{display:none}
 .foot .name{grid-column:1/-1;font:600 clamp(2.5rem,1.4rem + 5vw,6rem)/.95 var(--head);text-transform:uppercase;color:var(--ink);letter-spacing:-.005em}
 .foot a{color:var(--muted)}
 .foot .right{text-align:right}
-.foot .right a{color:var(--ink);font-size:1rem}
-.foot .credit{grid-column:1/-1}
-
-/* footer mark: a 2 s logo build that plays once in view, muted; the still logo shows until it really plays and is the fallback */
-.gcd{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:14px;margin-top:12px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
-.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505}
-.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.gcd-mark video{opacity:0;transition:opacity 160ms ease}
-.gcd-mark.live video{opacity:1}
-.gcd-text{line-height:1.35}
-.gcd-text b{display:block;color:var(--ink);font-weight:500}
-.gcd:active{transform:scale(.98)}
-.gcd:focus-visible{outline:2px solid var(--orange-text);outline-offset:2px}
-@media (hover:hover) and (pointer:fine){.gcd:hover{background:#1e2b22}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
+.foot .right a{color:var(--ink);font-size:1rem;transition:color 180ms ease}
 
 /* phone bar */
 .bar{display:none}
@@ -242,6 +369,7 @@ form[hidden]{display:none}
   .js .rv.in{opacity:1;transform:none}
   .js .rv.d1{transition-delay:80ms}
   .js .rv.d2{transition-delay:160ms}
+  .js .rv.d3{transition-delay:240ms}
   .hero .rise{animation:rise 800ms var(--ease) both}
   .hero .rise.d1{animation-delay:90ms}
   .hero .rise.d2{animation-delay:180ms}
@@ -253,20 +381,51 @@ form[hidden]{display:none}
 
 /* tablet */
 @media (max-width:960px){
-  .hero-grid,.work,.signs,.how,.stormband .wrap,.after,.contact{grid-template-columns:minmax(0,1fr)}
-  .hero-pic{aspect-ratio:4/3}
-  .work figure{aspect-ratio:16/10}
-  .how figure{aspect-ratio:16/10}
+  .svc,.svc.flip,.signs,.how,.stormtop,.stormgrid,.after,.contact,.crew,.head2{grid-template-columns:minmax(0,1fr)}
+  .svc.flip .stack{order:0}
+  .svc .ph{aspect-ratio:16/10}
+  .svc .stack{max-width:640px}
+  .crew .stack{max-width:360px}
+  .trust{padding-top:var(--s4)}
+  .trust ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .how .stack{max-width:520px}
+  .how .ph{aspect-ratio:3/2}
+  .signs .stack{max-width:400px;justify-self:start}
+  .strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .strip > :nth-child(n){margin-top:0}
+  .strip > :nth-child(even){margin-top:var(--s6)}
   .band{clip-path:polygon(0 0,70% 0,76% var(--notch),82% 0,100% 0,100% 100%,0 100%)}
 }
 
+/* tablet: lighter label tint over the photo */
+@media (min-width:641px) and (max-width:1023px){.hero .label{color:var(--orange-soft)}}
+
 /* phone */
 @media (max-width:640px){
-  :root{--bar:calc(60px + env(safe-area-inset-bottom))}
-  .hero-pic{margin-inline:calc(var(--m) * -1);aspect-ratio:1/1}
+  :root{--bar:calc(60px + env(safe-area-inset-bottom));--head-h:68px;--r-photo:18px;--r-card:14px;--off:10px}
+  html{scroll-padding-bottom:calc(var(--bar) + 20px)}
+  .hero{min-height:calc(100svh - var(--head-h) - 110px - var(--bar))}
+  .hero::after{background:linear-gradient(180deg,rgba(22,32,26,.66) 0%,rgba(22,32,26,.74) 45%,rgba(22,32,26,.92) 100%)}
+  .hero .label{color:var(--orange-soft)}
+  .hero-pic img{object-position:70% 40%}
+  .trust ul{grid-template-columns:minmax(0,1fr);gap:14px;padding:var(--s4)}
   .cta .btn{flex:1 1 auto}
-  .jobs,.qa{grid-template-columns:minmax(0,1fr)}
-  .jobs li:last-child{padding:20px}
+  .facts{grid-template-columns:minmax(0,1fr);padding:var(--s4)}
+  .qa{grid-template-columns:minmax(0,1fr)}
+  .qa > div{padding:var(--s4)}
+  .pin{max-width:86%;padding:var(--s2) var(--s3)}
+  .signs .pin{left:var(--s3)}
+  .how .pin{left:var(--s3)}
+  .after .pin{right:var(--s3)}
+  .stormpics .p1{width:100%}
+  .stormpics .p2{width:58%;border-width:4px}
+  .stormfacts{padding:var(--s4)}
+  .strip{gap:var(--s2)}
+  .strip .pair{grid-column:1/-1;order:3;grid-template-columns:1fr 1fr;gap:var(--s2)}
+  .strip > :nth-child(n){margin-top:0}
+  .strip > :nth-child(3){margin-top:var(--s5)}
+  .strip > :nth-child(4){order:4;grid-column:1/-1;aspect-ratio:16/10}
+  .strip figcaption{font-size:.75rem;padding:5px 10px}
   form{grid-template-columns:minmax(0,1fr)}
   .submit .btn{width:100%}
   .foot .wrap{grid-template-columns:minmax(0,1fr)}
@@ -277,18 +436,41 @@ form[hidden]{display:none}
   .bar a:active{opacity:.85}
   .bar svg{width:17px;height:17px}
 }
+/* small, short phones: slightly smaller hero type */
+@media (max-width:359px) and (max-height:700px){
+  .hero .label{margin-bottom:10px}
+  .hero h1{font-size:2.125rem}
+  .hero .lead{font-size:1rem;line-height:1.5}
+  .cta{gap:10px}
+  .cta .btn{min-height:48px}
+}
 @media (max-width:360px){
   .storm .wrap{font-size:.8125rem}
   .mark b{font-size:1.375rem}
 }
+/* phones: the hero buttons sit just above the phone bar on the first screen */
+@media (max-width:640px){
+  .hero{min-height:calc(100svh - var(--pin-bar,calc(var(--bar) + 2px)) - var(--pin-top,181px))}
+  .hero .wrap{padding-bottom:clamp(14px,14px + (100svh - 640px) * 0.05,24px)}
+  .hero .wrap{padding-top:clamp(16px,16px + (100svh - 640px) * 0.16,48px)}
+  .hero .lead{margin-top:clamp(10px,10px + (100svh - 640px) * 0.07,24px)}
+  .cta{margin-top:clamp(12px,12px + (100svh - 640px) * 0.09,30px)}
+}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></symbol>
+  <symbol id="i-text" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0114 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18"/><path d="M9 8h6M9 12h6M9 16h3"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L5 14h6l-1 8 8-12h-6z"/></symbol>
+</svg>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="sample" role="note">Sample design by <a href="https://granitecitydigital.me/">Granite City Digital</a>. The business name, phone number and details are made up.</div>
+<aside class="sample" aria-label="About this sample">Sample design by <a href="https://granitecitydigital.me/">Granite City Digital</a>. The business name, phone number and details are made up.</aside>
 
-<div class="storm"><div class="wrap"><span>Tree down?</span> <span>Call or text <a class="num" href="tel:+13365550162">336 555 0162</a></span></div></div>
+<div class="storm"><div class="wrap"><span>Tree down?</span> <span>Call <a class="num" href="tel:+14175550162">417 555 0162</a></span></div></div>
 
 <header class="top">
   <div class="wrap">
@@ -299,12 +481,15 @@ form[hidden]{display:none}
     <nav aria-label="Main">
       <ul class="nav">
         <li><a href="#work">What we do</a></li>
-        <li><a href="#how">Call to cleanup</a></li>
+        <li><a href="#how">How a job goes</a></li>
         <li><a href="#storm">Storm damage</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <a class="btn" href="tel:+13365550162"><span class="long num">Call 336 555 0162</span><span class="short">Call</span></a>
+    <div class="acts">
+      <a class="btn line est" href="#contact">Free estimate</a>
+      <a class="btn" href="tel:+14175550162"><span class="long num">Call 417 555 0162</span><span class="short">Call</span></a>
+    </div>
   </div>
 </header>
 
@@ -313,49 +498,115 @@ form[hidden]{display:none}
 </div>
 
 <main id="main">
-  <section class="wrap hero" id="top" data-zone="crown" aria-labelledby="hero-h">
-    <div class="hero-grid">
-      <div>
-        <h1 class="rise" id="hero-h">Careful tree work.</h1>
-        <p class="lead rise d1">High Limb Tree Service takes down, trims and cleans up trees for homes in and around Dobson, NC. We look first, cut safely and rake up before we go.</p>
-        <div class="cta rise d2">
-          <a class="btn" href="tel:+13365550162">Call <span class="num">336 555 0162</span></a>
-          <a class="btn line" href="#contact">Tell us about a tree</a>
-        </div>
-      </div>
-      <div class="rise d2">
-        <figure class="hero-pic">
-          <img src="climber.jpg" width="1350" height="900" fetchpriority="high" alt="A roped climber with a saw working high in the crown of a tall bare tree, fresh cuts showing pale on the limbs, under a gray overcast sky">
-        </figure>
-        <p class="cap">Roped in high in the crown, cutting the limbs back one at a time.</p>
+  <section class="hero" id="top" data-zone="crown" aria-labelledby="hero-h">
+    <div class="hero-pic">
+      <img src="hero-climber-1600.webp" srcset="hero-climber-800.webp 800w, hero-climber-1600.webp 1600w" sizes="(max-width: 640px) 1180px, (max-width: 1100px) 1340px, 100vw" width="1600" height="900" fetchpriority="high" alt="A roped climber working high in the crown of a tall bare tree, fresh cuts showing pale on the limbs, under a gray overcast sky">
+    </div>
+    <div class="wrap">
+      <p class="label rise">Tree service in Springfield, MO</p>
+      <h1 class="rise" id="hero-h">Careful tree work.</h1>
+      <p class="lead rise d1">High Limb Tree Service takes down, trims and cleans up trees for homes in and around Springfield, MO. We look first, cut safely and rake up before we go.</p>
+      <div class="cta rise d2">
+        <a class="btn" href="tel:+14175550162"><svg class="ico" aria-hidden="true" style="width:18px;height:18px"><use href="#i-phone"/></svg>Call <span class="num">417 555 0162</span></a>
+        <a class="btn line" href="#contact">Tell us about a tree</a>
       </div>
     </div>
+  </section>
+<script>
+/* phones: the hero fills the screen down to the phone bar, so its buttons sit just above the bar.
+   When a short screen cannot hold the hero text and a button above the bar, that button starts below the bar instead of being cut by it. */
+(function(){
+  var d=document,root=d.documentElement,hero=d.querySelector('.hero'),acts=hero&&hero.querySelector('.cta'),
+      mq=window.matchMedia&&matchMedia('(max-width:640px)'),probe=d.createElement('div'),raf=0;
+  if(!acts||!mq)return;
+  probe.style.cssText='position:absolute;top:0;left:0;width:1px;height:100vh;height:100svh;visibility:hidden;pointer-events:none';
+  function y(el){for(var t=0;el&&el!==hero;el=el.offsetParent)t+=el.offsetTop;return t}
+  function fit(){
+    raf=0;
+    var btns=acts.children,bar=d.querySelector('.bar'),i,j,b,t,lim,push,line;
+    for(i=0;i<btns.length;i++)btns[i].style.marginTop='';
+    if(!mq.matches){root.style.removeProperty('--pin-top');root.style.removeProperty('--pin-bar');return}
+    var top=hero.getBoundingClientRect().top+window.pageYOffset;
+    root.style.setProperty('--pin-top',top+'px');
+    if(!bar||!bar.offsetHeight||!d.body)return;
+    root.style.setProperty('--pin-bar',bar.offsetHeight+'px');
+    d.body.appendChild(probe);lim=probe.offsetHeight-bar.offsetHeight-top;d.body.removeChild(probe);
+    for(i=0;i<btns.length;i++){
+      b=btns[i];if(!b.offsetHeight)continue;t=y(b);
+      if(t+b.offsetHeight<=lim-1)continue;
+      if(t<lim+1){
+        line=[];for(j=i;j<btns.length;j++)if(btns[j].offsetHeight&&y(btns[j])===t)line.push(btns[j]);
+        push=Math.ceil(lim-t)+2;
+        for(j=0;j<line.length;j++)line[j].style.marginTop=parseFloat(getComputedStyle(line[j]).marginTop)+push+'px';
+      }
+      break;
+    }
+  }
+  function later(){if(!raf)raf=requestAnimationFrame(fit)}
+  fit();
+  d.addEventListener('DOMContentLoaded',fit);
+  addEventListener('load',fit);
+  addEventListener('resize',later);
+  if(d.fonts&&d.fonts.ready)d.fonts.ready.then(fit);
+  if(mq.addEventListener)mq.addEventListener('change',fit);else if(mq.addListener)mq.addListener(fit);
+}());
+</script>
+
+  <section class="trust wrap" aria-label="Good to know">
+    <ul>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-list"/></svg><div><b>Free estimate</b><span>We walk the tree with you.</span></div></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><div><b>Call</b><span><a class="num" href="tel:+14175550162">417 555 0162</a></span></div></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><div><b>Springfield and nearby</b><span>Greene and Christian County towns.</span></div></li>
+      <li><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg><div><b>Storm cleanup</b><span>Trees down after wind or ice.</span></div></li>
+    </ul>
   </section>
 
   <section class="band" id="work" data-zone="crown" aria-labelledby="work-h">
-    <div class="wrap work">
-      <figure class="rv"><img src="crown.jpg" width="1200" height="686" loading="lazy" decoding="async" alt="Looking up into the dark spreading limbs of an old oak, green leaves lit by the sun"></figure>
-      <div>
-        <h2 class="rv" id="work-h">What we do</h2>
-        <p class="intro rv d1">From the top of the crown down to the last rake of the yard.</p>
-        <ul class="jobs">
-          <li class="rv"><h3>Tree removal</h3><p>Dead, dying or leaning trees taken down. Close to the house, they come down in pieces.</p></li>
-          <li class="rv d1"><h3>Trimming</h3><p>Limbs lifted off the roof, back from the driveway and up out of the way of the mower.</p></li>
-          <li class="rv"><h3>Dead wood</h3><p>Dead limbs cut out of the crown before they come down on their own.</p></li>
-          <li class="rv d1"><h3>Storm cleanup</h3><p>Trees and big limbs down after wind, ice or a heavy rain.</p></li>
-          <li class="rv"><h3>Saving the tree</h3><p>Not every rough looking tree has to come down. If a good trim will do the job, we will tell you so.</p></li>
-        </ul>
+    <img class="band-bg" src="hero-climber-800.webp" width="800" height="450" loading="lazy" decoding="async" alt="">
+    <div class="wrap">
+      <div class="head2">
+        <div>
+          <p class="label rv">Services</p>
+          <h2 class="rv" id="work-h">What we do</h2>
+        </div>
+        <p class="intro rv d1">From the top of the crown to the last pass of the rake. Here is what each kind of job looks like.</p>
       </div>
-    </div>
+
+      <article class="svc" aria-labelledby="svc-remove">
+        <div class="stack rv"><figure class="ph"><img src="two-ropes-800.webp" srcset="two-ropes-800.webp 800w, two-ropes-1200.webp 1200w" sizes="(max-width:960px) 100vw, 520px" width="800" height="600" loading="lazy" decoding="async" alt="A climber in a helmet and spikes tied in on two ropes beside a tall pine trunk" style="object-position:40% 50%"></figure></div>
+        <div>
+          <h3 class="rv" id="svc-remove">Tree removal</h3>
+          <p class="lede rv d1">Dead, dying or leaning trees taken down.</p>
+          <dl class="facts rv d2">
+            <div><dt>When you need it</dt><dd>The tree is dead or dying, leans more than it did last year, or stands where it could fall on the house.</dd></div>
+            <div><dt>What is included</dt><dd>Taking the tree down, chipping the brush, cutting the wood to rounds and raking the yard.</dd></div>
+            <div class="wide"><dt>How it goes</dt><dd>We plan every cut before the first one. The wood stays stacked where you want it, or goes with us.</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="svc flip" aria-labelledby="svc-trim">
+        <div class="stack left rv"><figure class="ph"><img src="oak-crown-800.webp" srcset="oak-crown-800.webp 600w, oak-crown-1200.webp 1200w" sizes="(max-width:960px) 100vw, 520px" width="600" height="400" loading="lazy" decoding="async" alt="Looking up into the dark spreading limbs of an old oak, green leaves lit by the sun" style="object-position:55% 40%"></figure></div>
+        <div>
+          <h3 class="rv" id="svc-trim">Trimming and dead wood</h3>
+          <p class="lede rv d1">Limbs lifted off the roof, back from the driveway and up out of the way of the mower. Dead limbs cut out of the crown before they come down on their own.</p>
+          <dl class="facts rv d2">
+            <div><dt>When you need it</dt><dd>Limbs rub the roof or hang over the house, crowd the driveway or catch the mower. Dead branches show up top.</dd></div>
+            <div><dt>What is included</dt><dd>Cutting limbs back, taking the dead wood out of the crown, chipping what comes down and raking up.</dd></div>
+            <div class="local"><dt>Trees around here</dt><dd>The Ozarks forest is mostly oak and hickory.</dd></div>
+          </dl>
+        </div>
+      </article>
+
+</div>
   </section>
 
-  <section class="wrap sec" id="signs" data-zone="trunk" aria-labelledby="signs-h">
+  <section class="wrap sec ringed" id="signs" data-zone="trunk" aria-labelledby="signs-h">
     <div class="signs">
       <div>
+        <p class="label rv">Warning signs</p>
         <h2 class="rv" id="signs-h">When to call about a tree</h2>
-        <p class="intro rv d1">Most trees give a warning before they drop a limb. These are the ones worth a phone call.</p>
-      </div>
-      <div>
+        <p class="intro rv d1">A tree often shows trouble before it drops a limb. These signs are worth a phone call.</p>
         <ul>
           <li class="rv">Dead branches up top, or bare limbs in the middle of summer</li>
           <li class="rv">A lean that was not there last year, or soil lifting on one side</li>
@@ -364,62 +615,125 @@ form[hidden]{display:none}
           <li class="rv">Limbs rubbing the roof or hanging over the house</li>
           <li class="rv">A tree that dropped big limbs in the last storm</li>
         </ul>
-        <p class="note rv">Seeing one of these does not mean the tree has to go. It means the tree needs a look.</p>
+      </div>
+      <div class="stack rv d1">
+        <figure class="ph"><img src="look-up-800.webp" width="600" height="900" loading="lazy" decoding="async" alt="A worker in safety glasses holding a saw at his side and looking up into the tops of tall pines"></figure>
+        <p class="pin"><b>Good to know</b>Seeing one of these does not mean the tree has to go. It means the tree needs a look.</p>
       </div>
     </div>
   </section>
 
+  <section class="crewband" id="crew" data-zone="trunk" aria-labelledby="crew-h">
+    <div class="wrap crew">
+      <div class="crewtext">
+        <p class="label rv">Before any saw starts</p>
+        <h2 class="rv" id="crew-h">Sometimes a trim will do</h2>
+        <p class="say rv d1">Not every rough looking tree has to come down. If a good trim will do the job, we will tell you so.</p>
+      </div>
+      <div class="stack left rv d1"><figure class="ph"><img src="climber-saw-800.webp" width="600" height="898" loading="lazy" decoding="async" alt="A climber in a ball cap and harness working with a saw between the limbs of a tall tree"></figure></div>
+    </div>
+  </section>
+
   <section class="wrap sec" id="how" data-zone="trunk" aria-labelledby="how-h">
+    <p class="label rv">How a job goes</p>
     <h2 class="rv" id="how-h">From the call to the cleanup</h2>
     <div class="how">
-      <figure class="rv"><img src="ropes.jpg" width="1200" height="900" loading="lazy" decoding="async" alt="A climber in a helmet and spikes tied in on two ropes beside a tall pine trunk"></figure>
       <ol class="steps">
         <li class="rv"><h3>You call or send the form</h3><p>Tell us where the tree is and what you are seeing. A photo helps.</p></li>
         <li class="rv d1"><h3>We walk the tree with you</h3><p>Trunk, crown and everything it could land on all get a look. You point out what has to stay safe.</p></li>
         <li class="rv d2"><h3>We plan every cut</h3><p>Where each piece comes down, and how it gets lowered on ropes when there is no room to drop it.</p></li>
-        <li class="rv"><h3>We cut, lower and clean up</h3><p>The job is not finished until the yard is.</p></li>
+        <li class="rv d3"><h3>We cut, lower and clean up</h3><p>The job is not finished until the yard is.</p></li>
       </ol>
+      <div class="stack rv d1">
+        <figure class="ph"><img src="chipper-brush-800.webp" width="600" height="799" loading="lazy" decoding="async" alt="A worker dragging a leafy limb toward an orange chipper parked on a quiet street"></figure>
+        <p class="pin"><b>A photo helps</b>Text one to <a class="num" href="sms:+14175550162" aria-label="Text 417 555 0162">417 555 0162</a> before we come out.</p>
+      </div>
     </div>
   </section>
 
   <section class="stormband" id="storm" data-zone="trunk" aria-labelledby="storm-h">
     <div class="wrap">
-      <h2 class="rv" id="storm-h">Tree down after a storm?</h2>
-      <div class="rv d1">
-        <p>Stay back from it, and from any wire it touched. If a power line is down, call the power company first. Then call us and we will talk through what comes next.</p>
-        <a class="big" href="tel:+13365550162">Call or text <span class="num">&nbsp;336 555 0162</span></a>
+      <div class="stormtop">
+        <div>
+          <p class="label rv">Storm damage</p>
+          <h2 class="rv" id="storm-h">Tree down after a storm?</h2>
+        </div>
+        <div class="rv d1">
+          <p>Stay back from it, and from any wire it touched. If a power line is down, call the power company first. Then call us and we will talk through what comes next.</p>
+          <a class="big" href="tel:+14175550162">Call <span class="num">&nbsp;417 555 0162</span></a>
+        </div>
+      </div>
+      <div class="stormgrid">
+        <div class="stormpics">
+          <figure class="ph p1 rv"><img src="storm-uprooted-800.webp" width="800" height="534" loading="lazy" decoding="async" alt="A tree pulled up by its roots lying across a lawn and the edge of a street after a storm"></figure>
+          <figure class="ph p2 rv d1"><img src="storm-aerial-800.webp" width="600" height="338" loading="lazy" decoding="async" alt="A view from above of trees thrown down by wind across a green country field"></figure>
+        </div>
+        <dl class="stormfacts rv d1">
+          <div><dt>When you need it</dt><dd>A tree or a big limb is down on the yard, the drive, a fence or the roof after wind, ice or heavy rain.</dd></div>
+          <div><dt>What is included</dt><dd>Cutting it up, chipping the brush, then stacking the wood where you want it or hauling it away.</dd></div>
+          <div><dt>How it goes</dt><dd>Power company first if a line is down. Then you call us, we talk it through and come look.</dd></div>
+          <div><dt>Springfield weather</dt><dd>Wind, ice and heavy rain all happen here. Ice builds up on limbs until they break.</dd></div>
+        </dl>
       </div>
     </div>
   </section>
 
   <section class="wrap sec" id="after" data-zone="ground" aria-labelledby="after-h">
     <div class="after">
-      <figure class="rv"><img src="rounds.jpg" width="1100" height="734" loading="lazy" decoding="async" alt="Short cut logs piled by a wooden fence at the edge of a gravel drive, with fall leaves on the grass"></figure>
+      <div class="stack rv">
+        <figure class="ph"><img src="rounds-fence-800.webp" srcset="rounds-fence-800.webp 800w, rounds-fence-1100.webp 1100w" sizes="(max-width:960px) 100vw, 680px" width="800" height="534" loading="lazy" decoding="async" alt="Short cut logs piled by a wooden fence at the edge of a gravel drive, with fall leaves on the grass"></figure>
+        <p class="pin"><b>Keep the wood?</b>Want it for the fire pit? Say so when you call.</p>
+      </div>
       <div>
+        <p class="label rv">Cleanup</p>
         <h2 class="rv" id="after-h">After the last cut</h2>
         <p class="rv d1">Brush goes through the chipper. The wood is cut to rounds and stacked where you want it, or hauled away. Then we rake.</p>
-        <p class="rv d2">Want the wood for the fire pit? Say so when you call.</p>
       </div>
     </div>
   </section>
 
-  <section class="wrap sec" id="questions" data-zone="ground" aria-labelledby="qa-h">
-    <h2 class="rv" id="qa-h">Questions people ask</h2>
-    <div class="qa">
-      <div class="rv"><h3>What should I tell you when I call?</h3><p>Where the tree is, about how tall, what it is close to and what worries you about it. Text a photo too, if you have one.</p></div>
-      <div class="rv d1"><h3>Does the whole tree have to come down?</h3><p>Not always. Taking out dead wood or a good trim can be enough. We look before we say.</p></div>
-      <div class="rv"><h3>The tree is right next to the house. Now what?</h3><p>That is the kind of job we plan most carefully. Pieces come down on ropes instead of falling, one at a time.</p></div>
-      <div class="rv d1"><h3>What happens to the wood?</h3><p>We can cut it to rounds and leave it stacked for you, or take it with us. Tell us which.</p></div>
+  <section class="wrap sec" id="gallery" data-zone="ground" aria-labelledby="gal-h">
+    <p class="label rv">On the job</p>
+    <h2 class="rv" id="gal-h">Up the tree and back down</h2>
+    <div class="strip">
+      <figure class="ph rv"><img src="saw-carry-800.webp" width="600" height="900" loading="lazy" decoding="async" alt="A worker in jeans and gloves carrying a saw down a wooded path"><figcaption>Saw to the job</figcaption></figure>
+      <div class="pair">
+        <figure class="ph rv d1"><img src="cut-face-800.webp" width="600" height="400" loading="lazy" decoding="async" alt="The fresh cut face of a log showing its rings, with sawdust around it"></figure>
+        <figure class="ph rv d2"><img src="fresh-stump-800.webp" width="600" height="400" loading="lazy" decoding="async" alt="A fresh stump ringed in sawdust"><figcaption>Low stump</figcaption></figure>
+      </div>
+      <figure class="ph rv d2"><img src="cart-logs-800.webp" width="600" height="900" loading="lazy" decoding="async" alt="A garden cart heaped with cut rounds on a mowed lawn" style="object-position:50% 70%"><figcaption>Rounds</figcaption></figure>
+      <figure class="ph rv d3"><img src="log-pile-800.webp" width="600" height="900" loading="lazy" decoding="async" alt="A row of fresh cut rounds lying on the grass" style="object-position:50% 70%"></figure>
     </div>
   </section>
 
-  <section class="wrap sec" id="contact" data-zone="ground" aria-labelledby="contact-h">
-    <h2 class="rv" id="contact-h">Which tree is it?</h2>
+  <section class="qaband" id="questions" data-zone="ground" aria-labelledby="qa-h">
+    <div class="wrap">
+      <p class="label rv">Questions</p>
+      <h2 class="rv" id="qa-h">Questions people ask</h2>
+      <div class="qa">
+        <div class="rv"><h3>What should I tell you when I call?</h3><p>Where the tree is, about how tall, what it is close to and what worries you about it. Text a photo too, if you have one.</p></div>
+        <div class="rv d1"><h3>Does the whole tree have to come down?</h3><p>Not always. We look before we say.</p></div>
+        <div class="rv"><h3>The tree is right next to the house. Now what?</h3><p>That is the kind of job we plan most carefully. We lower it piece by piece on ropes instead of letting it fall.</p></div>
+        <div class="rv d1"><h3>What happens to the wood?</h3><p>We can cut it to rounds and leave it stacked for you, or take it with us. Tell us which.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec ringed lt" id="contact" data-zone="ground" aria-labelledby="contact-h">
+    <p class="label rv">Contact</p>
+    <h2 class="rv" id="contact-h">Tell us about the tree</h2>
     <p class="intro rv d1">Leave a name, a phone number and where the tree stands. We call back to talk it over.</p>
     <div class="contact">
       <ul class="ways rv">
-        <li><span>Call or text</span><a class="num" href="tel:+13365550162">336 555 0162</a></li>
-        <li><span>Based in</span><p class="plain">Dobson, NC</p></li>
+        <li><span>Call</span><a class="num" href="tel:+14175550162" aria-label="Call 417 555 0162">417 555 0162</a></li>
+        <li><span>Text</span><a class="num" href="sms:+14175550162" aria-label="Text 417 555 0162">417 555 0162</a></li>
+        <li><span>Based in</span><p class="plain">Springfield, MO</p></li>
+        <li><span>Towns we work in</span>
+          <ul class="townlist">
+            <li class="home"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Springfield</li>
+            <li>Battlefield</li><li>Willard</li><li>Strafford</li><li>Republic</li><li>Nixa</li><li>Ozark</li>
+          </ul>
+        </li>
       </ul>
 
       <div class="formbox rv d1">
@@ -451,7 +765,7 @@ form[hidden]{display:none}
         <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
           <h3 id="t-title">Got it. Thanks.</h3>
           <p id="t-body">We will call you about the tree soon.</p>
-          <p class="muted">This is a sample site, so nothing was actually sent.</p>
+          <p class="muted">This is a sample site, so nothing was sent.</p>
           <button class="btn line" type="button" id="t-again">Send another</button>
         </div>
       </div>
@@ -462,27 +776,13 @@ form[hidden]{display:none}
 <footer class="foot">
   <div class="wrap">
     <p class="name">High Limb</p>
-    <p>High Limb Tree Service &middot; Dobson, NC</p>
-    <p class="right"><a class="num" href="tel:+13365550162">336 555 0162</a></p>
-    <p class="credit">Photos by Dmytro Glazunov, İdil Ceren Çelikler, Zak Bentley and Leila Abboud on Pexels, shown as examples.</p>
-    <a class="gcd" href="https://granitecitydigital.me/">
-      <span class="gcd-mark" id="gcd-mark">
-        <picture>
-          <source srcset="../../samples/mark/gcd-mark-still.webp" type="image/webp">
-          <img src="../../samples/mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
-        </picture>
-        <video muted playsinline preload="none" poster="../../samples/mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
-          <source src="../../samples/mark/gcd-mark-2s.webm" type="video/webm">
-          <source src="../../samples/mark/gcd-mark-2s.mp4" type="video/mp4">
-        </video>
-      </span>
-      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
-    </a>
+    <p>High Limb Tree Service &middot; Springfield, MO</p>
+    <p class="right"><a class="num" href="tel:+14175550162">417 555 0162</a></p>
   </div>
 </footer>
 
 <nav class="bar" aria-label="Quick contact">
-  <a href="tel:+13365550162"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>
+  <a href="tel:+14175550162"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>
   <a href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></svg>Send a request</a>
 </nav>
 
@@ -514,6 +814,10 @@ form[hidden]{display:none}
     paint();
   }
 
+  /* phones: keep the field with focus clear of the call bar (a textarea only scrolls to its caret) */
+  var qbar=document.querySelector('.bar');
+  if(qbar)addEventListener('focusin',function(e){var el=e.target;if(qbar.contains(el)||!qbar.offsetHeight)return;function look(){var b=qbar.getBoundingClientRect().top,r=el.getBoundingClientRect();if(r.bottom>b&&r.top<innerHeight)el.scrollIntoView({block:'nearest'})}requestAnimationFrame(look);/* Safari brings the field into view after this, so look once more when that has settled */setTimeout(function(){if(document.activeElement===el)look()},500)});
+
   /* quote form (runs only when the form is on the page) */
   var f=document.getElementById('qform');
   if(!f)return;
@@ -526,7 +830,7 @@ form[hidden]{display:none}
     run('q-name',name.length<2?'Please tell us your name.':'');
     run('q-phone',phone.length<10?'Please enter a 10 digit phone number.':'');
     run('q-town',!F['town'].value.trim()?'Please tell us your town.':'');
-    run('q-msg',msg.length<5?'A few words about the tree helps us call back with the right answer.':'');
+    run('q-msg',msg.length<5?'A few words about the tree help us call back with the right answer.':'');
     if(first)document.getElementById(first).focus();
     return ok;
   }
@@ -544,41 +848,6 @@ form[hidden]{display:none}
     f.hidden=true;thanks.hidden=false;thanks.focus();
   });
   document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
-})();
-</script>
-<script>
-/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
-(function(){
-  var box=document.getElementById('gcd-mark');
-  if(!box)return;
-  var v=box.querySelector('video');
-  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  var timer,failed=false;
-  v.muted=true;v.defaultMuted=true;
-  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
-  var srcs=v.querySelectorAll('source');
-  srcs[srcs.length-1].addEventListener('error',still);
-  v.addEventListener('error',still);
-  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
-  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
-  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
-  var io=new IntersectionObserver(function(es){
-    if(!es[0].isIntersecting)return;
-    io.disconnect();
-    timer=setTimeout(still,4000);
-    v.muted=true;v.defaultMuted=true;
-    var p=v.play();
-    if(p&&p.catch)p.catch(still);
-  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
-  io.observe(box);
-  /* fetch the small file a little before it is needed so it starts without a pause */
-  var near=new IntersectionObserver(function(es){
-    if(!es[0].isIntersecting)return;
-    near.disconnect();
-    v.preload='auto';
-  },{rootMargin:'0px 0px 400px 0px'});
-  near.observe(box);
-  addEventListener('beforeprint',still);
 })();
 </script>
 </body>
