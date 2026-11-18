@@ -14,3 +14,28 @@ steps.jpg
   Photographer: Christian Buehner (https://www.pexels.com/@christian-buehner-336302433/)
   License: Pexels License
   Source: https://www.pexels.com/photo/27665740/
+
+detail-wash.jpg
+  Photographer: Karolina Grabowska, Kaboompics (https://www.pexels.com/@karola-g/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/4870702/
+
+detail-mirror.jpg
+  Photographer: Karolina Grabowska, Kaboompics (https://www.pexels.com/@karola-g/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/4870737/
+
+detail-seat.jpg
+  Photographer: Khunkorn Laowisit (https://www.pexels.com/@khunkorn-laowisit-1359149/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/5233285/
+
+tires-stack.jpg
+  Photographer: Pexels user wal_ 172619 (https://www.pexels.com/@wal_-172619-2156618639/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/36353556/
+
+tires-tread.jpg
+  Photographer: Ulrick Trappschuh (https://www.pexels.com/@ulrick-t/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/15501907/

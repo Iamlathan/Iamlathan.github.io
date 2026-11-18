@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#f8f2e7">
 <meta property="og:title" content="Barney&#x27;s Cafe | Mount Airy, NC">
 <meta property="og:description" content="Barney&#x27;s Cafe is a diner at 206 N Main St in Mount Airy, NC, serving southern comfort food, burgers and desserts. Dine in or pick up.">
-<meta property="og:image" content="https://granitecitydigital.me/samples/barneys-cafe/hero.jpg">
+<meta property="og:image" content="https://granitecitydigital.me/samples/barneys-cafe/red-booth.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
@@ -30,7 +30,7 @@
     "addressRegion": "NC",
     "addressCountry": "US"
   },
-  "image": "hero.jpg",
+  "image": "red-booth.jpg",
   "servesCuisine": [
     "Southern",
     "Burgers",
@@ -97,7 +97,6 @@
 *,*::before,*::after{box-sizing:border-box}
 *{margin:0}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
-@media (max-width:760px){html{scroll-padding-bottom:96px}} /* keyboard focus never lands under the phone bar */
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;height:auto}
@@ -326,7 +325,7 @@ main:has(> .band:last-child) + .foot{margin-top:0}
 
 /* phone */
 @media (max-width:640px){
-  :root{--bar:calc(60px + env(safe-area-inset-bottom));--r-photo:16px;--r-card:14px;--off:10px}
+  :root{--r-photo:16px;--r-card:14px;--off:10px}
   .hero-pic .photo{aspect-ratio:4/3}
   .hero-pic img{object-position:48% 40%}
   .float{position:relative;left:auto;bottom:auto;margin:calc(var(--s-7) * -1) var(--s-4) 0;max-width:none}
@@ -343,7 +342,7 @@ main:has(> .band:last-child) + .foot{margin-top:0}
   .submit .btn{width:100%}
   .foot .wrap{grid-template-columns:minmax(0,1fr)}
   .foot .right{text-align:left}
-  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+  .bar{display:none;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
   .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:60px;font-weight:500;font-size:1rem;text-decoration:none;color:var(--ink)}
   .bar a:first-child{background:var(--accent);color:var(--on-accent)}
   .bar a:active{opacity:.85}
@@ -369,7 +368,7 @@ h1,h2{letter-spacing:-.015em;line-height:1.06}
 .hero-b{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7) var(--s-8);align-items:center}
 .hero-b .hero-pic{order:-1;margin:0 var(--off) var(--s-7) 0}
 .hero-b .hero-pic .photo{aspect-ratio:4/5}
-.hero-b .hero-pic img{object-position:30% 50%}
+.hero-b .hero-pic img{object-position:72% 50%}
 .hero-b h1{font-size:clamp(2.375rem,1.2rem + 2.9vw,3.25rem)}
 .hero h1 .soft{color:var(--accent)}
 .hero-b .words p{margin-top:var(--s-5);color:var(--muted);font-size:var(--t-lead);max-width:42ch}
@@ -382,29 +381,77 @@ h1,h2{letter-spacing:-.015em;line-height:1.06}
 .ticket ul{list-style:none;padding:0;margin-top:var(--s-3)}
 .ticket li{display:flex;justify-content:space-between;gap:var(--s-4);padding:var(--s-2) 0;border-top:1px dashed var(--line);font-size:.9375rem}
 
-/* what we serve: the heading centered over one menu page, the burger photo filling its right half */
+/* what we serve: the heading centered over the menu, one large dish beside two smaller ones */
 .menu-head{text-align:center;margin-bottom:var(--s-7)}
 .menu-head h2{font-size:clamp(2.25rem,1.5rem + 2.6vw,3.75rem)}
-.menu-head .lede{margin-top:var(--s-3);color:var(--muted);font-size:var(--t-lead)}
-.menu-page{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin-right:var(--off);margin-bottom:var(--off)}
-.menu-page::before{border-radius:var(--r-card)}
-.menu{padding:clamp(28px,4vw,56px);background:var(--surface);border-radius:var(--r-card) 0 0 var(--r-card);box-shadow:var(--sh-1)}
-.menu ul{list-style:none;padding:0}
-.menu li{padding:var(--s-4) 0;border-top:1px dashed var(--line)}
-.menu li:last-child{border-bottom:1px dashed var(--line)}
-.menu h3{font-family:var(--font-display);font-weight:400;font-size:clamp(1.5rem,1.2rem + 1.1vw,2.125rem);letter-spacing:-.015em;line-height:1.15}
-.menu .order{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-3) var(--s-5);margin-top:var(--s-6)}
-.menu .order p{font-size:var(--t-lead)}
-.menu .order b{font-weight:600}
-.menu-pic{position:relative;overflow:hidden;border-radius:0 var(--r-card) var(--r-card) 0;background:var(--tint);box-shadow:var(--sh-1);min-height:320px}
-.menu-pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.menu-head .lede{margin:var(--s-3) auto 0;color:var(--muted);font-size:var(--t-lead);max-width:44ch}
+.dishes{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-7);align-items:start}
+.dish-side{display:grid;gap:var(--s-7)}
+.dish .layer{margin-right:var(--off);margin-bottom:var(--off)}
+.dish .photo{aspect-ratio:3/2}
+.dish.big .photo{aspect-ratio:5/4}
+.dish.big .photo img{object-position:72% 50%}
+.dish h3{margin-top:var(--s-5);font-family:var(--font-display);font-weight:400;font-size:clamp(1.5rem,1.2rem + 1.1vw,2.125rem);letter-spacing:-.015em;line-height:1.15}
+.dish.big h3{font-size:clamp(1.75rem,1.3rem + 1.6vw,2.625rem)}
+.dish p{margin-top:var(--s-2);color:var(--muted);max-width:40ch}
+.order-bar{margin-top:var(--s-8);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--s-4) var(--s-5);padding:var(--s-5) var(--s-6);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-2)}
+.order-bar p{font-size:var(--t-lead)}
+.order-bar b{font-weight:600}
 
-/* visit: big stools photo, the ways on the right */
-.visit{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7) var(--s-8);align-items:center}
-.visit .layer{margin-right:var(--off);margin-bottom:var(--off)}
-.visit .photo{aspect-ratio:4/3}
-.visit h2{font-size:var(--t-h2)}
-.visit .lede{margin:var(--s-3) 0 var(--s-6);color:var(--muted);font-size:var(--t-lead);max-width:36ch}
+/* daily specials: the words on the left, a guest check laid over the booth photo on the right */
+.specials{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7) var(--s-8);align-items:center}
+.specials h2{font-size:var(--t-h2)}
+.specials .lede{margin-top:var(--s-4);color:var(--muted);font-size:var(--t-lead);max-width:38ch}
+.specials .cta{justify-content:flex-start;margin-top:var(--s-6)}
+.check-pic{position:relative;margin:0 var(--off) var(--s-8) 0}
+.check-pic .photo{aspect-ratio:4/3}
+.check-pic .photo img{object-position:50% 45%}
+.guest{position:absolute;z-index:2;left:calc(var(--s-7) * -1);bottom:calc(var(--s-8) * -1);width:min(300px,calc(100% - 32px));padding:var(--s-5) var(--s-5) var(--s-4);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3);transform:rotate(1.5deg)}
+.guest .lab{font-size:.8125rem;color:var(--muted)}
+.guest h3{font-family:var(--font-display);font-weight:400;font-size:1.5rem;letter-spacing:-.01em;line-height:1.2;margin-top:2px}
+.guest ul{list-style:none;padding:0;margin-top:var(--s-3)}
+.guest li{padding:var(--s-2) 0;border-top:1px dashed var(--line);font-size:1rem}
+.guest li:last-child{border-bottom:1px dashed var(--line)}
+.guest p{margin-top:var(--s-3);font-size:.875rem;color:var(--muted)}
+
+/* eat in or pick up: one photo beside two short lists */
+.two{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7) var(--s-8);align-items:center}
+.two .layer{margin-right:var(--off);margin-bottom:var(--off)}
+.two .photo{aspect-ratio:4/5}
+.two .photo img{object-position:58% 50%}
+.two h2{font-size:var(--t-h2)}
+.two .lede{margin-top:var(--s-3);color:var(--muted);font-size:var(--t-lead);max-width:40ch}
+.ways2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s-4);margin-top:var(--s-6)}
+.way{padding:var(--s-6) var(--s-5);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-1)}
+.way h3{font-family:var(--font-display);font-weight:400;font-size:1.625rem;letter-spacing:-.015em;line-height:1.15}
+.way ol{list-style:none;padding:0;margin-top:var(--s-4);display:grid;gap:var(--s-3);counter-reset:st}
+.way li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:var(--s-3);align-items:start;counter-increment:st;font-size:.9375rem;color:var(--muted);line-height:1.5}
+.way li::before{content:counter(st);width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:.8125rem;font-variant-numeric:tabular-nums}
+.way li a{color:var(--ink)}
+
+/* visit: one raised card under a strip of the checker floor */
+.visit-card{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:var(--s-7) var(--s-8);align-items:center;padding:calc(clamp(28px,4vw,56px) + 16px) clamp(24px,4vw,56px) clamp(28px,4vw,56px);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-2)}
+.visit-card::before{content:"";position:absolute;left:0;right:0;top:0;height:16px;background:var(--checker)}
+.visit-card h2{font-size:var(--t-h2)}
+.visit-card .lede{margin:var(--s-3) 0 var(--s-6);color:var(--muted);font-size:var(--t-lead);max-width:36ch}
+.addr{font-family:var(--font-display);font-size:clamp(2rem,1.3rem + 2.4vw,3.25rem);line-height:1.04;letter-spacing:-.02em}
+.addr span{display:block;color:var(--muted)}
+@media (min-width:641px){.addr span{white-space:nowrap}}
+.addr-btn{margin-top:var(--s-5)}
+.addr-note{margin-top:var(--s-4);color:var(--muted);font-size:var(--t-lead)}
+
+/* ending band: the Granite City mark on the left, the words and button beside it */
+.more{padding-block:clamp(48px,6vw,80px)}
+.more .wrap{display:flex;align-items:center;gap:var(--s-6)}
+.more-mark{flex:none;width:136px;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:#050505;box-shadow:var(--sh-1)}
+.more-mark img{width:100%;height:100%;object-fit:cover}
+.more h2{font-size:clamp(1.5rem,1.2rem + 1.2vw,2.25rem)}
+.more .btn{margin-top:var(--s-4)}
+
+/* footer mark on the dark footer */
+.foot .gcd{color:var(--foot-muted)}
+.foot .gcd-text b{color:var(--foot-ink)}
+@media (hover:hover) and (pointer:fine){.foot .gcd:hover{background:rgb(255 255 255 / .07)}}
 
 .foot{padding-top:0;color:var(--foot-muted)}
 .foot .checker{margin-bottom:var(--s-7);background:repeating-conic-gradient(var(--foot-ink) 0 25%,var(--foot) 0 50%) 0 0/16px 16px}
@@ -417,16 +464,28 @@ h1,h2{letter-spacing:-.015em;line-height:1.06}
   .hero-b .hero-pic{order:0;max-width:520px;margin:var(--s-2) calc(var(--off) + var(--s-6)) var(--s-7) 0}
   .hero-b .hero-pic .photo{aspect-ratio:5/4}
   .ticket{right:calc(var(--s-6) * -1)}
-  .menu-page{grid-template-columns:minmax(0,1fr)}
-  .menu{border-radius:var(--r-card) var(--r-card) 0 0}
-  .menu-pic{border-radius:0 0 var(--r-card) var(--r-card);min-height:0;aspect-ratio:16/10}
-  .visit{grid-template-columns:minmax(0,1fr)}
+  .dishes,.specials,.two,.visit-card{grid-template-columns:minmax(0,1fr)}
+  .dish.big .photo{aspect-ratio:3/2}
+  .check-pic{max-width:640px}
+  .guest{left:var(--s-5)}
+  .two .photo{aspect-ratio:16/10}
 }
 @media (max-width:640px){
   .hero-pic .photo{aspect-ratio:4/3}
   .ticket{position:relative;right:auto;bottom:auto;margin:calc(var(--s-7) * -1) auto 0;width:calc(100% - 40px)}
   .hero-b .hero-pic{margin:var(--s-2) var(--off) 0 0}
   .menu-head{text-align:left}
+  .menu-head .lede{margin-left:0}
+  .dishes,.dish-side{gap:var(--s-6)}
+  .order-bar{padding:var(--s-5);margin-top:var(--s-7)}
+  .order-bar .btn{width:100%}
+  .check-pic{margin:0 var(--off) 0 0}
+  .guest{position:relative;left:auto;bottom:auto;margin:calc(var(--s-7) * -1) auto 0;width:calc(100% - 40px)}
+  .ways2{grid-template-columns:minmax(0,1fr)}
+  .way{padding:var(--s-5)}
+  .more .wrap{gap:var(--s-4);align-items:flex-start}
+  .more-mark{width:96px;margin-top:4px}
+  .more .btn{width:100%}
 }
 /* short phones: the same hero, tighter, so both buttons clear the phone bar */
 @media (max-width:640px) and (max-height:740px){
@@ -455,6 +514,8 @@ h1,h2{letter-spacing:-.015em;line-height:1.06}
     <nav aria-label="Main">
       <ul class="nav">
         <li><a href="#services">What we serve</a></li>
+        <li><a href="#specials">Specials</a></li>
+        <li><a href="#how">Eat in or pick up</a></li>
         <li><a href="#visit">Visit</a></li>
       </ul>
     </nav>
@@ -474,7 +535,7 @@ h1,h2{letter-spacing:-.015em;line-height:1.06}
       </div>
     </div>
     <div class="hero-pic layer rise">
-      <figure class="photo"><img src="hero.jpg" width="1600" height="1067" srcset="hero-800.jpg 800w, hero.jpg 1600w" sizes="(max-width: 640px) 109vw, 1600px" fetchpriority="high" alt="A warmly lit diner dining room with brown booths and wall lamps"></figure>
+      <figure class="photo"><img src="red-booth.jpg" width="1600" height="1067" srcset="red-booth-800.jpg 800w, red-booth.jpg 1600w" sizes="(max-width: 640px) 109vw, 1600px" fetchpriority="high" alt="A red diner booth beside a table with a wooden edge"></figure>
       <aside class="ticket" aria-labelledby="ticket-h">
         <h2 id="ticket-h">Barney&#x27;s Cafe</h2>
         <ul>
@@ -489,39 +550,124 @@ h1,h2{letter-spacing:-.015em;line-height:1.06}
 
   <section class="band" id="services" aria-labelledby="svc-h">
     <div class="wrap">
-      <div class="menu-head rv">
+      <div class="menu-head">
         <h2 id="svc-h">What we serve</h2>
-        <p class="lede">Diner food on N Main St in Mount Airy.</p>
+        <p class="lede">Southern comfort food, mouth watering burgers, and the best desserts in Mount Airy.</p>
       </div>
-      <div class="menu-page layer rv">
-      <div class="menu">
-        <ul>
-          <li><h3>Southern comfort food</h3></li>
-          <li><h3>Burgers</h3></li>
-          <li><h3>Desserts</h3></li>
-        </ul>
-        <div class="order">
-          <p><b>Picking up?</b> Call ahead to order.</p>
-          <a class="btn" href="tel:+13367868305">Call <span class="num">(336) 786-8305</span></a>
+      <div class="dishes">
+        <article class="dish big rv">
+          <div class="layer"><figure class="photo"><img src="burger.jpg" width="1600" height="1067" srcset="burger-800.jpg 800w, burger.jpg 1600w" sizes="(max-width: 960px) 92vw, 640px" loading="lazy" decoding="async" alt="A cheeseburger with a side of french fries on a wooden board"></figure></div>
+          <h3>Burgers</h3>
+          <p>The mouth watering kind, for a seat in the dining room or a bag to go.</p>
+        </article>
+        <div class="dish-side">
+          <article class="dish rv">
+            <div class="layer"><figure class="photo"><img src="patties-pan.jpg" width="1600" height="1067" srcset="patties-pan-800.jpg 800w, patties-pan.jpg 1600w" sizes="(max-width: 960px) 92vw, 460px" loading="lazy" decoding="async" alt="Two beef patties browning in a black pan"></figure></div>
+            <h3>Southern comfort food</h3>
+            <p>Hearty southern plates, and the daily specials that come with them.</p>
+          </article>
+          <article class="dish rv">
+            <div class="layer"><figure class="photo"><img src="pecan-pie.jpg" width="1600" height="1067" srcset="pecan-pie-800.jpg 800w, pecan-pie.jpg 1600w" sizes="(max-width: 960px) 92vw, 460px" loading="lazy" decoding="async" alt="A slice of dessert lifted from a wooden board"></figure></div>
+            <h3>Desserts</h3>
+            <p>Save room after your meal, or take one home with your order.</p>
+          </article>
         </div>
       </div>
-      <figure class="menu-pic"><img src="burger.jpg" width="1600" height="1067" srcset="burger-800.jpg 800w, burger.jpg 1600w" sizes="(max-width: 640px) 91vw, 1600px" loading="lazy" decoding="async" alt="A cheeseburger with a side of french fries on a wooden board"></figure>
+      <div class="order-bar rv">
+        <p><b>Picking up?</b> Call ahead to order.</p>
+        <a class="btn" href="tel:+13367868305">Call <span class="num">(336) 786-8305</span></a>
       </div>
     </div>
   </section>
   <div class="checker" aria-hidden="true"></div>
 
+  <section class="wrap sec" id="specials" aria-labelledby="spec-h">
+    <div class="specials">
+      <div>
+        <h2 id="spec-h">Daily specials</h2>
+        <p class="lede">We post our specials every day on our Facebook page. Want to hear what is on today? Give us a call.</p>
+        <div class="cta">
+          <a class="btn" href="tel:+13367868305">Ask about today&#x27;s special</a>
+        </div>
+      </div>
+      <div class="check-pic layer rv">
+        <figure class="photo"><img src="checkered-cup.jpg" width="1600" height="1067" srcset="checkered-cup-800.jpg 800w, checkered-cup.jpg 1600w" sizes="(max-width: 960px) 92vw, 640px" loading="lazy" decoding="async" alt="A checkered diner cup and saucer on a wooden table"></figure>
+        <aside class="guest" aria-labelledby="guest-h">
+          <p class="lab">Guest check</p>
+          <h3 id="guest-h">Specials like</h3>
+          <ul>
+            <li>Chicken and dumplings</li>
+            <li>Hamburger steak</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="how" aria-labelledby="how-h">
+    <div class="wrap two">
+      <div class="layer rv"><figure class="photo"><img src="patty-on-bun.jpg" width="1600" height="1067" srcset="patty-on-bun-800.jpg 800w, patty-on-bun.jpg 1600w" sizes="(max-width: 960px) 92vw, 460px" loading="lazy" decoding="async" alt="A spatula setting a cheeseburger patty on a toasted bun"></figure></div>
+      <div>
+        <h2 id="how-h">Eat in or pick it up</h2>
+        <p class="lede">Two ways to get a plate from Barney&#x27;s.</p>
+        <div class="ways2">
+          <div class="way rv">
+            <h3>Eat in</h3>
+            <ol>
+              <li><span>Come by 206 N Main St.</span></li>
+              <li><span>Order from the menu or ask about the special.</span></li>
+              <li><span>Finish with dessert.</span></li>
+            </ol>
+          </div>
+          <div class="way rv">
+            <h3>Pick up</h3>
+            <ol>
+              <li><span>Call <a class="num" href="tel:+13367868305">(336) 786-8305</a> with your order.</span></li>
+              <li><span>Give us a name for the order.</span></li>
+              <li><span>Pick it up in store.</span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" aria-label="Photos">
+    <div class="strip">
+      <figure class="photo rv"><img src="patty-cheese.jpg" width="1600" height="1067" srcset="patty-cheese-800.jpg 800w, patty-cheese.jpg 1600w" sizes="(max-width: 640px) 92vw, 400px" loading="lazy" decoding="async" alt="A burger patty and a patty under a slice of cheese on a grill pan"></figure>
+      <figure class="photo rv"><img src="burger-plating.jpg" width="1600" height="1067" srcset="burger-plating-800.jpg 800w, burger-plating.jpg 1600w" sizes="(max-width: 640px) 46vw, 330px" loading="lazy" decoding="async" alt="A cook holding a plated cheeseburger"></figure>
+      <figure class="photo rv"><img src="diner-stools.jpg" width="1600" height="1067" srcset="diner-stools-800.jpg 800w, diner-stools.jpg 1600w" sizes="(max-width: 640px) 46vw, 400px" loading="lazy" decoding="async" alt="Red diner counter stools with chrome bases on a checkered floor"></figure>
+    </div>
+  </section>
+
   <section class="wrap sec" id="visit" aria-labelledby="visit-h">
-    <div class="visit">
-      <div class="rv">
+    <div class="visit-card rv">
+      <div>
         <h2 id="visit-h">Visit</h2>
-        <p class="lede">Downtown on N Main St in Mount Airy. Eat in, or call ahead for pickup.</p>
+        <p class="lede">Find us downtown in Mount Airy.</p>
         <ul class="ways">
           <li><a class="num" href="tel:+13367868305"><span>Call</span>(336) 786-8305</a></li>
-          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Barney%27s+Cafe+206+N+Main+St+Mount+Airy+NC"><span>Find us at</span>206 N Main St, Mount Airy, NC</a></li>
         </ul>
       </div>
-      <div class="layer rv"><figure class="photo"><img src="diner-stools.jpg" width="1600" height="1067" srcset="diner-stools-800.jpg 800w, diner-stools.jpg 1600w" sizes="(max-width: 640px) 102vw, 1600px" loading="lazy" decoding="async" alt="Red diner counter stools with chrome bases on a checkered floor"></figure></div>
+      <div>
+        <p class="addr">206 N Main St <span>Mount Airy, NC</span></p>
+        <a class="btn line addr-btn" href="https://www.google.com/maps/search/?api=1&amp;query=Barney%27s+Cafe+206+N+Main+St+Mount+Airy+NC">Get directions</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band more" aria-labelledby="more-h">
+    <div class="wrap">
+      <span class="more-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="Granite City Digital logo" loading="lazy" decoding="async">
+        </picture>
+      </span>
+      <div>
+        <h2 id="more-h">Want to see more of our work?</h2>
+        <a class="btn" href="https://granitecitydigital.me/">Visit granitecitydigital.me</a>
+      </div>
     </div>
   </section>
 </main>
@@ -531,7 +677,20 @@ h1,h2{letter-spacing:-.015em;line-height:1.06}
   <div class="wrap">
     <p><b>Barney&#x27;s Cafe</b> &middot; 206 N Main St, Mount Airy, NC</p>
     <p class="right"><a class="num" href="tel:+13367868305">(336) 786-8305</a></p>
-    <p class="credit">Photos by Mạnh Ngô, Jonathan Borba and T on Unsplash, shown as examples. Sample site made by <a href="https://granitecitydigital.me/">Granite City Digital</a>.</p>
+    <!-- Footer mark. Keep this block, its CSS and its script exactly as they are. The files live in samples/mark/. -->
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
   </div>
 </footer>
 
@@ -549,6 +708,41 @@ h1,h2{letter-spacing:-.015em;line-height:1.06}
     els.forEach(function(el){io.observe(el)});
   }else{els.forEach(function(el){el.classList.add('in')})}
   addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
 })();
 </script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "31a3f47819f449f59b28a51b74d61f30"}'></script><!-- End Cloudflare Web Analytics -->

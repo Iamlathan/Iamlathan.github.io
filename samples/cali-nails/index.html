@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Cali Nails | Nail salon in Mount Airy, NC</title>
-<meta name="description" content="Cali Nails is a nail salon at 449 N Andy Griffith Pkwy, Ste 200, in Mount Airy, NC. Call 336 783 4777.">
+<meta name="description" content="Cali Nails in Thruway Shopping Center, 449 N Andy Griffith Pkwy, Ste 200, Mount Airy, NC. Full sets, manicures, pedicures and waxing. Walk ins welcome. Call 336 783 4777.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#faf5f3">
 <meta property="og:title" content="Cali Nails | Mount Airy, NC">
-<meta property="og:description" content="Cali Nails is a nail salon at 449 N Andy Griffith Pkwy, Ste 200, in Mount Airy, NC. Call 336 783 4777.">
+<meta property="og:description" content="Cali Nails in Thruway Shopping Center, 449 N Andy Griffith Pkwy, Ste 200, Mount Airy, NC. Full sets, manicures, pedicures and waxing. Walk ins welcome. Call 336 783 4777.">
 <meta property="og:image" content="https://granitecitydigital.me/samples/cali-nails/hero.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {
@@ -347,64 +347,133 @@ main:has(> .band:last-child) + .foot{margin-top:0}
   body .hero p{font-size:.9375rem;line-height:1.5}
 }
 
-/* 3. Cali's own touches: the arch frame and a softer, airier rhythm */
+/* 3. Cali's own touches: one arched hero frame like a salon mirror, a French tip mark for the offer, a hours card like the one taped by the register */
 h1,h2{letter-spacing:-.01em;line-height:1}
 .mark{font-family:var(--font-display);font-size:1.375rem;font-weight:600;letter-spacing:0}
 .mark span{color:var(--accent);font-weight:500}
 .btn{padding:0 26px;letter-spacing:.01em}
 .top .btn{padding:0 18px}
 .arch,.arch.layer::before{border-radius:999px 999px var(--r-photo) var(--r-photo)}
+.label{display:block;font-size:.8125rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:var(--s-3)}
+.lede{color:var(--muted);font-size:var(--t-lead)}
 
-/* hero: words on the left, an arched photo on the right with a floating address card */
+/* the French tip: a tiny nail with a white tip, used only beside the offer */
+.tip{display:inline-flex;align-items:center;gap:10px;width:fit-content;padding:7px 16px 7px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:.9375rem;font-weight:500;line-height:1.3}
+.tip::before{content:"";flex:none;width:12px;height:16px;border-radius:6px 6px 4px 4px;background:linear-gradient(to bottom,#fffdfc 0 36%,#d99db4 36%);box-shadow:0 0 0 1px rgb(var(--shadow) / .3)}
+
+/* hero: words on the left, the arched photo on the right with a floating card */
 .hero-c{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:var(--s-7) var(--s-9);align-items:center}
-.hero-c h1{font-size:clamp(2.25rem,1.5rem + 3.4vw,4rem)}
+.hero-c h1{font-size:clamp(2.375rem,1.5rem + 3.6vw,4.25rem)}
 .hero-c h1 .soft{color:var(--accent);font-style:italic;font-weight:500}
-.hero-c .lede{margin-top:var(--s-5);color:var(--muted);font-size:var(--t-lead);max-width:40ch}
+.hero-c .lede{margin-top:var(--s-5);max-width:40ch}
 .hero-c .cta{justify-content:flex-start;margin-top:var(--s-6)}
+.hero-c .facts{margin-top:var(--s-6);gap:var(--s-3) var(--s-5);align-items:center}
+.hero-c .facts li+li::before{content:none}
+.hero-c .facts .open{color:var(--ink)}
 .hero-c .pic{position:relative;margin:0 var(--off) var(--off) 0}
 .hero-c .photo{aspect-ratio:4/5}
 .hero-c .photo img{object-position:58% 50%}
 .hero-c .float{left:calc(var(--s-7) * -1);bottom:calc(var(--s-5) * -1)}
 
-/* what we do: arched photo left, one service card right */
-.svc-c{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:var(--s-7) var(--s-9);align-items:center}
-.svc-c .pic{margin-right:var(--off);margin-bottom:var(--off)}
-.svc-c .photo{aspect-ratio:4/5}
-.svc-c .photo img{object-position:40% 50%}
-.svc-c h2{font-size:var(--t-h2)}
-.svc-c .lede{margin-top:var(--s-3);color:var(--muted);font-size:var(--t-lead)}
-.service{margin-top:var(--s-6);padding:clamp(24px,3vw,40px);display:grid;gap:var(--s-3)}
-.service h3{font-family:var(--font-display);font-size:clamp(1.75rem,1.4rem + 1.2vw,2.5rem);font-weight:600;letter-spacing:-.005em;line-height:1.05}
-.service p{color:var(--muted);font-size:var(--t-lead)}
-.service .ask{margin-top:var(--s-4);padding-top:var(--s-4);border-top:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-3) var(--s-5);color:var(--ink)}
-.service .ask b{font-weight:500}
+/* services: one wide card for the full set, two photo cards, then a plum waxing card */
+.menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s-5)}
+.item{display:grid;align-content:start;background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-1);overflow:hidden;isolation:isolate}
+.item .ph{position:relative;aspect-ratio:3/2;overflow:hidden;background:var(--tint)}
+.item .ph img{width:100%;height:100%;object-fit:cover}
+.item .body{display:grid;gap:var(--s-3);align-content:start;padding:var(--s-5) clamp(20px,2.6vw,32px) clamp(24px,3vw,36px)}
+.item h3{font-family:var(--font-display);font-size:clamp(1.75rem,1.4rem + 1.1vw,2.375rem);font-weight:600;letter-spacing:-.005em;line-height:1.05}
+.item p{color:var(--muted);max-width:44ch}
+.item.first{grid-column:1/-1;grid-template-columns:minmax(0,7fr) minmax(0,5fr);box-shadow:var(--sh-2)}
+.item.first .ph{aspect-ratio:auto;min-height:360px}
+.item.first .ph img{position:absolute;inset:0;object-position:50% 45%}
+.item.first .body{align-content:center;gap:var(--s-4);padding:clamp(28px,4vw,56px)}
+.item.first h3{font-size:clamp(2.125rem,1.6rem + 1.8vw,3.125rem)}
+.item.wax{grid-column:1/-1;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:var(--s-5) var(--s-7);padding:clamp(28px,3.4vw,44px) clamp(24px,4vw,56px);background:var(--accent);color:var(--on-accent)}
+.item.wax .body{padding:0}
+.item.wax p{color:rgb(255 253 252 / .86)}
+.item.wax .btn{background:var(--surface);color:var(--accent)}
+@media (hover:hover) and (pointer:fine){.item.wax .btn:hover{background:var(--bg)}}
 
-/* visit: a wide rounded photo with the three ways floating over its lower edge */
-.visit-c .head{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center}
-.visit-c .head h2{font-size:clamp(2.25rem,1.6rem + 2.4vw,3.5rem)}
-.visit-c .photo{aspect-ratio:21/9}
-.visit-c .photo img{object-position:50% 60%}
-.visit-c .layer{margin-right:var(--off)}
-.visit-c .ways{position:relative;z-index:2;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s-4);margin-top:calc(var(--s-8) * -1);padding:0 var(--s-6)}
-.visit-c .ways a{height:100%;align-content:start;box-shadow:var(--sh-3)}
-@media (hover:hover) and (pointer:fine){.visit-c .ways a:hover{box-shadow:var(--sh-3);transform:translateY(-3px)}}
+/* walk ins: a wide photo with the three steps floating over its lower edge */
+.walk .head{grid-template-columns:minmax(0,6fr) minmax(0,5fr)}
+.walk .head p{justify-self:end}
+.walk .head h2{font-size:clamp(2.125rem,1.5rem + 2.4vw,3.5rem)}
+.walk .layer{margin-right:var(--off)}
+.walk .photo{aspect-ratio:21/9}
+.walk .photo img{object-position:50% 100%}
+.stepcards{position:relative;z-index:2;list-style:none;padding:0 var(--s-6);margin-top:calc(var(--s-8) * -1);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s-4);counter-reset:step}
+.stepcards li{display:grid;align-content:start;gap:var(--s-2);padding:var(--s-5);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3);counter-increment:step}
+.stepcards li::before{content:counter(step);width:36px;height:36px;border-radius:50%;display:grid;place-items:center;margin-bottom:var(--s-2);background:var(--accent-soft);color:var(--accent);font-weight:500;font-variant-numeric:tabular-nums}
+.stepcards h3{font-size:var(--t-h3);font-weight:500;letter-spacing:-.01em;line-height:1.35;font-family:var(--font)}
+.stepcards p{color:var(--muted);font-size:.9375rem}
+.ask-line{margin-top:var(--s-6);text-align:center;color:var(--muted)}
+.ask-line a{color:var(--ink);font-weight:500;white-space:nowrap}
+
+/* photo strip */
+.strip .photo img{object-position:50% 50%}
+
+/* hours and visit */
+.hv{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:var(--s-7) var(--s-9);align-items:center}
+.board{position:relative;padding:clamp(28px,3.4vw,44px);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3)}
+.board h2{font-family:var(--font-display);font-size:clamp(1.875rem,1.5rem + 1.2vw,2.5rem);font-weight:600;line-height:1}
+.board dl{margin-top:var(--s-5)}
+.board dl div{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px var(--s-4);padding:14px 0;border-top:1px dashed var(--line)}
+.board dl div:last-child{border-bottom:1px dashed var(--line)}
+.board dt{font-weight:500}
+.board dd{margin:0 0 0 auto;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.board .call{margin-top:var(--s-5);font-size:.9375rem;color:var(--muted)}
+.board .call a{color:var(--ink);font-weight:500;white-space:nowrap}
+.findus h2{font-size:var(--t-h2)}
+.findus .addr{margin-top:var(--s-4);font-size:var(--t-lead);line-height:1.5}
+.findus .addr span{display:block;color:var(--muted)}
+.findus .cta{justify-content:flex-start;margin-top:var(--s-6)}
+
+/* ending band: our logo on the left, the heading and button beside it */
+.more{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:0 var(--s-6);padding:clamp(24px,3vw,40px);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-2)}
+.more picture{display:block;width:120px;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#050505}
+.more picture img{width:100%;height:100%;object-fit:cover}
+.more .label{color:var(--muted);margin-bottom:var(--s-2)}
+.more h2{font-size:clamp(1.625rem,1.3rem + 1.2vw,2.25rem)}
+.more picture{grid-row:1 / span 2}
+.more .txt{align-self:end}
+.more .btn{grid-column:2;justify-self:start;margin-top:var(--s-4)}
+
+@media (prefers-reduced-motion:no-preference){
+  .js .stepcards .rv:nth-child(2),.js .menu .rv:nth-child(3){transition-delay:90ms}
+  .js .stepcards .rv:nth-child(3){transition-delay:180ms}
+}
 
 @media (max-width:960px){
-  .hero-c,.svc-c{grid-template-columns:minmax(0,1fr)}
+  .hero-c,.hv,.walk .head{grid-template-columns:minmax(0,1fr)}
   /* the width is set because Safari sizes a grid item with an auto side margin from its content, and this frame has none of its own */
   .hero-c .pic{width:100%;max-width:440px;margin-inline:auto calc(var(--off) + 8%)}
   .hero-c .float{left:calc(var(--s-6) * -1);bottom:calc(var(--s-4) * -1)}
-  .svc-c .pic{order:2;max-width:440px}
-  .visit-c .ways{grid-template-columns:minmax(0,1fr);margin-top:calc(var(--s-6) * -1);padding:0 var(--s-4);gap:var(--s-3)}
-  .visit-c .photo{aspect-ratio:16/10}
+  .item.first{grid-template-columns:minmax(0,1fr)}
+  .item.first .ph{min-height:0;aspect-ratio:16/10}
+  .stepcards{grid-template-columns:minmax(0,1fr);margin-top:calc(var(--s-6) * -1);padding:0 var(--s-4);gap:var(--s-3)}
+  .walk .photo{aspect-ratio:2/1}
 }
 @media (max-width:640px){
   .hero-c .pic{width:auto;margin-inline:var(--s-5) calc(var(--off) + var(--s-5))}
   .hero-c .float{position:absolute;left:calc(var(--s-5) * -1);right:auto;bottom:calc(var(--s-4) * -1);margin:0;max-width:calc(100% + var(--s-5))}
   .hero-c .pic{margin-bottom:var(--s-6)}
-  .visit-c .head{justify-items:start;text-align:left}
-  .visit-c .ways{padding:0 var(--s-3)}
+  .hero-c .facts{gap:var(--s-2) var(--s-4)}
+  .menu{grid-template-columns:minmax(0,1fr);gap:var(--s-4)}
+  .item.wax{grid-template-columns:minmax(0,1fr)}
+  .item.wax .btn{width:100%}
+  .stepcards{padding:0 var(--s-3)}
+  .ask-line{text-align:left}
+  .findus .cta .btn{flex:1 1 auto}
+  .more{gap:0 var(--s-4);align-items:center}
+  .more picture{grid-row:1;width:76px;border-radius:8px}
+  .more .txt{align-self:center}
+  .more .label{margin-bottom:var(--s-1)}
+  .more h2{font-size:1.5rem}
+  .more .btn{grid-column:1 / -1;width:100%;margin-top:var(--s-5)}
 }
+/* no fixed phone bar on this sample: the header and hero call buttons sit in the first screen, so nothing covers the footer */
+@media (max-width:760px){html{scroll-padding-bottom:0}}
+@media (max-width:640px){:root{--bar:0px}.bar{display:none}}
 </style>
 </head>
 <body>
@@ -417,8 +486,9 @@ h1,h2{letter-spacing:-.01em;line-height:1}
     <a class="mark" href="#top" aria-label="Cali Nails, back to top">Cali <span>Nails</span></a>
     <nav aria-label="Main">
       <ul class="nav">
-        <li><a href="#services">What we do</a></li>
-        <li><a href="#visit">Visit</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#walk-ins">Walk ins</a></li>
+        <li><a href="#visit">Hours and visit</a></li>
       </ul>
     </nav>
     <a class="btn line" href="tel:+13367834777"><span class="long num">336 783 4777</span><span class="short">Call</span></a>
@@ -429,48 +499,121 @@ h1,h2{letter-spacing:-.01em;line-height:1}
   <section class="wrap hero" id="top" aria-labelledby="hero-h">
     <div class="hero-c">
       <div class="rise">
-        <h1 id="hero-h"><span>Nail care</span> <span class="soft">on Andy Griffith Pkwy.</span></h1>
-        <p class="lede">Cali Nails is a nail salon at 449 N Andy Griffith Pkwy, Ste 200, in Mount Airy, NC.</p>
+        <h1 id="hero-h">Full sets, manicures, pedicures <span class="soft">and waxing in Mount Airy.</span></h1>
+        <p class="lede">Walk ins welcome, no appointment needed, at our shop in Thruway Shopping Center.</p>
         <div class="cta">
           <a class="btn" href="tel:+13367834777">Call <span class="num">336 783 4777</span></a>
           <a class="btn line" href="https://www.google.com/maps/search/?api=1&amp;query=Cali+Nails+449+N+Andy+Griffith+Pkwy+Ste+200+Mount+Airy+NC">Get directions</a>
         </div>
+        <ul class="facts">
+          <li class="tip">Free French with a full set</li>
+          <li class="open">Open seven days a week</li>
+        </ul>
       </div>
       <div class="pic layer arch rise hero-pic">
-        <figure class="photo arch"><img src="hero.jpg" width="1400" height="933" fetchpriority="high" alt="A gloved hand brushing pale pink polish onto a fingernail at a wooden table"></figure>
-        <div class="float"><span>Find us in</span><p>Ste 200, N Andy Griffith Pkwy</p></div>
+        <figure class="photo arch"><img src="hero.jpg" srcset="hero-800.jpg 800w, hero.jpg 1400w" sizes="(max-width: 640px) 80vw, (max-width: 960px) 440px, 420px" width="1400" height="933" fetchpriority="high" alt="A gloved hand brushing pale pink polish onto a fingernail at a wooden table"></figure>
+        <div class="float"><span>Find us at</span><p>449 N Andy Griffith Pkwy</p></div>
       </div>
     </div>
   </section>
 
   <section class="band" id="services" aria-labelledby="svc-h">
-    <div class="wrap svc-c">
-      <div class="pic layer arch rv">
-        <figure class="photo arch"><img src="polish.jpg" width="1400" height="933" loading="lazy" decoding="async" alt="Hands lifting a brush from a lilac bottle of nail polish, a pink nail file on the table"></figure>
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="svc-h">Hands, feet and waxing</h2>
+        <p>Pick one or pair a few: a full set, a manicure, a pedicure or a wax.</p>
       </div>
-      <div class="rv">
-        <h2 id="svc-h">What we do</h2>
-        <p class="lede">Nail care at our salon in Mount Airy.</p>
-        <div class="service card">
-          <h3>Nail care</h3>
-          <p>Tell us what you have in mind when you call.</p>
-          <p class="ask"><span><b>Have a question?</b> The shop number is <span class="num">336&nbsp;783&nbsp;4777</span>.</span> <a class="btn" href="tel:+13367834777">Call the shop</a></p>
+      <div class="menu">
+        <article class="item first rv">
+          <div class="ph"><img src="french.jpg" srcset="french-800.jpg 800w, french.jpg 1400w" sizes="(max-width: 960px) 91vw, 640px" width="1400" height="933" loading="lazy" decoding="async" alt="A hand resting on a white towel showing a set of long nails with white French tips"></div>
+          <div class="body">
+            <h3>Full set</h3>
+            <p>A new set of nails, shaped to the length you like and finished at the table.</p>
+            <p class="tip">Free French with a full set</p>
+            <p>Want the French look? Ask for it when you sit down.</p>
+          </div>
+        </article>
+        <article class="item rv">
+          <div class="ph"><img src="detail.jpg" srcset="detail-800.jpg 800w, detail.jpg 1400w" sizes="(max-width: 640px) 91vw, 540px" width="1400" height="933" loading="lazy" decoding="async" alt="Black gloved hands painting a fine line on a client's pale pink nail"></div>
+          <div class="body">
+            <h3>Manicure</h3>
+            <p>Nails shaped and polished in the color you pick.</p>
+          </div>
+        </article>
+        <article class="item rv">
+          <div class="ph"><img src="chairs.jpg" srcset="chairs-800.jpg 800w, chairs.jpg 1400w" sizes="(max-width: 640px) 91vw, 540px" width="1400" height="933" loading="lazy" decoding="async" alt="A row of padded pedicure chairs with glass foot basins and white footrests"></div>
+          <div class="body">
+            <h3>Pedicure</h3>
+            <p>Put your feet up and leave with fresh polish on your toes.</p>
+          </div>
+        </article>
+        <article class="item wax rv">
+          <div class="body">
+            <h3>Waxing</h3>
+            <p>Ask us about waxing when you come in, or call the shop with a question first.</p>
+          </div>
+          <a class="btn" href="tel:+13367834777">Call the shop</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec walk" id="walk-ins" aria-labelledby="walk-h">
+    <div class="head rv">
+      <h2 id="walk-h">Walk in, no appointment needed.</h2>
+      <p>Come by when it suits you during the hours below.</p>
+    </div>
+    <div class="layer rv"><figure class="photo"><img src="salon.jpg" srcset="salon-800.jpg 800w, salon.jpg 1400w" sizes="(max-width: 640px) 91vw, 1120px" width="1400" height="933" loading="lazy" decoding="async" alt="A gloved nail technician filing a client's nails over a pink towel at a long salon table"></figure></div>
+    <ol class="stepcards">
+      <li class="rv"><h3>Stop by the shop</h3><p>We are in Ste 200 at Thruway Shopping Center, 449 N Andy Griffith Pkwy.</p></li>
+      <li class="rv"><h3>Tell us what you want</h3><p>Name the service and the color you have in mind.</p></li>
+      <li class="rv"><h3>Take a seat</h3><p>Get comfortable and we take it from there.</p></li>
+    </ol>
+  </section>
+
+  <section class="wrap sec" aria-label="Photos">
+    <div class="strip">
+      <figure class="photo rv"><img src="polish.jpg" srcset="polish-800.jpg 800w, polish.jpg 1400w" sizes="(max-width: 640px) 91vw, 420px" width="1400" height="933" loading="lazy" decoding="async" alt="Hands lifting a brush from a lilac bottle of nail polish, a pink nail file on the table"></figure>
+      <figure class="photo rv"><img src="fullset.jpg" srcset="fullset-800.jpg 800w, fullset.jpg 1400w" sizes="(max-width: 640px) 45vw, 340px" width="1400" height="933" loading="lazy" decoding="async" alt="Hands setting a white nail tip onto a client's finger over a white towel"></figure>
+      <figure class="photo rv"><img src="hands.jpg" srcset="hands-800.jpg 800w, hands.jpg 1400w" sizes="(max-width: 640px) 45vw, 420px" width="1400" height="933" loading="lazy" decoding="async" alt="A brush of lilac polish over short nails on a hand resting on a wooden table"></figure>
+    </div>
+  </section>
+
+  <section class="band" id="visit" aria-labelledby="visit-h">
+    <div class="wrap hv">
+      <div class="board rv" role="group" aria-labelledby="hours-h">
+        <h2 id="hours-h">Hours</h2>
+        <dl>
+          <div><dt>Monday to Friday</dt><dd>9:30 AM to 7:30 PM</dd></div>
+          <div><dt>Saturday</dt><dd>9 AM to 7 PM</dd></div>
+          <div><dt>Sunday</dt><dd>12 PM to 5 PM</dd></div>
+        </dl>
+        <p class="call">Questions about a visit? Call <a class="num" href="tel:+13367834777">336 783 4777</a>.</p>
+      </div>
+      <div class="findus rv">
+        <span class="label">Visit</span>
+        <h2 id="visit-h">Find us in Thruway Shopping Center.</h2>
+        <p class="addr">449 N Andy Griffith Pkwy, Ste 200 <span>Mount Airy, NC</span></p>
+        <div class="cta">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Cali+Nails+449+N+Andy+Griffith+Pkwy+Ste+200+Mount+Airy+NC">Get directions</a>
+          <a class="btn line" href="tel:+13367834777">Call <span class="num">336 783 4777</span></a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="wrap sec visit-c" id="visit" aria-labelledby="visit-h">
-    <div class="head rv">
-      <h2 id="visit-h">Visit</h2>
-      <p>Find us in Ste 200 on N Andy Griffith Pkwy in Mount Airy.</p>
+  <section class="wrap sec more-sec" aria-labelledby="more-h">
+    <div class="more rv">
+      <picture>
+        <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+        <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="Granite City Digital logo" decoding="async" loading="lazy">
+      </picture>
+      <div class="txt">
+        <span class="label">Granite City Digital</span>
+        <h2 id="more-h">Want to see more of our work?</h2>
+      </div>
+      <a class="btn" href="https://granitecitydigital.me/">Visit granitecitydigital.me</a>
     </div>
-    <div class="layer rv"><figure class="photo"><img src="hands.jpg" width="1400" height="933" srcset="hands-800.jpg 800w, hands.jpg 1400w" sizes="(max-width: 640px) 91vw, 1400px" loading="lazy" decoding="async" alt="A brush of lilac polish over short nails on a hand resting on a wooden table"></figure></div>
-    <ul class="ways">
-      <li class="rv"><a class="num" href="tel:+13367834777"><span>Call</span>336 783 4777</a></li>
-      <li class="rv"><a href="https://www.google.com/maps/search/?api=1&amp;query=Cali+Nails+449+N+Andy+Griffith+Pkwy+Ste+200+Mount+Airy+NC"><span>Find us at</span>449 N Andy Griffith Pkwy, Ste 200, Mount Airy, NC</a></li>
-      <li class="rv"><a href="https://www.facebook.com/p/Cali-nails-100081070312038/"><span>Facebook</span>Cali Nails on Facebook</a></li>
-    </ul>
   </section>
 </main>
 
@@ -478,7 +621,6 @@ h1,h2{letter-spacing:-.01em;line-height:1}
   <div class="wrap">
     <p><b>Cali Nails</b> &middot; 449 N Andy Griffith Pkwy, Ste 200, Mount Airy, NC</p>
     <p class="right"><a class="num" href="tel:+13367834777">336 783 4777</a></p>
-    <p class="credit">Photos by Gustavo Fring and Karola G on Pexels, shown as examples.</p>
     <a class="gcd" href="https://granitecitydigital.me/">
       <span class="gcd-mark" id="gcd-mark">
         <picture>
@@ -494,6 +636,7 @@ h1,h2{letter-spacing:-.01em;line-height:1}
     </a>
   </div>
 </footer>
+
 
 <nav class="bar" aria-label="Quick contact">
   <a href="tel:+13367834777"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>

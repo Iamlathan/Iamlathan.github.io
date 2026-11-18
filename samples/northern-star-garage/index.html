@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Northern Star Garage | Auto repair in Mount Airy, NC</title>
-<meta name="description" content="Northern Star Garage does auto repair at 220 N Franklin Rd in Mount Airy, NC. Call (336) 789-1881.">
+<title>Northern Star Garage | Auto repair, tires and detailing in Mount Airy, NC</title>
+<meta name="description" content="Northern Star Garage does auto repair, tires and detailing at 220 N Franklin Rd in Mount Airy, NC. Call (336) 789-1881.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#f3f1ec">
 <meta property="og:title" content="Northern Star Garage | Mount Airy, NC">
-<meta property="og:description" content="Northern Star Garage does auto repair at 220 N Franklin Rd in Mount Airy, NC. Call (336) 789-1881.">
+<meta property="og:description" content="Northern Star Garage does auto repair, tires and detailing at 220 N Franklin Rd in Mount Airy, NC. Call (336) 789-1881.">
 <meta property="og:image" content="https://granitecitydigital.me/samples/northern-star-garage/hero.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
@@ -88,7 +88,6 @@
 *,*::before,*::after{box-sizing:border-box}
 *{margin:0}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
-@media (max-width:760px){html{scroll-padding-bottom:96px}} /* keyboard focus never lands under the phone bar */
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;height:auto}
@@ -314,7 +313,7 @@ main:has(> .band:last-child) + .foot{margin-top:0}
 
 /* phone */
 @media (max-width:640px){
-  :root{--bar:calc(60px + env(safe-area-inset-bottom));--r-photo:16px;--r-card:14px;--off:10px}
+  :root{--r-photo:16px;--r-card:14px;--off:10px}
   .hero-pic .photo{aspect-ratio:4/3}
   .hero-pic img{object-position:48% 40%}
   .float{position:relative;left:auto;bottom:auto;margin:calc(var(--s-7) * -1) var(--s-4) 0;max-width:none}
@@ -331,7 +330,7 @@ main:has(> .band:last-child) + .foot{margin-top:0}
   .submit .btn{width:100%}
   .foot .wrap{grid-template-columns:minmax(0,1fr)}
   .foot .right{text-align:left}
-  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+  .bar{display:none;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
   .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:60px;font-weight:500;font-size:1rem;text-decoration:none;color:var(--ink)}
   .bar a:first-child{background:var(--accent);color:var(--on-accent)}
   .bar a:active{opacity:.85}
@@ -402,6 +401,77 @@ h1,h2{font-stretch:112%;letter-spacing:-.03em;line-height:1.02}
 .foot .star{display:flex;align-items:center;gap:var(--s-3);grid-column:1/-1;margin-bottom:var(--s-4);font:600 clamp(1.5rem,1rem + 2vw,2.5rem)/1 var(--font-display);font-stretch:112%;letter-spacing:-.03em;color:var(--night-ink)}
 .foot .star svg{width:.6em;height:.6em;color:var(--brass)}
 
+/* hero: one flowing heading, a quiet trust row */
+.hero h1 .soft{display:inline}
+.hero .facts{margin-top:var(--s-4)}
+.hero .facts svg{width:12px;height:12px;color:var(--brass);margin-right:6px;vertical-align:-1px}
+
+/* service rows: photo and text trade sides, each photo layered on a soft block */
+.rows{display:grid;gap:clamp(72px,9vw,128px);margin-top:var(--s-7)}
+.row{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--s-7) var(--s-9);align-items:center}
+.row.flip{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+.row.flip .pic{order:2}
+.row .pic{position:relative;margin-right:var(--off)}
+.row .photo{aspect-ratio:5/4}
+.row .float{left:auto;right:calc(var(--s-6) * -1);bottom:calc(var(--s-6) * -1);grid-template-columns:1fr;max-width:300px}
+.row .float p{font-size:var(--t-body);line-height:1.5}
+.row .float b{font-weight:600}
+.row .float a{display:inline;font-size:inherit;min-height:0;text-decoration:underline;text-decoration-color:var(--line)}
+.kick{display:flex;align-items:center;gap:var(--s-2);font:600 .8125rem/1 var(--font-display);font-stretch:112%;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.kick svg{width:12px;height:12px;color:var(--brass)}
+.row h3{margin-top:var(--s-3);font-size:clamp(1.75rem,1.3rem + 1.4vw,2.5rem);font-stretch:112%;font-weight:600;letter-spacing:-.03em}
+.row .say{margin-top:var(--s-4);color:var(--muted);font-size:var(--t-lead);max-width:42ch}
+.tell{margin-top:var(--s-5);font-size:var(--t-small);font-weight:600}
+.ticks{list-style:none;padding:0;margin-top:var(--s-2);display:grid;gap:var(--s-2)}
+.ticks li{position:relative;padding-left:22px;font-size:.9375rem;color:var(--ink)}
+.ticks li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;background:var(--brass);transform:rotate(45deg)}
+.row .btn{margin-top:var(--s-5)}
+
+/* photo strip inside a band */
+.strip .photo:nth-child(3) img{object-position:100% 50%}
+
+/* hours and directions: two raised cards */
+.visit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s-5)}
+.visit .card{padding:clamp(24px,3vw,40px);display:grid;align-content:start;gap:var(--s-2)}
+.lbl{font:600 .8125rem/1 var(--font-display);font-stretch:112%;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.big{margin-top:var(--s-2);font:600 clamp(1.75rem,1.3rem + 1.4vw,2.5rem)/1.1 var(--font-display);font-stretch:112%;letter-spacing:-.03em}
+.when{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-3) var(--s-4);margin-top:var(--s-2)}
+.when .big{margin-top:0;font-size:clamp(1.625rem,1.2rem + 1.2vw,2.125rem)}
+.confirm{display:inline-flex;align-items:center;min-height:32px;padding:0 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:var(--t-small);font-weight:600}
+.visit .btn{margin-top:var(--s-4);width:fit-content}
+.chamber{margin-top:var(--s-4);padding-top:var(--s-4);border-top:1px solid var(--line);font-size:.9375rem;color:var(--muted)}
+.chamber svg{width:12px;height:12px;color:var(--brass);margin-right:8px;vertical-align:-1px}
+
+/* ending band: our logo on the left, heading and button to its right */
+.end .wrap{display:flex;align-items:center;gap:clamp(20px,4vw,40px)}
+.end-logo{flex:none;width:clamp(112px,14vw,160px);aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#050505;box-shadow:var(--sh-1)}
+.end-logo img{width:100%;height:100%;object-fit:cover}
+.end h2{font-size:clamp(1.5rem,1.1rem + 1.4vw,2.25rem)}
+.end .btn{margin-top:var(--s-4)}
+
+/* the contact band runs straight into the ending band */
+.night + .end{margin-top:0}
+
+/* footer mark on the night footer */
+.foot .gcd{color:var(--night-muted)}
+.foot .gcd-text b{color:var(--night-ink)}
+@media (hover:hover) and (pointer:fine){.foot .gcd:hover{background:rgb(255 255 255 / .06)}}
+
+@media (max-width:960px){
+  .row,.row.flip{grid-template-columns:minmax(0,1fr);gap:var(--s-6)}
+  .row.flip .pic{order:0}
+  .row .pic{margin-right:calc(var(--off) + var(--s-6))}
+  .row .photo{aspect-ratio:16/11}
+  .visit{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .hero h1{font-size:clamp(2.125rem,1.5rem + 3vw,2.5rem)}
+  .row .pic{margin-right:var(--off)}
+  .row .float{position:relative;right:auto;bottom:auto;margin:calc(var(--s-6) * -1) var(--s-4) 0}
+  .strip .photo:nth-child(3){aspect-ratio:4/5}
+  .end .wrap{align-items:flex-start}
+  .end-logo{width:96px;margin-top:4px}
+}
 @media (max-width:960px){
   .svc-n{grid-template-columns:minmax(0,1fr)}
   .svc-n .pic{order:2;margin-right:calc(var(--off) + var(--s-6))}
@@ -444,6 +514,7 @@ h1,h2{font-stretch:112%;letter-spacing:-.03em;line-height:1.02}
       <ul class="nav">
         <li><a href="#services">Services</a></li>
         <li><a href="#how">How it works</a></li>
+        <li><a href="#visit">Hours</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -453,10 +524,14 @@ h1,h2{font-stretch:112%;letter-spacing:-.03em;line-height:1.02}
 
 <main id="main">
   <section class="wrap hero" id="top" aria-labelledby="hero-h">
-    <h1 class="rise" id="hero-h"><span>Auto repair</span> <span class="soft">in Mount Airy.</span></h1>
+    <h1 class="rise" id="hero-h">Auto repair, tires and detailing <span class="soft">in Mount Airy.</span></h1>
     <div class="hero-grid rise">
       <div>
-        <p>Northern Star Garage does auto repair at 220 N Franklin Rd in Mount Airy, NC. Call or send a request to tell us what your car is doing.</p>
+        <p>Northern Star Garage is at 220 N Franklin Rd. Call or send a request and tell us what your car needs.</p>
+        <ul class="facts">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1l2.3 8.7L23 12l-8.7 2.3L12 23l-2.3-8.7L1 12l8.7-2.3z"/></svg>Member of the Greater Mount Airy Chamber</li>
+          <li>Weekdays 8 to 5, call ahead to confirm</li>
+        </ul>
       </div>
       <div class="cta">
         <a class="btn" href="tel:+13367891881">Call <span class="num">(336) 789-1881</span></a>
@@ -473,22 +548,66 @@ h1,h2{font-stretch:112%;letter-spacing:-.03em;line-height:1.02}
   </section>
 
   <section class="band" id="services" aria-labelledby="svc-h">
-    <div class="wrap svc-n">
-      <div class="pic layer rv">
-        <figure class="photo"><img src="services.jpg" width="1600" height="1067" srcset="services-800.jpg 800w, services.jpg 1600w" sizes="(max-width: 640px) 94vw, 1600px" loading="lazy" decoding="async" alt="A mechanic in overalls leans into an open engine bay to work on a part"></figure>
-        <div class="float"><p><b>Not sure what is wrong?</b> Call <a class="num" href="tel:+13367891881">(336) 789-1881</a> and ask.</p></div>
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="svc-h">What we do</h2>
+        <p>Auto repair, tires and detailing, all at one shop on N Franklin Rd. Pick up the phone with any question.</p>
       </div>
-      <div class="rv">
-        <h2 id="svc-h">Services</h2>
-        <p class="intro">Call to talk through what your car needs.</p>
-        <div class="service card">
-          <h3>Auto repair</h3>
-          <p>Ask about getting your car looked at on N Franklin Rd.</p>
-          <div class="cta">
-            <a class="btn" href="tel:+13367891881">Call <span class="num">(336) 789-1881</span></a>
-            <a class="btn line" href="#contact">Send a request</a>
+      <div class="rows">
+        <article class="row" aria-labelledby="s1-h">
+          <div class="pic layer rv">
+            <figure class="photo"><img src="services.jpg" width="1600" height="1067" srcset="services-800.jpg 800w, services.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 90vw, 640px" loading="lazy" decoding="async" alt="A mechanic in overalls leans into an open engine bay to work on a part"></figure>
+            <div class="float"><p><b>Not sure what is wrong?</b> Call <a class="num" href="tel:+13367891881">(336) 789-1881</a> and ask.</p></div>
           </div>
-        </div>
+          <div class="rv">
+            <p class="kick"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1l2.3 8.7L23 12l-8.7 2.3L12 23l-2.3-8.7L1 12l8.7-2.3z"/></svg>01</p>
+            <h3 id="s1-h">Auto repair</h3>
+            <p class="say">A new noise, a warning light or a car that drives differently than it did last week. Call the shop and tell us what you are noticing.</p>
+            <p class="tell">Good to mention when you call</p>
+            <ul class="ticks">
+              <li>What the car is doing and when it started</li>
+              <li>Any warning lights on the dash</li>
+              <li>The year, make and model</li>
+            </ul>
+            <a class="btn" href="tel:+13367891881">Call about a repair</a>
+          </div>
+        </article>
+
+        <article class="row flip" aria-labelledby="s2-h">
+          <div class="pic layer rv">
+            <figure class="photo"><img src="tires-stack.jpg" width="1600" height="1067" srcset="tires-stack-800.jpg 800w, tires-stack.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 90vw, 640px" loading="lazy" decoding="async" alt="A stack of car tires with their tread facing out"></figure>
+          </div>
+          <div class="rv">
+            <p class="kick"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1l2.3 8.7L23 12l-8.7 2.3L12 23l-2.3-8.7L1 12l8.7-2.3z"/></svg>02</p>
+            <h3 id="s2-h">Tires</h3>
+            <p class="say">Need tires, or have a question about the ones on your car? Give us a call and ask.</p>
+            <p class="tell">Good to have ready</p>
+            <ul class="ticks">
+              <li>The tire size printed on the sidewall</li>
+              <li>Whether it is one tire or a full set</li>
+              <li>Anything you have noticed while driving</li>
+            </ul>
+            <a class="btn" href="tel:+13367891881">Call about tires</a>
+          </div>
+        </article>
+
+        <article class="row" aria-labelledby="s3-h">
+          <div class="pic layer rv">
+            <figure class="photo"><img src="detail-wash.jpg" width="1600" height="1067" srcset="detail-wash-800.jpg 800w, detail-wash.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 90vw, 640px" loading="lazy" decoding="async" alt="A soapy sponge washing a car headlight"></figure>
+          </div>
+          <div class="rv">
+            <p class="kick"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1l2.3 8.7L23 12l-8.7 2.3L12 23l-2.3-8.7L1 12l8.7-2.3z"/></svg>03</p>
+            <h3 id="s3-h">Detailing</h3>
+            <p class="say">Ready to get your car cleaned up? Ask us about detailing and tell us what you have in mind.</p>
+            <p class="tell">Helpful to tell us</p>
+            <ul class="ticks">
+              <li>What you would like cleaned up</li>
+              <li>The kind of vehicle it is</li>
+              <li>When you could bring it by</li>
+            </ul>
+            <a class="btn" href="tel:+13367891881">Call about detailing</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -505,6 +624,41 @@ h1,h2{font-stretch:112%;letter-spacing:-.03em;line-height:1.02}
         <li class="rv"><h3>Tell us what the car is doing</h3><p>Mention any noises, warning lights or changes in how it drives.</p></li>
         <li class="rv"><h3>Talk it through</h3><p>Ask your questions and decide what to do next.</p></li>
       </ol>
+    </div>
+  </section>
+
+  <section class="band" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="work-h">A closer look</h2>
+        <p>Detailing and tire work, up close.</p>
+      </div>
+      <div class="strip">
+        <figure class="photo rv"><img src="detail-mirror.jpg" width="1600" height="1067" srcset="detail-mirror-800.jpg 800w, detail-mirror.jpg 1600w" sizes="(max-width: 640px) 90vw, 420px" loading="lazy" decoding="async" alt="Soap suds running down a dark car door mirror during a wash"></figure>
+        <figure class="photo rv"><img src="detail-seat.jpg" width="1600" height="1060" srcset="detail-seat-800.jpg 800w, detail-seat.jpg 1600w" sizes="(max-width: 640px) 45vw, 340px" loading="lazy" decoding="async" alt="A cleaning tool drawn across a cloth car seat"></figure>
+        <figure class="photo rv"><img src="tires-tread.jpg" width="1600" height="1064" srcset="tires-tread-800.jpg 800w, tires-tread.jpg 1600w" sizes="(max-width: 640px) 45vw, 420px" loading="lazy" decoding="async" alt="Close view of the tread on a new tire"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="visit" aria-labelledby="visit-h">
+    <div class="head rv">
+      <h2 id="visit-h">Hours and directions</h2>
+      <p>When to reach us and where the shop is.</p>
+    </div>
+    <div class="visit">
+      <div class="card rv">
+        <p class="lbl">Hours</p>
+        <div class="when"><p class="big">Weekdays <span class="num">8 to 5</span></p><p class="confirm">Call ahead to confirm</p></div>
+        <a class="btn" href="tel:+13367891881">Call <span class="num">(336) 789-1881</span></a>
+      </div>
+      <div class="card rv">
+        <p class="lbl">Find us</p>
+        <p class="big">220 N Franklin Rd</p>
+        <p class="muted">Mount Airy, NC</p>
+        <a class="btn line" href="https://www.google.com/maps/search/?api=1&amp;query=Northern+Star+Garage+220+N+Franklin+Rd+Mount+Airy+NC">Get directions</a>
+        <p class="chamber"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1l2.3 8.7L23 12l-8.7 2.3L12 23l-2.3-8.7L1 12l8.7-2.3z"/></svg>A Greater Mount Airy Chamber member</p>
+      </div>
     </div>
   </section>
 
@@ -560,14 +714,43 @@ h1,h2{font-stretch:112%;letter-spacing:-.03em;line-height:1.02}
       </div>
     </div>
   </section>
+
+  <section class="band end" aria-labelledby="end-h">
+    <div class="wrap">
+      <span class="end-logo rv">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="Granite City Digital logo" decoding="async" loading="lazy">
+        </picture>
+      </span>
+      <div class="rv">
+        <h2 id="end-h">Want to see more of our work?</h2>
+        <a class="btn" href="https://granitecitydigital.me/">Visit granitecitydigital.me</a>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="foot">
   <div class="wrap">
-    <p class="star" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 1l2.3 8.7L23 12l-8.7 2.3L12 23l-2.3-8.7L1 12l8.7-2.3z"/></svg>Northern Star Garage</p>
-    <p><b>Northern Star Garage</b> &middot; 220 N Franklin Rd, Mount Airy, NC</p>
+    <p class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1l2.3 8.7L23 12l-8.7 2.3L12 23l-2.3-8.7L1 12l8.7-2.3z"/></svg>Northern Star Garage</p>
+    <p>220 N Franklin Rd, Mount Airy, NC</p>
     <p class="right"><a class="num" href="tel:+13367891881">(336) 789-1881</a></p>
-    <p class="credit">Photos from Pexels, shown as examples. Sample site made by <a href="https://granitecitydigital.me/">Granite City Digital</a>.</p>
+    <p class="credit">Photos are examples. Sample site made by <a href="https://granitecitydigital.me/">Granite City Digital</a>.</p>
+    <!-- Footer mark. Keep this block, its CSS and its script exactly as they are. The files live in samples/mark/. -->
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
   </div>
 </footer>
 
@@ -616,6 +799,41 @@ h1,h2{font-stretch:112%;letter-spacing:-.03em;line-height:1.02}
     f.hidden=true;thanks.hidden=false;thanks.focus();
   });
   document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
 })();
 </script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "31a3f47819f449f59b28a51b74d61f30"}'></script><!-- End Cloudflare Web Analytics -->

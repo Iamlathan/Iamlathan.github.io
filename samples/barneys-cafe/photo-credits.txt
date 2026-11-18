@@ -1,4 +1,6 @@
-Photo credits for samples/barneys-cafe/ (all free under the Unsplash License, https://unsplash.com/license)
+Photo credits for samples/barneys-cafe/
+The first three are free under the Unsplash License, https://unsplash.com/license
+The rest are free under the Pexels License, https://www.pexels.com/license/
 
 hero.jpg
   Photographer: Mạnh Ngô
@@ -11,3 +13,38 @@ burger.jpg
 diner-stools.jpg
   Photographer: T
   Source: https://unsplash.com/photos/retro-diner-bar-stools-with-red-seats-and-chrome-y6DhUE1_D0w
+
+pecan-pie.jpg
+  Photographer: Regina Ferraz
+  License: Pexels License
+  Source: https://www.pexels.com/photo/4748404/
+
+patty-on-bun.jpg
+  Photographer: Xhemi Photo
+  License: Pexels License
+  Source: https://www.pexels.com/photo/15146667/
+
+patties-pan.jpg
+  Photographer: Katerina Holmes
+  License: Pexels License
+  Source: https://www.pexels.com/photo/5908046/
+
+burger-plating.jpg
+  Photographer: Katerina Holmes
+  License: Pexels License
+  Source: https://www.pexels.com/photo/5908289/
+
+checkered-cup.jpg
+  Photographer: Arturo A
+  License: Pexels License
+  Source: https://www.pexels.com/photo/14398271/
+
+red-booth.jpg
+  Photographer: cottonbro studio
+  License: Pexels License
+  Source: https://www.pexels.com/photo/6188605/
+
+patty-cheese.jpg
+  Photographer: Ron Lach
+  License: Pexels License
+  Source: https://www.pexels.com/photo/8880741/

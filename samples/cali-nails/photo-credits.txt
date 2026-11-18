@@ -1,5 +1,5 @@
 Photo credits for the Cali Nails sample site
-All three photos are free to use under the Pexels License (https://www.pexels.com/license/). They are stock examples, not photos of this business.
+All photos are free to use under the Pexels License (https://www.pexels.com/license/). They are stock examples, not photos of this business.
 
 hero.jpg
   Photographer: Gustavo Fring (@gustavo-fring) on Pexels
@@ -18,3 +18,35 @@ hands.jpg
   Source: https://www.pexels.com/photo/5238015/
   License: Pexels License
   Saved size: 1400 x 933
+
+french.jpg
+  Photographer: Gabriel Puyen (@gabrielpuyen) on Pexels
+  Source: https://www.pexels.com/photo/6135684/
+  License: Pexels License
+  Saved size: 1400 x 933
+
+fullset.jpg
+  Photographer: Gabriel Puyen (@gabrielpuyen) on Pexels
+  Source: https://www.pexels.com/photo/6135680/
+  License: Pexels License
+  Saved size: 1400 x 933
+
+chairs.jpg
+  Photographer: Gabriel Puyen (@gabrielpuyen) on Pexels
+  Source: https://www.pexels.com/photo/6135674/
+  License: Pexels License
+  Saved size: 1400 x 933
+
+detail.jpg
+  Photographer: Gustavo Fring (@gustavo-fring) on Pexels
+  Source: https://www.pexels.com/photo/7446914/
+  License: Pexels License
+  Saved size: 1400 x 933
+
+salon.jpg
+  Photographer: RDNE Stock project (@rdne) on Pexels
+  Source: https://www.pexels.com/photo/7755218/
+  License: Pexels License
+  Saved size: 1400 x 933
+
+Each photo also has a copy 800 pixels wide (name-800.jpg) for phones.
