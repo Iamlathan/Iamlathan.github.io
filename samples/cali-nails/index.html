@@ -471,9 +471,8 @@ h1,h2{letter-spacing:-.01em;line-height:1}
   .more h2{font-size:1.5rem}
   .more .btn{grid-column:1 / -1;width:100%;margin-top:var(--s-5)}
 }
-/* no fixed phone bar on this sample: the header and hero call buttons sit in the first screen, so nothing covers the footer */
-@media (max-width:760px){html{scroll-padding-bottom:0}}
-@media (max-width:640px){:root{--bar:0px}.bar{display:none}}
+/* the phone bar is 60 px plus a 1 px top line, so the page keeps a little more room than that below the footer */
+@media (max-width:640px){:root{--bar:calc(72px + env(safe-area-inset-bottom))}}
 </style>
 </head>
 <body>
