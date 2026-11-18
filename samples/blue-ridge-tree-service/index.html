@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blue Ridge Tree Service, Inc. | Tree service in Mount Airy, NC</title>
+<meta name="description" content="Blue Ridge Tree Service, Inc. is a tree service in Mount Airy, NC. Call 336 789 9712.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f4f6f3">
+<meta property="og:title" content="Blue Ridge Tree Service, Inc. | Mount Airy, NC">
+<meta property="og:description" content="Blue Ridge Tree Service, Inc. is a tree service in Mount Airy, NC. Call 336 789 9712.">
+<meta property="og:image" content="https://granitecitydigital.me/samples/blue-ridge-tree-service/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Blue Ridge Tree Service, Inc.",
+  "telephone": "+13367899712",
+  "address": {"@type": "PostalAddress", "addressLocality": "Mount Airy", "addressRegion": "NC", "addressCountry": "US"},
+  "image": "https://granitecitydigital.me/samples/blue-ridge-tree-service/hero.jpg"
+}
+</script>
+<style>
+/* 1. this mockup's own look: Blue Ridge haze, fresh sawdust, spruce green */
+:root{
+  --bg:#f4f6f3;
+  --surface:#fcfdfb;
+  --tint:#e2eae8;
+  --foot:#d4dfdc;
+  --ink:#1b231f;
+  --muted:#4d5853;
+  --line:#d0d9d6;
+  --accent:#2b5a45;
+  --accent-hover:#214837;
+  --accent-soft:#eadfca;
+  --on-accent:#f4f6f3;
+  --danger:#a3392b;
+  --shadow:27 35 31;
+  --texture:none;
+
+  --font:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Bitter",Georgia,"Times New Roman",serif;
+  --display-weight:500;
+
+  --r-ctl:6px;
+  --r-card:clamp(12px,1.3vw,14px);
+  --r-photo:clamp(14px,1.8vw,20px);
+}
+/* 2. the system: keep it the same on every mockup */
+:root{
+  --t-small:.875rem;
+  --t-body:1rem;
+  --t-lead:clamp(1.0625rem,1rem + .3vw,1.1875rem);
+  --t-h3:1.125rem;
+  --t-h2:clamp(1.875rem,1.4rem + 1.6vw,2.75rem);
+  --t-h1:clamp(2.25rem,1.4rem + 3.6vw,4.5rem);
+
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+  --sec:clamp(88px,10vw,144px);
+  --band-pad:clamp(64px,8vw,112px);
+  --off:clamp(10px,1.4vw,18px);
+
+  --sh-1:1px 1px 2px rgb(var(--shadow) / .05),2px 6px 16px -6px rgb(var(--shadow) / .14);
+  --sh-2:1px 2px 4px rgb(var(--shadow) / .06),4px 14px 32px -10px rgb(var(--shadow) / .22);
+  --sh-3:2px 4px 8px rgb(var(--shadow) / .07),8px 28px 56px -16px rgb(var(--shadow) / .30);
+
+  --wrap:1120px;
+  --m:clamp(20px,4vw,32px);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --bar:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+@media (max-width:760px){html{scroll-padding-bottom:96px}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+::selection{background:var(--accent);color:var(--on-accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3{font-family:var(--font-display);font-weight:var(--display-weight);letter-spacing:-.025em;line-height:1.08;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:var(--r-ctl)}
+.skip:focus{top:12px}
+.num{font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+
+/* buttons: raised level; hover lifts, press sinks */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2);min-height:48px;padding:0 22px;border-radius:var(--r-ctl);border:1px solid transparent;background:var(--accent);color:var(--on-accent);font:500 .9375rem/1 var(--font);text-decoration:none;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,border-color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.line{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.link{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);transition:text-decoration-color 200ms ease}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--accent-hover);box-shadow:var(--sh-2);transform:translateY(-1px)}
+  .btn.line:hover{background:var(--surface);border-color:var(--muted)}
+  .btn:active{transform:scale(.97);box-shadow:none}
+  .link:hover{text-decoration-color:var(--ink)}
+}
+
+/* sample banner */
+.sample{background:var(--tint);color:var(--muted);font-size:.8125rem;text-align:center;padding:8px var(--m);line-height:1.45}
+.sample a{color:var(--ink)}
+
+/* header */
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s-5);min-height:72px}
+.mark{display:inline-flex;align-items:center;gap:10px;font-weight:500;font-size:1rem;letter-spacing:-.01em;text-decoration:none;min-height:44px}
+.mark svg{width:22px;height:14px;flex:none;color:var(--accent)}
+.mark span{color:var(--muted);font-weight:400}
+.nav{display:flex;align-items:center;gap:28px;list-style:none;padding:0;font-size:var(--t-small)}
+.nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 200ms ease}
+.top .btn{min-height:44px;padding:0 16px;font-size:var(--t-small)}
+.top .short{display:none}
+@media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--ink)}}
+@media (max-width:880px){.nav{display:none}}
+@media (max-width:480px){.top .long{display:none}.top .short{display:inline}}
+
+/* photo cards */
+.photo{position:relative;border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-1)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.layer{position:relative;isolation:isolate}
+.layer::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--accent-soft);transform:translate(var(--off),var(--off))}
+.float{position:absolute;z-index:2;left:var(--s-5);bottom:calc(var(--s-6) * -1);max-width:min(340px,calc(100% - var(--s-7)));background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3);padding:var(--s-4) var(--s-5);display:grid;gap:2px}
+.float span{font-size:.8125rem;color:var(--muted)}
+.float a,.float p{font-size:var(--t-lead);line-height:1.35;text-decoration:none}
+.float a{min-height:32px;display:inline-flex;align-items:center;width:fit-content}
+@media (hover:hover) and (pointer:fine){.float a:hover{text-decoration:underline;text-decoration-color:var(--line)}}
+
+/* hero */
+.hero{padding-top:clamp(56px,8vw,112px)}
+.hero h1{font-size:var(--t-h1)}
+.hero h1 span{display:block}
+.hero h1 .soft{display:block;color:var(--muted)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-6) var(--s-7);align-items:end;margin-top:var(--s-6)}
+.hero-grid p{color:var(--muted);font-size:var(--t-lead);max-width:46ch}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s-3);justify-content:flex-end}
+.hero-pic{margin-top:clamp(40px,5vw,64px);margin-right:var(--off)}
+.hero-pic .photo{aspect-ratio:12/5}
+.hero-pic img{object-position:52% 42%}
+
+/* sections */
+.sec{padding-top:var(--sec)}
+.band{margin-top:var(--sec);padding-block:var(--band-pad);background:var(--tint) var(--texture)}
+.band + .sec{padding-top:var(--sec)}
+.head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-4) var(--s-7);align-items:end;padding-bottom:var(--s-6)}
+.head h2{font-size:var(--t-h2)}
+.head p{color:var(--muted);max-width:46ch;font-size:var(--t-lead)}
+
+.card{background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-1)}
+
+/* services */
+.svc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7);align-items:start}
+.svc .photo{aspect-ratio:4/5}
+.svc .photo img{object-position:48% 50%}
+.svc .layer{margin-right:var(--off)}
+.list{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--s-4)}
+.list li{display:grid;align-content:start;gap:var(--s-2);padding:var(--s-5);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-1)}
+.list h3{font-size:var(--t-h3);font-weight:600;letter-spacing:-.01em;line-height:1.3;font-family:var(--font)}
+.list p{color:var(--muted);font-size:.9375rem;max-width:44ch}
+.note{margin-top:var(--s-5);padding:var(--s-4) var(--s-5);border-radius:var(--r-card);background:var(--accent-soft);font-size:.9375rem;color:var(--ink);max-width:none}
+.note b{font-weight:600}
+
+/* how it works */
+.how{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:var(--s-7) var(--s-8);align-items:center}
+.how .layer{margin-right:var(--off);margin-bottom:var(--s-6)}
+.how .photo{aspect-ratio:4/3}
+.steps{list-style:none;padding:0;display:grid;gap:var(--s-5);counter-reset:step}
+.steps li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:2px var(--s-4);counter-increment:step}
+.steps li::before{content:counter(step);grid-row:1 / span 2;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-weight:600;font-variant-numeric:tabular-nums}
+.steps h3{font-size:var(--t-h3);font-weight:600;letter-spacing:-.01em;line-height:1.35;font-family:var(--font);padding-top:10px}
+.steps p{color:var(--muted);font-size:.9375rem;max-width:42ch}
+
+/* link cards */
+.ways{list-style:none;padding:0;display:grid;gap:var(--s-3)}
+.ways a,.ways .plain{display:grid;gap:2px;padding:var(--s-4) var(--s-5);border-radius:var(--r-card);background:var(--surface);text-decoration:none;font-size:var(--t-lead);line-height:1.35}
+.ways a{box-shadow:var(--sh-1);transition:box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.ways a:active{transform:scale(.985);box-shadow:none}
+.ways .plain{box-shadow:none;background:transparent;padding-inline:0}
+.ways span{font-size:.8125rem;color:var(--muted)}
+@media (hover:hover) and (pointer:fine){.ways a:hover{box-shadow:var(--sh-2);transform:translateY(-2px)}.ways a:active{transform:scale(.985);box-shadow:none}}
+
+/* photo strip */
+.strip{display:grid;grid-template-columns:5fr 4fr 5fr;gap:var(--s-5);align-items:start}
+.strip .photo{aspect-ratio:4/5}
+.strip .photo:nth-child(2){margin-top:var(--s-8);aspect-ratio:3/4}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7);align-items:start}
+.panel{padding:clamp(24px,3vw,40px);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3)}
+
+form{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-5) var(--s-4)}
+form[hidden]{display:none}
+.f{display:grid;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label{font-size:var(--t-small);font-weight:500}
+.f input,.f select,.f textarea{width:100%;min-height:48px;padding:11px 14px;border:1px solid var(--line);border-radius:var(--r-ctl);background:var(--bg);color:var(--ink);font:inherit;font-size:1rem;transition:border-color 200ms ease,box-shadow 200ms ease,background-color 200ms ease;appearance:none;-webkit-appearance:none}
+.f select{background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%234d5853' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:40px}
+.f textarea{min-height:120px;resize:vertical;line-height:1.5}
+.f input::placeholder,.f textarea::placeholder{color:var(--muted)}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--accent);background-color:var(--surface);box-shadow:0 0 0 3px var(--accent-soft)}
+@media (hover:hover) and (pointer:fine){.f input:hover,.f select:hover,.f textarea:hover{border-color:var(--muted)}}
+.f [aria-invalid="true"]{border-color:var(--danger)}
+.err{font-size:.8125rem;color:var(--danger)}
+.err:empty{display:none}
+.submit{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-3) var(--s-5)}
+.submit p{font-size:.8125rem;color:var(--muted)}
+.thanks[hidden]{display:none}
+.thanks:focus{outline:none}
+.thanks h3{font-size:var(--t-h2)}
+.thanks p{margin-top:var(--s-3);max-width:46ch}
+.thanks .muted{font-size:var(--t-small)}
+.thanks .btn{margin-top:var(--s-5)}
+
+/* footer */
+.foot{margin-top:var(--sec);background:var(--foot);padding-block:var(--s-7) var(--s-7);font-size:.8125rem;color:var(--muted)}
+main:has(> .band:last-child) + .foot{margin-top:0}
+.foot .wrap{display:grid;grid-template-columns:1fr auto;gap:var(--s-3) var(--s-6);align-items:center}
+.foot b{color:var(--ink);font-weight:600}
+.foot a{color:var(--muted)}
+.foot .right{text-align:right}
+.foot .right a{display:inline-flex;align-items:center;min-height:44px}
+.foot .credit{grid-column:1/-1;max-width:none}
+
+/* footer mark: a 2 s logo build that plays once in view, muted; the still logo shows until it really plays and is the fallback */
+.gcd{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:14px;margin-top:12px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font-weight:500}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--tint)}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
+
+/* phone bar */
+.bar{display:none}
+
+/* motion: slow, once, opacity and a few pixels */
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;transform:translateY(16px);transition:opacity 700ms var(--ease),transform 700ms var(--ease)}
+  .js .rv.in{opacity:1;transform:none}
+  .js .list .rv:nth-child(2),.js .steps .rv:nth-child(2),.js .strip .rv:nth-child(2){transition-delay:90ms}
+  .js .list .rv:nth-child(3),.js .steps .rv:nth-child(3),.js .strip .rv:nth-child(3){transition-delay:180ms}
+  .js .list .rv:nth-child(4){transition-delay:270ms}
+  .hero .rise{animation:rise 800ms var(--ease) both}
+  .hero .rise:nth-child(2){animation-delay:80ms}
+  .hero-pic.rise{animation-delay:160ms}
+  .hero-pic img{animation:settle 1600ms var(--ease) both}
+}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes settle{from{transform:scale(1.05)}to{transform:none}}
+
+/* tablet */
+@media (max-width:960px){
+  .hero-grid,.head,.svc,.how,.contact{grid-template-columns:minmax(0,1fr)}
+  .cta{justify-content:flex-start}
+  .svc .photo{aspect-ratio:16/10}
+}
+
+/* phone */
+@media (max-width:640px){
+  :root{--bar:calc(60px + env(safe-area-inset-bottom));--r-photo:16px;--r-card:14px;--off:10px}
+  .hero-pic .photo{aspect-ratio:4/3}
+  .hero-pic img{object-position:52% 40%}
+  .float{position:relative;left:auto;bottom:auto;margin:calc(var(--s-7) * -1) var(--s-4) 0;max-width:none}
+  .cta .btn{flex:1 1 auto}
+  .head{padding-bottom:var(--s-5)}
+  .strip{grid-template-columns:1fr 1fr;gap:var(--s-3)}
+  .strip .photo:first-child{grid-column:1/-1;aspect-ratio:16/10}
+  .strip .photo:nth-child(2){margin-top:0;aspect-ratio:4/5}
+  form{grid-template-columns:minmax(0,1fr)}
+  .submit .btn{width:100%}
+  .foot .wrap{grid-template-columns:minmax(0,1fr)}
+  .foot .right{text-align:left}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+  .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:60px;font-weight:500;font-size:1rem;text-decoration:none;color:var(--ink)}
+  .bar a:first-child{background:var(--accent);color:var(--on-accent)}
+  .bar a:active{opacity:.85}
+  .bar svg{width:17px;height:17px}
+}
+@media (max-width:640px) and (max-height:740px){
+  body .hero{padding-top:var(--s-6)}
+  body .hero h1{font-size:clamp(2rem,1.5rem + 2.4vw,2.5rem)}
+  body .hero-grid{margin-top:var(--s-4);gap:var(--s-4)}
+  body .hero p{font-size:1rem}
+}
+@media (max-width:420px) and (max-height:600px){
+  body .hero h1{font-size:1.875rem}
+  body .hero p{font-size:.9375rem;line-height:1.5}
+}
+
+/* 3. this mockup's own touches */
+/* the name: three soft Blue Ridge lines rise out of the page into every band and the footer, far ridge palest blue, near ridge the band's own color */
+.band,.foot{position:relative}
+.band::before,.foot::before{content:"";position:absolute;left:0;right:0;bottom:calc(100% - 1px);height:clamp(26px,4.4vw,62px);pointer-events:none;background:center bottom/100% 100% no-repeat}
+.band::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath d='M0 80V40Q90 16 210 30T440 18T690 30T930 10T1170 28T1440 20V80Z' fill='%23d4e0e2'/%3E%3Cpath d='M0 80V54Q130 34 270 50T560 42T840 52T1120 36T1440 50V80Z' fill='%23dbe4e3'/%3E%3Cpath d='M0 80V68Q170 54 350 66T710 60T1070 68T1440 60V80Z' fill='%23e2eae8'/%3E%3C/svg%3E")}
+.foot::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath d='M0 80V36Q120 14 250 30T520 16T790 32T1050 12T1290 30T1440 22V80Z' fill='%23c9d8db'/%3E%3Cpath d='M0 80V52Q150 32 300 48T610 40T900 52T1180 34T1440 46V80Z' fill='%23cfdbdb'/%3E%3Cpath d='M0 80V68Q190 52 380 66T760 58T1110 68T1440 58V80Z' fill='%23d4dfdc'/%3E%3C/svg%3E")}
+
+/* after a storm: a wide photo of a fallen tree with a tall photo of a clear yard laid over its corner */
+.storm{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:var(--s-7) var(--s-8);align-items:end}
+.pair{position:relative;padding-right:clamp(48px,11vw,150px);padding-bottom:clamp(56px,9vw,128px)}
+.pair .wide{margin-right:var(--off)}
+.pair .wide .photo{aspect-ratio:3/2}
+.pair .wide img{object-position:40% 55%}
+.pair .tall{position:absolute;right:0;bottom:0;width:36%;z-index:2}
+.pair .tall .photo{aspect-ratio:4/5;box-shadow:0 0 0 6px var(--bg),var(--sh-3)}
+.storm .say{display:grid;gap:var(--s-4);padding-bottom:var(--s-5)}
+.storm .say p{color:var(--muted);font-size:var(--t-lead);max-width:34ch}
+.storm .say p b{color:var(--ink);font-weight:600}
+.how .photo img{object-position:50% 50%}
+@media (max-width:960px){
+  .storm{grid-template-columns:minmax(0,1fr)}
+  .storm .say{padding-bottom:0}
+}
+@media (max-width:640px){
+  .pair{padding-right:20%;padding-bottom:22%}
+  .pair .tall{width:44%}
+  .pair .tall .photo{box-shadow:0 0 0 4px var(--bg),var(--sh-3)}
+}
+@media (max-width:420px){.mark span{display:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="sample" role="note">Sample site made for Blue Ridge Tree Service, Inc. by <a href="https://granitecitydigital.me/">Granite City Digital</a>.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Blue Ridge Tree Service, Inc., back to top">
+      <svg viewBox="0 0 22 14" aria-hidden="true"><path d="M1 13L7 4.5l4 5 3-3.5 7 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      Blue Ridge <span>Tree Service, Inc.</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#storm">After a storm</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#photos">Photos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn line" href="tel:+13367899712"><span class="long num">336 789 9712</span><span class="short">Call</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap hero" id="top" aria-labelledby="hero-h">
+    <h1 class="rise" id="hero-h"><span>Tree service</span> <span class="soft">in Mount Airy.</span></h1>
+    <div class="hero-grid rise">
+      <div>
+        <p>Blue Ridge Tree Service, Inc. is a tree service in Mount Airy, NC. Call to talk about the trees on your property and what you want done with them.</p>
+      </div>
+      <div class="cta">
+        <a class="btn" href="tel:+13367899712">Call <span class="num">336 789 9712</span></a>
+        <a class="btn line" href="#contact">Send a request</a>
+      </div>
+    </div>
+    <div class="hero-pic layer rise">
+      <figure class="photo"><img src="hero.jpg" width="1600" height="1067" fetchpriority="high" alt="A climber in a harness cutting limbs high in a large bare tree against a gray sky"></figure>
+      <div class="float"><span>Call Blue Ridge Tree Service</span><a class="num" href="tel:+13367899712">336 789 9712</a></div>
+    </div>
+  </section>
+
+  <section class="band" id="services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="svc-h">Services</h2>
+        <p>Tree work from the top of the canopy down to the stump.</p>
+      </div>
+      <div class="svc">
+        <div class="layer"><figure class="photo"><img src="services.jpg" width="1600" height="1200" alt="A broken limb on the ground beside the trunk it split from, cut into pieces"></figure></div>
+        <div>
+          <ul class="list">
+            <li class="rv"><h3>Tree removal</h3><p>Taking down trees that are dead, damaged or no longer wanted.</p></li>
+            <li class="rv"><h3>Trimming and pruning</h3><p>Cutting back overgrown or dead limbs and shaping the canopy.</p></li>
+            <li class="rv"><h3>Storm cleanup</h3><p>Clearing fallen trees and broken limbs after wind or ice.</p></li>
+            <li class="rv"><h3>Stump grinding</h3><p>Grinding down the stump a tree leaves behind.</p></li>
+          </ul>
+          <p class="note rv"><b>Have a tree you are worried about?</b> Call 336 789 9712 and talk it over.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="storm" aria-labelledby="storm-h">
+    <div class="head rv">
+      <h2 id="storm-h">After a storm</h2>
+      <p>Wind and ice can bring down a limb or a whole tree across the yard.</p>
+    </div>
+    <div class="storm">
+      <div class="pair">
+        <div class="wide layer"><figure class="photo"><img src="storm.jpg" width="1600" height="1067" alt="A tall evergreen pulled out of the ground by its roots, lying across a wet lawn"></figure></div>
+        <div class="tall"><figure class="photo"><img src="yard.jpg" width="1200" height="1500" alt="A clear backyard lawn under two large shade trees, with a fence behind"></figure></div>
+      </div>
+      <div class="say rv">
+        <p><b>Something came down?</b> Call 336 789 9712 and say what fell and where it landed.</p>
+        <a class="btn" href="tel:+13367899712">Call <span class="num">336 789 9712</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="how" aria-labelledby="how-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="how-h">How it works</h2>
+        <p>It starts with a phone call or a short request.</p>
+      </div>
+      <div class="how">
+        <div class="layer"><figure class="photo"><img src="how.jpg" width="1600" height="1067" alt="The flat top of a cut stump seen from above, with ivy growing over it"></figure></div>
+        <ol class="steps">
+          <li class="rv"><h3>Call or send a request</h3><p>Call 336 789 9712 or fill in the form below.</p></li>
+          <li class="rv"><h3>Describe the trees</h3><p>Say which trees, roughly how big, and what sits near them, like a fence, a shed or a driveway.</p></li>
+          <li class="rv"><h3>Decide what comes next</h3><p>Ask your questions and choose how you want to go ahead.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="photos" aria-label="Photos">
+    <div class="strip">
+      <figure class="photo"><img src="stump.jpg" width="1200" height="1500" alt="An old tree stump standing in tall green grass"></figure>
+      <figure class="photo"><img src="rounds.jpg" width="1200" height="1600" loading="lazy" alt="Cut log rounds stacked on top of each other, showing their rings"></figure>
+      <figure class="photo"><img src="chips.jpg" width="1200" height="1500" loading="lazy" alt="A pile of wood chips in low sunlight"></figure>
+    </div>
+  </section>
+
+  <section class="band" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="contact-h">Send a request</h2>
+        <p>Tell us about the trees and how to reach you.</p>
+      </div>
+      <div class="contact">
+        <ul class="ways rv">
+          <li><a class="num" href="tel:+13367899712"><span>Call</span>336 789 9712</a></li>
+          <li><div class="plain"><span>Based in</span><p>Mount Airy, NC</p></div></li>
+        </ul>
+
+        <div class="panel rv">
+          <form id="qform" method="post" novalidate>
+            <div class="f">
+              <label for="q-name">Your name</label>
+              <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+              <span class="err" id="e-name"></span>
+            </div>
+            <div class="f">
+              <label for="q-phone">Phone</label>
+              <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Your phone number" required aria-describedby="e-phone">
+              <span class="err" id="e-phone"></span>
+            </div>
+            <div class="f full">
+              <label for="q-town">Town</label>
+              <select id="q-town" name="town" required aria-describedby="e-town">
+                <option value="">Choose your town</option>
+                <option>Mount Airy</option>
+                <option>Somewhere else</option>
+              </select>
+              <span class="err" id="e-town"></span>
+            </div>
+            <div class="f full">
+              <label for="q-msg">What do you need done?</label>
+              <textarea id="q-msg" name="message" required aria-describedby="e-msg" placeholder="A few words about the trees and what you want done"></textarea>
+              <span class="err" id="e-msg"></span>
+            </div>
+            <div class="submit">
+              <button class="btn" type="submit">Send request</button>
+              <p>We only use your number to call you about this job.</p>
+            </div>
+          </form>
+          <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
+            <h3 id="t-title">Thanks. We have it.</h3>
+            <p id="t-body">We will call you back soon.</p>
+            <p class="muted">This is a sample site, so nothing was actually sent.</p>
+            <button class="btn line" type="button" id="t-again">Send another request</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><b>Blue Ridge Tree Service, Inc.</b> &middot; Mount Airy, NC</p>
+    <p class="right"><a class="num" href="tel:+13367899712">336 789 9712</a></p>
+    <p class="credit">Photos by Dmytro Glazunov, Christi M, Marek Studzinski, Josh Lemmon, Manja Vitolic, Naoki Suzuki, Anna Evans and Regard Vrai IDF on Unsplash, shown as examples.</p>
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a href="tel:+13367899712"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>
+  <a href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 6.5h16v11H4z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4.5 7l7.5 6 7.5-6"/></svg>Request</a>
+</nav>
+
+<script>
+(function(){
+  /* quiet reveal, once per element */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+  addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+
+  /* quote form (runs only when the form is on the page) */
+  var f=document.getElementById('qform');
+  if(!f)return;
+  var F=f.elements,thanks=document.getElementById('thanks');
+  function setErr(id,msg){var i=document.getElementById(id),e=document.getElementById(i.getAttribute('aria-describedby'));e.textContent=msg;if(msg){i.setAttribute('aria-invalid','true')}else{i.removeAttribute('aria-invalid')}return !msg}
+  function check(){
+    var ok=true,first=null;
+    function run(id,msg){var good=setErr(id,msg);if(!good&&!first)first=id;ok=ok&&good}
+    var name=F['name'].value.trim(),phone=F['phone'].value.replace(/\D/g,''),msg=F['message'].value.trim();
+    run('q-name',name.length<2?'Please tell us your name.':'');
+    run('q-phone',phone.length<10?'Please enter a 10 digit phone number.':'');
+    run('q-town',!F['town'].value?'Please choose your town.':'');
+    run('q-msg',msg.length<5?'A few words about the job helps us call back with the right answer.':'');
+    if(first)document.getElementById(first).focus();
+    return ok;
+  }
+  ['q-name','q-phone','q-town','q-msg'].forEach(function(id){
+    var el=document.getElementById(id);
+    el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){if(el.getAttribute('aria-invalid'))setErr(id,'')});
+  });
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!check())return;
+    var name=F['name'].value.trim().split(' ')[0],d=F['phone'].value.replace(/\D/g,'').slice(-10);
+    var nice='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6);
+    document.getElementById('t-title').textContent='Thanks, '+name+'. We have it.';
+    document.getElementById('t-body').textContent='We will call you at '+nice+' soon.';
+    f.hidden=true;thanks.hidden=false;thanks.focus();
+  });
+  document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
+})();
+</script>
+</body>
+</html>

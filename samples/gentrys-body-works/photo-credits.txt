@@ -1,16 +1,41 @@
-Photo credits for gentrys-body-works. All photos from Pexels, free to use under the Pexels License (https://www.pexels.com/license/).
+Photo credits for gentrys-body-works. Photos from Pexels (Pexels License, https://www.pexels.com/license/) and Unsplash (Unsplash License, https://unsplash.com/license). Each photo also has a smaller copy with -800 in its name.
 
 hero.jpg
   Photographer: Pexels user dextarstudio (https://www.pexels.com/@dextarstudio/)
   License: Pexels License
   Source: https://www.pexels.com/photo/14615260/
 
-tires.jpg
-  Photographer: Pexels user tami (https://www.pexels.com/@tami/)
+paint-booth.jpg
+  Photographer: Vladan Rajkovic (https://www.pexels.com/@vladan-rajkovic-159003801/)
   License: Pexels License
-  Source: https://www.pexels.com/photo/19499388/
+  Source: https://www.pexels.com/photo/18136808/
+
+buff-red.jpg
+  Photographer: Khunkorn Laowisit (https://www.pexels.com/@khunkorn-laowisit-1359149/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/5233262/
 
 steps-buff.jpg
   Photographer: Khunkorn Laowisit (https://www.pexels.com/@khunkorn-laowisit-1359149/)
   License: Pexels License
   Source: https://www.pexels.com/photo/5233261/
+
+finish-door.jpg
+  Photographer: Khunkorn Laowisit (https://www.pexels.com/@khunkorn-laowisit-1359149/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/5233257/
+
+new-tires.jpg
+  Photographer: Shadrach Warid
+  License: Unsplash License
+  Source: https://unsplash.com/photos/four-vehicle-tires--gqb3xbGa5Y
+
+dent-pins.jpg
+  Photographer: Erik Mclean
+  License: Unsplash License
+  Source: https://unsplash.com/photos/car-body-being-spot-welded-in-a-workshop-r3zJqdmByvI
+
+tire-rack.jpg
+  Photographer: Pexels user olly (https://www.pexels.com/@olly/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/3806252/

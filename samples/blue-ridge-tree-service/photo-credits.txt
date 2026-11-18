@@ -1,0 +1,52 @@
+Photo credits for samples/blue-ridge-tree-service/
+All eight are from Unsplash, under the Unsplash License (free to use, no attribution required). They are shown as example photos, not Blue Ridge Tree Service, Inc.'s own work.
+
+hero.jpg (1600 x 1067)
+  Photographer: Dmytro Glazunov
+  Source: https://unsplash.com/photos/oqYrgDrs9Xk
+  License: Unsplash License
+  Shows: a climber in a harness cutting limbs high in a large bare tree against a gray sky
+
+services.jpg (1600 x 1200)
+  Photographer: Christi M
+  Source: https://unsplash.com/photos/XHZ1AjwJNPw
+  License: Unsplash License
+  Shows: a broken limb on the ground beside the trunk it split from, cut into pieces
+
+storm.jpg (1600 x 1067)
+  Photographer: Marek Studzinski
+  Source: https://unsplash.com/photos/KA93LuTHhpI
+  License: Unsplash License
+  Shows: a tall evergreen pulled out of the ground by its roots, lying across a wet lawn
+
+yard.jpg (1200 x 1500)
+  Photographer: Josh Lemmon
+  Source: https://unsplash.com/photos/f8Plt-m0mlI
+  License: Unsplash License
+  Shows: a clear backyard lawn under two large shade trees, with a fence behind
+
+how.jpg (1600 x 1067)
+  Photographer: Manja Vitolic
+  Source: https://unsplash.com/photos/w54MZIcFb5o
+  License: Unsplash License
+  Shows: the flat top of a cut stump seen from above, with ivy growing over it
+
+stump.jpg (1200 x 1500)
+  Photographer: Naoki Suzuki
+  Source: https://unsplash.com/photos/LinE0meipto
+  License: Unsplash License
+  Shows: an old tree stump standing in tall green grass
+
+rounds.jpg (1200 x 1600)
+  Photographer: Anna Evans
+  Source: https://unsplash.com/photos/u0OJFEpV5R4
+  License: Unsplash License
+  Shows: cut log rounds stacked on top of each other
+
+chips.jpg (1200 x 1500)
+  Photographer: Regard Vrai IDF
+  Source: https://unsplash.com/photos/A1i56alFkzE
+  License: Unsplash License
+  Shows: a pile of wood chips in low sunlight
+
+Downloaded 2026-11-18. Photographer names come from each photo's Unsplash listing.

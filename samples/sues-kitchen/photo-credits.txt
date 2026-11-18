@@ -1,0 +1,51 @@
+Photo credits for sues-kitchen. Photos from Pexels (Pexels License, https://www.pexels.com/license/) and Unsplash (Unsplash License, https://unsplash.com/license).
+
+hero.jpg
+  Photographer: mindeurle lee (Unsplash)
+  License: Unsplash License
+  Source: https://unsplash.com/photos/wooden-table-and-chairs-bathed-in-sunlight-ozDFb-HMi6w
+
+plate.jpg
+  Photographer: Shameel mukkath (Pexels)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/5175612/
+
+kitchen.jpg
+  Photographer: Mateusz Feliksik (Pexels)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/13422423/
+
+dining-room.jpg
+  Photographer: Pexels user qjpioneer
+  License: Pexels License
+  Source: https://www.pexels.com/photo/8495947/
+
+to-go.jpg
+  Photographer: Brett Wharton (Unsplash)
+  License: Unsplash License
+  Source: https://unsplash.com/photos/a-plate-of-food-qsfHZhyJYV8
+
+outside.jpg
+  Photographer: Owen (Pexels user owen-outdoors)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/28308521/
+
+sides-1.jpg
+  Photographer: Tom Davis (Pexels)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/30146054/
+
+sides-2.jpg
+  Photographer: David Todd McCarty (Unsplash)
+  License: Unsplash License
+  Source: https://unsplash.com/photos/green-beans-with-bacon-in-a-crystal-bowl-kc4ijL5im4Q
+
+sides-3.jpg
+  Photographer: Pexels user haydenplus1
+  License: Pexels License
+  Source: https://www.pexels.com/photo/9397238/
+
+plate-sides.jpg
+  Photographer: Sylwester Ficek (Pexels)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/12653368/

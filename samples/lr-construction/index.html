@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>LR Construction, LLC | Roofing, siding and construction in Dobson, NC</title>
-<meta name="description" content="LR Construction, LLC is a roofing, siding and construction company based in Dobson, NC. Call (336) 374-2402.">
+<meta name="description" content="LR Construction, LLC is a roofing, siding and construction company based in Dobson, NC, from roof repair to installation and maintenance services. Call (336) 374 2402.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#f6f5f1">
 <meta property="og:title" content="LR Construction, LLC | Dobson, NC">
-<meta property="og:description" content="LR Construction, LLC is a roofing, siding and construction company based in Dobson, NC. Call (336) 374-2402.">
-<meta property="og:image" content="https://granitecitydigital.me/samples/lr-construction/hero.jpg">
+<meta property="og:description" content="Roofing, siding and construction based in Dobson, NC, from roof repair to installation and maintenance services. Call (336) 374 2402.">
+<meta property="og:image" content="https://granitecitydigital.me/samples/lr-construction/roofs.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
@@ -25,62 +25,85 @@
   "telephone": "+13363742402",
   "address": {"@type": "PostalAddress", "addressLocality": "Dobson", "addressRegion": "NC", "addressCountry": "US"},
   "sameAs": ["https://www.facebook.com/lrconstructionllc171/"],
-  "image": "https://granitecitydigital.me/samples/lr-construction/hero.jpg"
+  "image": "https://granitecitydigital.me/samples/lr-construction/roofs.jpg"
 }
 </script>
 <style>
+/* LR Construction, LLC: primed cream board, deep forest green for actions and the roof line, a pale wash of the same green behind photos. Hanken Grotesk, light and large for headings. */
 :root{
   --bg:#f6f5f1;
+  --surface:#fdfcf9;
   --tint:#eeece6;
   --ink:#191b1a;
-  --muted:#5d605c;
+  --muted:#5a5d59;
   --line:#dcd9d1;
   --accent:#2f4f45;
   --accent-hover:#25413a;
+  --accent-soft:#dfe7e2;
   --on-accent:#f6f5f1;
+  --on-accent-muted:#cfdcd5;
   --danger:#a3392b;
+  --shadow:24 38 33;
+  --texture:radial-gradient(rgb(var(--shadow) / .06) 1px,transparent 1.3px) 0 0/24px 24px;
 
   --font:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+
+  --r-ctl:8px;
+  --r-card:clamp(14px,1.4vw,18px);
+  --r-photo:clamp(16px,2vw,24px);
+}
+/* the system: type scale, spacing scale, three shadow levels */
+:root{
   --t-small:.875rem;
   --t-body:1rem;
   --t-lead:clamp(1.0625rem,1rem + .3vw,1.1875rem);
-  --t-h3:1.0625rem;
-  --t-h2:clamp(1.75rem,1.35rem + 1.5vw,2.5rem);
-  --t-h1:clamp(2.125rem,1.4rem + 3.4vw,4.25rem);
+  --t-h3:1.125rem;
+  --t-h2:clamp(1.875rem,1.4rem + 1.6vw,2.75rem);
+  --t-h1:clamp(2.125rem,1.3rem + 3vw,3.75rem);
+
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+  --sec:clamp(88px,10vw,144px);
+  --band-pad:clamp(64px,8vw,112px);
+  --off:clamp(10px,1.4vw,18px);
+
+  /* one light from straight above, so every shadow falls straight down and grows with the level.
+     page: none. raised: cards, photos, buttons. floating: cards over a photo edge, the form panel. */
+  --sh-1:0 1px 2px rgb(var(--shadow) / .06),0 6px 16px -6px rgb(var(--shadow) / .16);
+  --sh-2:0 2px 4px rgb(var(--shadow) / .07),0 14px 32px -10px rgb(var(--shadow) / .24);
+  --sh-3:0 4px 8px rgb(var(--shadow) / .08),0 28px 56px -16px rgb(var(--shadow) / .32);
 
   --wrap:1120px;
   --m:clamp(20px,4vw,32px);
-  --sec:clamp(88px,10vw,144px);
   --ease:cubic-bezier(.23,1,.32,1);
   --bar:0px;
 }
 *,*::before,*::after{box-sizing:border-box}
 *{margin:0}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+@media (max-width:760px){html{scroll-padding-bottom:96px}} /* keyboard focus never lands under the phone bar */
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
 ::selection{background:var(--accent);color:var(--on-accent)}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 h1,h2,h3{font-weight:300;letter-spacing:-.025em;line-height:1.08;text-wrap:balance}
 p{text-wrap:pretty}
 .wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
 .vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:4px}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:var(--r-ctl)}
 .skip:focus{top:12px}
 .num{font-variant-numeric:tabular-nums}
 .muted{color:var(--muted)}
 
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:4px;border:1px solid transparent;background:var(--accent);color:var(--on-accent);font:500 .9375rem/1 var(--font);text-decoration:none;cursor:pointer;transition:background-color 180ms ease,border-color 180ms ease,transform 140ms var(--ease)}
-.btn:active{transform:scale(.97)}
-.btn.line{background:transparent;color:var(--ink);border-color:#c7c4bb}
-.link{color:var(--ink);text-decoration:underline;text-decoration-color:#b9b6ad;transition:text-decoration-color 180ms ease}
+/* buttons: raised level; hover lifts, press sinks */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2);min-height:48px;padding:0 22px;border-radius:var(--r-ctl);border:1px solid transparent;background:var(--accent);color:var(--on-accent);font:500 .9375rem/1 var(--font);text-decoration:none;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,border-color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.line{background:var(--surface);color:var(--ink);border-color:var(--line)}
 @media (hover:hover) and (pointer:fine){
-  .btn:hover{background:var(--accent-hover)}
-  .btn.line:hover{background:var(--tint);border-color:#b3b0a6}
-  .link:hover{text-decoration-color:var(--ink)}
+  .btn:hover{background:var(--accent-hover);box-shadow:var(--sh-2);transform:translateY(-1px)}
+  .btn.line:hover{background:var(--surface);border-color:var(--muted)}
+  .btn:active{transform:scale(.97);box-shadow:none}
 }
 
 /* sample banner */
@@ -89,135 +112,172 @@ p{text-wrap:pretty}
 
 /* header */
 .top{border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:68px}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s-5);min-height:72px}
 .mark{display:inline-flex;align-items:center;gap:10px;font-weight:500;font-size:1rem;letter-spacing:-.01em;text-decoration:none;min-height:44px}
 .mark svg{width:22px;height:14px;flex:none;color:var(--accent)}
 .mark span{color:var(--muted);font-weight:400}
 .nav{display:flex;align-items:center;gap:28px;list-style:none;padding:0;font-size:var(--t-small)}
-.nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 180ms ease}
-.nav a:hover{color:var(--ink)}
-.top .btn{min-height:40px;padding:0 14px;font-size:var(--t-small)}
+.nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 200ms ease}
+.top .btn{min-height:44px;padding:0 16px;font-size:var(--t-small)}
 .top .short{display:none}
+@media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--ink)}}
 @media (max-width:880px){.nav{display:none}}
 @media (max-width:480px){.top .long{display:none}.top .short{display:inline}}
 
-/* hero */
-.hero{padding-top:clamp(56px,8vw,112px)}
+/* photo cards: one radius, one treatment */
+.photo{position:relative;border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-1)}
+.photo img{width:100%;height:100%;object-fit:cover}
+/* layered photo: a pale green block sits behind the card, dropped straight down like its shadow */
+.layer{position:relative;isolation:isolate}
+.layer::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--accent-soft);transform:translateY(var(--off)) scaleX(.97)}
+
+/* hero: the roof photo carries the first screen, the words sit on a cream plate laid over its lower edge */
+.hero{padding-top:clamp(24px,3vw,40px)}
+.hero-pic .photo{aspect-ratio:16/7}
+.hero-pic img{object-position:50% 40%}
+.hero-under{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:var(--s-6) var(--s-8);align-items:end;margin-top:calc(clamp(96px,11vw,168px) * -1);padding-left:clamp(16px,3vw,48px)}
+.plate{background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3);padding:clamp(24px,3.4vw,48px)}
 .hero h1{font-size:var(--t-h1)}
-.hero h1 span{display:block}
-.hero h1 .soft{display:block;color:#6e706a}
-.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px 48px;align-items:end;margin-top:28px}
-.hero-grid p{color:var(--muted);font-size:var(--t-lead);max-width:46ch}
-.cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
-.facts{margin-top:20px;font-size:var(--t-small);color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px;list-style:none;padding:0}
-.facts li+li::before{content:"\00b7";margin-right:10px;color:#a3a59f}
-.hero-pic{margin-top:clamp(40px,5vw,64px);aspect-ratio:12/5;overflow:hidden;border-radius:4px;background:var(--tint)}
-.hero-pic img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+.hero h1 .soft{color:var(--muted)}
+.plate p{margin-top:var(--s-4);color:var(--muted);font-size:var(--t-lead);max-width:48ch}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s-3);margin-top:var(--s-5)}
+.facts{list-style:none;padding:0;display:grid;gap:var(--s-3);font-size:.9375rem;align-self:start;margin-top:calc(clamp(96px,11vw,168px) + var(--s-6))}
+.facts li{display:flex;align-items:center;gap:var(--s-3);padding-bottom:var(--s-3);border-bottom:1px solid var(--line)}
+.facts li:last-child{border-bottom:0;padding-bottom:0}
+.facts svg{width:18px;height:12px;flex:none;color:var(--accent)}
+.facts a{text-decoration:none;min-height:32px;display:inline-flex;align-items:center}
+@media (hover:hover) and (pointer:fine){.facts a:hover{text-decoration:underline;text-decoration-color:var(--line)}}
 
 /* sections */
 .sec{padding-top:var(--sec)}
-.head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:16px 48px;align-items:baseline;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.band{margin-top:var(--sec);padding-block:var(--band-pad);background:var(--tint) var(--texture)}
+.head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-4) var(--s-7);align-items:end;padding-bottom:var(--s-7)}
 .head h2{font-size:var(--t-h2)}
-.head p{color:var(--muted);max-width:46ch}
+.head p{color:var(--muted);max-width:46ch;font-size:var(--t-lead)}
+.card{background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-1)}
 
-/* services */
-.svc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px 48px;margin-top:40px;align-items:start}
-.svc figure{border-radius:4px;overflow:hidden;background:var(--tint);aspect-ratio:4/3}
-.svc figure img{width:100%;height:100%;object-fit:cover;object-position:52% 50%}
-.list{list-style:none;padding:0}
-.list li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;padding:18px 0;border-bottom:1px solid var(--line)}
-.list li:first-child{padding-top:0}
-.list h3{font-size:var(--t-h3);font-weight:500;letter-spacing:-.01em;line-height:1.35}
-.list p{grid-column:1;color:var(--muted);font-size:.9375rem;max-width:44ch}
-.list .price{grid-column:2;grid-row:1;font-size:.9375rem;white-space:nowrap;text-align:right}
-.note{margin-top:20px;font-size:.9375rem;color:var(--muted);max-width:50ch}
-.note b{color:var(--ink);font-weight:500}
+/* from the roof down: three layers stacked in the order of the building, each one hangs off a rail line */
+.courses{position:relative;display:grid;gap:clamp(56px,7vw,104px)}
+.course{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:var(--s-7) var(--s-9);align-items:center}
+.course.flip .pic{order:2}
+.course .pic{position:relative;margin-right:var(--off)}
+.course .photo{aspect-ratio:5/4}
+.where{display:flex;align-items:center;gap:var(--s-3);font-size:var(--t-small);font-weight:500;color:var(--accent)}
+.where svg{width:40px;height:22px;flex:none}
+.where svg .on{fill:var(--accent)}
+.where svg .off{fill:none;stroke:var(--accent);stroke-width:1.5;opacity:.45}
+.course h3{margin-top:var(--s-3);font-size:clamp(2rem,1.4rem + 2vw,3rem)}
+.say{margin-top:var(--s-4);color:var(--muted);font-size:var(--t-lead);max-width:44ch}
+.parts{list-style:none;padding:0;margin-top:var(--s-5);display:grid;gap:var(--s-3)}
+.parts li{padding:var(--s-4) var(--s-5);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-1);display:grid;gap:2px}
+.parts h4{font-size:1rem;font-weight:600;letter-spacing:-.005em}
+.parts p{color:var(--muted);font-size:.9375rem}
+.course .btn{margin-top:var(--s-5)}
+.tag{position:absolute;z-index:2;left:var(--s-5);bottom:calc(var(--s-5) * -1);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3);padding:var(--s-3) var(--s-5);font-size:.9375rem;max-width:min(320px,calc(100% - var(--s-7)))}
+.tag b{font-weight:600}
 
-/* price helper */
-.helper{margin-top:32px;padding:20px;background:var(--tint);border-radius:4px;display:grid;gap:12px}
-.helper[hidden]{display:none}
-.helper label{font-size:var(--t-small);font-weight:500}
-.helper .row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
-.select{appearance:none;-webkit-appearance:none;min-height:44px;padding:0 40px 0 12px;border:1px solid #cfccc3;border-radius:4px;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%235d605c' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;color:var(--ink);font:inherit;font-size:.9375rem}
-.est{font-size:.9375rem;color:var(--muted)}
-.est b{color:var(--ink);font-weight:500}
-.helper .link{font-size:.9375rem;width:fit-content}
+/* where is the trouble: a drawn wall section you can tap, and the call checklist for that part */
+.pick{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-7) var(--s-8);align-items:center}
+.draw{position:relative;padding:clamp(16px,3vw,40px);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-1)}
+.draw svg{display:block;width:100%;height:auto}
+.draw .shape{fill:var(--bg);stroke:#8d908a;stroke-width:1.5;stroke-linejoin:round;transition:fill 240ms ease,stroke 240ms ease}
+.draw .grain{fill:none;stroke:#b4b6ae;stroke-width:1.25;stroke-linecap:round;transition:stroke 240ms ease}
+.draw .ground{stroke:#8d908a;stroke-width:1.5;stroke-linecap:round}
+.chip{position:absolute;transform:translate(-50%,-50%);display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:88px;padding:0 18px;border-radius:999px;background:var(--surface);color:var(--ink);border:1px solid var(--line);box-shadow:var(--sh-2);font-weight:500;font-size:.9375rem;cursor:pointer;user-select:none;-webkit-user-select:none;transition:background-color 200ms ease,color 200ms ease,border-color 200ms ease,transform 160ms var(--ease)}
+.chip:active{transform:translate(-50%,-50%) scale(.96)}
+.c-roof{left:50%;top:27%}
+.c-wall{left:33%;top:66%}
+.c-frame{left:72%;top:66%}
+@media (hover:hover) and (pointer:fine){.chip:hover{border-color:var(--accent)}}
+/* each radio sits inside its own chip, so keyboard focus scrolls to the chip itself */
+.chip:has(input:checked){background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.chip:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:3px}
+.pick:has(#pk-roof:checked) .l-roof .shape,.pick:has(#pk-wall:checked) .l-wall .shape,.pick:has(#pk-frame:checked) .l-frame .shape{fill:var(--accent-soft);stroke:var(--accent)}
+.pick:has(#pk-roof:checked) .l-roof .grain,.pick:has(#pk-wall:checked) .l-wall .grain,.pick:has(#pk-frame:checked) .l-frame .grain{stroke:var(--accent)}
+.tips{padding:clamp(24px,3vw,40px);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3)}
+/* browsers without :has show all three lists, so nothing is ever hidden */
+@supports selector(:has(a)){
+  .tip{display:none}
+  .pick:has(#pk-roof:checked) .t-roof,.pick:has(#pk-wall:checked) .t-wall,.pick:has(#pk-frame:checked) .t-frame{display:block}
+}
+.tip+.tip{margin-top:var(--s-5)}
+@supports selector(:has(a)){.tip+.tip{margin-top:0}}
+.tips .lbl{font-size:var(--t-small);font-weight:500;color:var(--accent)}
+.tip h3{margin-top:var(--s-2);font-size:clamp(1.5rem,1.2rem + 1vw,2rem)}
+.ticks{list-style:none;padding:0;margin-top:var(--s-4);display:grid;gap:var(--s-3)}
+.ticks li{position:relative;padding-left:26px;font-size:1rem}
+.ticks li::before{content:"";position:absolute;left:0;top:.5em;width:14px;height:8px;border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg)}
+.tips .btn{margin-top:var(--s-5)}
+.tips .hint{margin-top:var(--s-4);font-size:var(--t-small);color:var(--muted)}
 
-/* how it works */
-.how{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px 48px;margin-top:40px;align-items:start}
-.how figure{border-radius:4px;overflow:hidden;background:var(--tint);aspect-ratio:4/3}
-.how figure img{width:100%;height:100%;object-fit:cover}
-.steps{list-style:none;padding:0;display:grid}
-.steps li{padding:18px 0;border-bottom:1px solid var(--line)}
-.steps li:first-child{padding-top:0}
-.steps h3{font-size:var(--t-h3);font-weight:500;letter-spacing:-.01em;line-height:1.35}
-.steps p{color:var(--muted);font-size:.9375rem;margin-top:4px;max-width:40ch}
+/* photo strip: three rounded tiles stepping down like a roof pitch */
+.strip{display:grid;grid-template-columns:5fr 4fr 5fr;gap:var(--s-5);align-items:start}
+.strip .photo{aspect-ratio:4/5}
+.strip .photo:nth-child(2){margin-top:var(--s-7);aspect-ratio:3/4}
+.strip .photo:nth-child(3){margin-top:var(--s-9)}
 
-/* area */
-.area{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:12px 48px;align-items:baseline;padding-block:32px;border-block:1px solid var(--line)}
-.area h2{font-size:var(--t-h3);font-weight:500;letter-spacing:-.01em}
-.area p{font-size:var(--t-lead)}
-.area p span{color:var(--muted)}
+/* how it works: three steps laid like shingle courses, each one stepped over from the one above */
+.how{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7) var(--s-8);align-items:start}
+.how .intro{position:sticky;top:var(--s-7)}
+.how .intro h2{font-size:var(--t-h2)}
+.how .intro p{margin-top:var(--s-4);color:var(--muted);font-size:var(--t-lead);max-width:40ch}
+.lap{list-style:none;padding:0;display:grid;counter-reset:step}
+.lap li{counter-increment:step;position:relative;display:grid;grid-template-columns:44px minmax(0,1fr);gap:2px var(--s-4);padding:var(--s-5) var(--s-6);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-2)}
+.lap li+li{margin-top:calc(var(--s-3) * -1)}
+.lap li:nth-child(1){margin-right:var(--s-8);z-index:3}
+.lap li:nth-child(2){margin-inline:calc(var(--s-8) / 2);z-index:2}
+.lap li:nth-child(3){margin-left:var(--s-8);z-index:1}
+.lap li::before{content:counter(step);grid-row:1 / span 2;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-weight:600;font-variant-numeric:tabular-nums}
+.lap h3{font-size:var(--t-h3);font-weight:600;letter-spacing:-.01em;line-height:1.35;padding-top:10px}
+.lap p{color:var(--muted);font-size:.9375rem;max-width:44ch}
 
-/* reviews */
-.revs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 48px;margin-top:40px}
-.revs blockquote{font-size:var(--t-lead);line-height:1.5;font-weight:300;letter-spacing:-.005em}
-.revs figcaption{margin-top:14px;font-size:var(--t-small);color:var(--muted)}
-.revs figcaption b{color:var(--ink);font-weight:500}
-.sample-tag{margin-top:40px;font-size:.8125rem;color:var(--muted)}
-
-/* faq */
-.faq{margin-top:12px}
-.faq details{border-bottom:1px solid var(--line)}
-.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:64px;padding:16px 0;cursor:pointer;font-size:var(--t-h3);font-weight:500;letter-spacing:-.01em}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";width:10px;height:10px;flex:none;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:translateY(-3px) rotate(45deg);transition:transform 200ms var(--ease)}
-.faq details[open] summary::after{transform:translateY(2px) rotate(225deg)}
-.faq details p{color:var(--muted);max-width:62ch;padding-bottom:22px;margin-top:-4px}
-
-/* contact */
-.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;margin-top:40px;align-items:start}
-.ways{list-style:none;padding:0;display:grid;gap:2px}
-.ways li{display:grid;gap:0;padding:14px 0;border-bottom:1px solid var(--line)}
-.ways li:first-child{padding-top:0}
+/* contact: one whole field of the green */
+.field{background:var(--accent);color:var(--on-accent);margin-top:var(--sec);padding-block:var(--band-pad)}
+.field .head p{color:var(--on-accent-muted)}
+.field :focus-visible{outline-color:var(--on-accent)}
+.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7);align-items:start}
+.ways{list-style:none;padding:0;display:grid;gap:var(--s-3)}
+.ways a,.ways .plain{display:grid;gap:2px;padding:var(--s-4) var(--s-5);border-radius:var(--r-card);background:var(--surface);color:var(--ink);text-decoration:none;font-size:var(--t-lead);line-height:1.35}
+.ways a{box-shadow:var(--sh-1);transition:box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.ways a:active{transform:scale(.985);box-shadow:none}
+.ways .plain{background:transparent;color:var(--on-accent);padding-inline:0;box-shadow:none}
 .ways span{font-size:.8125rem;color:var(--muted)}
-.ways a{font-size:var(--t-lead);text-decoration:none;min-height:32px;display:inline-flex;align-items:center;width:fit-content}
-.ways a:hover{text-decoration:underline;text-decoration-color:#b9b6ad}
-.ways .plain{font-size:var(--t-lead)}
+.ways .plain span{color:var(--on-accent-muted)}
+@media (hover:hover) and (pointer:fine){.ways a:hover{box-shadow:var(--sh-2);transform:translateY(-2px)}.ways a:active{transform:scale(.985);box-shadow:none}}
+.panel{padding:clamp(24px,3vw,40px);background:var(--surface);color:var(--ink);border-radius:var(--r-card);box-shadow:var(--sh-3)}
+.panel :focus-visible{outline-color:var(--accent)}
 
-form{display:grid;grid-template-columns:1fr 1fr;gap:20px 16px}
-form[hidden]{display:none}
+#qform{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-5) var(--s-4)}
+#qform[hidden]{display:none}
 .f{display:grid;gap:6px;min-width:0}
 .f.full{grid-column:1/-1}
 .f label{font-size:var(--t-small);font-weight:500}
-.f input,.f select,.f textarea{width:100%;min-height:48px;padding:11px 12px;border:1px solid #cfccc3;border-radius:4px;background:#fbfaf7;color:var(--ink);font:inherit;font-size:1rem;transition:border-color 160ms ease;appearance:none;-webkit-appearance:none}
-.f select{background:#fbfaf7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%235d605c' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:40px}
-.f textarea{min-height:112px;resize:vertical;line-height:1.5}
-.f input::placeholder,.f textarea::placeholder{color:#72746e}
-.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.f input,.f select,.f textarea{width:100%;min-height:48px;padding:11px 14px;border:1px solid var(--line);border-radius:var(--r-ctl);background:var(--bg);color:var(--ink);font:inherit;font-size:1rem;transition:border-color 200ms ease,box-shadow 200ms ease,background-color 200ms ease;appearance:none;-webkit-appearance:none}
+.f select{background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%235d605c' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:40px}
+.f textarea{min-height:120px;resize:vertical;line-height:1.5}
+.f input::placeholder,.f textarea::placeholder{color:var(--muted)}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--accent);background-color:var(--surface);box-shadow:0 0 0 3px var(--accent-soft)}
+@media (hover:hover) and (pointer:fine){.f input:hover,.f select:hover,.f textarea:hover{border-color:var(--muted)}}
 .f [aria-invalid="true"]{border-color:var(--danger)}
 .err{font-size:.8125rem;color:var(--danger)}
 .err:empty{display:none}
-.check{grid-column:1/-1;display:flex;align-items:center;gap:10px;min-height:44px;font-size:.9375rem;cursor:pointer;width:fit-content}
-.check input{appearance:none;-webkit-appearance:none;width:20px;height:20px;flex:none;margin:0;border:1px solid #b3b0a6;border-radius:3px;background:#fbfaf7;display:grid;place-items:center;cursor:pointer;transition:background-color 140ms ease,border-color 140ms ease}
-.check input::after{content:"";width:10px;height:5px;border-left:1.75px solid var(--on-accent);border-bottom:1.75px solid var(--on-accent);transform:translateY(-1px) rotate(-45deg);opacity:0;transition:opacity 120ms ease}
-.check input:checked{background:var(--accent);border-color:var(--accent)}
-.check input:checked::after{opacity:1}
-.submit{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
-.submit p{font-size:.8125rem;color:var(--muted)}
+.submit{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-3) var(--s-5)}
 .thanks[hidden]{display:none}
 .thanks:focus{outline:none}
 .thanks h3{font-size:var(--t-h2)}
-.thanks p{margin-top:12px;max-width:46ch}
+.thanks p{margin-top:var(--s-3);max-width:46ch}
 .thanks .muted{font-size:var(--t-small)}
-.thanks .btn{margin-top:24px}
+.thanks .btn{margin-top:var(--s-5)}
 
-/* footer */
-.foot{margin-top:var(--sec);border-top:1px solid var(--line);padding-block:32px 40px;font-size:.8125rem;color:var(--muted)}
-.foot .wrap{display:grid;grid-template-columns:1fr auto;gap:12px 32px}
+/* footer: the name returns large under the roof line */
+.foot{padding-block:var(--s-8) var(--s-7);font-size:.8125rem;color:var(--muted)}
+.foot .wrap{display:grid;grid-template-columns:1fr auto;gap:var(--s-3) var(--s-6);align-items:center}
+.foot .name{grid-column:1/-1;display:flex;align-items:center;gap:var(--s-4);margin-bottom:var(--s-4);font-size:clamp(1.75rem,1rem + 2.6vw,3rem);font-weight:300;letter-spacing:-.03em;line-height:1.05;color:var(--ink)}
+.foot .name svg{width:.9em;height:.58em;flex:none;color:var(--accent)}
 .foot b{color:var(--ink);font-weight:500}
 .foot a{color:var(--muted)}
 .foot .right{text-align:right}
+.foot .right a{display:inline-flex;align-items:center;min-height:44px;font-size:.9375rem;color:var(--ink)}
 .foot .credit{grid-column:1/-1;max-width:none}
 
 /* footer mark: a 2 s logo build that plays once in view, muted; the still logo shows until it really plays and is the fallback */
@@ -235,44 +295,91 @@ form[hidden]{display:none}
 /* phone bar */
 .bar{display:none}
 
-/* motion: opacity and a few pixels, once */
+/* motion: slow, once, opacity and a few pixels. Content stays visible without scripts and with reduced motion. */
 @media (prefers-reduced-motion:no-preference){
-  .js .rv{opacity:0;transform:translateY(10px);transition:opacity 600ms var(--ease),transform 600ms var(--ease)}
+  .js .rv{opacity:0;transform:translateY(16px);transition:opacity 700ms var(--ease),transform 700ms var(--ease)}
   .js .rv.in{opacity:1;transform:none}
-  .hero .rise{animation:rise 700ms var(--ease) both}
-  .hero .rise:nth-child(2){animation-delay:70ms}
-  .hero-pic.rise{animation-delay:140ms}
+  .js .strip .rv:nth-child(2),.js .lap .rv:nth-child(2){transition-delay:90ms}
+  .js .strip .rv:nth-child(3),.js .lap .rv:nth-child(3){transition-delay:180ms}
+  .hero-pic.rise{animation:rise 800ms var(--ease) both}
+  .hero-pic img{animation:settle 1600ms var(--ease) both}
+  .hero-under.rise{animation:rise 800ms var(--ease) 120ms both}
 }
-@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes settle{from{transform:scale(1.05)}to{transform:none}}
 
 /* tablet */
 @media (max-width:960px){
-  .hero-grid,.head,.svc,.how,.area,.contact{grid-template-columns:minmax(0,1fr)}
-  .cta{justify-content:flex-start}
-  .how figure{order:2}
-  .revs{grid-template-columns:minmax(0,1fr);gap:32px}
-  .revs figure+figure{padding-top:32px;border-top:1px solid var(--line)}
+  .hero-under,.head,.course,.pick,.how,.contact{grid-template-columns:minmax(0,1fr)}
+  .hero-under{padding-left:0;margin-inline:var(--s-4)}
+  .facts{margin-top:0}
+  .course.flip .pic{order:0}
+  .course .pic{margin-right:calc(var(--off) + var(--s-6))}
+  .course .photo{aspect-ratio:16/11}
+  .how .intro{position:static}
+  .lap li:nth-child(1){margin-right:var(--s-7)}
+  .lap li:nth-child(2){margin-inline:calc(var(--s-7) / 2)}
+  .lap li:nth-child(3){margin-left:var(--s-7)}
 }
 
 /* phone */
 @media (max-width:640px){
-  :root{--bar:calc(60px + env(safe-area-inset-bottom))}
-  .hero-pic{aspect-ratio:16/9;margin-inline:calc(var(--m) * -1);border-radius:0}
-  .hero-pic img{object-position:48% 40%}
-  .facts{gap:2px 18px}
-  .facts li+li::before{content:none}
-  .cta{justify-content:flex-start}
+  :root{--bar:calc(61px + env(safe-area-inset-bottom));--r-photo:16px;--r-card:14px;--off:10px} /* the bar is 60 px of links plus a 1 px top line */
+  .hero{padding-top:var(--s-4)}
+  /* the photo takes what the screen can spare, so the call button always lands above the bar */
+  .hero-pic .photo{aspect-ratio:auto;height:min(75vw,max(140px,calc(100vh - 510px)));height:min(75vw,max(140px,calc(100svh - 510px)))}
+  .hero-pic img{object-position:62% 40%}
+  .hero-under{margin:calc(var(--s-7) * -1) var(--s-3) 0;gap:var(--s-5)}
+  .plate{padding:var(--s-5) var(--s-5) var(--s-5)}
   .cta .btn{flex:1 1 auto}
-  .list li{grid-template-columns:minmax(0,1fr) auto}
-  form{grid-template-columns:minmax(0,1fr)}
+  .facts{padding-inline:var(--s-2)}
+  .head{padding-bottom:var(--s-6)}
+  .course .pic{margin-right:var(--off)}
+  .tag{position:relative;left:auto;bottom:auto;margin:calc(var(--s-6) * -1) var(--s-4) 0;max-width:none}
+  .chip{min-width:76px;padding:0 14px;font-size:.875rem}
+  .strip{grid-template-columns:1fr 1fr;gap:var(--s-3)}
+  .strip .photo:first-child{grid-column:1/-1;aspect-ratio:16/10}
+  .strip .photo:nth-child(2){margin-top:0;aspect-ratio:4/5}
+  .strip .photo:nth-child(3){margin-top:var(--s-6);aspect-ratio:4/5}
+  .lap li{padding:var(--s-4)}
+  .lap li:nth-child(1){margin-right:var(--s-5)}
+  .lap li:nth-child(2){margin-inline:calc(var(--s-5) / 2)}
+  .lap li:nth-child(3){margin-left:var(--s-5)}
+  #qform{grid-template-columns:minmax(0,1fr)}
   .submit .btn{width:100%}
   .foot .wrap{grid-template-columns:minmax(0,1fr)}
   .foot .right{text-align:left}
-  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--bg);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
   .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:60px;font-weight:500;font-size:1rem;text-decoration:none;color:var(--ink)}
   .bar a:first-child{background:var(--accent);color:var(--on-accent)}
   .bar a:active{opacity:.85}
   .bar svg{width:17px;height:17px}
+}
+/* short phones: keep the hero call button clear of the phone bar */
+@media (max-width:640px) and (max-height:740px){
+  body .hero-under{margin-top:calc(var(--s-8) * -1)}
+  body .hero h1{font-size:clamp(1.875rem,1.4rem + 2.2vw,2.25rem)}
+  body .plate p{font-size:1rem;margin-top:var(--s-3)}
+  body .cta{margin-top:var(--s-4)}
+}
+@media (max-width:420px) and (max-height:600px){
+  body .hero-under{margin-top:calc(var(--s-8) * -1 - var(--s-3))}
+  body .plate{padding:var(--s-4) var(--s-5)}
+  body .cta{margin-top:var(--s-3);gap:var(--s-2)}
+  body .hero h1{font-size:1.75rem}
+  body .plate p{font-size:.9375rem;line-height:1.5}
+}
+@media (max-width:359px){
+  /* narrow phones wrap the words onto more lines, so the photo gives up more room */
+  .hero-pic .photo{height:min(75vw,max(112px,calc(100vh - 575px)));height:min(75vw,max(112px,calc(100svh - 575px)))}
+}
+@media (max-width:319px){
+  .hero-pic .photo{height:min(75vw,max(104px,calc(100vh - 610px)));height:min(75vw,max(104px,calc(100svh - 610px)))}
+}
+@media (max-width:360px){
+  .top .wrap{gap:var(--s-3)}
+  .mark{font-size:.9375rem}
+  .mark svg{display:none}
 }
 </style>
 </head>
@@ -294,103 +401,218 @@ form[hidden]{display:none}
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <a class="btn line" href="tel:+13363742402"><span class="long num">(336) 374-2402</span><span class="short">Call</span></a>
+    <a class="btn line" href="tel:+13363742402"><span class="long num">(336) 374 2402</span><span class="short">Call</span></a>
   </div>
 </header>
 
 <main id="main">
   <section class="wrap hero" id="top" aria-labelledby="hero-h">
-    <h1 class="rise" id="hero-h"><span>Roofing and siding</span> <span class="soft">in Dobson.</span></h1>
-    <div class="hero-grid rise">
-      <div>
-        <p>LR Construction, LLC is a roofing, siding and construction company based in Dobson, NC. Call to talk through your job.</p>
-      </div>
-      <div class="cta">
-        <a class="btn" href="tel:+13363742402">Call <span class="num">(336) 374-2402</span></a>
-        <a class="btn line" href="#contact">Send a request</a>
-      </div>
+    <div class="hero-pic layer rise">
+      <figure class="photo"><img src="roofs.jpg" width="1600" height="900" srcset="roofs-800.jpg 800w, roofs.jpg 1600w" sizes="(max-width: 640px) 100vw, 1120px" fetchpriority="high" alt="A large building with a dark shingle roof, lower brown shingle roofs, brown siding and a tall arched window under a pale sky"></figure>
     </div>
-    <figure class="hero-pic rise">
-      <img src="hero.jpg" width="1600" height="898" fetchpriority="high" alt="The wooden frame of a two story house going up under a clear blue sky">
-    </figure>
+    <div class="hero-under rise">
+      <div class="plate">
+        <h1 id="hero-h">Roofing, siding and construction <span class="soft">in Dobson.</span></h1>
+        <p>From roof repair to installation and maintenance services, we can handle anything. Call and tell us about the job.</p>
+        <div class="cta">
+          <a class="btn" href="tel:+13363742402">Call <span class="num">(336) 374 2402</span></a>
+          <a class="btn line" href="#contact">Send a request</a>
+        </div>
+      </div>
+      <ul class="facts" aria-label="At a glance">
+        <li><svg viewBox="0 0 22 14" aria-hidden="true"><path d="M1 13L7 4.5l4 5 3-3.5 7 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg>Based in Dobson, NC</li>
+        <li><svg viewBox="0 0 22 14" aria-hidden="true"><path d="M1 13L7 4.5l4 5 3-3.5 7 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg>Roofs, walls and framing</li>
+        <li><svg viewBox="0 0 22 14" aria-hidden="true"><path d="M1 13L7 4.5l4 5 3-3.5 7 6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg><a class="num" href="tel:+13363742402">(336) 374 2402</a></li>
+      </ul>
+    </div>
   </section>
 
-  <section class="wrap sec" id="services" aria-labelledby="svc-h">
-    <div class="head rv">
-      <h2 id="svc-h">Services</h2>
-      <p>Call or send a request to talk through the job.</p>
+  <section class="band" id="services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="svc-h">From the roof down</h2>
+        <p>Roofing on top, siding on the walls and the construction that holds it all up.</p>
+      </div>
+      <div class="courses">
+        <article class="course" aria-labelledby="s1-h">
+          <div class="pic layer rv">
+            <figure class="photo"><img src="shingles.jpg" width="1600" height="1067" srcset="shingles-800.jpg 800w, shingles.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 90vw, 560px" loading="lazy" decoding="async" alt="Close view of rows of dark gray roof shingles in low sun"></figure>
+            <p class="tag"><b>Not sure what the roof needs?</b> Call and tell us what you see.</p>
+          </div>
+          <div class="rv">
+            <p class="where"><svg viewBox="0 0 40 22" aria-hidden="true"><path class="on" d="M2 10L20 1l18 9z"/><rect class="off" x="6" y="12" width="28" height="9" rx="1"/></svg>The top layer</p>
+            <h3 id="s1-h">Roofing</h3>
+            <p class="say">Roof repair, installation and maintenance services. Whatever is going on up top, start with a call.</p>
+            <ul class="parts">
+              <li><h4>Roof repair</h4><p>A leak, a stain on a ceiling, or shingles that lifted or went missing.</p></li>
+              <li><h4>Installation</h4><p>Putting a new roof on. Tell us about the building and what you have in mind.</p></li>
+              <li><h4>Maintenance services</h4><p>Upkeep for the roof you already have. Ask what we can look at.</p></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="course flip" aria-labelledby="s2-h">
+          <div class="pic layer rv">
+            <figure class="photo"><img src="siding-house.jpg" width="1600" height="1067" srcset="siding-house-800.jpg 800w, siding-house.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 90vw, 560px" loading="lazy" decoding="async" alt="A two story building with gray siding, white trim and a dark shingle roof among tall trees"></figure>
+          </div>
+          <div class="rv">
+            <p class="where"><svg viewBox="0 0 40 22" aria-hidden="true"><path class="off" d="M2 10L20 1l18 9z"/><rect class="on" x="6" y="12" width="28" height="9" rx="1"/></svg>The walls</p>
+            <h3 id="s2-h">Siding</h3>
+            <p class="say">New siding for the walls. Tell us which wall and what you are noticing.</p>
+            <a class="btn" href="tel:+13363742402">Call about siding</a>
+          </div>
+        </article>
+
+        <article class="course" aria-labelledby="s3-h">
+          <div class="pic layer rv">
+            <figure class="photo"><img src="hero.jpg" width="1600" height="898" srcset="hero-800.jpg 800w, hero.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 90vw, 560px" loading="lazy" decoding="async" alt="The wooden frame of a two story building going up under a clear blue sky, with sheathing on part of the walls"></figure>
+          </div>
+          <div class="rv">
+            <p class="where"><svg viewBox="0 0 40 22" aria-hidden="true"><path class="off" d="M2 10L20 1l18 9z"/><rect class="off" x="6" y="12" width="28" height="9" rx="1"/><path class="on" d="M6 21h28v1H6z"/><path class="on" d="M10 12h1.5v9H10zM17 12h1.5v9H17zM24 12h1.5v9H24zM31 12h1.5v9H31z"/></svg>The frame</p>
+            <h3 id="s3-h">Construction</h3>
+            <p class="say">The building work under the roof and behind the siding. Call with what you want built or fixed and we can talk it through.</p>
+            <a class="btn" href="tel:+13363742402">Call about construction</a>
+          </div>
+        </article>
+      </div>
     </div>
-    <div class="svc">
-      <figure class="rv"><img src="services.jpg" width="1600" height="1200" loading="lazy" decoding="async" alt="A close view of rough brown and black asphalt shingles on a roof, with trees blurred behind"></figure>
-      <div>
-        <ul class="list">
-          <li class="rv"><h3>Roofing</h3></li>
-          <li class="rv"><h3>Siding</h3></li>
-          <li class="rv"><h3>Construction</h3></li>
-        </ul>
-        <p class="note rv"><b>Not sure what you need?</b> Call or send a message on Facebook.</p>
+  </section>
+
+  <section class="wrap sec" id="trouble" aria-labelledby="trouble-h">
+    <div class="head rv">
+      <h2 id="trouble-h">Where is the trouble?</h2>
+      <p>Tap the part of the building on the drawing. The list shows what is good to mention when you call.</p>
+    </div>
+    <form class="pick rv" method="post" aria-label="Pick a part of the building">
+      <div class="draw">
+        <svg viewBox="0 0 480 360" role="img" aria-label="A drawing of a building section: the roof on top, a siding wall on the left and the bare frame on the right">
+          <g class="l-roof">
+            <path class="shape" d="M56 150L240 36l184 114z"/>
+            <path class="grain" d="M211 54h58M185 70h110M153 90h174M121 110h238M88 130h304"/>
+          </g>
+          <g class="l-wall">
+            <path class="shape" d="M80 150h200v180H80z"/>
+            <path class="grain" d="M80 168h200M80 186h200M80 204h200M80 222h200M80 240h200M80 258h200M80 276h200M80 294h200M80 312h200"/>
+          </g>
+          <g class="l-frame">
+            <path class="shape" d="M280 150h120v180H280z"/>
+            <path class="grain" d="M280 160h120M280 320h120M304 160v160M328 160v160M352 160v160M376 160v160M286 318l108 -150"/>
+          </g>
+          <path class="ground" d="M24 330h432"/>
+        </svg>
+        <label class="chip c-roof"><input class="vh" type="radio" name="part" id="pk-roof" value="roof" checked>Roof</label>
+        <label class="chip c-wall"><input class="vh" type="radio" name="part" id="pk-wall" value="siding">Siding</label>
+        <label class="chip c-frame"><input class="vh" type="radio" name="part" id="pk-frame" value="frame">Frame</label>
+      </div>
+      <div class="tips" aria-live="polite">
+        <p class="lbl">Good to mention when you call</p>
+        <div class="tip t-roof">
+          <h3>The roof</h3>
+          <ul class="ticks">
+            <li>What you are seeing: a leak, missing shingles or a stain on a ceiling</li>
+            <li>Where on the roof it is and when you first noticed it</li>
+            <li>A photo, if you have one</li>
+          </ul>
+        </div>
+        <div class="tip t-wall">
+          <h3>The siding</h3>
+          <ul class="ticks">
+            <li>What you are seeing, like loose siding</li>
+            <li>Which wall it is on</li>
+            <li>A picture of that wall, if you can take one</li>
+          </ul>
+        </div>
+        <div class="tip t-frame">
+          <h3>The frame</h3>
+          <ul class="ticks">
+            <li>What you want built or fixed</li>
+            <li>A rough size, if you know it</li>
+            <li>A photo or a sketch, if you have one</li>
+          </ul>
+        </div>
+        <a class="btn" href="tel:+13363742402">Call <span class="num">(336) 374 2402</span></a>
+        <p class="hint">Not sure which part it is? Call anyway and describe it.</p>
+      </div>
+    </form>
+  </section>
+
+  <section class="band" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="work-h">Roof, wall and frame</h2>
+        <p>A closer look at the three layers we work on.</p>
+      </div>
+      <div class="strip">
+        <figure class="photo rv"><img src="trusses.jpg" width="1600" height="1067" srcset="trusses-800.jpg 800w, trusses.jpg 1600w" sizes="(max-width: 640px) 90vw, 420px" loading="lazy" decoding="async" alt="Wooden roof framing set on top of framed walls against a blue sky"></figure>
+        <figure class="photo rv"><img src="siding-wall.jpg" width="1600" height="1067" srcset="siding-wall-800.jpg 800w, siding-wall.jpg 1600w" sizes="(max-width: 640px) 45vw, 340px" loading="lazy" decoding="async" alt="Close view of light gray siding boards"></figure>
+        <figure class="photo rv"><img src="dormers.jpg" width="1400" height="1136" srcset="dormers-800.jpg 800w, dormers.jpg 1400w" sizes="(max-width: 640px) 45vw, 420px" loading="lazy" decoding="async" alt="A gray shingle roof with two dormers and green framed windows"></figure>
       </div>
     </div>
   </section>
 
   <section class="wrap sec" id="how" aria-labelledby="how-h">
-    <div class="head rv">
-      <h2 id="how-h">How it works</h2>
-      <p>Three plain steps, starting with a call.</p>
-    </div>
     <div class="how">
-      <figure class="rv"><img src="steps.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="A wall of pale gray siding under the edge of a shingle roof"></figure>
-      <ol class="steps">
-        <li class="rv"><h3>Call or send a request</h3><p>Use the number above, the form below or Facebook.</p></li>
-        <li class="rv"><h3>Describe the job</h3></li>
-        <li class="rv"><h3>Talk it through</h3></li>
+      <div class="intro rv">
+        <h2 id="how-h">How it works</h2>
+        <p>Three plain steps, starting with a call or a request.</p>
+      </div>
+      <ol class="lap">
+        <li class="rv"><h3>Call or send a request</h3><p>Call (336) 374 2402, use the form below or message us on Facebook.</p></li>
+        <li class="rv"><h3>Tell us about the job</h3><p>Say which part of the building it is, what you are seeing and where you are.</p></li>
+        <li class="rv"><h3>Talk it through</h3><p>Ask what you want to know and settle on what happens next.</p></li>
       </ol>
     </div>
   </section>
 
-  <section class="wrap sec" id="contact" aria-labelledby="contact-h">
-    <div class="head rv">
-      <h2 id="contact-h">Send a request</h2>
-      <p>Tell us about the job and how to reach you.</p>
-    </div>
-    <div class="contact">
-      <ul class="ways rv">
-        <li><span>Call</span><a class="num" href="tel:+13363742402">(336) 374-2402</a></li>
-        <li><span>Message</span><a href="https://www.facebook.com/lrconstructionllc171/" rel="noopener">Facebook page</a></li>
-        <li><span>Based in</span><p class="plain">Dobson, NC</p></li>
-      </ul>
+  <section class="field" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="contact-h">Send a request</h2>
+        <p>Tell us about the job and how to reach you.</p>
+      </div>
+      <div class="contact">
+        <ul class="ways rv">
+          <li><a class="num" href="tel:+13363742402"><span>Call</span>(336) 374 2402</a></li>
+          <li><a href="https://www.facebook.com/lrconstructionllc171/" rel="noopener"><span>Message</span>Facebook page</a></li>
+          <li><p class="plain"><span>Based in</span>Dobson, NC</p></li>
+        </ul>
 
-      <div class="rv">
-        <form id="qform" novalidate method="post">
-          <div class="f">
-            <label for="q-name">Your name</label>
-            <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
-            <span class="err" id="e-name"></span>
+        <div class="panel rv">
+          <form id="qform" novalidate method="post">
+            <div class="f">
+              <label for="q-name">Your name</label>
+              <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+              <span class="err" id="e-name"></span>
+            </div>
+            <div class="f">
+              <label for="q-phone">Phone</label>
+              <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Your phone number" required aria-describedby="e-phone">
+              <span class="err" id="e-phone"></span>
+            </div>
+            <div class="f full">
+              <label for="q-town">Town</label>
+              <select id="q-town" name="town" required aria-describedby="e-town">
+                <option value="">Choose your town</option>
+                <option>Dobson</option>
+                <option>Somewhere else</option>
+              </select>
+              <span class="err" id="e-town"></span>
+            </div>
+            <div class="f full">
+              <label for="q-msg">What do you need?</label>
+              <textarea id="q-msg" name="message" required aria-describedby="e-msg" placeholder="A few words about the job"></textarea>
+              <span class="err" id="e-msg"></span>
+            </div>
+            <div class="submit">
+              <button class="btn" type="submit">Send request</button>
+            </div>
+          </form>
+          <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
+            <h3 id="t-title">Thanks. We have it.</h3>
+            <p id="t-body">Your request is noted.</p>
+            <p class="muted">This is a sample site, so nothing was actually sent.</p>
+            <button class="btn line" type="button" id="t-again">Send another request</button>
           </div>
-          <div class="f">
-            <label for="q-phone">Phone</label>
-            <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Your phone number" required aria-describedby="e-phone">
-            <span class="err" id="e-phone"></span>
-          </div>
-          <div class="f full">
-            <label for="q-town">Town</label>
-            <input id="q-town" name="town" type="text" autocomplete="address-level2" required aria-describedby="e-town">
-            <span class="err" id="e-town"></span>
-          </div>
-          <div class="f full">
-            <label for="q-msg">What do you need?</label>
-            <textarea id="q-msg" name="message" required aria-describedby="e-msg" placeholder="A few words about the job"></textarea>
-            <span class="err" id="e-msg"></span>
-          </div>
-          <div class="submit">
-            <button class="btn" type="submit">Send request</button>
-          </div>
-        </form>
-        <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
-          <h3 id="t-title">Thanks. We have it.</h3>
-          <p id="t-body">Your request is noted.</p>
-          <p class="muted">This is a sample site, so nothing was actually sent.</p>
-          <button class="btn line" type="button" id="t-again">Send another request</button>
         </div>
       </div>
     </div>
@@ -399,9 +621,10 @@ form[hidden]{display:none}
 
 <footer class="foot">
   <div class="wrap">
-    <p><b>LR Construction, LLC</b> &middot; Dobson, NC</p>
-    <p class="right"><a class="num" href="tel:+13363742402">(336) 374-2402</a></p>
-    <p class="credit">Photos by D Goug, morgan and Scott Webb on Pexels, shown as examples.</p>
+    <p class="name"><svg viewBox="0 0 22 14" aria-hidden="true"><path d="M1 13L7 4.5l4 5 3-3.5 7 6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></svg>LR Construction, LLC</p>
+    <p>Roofing, siding and construction &middot; Based in Dobson, NC</p>
+    <p class="right"><a class="num" href="tel:+13363742402">(336) 374 2402</a></p>
+    <p class="credit">Photos are examples. Sample site made by <a href="https://granitecitydigital.me/">Granite City Digital</a>.</p>
     <a class="gcd" href="https://granitecitydigital.me/">
       <span class="gcd-mark" id="gcd-mark">
         <picture>

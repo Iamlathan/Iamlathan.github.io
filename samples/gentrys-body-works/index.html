@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Gentry's Body Works &amp; Wheels and Tires | Auto body, tires and wheel repair in Mount Airy, NC</title>
-<meta name="description" content="Gentry's Body Works &amp; Wheels and Tires handles auto body work, tires and wheel repair at 2283 Westfield Rd in Mount Airy, NC. Call (336) 789-1929, send a request online or get directions to the shop.">
+<title>Gentry's Body Works &amp; Wheels and Tires | Auto body, paint, tires and wheels in Mount Airy, NC</title>
+<meta name="description" content="Gentry's Body Works &amp; Wheels and Tires handles auto body repair, paint, tires and wheels at 2283 Westfield Rd in Mount Airy, NC. Family owned since 1989. Call (336) 789 1929.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#f6f5f1">
 <meta property="og:title" content="Gentry's Body Works &amp; Wheels and Tires | Mount Airy, NC">
-<meta property="og:description" content="Gentry's Body Works &amp; Wheels and Tires handles auto body work, tires and wheel repair at 2283 Westfield Rd in Mount Airy, NC. Call (336) 789-1929, send a request online or get directions to the shop.">
+<meta property="og:description" content="Gentry's Body Works &amp; Wheels and Tires handles auto body repair, paint, tires and wheels at 2283 Westfield Rd in Mount Airy, NC. Family owned since 1989. Call (336) 789 1929.">
 <meta property="og:image" content="https://granitecitydigital.me/samples/gentrys-body-works/hero.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
@@ -28,57 +28,86 @@
 }
 </script>
 <style>
+/* Gentry's Body Works: cream shop paper, a deep green like a fresh enamel panel, a pale green block behind the photos, light Hanken Grotesk headings. */
 :root{
   --bg:#f6f5f1;
+  --surface:#fdfcf9;
   --tint:#eeece6;
   --ink:#191b1a;
   --muted:#5d605c;
   --line:#dcd9d1;
   --accent:#2f4f45;
   --accent-hover:#25413a;
+  --accent-soft:#dfe7e2;
   --on-accent:#f6f5f1;
   --danger:#a3392b;
+  --shadow:28 40 36;
 
   --font:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:var(--font);
+  --display-weight:300;
+
+  --r-ctl:10px;
+  --r-card:clamp(14px,1.4vw,18px);
+  --r-photo:clamp(16px,2vw,24px);
+
+  --green-ink:#f6f5f1;
+  --green-muted:#c6d3cc;
+}
+/* 2. the system: keep it the same on every mockup */
+:root{
   --t-small:.875rem;
   --t-body:1rem;
   --t-lead:clamp(1.0625rem,1rem + .3vw,1.1875rem);
-  --t-h3:1.0625rem;
-  --t-h2:clamp(1.75rem,1.35rem + 1.5vw,2.5rem);
-  --t-h1:clamp(2.125rem,1.4rem + 3.4vw,4.25rem);
+  --t-h3:1.125rem;
+  --t-h2:clamp(1.875rem,1.4rem + 1.6vw,2.75rem);
+  --t-h1:clamp(2.25rem,1.4rem + 3.6vw,4.5rem);
+
+  /* spacing scale: every gap on the page is one of these */
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+  --sec:clamp(88px,10vw,144px);        /* the one space between sections */
+  --band-pad:clamp(64px,8vw,112px);    /* inside a contained band */
+  --off:clamp(10px,1.4vw,18px);        /* offset of the color block behind a photo */
+
+  /* three levels only. Light comes from the top left, so every shadow falls down and to the right.
+     page: no shadow. raised: cards, photos, buttons. floating: cards that overlap a photo, the form panel. */
+  --sh-1:1px 1px 2px rgb(var(--shadow) / .05),2px 6px 16px -6px rgb(var(--shadow) / .14);
+  --sh-2:1px 2px 4px rgb(var(--shadow) / .06),4px 14px 32px -10px rgb(var(--shadow) / .22);
+  --sh-3:2px 4px 8px rgb(var(--shadow) / .07),8px 28px 56px -16px rgb(var(--shadow) / .30);
 
   --wrap:1120px;
   --m:clamp(20px,4vw,32px);
-  --sec:clamp(88px,10vw,144px);
   --ease:cubic-bezier(.23,1,.32,1);
   --bar:0px;
 }
 *,*::before,*::after{box-sizing:border-box}
 *{margin:0}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+@media (max-width:760px){html{scroll-padding-bottom:96px}} /* keyboard focus never lands under the phone bar */
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
 ::selection{background:var(--accent);color:var(--on-accent)}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-h1,h2,h3{font-weight:300;letter-spacing:-.025em;line-height:1.08;text-wrap:balance}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3{font-family:var(--font-display);font-weight:var(--display-weight);letter-spacing:-.025em;line-height:1.08;text-wrap:balance}
 p{text-wrap:pretty}
 .wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
 .vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:4px}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:var(--r-ctl)}
 .skip:focus{top:12px}
 .num{font-variant-numeric:tabular-nums}
 .muted{color:var(--muted)}
 
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:4px;border:1px solid transparent;background:var(--accent);color:var(--on-accent);font:500 .9375rem/1 var(--font);text-decoration:none;cursor:pointer;transition:background-color 180ms ease,border-color 180ms ease,transform 140ms var(--ease)}
-.btn:active{transform:scale(.97)}
-.btn.line{background:transparent;color:var(--ink);border-color:#c7c4bb}
-.link{color:var(--ink);text-decoration:underline;text-decoration-color:#b9b6ad;transition:text-decoration-color 180ms ease}
+/* buttons: raised level; hover lifts, press sinks */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2);min-height:48px;padding:0 22px;border-radius:var(--r-ctl);border:1px solid transparent;background:var(--accent);color:var(--on-accent);font:500 .9375rem/1 var(--font);text-decoration:none;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,border-color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.line{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.link{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);transition:text-decoration-color 200ms ease}
 @media (hover:hover) and (pointer:fine){
-  .btn:hover{background:var(--accent-hover)}
-  .btn.line:hover{background:var(--tint);border-color:#b3b0a6}
+  .btn:hover{background:var(--accent-hover);box-shadow:var(--sh-2);transform:translateY(-1px)}
+  .btn.line:hover{background:var(--surface);border-color:var(--muted)}
+  .btn:active{transform:scale(.97);box-shadow:none}
   .link:hover{text-decoration-color:var(--ink)}
 }
 
@@ -88,178 +117,297 @@ p{text-wrap:pretty}
 
 /* header */
 .top{border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:68px}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s-5);min-height:72px}
 .mark{display:inline-flex;align-items:center;gap:10px;font-weight:500;font-size:1rem;letter-spacing:-.01em;text-decoration:none;min-height:44px}
 .mark svg{width:22px;height:14px;flex:none;color:var(--accent)}
 .mark span{color:var(--muted);font-weight:400}
 .nav{display:flex;align-items:center;gap:28px;list-style:none;padding:0;font-size:var(--t-small)}
-.nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 180ms ease}
-.nav a:hover{color:var(--ink)}
-.top .btn{min-height:40px;padding:0 14px;font-size:var(--t-small)}
+.nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 200ms ease}
+.top .btn{min-height:44px;padding:0 16px;font-size:var(--t-small)}
 .top .short{display:none}
+@media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--ink)}}
 @media (max-width:880px){.nav{display:none}}
 @media (max-width:480px){.top .long{display:none}.top .short{display:inline}}
+
+/* photo cards: one radius, one treatment. The wrapper is rounded so the picture clips cleanly. */
+.photo{position:relative;border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-1)}
+.photo img{width:100%;height:100%;object-fit:cover}
+/* layered photo: a soft color block sits behind the card, offset down and right like its shadow */
+.layer{position:relative;isolation:isolate}
+.layer::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--accent-soft);transform:translate(var(--off),var(--off))}
+/* floating card: overlaps the edge of a photo */
+.float{position:absolute;z-index:2;left:var(--s-5);bottom:calc(var(--s-6) * -1);max-width:min(340px,calc(100% - var(--s-7)));background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3);padding:var(--s-4) var(--s-5);display:grid;gap:2px}
+.float span{font-size:.8125rem;color:var(--muted)}
+.float a,.float p{font-size:var(--t-lead);line-height:1.35;text-decoration:none}
+.float a{min-height:32px;display:inline-flex;align-items:center;width:fit-content}
+@media (hover:hover) and (pointer:fine){.float a:hover{text-decoration:underline;text-decoration-color:var(--line)}}
 
 /* hero */
 .hero{padding-top:clamp(56px,8vw,112px)}
 .hero h1{font-size:var(--t-h1)}
-.hero h1 span{display:block}
-.hero h1 .soft{display:block;color:#6e706a}
-.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px 48px;align-items:end;margin-top:28px}
-.hero-grid p{color:var(--muted);font-size:var(--t-lead);max-width:46ch}
-.cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
-.facts{margin-top:20px;font-size:var(--t-small);color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px;list-style:none;padding:0}
-.facts li+li::before{content:"\00b7";margin-right:10px;color:#a3a59f}
-.hero-pic{margin-top:clamp(40px,5vw,64px);aspect-ratio:12/5;overflow:hidden;border-radius:4px;background:var(--tint)}
-.hero-pic img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s-3)}
+.facts{margin-top:var(--s-5);font-size:var(--t-small);color:var(--muted);display:flex;flex-wrap:wrap;gap:var(--s-1) 10px;list-style:none;padding:0}
 
-/* sections */
+/* sections: open sections sit on the page ground, bands are contained */
 .sec{padding-top:var(--sec)}
-.head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:16px 48px;align-items:baseline;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.band{margin-top:var(--sec);padding-block:var(--band-pad);background:var(--tint)}
+.head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-4) var(--s-7);align-items:end;padding-bottom:var(--s-6)}
 .head h2{font-size:var(--t-h2)}
-.head p{color:var(--muted);max-width:46ch}
+.head p{color:var(--muted);max-width:46ch;font-size:var(--t-lead)}
 
-/* services */
-.svc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px 48px;margin-top:40px;align-items:start}
-.svc figure{border-radius:4px;overflow:hidden;background:var(--tint);aspect-ratio:4/3}
-.svc figure img{width:100%;height:100%;object-fit:cover;object-position:52% 50%}
-.list{list-style:none;padding:0}
-.list li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;padding:18px 0;border-bottom:1px solid var(--line)}
-.list li:first-child{padding-top:0}
-.list h3{font-size:var(--t-h3);font-weight:500;letter-spacing:-.01em;line-height:1.35}
-.list p{grid-column:1;color:var(--muted);font-size:.9375rem;max-width:44ch}
-.list .price{grid-column:2;grid-row:1;font-size:.9375rem;white-space:nowrap;text-align:right}
-.note{margin-top:20px;font-size:.9375rem;color:var(--muted);max-width:50ch}
-.note b{color:var(--ink);font-weight:500}
-
-/* price helper */
-.helper{margin-top:32px;padding:20px;background:var(--tint);border-radius:4px;display:grid;gap:12px}
-.helper[hidden]{display:none}
-.helper label{font-size:var(--t-small);font-weight:500}
-.helper .row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
-.select{appearance:none;-webkit-appearance:none;min-height:44px;padding:0 40px 0 12px;border:1px solid #cfccc3;border-radius:4px;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%235d605c' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;color:var(--ink);font:inherit;font-size:.9375rem}
-.est{font-size:.9375rem;color:var(--muted)}
-.est b{color:var(--ink);font-weight:500}
-.helper .link{font-size:.9375rem;width:fit-content}
-
-/* how it works */
-.how{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px 48px;margin-top:40px;align-items:start}
-.how figure{border-radius:4px;overflow:hidden;background:var(--tint);aspect-ratio:4/3}
-.how figure img{width:100%;height:100%;object-fit:cover}
-.steps{list-style:none;padding:0;display:grid}
-.steps li{padding:18px 0;border-bottom:1px solid var(--line)}
-.steps li:first-child{padding-top:0}
-.steps h3{font-size:var(--t-h3);font-weight:500;letter-spacing:-.01em;line-height:1.35}
-.steps p{color:var(--muted);font-size:.9375rem;margin-top:4px;max-width:40ch}
-
-/* area */
-.area{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:12px 48px;align-items:baseline;padding-block:32px;border-block:1px solid var(--line)}
-.area h2{font-size:var(--t-h3);font-weight:500;letter-spacing:-.01em}
-.area p{font-size:var(--t-lead)}
-.area p span{color:var(--muted)}
-
-/* reviews */
-.revs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 48px;margin-top:40px}
-.revs blockquote{font-size:var(--t-lead);line-height:1.5;font-weight:300;letter-spacing:-.005em}
-.revs figcaption{margin-top:14px;font-size:var(--t-small);color:var(--muted)}
-.revs figcaption b{color:var(--ink);font-weight:500}
-.sample-tag{margin-top:40px;font-size:.8125rem;color:var(--muted)}
-
-/* faq */
-.faq{margin-top:12px}
-.faq details{border-bottom:1px solid var(--line)}
-.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:64px;padding:16px 0;cursor:pointer;font-size:var(--t-h3);font-weight:500;letter-spacing:-.01em}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";width:10px;height:10px;flex:none;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:translateY(-3px) rotate(45deg);transition:transform 200ms var(--ease)}
-.faq details[open] summary::after{transform:translateY(2px) rotate(225deg)}
-.faq details p{color:var(--muted);max-width:62ch;padding-bottom:22px;margin-top:-4px}
+/* raised card */
+.card{background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-1)}
 
 /* contact */
-.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;margin-top:40px;align-items:start}
-.ways{list-style:none;padding:0;display:grid;gap:2px}
-.ways li{display:grid;gap:0;padding:14px 0;border-bottom:1px solid var(--line)}
-.ways li:first-child{padding-top:0}
-.ways span{font-size:.8125rem;color:var(--muted)}
-.ways a{font-size:var(--t-lead);text-decoration:none;min-height:32px;display:inline-flex;align-items:center;width:fit-content}
-.ways a:hover{text-decoration:underline;text-decoration-color:#b9b6ad}
-.ways .plain{font-size:var(--t-lead)}
+.panel{padding:clamp(24px,3vw,40px);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3)}
 
-form{display:grid;grid-template-columns:1fr 1fr;gap:20px 16px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-5) var(--s-4)}
 form[hidden]{display:none}
 .f{display:grid;gap:6px;min-width:0}
 .f.full{grid-column:1/-1}
 .f label{font-size:var(--t-small);font-weight:500}
-.f input,.f select,.f textarea{width:100%;min-height:48px;padding:11px 12px;border:1px solid #cfccc3;border-radius:4px;background:#fbfaf7;color:var(--ink);font:inherit;font-size:1rem;transition:border-color 160ms ease;appearance:none;-webkit-appearance:none}
-.f select{background:#fbfaf7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%235d605c' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:40px}
-.f textarea{min-height:112px;resize:vertical;line-height:1.5}
-.f input::placeholder,.f textarea::placeholder{color:#72746e}
-.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.f input,.f select,.f textarea{width:100%;min-height:48px;padding:11px 14px;border:1px solid var(--line);border-radius:var(--r-ctl);background:var(--bg);color:var(--ink);font:inherit;font-size:1rem;transition:border-color 200ms ease,box-shadow 200ms ease,background-color 200ms ease;appearance:none;-webkit-appearance:none}
+.f select{background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%235d605c' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:40px}
+.f textarea{min-height:120px;resize:vertical;line-height:1.5}
+.f input::placeholder,.f textarea::placeholder{color:var(--muted)}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--accent);background-color:var(--surface);box-shadow:0 0 0 3px var(--accent-soft)}
+@media (hover:hover) and (pointer:fine){.f input:hover,.f select:hover,.f textarea:hover{border-color:var(--muted)}}
 .f [aria-invalid="true"]{border-color:var(--danger)}
 .err{font-size:.8125rem;color:var(--danger)}
 .err:empty{display:none}
-.check{grid-column:1/-1;display:flex;align-items:center;gap:10px;min-height:44px;font-size:.9375rem;cursor:pointer;width:fit-content}
-.check input{appearance:none;-webkit-appearance:none;width:20px;height:20px;flex:none;margin:0;border:1px solid #b3b0a6;border-radius:3px;background:#fbfaf7;display:grid;place-items:center;cursor:pointer;transition:background-color 140ms ease,border-color 140ms ease}
-.check input::after{content:"";width:10px;height:5px;border-left:1.75px solid var(--on-accent);border-bottom:1.75px solid var(--on-accent);transform:translateY(-1px) rotate(-45deg);opacity:0;transition:opacity 120ms ease}
-.check input:checked{background:var(--accent);border-color:var(--accent)}
-.check input:checked::after{opacity:1}
-.submit{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.submit{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-3) var(--s-5)}
 .submit p{font-size:.8125rem;color:var(--muted)}
 .thanks[hidden]{display:none}
 .thanks:focus{outline:none}
 .thanks h3{font-size:var(--t-h2)}
-.thanks p{margin-top:12px;max-width:46ch}
+.thanks p{margin-top:var(--s-3);max-width:46ch}
 .thanks .muted{font-size:var(--t-small)}
-.thanks .btn{margin-top:24px}
+.thanks .btn{margin-top:var(--s-5)}
 
 /* footer */
-.foot{margin-top:var(--sec);border-top:1px solid var(--line);padding-block:32px 40px;font-size:.8125rem;color:var(--muted)}
-.foot .wrap{display:grid;grid-template-columns:1fr auto;gap:12px 32px}
-.foot b{color:var(--ink);font-weight:500}
+.foot{background:var(--tint);padding-block:var(--s-8) var(--s-7);font-size:.8125rem;color:var(--muted)}
+.foot .wrap{display:grid;grid-template-columns:1fr auto;gap:var(--s-3) var(--s-6);align-items:center}
+.foot b{color:var(--ink);font-weight:600}
 .foot a{color:var(--muted)}
 .foot .right{text-align:right}
+.foot .right a{display:inline-flex;align-items:center;min-height:44px}
 .foot .credit{grid-column:1/-1;max-width:none}
+
+/* footer mark: a 2 s logo build that plays once in view, muted; the still logo shows until it really plays and is the fallback */
+.gcd{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:14px;margin-top:12px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font-weight:500}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--tint)}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
 
 /* phone bar */
 .bar{display:none}
 
-/* motion: opacity and a few pixels, once */
+/* motion: slow, once, opacity and a few pixels. Content stays visible without scripts and with reduced motion. */
 @media (prefers-reduced-motion:no-preference){
-  .js .rv{opacity:0;transform:translateY(10px);transition:opacity 600ms var(--ease),transform 600ms var(--ease)}
+  .js .rv{opacity:0;transform:translateY(16px);transition:opacity 700ms var(--ease),transform 700ms var(--ease)}
   .js .rv.in{opacity:1;transform:none}
-  .hero .rise{animation:rise 700ms var(--ease) both}
-  .hero .rise:nth-child(2){animation-delay:70ms}
-  .hero-pic.rise{animation-delay:140ms}
+  .js .svc-g .rv:nth-child(2),.js .steps-g .rv:nth-child(2),.js .strip-g .rv:nth-child(2){transition-delay:90ms}
+  .js .svc-g .rv:nth-child(3),.js .steps-g .rv:nth-child(3),.js .strip-g .rv:nth-child(3){transition-delay:180ms}
+  .hero .rise{animation:rise 800ms var(--ease) both}
+  .hero .rise:nth-child(2){animation-delay:80ms}
+  .hero-pic.rise{animation-delay:160ms}
+  .hero-pic img{animation:settle 1600ms var(--ease) both}
 }
-@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes settle{from{transform:scale(1.05)}to{transform:none}}
 
 /* tablet */
 @media (max-width:960px){
-  .hero-grid,.head,.svc,.how,.area,.contact{grid-template-columns:minmax(0,1fr)}
-  .cta{justify-content:flex-start}
-  .how figure{order:2}
-  .revs{grid-template-columns:minmax(0,1fr);gap:32px}
-  .revs figure+figure{padding-top:32px;border-top:1px solid var(--line)}
+  .head{grid-template-columns:minmax(0,1fr)}
 }
 
 /* phone */
 @media (max-width:640px){
-  :root{--bar:calc(60px + env(safe-area-inset-bottom))}
-  .hero-pic{aspect-ratio:16/9;margin-inline:calc(var(--m) * -1);border-radius:0}
-  .hero-pic img{object-position:48% 40%}
-  .facts{gap:2px 18px}
-  .facts li+li::before{content:none}
-  .cta{justify-content:flex-start}
+  :root{--bar:calc(61px + env(safe-area-inset-bottom));--r-photo:16px;--r-card:14px;--off:10px} /* the bar is 60 px of links plus a 1 px top line */
+  .float{position:relative;left:auto;bottom:auto;margin:calc(var(--s-7) * -1) var(--s-4) 0;max-width:none}
   .cta .btn{flex:1 1 auto}
-  .list li{grid-template-columns:minmax(0,1fr) auto}
+  .head{padding-bottom:var(--s-5)}
   form{grid-template-columns:minmax(0,1fr)}
   .submit .btn{width:100%}
   .foot .wrap{grid-template-columns:minmax(0,1fr)}
   .foot .right{text-align:left}
-  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--bg);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
   .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:60px;font-weight:500;font-size:1rem;text-decoration:none;color:var(--ink)}
   .bar a:first-child{background:var(--accent);color:var(--on-accent)}
   .bar a:active{opacity:.85}
   .bar svg{width:17px;height:17px}
+}
+/* short phones: keep the hero call button clear of the phone bar */
+@media (max-width:640px) and (max-height:740px){
+  body .hero{padding-top:var(--s-6)}
+  body .hero h1{font-size:clamp(2rem,1.5rem + 2.4vw,2.5rem)}
+  body .hero-copy{gap:var(--s-4)}
+  body .hero p{font-size:1rem}
+}
+@media (max-width:420px) and (max-height:600px){
+  body .hero .trust{display:none}
+  body .hero h1{font-size:1.875rem}
+  body .hero p{font-size:.9375rem;line-height:1.5}
+}
+
+@media (max-width:420px) and (max-height:520px){
+  body .hero-copy > p{display:none}
+}
+/* 3. Gentry's own touches */
+.mark{font-weight:600;letter-spacing:-.015em}
+.mark svg{width:20px;height:20px}
+.eyebrow{font-size:.8125rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+
+/* hero: words on the left, a tall photo on the right with the address card over its corner */
+.hero-g{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,12fr);gap:var(--s-7) var(--s-8);align-items:center}
+.hero-copy{display:grid;gap:var(--s-5);align-content:center}
+.hero h1{font-size:clamp(2.375rem,1.3rem + 3.2vw,3.875rem);line-height:1.04;letter-spacing:-.035em}
+.hero h1 span{display:block}
+.hero h1 .soft{color:var(--accent)}
+.hero-copy > p{color:var(--muted);font-size:var(--t-lead);max-width:42ch}
+.trust{display:flex;flex-wrap:wrap;gap:var(--s-2);list-style:none;padding:0}
+.trust li{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 14px 0 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:var(--t-small);font-weight:600}
+.trust svg{width:14px;height:14px;flex:none}
+.hero-pic{position:relative;margin-right:var(--off);margin-bottom:var(--s-6)}
+.hero-pic .photo{aspect-ratio:5/5.4;max-height:640px;width:100%}
+.hero-pic img{object-position:38% 50%}
+.hero-pic .float{left:calc(var(--s-6) * -1);bottom:calc(var(--s-6) * -1)}
+
+/* what we do: one wide service across the top, two below it */
+.svc-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s-8) var(--s-7)}
+.svc-g .wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-7) var(--s-8);align-items:center}
+.svc-g .pic{margin-right:var(--off)}
+.svc-g .wide .photo{aspect-ratio:16/9}
+.svc-g .wide .photo img{object-position:50% 60%}
+.svc-g .half .photo{aspect-ratio:4/3}
+.svc-g .half .pic{margin-bottom:calc(var(--s-5) + var(--off))}
+.svc-g h3{font-size:clamp(1.75rem,1.3rem + 1.4vw,2.5rem)}
+.svc-g .say{margin-top:var(--s-3);color:var(--muted);font-size:var(--t-lead);max-width:42ch}
+.tell{margin-top:var(--s-5);font-size:var(--t-small);font-weight:600}
+.ticks{list-style:none;padding:0;margin-top:var(--s-2);display:grid;gap:var(--s-2)}
+.ticks li{position:relative;padding-left:24px;font-size:.9375rem}
+.ticks li::before{content:"";position:absolute;left:2px;top:.5em;width:10px;height:6px;border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg)}
+.svc-g .go{display:inline-flex;align-items:center;min-height:44px;margin-top:var(--s-3);font-weight:500;color:var(--accent)}
+
+/* how it works: photo on the left, the steps run down a line on the right */
+.how-g{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--s-7) var(--s-9);align-items:center}
+.how-g .pic{position:relative;margin-right:var(--off);margin-bottom:var(--s-6)}
+.how-g .photo{aspect-ratio:4/3.4}
+.how-g .float{left:auto;right:calc(var(--s-6) * -1);bottom:calc(var(--s-6) * -1);max-width:260px}
+.how-g .float p{font-size:var(--t-body);line-height:1.45}
+.how-g .float b{font-weight:600;color:var(--accent)}
+.steps-g{list-style:none;padding:0;display:grid;gap:var(--s-6);counter-reset:step;position:relative}
+.steps-g li:not(:last-child)::after{content:"";position:absolute;left:21px;top:44px;bottom:calc(var(--s-6) * -1);width:2px;background:var(--accent-soft)}
+.steps-g li{position:relative;display:grid;grid-template-columns:44px minmax(0,1fr);gap:2px var(--s-5);counter-increment:step}
+.steps-g li::before{content:counter(step);grid-row:1 / span 2;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--on-accent);font-weight:600;font-variant-numeric:tabular-nums;box-shadow:0 0 0 6px var(--bg)}
+.steps-g h3{font-size:1.375rem;font-weight:400;letter-spacing:-.015em;padding-top:8px}
+.steps-g p{color:var(--muted);max-width:40ch}
+
+/* photo strip: one tall tile on the left, two stacked on the right */
+.strip-g{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto auto;gap:var(--s-5)}
+.strip-g .photo:first-child{grid-row:1 / span 2;min-height:100%}
+.strip-g .photo:nth-child(2),.strip-g .photo:nth-child(3){aspect-ratio:16/10}
+.strip-g .photo:first-child img{object-position:40% 50%}
+
+/* request: the insurance card beside the form, and the damage map inside the form */
+.req{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:var(--s-7);align-items:start}
+.ins{padding:clamp(24px,3vw,36px);border-radius:var(--r-card);background:var(--accent);color:var(--green-ink);box-shadow:var(--sh-2);display:grid;gap:var(--s-3)}
+.ins h3{font-size:clamp(1.5rem,1.2rem + 1vw,2rem)}
+.ins > p{color:var(--green-muted)}
+.ins .tell{margin-top:var(--s-2);color:var(--green-ink)}
+.ins .ticks li{color:var(--green-ink)}
+.ins .ticks li::before{border-color:var(--green-ink)}
+.ins .btn{margin-top:var(--s-3);width:fit-content;background:var(--bg);color:var(--accent)}
+.ins :focus-visible{outline-color:var(--green-ink)}
+@media (hover:hover) and (pointer:fine){.ins .btn:hover{background:var(--surface)}}
+.ways{list-style:none;padding:0;display:grid;gap:var(--s-3);margin-top:var(--s-5)}
+.ways a{display:grid;gap:2px;padding:var(--s-4) var(--s-5);border-radius:var(--r-card);background:var(--surface);text-decoration:none;font-size:var(--t-lead);line-height:1.35;box-shadow:var(--sh-1);transition:box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.ways a:active{transform:scale(.985);box-shadow:none}
+.ways span{font-size:.8125rem;color:var(--muted)}
+@media (hover:hover) and (pointer:fine){.ways a:hover{box-shadow:var(--sh-2);transform:translateY(-2px)}.ways a:active{transform:scale(.985);box-shadow:none}}
+
+/* the damage map: a top view of a car, each panel is a checkbox */
+.dmg{grid-column:1/-1;border:0;padding:var(--s-5);border-radius:var(--r-card);background:var(--accent-soft);display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:var(--s-4) var(--s-6);align-items:center;counter-reset:hit;min-width:0}
+.dmg legend{float:left;width:100%;grid-column:1/-1;font-size:var(--t-small);font-weight:500;padding:0}
+.dmg .hint{font-size:.9375rem;color:var(--ink);max-width:34ch}
+.car{display:grid;grid-template-columns:22px 1fr 1.45fr 1fr 22px;grid-template-rows:auto 40px 58px 58px 54px 40px auto;gap:5px;width:100%;max-width:260px;justify-self:center}
+.car .end{grid-column:2 / 5;text-align:center;font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.car label{position:relative;display:grid;place-items:center;min-height:40px;background:var(--surface);border:1.5px solid #b9c7bf;border-radius:8px;font-size:.75rem;font-weight:600;color:var(--accent);cursor:pointer;text-align:center;line-height:1.1;transition:background-color 160ms ease,border-color 160ms ease,color 160ms ease}
+.car input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.car input:checked{counter-increment:hit}
+.car label:has(input:checked){background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.car label:has(input:checked)::after{content:"";position:absolute;top:6px;right:6px;width:8px;height:5px;border-left:2px solid var(--on-accent);border-bottom:2px solid var(--on-accent);transform:rotate(-45deg)}
+.car label:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
+.car .w{background:#2c3330;border-color:#2c3330;border-radius:6px;min-height:0}
+.car .w:has(input:checked){background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--accent)}
+.car .fb{grid-column:2 / 5;grid-row:2;border-radius:46% 46% 10px 10px / 90% 90% 10px 10px}
+.car .rb{grid-column:2 / 5;grid-row:6;border-radius:10px 10px 46% 46% / 10px 10px 90% 90%}
+.car .hood{grid-column:3;grid-row:3}
+.car .roof{grid-column:3;grid-row:4 / 6;background:#f1f4f2}
+.car .trunk{grid-column:3;grid-row:6;display:none}
+.car .lff{grid-column:2;grid-row:3;border-top-left-radius:16px}
+.car .rff{grid-column:4;grid-row:3;border-top-right-radius:16px}
+.car .lfd{grid-column:2;grid-row:4}
+.car .rfd{grid-column:4;grid-row:4}
+.car .lrq{grid-column:2;grid-row:5;border-bottom-left-radius:16px}
+.car .rrq{grid-column:4;grid-row:5;border-bottom-right-radius:16px}
+.car .wfl{grid-column:1;grid-row:3}
+.car .wfr{grid-column:5;grid-row:3}
+.car .wrl{grid-column:1;grid-row:5}
+.car .wrr{grid-column:5;grid-row:5}
+.hits{margin-top:var(--s-3);font-size:var(--t-small);font-weight:600;color:var(--accent)}
+.hits::after{content:counter(hit);display:inline-grid;place-items:center;min-width:28px;height:28px;margin-left:8px;padding:0 8px;border-radius:999px;background:var(--surface);font-variant-numeric:tabular-nums}
+
+/* visit: the closing green band */
+.visit{background:var(--accent);color:var(--green-ink)}
+.visit h2{font-size:var(--t-h2)}
+.visit .head p{color:var(--green-muted)}
+.visit :focus-visible{outline-color:var(--green-ink)}
+.visit-g{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-5)}
+.visit-g .card{padding:clamp(24px,3vw,40px);display:grid;align-content:start;gap:var(--s-2);color:var(--ink)}
+.visit-g .card :focus-visible{outline-color:var(--accent)}
+.lbl{font-size:.8125rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.big{margin-top:var(--s-2);font-size:clamp(1.75rem,1.3rem + 1.4vw,2.5rem);font-weight:300;letter-spacing:-.03em;line-height:1.1}
+.visit-g .btn{margin-top:var(--s-4);width:fit-content}
+.visit + .foot{margin-top:0}
+.foot .name{grid-column:1/-1;margin-bottom:var(--s-4);font-size:clamp(1.5rem,1rem + 2vw,2.5rem);font-weight:300;letter-spacing:-.03em;line-height:1.1;color:var(--ink)}
+
+@media (max-width:960px){
+  .hero-g,.svc-g .wide,.how-g,.req,.visit-g{grid-template-columns:minmax(0,1fr)}
+  .hero-pic{margin-right:calc(var(--off) + var(--s-6))}
+  .hero-pic .photo{aspect-ratio:16/11}
+  .hero-pic .float{left:auto;right:calc(var(--s-6) * -1)}
+  .svc-g .wide .pic{margin-bottom:var(--off)}
+  .how-g .pic{margin-right:calc(var(--off) + var(--s-6))}
+  .strip-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .strip-g .photo:first-child{grid-column:1/-1;grid-row:auto;aspect-ratio:16/9;min-height:0}
+}
+@media (max-width:640px){
+  .hero-g{gap:var(--s-7)}
+  .hero h1{font-size:clamp(2.125rem,1.5rem + 3vw,2.5rem)}
+  .hero-copy{gap:var(--s-4)}
+  .hero-pic,.how-g .pic{margin-right:var(--off);margin-bottom:0}
+  .hero-pic .photo{aspect-ratio:4/3}
+  .hero-pic .float,.how-g .float{right:auto;bottom:auto;left:auto}
+  .svc-g{grid-template-columns:minmax(0,1fr);gap:var(--s-8)}
+  .svc-g .half .pic{margin-bottom:calc(var(--s-4) + var(--off))}
+  .how-g .float{max-width:none}
+  .strip-g{gap:var(--s-3)}
+  .strip-g .photo:nth-child(2),.strip-g .photo:nth-child(3){aspect-ratio:4/5}
+  .dmg{grid-template-columns:minmax(0,1fr);padding:var(--s-4)}
+  .dmg .hint{max-width:none}
+  .visit-g .btn{width:100%}
+}
+@media (max-width:360px){
+  .top .wrap{gap:var(--s-3)}
+  .mark{font-size:.875rem}
+  .mark svg{display:none}
 }
 </style>
 </head>
@@ -271,50 +419,88 @@ form[hidden]{display:none}
 <header class="top">
   <div class="wrap">
     <a class="mark" href="#top" aria-label="Gentry's Body Works &amp; Wheels and Tires, back to top">
-      Gentry's <span>Body Works &amp; Wheels and Tires</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/><path d="M12 2.5v5.3M12 16.2v5.3M2.5 12h5.3M16.2 12h5.3" stroke="currentColor" stroke-width="2"/></svg>
+      Gentry's <span>Body Works</span>
     </a>
     <nav aria-label="Main">
       <ul class="nav">
         <li><a href="#services">Services</a></li>
         <li><a href="#how">How it works</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="#visit">Visit</a></li>
       </ul>
     </nav>
-    <a class="btn line" href="tel:+13367891929"><span class="long num">(336) 789-1929</span><span class="short">Call</span></a>
+    <a class="btn line" href="tel:+13367891929"><span class="long num">(336) 789 1929</span><span class="short">Call</span></a>
   </div>
 </header>
 
 <main id="main">
   <section class="wrap hero" id="top" aria-labelledby="hero-h">
-    <h1 class="rise" id="hero-h"><span>Auto body, wheels</span> <span class="soft">and tires in Mount Airy.</span></h1>
-    <div class="hero-grid rise">
-      <div>
-        <p>Gentry's Body Works &amp; Wheels and Tires sits at 2283 Westfield Rd in Mount Airy, NC. Call the shop about a dent, a tire or a damaged wheel, send a short request below, or get directions and see the shop for yourself.</p>
+    <div class="hero-g">
+      <div class="hero-copy rise">
+        <h1 id="hero-h"><span>Auto body, paint,</span> <span>tires and wheels</span> <span class="soft">in Mount Airy.</span></h1>
+        <p>Gentry's Body Works &amp; Wheels and Tires is at 2283 Westfield Rd. Call the shop about a dent, a scrape, a tire or a bent wheel.</p>
+        <ul class="trust">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Family owned since 1989</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Insurance work welcome</li>
+        </ul>
+        <div class="cta">
+          <a class="btn" href="tel:+13367891929">Call <span class="num">(336) 789 1929</span></a>
+          <a class="btn line" href="https://www.google.com/maps/search/?api=1&amp;query=Gentry%27s+Body+Works+2283+Westfield+Rd+Mount+Airy+NC">Directions</a>
+        </div>
       </div>
-      <div class="cta">
-        <a class="btn" href="tel:+13367891929">Call <span class="num">(336) 789-1929</span></a>
-        <a class="btn line" href="https://www.google.com/maps/search/?api=1&amp;query=Gentry%27s+Body+Works+2283+Westfield+Rd+Mount+Airy+NC">Directions</a>
+      <div class="hero-pic layer rise">
+        <figure class="photo"><img src="hero.jpg" width="1600" height="1067" srcset="hero-800.jpg 800w, hero.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 88vw, 600px" fetchpriority="high" alt="A hand wiping a dark car panel with a yellow cloth"></figure>
+        <div class="float"><span>Find the shop</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Gentry%27s+Body+Works+2283+Westfield+Rd+Mount+Airy+NC">2283 Westfield Rd, Mount Airy</a></div>
       </div>
     </div>
-    <figure class="hero-pic rise">
-      <img src="hero.jpg" width="1600" height="1067" fetchpriority="high" alt="A hand wiping a dark car panel with a yellow cloth">
-    </figure>
   </section>
 
-  <section class="wrap sec" id="services" aria-labelledby="svc-h">
-    <div class="head rv">
-      <h2 id="svc-h">Services</h2>
-      <p>Body work, tires and wheel repair, all handled from Westfield Rd.</p>
-    </div>
-    <div class="svc">
-      <figure class="rv"><img src="tires.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="A worn tire on a steel wheel lying on a shop floor beside a screwdriver"></figure>
-      <div>
-        <ul class="list">
-          <li class="rv"><h3>Auto body</h3><p>Dented door, scraped bumper or a long scratch down the side? Describe the damage in a request and say where on the car it is.</p></li>
-          <li class="rv"><h3>Tires</h3><p>Tire wearing thin, losing air or picking up a nail? Send a request and ask about having it looked at.</p></li>
-          <li class="rv"><h3>Wheel repair</h3><p>Wheel bent by a pothole or scuffed on a curb? Send a request and ask what can be done for it.</p></li>
-        </ul>
-        <p class="note rv"><b>Damage that fits none of these?</b> Explain it in the <a class="link" href="#contact">request form</a> below.</p>
+  <section class="band" id="services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="svc-h">What we handle</h2>
+        <p>Body repair and paint, plus tires and wheels, all from the shop on Westfield Rd.</p>
+      </div>
+      <div class="svc-g">
+        <article class="wide" aria-labelledby="s1-h">
+          <div class="pic layer rv">
+            <figure class="photo"><img src="paint-booth.jpg" width="1600" height="825" srcset="paint-booth-800.jpg 800w, paint-booth.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 90vw, 620px" loading="lazy" decoding="async" alt="A car body shell painted white, standing on a wheeled stand inside a paint booth"></figure>
+          </div>
+          <div class="rv">
+            <h3 id="s1-h">Auto body repair</h3>
+            <p class="say">Dents, creased panels and bumper damage after a scrape or a collision. Tell us what happened and where the car took the hit.</p>
+            <p class="tell">Worth mentioning on the call</p>
+            <ul class="ticks">
+              <li>What happened and when</li>
+              <li>Which panels are damaged</li>
+              <li>Whether insurance is involved</li>
+            </ul>
+            <a class="go" href="tel:+13367891929">Call about body work</a>
+          </div>
+        </article>
+
+        <article class="half" aria-labelledby="s2-h">
+          <div class="pic layer rv">
+            <figure class="photo"><img src="buff-red.jpg" width="1600" height="1060" srcset="buff-red-800.jpg 800w, buff-red.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 45vw, 520px" loading="lazy" decoding="async" alt="Hands running a polisher across a red car door"></figure>
+          </div>
+          <div class="rv">
+            <h3 id="s2-h">Paint</h3>
+            <p class="say">Scratches, chips and paint that took damage along with the panel. Ask us about paint work for your car.</p>
+            <a class="go" href="tel:+13367891929">Call about paint</a>
+          </div>
+        </article>
+
+        <article class="half" aria-labelledby="s3-h">
+          <div class="pic layer rv">
+            <figure class="photo"><img src="new-tires.jpg" width="1600" height="1200" srcset="new-tires-800.jpg 800w, new-tires.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 45vw, 520px" loading="lazy" decoding="async" alt="A stack of new tires with deep, clean tread"></figure>
+          </div>
+          <div class="rv">
+            <h3 id="s3-h">Tires and wheels</h3>
+            <p class="say">Need tires, or have a wheel bent by a pothole or scuffed on a curb? Call and ask about tires and wheel repair.</p>
+            <a class="go" href="tel:+13367891929">Call about tires or wheels</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -322,31 +508,59 @@ form[hidden]{display:none}
   <section class="wrap sec" id="how" aria-labelledby="how-h">
     <div class="head rv">
       <h2 id="how-h">How it works</h2>
-      <p>Here is what happens once you get in touch.</p>
+      <p>Three plain steps, and the first one is a phone call or a short request.</p>
     </div>
-    <div class="how">
-      <figure class="rv"><img src="steps-buff.jpg" width="1600" height="1060" loading="lazy" decoding="async" alt="Close view of a worker's hands running a buffer across a glossy dark car hood"></figure>
-      <ol class="steps">
-        <li class="rv"><h3>Call or send a request</h3><p>Call (336) 789-1929, or fill in the short form near the end of this page with your name, your phone number and a line about the car.</p></li>
-        <li class="rv"><h3>Tell us what the car needs</h3><p>Point out where the damage is, which tire gives you trouble, or what happened to the wheel.</p></li>
-        <li class="rv"><h3>Talk over what comes next</h3><p>Get your questions answered when the shop gets back to you, then choose how you want to move forward.</p></li>
+    <div class="how-g">
+      <div class="pic layer rv">
+        <figure class="photo"><img src="steps-buff.jpg" width="1600" height="1060" srcset="steps-buff-800.jpg 800w, steps-buff.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 88vw, 600px" loading="lazy" decoding="async" alt="Close view of a worker's hands running a buffer across a glossy dark car hood"></figure>
+        <div class="float"><p><b>Have photos of the damage?</b> Mention them when you call.</p></div>
+      </div>
+      <ol class="steps-g">
+        <li class="rv"><h3>Call us or use the form</h3><p>Call <span class="num">(336) 789 1929</span>, or fill in the request form further down this page.</p></li>
+        <li class="rv"><h3>Tell us about the car</h3><p>Say what happened, where the damage is, or which tire or wheel gives you trouble.</p></li>
+        <li class="rv"><h3>Decide on next steps</h3><p>Ask what you want to know, then choose how you want to go ahead.</p></li>
       </ol>
+    </div>
+  </section>
+
+  <section class="band" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="work-h">Up close</h2>
+        <p>Body, paint and tire work, shown in example photos.</p>
+      </div>
+      <div class="strip-g">
+        <figure class="photo rv"><img src="finish-door.jpg" width="1600" height="1060" srcset="finish-door-800.jpg 800w, finish-door.jpg 1600w" sizes="(max-width: 640px) 90vw, (max-width: 960px) 90vw, 640px" loading="lazy" decoding="async" alt="A glossy pale car door with a chrome handle"></figure>
+        <figure class="photo rv"><img src="dent-pins.jpg" width="1600" height="1069" srcset="dent-pins-800.jpg 800w, dent-pins.jpg 1600w" sizes="(max-width: 640px) 45vw, (max-width: 960px) 45vw, 460px" loading="lazy" decoding="async" alt="Metal pins fixed to a dented car panel beside a headlight"></figure>
+        <figure class="photo rv"><img src="tire-rack.jpg" width="1600" height="1067" srcset="tire-rack-800.jpg 800w, tire-rack.jpg 1600w" sizes="(max-width: 640px) 45vw, (max-width: 960px) 45vw, 460px" loading="lazy" decoding="async" alt="Rows of tires stacked and racked along a shop aisle"></figure>
+      </div>
     </div>
   </section>
 
   <section class="wrap sec" id="contact" aria-labelledby="contact-h">
     <div class="head rv">
-      <h2 id="contact-h">Send the shop a note</h2>
-      <p>Share how to reach you and a line about the dent, tire or wheel.</p>
+      <h2 id="contact-h">Point to the damage</h2>
+      <p>Mark each spot on the car, add a few words about it and send the request to the shop.</p>
     </div>
-    <div class="contact">
-      <ul class="ways rv">
-        <li><span>Call</span><a class="num" href="tel:+13367891929">(336) 789-1929</a></li>
-        <li><span>Send a request</span><a href="#q-name">Fill in the form on this page</a></li>
-        <li><span>Directions to the shop</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Gentry%27s+Body+Works+2283+Westfield+Rd+Mount+Airy+NC">2283 Westfield Rd, Mount Airy</a></li>
-      </ul>
-
+    <div class="req">
       <div class="rv">
+        <div class="ins">
+          <h3>Working through insurance?</h3>
+          <p>We work with all insurance.</p>
+          <p class="tell">Good to have when you call</p>
+          <ul class="ticks">
+            <li>Your insurance company</li>
+            <li>Your claim number, if you have one</li>
+            <li>Photos of the damage</li>
+          </ul>
+          <a class="btn" href="tel:+13367891929">Call <span class="num">(336) 789 1929</span></a>
+        </div>
+        <ul class="ways">
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Gentry%27s+Body+Works+2283+Westfield+Rd+Mount+Airy+NC"><span>Directions to the shop</span>2283 Westfield Rd, Mount Airy</a></li>
+        </ul>
+      </div>
+
+      <div class="panel rv">
         <form id="qform" novalidate method="post">
           <div class="f">
             <label for="q-name">Your name</label>
@@ -367,6 +581,31 @@ form[hidden]{display:none}
             </select>
             <span class="err" id="e-town"></span>
           </div>
+          <fieldset class="dmg">
+            <legend>Where is the damage? Optional</legend>
+            <div class="car">
+              <p class="end" aria-hidden="true">Front</p>
+              <label class="fb"><input type="checkbox" name="damage" value="Front bumper">Bumper</label>
+              <label class="lff"><input type="checkbox" name="damage" value="Left front fender"><span class="vh">Left front fender</span></label>
+              <label class="hood"><input type="checkbox" name="damage" value="Hood">Hood</label>
+              <label class="rff"><input type="checkbox" name="damage" value="Right front fender"><span class="vh">Right front fender</span></label>
+              <label class="w wfl"><input type="checkbox" name="damage" value="Left front wheel"><span class="vh">Left front wheel</span></label>
+              <label class="w wfr"><input type="checkbox" name="damage" value="Right front wheel"><span class="vh">Right front wheel</span></label>
+              <label class="lfd"><input type="checkbox" name="damage" value="Left doors"><span class="vh">Left doors</span></label>
+              <label class="roof"><input type="checkbox" name="damage" value="Roof">Roof</label>
+              <label class="rfd"><input type="checkbox" name="damage" value="Right doors"><span class="vh">Right doors</span></label>
+              <label class="lrq"><input type="checkbox" name="damage" value="Left rear quarter"><span class="vh">Left rear quarter panel</span></label>
+              <label class="rrq"><input type="checkbox" name="damage" value="Right rear quarter"><span class="vh">Right rear quarter panel</span></label>
+              <label class="w wrl"><input type="checkbox" name="damage" value="Left rear wheel"><span class="vh">Left rear wheel</span></label>
+              <label class="w wrr"><input type="checkbox" name="damage" value="Right rear wheel"><span class="vh">Right rear wheel</span></label>
+              <label class="rb"><input type="checkbox" name="damage" value="Rear bumper or trunk">Rear</label>
+              <p class="end" aria-hidden="true">Back</p>
+            </div>
+            <div>
+              <p class="hint">Tap every panel or wheel that took a hit. Each one turns green when it is marked.</p>
+              <p class="hits" aria-hidden="true">Spots marked</p>
+            </div>
+          </fieldset>
           <div class="f full">
             <label for="q-msg">What do you need?</label>
             <textarea id="q-msg" name="message" required aria-describedby="e-msg" placeholder="For example, a dented rear door, a tire that keeps losing air, or a bent wheel"></textarea>
@@ -385,13 +624,51 @@ form[hidden]{display:none}
       </div>
     </div>
   </section>
+
+  <section class="band visit" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="visit-h">Visit the shop</h2>
+        <p>Find us on Westfield Rd in Mount Airy, or give us a call first.</p>
+      </div>
+      <div class="visit-g">
+        <div class="card rv">
+          <p class="lbl">Find us</p>
+          <p class="big">2283 Westfield Rd</p>
+          <p class="muted">Mount Airy, NC</p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Gentry%27s+Body+Works+2283+Westfield+Rd+Mount+Airy+NC">Get directions</a>
+        </div>
+        <div class="card rv">
+          <p class="lbl">Call the shop</p>
+          <p class="big num">(336) 789 1929</p>
+          <p class="muted">Body work, paint, tires and wheels.</p>
+          <a class="btn line" href="tel:+13367891929">Call now</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="foot">
   <div class="wrap">
-    <p><b>Gentry's Body Works &amp; Wheels and Tires</b> &middot; 2283 Westfield Rd, Mount Airy, NC</p>
-    <p class="right"><a class="num" href="tel:+13367891929">(336) 789-1929</a></p>
-    <p class="credit">Photos by dextarstudio, tami and Khunkorn Laowisit on Pexels, shown as examples. Sample site made by <a href="https://granitecitydigital.me/">Granite City Digital</a>.</p>
+    <p class="name">Gentry's Body Works &amp; Wheels and Tires</p>
+    <p>2283 Westfield Rd, Mount Airy, NC</p>
+    <p class="right"><a class="num" href="tel:+13367891929">(336) 789 1929</a></p>
+    <p class="credit">Photos are examples. Sample site made by <a href="https://granitecitydigital.me/">Granite City Digital</a>.</p>
+    <!-- Footer mark. Keep this block, its CSS and its script exactly as they are. The files live in samples/mark/. -->
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
   </div>
 </footer>
 
@@ -442,5 +719,41 @@ form[hidden]{display:none}
   document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
 })();
 </script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "31a3f47819f449f59b28a51b74d61f30"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

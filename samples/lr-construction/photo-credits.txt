@@ -1,17 +1,37 @@
 Photo credits for samples/lr-construction/
-All three photos are from Pexels under the Pexels License (free to use, no attribution required). Credited anyway, in the page footer and here. They are stock examples, not photos of LR Construction, LLC work.
+These are stock example photos, not photos of LR Construction, LLC work. Each big photo has a smaller 800 px copy of the same picture (name-800.jpg) for phones.
+
+roofs.jpg
+  Photographer: Will Haddock
+  Source: https://unsplash.com/photos/rmIPODeK8WM
+  License: Unsplash License
+
+shingles.jpg
+  Photographer: Hal Gatewood
+  Source: https://unsplash.com/photos/9u5r1XbtMJg
+  License: Unsplash License
+
+siding-house.jpg
+  Photographer: Will Haddock
+  Source: https://unsplash.com/photos/PQomej2fz4s
+  License: Unsplash License
 
 hero.jpg
   Photographer: D Goug (@d-goug-211350543)
   Source: https://www.pexels.com/photo/new-home-construction-framing-in-suburban-area-39367475/
   License: Pexels License
 
-services.jpg
-  Photographer: morgan (@morgantakesphotos)
-  Source: https://www.pexels.com/photo/selective-focus-of-black-and-brown-rocks-237907/
-  License: Pexels License
+trusses.jpg
+  Photographer: Troy Mortier
+  Source: https://unsplash.com/photos/brPKGeqvVKI
+  License: Unsplash License
 
-steps.jpg
-  Photographer: Scott Webb (@scottwebb)
-  Source: https://www.pexels.com/photo/white-wall-1890416/
-  License: Pexels License
+siding-wall.jpg
+  Photographer: Jon Moore
+  Source: https://unsplash.com/photos/Zjq1UTyT2kE
+  License: Unsplash License
+
+dormers.jpg
+  Photographer: Alex Moliski
+  Source: https://unsplash.com/photos/nJ5K-JJcOjA
+  License: Unsplash License
