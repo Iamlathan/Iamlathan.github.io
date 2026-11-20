@@ -1,0 +1,55 @@
+Photo credits for this sample page. All photos are stock examples, not photos of the business.
+
+hero.jpg
+  Shows: a man weed eating along a sidewalk in a neighborhood on a sunny day
+  Photographer: Kenny Perez
+  Source: https://unsplash.com/photos/KX53yD2tjec
+  License: Unsplash License
+
+mower.jpg
+  Shows: a close view of a red lawn mower on green grass
+  Photographer: Maciej Karoń
+  Source: https://unsplash.com/photos/T719hFjv3mc
+  License: Unsplash License
+
+trim-edge.jpg
+  Shows: a man trimming grass along a flower bed with a string trimmer
+  Photographer: Michael Kahn
+  Source: https://unsplash.com/photos/xWAsrLw_1hk
+  License: Unsplash License
+
+wash.jpg
+  Shows: a worker in a yellow rain jacket pressure washing the siding of a house
+  Photographer: Caitlin Whealy
+  Source: https://www.pexels.com/photo/back-view-of-a-person-pressure-washing-a-house-5652626/
+  License: Pexels License
+
+firewood.jpg
+  Shows: a stack of split firewood
+  Photographer: Andreas Pajuvirta
+  Source: https://unsplash.com/photos/VfJ600bfjdc
+  License: Unsplash License
+
+mowing.jpg
+  Shows: a man pushing a lawn mower through grass in warm evening light
+  Photographer: Magic K
+  Source: https://www.pexels.com/photo/a-person-cutting-grass-with-a-lawn-mower-6728925/
+  License: Pexels License
+
+home-yard.jpg
+  Shows: a brick house behind trimmed boxwood beds, blue hydrangeas and a shaded lawn
+  Photographer: Elijah Crouch
+  Source: https://unsplash.com/photos/qDKgU6O5Bsg
+  License: Unsplash License
+
+wood-shed.jpg
+  Shows: firewood stacked under a small shed roof at the edge of a yard
+  Photographer: Kelsey Todd
+  Source: https://unsplash.com/photos/lltlAtDZwAo
+  License: Unsplash License
+
+lilies.jpg
+  Shows: a flower bed of orange and yellow day lilies with a clean edge along a mowed lawn
+  Photographer: Roger Starnes Sr
+  Source: https://unsplash.com/photos/OK-bkFlixzI
+  License: Unsplash License

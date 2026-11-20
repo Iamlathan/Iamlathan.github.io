@@ -1,0 +1,49 @@
+Photo credits for this sample page. All photos are stock examples, not photos of the business.
+
+hero.jpg
+  Shows: hands in red work gloves rolling a tire and wheel onto a tire machine
+  Photographer: Mustafa Sheikhmouss
+  Source: https://unsplash.com/photos/45oilnNreRE
+  License: Unsplash License
+
+tire-stack.jpg
+  Shows: stacks of tires against a green roll up door
+  Photographer: Markus Winkler
+  Source: https://unsplash.com/photos/IkpseSg-68E
+  License: Unsplash License
+
+size-code.jpg
+  Shows: a tire sidewall with the size printed on it
+  Photographer: Frank Albrecht
+  Source: https://unsplash.com/photos/SrpAK3tw6LU
+  License: Unsplash License
+
+flat-tire.jpg
+  Shows: a flat tire on an old black car parked on concrete
+  Photographer: T (tanyabarrow)
+  Source: https://unsplash.com/photos/IAAkKUBEyYQ
+  License: Unsplash License
+
+air-tool.jpg
+  Shows: an air tool resting on a coiled yellow air hose
+  Photographer: Joseph Ray
+  Source: https://unsplash.com/photos/OGIZo76MR0U
+  License: Unsplash License
+
+tread.jpg
+  Shows: a close view of deep tire tread
+  Photographer: Rob Wingate
+  Source: https://unsplash.com/photos/CTwQiFlpgrM
+  License: Unsplash License
+
+air-check.jpg
+  Shows: hands working on the valve of a dusty tire
+  Photographer: Brendan Hollis
+  Source: https://unsplash.com/photos/M0jAFamB1-4
+  License: Unsplash License
+
+tire-pile.jpg
+  Shows: a pile of tires with different tread patterns
+  Photographer: Goh Rhy Yan
+  Source: https://unsplash.com/photos/ud0twV98uvg
+  License: Unsplash License

@@ -1,0 +1,10 @@
+Photo credits for this sample page. All photos are examples.
+
+hero.jpg | Scuffs and scratches along the doors of a blue car in evening sun | Alexander Lunyov | https://unsplash.com/photos/ddSKkUAujbc | Unsplash License
+crushed-front.jpg | Crumpled hood and broken headlight of a silver car | Clark Van Der Beken | https://unsplash.com/photos/CSkriQWeTVs | Unsplash License
+dent-tabs.jpg | Pull tabs glued over a dent in a white car panel (center crop) | Melih Can | https://www.pexels.com/photo/35149610/ | Pexels License
+polish.jpg | Hands guiding a polisher with a red pad across a black car hood | Khunkorn Laowisit | https://www.pexels.com/photo/person-holding-a-black-polishing-machine-5233258/ | Pexels License
+hail-hood.jpg | Small dents across the hood of a car | Jonathan Cosens Photography | https://unsplash.com/photos/47iLZt1d36E | Unsplash License
+windshield.jpg | Cracked windshield and crumpled fender on a white car | Alexey Veretennikov | https://www.pexels.com/photo/close-up-of-damaged-car-with-shattered-windshield-30893737/ | Pexels License
+rain-red.jpg | Raindrops on the red hood and headlight of a car | Hasnat Saleem | https://unsplash.com/photos/UevjaPMpK2Y | Unsplash License
+rain-blue.jpg | Rain drops on blue paint beside a side mirror | your_mamacita | https://unsplash.com/photos/qOqBTfJOEQA | Unsplash License

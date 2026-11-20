@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>M &amp; M Lawn Care | Lawn care and tree service in Tupelo, MS</title>
+<meta name="description" content="M &amp; M Lawn Care does lawn care and tree service in Tupelo, MS. Monday to Friday, 7:30 to 6; call ahead to confirm. Call (662) 401 3291.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#145a2e">
+<meta property="og:title" content="M &amp; M Lawn Care | Tupelo, MS">
+<meta property="og:description" content="M &amp; M Lawn Care does lawn care and tree service in Tupelo, MS. Monday to Friday, 7:30 to 6; call ahead to confirm. Call (662) 401 3291.">
+<meta property="og:image" content="https://granitecitydigital.me/samples/m-and-m-lawn-care-ms/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* 1. this mockup's own look */
+:root{
+  /* light ground: warm cream with a little grass in it */
+  --l-bg:#f6f3e7;
+  --l-surface:#fdfbf3;
+  --l-tint:#ece9d3;
+  --l-ink:#141a10;
+  --l-muted:#4c5443;
+  --l-line:#d9d6bd;
+  --l-label:#1d6534;
+  --l-shadow:31 46 22;
+
+  /* accent: sunflower, for the call button, one headline word, step discs, small marks */
+  --accent:#f6c026;
+  --accent-hover:#e8ae0c;
+  --accent-soft:#f6e3a1;
+  --on-accent:#141a10;
+  --hl:#f6c026;
+
+  /* deep bands: kelly lawn green */
+  --deep:#145a2e;
+  --deep-2:#0c3c1e;
+  --deep-card:#17602f;
+  --deep-line:#2f7c4a;
+  --on-deep:#f6f3e7;
+  --on-deep-muted:#d3e3c8;
+  --pale:#f6c026;
+  --deep-shadow:6 24 12;
+  --stripe:rgb(6 24 12 / .12);
+
+  --danger:#a3321f;
+
+  /* working tokens: light by default, swapped inside .deep, restored inside .lite */
+  --bg:var(--l-bg);
+  --surface:var(--l-surface);
+  --tint:var(--l-tint);
+  --ink:var(--l-ink);
+  --muted:var(--l-muted);
+  --line:var(--l-line);
+  --label:var(--l-label);
+  --ring:var(--l-label);
+  --layer:var(--accent-soft);
+  --shadow:var(--l-shadow);
+  --texture:none;
+
+  --font:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Sofia Sans Extra Condensed","Figtree",system-ui,sans-serif;
+  --display-weight:800;
+
+  --r-ctl:999px;
+  --r-card:clamp(14px,1.4vw,18px);
+  --r-photo:clamp(16px,2vw,24px);
+}
+/* 2. the system */
+:root{
+  --t-small:.875rem;
+  --t-body:1.0625rem;
+  --t-lead:clamp(1.0625rem,1rem + .3vw,1.1875rem);
+  --t-h3:1.1875rem;
+  --t-h2:clamp(2.5rem,1.8rem + 2.6vw,4rem);
+  --t-h1:clamp(3.25rem,2rem + 5.4vw,6rem);
+
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+  --sec:clamp(88px,10vw,144px);
+  --band-pad:clamp(64px,8vw,112px);
+  --off:clamp(10px,1.4vw,18px);
+
+  --sh-1:1px 1px 2px rgb(var(--shadow) / .05),2px 6px 16px -6px rgb(var(--shadow) / .16);
+  --sh-2:1px 2px 4px rgb(var(--shadow) / .06),4px 14px 32px -10px rgb(var(--shadow) / .24);
+  --sh-3:2px 4px 8px rgb(var(--shadow) / .08),8px 28px 56px -16px rgb(var(--shadow) / .32);
+
+  --wrap:1120px;
+  --m:clamp(20px,4vw,32px);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --bar:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:24px;scrollbar-color:var(--deep) var(--l-tint)}
+@media (max-width:760px){html{scroll-padding-bottom:96px}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased;accent-color:var(--deep);caret-color:var(--deep)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+::selection{background:var(--accent);color:var(--on-accent)}
+:focus-visible{outline:2px solid var(--ring);outline-offset:3px}
+h1,h2,h3{font-family:var(--font-display);font-weight:var(--display-weight);letter-spacing:-.005em;line-height:1.02;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:10px}
+.skip:focus{top:12px}
+.num{font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+
+/* deep grounds swap the working tokens; .lite puts the light set back for a card that sits on a deep ground */
+.deep{
+  --bg:var(--deep);--surface:var(--deep-card);--tint:var(--deep-card);--ink:var(--on-deep);--muted:var(--on-deep-muted);--line:var(--deep-line);--label:var(--pale);--ring:var(--pale);--layer:var(--accent);
+  --texture:repeating-linear-gradient(90deg,var(--stripe) 0 72px,transparent 72px 144px);
+  --sh-1:1px 1px 2px rgb(var(--deep-shadow) / .22),2px 6px 16px -6px rgb(var(--deep-shadow) / .42);
+  --sh-2:1px 2px 4px rgb(var(--deep-shadow) / .26),4px 14px 32px -10px rgb(var(--deep-shadow) / .5);
+  --sh-3:2px 4px 8px rgb(var(--deep-shadow) / .28),8px 28px 56px -16px rgb(var(--deep-shadow) / .6);
+  color:var(--ink);
+}
+.lite{--bg:var(--l-bg);--surface:var(--l-surface);--tint:var(--l-tint);--ink:var(--l-ink);--muted:var(--l-muted);--line:var(--l-line);--label:var(--l-label);--ring:var(--l-label);--layer:var(--accent-soft);--shadow:var(--l-shadow);color:var(--ink)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2);min-height:48px;padding:0 24px;border-radius:var(--r-ctl);border:1px solid transparent;background:var(--accent);color:var(--on-accent);font:600 .9375rem/1 var(--font);text-decoration:none;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,border-color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.btn svg{width:17px;height:17px;flex:none}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.line{background:transparent;color:var(--ink);border-color:var(--line);box-shadow:none}
+.link{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);transition:text-decoration-color 200ms ease}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--accent-hover);box-shadow:var(--sh-2);transform:translateY(-1px)}
+  .btn.line:hover{background:rgb(246 243 231 / .06);border-color:var(--muted)}
+  .btn:active{transform:scale(.97);box-shadow:none}
+  .link:hover{text-decoration-color:var(--ink)}
+}
+
+.sample{background:var(--deep-2);color:var(--muted);font-size:.8125rem;text-align:center;padding:8px var(--m);line-height:1.45}
+.sample a{color:var(--ink)}
+
+/* header and hero share one kelly green ground; the hero photo laps over its lower edge */
+.top-band{background:var(--texture),var(--deep)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s-5);min-height:76px;border-bottom:1px solid var(--line)}
+.mark{display:inline-flex;align-items:baseline;gap:.3em;font:800 1.75rem/1 var(--font-display);text-transform:uppercase;letter-spacing:.01em;text-decoration:none;min-height:44px;align-items:center;white-space:nowrap}
+.mark span{color:var(--label)}
+@media (max-width:340px){.mark{font-size:1.5rem}}
+.nav{display:flex;align-items:center;gap:28px;list-style:none;padding:0;font-size:var(--t-small);font-weight:500}
+.nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 200ms ease}
+.top .btn{min-height:44px;padding:0 18px;font-size:var(--t-small)}
+.top .short{display:none}
+@media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--ink)}}
+@media (max-width:880px){.nav{display:none}}
+@media (max-width:480px){.top .long{display:none}.top .short{display:inline}}
+
+.photo{position:relative;border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-1)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.layer{position:relative;isolation:isolate}
+.layer::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--layer);transform:translate(var(--off),var(--off))}
+.float{position:absolute;z-index:2;left:var(--s-5);bottom:calc(var(--s-6) * -1);max-width:min(340px,calc(100% - var(--s-7)));background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3);padding:var(--s-4) var(--s-5);display:grid;gap:2px}
+.float span{font-size:.8125rem;font-weight:600;color:var(--label)}
+.float p{font-size:var(--t-lead);line-height:1.35}
+.float small{font-size:.875rem;color:var(--muted)}
+
+.hero{padding-top:clamp(48px,7vw,104px);padding-bottom:clamp(150px,17vw,250px)}
+.hero h1{font-size:var(--t-h1);text-transform:uppercase;line-height:.92;letter-spacing:0}
+.hero h1>span{display:block}
+.hero h1 .hl{color:var(--hl)}
+.hero h1 .soft{display:block;color:var(--muted)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-6) var(--s-7);align-items:end;margin-top:var(--s-6)}
+.hero-grid p{color:var(--muted);font-size:var(--t-lead);max-width:46ch}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s-3);justify-content:flex-end}
+.facts{margin-top:var(--s-5);font-size:var(--t-small);color:var(--muted);display:flex;flex-wrap:wrap;gap:var(--s-1) 12px;list-style:none;padding:0}
+.facts li+li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:12px;vertical-align:.16em}
+.hero-pic{margin-top:calc(clamp(150px,17vw,250px) * -1 + 8px);margin-right:var(--off);--layer:var(--accent)}
+.hero-pic .photo{aspect-ratio:12/5}
+.hero-pic img{object-position:50% 62%}
+
+.sec{padding-top:var(--sec)}
+.band{margin-top:var(--sec);padding-block:var(--band-pad);background:var(--tint)}
+.band.deep{background:var(--texture),var(--deep)}
+.head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-4) var(--s-7);align-items:end;padding-bottom:var(--s-6)}
+.head h2{font-size:var(--t-h2);text-transform:uppercase;line-height:.95}
+.head p{color:var(--muted);max-width:46ch;font-size:var(--t-lead)}
+
+/* signature: the lawn or tree switch. Two radios swap the service list and its photo, no script. */
+.picker{position:relative;display:block}
+.switch{display:inline-grid;grid-template-columns:1fr 1fr;gap:4px;padding:5px;margin-bottom:var(--s-6);background:var(--tint);border-radius:999px;box-shadow:inset 0 1px 2px rgb(var(--shadow) / .12)}
+.switch label{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;font-weight:600;font-size:1rem;color:var(--muted);cursor:pointer;user-select:none;transition:background-color 220ms var(--ease),color 220ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.switch label svg{width:20px;height:20px;flex:none}
+.switch label:active{transform:scale(.97)}
+#pick-lawn:checked ~ .switch label[for="pick-lawn"],#pick-tree:checked ~ .switch label[for="pick-tree"]{background:var(--deep);color:var(--on-deep);box-shadow:var(--sh-1)}
+#pick-lawn:checked ~ .switch label[for="pick-lawn"] svg,#pick-tree:checked ~ .switch label[for="pick-tree"] svg{color:var(--accent)}
+#pick-lawn:focus-visible ~ .switch label[for="pick-lawn"],#pick-tree:focus-visible ~ .switch label[for="pick-tree"]{outline:2px solid var(--ring);outline-offset:3px}
+@media (hover:hover) and (pointer:fine){.switch label:hover{color:var(--ink)}}
+.pane{display:none;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7);align-items:start}
+#pick-lawn:checked ~ .panes .pane-lawn,#pick-tree:checked ~ .panes .pane-tree{display:grid}
+.pane .layer{margin-right:var(--off)}
+.pane .photo{aspect-ratio:4/5}
+.list{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--s-4)}
+.list li{display:grid;align-content:start;gap:var(--s-2);padding:var(--s-5);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-1)}
+.list h3{font:700 1.75rem/1 var(--font-display);text-transform:uppercase;letter-spacing:.005em;display:flex;align-items:center;gap:10px}
+.list h3::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);flex:none}
+.list p{color:var(--muted);font-size:.9688rem;max-width:44ch}
+.note{margin-top:var(--s-5);padding:var(--s-4) var(--s-5);border-radius:var(--r-card);background:var(--accent-soft);font-size:.9688rem;color:var(--l-ink);max-width:none}
+.note b{font-weight:700}
+.note a{font-weight:600}
+@media (prefers-reduced-motion:no-preference){
+  #pick-lawn:checked ~ .panes .pane-lawn,#pick-tree:checked ~ .panes .pane-tree{animation:swap 420ms var(--ease) both}
+}
+@keyframes swap{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+.how{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7) var(--s-8);align-items:center}
+.how .layer{margin-right:var(--off);margin-bottom:var(--off)}
+.how .photo{aspect-ratio:4/5}
+.how .photo img{object-position:50% 40%}
+.steps{list-style:none;padding:0;display:grid;gap:var(--s-6);counter-reset:step}
+.steps li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:4px var(--s-5);counter-increment:step}
+.steps li::before{content:counter(step);grid-row:1 / span 2;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--on-accent);font:800 2rem/1 var(--font-display);font-variant-numeric:tabular-nums;box-shadow:var(--sh-1)}
+.steps h3{font-size:2rem;text-transform:uppercase;line-height:1;padding-top:12px}
+.steps p{color:var(--muted);font-size:1rem;max-width:44ch}
+.steps a{color:var(--ink);font-weight:600}
+
+/* around the yard: one big tree photo with its card, then the lawn strip */
+.feature{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:var(--s-6);align-items:end}
+.feature .photo{aspect-ratio:3/2}
+.feature .photo img{object-position:40% 50%}
+.feature .card{background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3);padding:clamp(24px,2.6vw,36px);margin-left:calc(var(--s-9) * -1);margin-bottom:var(--s-7);position:relative;z-index:2;display:grid;gap:var(--s-3)}
+.feature .card h3{font-size:2.25rem;text-transform:uppercase;line-height:.95}
+.feature .card p{color:var(--muted)}
+.strip{display:grid;grid-template-columns:5fr 4fr 5fr;gap:var(--s-5);align-items:start;margin-top:var(--s-8)}
+.strip .photo{aspect-ratio:4/5}
+.strip .photo:nth-child(2){margin-top:var(--s-8);aspect-ratio:3/4}
+.strip .photo:nth-child(2) img{object-position:12% 50%}
+
+.ways{list-style:none;padding:0;display:grid;gap:var(--s-3)}
+.ways a,.ways .plain{display:grid;gap:2px;padding:var(--s-4) var(--s-5);border-radius:var(--r-card);background:var(--surface);text-decoration:none;font-size:var(--t-lead);line-height:1.35}
+.ways a{box-shadow:var(--sh-1);transition:box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.ways a:active{transform:scale(.985);box-shadow:none}
+.ways .plain{box-shadow:none;background:transparent;padding-inline:0}
+.ways span{font-size:.8125rem;font-weight:600;color:var(--label)}
+.ways small{font-size:.9375rem;color:var(--muted)}
+@media (hover:hover) and (pointer:fine){.ways a:hover{box-shadow:var(--sh-2);transform:translateY(-2px)}.ways a:active{transform:scale(.985);box-shadow:none}}
+
+.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7);align-items:start}
+.panel{padding:clamp(24px,3vw,40px);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3)}
+
+form{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-5) var(--s-4)}
+form[hidden]{display:none}
+.f{display:grid;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label{font-size:var(--t-small);font-weight:600}
+.f input,.f select,.f textarea{width:100%;min-height:48px;padding:11px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit;font-size:1rem;transition:border-color 200ms ease,box-shadow 200ms ease,background-color 200ms ease;appearance:none;-webkit-appearance:none}
+.f select{background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%234c5443' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:40px}
+.f textarea{min-height:120px;resize:vertical;line-height:1.5}
+.f input::placeholder,.f textarea::placeholder{color:var(--muted)}
+.f input,.f textarea{caret-color:var(--l-label)}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--l-label);background-color:var(--surface);box-shadow:0 0 0 3px var(--accent-soft)}
+.f input:focus-visible,.f select:focus-visible,.f textarea:focus-visible{outline:2px solid var(--l-label);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.f input:hover,.f select:hover,.f textarea:hover{border-color:var(--muted)}}
+.f [aria-invalid="true"]{border-color:var(--danger)}
+.err{font-size:.8125rem;color:var(--danger)}
+.err:empty{display:none}
+.submit{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-3) var(--s-5)}
+.submit p{font-size:.8125rem;color:var(--muted)}
+.panel .btn{background:var(--deep);color:var(--on-deep)}
+@media (hover:hover) and (pointer:fine){.panel .btn:hover{background:var(--deep-2)}}
+.panel .btn.line{background:transparent;color:var(--ink)}
+.thanks[hidden]{display:none}
+.thanks:focus{outline:none}
+.thanks h3{font-size:var(--t-h2);text-transform:uppercase;line-height:.95}
+.thanks p{margin-top:var(--s-3);max-width:46ch}
+.thanks .muted{font-size:var(--t-small)}
+.thanks .btn{margin-top:var(--s-5)}
+
+.foot{margin-top:var(--sec);background:var(--deep-2);padding-block:var(--s-7) var(--s-7);font-size:.875rem;color:var(--muted)}
+main:has(> .band:last-child) + .foot{margin-top:0}
+.foot .wrap{display:grid;grid-template-columns:1fr auto;gap:var(--s-3) var(--s-6);align-items:center}
+.foot b{color:var(--ink);font-weight:600}
+.foot a{color:var(--muted)}
+.foot .right{text-align:right}
+.foot .right a{display:inline-flex;align-items:center;min-height:44px}
+.foot .credit{grid-column:1/-1;max-width:none}
+
+/* footer mark */
+.gcd{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:14px;margin-top:12px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505;box-shadow:0 0 0 1px rgb(246 243 231 / .2)}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font-weight:500}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--tint)}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
+
+.bar{display:none}
+
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;transform:translateY(16px);transition:opacity 700ms var(--ease),transform 700ms var(--ease)}
+  .js .rv.in{opacity:1;transform:none}
+  .js .list .rv:nth-child(2),.js .steps .rv:nth-child(2),.js .strip .rv:nth-child(2){transition-delay:90ms}
+  .js .list .rv:nth-child(3),.js .steps .rv:nth-child(3),.js .strip .rv:nth-child(3){transition-delay:180ms}
+  .js .list .rv:nth-child(4){transition-delay:270ms}
+  .hero .rise{animation:rise 800ms var(--ease) both}
+  .hero .rise:nth-child(2){animation-delay:80ms}
+  .hero-pic.rise{animation:rise 800ms var(--ease) 160ms both}
+  .hero-pic img{animation:settle 1600ms var(--ease) both}
+}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes settle{from{transform:scale(1.05)}to{transform:none}}
+
+@media (max-width:960px){
+  .hero-grid,.head,.pane,.how,.contact,.feature{grid-template-columns:minmax(0,1fr)}
+  .cta{justify-content:flex-start}
+  .pane .photo{aspect-ratio:16/10}
+  .how .photo{aspect-ratio:4/3}
+  .feature .card{margin:calc(var(--s-8) * -1) var(--s-5) 0;margin-bottom:0}
+}
+
+@media (max-width:640px){
+  :root{--bar:calc(60px + env(safe-area-inset-bottom));--r-photo:16px;--r-card:14px;--off:10px}
+  .hero{padding-bottom:120px}
+  .hero-pic{margin-top:-112px}
+  .hero-pic .photo{aspect-ratio:4/3}
+  .hero-pic img{object-position:50% 60%}
+  .float{position:relative;left:auto;bottom:auto;margin:calc(var(--s-7) * -1) var(--s-4) 0;max-width:none}
+  .cta .btn{flex:1 1 auto}
+  .facts{gap:2px 18px}
+  .facts li+li::before{content:none}
+  .head{padding-bottom:var(--s-5)}
+  .switch{display:grid;width:100%}
+  .switch label{padding:0 12px}
+  .strip{grid-template-columns:1fr 1fr;gap:var(--s-3);margin-top:var(--s-7)}
+  .strip .photo:first-child{grid-column:1/-1;aspect-ratio:16/10}
+  .strip .photo:nth-child(2){margin-top:0;aspect-ratio:4/5}
+  .feature .card{margin:calc(var(--s-7) * -1) var(--s-4) 0}
+  .feature .card h3{font-size:2rem}
+  .steps li{grid-template-columns:48px minmax(0,1fr)}
+  .steps li::before{width:48px;height:48px;font-size:1.75rem}
+  .steps h3{font-size:1.75rem;padding-top:10px}
+  form{grid-template-columns:minmax(0,1fr)}
+  .submit .btn{width:100%}
+  .foot .wrap{grid-template-columns:minmax(0,1fr)}
+  .foot .right{text-align:left}
+  body{padding-bottom:0}
+  .foot{padding-bottom:calc(var(--s-7) + var(--bar))}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--deep-2);padding-bottom:env(safe-area-inset-bottom)}
+  .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:60px;font-weight:600;font-size:1rem;text-decoration:none;color:var(--ink)}
+  .bar a:first-child{background:var(--accent);color:var(--on-accent)}
+  .bar a:active{opacity:.85}
+  .bar svg{width:17px;height:17px}
+}
+@media (max-width:640px) and (max-height:740px){
+  body .hero{padding-top:var(--s-6)}
+  body .hero h1{font-size:clamp(2.75rem,2.2rem + 2.6vw,3.25rem)}
+  body .hero-grid{margin-top:var(--s-4);gap:var(--s-4)}
+  body .hero p{font-size:1rem}
+}
+@media (max-width:420px) and (max-height:600px){
+  body .hero h1{font-size:2.5rem}
+  body .hero p{font-size:.9375rem;line-height:1.5}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="sample deep" role="note">Sample site made for M &amp; M Lawn Care by <a href="https://granitecitydigital.me/">Granite City Digital</a>. Your real site gets your own photos, colors and services.</div>
+
+<div class="top-band deep">
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="M &amp; M Lawn Care, back to top">M &amp; M <span>Lawn Care</span></a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="#services">Lawn and tree work</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#yard">Around the yard</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn line" href="tel:+16624013291"><span class="long num">(662) 401 3291</span><span class="short">Call</span></a>
+  </div>
+</header>
+
+<section class="wrap hero" id="top" aria-labelledby="hero-h">
+  <h1 class="rise" id="hero-h"><span>Lawn care and tree service</span> <span class="soft">in <span class="hl">Tupelo</span>, MS.</span></h1>
+  <div class="hero-grid rise">
+    <div>
+      <p>We mow, edge, trim and clean up yards, and we trim and take down trees. Call us and tell us what your yard needs.</p>
+      <ul class="facts">
+        <li>Lawn care</li>
+        <li>Tree service</li>
+        <li>Monday to Friday, 7:30 to 6</li>
+        <li>Call ahead to confirm</li>
+      </ul>
+    </div>
+    <div class="cta">
+      <a class="btn" href="tel:+16624013291"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call <span class="num">(662) 401 3291</span></a>
+      <a class="btn line" href="#contact">Send a request</a>
+    </div>
+  </div>
+</section>
+</div>
+
+<main id="main">
+  <div class="wrap">
+    <div class="hero-pic layer rise">
+      <figure class="photo"><img src="hero.jpg" width="1600" height="1200" fetchpriority="high" alt="A freshly mowed lawn with neat stripes, lined with trees and flower beds on a sunny day"></figure>
+      <div class="float lite"><span>Hours</span><p>Monday to Friday, 7:30 to 6</p><small>Call ahead to confirm.</small></div>
+    </div>
+  </div>
+
+  <section class="wrap sec" id="services" aria-labelledby="svc-h">
+    <div class="head rv">
+      <h2 id="svc-h">The lawn and the trees</h2>
+      <p>M &amp; M Lawn Care does lawn care and tree service in Tupelo. Pick one to see the work.</p>
+    </div>
+    <form class="picker rv">
+      <input class="vh" type="radio" name="pick" id="pick-lawn" checked>
+      <input class="vh" type="radio" name="pick" id="pick-tree">
+      <div class="switch">
+        <label for="pick-lawn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 20h18M6 20c0-4-1-7-3-9M10 20c0-5 0-9-2-13M14 20c0-5 1-9 3-12M18 20c0-3 1-6 3-8"/></svg>Lawn care</label>
+        <label for="pick-tree"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 21v-7M12 14l-3-3M12 14l3-2M12 3a6 6 0 00-6 6 4.5 4.5 0 004.5 4.5h3A4.5 4.5 0 0018 9a6 6 0 00-6-6z"/></svg>Tree service</label>
+      </div>
+      <div class="panes">
+        <div class="pane pane-lawn">
+          <div class="layer"><figure class="photo"><img src="lawn-trim.jpg" width="1200" height="1500" alt="A man in a wide brimmed hat trimming the grass around a big oak in front of a brick house"></figure></div>
+          <div>
+            <ul class="list">
+              <li><h3>Mowing</h3><p>Grass cut to an even height across the whole yard.</p></li>
+              <li><h3>Edging</h3><p>Clean lines where the lawn meets the driveway, the walk and the beds.</p></li>
+              <li><h3>Trimming</h3><p>The spots a mower can't reach: along fences, around trees and next to the house.</p></li>
+              <li><h3>Yard cleanup</h3><p>Leaves, sticks and clippings cleared away so the yard looks finished.</p></li>
+            </ul>
+            <p class="note"><b>Monday to Friday, 7:30 to 6.</b> Call ahead to confirm, then tell us what the yard needs.</p>
+          </div>
+        </div>
+        <div class="pane pane-tree">
+          <div class="layer"><figure class="photo"><img src="trimmed-limbs.jpg" width="1600" height="1200" alt="Freshly cut tree limbs against a blue sky after trimming"></figure></div>
+          <div>
+            <ul class="list">
+              <li><h3>Tree trimming</h3><p>Overgrown branches cut back so the tree and the yard look tidy again.</p></li>
+              <li><h3>Tree removal</h3><p>When a tree has to come out of the yard, we take it down.</p></li>
+            </ul>
+            <p class="note">Not sure if a tree needs trimming or needs to come down? <a class="link" href="tel:+16624013291">Call <span class="num">(662) 401 3291</span></a> and talk it over.</p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <section class="band deep" id="how" aria-labelledby="how-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="how-h">How it works</h2>
+        <p>Three plain steps, and the first one is a phone call.</p>
+      </div>
+      <div class="how">
+        <div class="layer rv"><figure class="photo"><img src="felled-trunk.jpg" width="1200" height="1500" alt="A long tree trunk lying on a mowed lawn while a worker in a helmet cuts it into pieces"></figure></div>
+        <ol class="steps">
+          <li class="rv"><h3>Call us</h3><p>Call <a href="tel:+16624013291" class="num">(662) 401 3291</a> to get started.</p></li>
+          <li class="rv"><h3>Tell us about the yard</h3><p>Say what needs doing: the grass, the edges, the leaves or a tree.</p></li>
+          <li class="rv"><h3>Pick what you want done</h3><p>Ask what you want to know, then decide how you want to go ahead.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="yard" aria-labelledby="yard-h">
+    <div class="head rv">
+      <h2 id="yard-h">Around the yard</h2>
+      <p>Fresh stripes in the grass, leaves raked into a pile and a tree on its way down.</p>
+    </div>
+    <div class="feature">
+      <div class="layer rv"><figure class="photo"><img src="felling.jpg" width="1600" height="1067" alt="A man cutting into a large tree trunk with a chainsaw, sawdust flying in the sun"></figure></div>
+      <div class="card rv"><h3>Trees too</h3><p>A tree in the wrong spot? Call and tell us where it stands and what is near it.</p></div>
+    </div>
+    <div class="strip">
+      <figure class="photo rv"><img src="stripes.jpg" width="1600" height="1067" alt="Close view of a green lawn mowed in light and dark stripes"></figure>
+      <figure class="photo rv"><img src="rake.jpg" width="1600" height="1067" loading="lazy" alt="A red rake beside a pile of yellow and brown fallen leaves"></figure>
+      <figure class="photo rv"><img src="leaves-blower.jpg" width="1600" height="1021" loading="lazy" alt="A man blowing golden fallen leaves across a yard under a yellow tree"></figure>
+    </div>
+  </section>
+
+  <section class="band deep" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="contact-h">Call M &amp; M</h2>
+        <p>Tell us what the yard or the tree needs.</p>
+      </div>
+      <div class="contact">
+        <ul class="ways rv">
+          <li><a class="num" href="tel:+16624013291"><span>Call</span>(662) 401 3291</a></li>
+          <li><div class="plain"><span>Hours</span><p>Monday to Friday, 7:30 to 6</p><small>Call ahead to confirm.</small></div></li>
+          <li><div class="plain"><span>Based in</span><p>Tupelo, MS</p></div></li>
+        </ul>
+
+        <div class="panel lite rv">
+          <form id="qform" method="post" novalidate>
+            <div class="f">
+              <label for="q-name">Your name</label>
+              <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+              <span class="err" id="e-name"></span>
+            </div>
+            <div class="f">
+              <label for="q-phone">Phone</label>
+              <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Your phone number" required aria-describedby="e-phone">
+              <span class="err" id="e-phone"></span>
+            </div>
+            <div class="f full">
+              <label for="q-town">Town</label>
+              <select id="q-town" name="town" required aria-describedby="e-town">
+                <option value="">Choose your town</option>
+                <option>Tupelo</option>
+                <option>Nearby</option>
+              </select>
+              <span class="err" id="e-town"></span>
+            </div>
+            <div class="f full">
+              <label for="q-msg">What needs doing?</label>
+              <textarea id="q-msg" name="message" required aria-describedby="e-msg" placeholder="Example: the front and back yard need mowing, and one big limb hangs over the driveway"></textarea>
+              <span class="err" id="e-msg"></span>
+            </div>
+            <div class="submit">
+              <button class="btn" type="submit">Send request</button>
+              <p>Sample form: nothing is sent.</p>
+            </div>
+          </form>
+          <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
+            <h3 id="t-title">Thanks. We have it.</h3>
+            <p id="t-body">We will call you back soon.</p>
+            <p class="muted">This is a sample site, so nothing was actually sent.</p>
+            <button class="btn line" type="button" id="t-again">Send another request</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot deep">
+  <div class="wrap">
+    <p><b>M &amp; M Lawn Care</b> &middot; Lawn care and tree service &middot; Tupelo, MS</p>
+    <p class="right"><a class="num" href="tel:+16624013291">(662) 401 3291</a></p>
+    <p class="credit">Photos are examples.</p>
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
+  </div>
+</footer>
+
+<nav class="bar deep" aria-label="Quick contact">
+  <a href="tel:+16624013291"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>
+  <a href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 5h16v11H8l-4 4z"/></svg>Send a request</a>
+</nav>
+
+<script>
+(function(){
+  /* quiet reveal, once per element */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+  addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+
+  /* quote form (runs only when the form is on the page) */
+  var f=document.getElementById('qform');
+  if(!f)return;
+  var F=f.elements,thanks=document.getElementById('thanks');
+  function setErr(id,msg){var i=document.getElementById(id),e=document.getElementById(i.getAttribute('aria-describedby'));e.textContent=msg;if(msg){i.setAttribute('aria-invalid','true')}else{i.removeAttribute('aria-invalid')}return !msg}
+  function check(){
+    var ok=true,first=null;
+    function run(id,msg){var good=setErr(id,msg);if(!good&&!first)first=id;ok=ok&&good}
+    var name=F['name'].value.trim(),phone=F['phone'].value.replace(/\D/g,''),msg=F['message'].value.trim();
+    run('q-name',name.length<2?'Please tell us your name.':'');
+    run('q-phone',phone.length<10?'Please enter a 10 digit phone number.':'');
+    run('q-town',!F['town'].value?'Please choose your town.':'');
+    run('q-msg',msg.length<5?'A few words about the job helps us call back with the right answer.':'');
+    if(first)document.getElementById(first).focus();
+    return ok;
+  }
+  ['q-name','q-phone','q-town','q-msg'].forEach(function(id){
+    var el=document.getElementById(id);
+    el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){if(el.getAttribute('aria-invalid'))setErr(id,'')});
+  });
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!check())return;
+    var name=F['name'].value.trim().split(' ')[0],d=F['phone'].value.replace(/\D/g,'').slice(-10);
+    var nice='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6);
+    document.getElementById('t-title').textContent='Thanks, '+name+'. We have it.';
+    document.getElementById('t-body').textContent='We will call you at '+nice+' soon.';
+    f.hidden=true;thanks.hidden=false;thanks.focus();
+  });
+  document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+Photo credits for this sample page. All photos are stock examples, not photos of the business.
+
+hero.jpg
+  Shows: a mechanic leaning into an engine bay with a small flashlight
+  Photographer: Mustafa Sheikhmouss
+  Source: https://unsplash.com/photos/3G7GwAbPRE0
+  License: Unsplash License
+
+warning-light.jpg
+  Shows: an amber warning light glowing on a car dashboard
+  Photographer: Erik Mclean
+  Source: https://unsplash.com/photos/4n7vtxGeTcw
+  License: Unsplash License
+
+brake.jpg
+  Shows: a close view of a car's brakes with the wheel off
+  Photographer: Erik Mclean
+  Source: https://unsplash.com/photos/vS2shmNei2E
+  License: Unsplash License
+
+wrench.jpg
+  Shows: hands holding a wrench over an engine
+  Photographer: Christian Buehner
+  Source: https://unsplash.com/photos/Fd6osyVbtG4
+  License: Unsplash License
+
+bay.jpg
+  Shows: a car with its hood up beside a blue lift in a repair shop
+  Photographer: Mustafa Sheikhmouss
+  Source: https://unsplash.com/photos/cl1M5WBCF8c
+  License: Unsplash License
+
+ratchet.jpg
+  Shows: a hand holding a ratchet over the open hood of a blue car
+  Photographer: Sasun Bughdaryan
+  Source: https://unsplash.com/photos/9gB7APNSquE
+  License: Unsplash License
+
+suspension.jpg
+  Shows: a mechanic working under a raised car on jack stands, with steering and suspension parts in view
+  Photographer: Tahamie Farooqui
+  Source: https://unsplash.com/photos/K5624F8cipE
+  License: Unsplash License
+
+tow.jpg
+  Shows: a gloved hand hooking a chain to a truck on a flatbed deck
+  Photographer: Jonathan Reynaga
+  Source: https://www.pexels.com/photo/17429095/
+  License: Pexels License

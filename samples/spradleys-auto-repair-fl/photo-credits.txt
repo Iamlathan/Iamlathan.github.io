@@ -1,0 +1,43 @@
+Photo credits for this sample page. All photos are stock examples, not photos of the business.
+
+hero.jpg
+  Shows: a mechanic on a creeper under a truck in an open shop bay on a sunny day
+  Photographer: Danny Pineda
+  Source: https://unsplash.com/photos/0DDwJidtiLA
+  License: Unsplash License
+
+under-wrench.jpg
+  Shows: hands turning a wrench under a vehicle
+  Photographer: Nina Mercado
+  Source: https://unsplash.com/photos/Y_t0n-T4H5M
+  License: Unsplash License
+
+brakes.jpg
+  Shows: a brake disc and caliper on a raised car with the wheel off
+  Photographer: The DK Photography
+  Source: https://unsplash.com/photos/fwnTOncjeB0
+  License: Unsplash License
+
+socket.jpg
+  Shows: hands with a socket wrench at the base of a windshield, hood open
+  Photographer: Sergey Meshkov
+  Source: https://www.pexels.com/photo/8478204/
+  License: Pexels License
+
+fuse-box.jpg
+  Shows: hands working under the hood of a white car
+  Photographer: Maxim Hopman
+  Source: https://unsplash.com/photos/s4d_ESS0ylA
+  License: Unsplash License
+
+dipstick.jpg
+  Shows: a hand lifting a yellow handle under the hood of a car
+  Photographer: Gustavo Fring
+  Source: https://www.pexels.com/photo/4895412/
+  License: Pexels License
+
+hose.jpg
+  Shows: a mechanic working with a clear hose under the open hood of a car
+  Photographer: Chris Kursikowski
+  Source: https://unsplash.com/photos/tjNRkdeUrp4
+  License: Unsplash License

@@ -1,0 +1,10 @@
+Photo credits for the M & M Lawn Care sample page. All photos are examples, used under the Unsplash License or the Pexels License.
+
+hero.jpg | A freshly mowed lawn with stripes, lined with trees and flower beds | MV Vacation | https://unsplash.com/photos/zXH4Y7bRu3Y | Unsplash License
+lawn-trim.jpg | A man trimming grass around an oak in front of a brick house | Kenny Perez | https://unsplash.com/photos/x2GgAart-is | Unsplash License
+trimmed-limbs.jpg | Freshly cut tree limbs against a blue sky | Timothy Huliselan | https://www.pexels.com/photo/31296071/ | Pexels License
+felled-trunk.jpg | A tree trunk on a lawn being cut into pieces | Michael Wilson | https://unsplash.com/photos/11wj0TzBEi0 | Unsplash License
+felling.jpg | A man cutting into a large tree trunk with a chainsaw | Patti Black | https://unsplash.com/photos/DZJ3XHuqD1E | Unsplash License
+stripes.jpg | A green lawn mowed in light and dark stripes | Se. Tsuchiya | https://unsplash.com/photos/1wAmm_d2TDM | Unsplash License
+rake.jpg | A red rake beside a pile of fallen leaves | Wendell Shinn | https://unsplash.com/photos/xsAj4IwTYik | Unsplash License
+leaves-blower.jpg | A man blowing fallen leaves under a yellow tree | Austin | https://unsplash.com/photos/YJC9iq7bdQI | Unsplash License
