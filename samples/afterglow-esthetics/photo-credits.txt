@@ -1,18 +1,76 @@
-Photo credits for samples/afterglow-esthetics (checked 2026-10-21)
+Photo credits for samples/afterglow-esthetics (updated 2026-11-19)
 
-hero.jpg
-  Photographer: Rosa Rafael
+Every photo below is a generic stock photo shown as an example. None shows Afterglow Esthetics, its staff, its clients or its studio.
+Files ending in -800 are smaller copies of the same photo for phones.
+
+Photos shown on the page
+
+mask-prep.jpg, mask-prep-800.jpg
+  Shows: hands brushing a pale green clay mask inside a glass bowl
+  Photographer: Roman Odintsov (name from the Pexels download file name)
+  License: Pexels License (free to use)
+  Source page: https://www.pexels.com/photo/5912362/
+
+balm-jar.jpg, balm-jar-800.jpg
+  Shows: a glass jar of pale gold balm on a wooden tray with dried roses on linen
+  Photographer: Alesia Kozik
+  License: Pexels License (free to use)
+  Source page: https://www.pexels.com/photo/jar-on-a-wooden-tray-7796223/
+
+lash-tweezers.jpg, lash-tweezers-800.jpg
+  Shows: three steel lash tweezers resting on a brushed gold tray
+  Photographer: Nataliya Vaitkevich
+  License: Pexels License (free to use)
+  Source page: https://www.pexels.com/photo/eyelash-extension-tweezers-on-gold-tray-5128316/
+
+treatment-room.jpg, treatment-room-800.jpg
+  Shows: a treatment bed with a pink pillow and a lamp, in a room with pale pink shutters
+  Photographer: Artbovich (name from the Pexels download file name)
+  License: Pexels License (free to use)
+  Source page: https://www.pexels.com/photo/6899551/
+
+gold-brushes.jpg, gold-brushes-800.jpg
+  Shows: six makeup brushes with gold handles in soft warm light
+  Photographer: Arista Cron
   License: Unsplash License (free to use)
-  Source page: https://unsplash.com/photos/woman-receiving-facial-mask-treatment-at-spa-Pe9IXUuC6QU
+  Source page: https://unsplash.com/photos/VAIl9u21wO8
 
-bottles.jpg
+bottles.jpg, bottles-800.jpg
+  Shows: amber glass skincare jars and bottles with gold lids on a wooden shelf
   Photographer: Benjamin Ngo
   License: Unsplash License (free to use)
   Source page: https://unsplash.com/photos/eT_X8q80_3g
 
-treatment-studio.jpg
+studio-bed.jpg
+  Shows: a rolled white towel on a treatment bed beside a wooden tray with a candle and dried flowers
+  Cropped from treatment-studio.jpg (the lower part only)
   Photographer: Marine Fougere
   License: Pexels License (free to use)
   Source page: https://www.pexels.com/photo/serene-spa-interior-with-massage-table-and-candle-35884502/
 
-All three are generic stock photos shown as examples. None shows Afterglow Esthetics, its staff or its studio.
+brow-tools.jpg, brow-tools-800.jpg
+  Shows: a brow pencil, pencil swatches, tweezers, a lash strip and a fine brush on brown paper
+  Cropped from the original to leave out a labeled tube on the left
+  Photographer: N Voitkevich (name from the Pexels download file name)
+  License: Pexels License (free to use)
+  Source page: https://www.pexels.com/photo/8558520/
+
+Photos in this folder that the page does not show
+
+skincare-cream.jpg, skincare-cream-800.jpg
+  Shows: fingertips dipping into a pale pink jar of cream
+  Photographer: Karola G (name from the Pexels download file name)
+  License: Pexels License (free to use)
+  Source page: https://www.pexels.com/photo/7321496/
+
+lash-tray.jpg, lash-tray-800.jpg
+  Shows: steel tweezers resting on a pale pink tray of lash strips
+  Photographer: Jessica Donnelly
+  License: Unsplash License (free to use)
+  Source page: https://unsplash.com/photos/irXGNGSuWW4
+
+makeup-palettes.jpg, makeup-palettes-800.jpg
+  Shows: makeup palettes in warm shades with two brushes on a pale table
+  Photographer: Kelly Sikkema
+  License: Unsplash License (free to use)
+  Source page: https://unsplash.com/photos/YZ8usdlqw8A

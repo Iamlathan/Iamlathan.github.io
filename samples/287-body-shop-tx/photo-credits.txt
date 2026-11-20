@@ -1,0 +1,59 @@
+Photo credits for 287-body-shop-tx. Photos from Unsplash (Unsplash License, https://unsplash.com/license) and Pexels (Pexels License, https://www.pexels.com/license/), shown as examples.
+
+Shown on the page
+
+cracked-fender.jpg
+  Shows: yellow car with a cracked front fender beside the headlight
+  Photographer: jorgeromeroortiz (Pexels handle)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/33749906/
+
+green-bumper.jpg
+  Shows: green car with a dented front corner and a broken headlight
+  Photographer: Nick Pyl
+  License: Unsplash License
+  Source: https://unsplash.com/photos/15gEIt-TsmY
+
+dent-pull.jpg
+  Shows: hand working a dent out of a white door panel
+  Photographer: papaz (Pexels handle)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/35149611/
+
+door-buff.jpg
+  Shows: buffing a white car door with the trim masked in blue tape
+  Photographer: Khunkorn Laowisit
+  License: Pexels License
+  Source: https://www.pexels.com/photo/5233276/
+
+blue-fender.jpg
+  Shows: blue car with a crumpled front fender and peeling paint
+  Photographer: Iván Antonio
+  License: Unsplash License
+  Source: https://unsplash.com/photos/Iii4uJN70Ug
+
+scuffed-bumper.jpg
+  Shows: scuffed and chipped paint on a blue front bumper corner
+  Photographer: daniel mironov
+  License: Unsplash License
+  Source: https://unsplash.com/photos/aRpZj7mBFpw
+
+tail-light.jpg
+  Shows: glossy white rear quarter panel around a red tail light
+  Photographer: Khunkorn Laowisit
+  License: Pexels License
+  Source: https://www.pexels.com/photo/5233274/
+
+In the folder, not shown on the page
+
+hero.jpg
+  Shows: car in gray primer inside a body shop bay
+  Photographer: Roger Starnes Sr
+  License: Unsplash License
+  Source: https://unsplash.com/photos/-c17dsLOn_U
+
+shop-fit.jpg
+  Shows: white car parked inside a workshop
+  Photographer: Erik Mclean
+  License: Unsplash License
+  Source: https://unsplash.com/photos/eTPqjGhynkI

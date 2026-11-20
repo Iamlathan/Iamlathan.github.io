@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fender Brothers Plumbing | Plumber in Traphill, NC</title>
+<meta name="description" content="Fender Brothers Plumbing in Traphill, NC: commercial and residential plumbing, water heaters, water and septic lines, drains, leaks and remodels. Call (336) 927 3747.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#06242a">
+<meta property="og:title" content="Fender Brothers Plumbing | Traphill, NC">
+<meta property="og:description" content="Fender Brothers Plumbing in Traphill, NC: commercial and residential plumbing, water heaters, water and septic lines, drains, leaks and remodels. Call (336) 927 3747.">
+<meta property="og:image" content="https://granitecitydigital.me/samples/fender-brothers-plumbing-nc/hero-sink.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Plumber",
+  "name": "Fender Brothers Plumbing",
+  "telephone": "+13369273747",
+  "address": {"@type": "PostalAddress", "addressLocality": "Traphill", "addressRegion": "NC", "addressCountry": "US"},
+  "image": "hero-sink.jpg"
+}
+</script>
+<style>
+/* 1. this mockup's own look */
+:root{
+  /* light grounds */
+  --bg:#f1e9da;          /* page ground, warm sand */
+  --surface:#fbf7ef;     /* cards and fields, warm off white */
+  --tint:#e6dcc8;        /* light band */
+  --ink:#13201f;         /* text on light grounds */
+  --muted:#4a5856;       /* quiet text on light grounds */
+  --line:#d5c9b3;        /* borders on light grounds */
+  --field-line:#8c8470;  /* form field borders */
+  /* deep bands */
+  --deep:#0a3239;        /* petrol teal band */
+  --deep-2:#114650;      /* raised parts on a deep band */
+  --deep-3:#06242a;      /* footer, sample note and the hero call card */
+  --on-deep:#f3efe8;     /* cream text on deep bands */
+  --on-deep-muted:#b7c8c6; /* quiet text on deep bands */
+  --deep-line:#2a545c;   /* borders on deep bands */
+  /* accent */
+  --accent:#f27009;      /* safety orange: button fills, one headline word, labels on deep bands */
+  --accent-hover:#ff8a2e;
+  --accent-ink:#a34000;  /* burnt orange for small accent text on light grounds */
+  --accent-soft:#f5dcc2; /* pale orange wash */
+  --on-accent:#17110b;   /* near black text on the orange */
+  --danger:#a12a1e;
+  --layer:var(--deep);   /* block set behind a photo */
+  --shadow:8 36 42;
+  --texture:repeating-linear-gradient(135deg,rgb(var(--shadow) / .03) 0 2px,transparent 2px 18px);
+
+  --font:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Bricolage Grotesque","Figtree",system-ui,sans-serif;
+  --display-weight:700;
+  --display-stretch:75%;
+  --display-track:-.012em;
+
+  --r-ctl:12px;
+  --r-card:clamp(16px,1.6vw,20px);
+  --r-photo:clamp(18px,2.2vw,28px);
+}
+/* a deep band: the same tokens, turned for a dark ground */
+.deep{
+  --bg:var(--deep);
+  --surface:var(--deep-2);
+  --tint:var(--deep-2);
+  --ink:var(--on-deep);
+  --muted:var(--on-deep-muted);
+  --line:var(--deep-line);
+  --accent-ink:var(--accent);
+  --layer:var(--accent);
+  --shadow:2 14 17;
+  background-color:var(--deep);
+  color:var(--ink);
+}
+/* 2. the system */
+:root{
+  --t-small:.875rem;
+  --t-body:1rem;
+  --t-lead:clamp(1.0625rem,1rem + .3vw,1.1875rem);
+  --t-h3:1.125rem;
+  --t-h2:clamp(2.125rem,1.5rem + 2.2vw,3.25rem);
+  --t-h1:clamp(2.75rem,1.6rem + 4.9vw,5.5rem);
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+  --sec:clamp(88px,10vw,144px);
+  --band-pad:clamp(64px,8vw,112px);
+  --off:clamp(10px,1.4vw,18px);
+  --sh-1:1px 1px 2px rgb(var(--shadow) / .05),2px 6px 16px -6px rgb(var(--shadow) / .14);
+  --sh-2:1px 2px 4px rgb(var(--shadow) / .06),4px 14px 32px -10px rgb(var(--shadow) / .22);
+  --sh-3:2px 4px 8px rgb(var(--shadow) / .07),8px 28px 56px -16px rgb(var(--shadow) / .30);
+  --wrap:1120px;
+  --m:clamp(20px,4vw,32px);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --bar:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+@media (max-width:760px){html{scroll-padding-bottom:96px}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+::selection{background:var(--accent);color:var(--on-accent)}
+:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px}
+h1,h2,h3{font-family:var(--font-display);font-weight:var(--display-weight);font-stretch:var(--display-stretch);letter-spacing:var(--display-track);line-height:1.02;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--deep-3);color:var(--on-deep);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:var(--r-ctl)}
+.skip:focus{top:12px}
+.num{font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2);min-height:48px;padding:0 22px;border-radius:var(--r-ctl);border:1px solid transparent;background:var(--accent);color:var(--on-accent);font:600 .9375rem/1 var(--font);text-decoration:none;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,border-color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.line{background:var(--surface);color:var(--ink);border-color:var(--line)}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--accent-hover);box-shadow:var(--sh-2);transform:translateY(-1px)}
+  .btn.line:hover{background:var(--surface);border-color:var(--muted)}
+  .btn:active{transform:scale(.97);box-shadow:none}
+}
+
+.sample{background:var(--deep-3);color:var(--on-deep-muted);font-size:.8125rem;text-align:center;padding:8px var(--m);line-height:1.45}
+.sample a{color:var(--on-deep)}
+
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s-5);min-height:72px}
+.mark{display:inline-flex;align-items:center;gap:6px;font-weight:var(--display-weight);font-stretch:var(--display-stretch);font-size:1.3125rem;letter-spacing:0;text-decoration:none;min-height:44px;font-family:var(--font-display)}
+.mark span{color:var(--muted)}
+.nav{display:flex;align-items:center;gap:28px;list-style:none;padding:0;font-size:var(--t-small)}
+.nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 200ms ease}
+.top .btn{min-height:44px;padding:0 16px;font-size:var(--t-small)}
+.top .short{display:none}
+@media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--ink)}}
+@media (max-width:880px){.nav{display:none}}
+@media (max-width:480px){.top .long{display:none}.top .short{display:inline}}
+@media (max-width:400px){.mark span{display:none}}
+
+.photo{position:relative;border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-1)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.layer{position:relative;isolation:isolate}
+.layer::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--layer);transform:translate(var(--off),var(--off))}
+.float{position:absolute;z-index:2;left:calc(var(--off) * -1);bottom:calc(var(--s-6) * -1);max-width:min(340px,calc(100% - var(--s-7)));background:var(--deep-3);color:var(--on-deep);border-radius:var(--r-card);box-shadow:var(--sh-3);padding:var(--s-4) var(--s-5);display:grid;gap:2px}
+.float span{font-size:.8125rem;font-weight:600;color:var(--accent)}
+.float a{font-size:var(--t-lead);line-height:1.35;text-decoration:none;min-height:32px;display:inline-flex;align-items:center;width:fit-content;font-weight:600}
+.float a:focus-visible{outline-color:var(--accent)}
+@media (hover:hover) and (pointer:fine){.float a:hover{text-decoration:underline;text-decoration-color:var(--deep-line)}}
+
+/* the hero is a deep band that stops part way down the photo, so the photo steps onto the sand */
+.hero{--straddle:clamp(96px,16vw,230px);padding-top:clamp(48px,7vw,96px)}
+.hero.deep{background:linear-gradient(to bottom,var(--deep) calc(100% - var(--straddle)),transparent calc(100% - var(--straddle)))}
+.hero h1{font-size:var(--t-h1)}
+.hero h1>span{display:block}
+.hl{color:var(--accent-ink)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-6) var(--s-7);align-items:end;margin-top:var(--s-6)}
+.hero-grid p{color:var(--muted);font-size:var(--t-lead);max-width:46ch}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s-3);justify-content:flex-end}
+.facts{margin-top:var(--s-5);font-size:var(--t-small);color:var(--muted);display:flex;flex-wrap:wrap;gap:var(--s-1) 10px;list-style:none;padding:0}
+.facts li+li::before{content:"\00b7";margin-right:10px}
+.hero-pic{--layer:var(--deep-2);margin-top:clamp(40px,5vw,64px);margin-right:var(--off)}
+.hero-pic .photo{aspect-ratio:12/5}
+.hero-pic img{object-position:50% 70%}
+
+.sec{padding-top:var(--sec)}
+.band{margin-top:var(--sec);padding-block:var(--band-pad);background:var(--tint) var(--texture)}
+.band.deep{background:var(--deep)}
+.head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-4) var(--s-7);align-items:end;padding-bottom:var(--s-6)}
+.head h2{font-size:var(--t-h2)}
+.head p{color:var(--muted);max-width:46ch;font-size:var(--t-lead)}
+
+.svc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7);align-items:start}
+.svc .photo{aspect-ratio:4/5}
+.svc .photo img{object-position:72% 50%}
+.svc .layer{margin-right:var(--off)}
+.list{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--s-4)}
+.list li{display:grid;align-content:start;gap:var(--s-2);padding:var(--s-5);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-1)}
+.list h3{font-size:var(--t-h3);font-weight:600;font-stretch:normal;letter-spacing:-.01em;line-height:1.3;font-family:var(--font)}
+.list p{color:var(--muted);font-size:.9375rem;max-width:44ch}
+.note{margin-top:var(--s-5);padding:var(--s-4) var(--s-5);border-radius:var(--r-card);background:var(--accent-soft);font-size:.9375rem;color:var(--ink)}
+.note b{font-weight:600}
+
+.how{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:var(--s-7) var(--s-8);align-items:center}
+.how .layer{margin-right:var(--off);margin-bottom:var(--s-6)}
+.how .photo{aspect-ratio:4/3}
+.steps{list-style:none;padding:0;display:grid;gap:var(--s-5);counter-reset:step}
+.steps li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:2px var(--s-4);counter-increment:step}
+.steps li::before{content:counter(step);grid-row:1 / span 2;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--on-accent);font-weight:600;font-variant-numeric:tabular-nums}
+.steps h3{font-size:var(--t-h3);font-weight:600;font-stretch:normal;letter-spacing:-.01em;line-height:1.35;font-family:var(--font);padding-top:10px}
+.steps p{color:var(--muted);font-size:.9375rem;max-width:42ch}
+.steps p a{text-decoration-color:var(--accent-ink)}
+
+.ways{list-style:none;padding:0;display:grid;gap:var(--s-3)}
+.ways a,.ways .plain{display:grid;gap:2px;padding:var(--s-4) var(--s-5);border-radius:var(--r-card);background:var(--surface);text-decoration:none;font-size:var(--t-lead);line-height:1.35;overflow-wrap:anywhere}
+.ways a{box-shadow:var(--sh-1);transition:box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.ways a:active{transform:scale(.985);box-shadow:none}
+.ways .plain{box-shadow:none;background:transparent;padding-inline:0}
+.ways span{font-size:.8125rem;color:var(--muted)}
+@media (hover:hover) and (pointer:fine){.ways a:hover{box-shadow:var(--sh-2);transform:translateY(-2px)}.ways a:active{transform:scale(.985);box-shadow:none}}
+
+.strip{display:grid;grid-template-columns:5fr 4fr 5fr;gap:var(--s-5);align-items:start}
+.strip .photo{aspect-ratio:4/5}
+.strip .photo:nth-child(2){margin-top:var(--s-8);aspect-ratio:3/4}
+
+.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7);align-items:start}
+.panel{padding:clamp(24px,3vw,40px);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3)}
+
+form{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-5) var(--s-4)}
+form[hidden]{display:none}
+.f{display:grid;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label{font-size:var(--t-small);font-weight:500}
+.f input,.f select,.f textarea{width:100%;min-height:48px;padding:11px 14px;border:1px solid var(--field-line);border-radius:var(--r-ctl);background:var(--bg);color:var(--ink);font:inherit;font-size:1rem;caret-color:var(--accent-ink);transition:border-color 200ms ease,box-shadow 200ms ease,background-color 200ms ease;appearance:none;-webkit-appearance:none}
+.f select{background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%234a5856' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:40px}
+.f textarea{min-height:120px;resize:vertical;line-height:1.5}
+.f input::placeholder,.f textarea::placeholder{color:var(--muted)}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--accent-ink);background-color:var(--surface);box-shadow:0 0 0 3px var(--accent-soft)}
+@media (hover:hover) and (pointer:fine){.f input:hover,.f select:hover,.f textarea:hover{border-color:var(--muted)}}
+.f [aria-invalid="true"]{border-color:var(--danger)}
+.err{font-size:.8125rem;color:var(--danger)}
+.err:empty{display:none}
+.submit{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-3) var(--s-5)}
+.submit p{font-size:.8125rem;color:var(--muted)}
+.thanks[hidden]{display:none}
+.thanks:focus{outline:none}
+.thanks h3{font-size:var(--t-h2)}
+.thanks p{margin-top:var(--s-3);max-width:46ch}
+.thanks .muted{font-size:var(--t-small)}
+.thanks .btn{margin-top:var(--s-5)}
+
+.foot{margin-top:var(--sec);padding-block:var(--s-7) var(--s-7);font-size:.8125rem;color:var(--muted)}
+.foot.deep{background:var(--deep-3)}
+main:has(> .band:last-child) + .foot{margin-top:0}
+.foot .wrap{display:grid;grid-template-columns:1fr auto;gap:var(--s-3) var(--s-6);align-items:center}
+.foot b{color:var(--ink);font-weight:600}
+.foot a{color:var(--muted)}
+.foot .right{text-align:right}
+.foot .right a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink)}
+.foot .credit{grid-column:1/-1;max-width:none}
+
+/* footer mark */
+.gcd{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:14px;margin-top:12px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font-weight:500}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--tint)}.gcd:hover b{text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}}
+
+.bar{display:none}
+
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;transform:translateY(16px);transition:opacity 700ms var(--ease),transform 700ms var(--ease)}
+  .js .rv.in{opacity:1;transform:none}
+  .js .list .rv:nth-child(2),.js .steps .rv:nth-child(2),.js .strip .rv:nth-child(2){transition-delay:90ms}
+  .js .list .rv:nth-child(3),.js .steps .rv:nth-child(3),.js .strip .rv:nth-child(3){transition-delay:180ms}
+  .js .list .rv:nth-child(4){transition-delay:270ms}
+  .js .list .rv:nth-child(5){transition-delay:330ms}
+  .js .list .rv:nth-child(6){transition-delay:390ms}
+  .hero .rise{animation:rise 800ms var(--ease) both}
+  .hero .rise:nth-child(2){animation-delay:80ms}
+  .hero-pic.rise{animation-delay:160ms}
+  .hero-pic img{animation:settle 1600ms var(--ease) both}
+}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes settle{from{transform:scale(1.05)}to{transform:none}}
+
+/* 3. this mockup's own touches */
+.kicker{display:inline-flex;align-items:center;gap:10px;font-size:.8125rem;font-weight:600;letter-spacing:.02em;color:var(--accent-ink);margin-bottom:var(--s-4)}
+.kicker::before{content:"";width:22px;height:2px;border-radius:2px;background:currentColor}
+.list .tag{font-size:.75rem;font-weight:600;color:var(--accent-ink);font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.list li{border-top:3px solid var(--accent)}
+/* emergency band: full width, deep, with a photo and the call line */
+.sos{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--s-7);align-items:center}
+.sos h2{font-size:clamp(2.375rem,1.5rem + 3.2vw,4rem)}
+.sos p{color:var(--muted);font-size:var(--t-lead);max-width:40ch;margin-top:var(--s-4)}
+.sos .btn{margin-top:var(--s-6)}
+.sos .layer{margin-right:var(--off)}
+.sos .photo{aspect-ratio:5/4}
+.sos .photo img{object-position:62% 50%}
+.strip .photo:nth-child(1) img{object-position:46% 50%}
+.strip .photo:nth-child(2) img{object-position:40% 50%}
+.strip .photo:nth-child(3) img{object-position:48% 50%}
+.contact .side{display:grid;gap:var(--s-6)}
+.contact .side .photo{aspect-ratio:4/3}
+.contact .side .photo img{object-position:50% 50%}
+.contact .side .layer{margin-right:var(--off)}
+.demo-note{display:inline-flex;align-items:center;gap:8px}
+.demo-note::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+
+@media (max-width:960px){
+  .hero-grid,.head,.svc,.how,.contact,.sos{grid-template-columns:minmax(0,1fr)}
+  .cta{justify-content:flex-start}
+  .svc .photo{aspect-ratio:16/10}
+}
+@media (max-width:640px){
+  :root{--bar:calc(62px + env(safe-area-inset-bottom));--r-photo:18px;--r-card:16px;--off:10px}
+  .hero-pic .photo{aspect-ratio:4/3}
+  .hero-pic img{object-position:85% 50%}
+  .float{position:relative;left:auto;bottom:auto;margin:calc(var(--s-7) * -1) var(--s-4) 0;max-width:none}
+  .hero-pic.layer::before{inset:0 0 auto;aspect-ratio:4/3}
+  .cta .btn{flex:1 1 auto}
+  .facts{gap:2px 18px}
+  .facts li+li::before{content:none}
+  .head{padding-bottom:var(--s-5)}
+  .strip{grid-template-columns:1fr 1fr;gap:var(--s-3)}
+  .strip .photo:first-child{grid-column:1/-1;aspect-ratio:16/10}
+  .strip .photo:nth-child(2){margin-top:0;aspect-ratio:4/5}
+  form{grid-template-columns:minmax(0,1fr)}
+  .submit .btn{width:100%}
+  .foot .wrap{grid-template-columns:minmax(0,1fr)}
+  .foot .right{text-align:left}
+  .foot.deep{box-shadow:0 2px 0 var(--deep-3)}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--deep);border-top:1px solid var(--deep-line);padding-bottom:env(safe-area-inset-bottom)}
+  .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:60px;font-weight:600;font-size:1rem;text-decoration:none;color:var(--on-deep)}
+  .bar a:first-child{background:var(--accent);color:var(--on-accent)}
+  .bar a:active{opacity:.85}
+  .bar a:focus-visible{outline-color:var(--on-deep);outline-offset:-4px}
+  .bar svg{width:17px;height:17px}
+}
+@media (max-width:640px) and (max-height:740px){
+  body .hero{padding-top:var(--s-6)}
+  body .hero h1{font-size:clamp(2.25rem,1.6rem + 2.6vw,2.625rem)}
+  body .hero-grid{margin-top:var(--s-4);gap:var(--s-4)}
+  body .hero p{font-size:1rem}
+}
+@media (max-width:420px) and (max-height:600px){
+  body .hero{padding-top:var(--s-5)}
+  body .hero h1{font-size:2.125rem}
+  body .hero p{font-size:.9375rem;line-height:1.5}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="sample" role="note">Sample site made for Fender Brothers Plumbing by <a href="https://granitecitydigital.me/">Granite City Digital</a>.</div>
+
+<header class="top deep">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Fender Brothers Plumbing, back to top">Fender Brothers <span>Plumbing</span></a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#emergency">Emergencies</a></li>
+        <li><a href="#request">Request service</a></li>
+      </ul>
+    </nav>
+    <a class="btn line" href="tel:+13369273747"><span class="long num">(336) 927 3747</span><span class="short">Call</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero deep" id="top" aria-labelledby="hero-h">
+  <div class="wrap">
+    <h1 class="rise" id="hero-h"><span>Plumbing for homes</span> <span>and businesses in <span class="hl">Traphill.</span></span></h1>
+    <div class="hero-grid rise">
+      <div>
+        <p>Fender Brothers Plumbing handles water heaters, water and septic lines, drains, leaks, remodels and new construction. Call, or request service online.</p>
+        <ul class="facts">
+          <li>Commercial and residential</li>
+          <li>Emergency on call service</li>
+          <li>Traphill, NC</li>
+        </ul>
+      </div>
+      <div class="cta">
+        <a class="btn" href="tel:+13369273747">Call <span class="num">(336) 927 3747</span></a>
+        <a class="btn line" href="#request">Request service</a>
+      </div>
+    </div>
+    <div class="hero-pic layer rise">
+      <figure class="photo"><img src="hero-sink.jpg" width="1600" height="800" fetchpriority="high" alt="A brass kitchen faucet running water into a white sink set in a wood counter"></figure>
+      <div class="float"><span>Emergency on call service</span><a class="num" href="tel:+13369273747">(336) 927 3747</a></div>
+    </div>
+  </div>
+  </section>
+
+  <section class="band" id="services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="svc-h">Commercial and residential services</h2>
+        <p>From a new water heater to a full remodel, for homes and businesses.</p>
+      </div>
+      <div class="svc">
+        <div class="layer rv"><figure class="photo"><img src="wrench.jpg" width="1600" height="1067" alt="A gloved hand holding an adjustable wrench"></figure></div>
+        <div>
+          <ul class="list">
+            <li class="rv"><span class="tag">01</span><h3>Water heaters</h3><p>Tankless water heaters. Water heater install and replacement.</p></li>
+            <li class="rv"><span class="tag">02</span><h3>Water and septic lines</h3><p>Water line replacement. Septic line replacement.</p></li>
+            <li class="rv"><span class="tag">03</span><h3>Drains and leaks</h3><p>Drain clearing and camera inspection. Leak detection and repair.</p></li>
+            <li class="rv"><span class="tag">04</span><h3>Remodels and new builds</h3><p>Bathroom and kitchen remodels. New construction.</p></li>
+            <li class="rv"><span class="tag">05</span><h3>Fixtures</h3><p>Outside faucets and hydrants. Food disposal.</p></li>
+            <li class="rv"><span class="tag">06</span><h3>Emergencies and upkeep</h3><p>Emergency on call service. Seasonal maintenance.</p></li>
+          </ul>
+          <p class="note rv"><b>Not sure which one it is?</b> Describe the problem in the request form and we will sort it out.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="how" aria-labelledby="how-h">
+    <div class="head rv">
+      <h2 id="how-h">How it works</h2>
+      <p>The same three steps, whether it is a leak or a new build.</p>
+    </div>
+    <div class="how">
+      <div class="layer rv"><figure class="photo"><img src="twin-vanities.jpg" width="1600" height="1067" alt="Two wood bathroom vanities with brass faucets under oval mirrors"></figure></div>
+      <ol class="steps">
+        <li class="rv"><h3>Reach out</h3><p>Call <a class="num" href="tel:+13369273747">(336) 927 3747</a>, or send a service request with what is going on.</p></li>
+        <li class="rv"><h3>Describe the problem</h3><p>Leaks, drains, water heaters or a remodel: the more detail you share, the better we can plan the visit.</p></li>
+        <li class="rv"><h3>Get the work done</h3><p>Repairs, replacements and installs for your home or business.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band deep" id="emergency" aria-labelledby="sos-h">
+    <div class="wrap">
+      <div class="sos rv">
+        <div>
+          <span class="kicker">Emergency on call service</span>
+          <h2 id="sos-h">Water where it should not be?</h2>
+          <p>Fender Brothers Plumbing offers emergency on call service. Call and tell us what is happening.</p>
+          <a class="btn" href="tel:+13369273747">Call <span class="num">(336) 927 3747</span></a>
+        </div>
+        <div class="layer"><figure class="photo"><img src="spigot-splash.jpg" width="1600" height="1067" alt="Water spraying from a brass tap with a red handle"></figure></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="photos" aria-label="Photos">
+    <div class="strip">
+      <figure class="photo rv"><img src="hose-bib.jpg" width="1600" height="1067" alt="An outside hose faucet on a painted block wall"></figure>
+      <figure class="photo rv"><img src="valve.jpg" width="1600" height="1067" alt="A yellow handle on a water valve"></figure>
+      <figure class="photo rv"><img src="copper-pipe.jpg" width="1600" height="1068" loading="lazy" alt="The end of a copper pipe against a warm brown wall"></figure>
+    </div>
+  </section>
+
+  <section class="band" id="request" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="contact-h">Request service</h2>
+        <p>Tell us what is going on and a good time to call. Prefer the phone? Call (336) 927 3747.</p>
+      </div>
+      <div class="contact">
+        <div class="side">
+          <ul class="ways rv">
+            <li><a class="num" href="tel:+13369273747"><span>Call</span>(336) 927 3747</a></li>
+            <li><a href="https://www.facebook.com/p/Fender-Brothers-Plumbing-inc-100063774721692/"><span>Facebook</span>Fender Brothers Plumbing</a></li>
+            <li><div class="plain"><span>Based in</span><p>Traphill, NC</p></div></li>
+          </ul>
+          <div class="layer rv"><figure class="photo"><img src="wood-vanity.jpg" width="1600" height="1067" loading="lazy" alt="A wood double vanity with a marble top and two faucets"></figure></div>
+        </div>
+
+        <div class="panel rv">
+          <form id="qform" method="post" novalidate>
+            <div class="f">
+              <label for="q-name">Your name</label>
+              <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+              <span class="err" id="e-name"></span>
+            </div>
+            <div class="f">
+              <label for="q-phone">Phone</label>
+              <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(555) 555 0123" required aria-describedby="e-phone">
+              <span class="err" id="e-phone"></span>
+            </div>
+            <div class="f">
+              <label for="q-town">Town</label>
+              <select id="q-town" name="town" required aria-describedby="e-town">
+                <option value="">Choose your town</option>
+                <option>Traphill</option>
+                <option>Somewhere else</option>
+              </select>
+              <span class="err" id="e-town"></span>
+            </div>
+            <div class="f">
+              <label for="q-time">Best time to call</label>
+              <select id="q-time" name="time">
+                <option value="">Any time</option>
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+              </select>
+            </div>
+            <div class="f full">
+              <label for="q-msg">What is going on?</label>
+              <textarea id="q-msg" name="message" required aria-describedby="e-msg" placeholder="Example: the water heater is leaking in the basement"></textarea>
+              <span class="err" id="e-msg"></span>
+            </div>
+            <div class="submit">
+              <button class="btn" type="submit">Send request</button>
+              <p class="demo-note">Sample form, not connected yet.</p>
+            </div>
+          </form>
+          <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
+            <h3 id="t-title">Thanks. We have it.</h3>
+            <p id="t-body">We will call you back soon.</p>
+            <p class="muted">This is a sample site, so nothing was actually sent.</p>
+            <button class="btn line" type="button" id="t-again">Send another request</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot deep">
+  <div class="wrap">
+    <p><b>Fender Brothers Plumbing</b> &middot; Traphill, NC</p>
+    <p class="right"><a class="num" href="tel:+13369273747">(336) 927 3747</a></p>
+    <p class="credit">Photos are examples.</p>
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a href="tel:+13369273747"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>
+  <a href="#request"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 5h16v11H9l-5 4z"/></svg>Request</a>
+</nav>
+
+<script>
+(function(){
+  /* quiet reveal, once per element */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+  addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+
+  /* quote form (runs only when the form is on the page) */
+  var f=document.getElementById('qform');
+  if(!f)return;
+  var F=f.elements,thanks=document.getElementById('thanks');
+  function setErr(id,msg){var i=document.getElementById(id),e=document.getElementById(i.getAttribute('aria-describedby'));e.textContent=msg;if(msg){i.setAttribute('aria-invalid','true')}else{i.removeAttribute('aria-invalid')}return !msg}
+  function check(){
+    var ok=true,first=null;
+    function run(id,msg){var good=setErr(id,msg);if(!good&&!first)first=id;ok=ok&&good}
+    var name=F['name'].value.trim(),phone=F['phone'].value.replace(/\D/g,''),msg=F['message'].value.trim();
+    run('q-name',name.length<2?'Please tell us your name.':'');
+    run('q-phone',phone.length<10?'Please enter a 10 digit phone number.':'');
+    run('q-town',!F['town'].value?'Please choose your town.':'');
+    run('q-msg',msg.length<5?'A few words about the job helps us call back with the right answer.':'');
+    if(first)document.getElementById(first).focus();
+    return ok;
+  }
+  ['q-name','q-phone','q-town','q-msg'].forEach(function(id){
+    var el=document.getElementById(id);
+    el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){if(el.getAttribute('aria-invalid'))setErr(id,'')});
+  });
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!check())return;
+    var name=F['name'].value.trim().split(' ')[0],d=F['phone'].value.replace(/\D/g,'').slice(-10);
+    var nice='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6);
+    document.getElementById('t-title').textContent='Thanks, '+name+'. We have it.';
+    document.getElementById('t-body').textContent='We will call you at '+nice+' soon.';
+    f.hidden=true;thanks.hidden=false;thanks.focus();
+  });
+  document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
+})();
+</script>
+</body>
+</html>

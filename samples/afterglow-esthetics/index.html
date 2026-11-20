@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Afterglow Esthetics | Esthetics studio in Elkin, NC</title>
-<meta name="description" content="Facials and skincare, lash and brow services, waxing and bridal makeup at 222 E Main St in Elkin, NC. Call (336) 710-8752.">
+<title>Afterglow Esthetics, Beauty by Kay | Luxury esthetics in Elkin, NC</title>
+<meta name="description" content="Afterglow Esthetics, Beauty by Kay: custom skincare and facials, a dermaplaning facial, waxing, makeup, and lash and brow enhancements at 222 E Main Street in Elkin, NC. Call (336) 710 8752.">
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#f6f5f1">
-<meta property="og:title" content="Afterglow Esthetics | Elkin, NC">
-<meta property="og:description" content="Facials and skincare, lash and brow services, waxing and bridal makeup at 222 E Main St in Elkin, NC. Call (336) 710-8752.">
-<meta property="og:image" content="https://granitecitydigital.me/samples/afterglow-esthetics/hero.jpg">
+<meta name="theme-color" content="#efe5e0">
+<meta property="og:title" content="Afterglow Esthetics, Beauty by Kay | Elkin, NC">
+<meta property="og:description" content="Custom skincare and facials, a dermaplaning facial, waxing, makeup, and lash and brow enhancements inside Coley Hall Event Center at 222 E Main Street in Elkin, NC.">
+<meta property="og:image" content="https://granitecitydigital.me/samples/afterglow-esthetics/mask-prep.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {
@@ -23,63 +23,99 @@
   "@type": "BeautySalon",
   "name": "Afterglow Esthetics",
   "telephone": "+13367108752",
-  "address": {"@type": "PostalAddress", "streetAddress": "222 E Main St", "addressLocality": "Elkin", "addressRegion": "NC", "addressCountry": "US"},
-  "image": "https://granitecitydigital.me/samples/afterglow-esthetics/hero.jpg",
+  "address": {"@type": "PostalAddress", "streetAddress": "222 E Main St", "addressLocality": "Elkin", "addressRegion": "NC", "postalCode": "28621", "addressCountry": "US"},
+  "image": "https://granitecitydigital.me/samples/afterglow-esthetics/mask-prep.jpg",
   "sameAs": ["https://www.facebook.com/share/1EEjMst5je/?mibextid=wwXIfr"]
 }
 </script>
 <style>
+/* Afterglow Esthetics: a deep plum first screen like the sky after sunset with a warm light behind the photo,
+   blush cream paper below it, brushed gold for every action, Playfair Display headings with one italic word. */
 :root{
-  --bg:#f6f5f1;
-  --tint:#eeece6;
-  --ink:#191b1a;
-  --muted:#5d605c;
-  --line:#dcd9d1;
-  --accent:#2f4f45;
-  --accent-hover:#25413a;
-  --on-accent:#f6f5f1;
+  --bg:#f7f0ec;             /* page ground, blush cream */
+  --surface:#fdfaf7;        /* cards, form panel, phone bar */
+  --tint:#efe5e0;           /* sample bar, photo placeholder */
+  --blush:#f2e1db;          /* light band, picker field */
+  --blush-deep:#e2cac3;     /* block behind photos */
+  --ink:#1d1519;            /* text on light grounds */
+  --muted:#62535b;          /* secondary text on light grounds */
+  --line:#dccdc8;           /* field and button borders */
+  --deep:#2c1830;           /* deep band */
+  --deep-2:#190e1c;         /* footer, the darkest ground */
+  --on-deep:#f3efe8;        /* text on deep grounds */
+  --on-deep-muted:#cfc1cb;  /* secondary text on deep grounds */
+  --accent:#c9a45f;         /* gold: button fills, step numbers, text on deep grounds only */
+  --accent-hover:#d5b06d;
+  --accent-text:#7b5a1f;    /* bronze: accent text and icons on light grounds */
+  --accent-soft:rgb(201 164 95 / .34); /* halo around a focused field */
+  --on-accent:#1d1519;      /* text on gold */
   --danger:#a3392b;
+  --glow:238 176 124;       /* warm light behind the hero photo */
+  --shadow:52 28 48;
 
   --font:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Playfair Display",Georgia,"Times New Roman",serif;
+  --display-weight:400;
+
+  --r-ctl:999px;
+  --r-card:clamp(16px,1.6vw,22px);
+  --r-photo:clamp(18px,2.4vw,30px);
+}
+/* 2. the system: keep it the same on every mockup */
+:root{
   --t-small:.875rem;
-  --t-body:1rem;
+  --t-body:1.0625rem;
   --t-lead:clamp(1.0625rem,1rem + .3vw,1.1875rem);
-  --t-h3:1.0625rem;
-  --t-h2:clamp(1.75rem,1.35rem + 1.5vw,2.5rem);
-  --t-h1:clamp(2.125rem,1.4rem + 3.4vw,4.25rem);
+  --t-h3:1.125rem;
+  --t-h2:clamp(1.875rem,1.4rem + 1.6vw,2.75rem);
+  --t-h1:clamp(2.25rem,1.4rem + 3.6vw,4.5rem);
+
+  /* spacing scale: every gap on the page is one of these */
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+  --sec:clamp(96px,11vw,160px);        /* the one space between sections */
+  --band-pad:clamp(72px,9vw,128px);    /* inside a contained band */
+  --off:clamp(10px,1.4vw,18px);        /* offset of the color block behind a photo */
+
+  /* three levels only. Light comes from the top left, so every shadow falls down and to the right.
+     page: no shadow. raised: cards, photos, buttons. floating: cards that overlap a photo, the form panel. */
+  --sh-1:1px 1px 2px rgb(var(--shadow) / .05),2px 6px 16px -6px rgb(var(--shadow) / .14);
+  --sh-2:1px 2px 4px rgb(var(--shadow) / .06),4px 14px 32px -10px rgb(var(--shadow) / .20);
+  --sh-3:2px 4px 8px rgb(var(--shadow) / .07),8px 28px 56px -16px rgb(var(--shadow) / .28);
 
   --wrap:1120px;
   --m:clamp(20px,4vw,32px);
-  --sec:clamp(88px,10vw,144px);
   --ease:cubic-bezier(.23,1,.32,1);
   --bar:0px;
 }
 *,*::before,*::after{box-sizing:border-box}
 *{margin:0}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+@media (max-width:760px){html{scroll-padding-bottom:96px}} /* keyboard focus never lands under the phone bar */
+@media (max-width:640px){html{scroll-padding-bottom:112px}} /* a little more on phones so the tall message box clears the bar, not only its first line */
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
-body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:calc(var(--bar) + 2px);-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
 ::selection{background:var(--accent);color:var(--on-accent)}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-h1,h2,h3{font-weight:300;letter-spacing:-.025em;line-height:1.08;text-wrap:balance}
+:focus-visible{outline:2px solid var(--deep);outline-offset:3px}
+h1,h2,h3{font-family:var(--font-display);font-weight:var(--display-weight);letter-spacing:-.015em;line-height:1.1;text-wrap:balance}
 p{text-wrap:pretty}
 .wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
 .vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:4px}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:10px}
 .skip:focus{top:12px}
 .num{font-variant-numeric:tabular-nums}
 .muted{color:var(--muted)}
 
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:4px;border:1px solid transparent;background:var(--accent);color:var(--on-accent);font:500 .9375rem/1 var(--font);text-decoration:none;cursor:pointer;transition:background-color 180ms ease,border-color 180ms ease,transform 140ms var(--ease)}
-.btn:active{transform:scale(.97)}
-.btn.line{background:transparent;color:var(--ink);border-color:#c7c4bb}
-.link{color:var(--ink);text-decoration:underline;text-decoration-color:#b9b6ad;transition:text-decoration-color 180ms ease}
+/* buttons: raised level; hover lifts, press sinks. Soft pill buttons suit the studio. */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2);min-height:50px;padding:0 26px;border-radius:var(--r-ctl);border:1px solid transparent;background:var(--accent);color:var(--on-accent);font:500 1rem/1 var(--font);text-decoration:none;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,border-color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.line{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.link{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;transition:text-decoration-color 200ms ease}
 @media (hover:hover) and (pointer:fine){
-  .btn:hover{background:var(--accent-hover)}
-  .btn.line:hover{background:var(--tint);border-color:#b3b0a6}
+  .btn:hover{background:var(--accent-hover);box-shadow:var(--sh-2);transform:translateY(-1px)}
+  .btn.line:hover{background:var(--surface);border-color:var(--muted)}
+  .btn:active{transform:scale(.97);box-shadow:none}
   .link:hover{text-decoration-color:var(--ink)}
 }
 
@@ -88,179 +124,307 @@ p{text-wrap:pretty}
 .sample a{color:var(--ink)}
 
 /* header */
-.top{border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:68px}
-.mark{display:inline-flex;align-items:center;gap:10px;font-weight:500;font-size:1rem;letter-spacing:-.01em;text-decoration:none;min-height:44px}
-.mark svg{width:22px;height:14px;flex:none;color:var(--accent)}
-.mark span{color:var(--muted);font-weight:400}
+.top{background:var(--deep);color:var(--on-deep)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s-5);min-height:76px}
+.mark{display:inline-grid;gap:0;text-decoration:none;min-height:44px;align-content:center;line-height:1.15}
+.mark b{font-family:var(--font-display);font-weight:500;font-size:1.25rem;letter-spacing:-.01em}
+.mark span{font-size:.8125rem;color:var(--on-deep-muted)}
 .nav{display:flex;align-items:center;gap:28px;list-style:none;padding:0;font-size:var(--t-small)}
-.nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 180ms ease}
-.nav a:hover{color:var(--ink)}
-.top .btn{min-height:40px;padding:0 14px;font-size:var(--t-small)}
+.nav a{color:var(--on-deep-muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 200ms ease}
+.top .btn{min-height:44px;padding:0 18px;font-size:var(--t-small)}
 .top .short{display:none}
+@media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--on-deep)}}
+/* the quiet button and the focus ring on the deep header and hero */
+.top .btn.line,.hero .btn.line{background:transparent;color:var(--on-deep);border-color:rgb(243 239 232 / .36);box-shadow:none}
+.top :focus-visible,.hero :focus-visible{outline-color:var(--on-deep)}
+.hero .float :focus-visible{outline-color:var(--deep)}
+@media (hover:hover) and (pointer:fine){.top .btn.line:hover,.hero .btn.line:hover{background:rgb(243 239 232 / .08);border-color:var(--on-deep)}}
 @media (max-width:880px){.nav{display:none}}
 @media (max-width:480px){.top .long{display:none}.top .short{display:inline}}
 
-/* hero */
-.hero{padding-top:clamp(56px,8vw,112px)}
+/* photo cards: one radius, one treatment. The wrapper is rounded so the picture clips cleanly. */
+.photo{position:relative;border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-1)}
+.photo img{width:100%;height:100%;object-fit:cover}
+/* layered photo: a soft blush block sits behind the card, offset down and right like its shadow */
+.layer{position:relative;isolation:isolate}
+.layer::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--blush-deep);transform:translate(var(--off),var(--off))}
+/* floating card: overlaps the edge of a photo */
+.float{position:absolute;z-index:2;left:var(--s-5);bottom:calc(var(--s-6) * -1);max-width:min(340px,calc(100% - var(--s-7)));background:var(--surface);color:var(--ink);border-radius:var(--r-card);box-shadow:var(--sh-3);padding:var(--s-4) var(--s-5);display:grid;gap:2px}
+.float span{font-size:.8125rem;font-weight:500;color:var(--accent-text)}
+.float a,.float p{font-size:var(--t-lead);line-height:1.35;text-decoration:none}
+.float a{min-height:32px;display:inline-flex;align-items:center;width:fit-content}
+@media (hover:hover) and (pointer:fine){.float a:hover{text-decoration:underline;text-decoration-color:var(--line)}}
+
+/* hero: a full width deep band */
+.hero{padding-block:clamp(40px,6vw,88px) clamp(64px,8vw,112px);overflow-x:clip;isolation:isolate;background:var(--deep);color:var(--on-deep)}
+.hero + .band{margin-top:0}
 .hero h1{font-size:var(--t-h1)}
-.hero h1 span{display:block}
-.hero h1 .soft{display:block;color:#6e706a}
-.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px 48px;align-items:end;margin-top:28px}
-.hero-grid p{color:var(--muted);font-size:var(--t-lead);max-width:46ch}
-.cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
-.facts{margin-top:20px;font-size:var(--t-small);color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px;list-style:none;padding:0}
-.facts li+li::before{content:"\00b7";margin-right:10px;color:#a3a59f}
-.hero-pic{margin-top:clamp(40px,5vw,64px);aspect-ratio:12/5;overflow:hidden;border-radius:4px;background:var(--tint)}
-.hero-pic img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s-3)}
 
-/* sections */
+/* sections: open sections sit on the page ground, bands are contained */
 .sec{padding-top:var(--sec)}
-.head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:16px 48px;align-items:baseline;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.band{margin-top:var(--sec);padding-block:var(--band-pad);background:var(--blush)}
+/* deep band: full width, square, cream text; gold is allowed as text only in here */
+.band.deep{background-color:var(--deep);color:var(--on-deep)}
+.band.deep :focus-visible{outline-color:var(--on-deep)}
+.head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-4) var(--s-7);align-items:end;padding-bottom:var(--s-7)}
 .head h2{font-size:var(--t-h2)}
-.head p{color:var(--muted);max-width:46ch}
+.head p{color:var(--muted);max-width:46ch;font-size:var(--t-lead)}
 
-/* services */
-.svc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px 48px;margin-top:40px;align-items:start}
-.svc figure{border-radius:4px;overflow:hidden;background:var(--tint);aspect-ratio:4/3}
-.svc figure img{width:100%;height:100%;object-fit:cover;object-position:52% 50%}
-.list{list-style:none;padding:0}
-.list li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;padding:18px 0;border-bottom:1px solid var(--line)}
-.list li:first-child{padding-top:0}
-.list h3{font-size:var(--t-h3);font-weight:500;letter-spacing:-.01em;line-height:1.35}
-.list p{grid-column:1;color:var(--muted);font-size:.9375rem;max-width:44ch}
-.list .price{grid-column:2;grid-row:1;font-size:.9375rem;white-space:nowrap;text-align:right}
-.note{margin-top:20px;font-size:.9375rem;color:var(--muted);max-width:50ch}
-.note b{color:var(--ink);font-weight:500}
-
-/* price helper */
-.helper{margin-top:32px;padding:20px;background:var(--tint);border-radius:4px;display:grid;gap:12px}
-.helper[hidden]{display:none}
-.helper label{font-size:var(--t-small);font-weight:500}
-.helper .row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
-.select{appearance:none;-webkit-appearance:none;min-height:44px;padding:0 40px 0 12px;border:1px solid #cfccc3;border-radius:4px;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%235d605c' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;color:var(--ink);font:inherit;font-size:.9375rem}
-.est{font-size:.9375rem;color:var(--muted)}
-.est b{color:var(--ink);font-weight:500}
-.helper .link{font-size:.9375rem;width:fit-content}
-
-/* how it works */
-.how{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px 48px;margin-top:40px;align-items:start}
-.how figure{border-radius:4px;overflow:hidden;background:var(--tint);aspect-ratio:4/3}
-.how figure img{width:100%;height:100%;object-fit:cover}
-.steps{list-style:none;padding:0;display:grid}
-.steps li{padding:18px 0;border-bottom:1px solid var(--line)}
-.steps li:first-child{padding-top:0}
-.steps h3{font-size:var(--t-h3);font-weight:500;letter-spacing:-.01em;line-height:1.35}
-.steps p{color:var(--muted);font-size:.9375rem;margin-top:4px;max-width:40ch}
-
-/* area */
-.area{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:12px 48px;align-items:baseline;padding-block:32px;border-block:1px solid var(--line)}
-.area h2{font-size:var(--t-h3);font-weight:500;letter-spacing:-.01em}
-.area p{font-size:var(--t-lead)}
-.area p span{color:var(--muted)}
-
-/* reviews */
-.revs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 48px;margin-top:40px}
-.revs blockquote{font-size:var(--t-lead);line-height:1.5;font-weight:300;letter-spacing:-.005em}
-.revs figcaption{margin-top:14px;font-size:var(--t-small);color:var(--muted)}
-.revs figcaption b{color:var(--ink);font-weight:500}
-.sample-tag{margin-top:40px;font-size:.8125rem;color:var(--muted)}
-
-/* faq */
-.faq{margin-top:12px}
-.faq details{border-bottom:1px solid var(--line)}
-.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:64px;padding:16px 0;cursor:pointer;font-size:var(--t-h3);font-weight:500;letter-spacing:-.01em}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";width:10px;height:10px;flex:none;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:translateY(-3px) rotate(45deg);transition:transform 200ms var(--ease)}
-.faq details[open] summary::after{transform:translateY(2px) rotate(225deg)}
-.faq details p{color:var(--muted);max-width:62ch;padding-bottom:22px;margin-top:-4px}
+/* raised card */
+.card{background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-1)}
 
 /* contact */
-.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;margin-top:40px;align-items:start}
-.ways{list-style:none;padding:0;display:grid;gap:2px}
-.ways li{display:grid;gap:0;padding:14px 0;border-bottom:1px solid var(--line)}
-.ways li:first-child{padding-top:0}
-.ways span{font-size:.8125rem;color:var(--muted)}
-.ways a{font-size:var(--t-lead);text-decoration:none;min-height:32px;display:inline-flex;align-items:center;width:fit-content}
-.ways a:hover{text-decoration:underline;text-decoration-color:#b9b6ad}
-.ways .plain{font-size:var(--t-lead)}
+.panel{padding:clamp(24px,3vw,40px);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3)}
 
-form{display:grid;grid-template-columns:1fr 1fr;gap:20px 16px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-5) var(--s-4)}
 form[hidden]{display:none}
 .f{display:grid;gap:6px;min-width:0}
 .f.full{grid-column:1/-1}
 .f label{font-size:var(--t-small);font-weight:500}
-.f input,.f select,.f textarea{width:100%;min-height:48px;padding:11px 12px;border:1px solid #cfccc3;border-radius:4px;background:#fbfaf7;color:var(--ink);font:inherit;font-size:1rem;transition:border-color 160ms ease;appearance:none;-webkit-appearance:none}
-.f select{background:#fbfaf7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%235d605c' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:40px}
-.f textarea{min-height:112px;resize:vertical;line-height:1.5}
-.f input::placeholder,.f textarea::placeholder{color:#72746e}
-.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.f input,.f select,.f textarea{width:100%;min-height:50px;padding:11px 16px;border:1px solid var(--line);border-radius:14px;background:var(--bg);color:var(--ink);font:inherit;font-size:1rem;caret-color:var(--deep);transition:border-color 200ms ease,box-shadow 200ms ease,background-color 200ms ease;appearance:none;-webkit-appearance:none}
+.f select{background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%2362535b' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 16px center;padding-right:42px}
+.f textarea{min-height:120px;resize:vertical;line-height:1.5}
+.f input::placeholder,.f textarea::placeholder{color:var(--muted)}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--deep);background-color:var(--surface);box-shadow:0 0 0 3px var(--accent-soft)}
+@media (hover:hover) and (pointer:fine){.f input:hover,.f select:hover,.f textarea:hover{border-color:var(--muted)}}
 .f [aria-invalid="true"]{border-color:var(--danger)}
 .err{font-size:.8125rem;color:var(--danger)}
 .err:empty{display:none}
-.check{grid-column:1/-1;display:flex;align-items:center;gap:10px;min-height:44px;font-size:.9375rem;cursor:pointer;width:fit-content}
-.check input{appearance:none;-webkit-appearance:none;width:20px;height:20px;flex:none;margin:0;border:1px solid #b3b0a6;border-radius:3px;background:#fbfaf7;display:grid;place-items:center;cursor:pointer;transition:background-color 140ms ease,border-color 140ms ease}
-.check input::after{content:"";width:10px;height:5px;border-left:1.75px solid var(--on-accent);border-bottom:1.75px solid var(--on-accent);transform:translateY(-1px) rotate(-45deg);opacity:0;transition:opacity 120ms ease}
-.check input:checked{background:var(--accent);border-color:var(--accent)}
-.check input:checked::after{opacity:1}
-.submit{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.submit{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-3) var(--s-5)}
 .submit p{font-size:.8125rem;color:var(--muted)}
 .thanks[hidden]{display:none}
 .thanks:focus{outline:none}
 .thanks h3{font-size:var(--t-h2)}
-.thanks p{margin-top:12px;max-width:46ch}
+.thanks p{margin-top:var(--s-3);max-width:46ch}
 .thanks .muted{font-size:var(--t-small)}
-.thanks .btn{margin-top:24px}
+.thanks .btn{margin-top:var(--s-5)}
 
 /* footer */
-.foot{margin-top:var(--sec);border-top:1px solid var(--line);padding-block:32px 40px;font-size:.8125rem;color:var(--muted)}
-.foot .wrap{display:grid;grid-template-columns:1fr auto;gap:12px 32px}
-.foot b{color:var(--ink);font-weight:500}
+.foot{--ink:var(--on-deep);--muted:var(--on-deep-muted);--tint:#2c1b30;background:var(--deep-2);padding-block:var(--s-8) var(--s-7);font-size:.8125rem;color:var(--muted)}
+.foot{box-shadow:0 calc(var(--bar) + 2px) 0 var(--deep-2)} /* the room under the footer for the phone bar takes the footer color */
+.foot :focus-visible{outline-color:var(--accent)}
+.foot .wrap{display:grid;grid-template-columns:1fr auto;gap:var(--s-3) var(--s-6);align-items:center}
+.foot b{color:var(--ink);font-weight:600}
 .foot a{color:var(--muted)}
 .foot .right{text-align:right}
+.foot .right a{display:inline-flex;align-items:center;min-height:44px}
 .foot .credit{grid-column:1/-1;max-width:none}
+
+/* footer mark: a 2 s logo build that plays once in view, muted; the still logo shows until it really plays and is the fallback */
+.gcd{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:14px;margin-top:12px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font-weight:500}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--tint)}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
 
 /* phone bar */
 .bar{display:none}
 
-/* motion: opacity and a few pixels, once */
+/* motion: slow, once, opacity and a few pixels. Content stays visible without scripts and with reduced motion. */
 @media (prefers-reduced-motion:no-preference){
-  .js .rv{opacity:0;transform:translateY(10px);transition:opacity 600ms var(--ease),transform 600ms var(--ease)}
+  .js .rv{opacity:0;transform:translateY(18px);transition:opacity 800ms var(--ease),transform 800ms var(--ease)}
   .js .rv.in{opacity:1;transform:none}
-  .hero .rise{animation:rise 700ms var(--ease) both}
-  .hero .rise:nth-child(2){animation-delay:70ms}
-  .hero-pic.rise{animation-delay:140ms}
+  .js .halves .rv:nth-child(2),.js .walk .rv:nth-child(2),.js .strip-g .rv:nth-child(2){transition-delay:90ms}
+  .js .walk .rv:nth-child(3),.js .strip-g .rv:nth-child(3){transition-delay:180ms}
+  .hero .rise{animation:rise 900ms var(--ease) both}
+  .hero-pic.rise{animation-delay:120ms}
+  .hero-pic img{animation:settle 1800ms var(--ease) both}
+  .glow{animation:breathe 9s ease-in-out 1.2s infinite alternate}
 }
-@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes settle{from{transform:scale(1.05)}to{transform:none}}
+@keyframes breathe{from{opacity:.75;transform:scale(.97)}to{opacity:1;transform:scale(1.03)}}
 
 /* tablet */
 @media (max-width:960px){
-  .hero-grid,.head,.svc,.how,.area,.contact{grid-template-columns:minmax(0,1fr)}
-  .cta{justify-content:flex-start}
-  .how figure{order:2}
-  .revs{grid-template-columns:minmax(0,1fr);gap:32px}
-  .revs figure+figure{padding-top:32px;border-top:1px solid var(--line)}
+  .head{grid-template-columns:minmax(0,1fr)}
 }
 
 /* phone */
 @media (max-width:640px){
-  :root{--bar:calc(60px + env(safe-area-inset-bottom))}
-  .hero-pic{aspect-ratio:16/9;margin-inline:calc(var(--m) * -1);border-radius:0}
-  .hero-pic img{object-position:48% 40%}
-  .facts{gap:2px 18px}
-  .facts li+li::before{content:none}
-  .cta{justify-content:flex-start}
+  :root{--bar:calc(61px + env(safe-area-inset-bottom));--r-photo:18px;--r-card:16px;--off:10px} /* the bar is 60 px of links plus a 1 px top line */
+  .float{position:relative;left:auto;bottom:auto;margin:calc(var(--s-7) * -1) var(--s-4) 0;max-width:none}
   .cta .btn{flex:1 1 auto}
-  .list li{grid-template-columns:minmax(0,1fr) auto}
+  .head{padding-bottom:var(--s-6)}
   form{grid-template-columns:minmax(0,1fr)}
   .submit .btn{width:100%}
   .foot .wrap{grid-template-columns:minmax(0,1fr)}
   .foot .right{text-align:left}
-  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--bg);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
   .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:60px;font-weight:500;font-size:1rem;text-decoration:none;color:var(--ink)}
-  .bar a:first-child{background:var(--accent);color:var(--on-accent)}
+  .bar a:first-child{background:var(--accent);color:var(--on-accent);font-weight:600}
   .bar a:active{opacity:.85}
   .bar svg{width:17px;height:17px}
+}
+/* short phones: keep the hero call button clear of the phone bar */
+@media (max-width:640px) and (max-height:740px){
+  body .hero{padding-top:var(--s-6)}
+  body .hero h1{font-size:clamp(2rem,1.5rem + 2.4vw,2.5rem)}
+  body .hero-copy{gap:var(--s-4)}
+  body .hero p{font-size:1rem}
+}
+@media (max-width:420px) and (max-height:600px){
+  body .hero .where{display:none}
+  body .hero h1{font-size:1.875rem}
+  body .hero p{font-size:.9375rem;line-height:1.5}
+}
+
+@media (max-width:420px) and (max-height:520px){
+  body .hero-copy > p{display:none}
+}
+
+/* 3. Afterglow's own touches */
+
+/* hero: the photo leads on the left with a warm light rising behind it, the words sit on the right */
+.hero-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s-7) var(--s-8);align-items:center}
+.hero-copy{order:2;display:grid;gap:var(--s-5);align-content:center}
+.hero h1{font-size:clamp(2.375rem,1.3rem + 2.8vw,3.5rem);line-height:1.06;letter-spacing:-.02em}
+.hl{font-style:italic;color:var(--accent)}
+.hero-copy > p{color:var(--on-deep-muted);font-size:var(--t-lead);max-width:40ch}
+.where{display:flex;align-items:center;gap:10px;font-size:var(--t-small);color:var(--on-deep)}
+.where svg{width:18px;height:18px;flex:none;color:var(--accent)}
+.where a{text-decoration-color:var(--accent);text-decoration-thickness:2px}
+.hero-pic{order:1;position:relative;margin-bottom:var(--s-6)}
+.glow{position:absolute;z-index:-1;inset:-14% -18% -10% -12%;border-radius:50%;background:radial-gradient(closest-side,rgb(var(--glow) / .6),rgb(var(--glow) / .36) 60%,rgb(var(--glow) / .12) 84%,rgb(var(--glow) / 0));pointer-events:none}
+.hero-pic .photo{aspect-ratio:4/4.3;max-height:660px;width:100%;border-radius:var(--r-photo) var(--r-photo) var(--r-photo) clamp(60px,9vw,140px)}
+.hero-pic img{object-position:48% 50%}
+.hero-pic .float{left:auto;right:calc(var(--s-6) * -1);bottom:calc(var(--s-6) * -1)}
+
+/* mind and body: the statement on the blush band under the hero */
+.vow{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:var(--s-6) var(--s-8);align-items:end}
+.vow blockquote{font-family:var(--font-display);font-size:clamp(1.625rem,1.1rem + 1.6vw,2.25rem);font-weight:400;line-height:1.28;letter-spacing:-.01em;max-width:27ch}
+.vow .by{display:grid;gap:var(--s-2);font-size:.9375rem;color:var(--muted);padding-bottom:6px}
+.vow .by b{color:var(--accent-text);font-weight:600}
+
+/* services: two wide blocks that trade sides, then two halves */
+.svc{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-7) var(--s-8);align-items:center}
+.svc + .svc{margin-top:var(--s-9)}
+.svc.flip .pic{order:2}
+.svc .pic{position:relative;margin-right:var(--off);margin-bottom:var(--off)}
+.svc .photo{aspect-ratio:3/2}
+.svc h3,.halves h3{font-size:clamp(1.75rem,1.3rem + 1.4vw,2.5rem)}
+.say{margin-top:var(--s-3);color:var(--muted);font-size:var(--t-lead);max-width:42ch}
+.also{margin-top:var(--s-5);padding:var(--s-4) var(--s-5);border-radius:var(--r-card);background:var(--blush)}
+.also b{display:block;font-weight:500}
+.also p{color:var(--muted);font-size:.9375rem;margin-top:2px}
+.tell{margin-top:var(--s-5);font-size:var(--t-small);font-weight:600}
+.ticks{list-style:none;padding:0;margin-top:var(--s-2);display:grid;gap:var(--s-2)}
+.ticks li{position:relative;padding-left:24px;font-size:.9375rem}
+.ticks li::before{content:"";position:absolute;left:2px;top:.5em;width:10px;height:6px;border-left:2px solid var(--accent-text);border-bottom:2px solid var(--accent-text);transform:rotate(-45deg)}
+.go{display:inline-flex;align-items:center;min-height:44px;margin-top:var(--s-3);font-weight:500;color:var(--ink);text-decoration-color:var(--accent);text-decoration-thickness:2px;transition:text-decoration-color 200ms ease}
+@media (hover:hover) and (pointer:fine){.go:hover{text-decoration-color:var(--ink)}}
+.svc.flip .photo img{transform:scale(1.3);transform-origin:50% 100%} /* frames the gold tray, not the table above it */
+.svc.flip .float{left:auto;right:calc(var(--s-5) * -1);max-width:280px}
+.svc.flip .float p{font-size:var(--t-body);line-height:1.45}
+.halves{margin-top:var(--s-9);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s-8) var(--s-7)}
+.halves .pic{margin-right:var(--off);margin-bottom:calc(var(--s-5) + var(--off))}
+.halves .photo{aspect-ratio:4/3}
+.halves article:first-child .photo img{transform:scale(1.35);transform-origin:50% 100%} /* frames the bed and the shutters, not the windows above */
+.more{margin-top:var(--s-8);display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--s-2) var(--s-5);font-size:var(--t-lead)}
+
+/* request: the call card beside the form, and the service picker inside the form */
+.req{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:var(--s-7);align-items:start}
+.req-side{display:grid;gap:var(--s-5);position:sticky;top:var(--s-6)}
+.req-side h2{font-size:var(--t-h2)}
+.req-side > p{color:var(--muted);font-size:var(--t-lead);max-width:36ch}
+.talk{padding:clamp(24px,3vw,32px);border-radius:var(--r-card);background:var(--deep);color:var(--on-deep);box-shadow:var(--sh-2);display:grid;gap:var(--s-3)}
+.talk h3{font-size:clamp(1.5rem,1.2rem + 1vw,1.875rem)}
+.talk p{color:var(--on-deep-muted)}
+.talk .btn{margin-top:var(--s-2);width:fit-content}
+.talk :focus-visible{outline-color:var(--on-deep)}
+
+/* the service picker: tap a service and the notes worth mentioning appear under it */
+.pick{grid-column:1/-1;border:0;padding:var(--s-5);border-radius:var(--r-card);background:var(--blush);display:grid;gap:var(--s-4);min-width:0}
+.pick legend{float:left;width:100%;font-size:var(--t-small);font-weight:500;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:var(--s-2)}
+.chips label{position:relative;display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:var(--surface);border:1px solid var(--blush-deep);font-size:.9375rem;cursor:pointer;transition:background-color 180ms ease,border-color 180ms ease,color 180ms ease,transform 140ms var(--ease)}
+.chips input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer}
+.chips label:active{transform:scale(.97)}
+.chips label:has(input:checked){background:var(--deep);border-color:var(--deep);color:var(--on-deep)}
+.chips label:has(input:focus-visible){outline:2px solid var(--deep);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.chips label:hover{border-color:var(--deep)}}
+.note{display:none;padding:var(--s-4) var(--s-5);border-radius:14px;background:var(--surface)}
+.note b{display:block;font-size:var(--t-small);font-weight:600}
+.note .ticks{margin-top:var(--s-2)}
+.pick:not(:has(input:checked)) .n0,
+.pick:has(#sv-facial:checked) .n1,
+.pick:has(#sv-derma:checked) .n2,
+.pick:has(#sv-wax:checked) .n3,
+.pick:has(#sv-lash:checked) .n4,
+.pick:has(#sv-makeup:checked) .n5{display:block}
+.n0 p{font-size:.9375rem;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.note{animation:rise 360ms var(--ease) both}}
+
+/* photo strip: one tall tile on the left, two stacked on the right */
+.strip-g{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto auto;gap:var(--s-5)}
+.strip-g .photo:first-child{grid-row:1 / span 2;min-height:100%}
+.strip-g .photo:nth-child(2),.strip-g .photo:nth-child(3){aspect-ratio:16/10}
+.strip-g .photo:first-child img{object-position:50% 60%}
+
+/* find us: the studio's own question, answered in three steps on the deep band */
+.find .head h2{font-size:clamp(2.25rem,1.5rem + 2.6vw,3.5rem)}
+.find .head p{color:var(--on-deep-muted)}
+.find-g{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--s-7) var(--s-8);align-items:start}
+.walk{list-style:none;padding:0;display:grid;gap:var(--s-6);counter-reset:step;position:relative}
+.walk li{position:relative;display:grid;grid-template-columns:48px minmax(0,1fr);gap:2px var(--s-5);counter-increment:step}
+.walk li::before{content:counter(step);grid-row:1 / span 2;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--on-accent);font-weight:600;font-size:1.0625rem;font-variant-numeric:tabular-nums}
+.walk li:not(:last-child)::after{content:"";position:absolute;left:23px;top:56px;bottom:calc(var(--s-6) * -1 + 8px);width:2px;border-radius:2px;background:rgb(201 164 95 / .4)}
+.walk h3{font-size:1.5rem;letter-spacing:-.01em;padding-top:8px}
+.walk p{color:var(--on-deep-muted);max-width:40ch}
+.walk a{color:var(--on-deep);text-decoration-color:var(--accent)}
+.addr{padding:clamp(28px,3.4vw,44px);display:grid;gap:var(--s-2);color:var(--ink);box-shadow:var(--sh-3)}
+.band.deep .addr :focus-visible{outline-color:var(--deep)}
+.addr .lbl{font-size:var(--t-small);font-weight:500;color:var(--accent-text)}
+.big{font-family:var(--font-display);font-size:clamp(1.875rem,1.3rem + 1.8vw,2.75rem);font-weight:400;letter-spacing:-.015em;line-height:1.1}
+.addr .muted{font-size:var(--t-lead)}
+.addr .btn{margin-top:var(--s-4);width:fit-content}
+.addr .fb{margin-top:var(--s-3);font-size:.9375rem}
+/* map: one rounded card across the block, under the steps and the address */
+.map{grid-column:1/-1;height:clamp(280px,25vw,360px);border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-2)}
+.map iframe{display:block;width:100%;height:100%;border:0}
+.find + .foot{margin-top:0}
+.foot .name{grid-column:1/-1;margin-bottom:var(--s-4);font-family:var(--font-display);font-size:clamp(1.75rem,1rem + 2.6vw,3rem);font-weight:400;letter-spacing:-.015em;line-height:1.08;color:var(--ink)}
+.foot .name span{display:block;font-family:var(--font);font-size:max(.9375rem,.4em);letter-spacing:0;color:var(--accent);margin-top:var(--s-2)}
+
+@media (max-width:960px){
+  .hero-g,.svc,.req,.find-g,.vow{grid-template-columns:minmax(0,1fr)}
+  .req-side{position:static}
+  .hero-pic{margin-right:calc(var(--off) + var(--s-6))}
+  .hero-pic .photo{aspect-ratio:16/12}
+  .hero-copy{order:1}
+  .hero-pic{order:2}
+  .svc.flip .pic{order:0}
+  .svc .pic{margin-right:calc(var(--off) + var(--s-5))}
+  .strip-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .strip-g .photo:first-child{grid-column:1/-1;grid-row:auto;aspect-ratio:16/9;min-height:0}
+}
+@media (max-width:640px){
+  .hero-g{gap:var(--s-7)}
+  .hero h1{font-size:clamp(2.125rem,1.5rem + 3vw,2.5rem)}
+  .hero-copy{gap:var(--s-4)}
+  .hero-pic,.svc .pic{margin-right:var(--off)}
+  .hero-pic{margin-bottom:0}
+  .hero-pic .photo{aspect-ratio:4/3.4;border-radius:var(--r-photo) var(--r-photo) var(--r-photo) 64px}
+  .hero-pic .float,.svc.flip .float{right:auto;bottom:auto;left:auto;max-width:none}
+  .svc + .svc,.halves{margin-top:var(--s-8)}
+  .halves{grid-template-columns:minmax(0,1fr)}
+  .halves .pic{margin-bottom:calc(var(--s-4) + var(--off))}
+  .strip-g{gap:var(--s-3)}
+  .strip-g .photo:nth-child(2),.strip-g .photo:nth-child(3){aspect-ratio:4/5}
+  .pick{padding:var(--s-4)}
+  .f textarea{min-height:108px}
+  .addr .btn{width:100%}
+  .talk .btn{width:100%}
+}
+@media (max-width:360px){
+  .top .wrap{gap:var(--s-3)}
+  .mark b{font-size:1rem}
 }
 </style>
 </head>
@@ -271,76 +435,232 @@ form[hidden]{display:none}
 
 <header class="top">
   <div class="wrap">
-    <a class="mark" href="#top" aria-label="Afterglow Esthetics, back to top">Afterglow <span>Esthetics</span></a>
+    <a class="mark" href="#top" aria-label="Afterglow Esthetics, Beauty by Kay, back to top"><b>Afterglow Esthetics</b><span>Beauty by Kay</span></a>
     <nav aria-label="Main">
       <ul class="nav">
         <li><a href="#services">Services</a></li>
-        <li><a href="#visit">Visit</a></li>
+        <li><a href="#request">Request a visit</a></li>
+        <li><a href="#find">Find us</a></li>
       </ul>
     </nav>
-    <a class="btn line" href="tel:+13367108752"><span class="long num">(336) 710-8752</span><span class="short">Call</span></a>
+    <a class="btn line" href="tel:+13367108752"><span class="long num">(336) 710 8752</span><span class="short">Call</span></a>
   </div>
 </header>
 
 <main id="main">
-  <section class="wrap hero" id="top" aria-labelledby="hero-h">
-    <h1 class="rise" id="hero-h"><span>Facials and skincare</span> <span class="soft">in downtown Elkin.</span></h1>
-    <div class="hero-grid rise">
-      <div>
-        <p>Afterglow Esthetics is a studio at 222 E Main St in Elkin, inside Coley Hall Event Center. Call, or book your visit online.</p>
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="wrap hero-g">
+      <div class="hero-copy rise">
+        <h1 id="hero-h"><span class="hl">Luxury</span> esthetics in downtown Elkin.</h1>
+        <p>Afterglow Esthetics, Beauty by Kay, offers custom skincare and facials, waxing, makeup, and lash and brow enhancements on E Main Street.</p>
+        <div class="cta">
+          <a class="btn" href="tel:+13367108752">Call <span class="num">(336) 710 8752</span></a>
+          <a class="btn line" href="#request">Request a visit</a>
+        </div>
+        <p class="where"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>Inside Coley Hall Event Center, <a href="#find">how to find us</a></span></p>
       </div>
-      <div class="cta">
-        <a class="btn" href="tel:+13367108752">Call <span class="num">(336) 710-8752</span></a>
-        <a class="btn line" href="https://pocketsuite.io/book/afterglow-estheticsbbk">Book now</a>
+      <div class="hero-pic rise">
+        <span class="glow" aria-hidden="true"></span>
+        <figure class="photo"><img src="mask-prep.jpg" width="1600" height="1067" srcset="mask-prep-800.jpg 800w, mask-prep.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 86vw, 620px" fetchpriority="high" alt="Hands brushing a pale green clay mask inside a glass bowl"></figure>
+        <div class="float"><span>Find the studio</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Afterglow+Esthetics+222+E+Main+St+Elkin+NC">222 E Main Street, Elkin</a></div>
       </div>
     </div>
-    <figure class="hero-pic rise">
-      <img src="hero.jpg" width="1600" height="1067" fetchpriority="high" alt="A client lying back with eyes closed while a clay mask is brushed onto her face">
-    </figure>
+  </section>
+
+  <section class="band" aria-label="What we stand for">
+    <div class="wrap vow rv">
+      <blockquote>We are rooted in mental health advocacy and dedicated to total mind and body wellness.</blockquote>
+      <p class="by"><b>Afterglow Esthetics, Beauty by Kay</b><span>Luxury esthetics services at 222 E Main Street, Elkin, NC.</span></p>
+    </div>
   </section>
 
   <section class="wrap sec" id="services" aria-labelledby="svc-h">
     <div class="head rv">
-      <h2 id="svc-h">Services</h2>
-      <p>From facials to bridal makeup, in one studio on E Main St.</p>
+      <h2 id="svc-h">Skin, lashes, brows and makeup</h2>
+      <p>Five services in one studio on E Main Street, with more on the way.</p>
     </div>
-    <div class="svc">
-      <figure class="rv"><img src="bottles.jpg" width="1600" height="1069" loading="lazy" decoding="async" alt="Amber glass skincare jars and bottles with gold lids on a wooden shelf"></figure>
-      <div>
-        <ul class="list">
-          <li class="rv"><h3>Facials and skincare</h3></li>
-          <li class="rv"><h3>Lash and brow services</h3></li>
-          <li class="rv"><h3>Full body and facial waxing</h3></li>
-          <li class="rv"><h3>Bridal and special event makeup</h3></li>
+
+    <article class="svc" aria-labelledby="s1-h">
+      <div class="pic layer rv">
+        <figure class="photo"><img src="balm-jar.jpg" width="1600" height="1067" srcset="balm-jar-800.jpg 800w, balm-jar.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 88vw, 620px" alt="A glass jar of pale gold balm on a wooden tray with dried roses on linen"></figure>
+      </div>
+      <div class="rv">
+        <h3 id="s1-h">Custom skincare and facials</h3>
+        <p class="say">A facial planned around your skin. Tell us what you notice, and we shape the treatment to fit.</p>
+        <div class="also">
+          <b>Dermaplaning facial</b>
+          <p>Part of a facial where a handheld blade lifts away fine hair and the top layer of dead skin.</p>
+        </div>
+        <p class="tell">Good to mention when you call</p>
+        <ul class="ticks">
+          <li>Your main skin concerns</li>
+          <li>Products you use now</li>
+          <li>Whether this is your first facial</li>
         </ul>
-        <p class="note rv"><a class="link" href="https://pocketsuite.io/book/afterglow-estheticsbbk">Book online</a>, or call to ask which service fits you.</p>
+      </div>
+    </article>
+
+    <article class="svc flip" aria-labelledby="s2-h">
+      <div class="pic layer rv">
+        <figure class="photo"><img src="lash-tweezers.jpg" width="1600" height="1067" srcset="lash-tweezers-800.jpg 800w, lash-tweezers.jpg 1600w" sizes="(max-width: 640px) 124vw, (max-width: 960px) 116vw, 620px" alt="Three steel lash tweezers resting on a brushed gold tray"></figure>
+        <div class="float"><p>Bring a photo of a lash or brow look you like.</p></div>
+      </div>
+      <div class="rv">
+        <h3 id="s2-h">Lash and brow enhancements</h3>
+        <p class="say">Tell us the look you have in mind for your lashes, your brows or both, and we work from that.</p>
+        <a class="go" href="tel:+13367108752">Call about lashes or brows</a>
+      </div>
+    </article>
+
+    <div class="halves">
+      <article class="rv" aria-labelledby="s3-h">
+        <div class="pic layer">
+          <figure class="photo"><img src="treatment-room.jpg" width="1600" height="1066" srcset="treatment-room-800.jpg 800w, treatment-room.jpg 1600w" sizes="(max-width: 640px) 128vw, (max-width: 960px) 62vw, 700px" alt="A treatment bed with a pink pillow and a lamp, in a room with pale pink shutters"></figure>
+        </div>
+        <h3 id="s3-h">Waxing</h3>
+        <p class="say">Let us know which areas you would like waxed, and when you last had hair removed there.</p>
+        <a class="go" href="tel:+13367108752">Call about waxing</a>
+      </article>
+      <article class="rv" aria-labelledby="s4-h">
+        <div class="pic layer">
+          <figure class="photo"><img src="gold-brushes.jpg" width="1600" height="972" srcset="gold-brushes-800.jpg 800w, gold-brushes.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 45vw, 520px" alt="Six makeup brushes with gold handles in soft warm light"></figure>
+        </div>
+        <h3 id="s4-h">Makeup</h3>
+        <p class="say">Share the look you want and any skin concerns before we begin.</p>
+        <a class="go" href="tel:+13367108752">Call about makeup</a>
+      </article>
+    </div>
+
+    <p class="more rv"><span>More services are on the way.</span><a class="link" href="https://www.facebook.com/share/1EEjMst5je/?mibextid=wwXIfr">Follow us on Facebook</a></p>
+  </section>
+
+  <section class="band" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="work-h">A closer look</h2>
+        <p>Skincare, brow tools and a treatment bed, shown in example photos.</p>
+      </div>
+      <div class="strip-g">
+        <figure class="photo rv"><img src="bottles.jpg" width="1600" height="1069" srcset="bottles-800.jpg 800w, bottles.jpg 1600w" sizes="(max-width: 640px) 90vw, (max-width: 960px) 90vw, 640px" alt="Amber glass skincare jars and bottles with gold lids on a wooden shelf"></figure>
+        <figure class="photo rv"><img src="studio-bed.jpg" width="1066" height="600" sizes="(max-width: 640px) 45vw, (max-width: 960px) 45vw, 460px" loading="lazy" alt="A rolled white towel on a treatment bed beside a wooden tray with a candle and dried flowers"></figure>
+        <figure class="photo rv"><img src="brow-tools.jpg" width="1150" height="1067" srcset="brow-tools-800.jpg 800w, brow-tools.jpg 1150w" sizes="(max-width: 640px) 45vw, (max-width: 960px) 45vw, 460px" loading="lazy" alt="A brow pencil, pencil swatches, tweezers, a lash strip and a fine brush on brown paper"></figure>
       </div>
     </div>
   </section>
 
-  <section class="wrap sec" id="visit" aria-labelledby="visit-h">
-    <div class="head rv">
-      <h2 id="visit-h">Visit</h2>
-      <p>Find us inside Coley Hall Event Center on E Main St in downtown Elkin.</p>
+  <section class="wrap sec" id="request" aria-labelledby="req-h">
+    <div class="req">
+      <div class="req-side rv">
+        <h2 id="req-h">Request a visit</h2>
+        <p>Pick a service, leave your number and send the request to the studio.</p>
+        <div class="talk">
+          <h3>Rather talk first?</h3>
+          <p>Call the studio and ask anything before you come in.</p>
+          <a class="btn" href="tel:+13367108752">Call <span class="num">(336) 710 8752</span></a>
+        </div>
+      </div>
+
+      <div class="panel rv">
+        <form id="qform" novalidate method="post">
+          <div class="f">
+            <label for="q-name">Your name</label>
+            <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+            <span class="err" id="e-name"></span>
+          </div>
+          <div class="f">
+            <label for="q-phone">Phone</label>
+            <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Your phone number" required aria-describedby="e-phone">
+            <span class="err" id="e-phone"></span>
+          </div>
+          <div class="f full">
+            <label for="q-town">Town</label>
+            <select id="q-town" name="town" required aria-describedby="e-town">
+              <option value="">Choose your town</option>
+              <option>Elkin</option>
+              <option>Somewhere else</option>
+            </select>
+            <span class="err" id="e-town"></span>
+          </div>
+          <fieldset class="pick">
+            <legend>Which service? Optional</legend>
+            <div class="chips">
+              <label><input type="radio" name="service" id="sv-facial" value="Custom skincare and facials">Skincare and facials</label>
+              <label><input type="radio" name="service" id="sv-derma" value="Dermaplaning facial">Dermaplaning facial</label>
+              <label><input type="radio" name="service" id="sv-wax" value="Waxing">Waxing</label>
+              <label><input type="radio" name="service" id="sv-lash" value="Lash and brow enhancements">Lashes and brows</label>
+              <label><input type="radio" name="service" id="sv-makeup" value="Makeup">Makeup</label>
+            </div>
+            <div class="note n0"><p>Tap a service to see what is good to mention.</p></div>
+            <div class="note n1"><b>Good to mention for a facial</b><ul class="ticks"><li>How your skin feels day to day</li><li>What you put on your skin each morning and night</li><li>Any facials you have had before</li></ul></div>
+            <div class="note n2"><b>Good to mention for dermaplaning</b><ul class="ticks"><li>Any recent peels or skin treatments</li><li>Areas of your skin that feel sensitive</li></ul></div>
+            <div class="note n3"><b>Good to mention for waxing</b><ul class="ticks"><li>Which areas you would like waxed</li><li>When you last waxed or shaved there</li></ul></div>
+            <div class="note n4"><b>Good to mention for lashes and brows</b><ul class="ticks"><li>Lashes, brows or both</li><li>A photo of a look you like</li></ul></div>
+            <div class="note n5"><b>Good to mention for makeup</b><ul class="ticks"><li>The look you have in mind</li><li>Any skin concerns or allergies</li></ul></div>
+          </fieldset>
+          <div class="f full">
+            <label for="q-msg">What would you like done?</label>
+            <textarea id="q-msg" name="message" required aria-describedby="e-msg" placeholder="For example, your skin concerns or the look you have in mind"></textarea>
+            <span class="err" id="e-msg"></span>
+          </div>
+          <div class="submit">
+            <button class="btn" type="submit">Send request</button>
+          </div>
+        </form>
+        <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
+          <h3 id="t-title">Thanks. We have it.</h3>
+          <p id="t-body">Your request is noted.</p>
+          <p class="muted">This is a sample site, so nothing was actually sent.</p>
+          <button class="btn line" type="button" id="t-again">Send another request</button>
+        </div>
+      </div>
     </div>
-    <div class="how">
-      <figure class="rv"><img src="treatment-studio.jpg" width="1066" height="1600" loading="lazy" decoding="async" alt="A treatment bed with a rolled white towel, and a lit candle on the cabinet behind it"></figure>
-      <ul class="ways rv">
-        <li><span>Call</span><a class="num" href="tel:+13367108752">(336) 710-8752</a></li>
-        <li><span>Find us at</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Afterglow+Esthetics+222+E+Main+St+Elkin+NC">222 E Main St, Elkin, NC</a></li>
-        <li><span>Inside</span><p class="plain">Coley Hall Event Center</p></li>
-        <li><span>Book online</span><a href="https://pocketsuite.io/book/afterglow-estheticsbbk">Booking page</a></li>
-        <li><span>Follow along</span><a href="https://www.facebook.com/share/1EEjMst5je/?mibextid=wwXIfr">Facebook</a></li>
-      </ul>
+  </section>
+
+  <section class="band deep find" id="find" aria-labelledby="find-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="find-h">How do I find you?</h2>
+        <p>We are inside Coley Hall Event Center on E Main Street in downtown Elkin.</p>
+      </div>
+      <div class="find-g">
+        <ol class="walk">
+          <li class="rv"><h3>Head for 222 E Main Street</h3><p>We are in downtown Elkin, NC 28621.</p></li>
+          <li class="rv"><h3>Look for Coley Hall Event Center</h3><p>Our studio is inside the building.</p></li>
+          <li class="rv"><h3>Call with any question</h3><p>Reach us at <a class="num" href="tel:+13367108752">(336) 710 8752</a> about getting here.</p></li>
+        </ol>
+        <div class="card addr rv">
+          <p class="lbl">Find us</p>
+          <p class="big">222 E Main Street</p>
+          <p class="muted">Elkin, NC 28621, inside Coley Hall Event Center</p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Afterglow+Esthetics+222+E+Main+St+Elkin+NC">Open in Google Maps</a>
+          <p class="fb"><a class="link" href="https://www.facebook.com/share/1EEjMst5je/?mibextid=wwXIfr">Afterglow Esthetics on Facebook</a></p>
+        </div>
+        <div class="map rv"><iframe src="https://maps.google.com/maps?q=222+E+Main+Street%2C+Elkin%2C+NC+28621&amp;z=15&amp;output=embed" loading="lazy" title="Map showing 222 E Main Street, Elkin, NC 28621"></iframe></div>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="foot">
   <div class="wrap">
-    <p><b>Afterglow Esthetics</b> &middot; 222 E Main St, Elkin, NC</p>
-    <p class="right"><a class="num" href="tel:+13367108752">(336) 710-8752</a></p>
-    <p class="credit">Photos by Rosa Rafael and Benjamin Ngo on Unsplash and Marine Foug&egrave;re on Pexels, shown as examples. Sample site made by <a href="https://granitecitydigital.me/">Granite City Digital</a>.</p>
+    <p class="name">Afterglow Esthetics <span>Beauty by Kay</span></p>
+    <p>222 E Main Street, Elkin, NC, inside Coley Hall Event Center</p>
+    <p class="right"><a class="num" href="tel:+13367108752">(336) 710 8752</a></p>
+    <p class="credit">Photos are examples. Sample site made by <a href="https://granitecitydigital.me/">Granite City Digital</a>.</p>
+    <!-- Footer mark. Keep this block, its CSS and its script exactly as they are. The files live in samples/mark/. -->
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
   </div>
 </footer>
 
@@ -358,6 +678,72 @@ form[hidden]{display:none}
     els.forEach(function(el){io.observe(el)});
   }else{els.forEach(function(el){el.classList.add('in')})}
   addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+
+  /* quote form (runs only when the form is on the page) */
+  var f=document.getElementById('qform');
+  if(!f)return;
+  var F=f.elements,thanks=document.getElementById('thanks');
+  function setErr(id,msg){var i=document.getElementById(id),e=document.getElementById(i.getAttribute('aria-describedby'));e.textContent=msg;if(msg){i.setAttribute('aria-invalid','true')}else{i.removeAttribute('aria-invalid')}return !msg}
+  function check(){
+    var ok=true,first=null;
+    function run(id,msg){var good=setErr(id,msg);if(!good&&!first)first=id;ok=ok&&good}
+    var name=F['name'].value.trim(),phone=F['phone'].value.replace(/\D/g,''),msg=F['message'].value.trim();
+    run('q-name',name.length<2?'Please tell us your name.':'');
+    run('q-phone',phone.length<10?'Please enter a 10 digit phone number.':'');
+    run('q-town',!F['town'].value?'Please choose your town.':'');
+    run('q-msg',msg.length<5?'A few words about the job helps us call back with the right answer.':'');
+    if(first)document.getElementById(first).focus();
+    return ok;
+  }
+  ['q-name','q-phone','q-town','q-msg'].forEach(function(id){
+    var el=document.getElementById(id);
+    el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){if(el.getAttribute('aria-invalid'))setErr(id,'')});
+  });
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!check())return;
+    var name=F['name'].value.trim().split(' ')[0],d=F['phone'].value.replace(/\D/g,'').slice(-10);
+    var nice='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6);
+    document.getElementById('t-title').textContent='Thanks, '+name+'. We have it.';
+    document.getElementById('t-body').textContent='We will call you at '+nice+' soon.';
+    f.hidden=true;thanks.hidden=false;thanks.focus();
+  });
+  document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
 })();
 </script>
 </body>

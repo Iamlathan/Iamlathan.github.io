@@ -3,84 +3,148 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Stacy Martin Electrical LLC | Electrician in Roaring River, NC</title>
-<meta name="description" content="Stacy Martin Electrical LLC is an electrician in Roaring River, NC, for residential, commercial and industrial work. Call (336) 469-1842.">
+<title>Stacy Martin Electric LLC | Electrician in Roaring River, NC</title>
+<meta name="description" content="Stacy Martin Electric LLC is a fully licensed and insured electrician in Roaring River, NC, for residential, commercial and industrial work. Call (336) 469 1842.">
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#f6f5f1">
-<meta property="og:title" content="Stacy Martin Electrical LLC | Roaring River, NC">
-<meta property="og:description" content="Stacy Martin Electrical LLC is an electrician in Roaring River, NC, for residential, commercial and industrial work. Call (336) 469-1842.">
-<meta property="og:image" content="https://granitecitydigital.me/samples/stacy-martin-electrical/hero.jpg">
+<meta name="theme-color" content="#13203b">
+<meta property="og:title" content="Stacy Martin Electric LLC | Roaring River, NC">
+<meta property="og:description" content="Stacy Martin Electric LLC is a fully licensed and insured electrician in Roaring River, NC, for residential, commercial and industrial work. Call (336) 469 1842.">
+<meta property="og:image" content="https://granitecitydigital.me/samples/stacy-martin-electrical/hero-wire.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Electrician",
-  "name": "Stacy Martin Electrical LLC",
+  "name": "Stacy Martin Electric LLC",
   "telephone": "+13364691842",
   "address": {"@type": "PostalAddress", "addressLocality": "Roaring River", "addressRegion": "NC", "addressCountry": "US"},
   "sameAs": ["https://www.facebook.com/profile.php?id=61575824159329"],
-  "image": "https://granitecitydigital.me/samples/stacy-martin-electrical/hero.jpg"
+  "image": "https://granitecitydigital.me/samples/stacy-martin-electrical/hero-wire.jpg"
 }
 </script>
 <style>
+/* Stacy Martin Electric: warm bone paper, ink navy bands with a faint wiring grid, electric amber for actions and pilot lights. Saira Condensed headlines over Work Sans. */
 :root{
-  --bg:#f6f5f1;
-  --tint:#eeece6;
-  --ink:#191b1a;
-  --muted:#5d605c;
-  --line:#dcd9d1;
-  --accent:#2f4f45;
-  --accent-hover:#25413a;
-  --on-accent:#f6f5f1;
-  --danger:#a3392b;
+  --bg:#f4efe4;            /* page ground, warm bone */
+  --surface:#fcf9f2;       /* cards and fields, warm off white */
+  --tint:#e9e1d0;          /* light bands and the sample bar */
+  --ink:#14151a;           /* text, near black */
+  --muted:#53545c;         /* secondary text on light grounds */
+  --line:#d7cebb;          /* borders on light grounds */
+  --accent:#f9a51a;        /* electric amber: buttons, pilot lights, step numbers, labels on navy */
+  --accent-rgb:249 165 26;
+  --accent-hover:#ffb93d;  /* amber button on hover */
+  --accent-ink:#9a5200;    /* burnt amber: small accent text and ticks on light grounds */
+  --accent-soft:#f6dfae;   /* focus halo around fields */
+  --on-accent:#17130a;     /* text on amber */
+  --danger:#a3321f;        /* form errors */
+  --shadow:14 22 44;       /* shadow tint, navy */
+  --texture:radial-gradient(rgb(var(--shadow) / .07) 1px,transparent 1.3px) 0 0/24px 24px;
 
-  --font:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font:"Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Saira Condensed","Arial Narrow",var(--font);
+  --display-weight:700;
+
+  --r-ctl:10px;
+  --r-card:clamp(14px,1.4vw,18px);
+  --r-photo:clamp(16px,2vw,24px);
+
+  --panel:#13203b;         /* ink navy: deep bands, panel cards, footer */
+  --panel-2:#1c2c4d;       /* raised surface on navy */
+  --panel-ink:#f3efe8;     /* cream text on navy */
+  --panel-muted:#b3bccf;   /* secondary text on navy */
+  --panel-line:rgb(243 239 232 / .13);
+  --panel-edge:rgb(243 239 232 / .34); /* outline button border on navy */
+  --knob:#66728a;          /* breaker handle, switched off */
+  --well:6 10 22;          /* shading inside the breaker track */
+  --pilot:var(--accent);   /* pilot lights */
+  --wiring:linear-gradient(rgb(243 239 232 / .045) 1px,transparent 1px) 0 0/32px 32px,linear-gradient(90deg,rgb(243 239 232 / .045) 1px,transparent 1px) 0 0/32px 32px;
+
+  /* the top of the page (header and hero heading) sits on navy; the hero photo laps over its lower edge */
+  --top:var(--panel);
+  --top-ink:var(--panel-ink);
+  --top-muted:var(--panel-muted);
+  --top-line:var(--panel-line);
+  --top-edge:var(--panel-edge);
+  --top-accent:var(--accent);
+  --top-ring:var(--accent);
+  --lap:clamp(72px,14vw,200px);
+
+  /* the getting started band */
+  --how:var(--tint);
+  --how-tex:var(--texture);
+  --how-ink:var(--ink);
+  --how-muted:var(--muted);
+  --how-card:var(--surface);
+  --how-card-ink:var(--ink);
+  --how-card-muted:var(--muted);
+  --how-block:var(--panel);
+
+  --block:var(--panel);    /* slab behind layered photos */
+  --ring:var(--panel);     /* focus ring; navy areas switch it to amber */
+}
+/* the system: type scale, spacing scale and three shadow levels */
+:root{
   --t-small:.875rem;
   --t-body:1rem;
   --t-lead:clamp(1.0625rem,1rem + .3vw,1.1875rem);
-  --t-h3:1.0625rem;
-  --t-h2:clamp(1.75rem,1.35rem + 1.5vw,2.5rem);
-  --t-h1:clamp(2.125rem,1.4rem + 3.4vw,4.25rem);
+  --t-h3:1.125rem;
+  --t-h2:clamp(2.125rem,1.5rem + 2.2vw,3.25rem);
+  
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+  --sec:clamp(88px,10vw,144px);
+  --band-pad:clamp(64px,8vw,112px);
+  --off:clamp(10px,1.4vw,18px);
+
+  --sh-1:1px 1px 2px rgb(var(--shadow) / .05),2px 6px 16px -6px rgb(var(--shadow) / .14);
+  --sh-2:1px 2px 4px rgb(var(--shadow) / .06),4px 14px 32px -10px rgb(var(--shadow) / .22);
+  --sh-3:2px 4px 8px rgb(var(--shadow) / .07),8px 28px 56px -16px rgb(var(--shadow) / .30);
 
   --wrap:1120px;
   --m:clamp(20px,4vw,32px);
-  --sec:clamp(88px,10vw,144px);
   --ease:cubic-bezier(.23,1,.32,1);
   --bar:0px;
 }
 *,*::before,*::after{box-sizing:border-box}
 *{margin:0}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+@media (max-width:760px){html{scroll-padding-bottom:96px}}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
 ::selection{background:var(--accent);color:var(--on-accent)}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-h1,h2,h3{font-weight:300;letter-spacing:-.025em;line-height:1.08;text-wrap:balance}
+:focus-visible{outline:2px solid var(--ring);outline-offset:3px}
+.top,.hero-top{--ring:var(--top-ring)}
+.panel-band,.sched,.find,.foot,.bar{--ring:var(--accent)}
+.readout,.how .float{--ring:var(--panel)}
+h1,h2,h3{font-family:var(--font-display);font-weight:var(--display-weight);letter-spacing:-.005em;line-height:1.04;text-wrap:balance}
 p{text-wrap:pretty}
+input,textarea{caret-color:var(--accent-ink)}
 .wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
 .vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:4px}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:var(--r-ctl)}
 .skip:focus{top:12px}
-.num{font-variant-numeric:tabular-nums}
+.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 .muted{color:var(--muted)}
 
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 20px;border-radius:4px;border:1px solid transparent;background:var(--accent);color:var(--on-accent);font:500 .9375rem/1 var(--font);text-decoration:none;cursor:pointer;transition:background-color 180ms ease,border-color 180ms ease,transform 140ms var(--ease)}
-.btn:active{transform:scale(.97)}
-.btn.line{background:transparent;color:var(--ink);border-color:#c7c4bb}
-.link{color:var(--ink);text-decoration:underline;text-decoration-color:#b9b6ad;transition:text-decoration-color 180ms ease}
+/* buttons: raised level; hover lifts, press sinks */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2);white-space:nowrap;min-height:48px;padding:0 22px;border-radius:var(--r-ctl);border:1px solid transparent;background:var(--accent);color:var(--on-accent);font:600 .9375rem/1 var(--font);text-decoration:none;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,border-color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.btn svg{width:16px;height:16px;flex:none}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.line{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.top .btn.line,.hero-top .btn.line{background:transparent;color:var(--top-ink);border-color:var(--top-edge);box-shadow:none}
 @media (hover:hover) and (pointer:fine){
-  .btn:hover{background:var(--accent-hover)}
-  .btn.line:hover{background:var(--tint);border-color:#b3b0a6}
-  .link:hover{text-decoration-color:var(--ink)}
+  .btn:hover{background:var(--accent-hover);box-shadow:var(--sh-2);transform:translateY(-1px)}
+  .btn.line:hover{background:var(--surface);border-color:var(--muted)}
+  .top .btn.line:hover,.hero-top .btn.line:hover{background:transparent;border-color:var(--top-ink);box-shadow:none}
+  .btn:active{transform:scale(.97);box-shadow:none}
 }
 
 /* sample banner */
@@ -88,296 +152,562 @@ p{text-wrap:pretty}
 .sample a{color:var(--ink)}
 
 /* header */
-.top{border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:68px}
-.mark{display:inline-flex;align-items:center;gap:10px;font-weight:500;font-size:1rem;letter-spacing:-.01em;text-decoration:none;min-height:44px}
-.mark svg{width:22px;height:14px;flex:none;color:var(--accent)}
-.mark span{color:var(--muted);font-weight:400}
+.top{background:var(--top);color:var(--top-ink);border-bottom:1px solid var(--top-line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s-5);min-height:72px}
+.mark{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:1.375rem;letter-spacing:.005em;line-height:1;text-decoration:none;min-height:44px}
+.mark svg{width:22px;height:22px;flex:none;color:var(--top-accent)}
+.mark svg circle{fill:var(--top)}
+.mark span{color:var(--top-muted);font-weight:600;margin-left:-3px}
 .nav{display:flex;align-items:center;gap:28px;list-style:none;padding:0;font-size:var(--t-small)}
-.nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 180ms ease}
-.nav a:hover{color:var(--ink)}
-.top .btn{min-height:40px;padding:0 14px;font-size:var(--t-small)}
+.nav a{color:var(--top-muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 200ms ease}
+.top .btn{min-height:44px;padding:0 16px;font-size:var(--t-small)}
 .top .short{display:none}
-@media (max-width:880px){.nav{display:none}}
+@media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--top-ink)}}
+@media (max-width:900px){.nav{display:none}}
 @media (max-width:480px){.top .long{display:none}.top .short{display:inline}}
 
-/* hero */
-.hero{padding-top:clamp(56px,8vw,112px)}
-.hero h1{font-size:var(--t-h1)}
-.hero h1 span{display:block}
-.hero h1 .soft{display:block;color:#6e706a}
-.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px 48px;align-items:end;margin-top:28px}
-.hero-grid p{color:var(--muted);font-size:var(--t-lead);max-width:46ch}
-.cta{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
-.facts{margin-top:20px;font-size:var(--t-small);color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px;list-style:none;padding:0}
-.facts li+li::before{content:"\00b7";margin-right:10px;color:#a3a59f}
-.hero-pic{margin-top:clamp(40px,5vw,64px);aspect-ratio:12/5;overflow:hidden;border-radius:4px;background:var(--tint)}
-.hero-pic img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+/* photo cards: one radius, one treatment */
+.photo{position:relative;border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-1)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.layer{position:relative;isolation:isolate}
+.layer::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--block);transform:translate(var(--off),var(--off))}
 
 /* sections */
 .sec{padding-top:var(--sec)}
-.head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:16px 48px;align-items:baseline;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.band{margin-top:var(--sec);padding-block:var(--band-pad);background:var(--tint) var(--texture)}
+.how-band{background:var(--how-tex);background-color:var(--how);color:var(--how-ink);--block:var(--how-block)}
+.head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-4) var(--s-7);align-items:end;padding-bottom:var(--s-7)}
 .head h2{font-size:var(--t-h2)}
-.head p{color:var(--muted);max-width:46ch}
+.head p{color:var(--muted);max-width:46ch;font-size:var(--t-lead)}
 
-/* services */
-.svc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px 48px;margin-top:40px;align-items:start}
-.svc figure{border-radius:4px;overflow:hidden;background:var(--tint);aspect-ratio:4/3}
-.svc figure img{width:100%;height:100%;object-fit:cover;object-position:52% 50%}
-.list{list-style:none;padding:0}
-.list li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;padding:18px 0;border-bottom:1px solid var(--line)}
-.list li:first-child{padding-top:0}
-.list h3{font-size:var(--t-h3);font-weight:500;letter-spacing:-.01em;line-height:1.35}
-.list p{grid-column:1;color:var(--muted);font-size:.9375rem;max-width:44ch}
-.list .price{grid-column:2;grid-row:1;font-size:.9375rem;white-space:nowrap;text-align:right}
-.note{margin-top:20px;font-size:.9375rem;color:var(--muted);max-width:50ch}
-.note b{color:var(--ink);font-weight:500}
+/* hero: heading and call buttons on the navy top, a wide photo lapping over its lower edge, a panel schedule card over the photo corner */
+.hero-top{background:var(--top);color:var(--top-ink);padding-top:clamp(48px,7vw,104px);padding-bottom:calc(var(--lap) + clamp(40px,5vw,64px))}
+.hero h1{font-size:clamp(2.75rem,1.2rem + 5.2vw,5.75rem);letter-spacing:-.01em;line-height:.98}
+.hero h1 .lit{display:block;color:var(--top-accent)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-5) var(--s-7);align-items:end;margin-top:var(--s-6)}
+.hero-grid p{color:var(--top-muted);font-size:var(--t-lead);max-width:48ch}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s-3);justify-content:flex-end}
+.hero-pic{position:relative;margin-top:calc(var(--lap) * -1);margin-right:var(--off);--block:var(--accent)}
+.hero-pic .photo{aspect-ratio:16/7;box-shadow:var(--sh-2)}
+.hero-pic img{object-position:50% 45%}
+.sched{position:absolute;z-index:2;right:clamp(16px,3vw,40px);bottom:calc(var(--s-7) * -1);width:min(360px,calc(100% - 32px));padding:var(--s-4) var(--s-5) var(--s-3);border-radius:var(--r-card);background:var(--wiring);background-color:var(--panel);color:var(--panel-ink);box-shadow:var(--sh-3)}
+.sched p{font-size:.8125rem;font-weight:600;color:var(--accent);display:flex;align-items:center;gap:var(--s-2)}
+.sched p i{width:8px;height:8px;border-radius:50%;background:var(--pilot);box-shadow:0 0 0 3px rgb(var(--accent-rgb) / .2)}
+.sched dl{display:grid;margin-top:var(--s-2)}
+.sched dl div{display:grid;grid-template-columns:auto minmax(0,1fr);gap:var(--s-4);align-items:baseline;padding:10px 0;border-top:1px solid var(--panel-line)}
+.sched dt{font-size:.8125rem;color:var(--panel-muted)}
+.sched dd{font-weight:500;text-align:right}
+.sched .one dd{text-align:left}
 
-/* price helper */
-.helper{margin-top:32px;padding:20px;background:var(--tint);border-radius:4px;display:grid;gap:12px}
-.helper[hidden]{display:none}
-.helper label{font-size:var(--t-small);font-weight:500}
-.helper .row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
-.select{appearance:none;-webkit-appearance:none;min-height:44px;padding:0 40px 0 12px;border:1px solid #cfccc3;border-radius:4px;background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%235d605c' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;color:var(--ink);font:inherit;font-size:.9375rem}
-.est{font-size:.9375rem;color:var(--muted)}
-.est b{color:var(--ink);font-weight:500}
-.helper .link{font-size:.9375rem;width:fit-content}
+/* the service board: five breakers, flip one on to read it. Pure CSS radios, so it works with scripts off. */
+.panel-band{background:var(--wiring);background-color:var(--panel);color:var(--panel-ink);margin-top:calc(var(--sec) + var(--s-7))}
+.panel-band .head p{color:var(--panel-muted)}
+.board{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-6) var(--s-7);align-items:start}
+.board > input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.breakers{display:grid;gap:var(--s-2);padding:var(--s-3);border-radius:var(--r-card);background:var(--panel-2);box-shadow:inset 0 0 0 1px var(--panel-line),var(--sh-2)}
+.brk{display:grid;grid-template-columns:44px minmax(0,1fr) auto;align-items:center;gap:var(--s-4);min-height:60px;padding:var(--s-2) var(--s-4) var(--s-2) var(--s-3);border-radius:10px;cursor:pointer;color:var(--panel-muted);transition:background-color 200ms ease,color 200ms ease}
+.brk b{font-weight:500;font-size:1.0625rem;line-height:1.3}
+/* the handle: a breaker toggle that flips from left (off) to right (on) */
+.brk .h{position:relative;width:44px;height:24px;border-radius:6px;background:rgb(var(--well) / .5);box-shadow:inset 0 1px 2px rgb(var(--well) / .6),0 0 0 1px var(--panel-line)}
+.brk .h::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:4px;background:var(--knob);transition:transform 240ms var(--ease),background-color 200ms ease}
+.brk .led{width:8px;height:8px;border-radius:50%;background:rgb(243 239 232 / .16);transition:background-color 200ms ease,box-shadow 200ms ease}
+@media (hover:hover) and (pointer:fine){.brk:hover{background:rgb(243 239 232 / .05);color:var(--panel-ink)}}
+#b1:checked ~ .breakers-col [for="b1"],#b2:checked ~ .breakers-col [for="b2"],#b3:checked ~ .breakers-col [for="b3"],#b4:checked ~ .breakers-col [for="b4"],#b5:checked ~ .breakers-col [for="b5"]{background:rgb(243 239 232 / .08);color:var(--panel-ink)}
+#b1:checked ~ .breakers-col [for="b1"] .h::after,#b2:checked ~ .breakers-col [for="b2"] .h::after,#b3:checked ~ .breakers-col [for="b3"] .h::after,#b4:checked ~ .breakers-col [for="b4"] .h::after,#b5:checked ~ .breakers-col [for="b5"] .h::after{transform:translateX(20px);background:var(--accent)}
+#b1:checked ~ .breakers-col [for="b1"] .led,#b2:checked ~ .breakers-col [for="b2"] .led,#b3:checked ~ .breakers-col [for="b3"] .led,#b4:checked ~ .breakers-col [for="b4"] .led,#b5:checked ~ .breakers-col [for="b5"] .led{background:var(--pilot);box-shadow:0 0 0 3px rgb(var(--accent-rgb) / .22),0 0 12px rgb(var(--accent-rgb) / .6)}
+#b1:focus-visible ~ .breakers-col [for="b1"],#b2:focus-visible ~ .breakers-col [for="b2"],#b3:focus-visible ~ .breakers-col [for="b3"],#b4:focus-visible ~ .breakers-col [for="b4"],#b5:focus-visible ~ .breakers-col [for="b5"]{outline:2px solid var(--ring);outline-offset:2px}
+.board-hint{margin-top:var(--s-3);padding-inline:var(--s-3);font-size:var(--t-small);color:var(--panel-muted)}
+/* the readout: the service that is switched on */
+.readout{padding:clamp(24px,3vw,40px);border-radius:var(--r-card);background:var(--surface);color:var(--ink);box-shadow:var(--sh-3)}
+.ro{display:grid;gap:var(--s-3)}
+.js .ro{display:none}
+#b1:checked ~ .readout .r1,#b2:checked ~ .readout .r2,#b3:checked ~ .readout .r3,#b4:checked ~ .readout .r4,#b5:checked ~ .readout .r5{display:grid}
+.js .ro{animation:on 360ms var(--ease) both}
+.ro + .ro{margin-top:var(--s-7)}
+.js .ro + .ro{margin-top:0}
+.ro .state{display:flex;align-items:center;gap:var(--s-2);font-size:.8125rem;color:var(--accent-ink);font-weight:600}
+.ro .state i{width:8px;height:8px;border-radius:50%;background:var(--pilot);box-shadow:0 0 0 3px rgb(var(--accent-rgb) / .28)}
+.ro h3{font-size:clamp(1.875rem,1.4rem + 1.5vw,2.75rem)}
+.ro .say{color:var(--muted);font-size:var(--t-lead);max-width:44ch}
+.tell{margin-top:var(--s-3);font-size:var(--t-small);font-weight:600}
+.ticks{list-style:none;padding:0;display:grid;gap:var(--s-2)}
+.ticks li{position:relative;padding-left:24px;font-size:.9375rem}
+.ticks li::before{content:"";position:absolute;left:2px;top:.5em;width:12px;height:7px;border-left:2px solid var(--accent-ink);border-bottom:2px solid var(--accent-ink);transform:rotate(-45deg)}
+.ro .btn{margin-top:var(--s-3);width:fit-content}
+@keyframes on{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
-/* how it works */
-.how{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px 48px;margin-top:40px;align-items:start}
-.how figure{border-radius:4px;overflow:hidden;background:var(--tint);aspect-ratio:4/3}
-.how figure img{width:100%;height:100%;object-fit:cover}
-.steps{list-style:none;padding:0;display:grid}
-.steps li{padding:18px 0;border-bottom:1px solid var(--line)}
-.steps li:first-child{padding-top:0}
-.steps h3{font-size:var(--t-h3);font-weight:500;letter-spacing:-.01em;line-height:1.35}
-.steps p{color:var(--muted);font-size:.9375rem;margin-top:4px;max-width:40ch}
+/* job types: two rows that trade sides, each photo on a soft block */
+.rows{display:grid;gap:clamp(72px,9vw,120px)}
+.row{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--s-7) var(--s-9);align-items:center}
+.row.flip{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+.row.flip .pic{order:2}
+.row .pic{position:relative;margin-right:var(--off)}
+.row .photo{aspect-ratio:5/4}
+.row h3{font-size:clamp(2rem,1.4rem + 1.9vw,3rem)}
+.row .say{margin-top:var(--s-4);color:var(--muted);font-size:var(--t-lead);max-width:42ch}
+.row .tags{display:flex;flex-wrap:wrap;gap:var(--s-2);list-style:none;padding:0;margin-top:var(--s-5)}
+.row .tags li{padding:6px 12px;border-radius:8px;background:var(--surface);box-shadow:var(--sh-1);font-size:var(--t-small);font-weight:500}
+.row .btn{margin-top:var(--s-6)}
+.quote{position:absolute;z-index:2;left:var(--s-5);bottom:calc(var(--s-6) * -1);max-width:min(340px,calc(100% - var(--s-7)));padding:var(--s-4) var(--s-5);border-radius:var(--r-card);background:var(--surface);box-shadow:var(--sh-3);font-size:.9375rem;line-height:1.5}
+.quote b{display:block;font-weight:600;color:var(--accent-ink);margin-bottom:2px}
 
-/* area */
-.area{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:12px 48px;align-items:baseline;padding-block:32px;border-block:1px solid var(--line)}
-.area h2{font-size:var(--t-h3);font-weight:500;letter-spacing:-.01em}
-.area p{font-size:var(--t-lead)}
-.area p span{color:var(--muted)}
+/* how a job starts: tall photo and three steps */
+.how{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7) var(--s-9);align-items:center}
+.how .pic{position:relative;margin-right:var(--off);margin-bottom:var(--s-6)}
+.how .photo{aspect-ratio:4/5}
+.how .photo img{object-position:42% 50%}
+.how .float{position:absolute;z-index:2;right:calc(var(--s-6) * -1);bottom:calc(var(--s-6) * -1);max-width:280px;padding:var(--s-4) var(--s-5);border-radius:var(--r-card);background:var(--surface);color:var(--ink);box-shadow:var(--sh-3);font-size:.9375rem;line-height:1.5}
+.how .float b{font-weight:600}
+.how .float a{text-decoration:underline;text-decoration-color:var(--line);white-space:nowrap}
+.how h2{font-size:var(--t-h2)}
+.how-sub{margin-top:var(--s-4);color:var(--how-muted);font-size:var(--t-lead);max-width:44ch}
+.steps{list-style:none;padding:0;display:grid;gap:var(--s-4);counter-reset:step;margin-top:var(--s-6)}
+.steps li{position:relative;display:grid;grid-template-columns:44px minmax(0,1fr);gap:2px var(--s-5);padding:var(--s-5);border-radius:var(--r-card);background:var(--how-card);color:var(--how-card-ink);box-shadow:var(--sh-1);counter-increment:step}
+.steps li::before{content:counter(step);grid-row:1 / span 2;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:var(--accent);color:var(--on-accent);font:700 1.5rem/1 var(--font-display);font-variant-numeric:tabular-nums}
+.steps h3{font-family:var(--font);font-size:var(--t-h3);font-weight:600;letter-spacing:-.01em;line-height:1.3;padding-top:2px}
+.steps p{color:var(--how-card-muted);font-size:.9375rem;max-width:46ch}
 
-/* reviews */
-.revs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 48px;margin-top:40px}
-.revs blockquote{font-size:var(--t-lead);line-height:1.5;font-weight:300;letter-spacing:-.005em}
-.revs figcaption{margin-top:14px;font-size:var(--t-small);color:var(--muted)}
-.revs figcaption b{color:var(--ink);font-weight:500}
-.sample-tag{margin-top:40px;font-size:.8125rem;color:var(--muted)}
+/* photo strip: one wide tile and two that step down */
+.strip{display:grid;grid-template-columns:6fr 4fr 4fr;gap:var(--s-5);align-items:start}
+.strip .photo{aspect-ratio:4/3}
+.strip .photo:nth-child(2){margin-top:var(--s-8);aspect-ratio:4/5}
+.strip .photo:nth-child(3){margin-top:var(--s-6);aspect-ratio:4/5}
+.strip .photo:nth-child(2) img{object-position:60% 50%}
+.strip .photo:nth-child(3) img{object-position:18% 70%}
 
-/* faq */
-.faq{margin-top:12px}
-.faq details{border-bottom:1px solid var(--line)}
-.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:64px;padding:16px 0;cursor:pointer;font-size:var(--t-h3);font-weight:500;letter-spacing:-.01em}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";width:10px;height:10px;flex:none;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:translateY(-3px) rotate(45deg);transition:transform 200ms var(--ease)}
-.faq details[open] summary::after{transform:translateY(2px) rotate(225deg)}
-.faq details p{color:var(--muted);max-width:62ch;padding-bottom:22px;margin-top:-4px}
-
-/* contact */
-.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;margin-top:40px;align-items:start}
-.ways{list-style:none;padding:0;display:grid;gap:2px}
-.ways li{display:grid;gap:0;padding:14px 0;border-bottom:1px solid var(--line)}
-.ways li:first-child{padding-top:0}
+/* contact: a find us card and the request form */
+.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7);align-items:start}
+.find{padding:clamp(24px,3vw,36px);border-radius:var(--r-card);background:var(--wiring);background-color:var(--panel);color:var(--panel-ink);box-shadow:var(--sh-2);display:grid;gap:var(--s-2)}
+.find .k{font-size:.8125rem;font-weight:600;color:var(--accent)}
+.find .big{font-family:var(--font-display);font-size:clamp(2rem,1.4rem + 1.7vw,2.75rem);font-weight:700;letter-spacing:-.005em;line-height:1.05}
+.find .ok{display:flex;align-items:center;gap:var(--s-2);margin-top:var(--s-2);font-size:.9375rem;color:var(--panel-ink)}
+.find .ok svg{width:16px;height:16px;color:var(--pilot);flex:none}
+.find .btn{margin-top:var(--s-4);width:fit-content}
+.ways{list-style:none;padding:0;display:grid;gap:var(--s-3);margin-top:var(--s-4)}
+.ways a{display:grid;gap:2px;padding:var(--s-4) var(--s-5);border-radius:var(--r-card);background:var(--surface);text-decoration:none;font-size:var(--t-lead);line-height:1.35;box-shadow:var(--sh-1);transition:box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.ways a:active{transform:scale(.985);box-shadow:none}
 .ways span{font-size:.8125rem;color:var(--muted)}
-.ways a{font-size:var(--t-lead);text-decoration:none;min-height:32px;display:inline-flex;align-items:center;width:fit-content}
-.ways a:hover{text-decoration:underline;text-decoration-color:#b9b6ad}
-.ways .plain{font-size:var(--t-lead)}
+@media (hover:hover) and (pointer:fine){.ways a:hover{box-shadow:var(--sh-2);transform:translateY(-2px)}.ways a:active{transform:scale(.985);box-shadow:none}}
+.panel{padding:clamp(24px,3vw,40px);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3)}
 
-form{display:grid;grid-template-columns:1fr 1fr;gap:20px 16px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-5) var(--s-4)}
 form[hidden]{display:none}
 .f{display:grid;gap:6px;min-width:0}
 .f.full{grid-column:1/-1}
 .f label{font-size:var(--t-small);font-weight:500}
-.f input,.f select,.f textarea{width:100%;min-height:48px;padding:11px 12px;border:1px solid #cfccc3;border-radius:4px;background:#fbfaf7;color:var(--ink);font:inherit;font-size:1rem;transition:border-color 160ms ease;appearance:none;-webkit-appearance:none}
-.f select{background:#fbfaf7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%235d605c' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:40px}
-.f textarea{min-height:112px;resize:vertical;line-height:1.5}
-.f input::placeholder,.f textarea::placeholder{color:#72746e}
-.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.f input,.f select,.f textarea{width:100%;min-height:48px;padding:11px 14px;border:1px solid var(--line);border-radius:var(--r-ctl);background:var(--bg);color:var(--ink);font:inherit;font-size:1rem;transition:border-color 200ms ease,box-shadow 200ms ease,background-color 200ms ease;appearance:none;-webkit-appearance:none}
+.f select{background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%2353545c' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:40px}
+.f textarea{min-height:120px;resize:vertical;line-height:1.5}
+.f input::placeholder,.f textarea::placeholder{color:var(--muted)}
+.f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--accent-ink);background-color:var(--surface);box-shadow:0 0 0 3px var(--accent-soft)}
+@media (hover:hover) and (pointer:fine){.f input:hover,.f select:hover,.f textarea:hover{border-color:var(--muted)}}
 .f [aria-invalid="true"]{border-color:var(--danger)}
 .err{font-size:.8125rem;color:var(--danger)}
 .err:empty{display:none}
-.check{grid-column:1/-1;display:flex;align-items:center;gap:10px;min-height:44px;font-size:.9375rem;cursor:pointer;width:fit-content}
-.check input{appearance:none;-webkit-appearance:none;width:20px;height:20px;flex:none;margin:0;border:1px solid #b3b0a6;border-radius:3px;background:#fbfaf7;display:grid;place-items:center;cursor:pointer;transition:background-color 140ms ease,border-color 140ms ease}
-.check input::after{content:"";width:10px;height:5px;border-left:1.75px solid var(--on-accent);border-bottom:1.75px solid var(--on-accent);transform:translateY(-1px) rotate(-45deg);opacity:0;transition:opacity 120ms ease}
-.check input:checked{background:var(--accent);border-color:var(--accent)}
-.check input:checked::after{opacity:1}
-.submit{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.submit{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-3) var(--s-5)}
 .submit p{font-size:.8125rem;color:var(--muted)}
 .thanks[hidden]{display:none}
 .thanks:focus{outline:none}
 .thanks h3{font-size:var(--t-h2)}
-.thanks p{margin-top:12px;max-width:46ch}
+.thanks p{margin-top:var(--s-3);max-width:46ch}
 .thanks .muted{font-size:var(--t-small)}
-.thanks .btn{margin-top:24px}
+.thanks .btn{margin-top:var(--s-5)}
 
 /* footer */
-.foot{margin-top:var(--sec);border-top:1px solid var(--line);padding-block:32px 40px;font-size:.8125rem;color:var(--muted)}
-.foot .wrap{display:grid;grid-template-columns:1fr auto;gap:12px 32px}
-.foot b{color:var(--ink);font-weight:500}
-.foot a{color:var(--muted)}
+.foot{background:var(--wiring);background-color:var(--panel);padding-block:var(--s-8) var(--s-7);font-size:.8125rem;color:var(--panel-muted)}
+.foot .wrap{display:grid;grid-template-columns:1fr auto;gap:var(--s-3) var(--s-6);align-items:center}
+.foot .name{grid-column:1/-1;margin-bottom:var(--s-4);font-family:var(--font-display);font-size:clamp(1.875rem,1.1rem + 2.8vw,3.25rem);font-weight:700;letter-spacing:-.005em;line-height:1;color:var(--panel-ink)}
+.foot a{color:var(--panel-muted)}
 .foot .right{text-align:right}
+.foot .right a{display:inline-flex;align-items:center;min-height:44px;font-size:.9375rem;color:var(--panel-ink)}
 .foot .credit{grid-column:1/-1;max-width:none}
+
+/* footer mark: a 2 s logo build that plays once in view, muted; the still logo shows until it really plays and is the fallback */
+.gcd{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:14px;margin-top:12px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font-weight:500}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--tint)}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
+
+/* footer mark on the dark footer */
+.foot .gcd{color:var(--panel-muted)}
+.foot .gcd-text b{color:var(--panel-ink)}
+.foot .gcd:focus-visible{outline-color:var(--accent)}
+@media (hover:hover) and (pointer:fine){.foot .gcd:hover{background:rgb(243 239 232 / .07)}}
 
 /* phone bar */
 .bar{display:none}
 
-/* motion: opacity and a few pixels, once */
+/* motion: slow, once, opacity and a few pixels. Content stays visible without scripts and with reduced motion. */
 @media (prefers-reduced-motion:no-preference){
-  .js .rv{opacity:0;transform:translateY(10px);transition:opacity 600ms var(--ease),transform 600ms var(--ease)}
+  .js .rv{opacity:0;transform:translateY(16px);transition:opacity 700ms var(--ease),transform 700ms var(--ease)}
   .js .rv.in{opacity:1;transform:none}
-  .hero .rise{animation:rise 700ms var(--ease) both}
-  .hero .rise:nth-child(2){animation-delay:70ms}
-  .hero-pic.rise{animation-delay:140ms}
+  .js .steps .rv:nth-child(2),.js .strip .rv:nth-child(2){transition-delay:90ms}
+  .js .steps .rv:nth-child(3),.js .strip .rv:nth-child(3){transition-delay:180ms}
+  .hero .rise{animation:rise 800ms var(--ease) both}
+  .hero .rise:nth-child(2){animation-delay:80ms}
+  .hero-pic.rise{animation-delay:160ms}
+  .hero-pic img{animation:settle 1600ms var(--ease) both}
+  .sched i{animation:pilot 2.4s ease-in-out 1.2s 2 both}
 }
-@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .js .ro{animation:none}
+  .brk .h::after{transition:none}
+}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes settle{from{transform:scale(1.05)}to{transform:none}}
+@keyframes pilot{50%{opacity:.45}}
 
 /* tablet */
 @media (max-width:960px){
-  .hero-grid,.head,.svc,.how,.area,.contact{grid-template-columns:minmax(0,1fr)}
+  .hero-grid,.head,.board,.how,.contact{grid-template-columns:minmax(0,1fr)}
   .cta{justify-content:flex-start}
-  .how figure{order:2}
-  .revs{grid-template-columns:minmax(0,1fr);gap:32px}
-  .revs figure+figure{padding-top:32px;border-top:1px solid var(--line)}
+  .row,.row.flip{grid-template-columns:minmax(0,1fr);gap:var(--s-6)}
+  .row.flip .pic{order:0}
+  .row .pic{margin-right:calc(var(--off) + var(--s-6))}
+  .row .photo{aspect-ratio:16/11}
+  .how .pic{margin-right:calc(var(--off) + var(--s-6));order:2}
+  .how .photo{aspect-ratio:16/11}
 }
 
 /* phone */
 @media (max-width:640px){
-  :root{--bar:calc(60px + env(safe-area-inset-bottom))}
-  .hero-pic{aspect-ratio:16/9;margin-inline:calc(var(--m) * -1);border-radius:0}
-  .hero-pic img{object-position:48% 40%}
-  .facts{gap:2px 18px}
-  .facts li+li::before{content:none}
-  .cta{justify-content:flex-start}
+  :root{--bar:calc(61px + env(safe-area-inset-bottom));--r-photo:16px;--r-card:14px;--off:10px}
+  body{padding-bottom:calc(var(--bar) + 2px)} /* 2 px of room so the footer edge never meets the bar */
+  .hero h1{font-size:clamp(2rem,9.6vw,2.625rem)}
+  .hero-pic .photo{aspect-ratio:4/3}
+  .hero-pic img{object-position:62% 50%}
+  .hero-pic.layer::before{bottom:auto;aspect-ratio:4/3} /* keep the amber slab behind the photo only */
+  .sched{position:relative;right:auto;bottom:auto;width:auto;margin:calc(var(--s-7) * -1) var(--s-4) 0}
   .cta .btn{flex:1 1 auto}
-  .list li{grid-template-columns:minmax(0,1fr) auto}
+  .head{padding-bottom:var(--s-6)}
+  .panel-band{margin-top:var(--sec)}
+  .breakers{padding:var(--s-2)}
+  .brk{gap:var(--s-3);padding-inline:var(--s-3)}
+  .row .pic,.how .pic{margin-right:var(--off)}
+  .quote{position:relative;left:auto;bottom:auto;max-width:none;margin:calc(var(--s-6) * -1) var(--s-4) 0}
+  .how .pic{margin-bottom:0}
+  .how .float{position:relative;right:auto;bottom:auto;max-width:none;margin:calc(var(--s-6) * -1) var(--s-4) 0}
+  .steps li{padding:var(--s-4);gap:2px var(--s-4)}
+  .strip{grid-template-columns:1fr 1fr;gap:var(--s-3)}
+  .strip .photo:first-child{grid-column:1/-1;aspect-ratio:16/10}
+  .strip .photo:nth-child(2),.strip .photo:nth-child(3){margin-top:0;aspect-ratio:4/5}
   form{grid-template-columns:minmax(0,1fr)}
   .submit .btn{width:100%}
   .foot .wrap{grid-template-columns:minmax(0,1fr)}
   .foot .right{text-align:left}
-  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--bg);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
-  .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:60px;font-weight:500;font-size:1rem;text-decoration:none;color:var(--ink)}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--panel);border-top:1px solid var(--panel-line);padding-bottom:env(safe-area-inset-bottom)}
+  .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:60px;font-weight:600;font-size:1rem;text-decoration:none;color:var(--panel-ink)}
+  .bar a:focus-visible{outline-offset:-4px}
+  .bar a:first-child:focus-visible{outline-color:var(--on-accent)}
   .bar a:first-child{background:var(--accent);color:var(--on-accent)}
   .bar a:active{opacity:.85}
   .bar svg{width:17px;height:17px}
+}
+/* short phones: keep the hero call button clear of the phone bar */
+@media (max-width:640px) and (max-height:740px){
+  body .hero-top{padding-top:var(--s-6)}
+  body .hero h1{font-size:clamp(1.875rem,9vw,2.375rem)}
+  body .hero-grid{margin-top:var(--s-4);gap:var(--s-4)}
+  body .hero p{font-size:1rem}
+}
+@media (max-width:420px) and (max-height:600px){
+  body .hero h1{font-size:clamp(1.75rem,8.6vw,2rem)}
+  body .hero p{font-size:.9375rem;line-height:1.5}
+}
+@media (max-width:360px){
+  .top .wrap{gap:var(--s-3)}
+  .mark{font-size:1.1875rem}
+  .mark svg{display:none}
 }
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<div class="sample" role="note">Sample site made for Stacy Martin Electrical LLC by <a href="https://granitecitydigital.me/">Granite City Digital</a>. Your real site gets your own photos, colors and services.</div>
+<div class="sample" role="note">Sample site made for Stacy Martin Electric LLC by <a href="https://granitecitydigital.me/">Granite City Digital</a>. Your real site gets your own photos, colors and services.</div>
 
 <header class="top">
   <div class="wrap">
-    <a class="mark" href="#top" aria-label="Stacy Martin Electrical LLC, back to top">
-      Stacy Martin <span>Electrical LLC</span>
+    <a class="mark" href="#top" aria-label="Stacy Martin Electric LLC, back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="7" y="9.5" width="10" height="5" rx="1.5" fill="currentColor"/><circle cx="14.5" cy="12" r="1.1"/></svg>
+      Stacy Martin <span>Electric LLC</span>
     </a>
     <nav aria-label="Main">
       <ul class="nav">
         <li><a href="#services">Services</a></li>
-        <li><a href="#how">How it works</a></li>
+        <li><a href="#types">Homes and businesses</a></li>
+        <li><a href="#how">Getting started</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <a class="btn line" href="tel:+13364691842"><span class="long num">(336) 469-1842</span><span class="short">Call</span></a>
+    <a class="btn line" href="tel:+13364691842"><span class="long num">(336) 469 1842</span><span class="short">Call</span></a>
   </div>
 </header>
 
 <main id="main">
-  <section class="wrap hero" id="top" aria-labelledby="hero-h">
-    <h1 class="rise" id="hero-h"><span>Electrical work</span> <span class="soft">in Roaring River.</span></h1>
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="hero-top">
+    <div class="wrap">
+    <h1 class="rise" id="hero-h">Licensed electrical work <span class="lit">in Roaring River.</span></h1>
     <div class="hero-grid rise">
-      <div>
-        <p>Stacy Martin Electrical LLC is an electrician based in Roaring River, NC. Call or send a request to tell us what you need.</p>
-      </div>
+      <p>Stacy Martin Electric LLC takes on residential, commercial or industrial electrical jobs. Call or send a request and tell us about the work.</p>
       <div class="cta">
-        <a class="btn" href="tel:+13364691842">Call <span class="num">(336) 469-1842</span></a>
+        <a class="btn" href="tel:+13364691842"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call <span class="num">(336) 469 1842</span></a>
         <a class="btn line" href="#contact">Send a request</a>
       </div>
     </div>
-    <figure class="hero-pic rise">
-      <img src="hero.jpg" width="1600" height="1067" fetchpriority="high" style="object-position:50% 80%" alt="Two black wire cage pendant lights with glowing bulbs hanging from a ceiling">
-    </figure>
+    </div>
+    </div>
+    <div class="wrap">
+    <div class="hero-pic layer rise">
+      <figure class="photo"><img src="hero-wire.jpg" width="1600" height="1067" srcset="hero-wire-800.jpg 800w, hero-wire.jpg 1600w" sizes="(max-width: 640px) 94vw, 1120px" fetchpriority="high" alt="Two hands gather coils of dark and yellow wire on a workbench under a warm work light"></figure>
+      <div class="sched">
+        <p><i aria-hidden="true"></i>At a glance</p>
+        <dl>
+          <div class="one"><dt class="vh">Licensing</dt><dd>Fully licensed and insured</dd></div>
+          <div><dt>Work</dt><dd>Homes, businesses, industry</dd></div>
+          <div><dt>Based in</dt><dd>Roaring River, NC</dd></div>
+        </dl>
+      </div>
+    </div>
+    </div>
   </section>
 
-  <section class="wrap sec" id="services" aria-labelledby="svc-h">
-    <div class="head rv">
-      <h2 id="svc-h">Services</h2>
-      <p>Call to talk through the job.</p>
-    </div>
-    <div class="svc">
-      <figure class="rv"><img src="services.jpg" width="1068" height="1600" loading="lazy" decoding="async" alt="Two hands using pliers on wires at an open wall box beside outlets"></figure>
-      <div>
-        <ul class="list">
-          <li class="rv"><h3>Residential electrical</h3></li>
-          <li class="rv"><h3>Commercial electrical</h3></li>
-          <li class="rv"><h3>Industrial electrical</h3></li>
-        </ul>
-        <p class="note rv"><b>Not sure what you need?</b> Call (336) 469-1842 and ask.</p>
+  <section class="band panel-band" id="services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="svc-h">The service board</h2>
+        <p>Flip a breaker to see what each service covers, plus the details worth mentioning when you call.</p>
+      </div>
+      <div class="board rv" role="radiogroup" aria-label="Services">
+        <input type="radio" name="breaker" id="b1" form="qform" value="Wiring and rewiring" checked>
+        <input type="radio" name="breaker" id="b2" form="qform" value="Outlets and switches">
+        <input type="radio" name="breaker" id="b3" form="qform" value="Lighting and fixtures">
+        <input type="radio" name="breaker" id="b4" form="qform" value="Panels and breakers">
+        <input type="radio" name="breaker" id="b5" form="qform" value="Troubleshooting">
+        <div class="breakers-col">
+          <div class="breakers">
+            <label class="brk" for="b1"><span class="h" aria-hidden="true"></span><b>Wiring and rewiring</b><span class="led" aria-hidden="true"></span></label>
+            <label class="brk" for="b2"><span class="h" aria-hidden="true"></span><b>Outlets and switches</b><span class="led" aria-hidden="true"></span></label>
+            <label class="brk" for="b3"><span class="h" aria-hidden="true"></span><b>Lighting and fixtures</b><span class="led" aria-hidden="true"></span></label>
+            <label class="brk" for="b4"><span class="h" aria-hidden="true"></span><b>Panels and breakers</b><span class="led" aria-hidden="true"></span></label>
+            <label class="brk" for="b5"><span class="h" aria-hidden="true"></span><b>Troubleshooting</b><span class="led" aria-hidden="true"></span></label>
+          </div>
+          <p class="board-hint">One breaker on at a time. The card shows the one you flipped.</p>
+        </div>
+        <div class="readout" aria-live="polite">
+          <article class="ro r1" aria-labelledby="r1-h">
+            <p class="state"><i aria-hidden="true"></i>Switched on</p>
+            <h3 id="r1-h">Wiring and rewiring</h3>
+            <p class="say">New circuits for added rooms, shops or equipment, plus old runs replaced where the wiring has seen better days.</p>
+            <p class="tell">Good to mention when you call</p>
+            <ul class="ticks">
+              <li>Roughly how old the building is</li>
+              <li>Which rooms or areas the work covers</li>
+              <li>Whether the walls are open or finished</li>
+            </ul>
+            <a class="btn" href="tel:+13364691842">Call about wiring</a>
+          </article>
+          <article class="ro r2" aria-labelledby="r2-h">
+            <p class="state"><i aria-hidden="true"></i>Switched on</p>
+            <h3 id="r2-h">Outlets and switches</h3>
+            <p class="say">More outlets where you need them, switches moved or added, plus worn, loose and dead ones replaced.</p>
+            <p class="tell">Good to mention when you call</p>
+            <ul class="ticks">
+              <li>How many outlets or switches</li>
+              <li>Which rooms they are in</li>
+              <li>Anything that sparks, buzzes or stopped working</li>
+            </ul>
+            <a class="btn" href="tel:+13364691842">Call about outlets</a>
+          </article>
+          <article class="ro r3" aria-labelledby="r3-h">
+            <p class="state"><i aria-hidden="true"></i>Switched on</p>
+            <h3 id="r3-h">Lighting and fixtures</h3>
+            <p class="say">Ceiling fixtures, pendants, recessed cans or outdoor lights, put in and wired.</p>
+            <p class="tell">Good to mention when you call</p>
+            <ul class="ticks">
+              <li>The kind of fixture and where it goes</li>
+              <li>Whether a light is there now</li>
+              <li>How high the ceiling is</li>
+            </ul>
+            <a class="btn" href="tel:+13364691842">Call about lighting</a>
+          </article>
+          <article class="ro r4" aria-labelledby="r4-h">
+            <p class="state"><i aria-hidden="true"></i>Switched on</p>
+            <h3 id="r4-h">Panels and breakers</h3>
+            <p class="say">Breakers that keep tripping, a box with no room left for new circuits, or a panel that needs replacing.</p>
+            <p class="tell">Good to mention when you call</p>
+            <ul class="ticks">
+              <li>Which breaker trips and what is running when it does</li>
+              <li>About how old the panel is</li>
+              <li>What you want to add</li>
+            </ul>
+            <a class="btn" href="tel:+13364691842">Call about your panel</a>
+          </article>
+          <article class="ro r5" aria-labelledby="r5-h">
+            <p class="state"><i aria-hidden="true"></i>Switched on</p>
+            <h3 id="r5-h">Troubleshooting</h3>
+            <p class="say">Dead outlets, flickering lights, warm switch plates and circuits that cut out without a clear reason.</p>
+            <p class="tell">Good to mention when you call</p>
+            <ul class="ticks">
+              <li>What stopped working and when</li>
+              <li>Whether it happens all the time or now and then</li>
+              <li>Anything that changed right before</li>
+            </ul>
+            <a class="btn" href="tel:+13364691842">Call about a problem</a>
+          </article>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="wrap sec" id="how" aria-labelledby="how-h">
+  <section class="wrap sec" id="types" aria-labelledby="types-h">
     <div class="head rv">
-      <h2 id="how-h">How it works</h2>
-      <p>Three plain steps, starting with a phone call.</p>
+      <h2 id="types-h">Homes, businesses and industrial sites</h2>
+      <p>Two kinds of work, one number to call: <span class="num">(336) 469 1842</span>.</p>
     </div>
-    <div class="how">
-      <figure class="rv"><img src="steps.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="A round white ceiling light fixture, lit, on a plain light surface"></figure>
-      <ol class="steps">
-        <li class="rv"><h3>Call or send a request</h3><p>Call (336) 469-1842 or use the form below.</p></li>
-        <li class="rv"><h3>We look at the job</h3></li>
-        <li class="rv"><h3>The work gets done</h3></li>
-      </ol>
+    <div class="rows">
+      <article class="row" aria-labelledby="t1-h">
+        <div class="pic layer rv">
+          <figure class="photo"><img src="kitchen-lights.jpg" width="1600" height="1034" srcset="kitchen-lights-800.jpg 800w, kitchen-lights.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 88vw, 620px" alt="A kitchen with glass pendant lights over a stone island, recessed ceiling lights and a wall sconce, all lit"></figure>
+        </div>
+        <div class="rv">
+          <h3 id="t1-h">Residential</h3>
+          <p class="say">Lighting, outlets, wiring and panel work for the house you live in, from one fixture to every circuit.</p>
+          <ul class="tags">
+            <li>Kitchens</li>
+            <li>Living rooms</li>
+            <li>Garages</li>
+            <li>Additions</li>
+          </ul>
+          <a class="btn" href="tel:+13364691842">Call about your home</a>
+        </div>
+      </article>
+
+      <article class="row flip" aria-labelledby="t2-h">
+        <div class="pic layer rv">
+          <figure class="photo"><img src="conduit.jpg" width="1600" height="1200" srcset="conduit-800.jpg 800w, conduit.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 88vw, 620px" alt="Rows of metal conduit bending around a concrete wall into a gray junction box"></figure>
+          <p class="quote"><b>Fully licensed and insured</b>&ldquo;to provide reliable and top quality electrical services for all your needs.&rdquo;</p>
+        </div>
+        <div class="rv">
+          <h3 id="t2-h">Commercial and industrial</h3>
+          <p class="say">Wiring, lighting and power for shops, offices or industrial buildings. Tell us about the building and what the work involves.</p>
+          <ul class="tags">
+            <li>Shops</li>
+            <li>Offices</li>
+            <li>Warehouses</li>
+            <li>Industrial plants</li>
+          </ul>
+          <a class="btn" href="tel:+13364691842">Call about a business</a>
+        </div>
+      </article>
     </div>
   </section>
 
-  <section class="wrap sec" id="contact" aria-labelledby="contact-h">
-    <div class="head rv">
-      <h2 id="contact-h">Send a request</h2>
-      <p>Tell us what is going on and how to reach you.</p>
+  <section class="band how-band" id="how" aria-labelledby="how-h">
+    <div class="wrap">
+      <div class="how">
+        <div class="pic layer rv">
+          <figure class="photo"><img src="wire-cut.jpg" width="1600" height="1067" srcset="wire-cut-800.jpg 800w, wire-cut.jpg 1600w" sizes="(max-width: 640px) 94vw, (max-width: 960px) 88vw, 460px" alt="A hand holding yellow handled cutting pliers around a blue wire"></figure>
+          <p class="float"><b>Prefer to talk it over?</b> Call <a class="num" href="tel:+13364691842">(336) 469 1842</a>.</p>
+        </div>
+        <div>
+          <div class="rv">
+            <h2 id="how-h">Getting a job started</h2>
+            <p class="how-sub">It starts with a phone call or a few lines in the form below.</p>
+          </div>
+          <ol class="steps">
+            <li class="rv"><h3>Call or send a request</h3><p>Call <span class="num">(336) 469 1842</span>, or fill in the request form on this page.</p></li>
+            <li class="rv"><h3>Tell us about the job</h3><p>Say whether it is a home, a business or an industrial site, and what you need done.</p></li>
+            <li class="rv"><h3>Ask your questions</h3><p>Ask about the work, the timing and anything else you want to know before it starts.</p></li>
+          </ol>
+        </div>
+      </div>
     </div>
-    <div class="contact">
-      <ul class="ways rv">
-        <li><span>Call</span><a class="num" href="tel:+13364691842">(336) 469-1842</a></li>
-        <li><span>Facebook</span><a href="https://www.facebook.com/profile.php?id=61575824159329">Stacy Martin Electrical LLC</a></li>
-        <li><span>Based in</span><p class="plain">Roaring River, NC</p></li>
-      </ul>
+  </section>
 
-      <div class="rv">
-        <form id="qform" novalidate method="post">
-          <div class="f">
-            <label for="q-name">Your name</label>
-            <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
-            <span class="err" id="e-name"></span>
+  <section class="wrap sec" id="photos" aria-labelledby="photos-h">
+    <div class="head rv">
+      <h2 id="photos-h">Light, wire and the right tools</h2>
+      <p>Example photos of lighting and electrical work.</p>
+    </div>
+    <div class="strip">
+      <figure class="photo rv"><img src="edison-bulbs.jpg" width="1600" height="1201" srcset="edison-bulbs-800.jpg 800w, edison-bulbs.jpg 1600w" sizes="(max-width: 640px) 90vw, 500px" alt="A row of bare filament bulbs glowing on cords below a wooden beam"></figure>
+      <figure class="photo rv"><img src="lamp-bench.jpg" width="1600" height="1067" srcset="lamp-bench-800.jpg 800w, lamp-bench.jpg 1600w" sizes="(max-width: 640px) 45vw, 340px" loading="lazy" alt="A red metal pendant shade with its cord on a workbench beside coils of wire and lamp sockets."></figure>
+      <figure class="photo rv"><img src="pliers.jpg" width="1600" height="1067" srcset="pliers-800.jpg 800w, pliers.jpg 1600w" sizes="(max-width: 640px) 45vw, 340px" loading="lazy" alt="Three pairs of pliers with black and red grips on a wooden bench"></figure>
+    </div>
+  </section>
+
+  <section class="band" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="contact-h">Send a request</h2>
+        <p>Tell us where the job is and what it needs, plus a number where we can reach you.</p>
+      </div>
+      <div class="contact">
+        <div class="rv">
+          <div class="find">
+            <p class="k">Based in</p>
+            <p class="big">Roaring River, NC</p>
+            <p class="ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Residential, commercial or industrial work</p>
+            <a class="btn" href="tel:+13364691842">Call <span class="num">(336) 469 1842</span></a>
           </div>
-          <div class="f">
-            <label for="q-phone">Phone</label>
-            <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Your phone number" required aria-describedby="e-phone">
-            <span class="err" id="e-phone"></span>
+          <ul class="ways">
+            <li><a href="https://www.facebook.com/profile.php?id=61575824159329"><span>Facebook</span>Stacy Martin Electric LLC</a></li>
+          </ul>
+        </div>
+
+        <div class="panel rv">
+          <form id="qform" novalidate method="post">
+            <div class="f">
+              <label for="q-name">Your name</label>
+              <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+              <span class="err" id="e-name"></span>
+            </div>
+            <div class="f">
+              <label for="q-phone">Phone</label>
+              <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Your phone number" required aria-describedby="e-phone">
+              <span class="err" id="e-phone"></span>
+            </div>
+            <div class="f">
+              <label for="q-town">Town</label>
+              <select id="q-town" name="town" required aria-describedby="e-town">
+                <option value="">Choose your town</option>
+                <option>Roaring River</option>
+                <option>Somewhere else</option>
+              </select>
+              <span class="err" id="e-town"></span>
+            </div>
+            <div class="f">
+              <label for="q-kind">Where is the job? Optional</label>
+              <select id="q-kind" name="kind">
+                <option value="">Choose one</option>
+                <option>Home</option>
+                <option>Business</option>
+                <option>Industrial site</option>
+              </select>
+            </div>
+            <div class="f full">
+              <label for="q-msg">What do you need?</label>
+              <textarea id="q-msg" name="message" required aria-describedby="e-msg" placeholder="For example, two new outlets in a garage, or a breaker that keeps tripping"></textarea>
+              <span class="err" id="e-msg"></span>
+            </div>
+            <div class="submit">
+              <button class="btn" type="submit">Send request</button>
+            </div>
+          </form>
+          <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
+            <h3 id="t-title">Thanks. We have it.</h3>
+            <p id="t-body">Your request is noted.</p>
+            <p class="muted">This is a sample site, so nothing was actually sent.</p>
+            <button class="btn line" type="button" id="t-again">Send another request</button>
           </div>
-          <div class="f full">
-            <label for="q-town">Town</label>
-            <input id="q-town" name="town" type="text" autocomplete="address-level2" required aria-describedby="e-town">
-            <span class="err" id="e-town"></span>
-          </div>
-          <div class="f full">
-            <label for="q-msg">What do you need?</label>
-            <textarea id="q-msg" name="message" required aria-describedby="e-msg" placeholder="A few words about the job"></textarea>
-            <span class="err" id="e-msg"></span>
-          </div>
-          <div class="submit">
-            <button class="btn" type="submit">Send request</button>
-          </div>
-        </form>
-        <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
-          <h3 id="t-title">Thanks. We have it.</h3>
-          <p id="t-body">Your request is noted.</p>
-          <p class="muted">This is a sample site, so nothing was actually sent.</p>
-          <button class="btn line" type="button" id="t-again">Send another request</button>
         </div>
       </div>
     </div>
@@ -386,15 +716,30 @@ form[hidden]{display:none}
 
 <footer class="foot">
   <div class="wrap">
-    <p><b>Stacy Martin Electrical LLC</b> &middot; Roaring River, NC</p>
-    <p class="right"><a class="num" href="tel:+13364691842">(336) 469-1842</a></p>
-    <p class="credit">Photos from Pexels, shown as examples. Sample site made by <a href="https://granitecitydigital.me/">Granite City Digital</a>.</p>
+    <p class="name">Stacy Martin Electric LLC</p>
+    <p>Roaring River, NC</p>
+    <p class="right"><a class="num" href="tel:+13364691842">(336) 469 1842</a></p>
+    <p class="credit">Photos are examples. Sample site made by <a href="https://granitecitydigital.me/">Granite City Digital</a>.</p>
+    <!-- Footer mark. Keep this block, its CSS and its script exactly as they are. The files live in samples/mark/. -->
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
   </div>
 </footer>
 
 <nav class="bar" aria-label="Quick contact">
   <a href="tel:+13364691842"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>
-  <a href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M5 4h14v16H5z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M8.5 9h7M8.5 12.5h7M8.5 16h4"/></svg>Contact</a>
+  <a href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M5 4h14v16H5z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M8.5 9h7M8.5 12.5h7M8.5 16h4"/></svg>Send a request</a>
 </nav>
 
 <script>
@@ -437,6 +782,41 @@ form[hidden]{display:none}
     f.hidden=true;thanks.hidden=false;thanks.focus();
   });
   document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
 })();
 </script>
 </body>

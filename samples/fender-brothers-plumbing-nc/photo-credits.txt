@@ -1,0 +1,77 @@
+Photo credits for the Fender Brothers Plumbing sample site. Shown as examples only.
+
+On the page
+
+hero-sink.jpg (1600 x 800, center cropped)
+  Shows: a brass kitchen faucet running water into a white sink set in a wood counter
+  Photographer: Clay Banks
+  License: Unsplash License
+  Source: https://unsplash.com/photos/gVYc6LgLCm8
+
+wrench.jpg (1600 x 1067)
+  Shows: a gloved hand holding an adjustable wrench on a dark background
+  Photographer: Roger Brown
+  License: Pexels License
+  Source: https://www.pexels.com/photo/person-holding-wrench-5534767/
+
+twin-vanities.jpg (1600 x 1067)
+  Shows: two wood bathroom vanities with brass faucets under oval mirrors
+  Photographer: Clay Banks
+  License: Unsplash License
+  Source: https://unsplash.com/photos/7Z2OTozIY_0
+
+spigot-splash.jpg (1600 x 1067)
+  Shows: water spraying from a brass tap with a red handle
+  Photographer: Ian Talmacs
+  License: Unsplash License
+  Source: https://unsplash.com/photos/HutGSBkIrzs
+
+hose-bib.jpg (1600 x 1067)
+  Shows: an outside hose faucet on an orange painted block wall
+  Photographer: Mick Haupt
+  License: Pexels License
+  Source: https://www.pexels.com/photo/faucet-on-orange-wall-12094124/
+
+valve.jpg (1600 x 1067)
+  Shows: a yellow handle on a water valve
+  Photographer: Jorge Avila
+  License: Unsplash License
+  Source: https://unsplash.com/photos/IHhPhTjNJR8
+
+copper-pipe.jpg (1600 x 1068)
+  Shows: the end of a copper pipe against a warm brown wall
+  Photographer: Savvas Sourmaidis
+  License: Unsplash License
+  Source: https://unsplash.com/photos/Ez0S4C8bzUk
+
+wood-vanity.jpg (1600 x 1067)
+  Shows: a wood double vanity with a marble top and two faucets
+  Photographer: Zac Gudakov
+  License: Unsplash License
+  Source: https://unsplash.com/photos/u8JTTbTHAJQ
+
+In the folder, not used on the page
+
+hero.jpg (1600 x 1067)
+  Shows: a finished bathroom with a freestanding tub, a glass shower and a double vanity
+  Photographer: Alex Tyson
+  License: Unsplash License
+  Source: https://unsplash.com/photos/i5yYIG_y8Po
+
+kitchen-faucet.jpg (1600 x 1067)
+  Shows: a black pull down kitchen faucet over a steel sink
+  Photographer: Andrea Davis
+  License: Pexels License
+  Source: https://www.pexels.com/photo/photograph-of-a-sink-with-a-black-faucet-6253786/
+
+drain.jpg (1600 x 1067)
+  Shows: close up of a steel sink drain
+  Photographer: Yimeng Zhao
+  License: Unsplash License
+  Source: https://unsplash.com/photos/DsPxoy6vUOg
+
+vanity.jpg (1600 x 1067)
+  Shows: a white bathroom vanity with a chrome faucet under a round mirror
+  Photographer: Josh Lemmon
+  License: Unsplash License
+  Source: https://unsplash.com/photos/G_dubMy-pQU

@@ -1,16 +1,43 @@
-Photo credits for the Stacy Martin Electrical LLC sample. All three are from Pexels under the Pexels free license, shown as examples only.
+Photo credits for the Stacy Martin Electric LLC sample. These are example photos only. Each file has an 800 px copy (name-800.jpg) of the same photo for phones.
 
-hero.jpg
-  Shows: two black wire cage pendant lights with glowing bulbs under a ceiling
-  Photographer: Victor Freitas (from the search result, not checked on the page)
-  Source: https://www.pexels.com/photo/two-black-pendant-lamp-on-white-concrete-ceiling-973505/
+hero-wire.jpg
+  Shows: two hands gathering coils of dark and yellow wire on a workbench under a warm work light
+  Photographer: cottonbro studio
+  Source: https://www.pexels.com/photo/5090652/
+  License: Pexels License
 
-services.jpg
-  Shows: two hands with pliers wiring an open wall box beside outlets
-  Photographer: Ksenia Chernaya (from a search snippet, not checked)
-  Source: https://www.pexels.com/photo/an-electrician-using-pliers-to-repair-the-ac-power-plugs-and-sockets-5691588/
+kitchen-lights.jpg
+  Shows: a kitchen with glass pendant lights over a stone island, recessed ceiling lights and a wall sconce, all lit
+  Photographer: Alexander Fife
+  Source: https://unsplash.com/photos/SwtyCf0lKYc
+  License: Unsplash License
 
-steps.jpg
-  Shows: a round white ceiling light fixture, lit, on a plain light surface
-  Photographer: 村八 里 (from the search result, not checked on the page)
-  Source: https://www.pexels.com/photo/modern-circular-ceiling-light-on-white-background-30675504/
+conduit.jpg
+  Shows: rows of metal conduit bending around a concrete wall into a gray junction box
+  Photographer: Compagnons
+  Source: https://unsplash.com/photos/rVRvR9VUIoQ
+  License: Unsplash License
+
+wire-cut.jpg
+  Shows: a hand holding yellow handled cutting pliers around a blue wire
+  Photographer: Tymur Khakimov
+  Source: https://www.pexels.com/photo/6412541/
+  License: Pexels License
+
+edison-bulbs.jpg
+  Shows: a row of bare filament bulbs glowing on cords below a wooden beam
+  Photographer: Patrick Tomasso
+  Source: https://unsplash.com/photos/2R5QtSqJtdY
+  License: Unsplash License
+
+lamp-bench.jpg
+  Shows: a red metal pendant shade being wired on a workbench beside coils of wire, a tap set and a basket of lamp sockets
+  Photographer: cottonbro studio
+  Source: https://www.pexels.com/photo/5090653/
+  License: Pexels License
+
+pliers.jpg
+  Shows: three pairs of pliers with black and red grips on a wooden bench
+  Photographer: JESHOOTS.COM
+  Source: https://unsplash.com/photos/VdOO4_HFTWM
+  License: Unsplash License
