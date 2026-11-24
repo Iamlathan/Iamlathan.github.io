@@ -1,0 +1,49 @@
+Photo credits for the Jim's Auto Service sample page. All photos are examples.
+
+hero.jpg
+  Shows: a mechanic standing under a car raised on red lifts
+  Photographer: Enis Yavuz on Unsplash
+  Source: https://unsplash.com/photos/tZtgozUpZZc
+  License: Unsplash License
+
+tow-hook.jpg
+  Shows: a heavy steel hook hanging from a rusted pulley block
+  Photographer: engin akyurt on Unsplash
+  Source: https://unsplash.com/photos/iGka-nhvdsc
+  License: Unsplash License
+
+under-the-hood.jpg
+  Shows: a mechanic in blue overalls leaning in under the open hood of a car
+  Photographer: Sergey Meshkov (@19x14) on Pexels
+  Source: https://www.pexels.com/photo/8478232/
+  License: Pexels License
+
+socket-tray.jpg
+  Shows: a mechanic holding a ratchet over a red tray of sockets
+  Photographer: Gustavo Fring (@gustavo-fring) on Pexels
+  Source: https://www.pexels.com/photo/6720531/
+  License: Pexels License
+
+wrench-in-hand.jpg
+  Shows: a hand holding a steel wrench
+  Photographer: @svetlana-photographer-2149375332 on Pexels
+  Source: https://www.pexels.com/photo/33073853/
+  License: Pexels License
+
+hands-at-the-cowl.jpg
+  Shows: two hands working at the base of a windshield with the hood open
+  Photographer: Sergey Meshkov (@19x14) on Pexels
+  Source: https://www.pexels.com/photo/8478199/
+  License: Pexels License
+
+rag-under-the-hood.jpg
+  Shows: a hand wiping under the open hood of a car with a shop rag
+  Photographer: Sergey Meshkov (@19x14) on Pexels
+  Source: https://www.pexels.com/photo/8478224/
+  License: Pexels License
+
+hand-on-the-linkage.jpg
+  Shows: a hand reaching under the cowl of a car to work on a metal arm
+  Photographer: Sergey Meshkov (@19x14) on Pexels
+  Source: https://www.pexels.com/photo/8478241/
+  License: Pexels License

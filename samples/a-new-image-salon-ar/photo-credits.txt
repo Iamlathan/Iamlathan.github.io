@@ -1,0 +1,52 @@
+Photo credits for samples/a-new-image-salon-ar/
+All eight are from Unsplash, under the Unsplash License (free to use, no attribution required). They are shown as example photos, not A New Image Salon's own salon or work.
+
+hero.jpg (1200 x 1600)
+  Photographer: Baylee Gramling
+  Source: https://unsplash.com/photos/MMz03PyCOZg
+  License: Unsplash License
+  Shows: a stylist curling long brown hair with a gold curling iron, seen from behind
+
+blowdry.jpg (1200 x 1500)
+  Photographer: charlesdeluvio
+  Source: https://unsplash.com/photos/JinhS3pCM_c
+  License: Unsplash License
+  Shows: a hand lifting a section of brown hair under a hair dryer in warm light
+
+polish.jpg (1200 x 1500)
+  Photographer: Ondrej Supitar
+  Source: https://unsplash.com/photos/6omaRd0IG2w
+  License: Unsplash License
+  Shows: a nail tech brushing pale polish onto a client's nail
+
+mirrors.jpg (1600 x 1067)
+  Photographer: Giorgio Trovato
+  Source: https://unsplash.com/photos/NF_Q9RQ6qRk
+  License: Unsplash License
+  Shows: two round mirrors above wooden stations in afternoon sun
+
+color.jpg (1600 x 1067)
+  Photographer: Ionela Mat
+  Source: https://unsplash.com/photos/lps3FolQ6Ro
+  License: Unsplash License
+  Shows: a stylist brushing hair color onto a section of long hair laid over foil
+
+toes.jpg (1400 x 1260)
+  Photographer: sq lim
+  Source: https://unsplash.com/photos/FsSg3fURJMI
+  License: Unsplash License
+  Shows: bare feet with blue, green and yellow toenail polish on a wooden floor
+
+nails-soft.jpg (1600 x 1000)
+  Photographer: Chelson Tamares
+  Source: https://unsplash.com/photos/SyCC0GQi5S4
+  License: Unsplash License
+  Shows: two hands with shaped pale pink nails resting on a soft white rug
+
+manicure.jpg (1600 x 1067)
+  Photographer: Kris Atomic
+  Source: https://unsplash.com/photos/Xa8fX8bQCgs
+  License: Unsplash License
+  Shows: a nail tech painting a client's nails a deep berry color
+
+Downloaded 2026-11-21. Photographer names come from each photo's Unsplash listing. None of the photos shows readable text, a logo or a brand name.

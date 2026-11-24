@@ -1,0 +1,42 @@
+Photo credits for the Bella's Cafe & Catering sample page.
+All photos are from Unsplash, free to use under the Unsplash License (https://unsplash.com/license). Shown as examples only.
+
+hero.jpg
+  Milk being poured into a cup of coffee
+  Photographer: Fahmi Fakhrudin
+  Source: https://unsplash.com/photos/nzyzAUsbV0M
+
+cafe-table.jpg
+  Bentwood chairs at a cafe table in afternoon sun
+  Photographer: Seyed Amir Mohammad Tabatabaee
+  Source: https://unsplash.com/photos/26648RNXUK0
+
+catering-table.jpg
+  Serving dishes lined up on a catering table with white flowers
+  Photographer: saile_ilyas
+  Source: https://unsplash.com/photos/SiwrpBnxDww
+
+baked-goods.jpg
+  Baked goods piled on a wooden board
+  Photographer: Richard Bell
+  Source: https://unsplash.com/photos/ikkTOvSkdEg
+
+espresso-drip.jpg
+  Coffee running from an espresso machine
+  Photographer: Blake Verdoorn
+  Source: https://unsplash.com/photos/gM-RfQsZK98
+
+espresso-glasses.jpg
+  Two small glasses filling under an espresso machine
+  Photographer: Kevin Butz
+  Source: https://unsplash.com/photos/BBFRIGifYQ8
+
+window-seats.jpg
+  Cushioned seats along a wooden counter by a window
+  Photographer: Polina Kuzovkova
+  Source: https://unsplash.com/photos/kUcqLw84x8c
+
+catering-bites.jpg
+  Small bites on toast laid out on a wooden serving board
+  Photographer: Lucas T Photography
+  Source: https://unsplash.com/photos/0jxy1DgKyrg

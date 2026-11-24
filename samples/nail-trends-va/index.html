@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nail Trends | Nail salon in Richmond, VA</title>
+<meta name="description" content="Nail Trends is a nail salon at 8312 Staples Mill Rd in Richmond, VA. Manicures, pedicures and polish. Call (804) 627 0046.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1d0c31">
+<meta property="og:title" content="Nail Trends | Richmond, VA">
+<meta property="og:description" content="Nail Trends is a nail salon at 8312 Staples Mill Rd in Richmond, VA. Manicures, pedicures and polish. Call (804) 627 0046.">
+<meta property="og:image" content="https://granitecitydigital.me/samples/nail-trends-va/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* 1. this mockup's own look: a midnight orchid field, clear glass and one seafoam mint accent */
+:root{
+  /* the deep color field */
+  --deep:#2c1446;
+  --deep-2:#1d0c31;
+  --deep-rgb:44 20 70;
+  --ink-rgb:26 11 44;        /* the darkest violet: scrims, deep glass, shadows */
+  --pool-a:106 44 140;       /* orchid pools */
+  --pool-b:146 62 172;
+  --orb-1:#bd72e2;
+  --orb-2:#7a34ac;
+  --orb-3:#3f1766;
+  --pool-c:198 86 196;       /* a pinker violet, for the brightest pools and shapes */
+  --orb-p1:#f4a6e4;
+  --orb-p2:#c456c2;
+  --orb-p3:#6a2088;
+  --accent-rgb:134 230 207;
+
+  /* accent: seafoam mint. Buttons, one headline word, small marks */
+  --accent:#86e6cf;
+  --accent-hover:#a8f0df;
+  --on-accent:#1d0c31;
+
+  /* warm cream text */
+  --ink:#f3efe8;
+  --muted:#ddd3e8;
+  --cream-rgb:243 239 232;
+  --tint:rgb(243 239 232 / .1);
+
+  --font:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Unbounded","Figtree",system-ui,sans-serif;
+  --display-weight:500;
+
+  --r-ctl:999px;
+  --r-card:24px;
+  --r-pane:28px;
+  --r-photo:clamp(20px,2.2vw,28px);
+}
+/* 2. the system */
+:root{
+  --t-small:.875rem;
+  --t-body:1.0625rem;
+  --t-lead:clamp(1.0625rem,1rem + .3vw,1.1875rem);
+  --t-h3:clamp(1.125rem,1rem + .5vw,1.375rem);
+  --t-h2:clamp(1.5rem,1.05rem + 2vw,2.625rem);
+  --t-h1:clamp(1.375rem,7.2vw,1.875rem);
+
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+  --sec:clamp(72px,9vw,128px);
+
+  /* three levels, tinted with the deep violet: page, raised, floating */
+  --sh-1:0 1px 2px rgb(var(--ink-rgb) / .3),0 8px 18px -8px rgb(var(--ink-rgb) / .55);
+  --sh-2:0 2px 4px rgb(var(--ink-rgb) / .32),0 16px 34px -12px rgb(var(--ink-rgb) / .65);
+  --sh-3:0 4px 8px rgb(var(--ink-rgb) / .34),0 30px 60px -18px rgb(var(--ink-rgb) / .78);
+
+  --wrap:1200px;
+  --m:clamp(16px,4vw,32px);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --ease-move:cubic-bezier(.32,.72,0,1);
+  --bar:0px;
+
+  /* glass: three blur depths (chip, card, big pane) */
+  --gb-1:14px;--gb-2:18px;--gb-3:22px;
+  --g-sat:180%;
+}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:104px;background:var(--deep-2)}
+@media (max-width:640px){html{scroll-padding-top:24px;scroll-padding-bottom:96px}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:
+  radial-gradient(640px 540px at 10% 21%,rgb(var(--pool-a) / .74),transparent 70%),
+  radial-gradient(560px 480px at 94% 30%,rgb(var(--pool-c) / .42),transparent 70%),
+  radial-gradient(520px 460px at 40% 38%,rgb(var(--pool-a) / .46),transparent 70%),
+  radial-gradient(620px 520px at 86% 46%,rgb(var(--pool-a) / .72),transparent 70%),
+  radial-gradient(540px 480px at 4% 55%,rgb(var(--pool-c) / .4),transparent 70%),
+  radial-gradient(660px 500px at 52% 64%,rgb(var(--pool-a) / .62),transparent 70%),
+  radial-gradient(520px 460px at 98% 72%,rgb(var(--pool-b) / .42),transparent 70%),
+  radial-gradient(620px 520px at 8% 81%,rgb(var(--pool-c) / .4),transparent 70%),
+  radial-gradient(620px 540px at 84% 89%,rgb(var(--pool-a) / .72),transparent 70%),
+  radial-gradient(560px 400px at 22% 99%,rgb(var(--pool-a) / .6),transparent 70%),
+  radial-gradient(520px 380px at 74% 98%,rgb(var(--pool-c) / .4),transparent 70%),
+  linear-gradient(180deg,var(--deep) 0,var(--deep-2) 46%,var(--deep) 78%,var(--deep-2) 100%);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+::selection{background:var(--accent);color:var(--on-accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3{font-family:var(--font-display);font-weight:var(--display-weight);letter-spacing:-.02em;line-height:1.14;text-wrap:balance}
+p{text-wrap:pretty}
+ul,ol{list-style:none;padding:0}
+fieldset{border:0;padding:0;min-width:0}
+.wrap{position:relative;z-index:1;max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;display:inline-flex;align-items:center;min-height:44px;background:var(--ink);color:var(--deep-2);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:10px}
+.skip:focus{top:12px}
+.num{font-family:var(--font);font-variant-numeric:tabular-nums}
+
+/* buttons: the call buttons are solid mint, never glass */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2);min-height:50px;padding:0 24px;border-radius:var(--r-ctl);border:0;background:var(--accent);color:var(--on-accent);font:600 1rem/1 var(--font);text-decoration:none;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.btn svg{width:17px;height:17px;flex:none}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.soft{background:rgb(var(--cream-rgb) / .14);color:var(--ink);box-shadow:inset 0 1px 0 rgb(255 252 246 / .22)}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--accent-hover);box-shadow:var(--sh-2);transform:translateY(-1px)}
+  .btn.soft:hover{background:rgb(var(--cream-rgb) / .22)}
+  .btn:active{transform:scale(.97);box-shadow:none}
+}
+
+/* sample note: solid */
+.sample{position:relative;z-index:31;background:var(--deep-2);color:var(--muted);font-size:.8125rem;text-align:center;padding:8px var(--m);line-height:1.45}
+.sample a{color:var(--ink)}
+
+/* top bar: a floating glass capsule over the hero photo. It stays put on laptops */
+.top{position:sticky;top:0;z-index:30;height:0;display:flow-root;pointer-events:none}
+.pill{pointer-events:auto;display:flex;align-items:center;justify-content:space-between;gap:var(--s-4);width:min(var(--wrap),calc(100% - var(--m)*2));min-height:64px;margin:12px auto 0;padding:8px 8px 8px 26px;border-radius:999px}
+.mark{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;white-space:nowrap;font:600 1.0625rem/1 var(--font-display);letter-spacing:-.01em;color:var(--ink)}
+.nav{display:flex;align-items:center;gap:4px;font-size:.9375rem;font-weight:500}
+.nav a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;padding:0 16px;border-radius:999px;text-decoration:none;color:var(--ink);transition:background-color 200ms ease}
+.pill .btn{min-height:48px;padding:0 22px;font-size:.9375rem}
+.pill .short{display:none}
+@media (hover:hover) and (pointer:fine){.nav a:hover{background:rgb(var(--cream-rgb) / .14)}}
+@media (max-width:900px){.nav{display:none}}
+@media (max-width:640px){
+  .top{position:relative}
+  .pill{min-height:58px;margin-top:10px;padding:6px 6px 6px 20px}
+  .pill .btn{min-height:46px}
+  .pill .long{display:none}.pill .short{display:inline}
+}
+@media (max-width:340px){.mark{font-size:.9375rem}.pill{padding-left:16px}}
+
+/* photo cards */
+.photo{position:relative;border-radius:var(--r-photo);overflow:hidden;background:var(--deep-2);box-shadow:var(--sh-2)}
+.photo img{width:100%;height:100%;object-fit:cover}
+
+/* hero: one photo, edge to edge, under the capsule and the pane */
+.hero{position:relative;isolation:isolate;overflow:clip;display:flex;min-height:clamp(600px,calc(100svh - 36px),880px)}
+.hero-bg{position:absolute;inset:0;z-index:-1}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+/* plain dark scrims painted on the photo: under the capsule, under the pane, under the hours chip, and a fade into the field */
+.hero-bg::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(180deg,rgb(var(--ink-rgb) / .74) 0,rgb(var(--ink-rgb) / .6) 92px,rgb(var(--ink-rgb) / 0) 216px),
+  radial-gradient(340px 300px at 23% 74%,rgb(var(--ink-rgb) / .64),rgb(var(--ink-rgb) / .46) 52%,rgb(var(--ink-rgb) / 0) 100%),
+  linear-gradient(90deg,rgb(var(--ink-rgb) / .3) 0,rgb(var(--ink-rgb) / 0) 30%),
+  linear-gradient(0deg,var(--deep) 0,rgb(var(--deep-rgb) / 0) 20%)}
+/* laptops: the photo sits a little to the left, so the fingers and the cloth run under the right side of the pane */
+@media (min-width:961px){
+  .hero-bg img{width:105%;max-width:none;margin-left:-5%}
+  .pane .cta{flex-direction:column;align-items:flex-start}
+  .chipbox{align-self:flex-end;margin-bottom:clamp(110px,21vh,200px)}
+  .chipbox::before{content:none}
+}
+@media (min-width:1200px){
+  .hero-bg img{width:111%;margin-left:-11%}
+  .pane .cta{flex-direction:row;align-items:stretch}
+}
+.hero-in{flex:1;display:flex;align-items:flex-end;justify-content:space-between;gap:var(--s-5);padding-top:120px;padding-bottom:clamp(40px,7vh,84px)}
+.pane{width:min(660px,52vw);padding:clamp(28px,3vw,44px);border-radius:var(--r-pane)}
+.pane h1{font-size:clamp(2rem,1rem + 2.6vw,2.875rem);line-height:1.1}
+.pane h1 .hl{color:var(--accent)}
+.pane p{margin-top:var(--s-4);font-size:var(--t-lead);max-width:min(42ch,26vw);color:var(--ink)}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s-3);margin-top:var(--s-5)}
+.chipbox{position:relative;flex:none;width:min(312px,100%)}
+.chipbox::before{content:"";position:absolute;inset:8px;border-radius:var(--r-card);background:rgb(var(--ink-rgb) / .52);box-shadow:0 0 46px 30px rgb(var(--ink-rgb) / .52)}
+.chip{padding:16px 22px 18px;border-radius:var(--r-card);display:grid;gap:2px}
+.chip b{font-size:.8125rem;font-weight:600;letter-spacing:.02em;color:var(--ink)}
+.chip p{font-size:1rem;line-height:1.45;font-weight:500}
+.chip .say{margin-top:6px;font-size:.875rem;font-weight:600;color:var(--ink)}
+
+/* sections on the continuous color field */
+.sec{position:relative;isolation:isolate;overflow:clip;padding-block:var(--sec)}
+.head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-4) var(--s-7);align-items:end;padding-bottom:clamp(36px,5vw,64px)}
+.head h2{font-size:var(--t-h2)}
+.head p{color:var(--muted);max-width:44ch;font-size:var(--t-lead)}
+
+/* brighter shapes with a clear edge, so each pane has something to bend */
+.orb,.ring{position:absolute;z-index:0;border-radius:50%;pointer-events:none}
+.orb{background:radial-gradient(circle at 32% 28%,var(--orb-1) 0,var(--orb-2) 58%,var(--orb-3) 100%);box-shadow:inset -12px -18px 36px rgb(var(--ink-rgb) / .4),0 24px 50px -20px rgb(var(--ink-rgb) / .7)}
+.orb.pk{background:radial-gradient(circle at 32% 28%,var(--orb-p1) 0,var(--orb-p2) 56%,var(--orb-p3) 100%)}
+.ring{border:2px solid var(--accent)}
+.glow{position:absolute;z-index:0;border-radius:50%;pointer-events:none;background:radial-gradient(closest-side,rgb(var(--accent-rgb) / .34),rgb(var(--accent-rgb) / .12) 55%,rgb(var(--accent-rgb) / 0))}
+
+/* services: two photos and one orb, each with a glass card over its edge */
+.svcs{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--s-5);align-items:start}
+.svc{position:relative}
+.s1{grid-column:1 / span 7;grid-row:1}
+.s2{grid-column:8 / span 5;grid-row:1 / span 2;margin-top:88px}
+.s3{grid-column:2 / span 6;grid-row:2;margin-top:150px;min-height:252px}
+.s1 .photo{aspect-ratio:3/2}
+.s1 .photo img{object-position:50% 60%}
+.s2 .photo{aspect-ratio:4/5}
+.svc .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgb(var(--ink-rgb) / .7) 0,rgb(var(--ink-rgb) / .3) 30%,rgb(var(--ink-rgb) / 0) 56%)}
+.card{padding:clamp(22px,2.4vw,30px);border-radius:var(--r-card)}
+.card h3{font-size:var(--t-h3)}
+.card p{margin-top:var(--s-2);color:var(--ink);max-width:24ch}
+/* a soft dark pool on the pedicure photo, under the part the card covers */
+.s2 .photo::after{background:radial-gradient(230px 200px at 0 74%,rgb(var(--ink-rgb) / .92),rgb(var(--ink-rgb) / .8) 62%,rgb(var(--ink-rgb) / 0) 100%)}
+.svc .card{position:absolute;z-index:2;width:min(400px,88%)}
+.s1 .card{left:26%;bottom:-76px}
+.s2 .card{left:-72px;bottom:52px;width:min(370px,100%)}
+.s1 .orb{left:calc(26% + min(400px,88%) - 136px);bottom:-150px;width:190px;height:190px}
+.s2 .ring{display:none}
+.s2 .card p{max-width:19ch}
+.s3 .card{position:relative;width:min(400px,78%)}
+.s3 .orb{left:min(244px,50%);top:14px;width:232px;height:232px}
+.s3 .ring{left:-58px;top:64px;width:104px;height:104px}
+.s3 .glow{left:-150px;top:-60px;width:340px;height:340px}
+.ask{position:relative;z-index:1;grid-column:8 / span 5;grid-row:2;align-self:end;display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-3) var(--s-5)}
+.ask p{font-size:var(--t-lead);color:var(--ink)}
+
+/* before you call: the glass switch */
+.callgrid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--s-5);align-items:center}
+.picker{grid-column:1 / span 7;grid-row:1;z-index:2;padding:clamp(24px,3.2vw,44px);padding-right:clamp(24px,10vw,132px);border-radius:var(--r-pane)}
+.callgrid .photo{grid-column:7 / span 6;grid-row:1;aspect-ratio:4/3;margin-top:72px}
+.callgrid .orb{left:-70px;bottom:-84px;width:210px;height:210px}
+.callgrid .ring{right:-58px;top:64px;width:150px;height:150px}
+.picker legend{padding:0;font:500 var(--t-h3)/1.2 var(--font-display);letter-spacing:-.015em;color:var(--ink)}
+.seg{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:var(--s-5);padding:5px;border-radius:999px;background:rgb(var(--ink-rgb) / .42);box-shadow:inset 0 1px 3px rgb(var(--ink-rgb) / .5),inset 0 -1px 0 rgb(255 252 246 / .12)}
+.seg label{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:999px;font-weight:600;font-size:1rem;color:var(--ink);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.thumb{position:absolute;top:5px;bottom:5px;left:5px;width:calc((100% - 10px) / 3);border-radius:999px;background:linear-gradient(180deg,rgb(var(--cream-rgb) / .3),rgb(var(--cream-rgb) / .16));border:1px solid rgb(255 252 246 / .3);box-shadow:inset 0 1px 0 rgb(255 252 246 / .55),0 6px 16px -6px rgb(var(--ink-rgb) / .7);transition:transform 280ms var(--ease-move)}
+#k2:checked~.seg .thumb{transform:translateX(100%)}
+#k3:checked~.seg .thumb{transform:translateX(200%)}
+#k1:focus-visible~.seg label[for="k1"],#k2:focus-visible~.seg label[for="k2"],#k3:focus-visible~.seg label[for="k3"]{outline:2px solid var(--accent);outline-offset:2px}
+.tell{margin-top:var(--s-5)}
+.tell-h{font-weight:600;color:var(--ink)}
+.tell ul{display:none;margin-top:var(--s-3);gap:var(--s-2)}
+#k1:checked~.tell .t1,#k2:checked~.tell .t2,#k3:checked~.tell .t3{display:grid}
+.tell li{display:grid;grid-template-columns:22px minmax(0,1fr);align-items:baseline;gap:10px;font-size:var(--t-lead);line-height:1.45}
+.tell li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--accent);transform:translateY(-1px);justify-self:center}
+.picker .cta{margin-top:var(--s-6)}
+
+/* photo strip: plain rounded photos, two with a small glass caption */
+.strip{display:grid;grid-template-columns:5fr 4fr 5fr;gap:var(--s-5);align-items:start}
+.strip .col{display:grid;gap:var(--s-5)}
+.f1{aspect-ratio:4/5}
+.f2{aspect-ratio:1/1}
+.f3{aspect-ratio:4/3}
+.f4{aspect-ratio:4/5;margin-top:var(--s-8)}
+.f1 img{object-position:42% 50%}
+.f3 img{object-position:60% 50%}
+.f4 img{object-position:34% 50%}
+.cap-on::after{content:"";position:absolute;inset:0;background:radial-gradient(260px 150px at 0 100%,rgb(var(--ink-rgb) / .86),rgb(var(--ink-rgb) / .56) 50%,rgb(var(--ink-rgb) / 0) 78%)}
+.cap{position:absolute;z-index:2;left:14px;bottom:14px;padding:9px 18px;border-radius:999px;font-size:.9375rem;font-weight:600;color:var(--ink)}
+#photos>.orb{left:-60px;top:54px;width:170px;height:170px}
+#photos>.ring{right:5%;bottom:40px;width:110px;height:110px}
+
+/* visit */
+.visit{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-6);align-items:stretch}
+.v-left{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));align-items:center}
+.visit>.orb{right:-88px;top:-40px;width:200px;height:200px}
+.visit>.glow{left:52%;bottom:-120px;width:320px;height:320px}
+.visit>.ring{right:14%;bottom:-46px;width:96px;height:96px}
+.v-cards{position:relative;grid-column:1 / span 9;grid-row:1;z-index:2;display:grid;gap:var(--s-4)}
+.v-cards>.orb,.v-cards>.ring{display:none}
+.v-photo{grid-column:4 / span 9;grid-row:1;aspect-ratio:4/5}
+.v-photo img{width:120%;max-width:none;margin-left:-20%;object-position:100% 62%}
+.v-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgb(var(--ink-rgb) / .9) 0,rgb(var(--ink-rgb) / .84) 150px,rgb(var(--ink-rgb) / 0) 236px)}
+.v-cards .btn{min-height:58px;font-size:1.0625rem;justify-content:flex-start;padding-inline:26px;justify-self:start;min-width:min(300px,100%)}
+.v-cards .card b{display:block;width:fit-content;font-size:.8125rem;font-weight:600;letter-spacing:.02em;color:var(--ink)}
+.v-cards .card p{margin-top:6px;width:fit-content;font-size:var(--t-lead);line-height:1.45;max-width:16ch}
+.v-cards .card .say{margin-top:8px;max-width:none;font-size:.9375rem;font-weight:600}
+.hours{display:grid;grid-template-columns:auto auto;justify-content:start;gap:4px 22px;margin-top:6px;font-size:var(--t-lead);line-height:1.45}
+.hours dt,.hours dd{white-space:nowrap}
+.hours dd{font-variant-numeric:tabular-nums}
+.golink{display:inline-flex;align-items:center;min-height:44px;margin-top:4px;font-weight:600;color:var(--ink);text-decoration:underline}
+.map{min-height:clamp(360px,40vw,560px);padding:12px;display:flex;border-radius:var(--r-pane)}
+.map iframe{display:block;flex:1;width:100%;min-height:clamp(336px,calc(40vw - 24px),536px);border:0;border-radius:17px;background:var(--deep-2)}
+.visit{position:relative}
+
+/* footer: a glass card on the field */
+.foot{position:relative;isolation:isolate;overflow:clip;padding-block:var(--s-9) var(--s-8);font-size:.9375rem;color:var(--muted)}
+.fcard{display:grid;grid-template-columns:1fr auto;gap:var(--s-3) var(--s-6);align-items:center;padding:clamp(22px,3vw,40px);border-radius:var(--r-pane)}
+.foot .name{color:var(--ink);justify-self:start}
+.foot .name b{font:500 1.125rem/1.3 var(--font-display);letter-spacing:-.01em}
+.foot a{color:var(--ink)}
+.foot .right{text-align:right}
+.foot .right a{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
+.foot .credit{grid-column:1/-1;justify-self:start;max-width:none;color:var(--ink)}
+.foot .orb{right:calc(var(--m) - 58px);bottom:-36px;width:150px;height:150px}
+.foot .orb.pk{right:auto;left:54%;bottom:auto;top:-96px;width:230px;height:230px}
+.foot .ring{left:38%;bottom:-50px;width:104px;height:104px}
+.foot .glow{left:60%;bottom:-150px;width:380px;height:380px}
+
+/* footer mark */
+.gcd{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:14px;margin-top:12px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font-weight:500}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--tint)}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
+.foot .gcd{color:var(--ink)}
+.foot .gcd-mark{box-shadow:0 0 0 1px rgb(var(--cream-rgb) / .24)}
+
+/* phone bar */
+.bar{display:none}
+
+/* motion: slow and once. Text never fades: panes and headings only slide. Photos without a caption may fade */
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{transform:translateY(22px);transition:transform 800ms var(--ease)}
+  .js .rv.in{transform:none}
+  .js .rv.ph{opacity:0;transition:opacity 800ms var(--ease),transform 800ms var(--ease)}
+  .js .rv.ph.in{opacity:1}
+  .js .svc .card.rv,.js .strip .col .rv:nth-child(2){transition-delay:90ms}
+  .js .f4.rv{transition-delay:160ms}
+  .hero .rise{animation:slide 900ms var(--ease) both}
+  .hero .chipbox.rise{animation-delay:120ms}
+  .hero-bg img{animation:settle 1800ms var(--ease) both}
+  #k1:checked~.tell .t1,#k2:checked~.tell .t2,#k3:checked~.tell .t3{animation:swap 260ms var(--ease) both}
+}
+@keyframes slide{from{transform:translateY(26px)}to{transform:none}}
+@keyframes settle{from{transform:scale(1.06)}to{transform:none}}
+@keyframes swap{from{transform:translateY(8px)}to{transform:none}}
+
+/* small laptops and tablets */
+@media (max-width:1240px){
+  .s1 .card{left:14%}
+  .s1 .orb{left:calc(14% + min(400px,88%) - 136px)}
+}
+@media (max-width:1100px){
+  .s2 .card{left:-32px}
+  .s1 .card{left:8%}
+  .s1 .orb{left:calc(8% + min(400px,88%) - 136px)}
+  .s3{grid-column:1 / span 7}
+  .s3 .ring{left:auto;right:-20px;top:-40px}
+  .picker{padding-right:clamp(24px,8vw,96px)}
+}
+@media (max-width:1200px){.hours{font-size:1rem}}
+@media (max-width:960px){
+  .hero-in{flex-direction:column;align-items:flex-start;justify-content:flex-end}
+  .hero-bg::after{background:
+    linear-gradient(180deg,rgb(var(--ink-rgb) / .74) 0,rgb(var(--ink-rgb) / .56) 80px,rgb(var(--ink-rgb) / 0) 170px),
+    linear-gradient(0deg,var(--deep) 0,rgb(var(--ink-rgb) / .82) 16%,rgb(var(--ink-rgb) / .76) 62%,rgb(var(--ink-rgb) / 0) 80%)}
+  .pane{width:min(600px,100%)}
+  .pane p{max-width:42ch}
+  .head{grid-template-columns:minmax(0,1fr)}
+  .svcs{grid-template-columns:minmax(0,1fr);row-gap:var(--s-8)}
+  .s1,.s2,.s3,.ask{grid-column:auto;grid-row:auto;margin-top:0;min-height:0}
+  .s2 .photo{aspect-ratio:3/2}
+  .svc .card,.s1 .card,.s2 .card{position:relative;left:auto;bottom:auto;width:auto;max-width:440px;margin:-92px var(--s-4) 0}
+  .svc .photo::after,.s2 .photo::after{background:radial-gradient(78% 92% at 0 100%,rgb(var(--ink-rgb) / .92),rgb(var(--ink-rgb) / .8) 58%,rgb(var(--ink-rgb) / 0) 100%)}
+  .s1 .orb{left:auto;right:-6px;bottom:-46px;width:132px;height:132px}
+  .s2 .photo img{object-position:50% 70%}
+  .s2 .ring{display:block;right:6px;bottom:-34px;width:84px;height:84px}
+  .s3{padding-top:88px}
+  .s3 .glow{left:-120px;top:20px;width:300px;height:300px}
+  .s3 .card{margin:0 var(--s-4);width:auto;max-width:440px}
+  .s3 .orb{left:auto;right:28px;top:0;width:170px;height:170px}
+  .s3 .ring{left:auto;right:176px;top:26px;width:72px;height:72px}
+  .callgrid{grid-template-columns:minmax(0,1fr)}
+  .picker,.callgrid .photo{grid-column:auto;grid-row:auto}
+  .picker{padding-right:clamp(24px,3.2vw,44px);padding-bottom:calc(clamp(24px,3.2vw,44px) + 56px)}
+  .callgrid .photo{margin:-56px var(--s-4) 0;z-index:1;aspect-ratio:16/9}
+  .callgrid .ring{display:none}
+  .visit{grid-template-columns:minmax(0,1fr)}
+  .v-left{grid-template-columns:minmax(0,1fr)}
+  .v-photo{grid-column:1;grid-row:1;aspect-ratio:16/10}
+  .v-photo img{object-position:100% 46%}
+  .v-photo::after{background:linear-gradient(0deg,rgb(var(--ink-rgb) / .86) 0,rgb(var(--ink-rgb) / .6) 26%,rgb(var(--ink-rgb) / 0) 60%)}
+  .v-cards{grid-column:1;grid-row:2;margin:-64px var(--s-4) 0}
+  .v-cards .btn{justify-self:stretch}
+  .foot .orb.pk{left:auto;right:190px;top:-80px;width:170px;height:170px}
+  .v-cards>.orb{display:block;right:-56px;top:108px;width:132px;height:132px}
+  .visit>.orb{top:auto;right:-58px;bottom:264px;width:150px;height:150px}
+  .visit>.glow{left:-80px;bottom:-90px}
+  .s2 .card p{max-width:24ch}
+  .v-cards>.ring{display:block;right:26px;bottom:-30px;width:92px;height:92px}
+  .visit>.ring{display:none}
+}
+
+@media (min-width:641px) and (max-width:860px){.foot .orb.pk{display:none}}
+/* short phones: the pane starts over the fingers, so a soft dark pool sits on the photo under the heading */
+@media (max-width:640px) and (max-height:840px){
+  .hero-in::before{content:"";position:absolute;left:var(--m);right:var(--m);top:calc(84px + clamp(20px,100svh - 664px,184px));height:170px;border-radius:var(--r-pane) var(--r-pane) 0 0;background:linear-gradient(180deg,rgb(var(--ink-rgb) / .66) 0,rgb(var(--ink-rgb) / .6) 58%,rgb(var(--ink-rgb) / 0) 100%)}
+}
+/* phones */
+@media (max-width:640px){
+  :root{--bar:calc(60px + env(safe-area-inset-bottom));--r-card:20px;--r-pane:24px}
+  body{padding-bottom:calc(var(--bar) + 4px)}
+  .hero{min-height:0}
+  .hero-bg img{object-position:58% 50%}
+  .hero-in{flex-direction:column;align-items:stretch;justify-content:flex-start;gap:var(--s-3);padding-top:calc(84px + clamp(20px,100svh - 664px,184px));padding-bottom:var(--s-5)}
+  .pane{width:auto;padding:20px}
+  .pane p{max-width:none}
+  .pane h1{font-size:var(--t-h1);line-height:1.12}
+  .pane p{margin-top:var(--s-3);font-size:1rem;line-height:1.5}
+  .cta{margin-top:var(--s-4)}
+  .cta .btn{flex:1 1 auto}
+  .chipbox{width:auto}
+  .chipbox::before{content:none}
+  .chip{padding:14px 20px 16px}
+  .svc .card,.s1 .card,.s2 .card{margin-inline:var(--s-3)}
+  .s3 .card{margin:0 var(--s-3)}
+  .s3 .orb{right:20px;width:160px;height:160px}
+  .s3 .ring{right:156px}
+  .ask .btn{flex:1 1 auto}
+  .picker{padding:20px 20px 76px}
+  .seg label{font-size:.9375rem}
+  .picker .cta{margin-top:var(--s-5)}
+  .callgrid .photo{margin-inline:var(--s-3)}
+  .callgrid .orb{width:150px;height:150px;left:-50px;bottom:-40px}
+  .strip{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s-3)}
+  .strip .col{display:contents}
+  .f1{grid-column:1/-1;aspect-ratio:4/3}
+  .f2,.f3{aspect-ratio:1/1}
+  .f4{grid-column:1/-1;aspect-ratio:16/10;margin-top:0}
+  .v-cards{margin-inline:var(--s-3)}
+  .map{min-height:340px}
+  .map iframe{min-height:324px}
+  .fcard{grid-template-columns:minmax(0,1fr)}
+  .foot{padding-bottom:var(--s-6)}
+  .foot .right{text-align:left}
+  .foot .orb{right:-64px;bottom:-70px}
+  .foot .orb.pk{left:auto;right:-36px;top:76px;width:120px;height:120px}
+  .foot .ring,.foot .glow{display:none}
+  .foot{padding-top:var(--s-9)}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--deep-2);box-shadow:0 -1px 0 rgb(var(--cream-rgb) / .14);padding-bottom:env(safe-area-inset-bottom)}
+  .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:60px;font-weight:600;font-size:1rem;text-decoration:none;color:var(--ink)}
+  .bar a:first-child{background:var(--accent);color:var(--on-accent)}
+  .bar a:focus-visible{outline-offset:-4px;outline-color:var(--ink)}
+  .bar a:first-child:focus-visible{outline-color:var(--on-accent)}
+  .bar a:active{opacity:.85}
+  .bar svg{width:17px;height:17px}
+}
+@media (max-width:380px){
+  .v-cards>.orb{display:none}
+  .s1 .orb{right:-14px;bottom:-40px;width:96px;height:96px}
+  .s1 .card p{max-width:17ch}
+  .s1 .photo::after{background:radial-gradient(104% 98% at 0 100%,rgb(var(--ink-rgb) / .92),rgb(var(--ink-rgb) / .84) 64%,rgb(var(--ink-rgb) / 0) 100%)}
+}
+@media (max-width:360px){
+  .seg label{font-size:.875rem}
+  .s1 .orb{right:-30px}
+  .foot .orb{display:none}
+  .pane{padding:16px}
+  .pane p{font-size:.9375rem}
+}
+
+/* 3. glass. Every pane: a see through fill, backdrop blur with saturate, a light edge, a top highlight, a faint bottom shade and a violet shadow.
+   g1 chip, g2 card, g3 big pane. gl = light glass (cream fill) on the color field, gd = deep glass (violet fill) for text over a photo. */
+.g{isolation:isolate;background:var(--gf);border:1px solid var(--ge);
+  -webkit-backdrop-filter:blur(var(--gb)) saturate(var(--g-sat));backdrop-filter:blur(var(--gb)) saturate(var(--g-sat));
+  box-shadow:inset 0 1px 0 var(--gh),inset 0 18px 30px -22px rgb(255 252 246 / .3),inset 0 0 22px rgb(255 252 246 / .05),inset 0 -1px 0 rgb(var(--ink-rgb) / .1),var(--gs)}
+/* the rim: every pane is a slab of glass with a bright top left edge that fades toward the bottom right */
+@supports ((mask-composite:exclude) or (-webkit-mask-composite:xor)){
+  .g{border-color:transparent}
+  .g::after{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1.5px;pointer-events:none;
+    background:linear-gradient(135deg,rgb(255 252 246 / .62) 0,rgb(255 252 246 / .4) 22%,rgb(255 252 246 / .14) 62%,rgb(255 252 246 / .12) 86%,rgb(255 252 246 / .26) 100%);
+    -webkit-mask:linear-gradient(rgb(26 11 44) 0 0) content-box,linear-gradient(rgb(26 11 44) 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+}
+:where(.g){position:relative}
+.g1{--gb:var(--gb-1);--gs:var(--sh-1)}
+.g2{--gb:var(--gb-2);--gs:var(--sh-2)}
+.g3{--gb:var(--gb-3);--gs:var(--sh-3)}
+.gl{--gf:rgb(var(--cream-rgb) / .1);--ge:rgb(255 252 246 / .2);--gh:rgb(255 252 246 / .45)}
+.gd{--gf:rgb(var(--ink-rgb) / .2);--ge:rgb(255 252 246 / .18);--gh:rgb(255 252 246 / .4)}
+/* sheen: big panes catch the light from the top left */
+.g3::before,.pill::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;background:linear-gradient(135deg,rgb(255 252 246 / var(--sheen,.2)) 0,rgb(255 252 246 / 0) 45%)}
+.pill{--sheen:.1}
+.cap.gd,.chip.gd{--gf:rgb(var(--ink-rgb) / .3)}
+.pane.gd{--gf:rgb(var(--ink-rgb) / .13)}
+/* laptops: the hours chip floats on the yellow cloth as bright frosted glass with dark words */
+@media (min-width:961px){
+  .chip.gd{--gf:rgb(var(--cream-rgb) / .34);--gh:rgb(255 252 246 / .7);color:var(--on-accent)}
+  .chip.gd b,.chip.gd .say{color:var(--on-accent)}
+}
+/* the capsule is clear at the top of the page. Once the page scrolls it passes over bright photos, so it takes a deeper violet tint there to keep its words readable */
+@media (min-width:641px){
+  .pill.gd{--gf:rgb(var(--ink-rgb) / .74)}
+  @supports (animation-timeline:scroll()){
+    .pill.gd{animation:pill-fill linear both;animation-timeline:scroll(root block);animation-range:0 200px}
+  }
+}
+@keyframes pill-fill{from{background-color:rgb(var(--ink-rgb) / .18)}to{background-color:rgb(var(--ink-rgb) / .74)}}
+
+/* phones: the blur stays, lighter */
+@media (max-width:600px){
+  :root{--gb-1:8px;--gb-2:10px;--gb-3:12px}
+}
+/* no blur support, or a visitor who asked for less transparency: solid panes in the same palette */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .gl{--gf:#4a2a6c}
+  .gd,.pill.gd,.cap.gd,.chip.gd,.pane.gd{--gf:var(--deep-2)}
+  .pill.gd{animation:none}
+  @media (min-width:961px){.chip.gd{--gf:var(--ink)}}
+}
+@media (prefers-reduced-transparency:reduce){
+  .gl{--gf:#4a2a6c}
+  .gd,.pill.gd,.cap.gd,.chip.gd,.pane.gd{--gf:var(--deep-2)}
+  .pill.gd{animation:none}
+  .g{-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+@media (prefers-reduced-transparency:reduce) and (min-width:961px){.chip.gd{--gf:var(--ink)}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="sample" role="note">Sample site made for Nail Trends by <a href="https://granitecitydigital.me/">Granite City Digital</a>. Your real site gets your own photos, colors and services.</div>
+
+<header class="top">
+  <div class="pill g g1 gd">
+    <a class="mark" href="#top" aria-label="Nail Trends, back to top"><span>Nail Trends</span></a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="#services"><span>Services</span></a></li>
+        <li><a href="#call"><span>Before you call</span></a></li>
+        <li><a href="#visit"><span>Visit</span></a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="tel:+18046270046"><span class="long num">(804) 627 0046</span><span class="short">Call</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="hero-bg"><img src="hero.jpg" width="1600" height="1048" fetchpriority="high" alt="A hand with pale blue polished nails holding a bright yellow cloth"></div>
+    <div class="wrap hero-in">
+      <div class="pane g g3 gd rise">
+        <h1 id="hero-h"><span>Hands and feet, <span class="hl">polished</span> in Richmond.</span></h1>
+        <p><span>Nail Trends is a nail salon at 8312 Staples Mill Rd. We do manicures, pedicures and polish.</span></p>
+        <div class="cta">
+          <a class="btn" href="tel:+18046270046"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg><span>Call</span> <span class="num">(804) 627 0046</span></a>
+          <a class="btn soft" href="https://www.google.com/maps/search/?api=1&amp;query=Nail+Trends+8312+Staples+Mill+Rd+Richmond+VA"><span>Get directions</span></a>
+        </div>
+      </div>
+      <div class="chipbox rise"><div class="chip g g1 gd">
+        <b>Hours</b>
+        <p>Monday to Friday, 9:30 to 8</p>
+        <p>Saturday, 9:30 to 7</p>
+        <p class="say">Call ahead to confirm.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="sec" id="services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="svc-h">Manicures, pedicures and polish</h2>
+        <p>Nail care for your hands and your feet, at one salon on Staples Mill Rd.</p>
+      </div>
+      <div class="svcs">
+        <article class="svc s1">
+          <figure class="photo rv ph"><img src="manicure.jpg" width="1400" height="931" alt="Red polish being brushed onto a fingernail"></figure>
+          <span class="orb pk" aria-hidden="true"></span>
+          <div class="card rv g g2 gl"><h3><span>Manicures</span></h3><p><span>Nail care and polish for your hands.</span></p></div>
+        </article>
+        <article class="svc s2">
+          <figure class="photo rv ph"><img src="pedicure.jpg" width="1000" height="1250" alt="Dark polish being brushed onto a toenail"></figure>
+          <span class="ring" aria-hidden="true"></span>
+          <div class="card rv g g2 gl"><h3><span>Pedicures</span></h3><p><span>Nail care and polish for your feet.</span></p></div>
+        </article>
+        <article class="svc s3">
+          <span class="glow" aria-hidden="true"></span><span class="orb" aria-hidden="true"></span><span class="ring" aria-hidden="true"></span>
+          <div class="card rv g g2 gl"><h3><span>Polish</span></h3><p><span>Pick a color you like for your hands or your feet.</span></p></div>
+        </article>
+        <div class="ask rv">
+          <p>Not sure what to ask for?</p>
+          <a class="btn" href="tel:+18046270046"><span>Call</span> <span class="num">(804) 627 0046</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="call" aria-labelledby="call-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="call-h">Before you call</h2>
+        <p>Pick what you are coming in for. The list shows what to tell us on the phone.</p>
+      </div>
+      <div class="callgrid">
+        <span class="orb" aria-hidden="true"></span><span class="ring" aria-hidden="true"></span>
+        <form class="picker rv g g3 gl" aria-labelledby="call-h">
+          <fieldset>
+            <legend>What are you calling about?</legend>
+            <input class="vh" type="radio" name="visit" id="k1" value="Manicure" checked>
+            <input class="vh" type="radio" name="visit" id="k2" value="Pedicure">
+            <input class="vh" type="radio" name="visit" id="k3" value="Both">
+            <div class="seg">
+              <span class="thumb" aria-hidden="true"></span>
+              <label for="k1"><span>Manicure</span></label>
+              <label for="k2"><span>Pedicure</span></label>
+              <label for="k3"><span>Both</span></label>
+            </div>
+            <div class="tell">
+              <p class="tell-h">When you call, tell us:</p>
+              <ul class="t1">
+                <li><span>That you would like a manicure</span></li>
+                <li><span>The day and time you want</span></li>
+                <li><span>How many people are coming</span></li>
+                <li><span>A polish color, if you have one in mind</span></li>
+              </ul>
+              <ul class="t2">
+                <li><span>That you would like a pedicure</span></li>
+                <li><span>The day and time you want</span></li>
+                <li><span>How many people are coming</span></li>
+                <li><span>A polish color, if you have one in mind</span></li>
+              </ul>
+              <ul class="t3">
+                <li><span>That you would like a manicure and a pedicure</span></li>
+                <li><span>The day and time you want</span></li>
+                <li><span>How many people are coming</span></li>
+                <li><span>A polish color for your hands and one for your feet</span></li>
+              </ul>
+            </div>
+            <div class="cta">
+              <a class="btn" href="tel:+18046270046"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg><span>Call</span> <span class="num">(804) 627 0046</span></a>
+            </div>
+          </fieldset>
+        </form>
+        <figure class="photo rv ph"><img src="bottles.jpg" width="1400" height="1029" alt="Six bottles of nail polish in purple, blue and green"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="photos" aria-label="Photos">
+    <span class="orb" aria-hidden="true"></span><span class="ring" aria-hidden="true"></span>
+    <div class="wrap">
+      <div class="strip">
+        <figure class="photo f1 cap-on rv"><img src="pink-nails.jpg" width="1400" height="933" alt="Two hands with pink polished nails"><figcaption class="cap g g1 gd"><span>Manicures</span></figcaption></figure>
+        <div class="col">
+          <figure class="photo f2 rv ph"><img src="polish-spill.jpg" width="1200" height="800" alt="Yellow and purple nail polish poured from two open bottles"></figure>
+          <figure class="photo f3 cap-on rv"><img src="toes.jpg" width="1400" height="929" alt="Bare feet with blue polish on the toenails"><figcaption class="cap g g1 gd"><span>Pedicures</span></figcaption></figure>
+        </div>
+        <figure class="photo f4 rv ph"><img src="red-dress.jpg" width="1400" height="933" loading="lazy" alt="Two hands with pale polished nails resting on a red dress"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="visit-h">Visit Nail Trends</h2>
+        <p>We are at 8312 Staples Mill Rd in Richmond. Call ahead to confirm our hours before you come by.</p>
+      </div>
+      <div class="visit">
+        <span class="glow" aria-hidden="true"></span><span class="orb pk" aria-hidden="true"></span><span class="ring" aria-hidden="true"></span>
+        <div class="v-left">
+          <figure class="photo v-photo rv ph"><img src="salon.jpg" width="1000" height="1500" loading="lazy" alt="A nail salon with a long work table, green chairs and shelves of polish"></figure>
+          <div class="v-cards rv">
+            <span class="orb pk" aria-hidden="true"></span><span class="ring" aria-hidden="true"></span>
+            <a class="btn" href="tel:+18046270046"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg><span>Call</span> <span class="num">(804) 627 0046</span></a>
+            <div class="card g g2 gl">
+              <b>Hours</b>
+              <dl class="hours">
+                <dt>Monday to Friday</dt><dd>9:30 to 8</dd>
+                <dt>Saturday</dt><dd>9:30 to 7</dd>
+              </dl>
+              <p class="say"><span>Call ahead to confirm.</span></p>
+            </div>
+            <div class="card g g2 gl">
+              <b>Find us</b>
+              <p>8312 Staples Mill Rd, Richmond, VA</p>
+              <a class="golink" href="https://www.google.com/maps/search/?api=1&amp;query=Nail+Trends+8312+Staples+Mill+Rd+Richmond+VA"><span>Get directions</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="map rv g g2 gl"><iframe src="https://maps.google.com/maps?q=8312+Staples+Mill+Rd%2C+Richmond%2C+VA&amp;z=15&amp;output=embed" loading="lazy" title="Map showing Nail Trends at 8312 Staples Mill Rd, Richmond, VA"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+   <span class="glow" aria-hidden="true"></span><span class="orb pk" aria-hidden="true"></span><span class="orb" aria-hidden="true"></span><span class="ring" aria-hidden="true"></span>
+   <div class="fcard g g3 gl">
+    <p class="name"><b>Nail Trends</b> &middot; 8312 Staples Mill Rd, Richmond, VA</p>
+    <p class="right"><a class="num" href="tel:+18046270046">(804) 627 0046</a></p>
+    <p class="credit"><span>Photos are examples.</span></p>
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
+   </div>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a href="tel:+18046270046"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Nail+Trends+8312+Staples+Mill+Rd+Richmond+VA"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  /* quiet reveal, once per element */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+  addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+
+  /* quote form (runs only when the form is on the page) */
+  var f=document.getElementById('qform');
+  if(!f)return;
+  var F=f.elements,thanks=document.getElementById('thanks');
+  function setErr(id,msg){var i=document.getElementById(id),e=document.getElementById(i.getAttribute('aria-describedby'));e.textContent=msg;if(msg){i.setAttribute('aria-invalid','true')}else{i.removeAttribute('aria-invalid')}return !msg}
+  function check(){
+    var ok=true,first=null;
+    function run(id,msg){var good=setErr(id,msg);if(!good&&!first)first=id;ok=ok&&good}
+    var name=F['name'].value.trim(),phone=F['phone'].value.replace(/\D/g,''),msg=F['message'].value.trim();
+    run('q-name',name.length<2?'Please tell us your name.':'');
+    run('q-phone',phone.length<10?'Please enter a 10 digit phone number.':'');
+    run('q-town',!F['town'].value?'Please choose your town.':'');
+    run('q-msg',msg.length<5?'A few words about the job helps us call back with the right answer.':'');
+    if(first)document.getElementById(first).focus();
+    return ok;
+  }
+  ['q-name','q-phone','q-town','q-msg'].forEach(function(id){
+    var el=document.getElementById(id);
+    el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){if(el.getAttribute('aria-invalid'))setErr(id,'')});
+  });
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!check())return;
+    var name=F['name'].value.trim().split(' ')[0],d=F['phone'].value.replace(/\D/g,'').slice(-10);
+    var nice='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6);
+    document.getElementById('t-title').textContent='Thanks, '+name+'. We have it.';
+    document.getElementById('t-body').textContent='We will call you at '+nice+' soon.';
+    f.hidden=true;thanks.hidden=false;thanks.focus();
+  });
+  document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
+})();
+</script>
+</body>
+</html>

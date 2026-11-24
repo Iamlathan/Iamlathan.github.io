@@ -1,0 +1,47 @@
+Photo credits for the NC Donuts sample page.
+All photos are from Unsplash, free to use under the Unsplash License (https://unsplash.com/license). Shown as examples only.
+
+hero.jpg
+  Teal, pink and lilac frosted donuts with sprinkles, close up
+  Photographer: Alexander Grey
+  Source: https://unsplash.com/photos/s4RaGIo2eYI
+
+glazed.jpg
+  Rows of glazed donuts seen from above
+  Photographer: leannk.
+  Source: https://unsplash.com/photos/NH2S3zVPMaE
+
+frosted-glazed.jpg
+  Two frosted donuts with sprinkles beside a glazed donut
+  Photographer: Z Graphica
+  Source: https://unsplash.com/photos/3ndB_s6mt7o
+
+frosted-teal.jpg
+  Teal frosted donuts with sprinkles on a baking tray
+  Photographer: Shayna Douglas
+  Source: https://unsplash.com/photos/PIjUQFsg9Ms
+
+pink-stack.jpg
+  A stack of four pink frosted donuts with sprinkles
+  Photographer: Annie Spratt
+  Source: https://unsplash.com/photos/AjTclDIadpg
+
+donut-holes.jpg
+  Donut holes topped with sprinkles on a small plate
+  Photographer: Jeremy Mowery
+  Source: https://unsplash.com/photos/8nrJg9TkGnQ
+
+sugar-rings.jpg
+  A row of sugared ring donuts on brown paper
+  Photographer: Serghey Savchuk
+  Source: https://unsplash.com/photos/Ic0E0y6Zo20
+
+kraft-box.jpg
+  Frosted and glazed donuts in an open paper box
+  Photographer: Madalyn Cox
+  Source: https://unsplash.com/photos/aWQjHrCi_c4
+
+sprinkle-rows.jpg
+  Rows of frosted donuts with sprinkles on an aqua table
+  Photographer: matthew Feeney
+  Source: https://unsplash.com/photos/IBGqZJUDghM

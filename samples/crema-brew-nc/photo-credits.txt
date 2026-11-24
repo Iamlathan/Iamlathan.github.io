@@ -1,0 +1,12 @@
+Photo credits for the Crema Brew sample page. All photos are stock examples under the Unsplash License (free to use).
+
+hero.jpg | Espresso pouring from a machine into a glass | Scott K | https://unsplash.com/photos/UTy23CZhR-M | Unsplash License
+crema-glass.jpg | A glass of espresso with a golden layer of crema on top | Collin Merkel | https://unsplash.com/photos/qDPMMQyFt1U | Unsplash License
+latte.jpg | A latte on a wooden tray, seen from above | Lex Sirikiat | https://unsplash.com/photos/30y5I3qnNEk | Unsplash License
+baked-goods.jpg | Trays of baked goods under a warm lamp | Palina Kharlanovich | https://unsplash.com/photos/ry-fJ-dkymM | Unsplash License
+lunch.jpg | A sandwich cut in half on a ceramic plate | Zoshua Colah | https://unsplash.com/photos/23rqioNijb0 | Unsplash License
+baking-sheet.jpg | Baked goods on a sheet pan | Sergey Kotenev | https://unsplash.com/photos/-TuPfS8zx3Q | Unsplash License
+tamper.jpg | Hands getting ground coffee ready for an espresso shot | Enis Yavuz | https://unsplash.com/photos/sBS-Ufi0f1g | Unsplash License
+blue-cup.jpg | An espresso with crema in a blue cup, seen from above | Metin Ozer | https://unsplash.com/photos/9xdv75nryc0 | Unsplash License
+milk-pour.jpg | A barista pouring milk into a cup of coffee | Yasamine June | https://unsplash.com/photos/gYsjG6_cTL4 | Unsplash License
+wrapped-sandwich.jpg | A sandwich wrapped in paper on a plate | You Le | https://unsplash.com/photos/lyYtN1J0TWA | Unsplash License

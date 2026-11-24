@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A New Image Salon | Hair and nail salon in Russellville, AR</title>
+<meta name="description" content="A New Image Salon is a hair and nail salon at 802 E 4th St, Suite A, in Russellville, AR. Haircuts, color, styling, manicures and pedicures. Call (479) 967 5100.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0a3a2d">
+<meta property="og:title" content="A New Image Salon | Russellville, AR">
+<meta property="og:description" content="A New Image Salon is a hair and nail salon at 802 E 4th St, Suite A, in Russellville, AR. Haircuts, color, styling, manicures and pedicures. Call (479) 967 5100.">
+<meta property="og:image" content="https://granitecitydigital.me/samples/a-new-image-salon-ar/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* 1. this mockup's own look */
+:root{
+  /* light ground: warm ivory paper */
+  --l-bg:#f5f1ea;
+  --l-surface:#fcfaf6;
+  --l-tint:#ebe6dc;
+  --l-ink:#131915;
+  --l-muted:#4a544e;
+  --l-line:#d9d2c6;
+  --l-label:#87493a;
+  --l-shadow:14 42 33;
+
+  /* accent: rose gold. Buttons, one headline word, labels, step numbers, the switch */
+  --accent:#d8a08a;
+  --accent-hover:#e6b6a2;
+  --accent-soft:#efdcd2;
+  --on-accent:#1c1411;
+  --hl:#94523f;
+
+  /* deep emerald bands */
+  --deep:#0f4d3c;
+  --deep-2:#0a3a2d;
+  --deep-card:#145a47;
+  --deep-line:#2f7360;
+  --glow-a:216 160 138;     /* rose pool behind the glass */
+  --glow-b:46 138 108;      /* green pool behind the glass */
+  --on-deep:#f3efe8;
+  --on-deep-muted:#d4e2d9;
+  --pale:#efc3b0;
+  --deep-shadow:3 22 16;
+
+  /* glass: a frosted mirror pane tinted with the band color */
+  --glass:rgb(10 58 45 / .46);
+  --glass-strong:rgb(8 44 34 / .76);
+  --glass-solid:#11473a;
+  --glass-edge:rgb(243 239 232 / .16);
+  --glass-hi:rgb(243 239 232 / .16);
+
+  --danger:#9c2a3a;
+
+  /* working tokens: light by default, swapped inside .deep */
+  --bg:var(--l-bg);
+  --surface:var(--l-surface);
+  --tint:var(--l-tint);
+  --ink:var(--l-ink);
+  --muted:var(--l-muted);
+  --line:var(--l-line);
+  --label:var(--l-label);
+  --ring:var(--deep);
+  --layer:var(--accent-soft);
+  --shadow:var(--l-shadow);
+  --texture:none;
+
+  --font:"Raleway",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Marcellus",Georgia,"Times New Roman",serif;
+  --display-weight:400;
+
+  --r-ctl:999px;
+  --r-card:clamp(16px,1.6vw,20px);
+  --r-photo:clamp(20px,2.4vw,28px);
+}
+/* 2. the system */
+:root{
+  --t-small:.875rem;
+  --t-body:1.0625rem;
+  --t-lead:clamp(1.0625rem,1rem + .3vw,1.1875rem);
+  --t-h3:1.125rem;
+  --t-h2:clamp(2.125rem,1.6rem + 1.8vw,3.25rem);
+  --t-h1:clamp(2.875rem,1.6rem + 4.6vw,5.75rem);
+
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+  --sec:clamp(88px,10vw,144px);
+  --band-pad:clamp(64px,8vw,112px);
+  --off:clamp(10px,1.4vw,18px);
+
+  --sh-1:1px 1px 2px rgb(var(--shadow) / .05),2px 6px 16px -6px rgb(var(--shadow) / .14);
+  --sh-2:1px 2px 4px rgb(var(--shadow) / .06),4px 14px 32px -10px rgb(var(--shadow) / .22);
+  --sh-3:2px 4px 8px rgb(var(--shadow) / .07),8px 28px 56px -16px rgb(var(--shadow) / .30);
+
+  --wrap:1120px;
+  --m:clamp(20px,4vw,32px);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --bar:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+@media (max-width:760px){html{scroll-padding-bottom:96px}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased;font-variant-numeric:lining-nums}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+::selection{background:var(--deep);color:var(--on-deep)}
+:focus-visible{outline:2px solid var(--ring);outline-offset:3px}
+h1,h2,h3{font-family:var(--font-display);font-weight:var(--display-weight);letter-spacing:-.015em;line-height:1.06;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:10px}
+.skip:focus{top:12px}
+.num{font-variant-numeric:tabular-nums lining-nums}
+.muted{color:var(--muted)}
+
+/* deep grounds swap the working tokens */
+.deep{
+  --bg:var(--deep);--surface:var(--deep-card);--tint:var(--deep-card);--ink:var(--on-deep);--muted:var(--on-deep-muted);--line:var(--deep-line);--label:var(--pale);--ring:var(--pale);--layer:var(--accent);
+  --sh-1:1px 1px 2px rgb(var(--deep-shadow) / .22),2px 6px 16px -6px rgb(var(--deep-shadow) / .42);
+  --sh-2:1px 2px 4px rgb(var(--deep-shadow) / .26),4px 14px 32px -10px rgb(var(--deep-shadow) / .5);
+  --sh-3:2px 4px 8px rgb(var(--deep-shadow) / .28),8px 28px 56px -16px rgb(var(--deep-shadow) / .6);
+  color:var(--ink);
+}
+.deep ::selection{background:var(--accent);color:var(--on-accent)}
+
+/* glass: frosted pane over a photo or the band's color pools. Text on glass never fades in. */
+.glass{background:var(--glass);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);border:1px solid var(--glass-edge);box-shadow:inset 0 1px 0 var(--glass-hi),4px 16px 36px -14px rgb(var(--deep-shadow) / .55)}
+.glass.strong{background:var(--glass-strong)}
+@media (max-width:600px){.glass{-webkit-backdrop-filter:blur(10px) saturate(140%);backdrop-filter:blur(10px) saturate(140%)}}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.glass,.glass.strong{background:var(--glass-solid)}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2);min-height:48px;padding:0 24px;border-radius:var(--r-ctl);border:1px solid transparent;background:var(--accent);color:var(--on-accent);font:600 .9375rem/1 var(--font);letter-spacing:.01em;text-decoration:none;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,border-color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.line{background:var(--surface);color:var(--ink);border-color:var(--line)}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--accent-hover);box-shadow:var(--sh-2);transform:translateY(-1px)}
+  .btn.line:hover{background:var(--surface);border-color:var(--muted)}
+  .btn:active{transform:scale(.97);box-shadow:none}
+}
+
+.sample{background:var(--deep-2);color:var(--muted);font-size:.8125rem;text-align:center;padding:8px var(--m);line-height:1.45}
+.sample a{color:var(--ink)}
+
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s-5);min-height:76px}
+.mark{display:inline-flex;align-items:center;gap:.3em;font:400 1.5rem/1 var(--font-display);letter-spacing:-.01em;text-decoration:none;min-height:44px;white-space:nowrap}
+.mark span{color:var(--label)}
+@media (max-width:360px){.mark{font-size:1.1875rem}}
+.nav{display:flex;align-items:center;gap:28px;list-style:none;padding:0;font-size:var(--t-small);font-weight:500}
+.nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;min-width:44px;justify-content:center;transition:color 200ms ease}
+.top .btn{min-height:44px;padding:0 18px;font-size:var(--t-small)}
+.top .short{display:none}
+@media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--ink)}}
+@media (max-width:900px){.nav{display:none}}
+@media (max-width:480px){.top .long{display:none}.top .short{display:inline}}
+
+.photo{position:relative;border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-1)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.layer{position:relative;isolation:isolate}
+.layer::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--layer);transform:translate(var(--off),var(--off))}
+
+/* the mirror: an arched photo frame with a thin rose gold rim */
+.arch{border-radius:50% 50% var(--r-photo) var(--r-photo) / 37.5% 37.5% var(--r-photo) var(--r-photo);outline:1.5px solid rgb(var(--glow-a) / .75);outline-offset:10px}
+.arch.tall{aspect-ratio:3/4}
+.arch.four{aspect-ratio:4/5;border-radius:50% 50% var(--r-photo) var(--r-photo) / 40% 40% var(--r-photo) var(--r-photo)}
+
+/* hero: ivory on the left, an emerald field behind the mirror on the right */
+.hero{position:relative;isolation:isolate;padding-block:clamp(48px,6vw,88px) clamp(64px,7vw,104px)}
+.hero::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;right:0;width:min(42vw,620px);background:radial-gradient(460px 460px at 62% 34%,rgb(var(--glow-a) / .34),transparent 70%),radial-gradient(520px 520px at 20% 100%,rgb(var(--glow-b) / .5),transparent 70%),var(--deep)}
+.hero-in{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:var(--s-7) var(--s-8);align-items:center}
+.hero h1{font-size:var(--t-h1)}
+.hero h1>span{display:block}
+.hero h1 .hl{color:var(--hl)}
+.hero h1 .soft{display:block;color:var(--muted);font-size:.42em;letter-spacing:0;line-height:1.25;margin-top:.55em}
+.hero-copy .rise>p{color:var(--muted);font-size:var(--t-lead);max-width:44ch;margin-top:var(--s-5)}
+.facts{margin-top:var(--s-4);font-size:var(--t-small);font-weight:500;color:var(--muted);display:flex;flex-wrap:wrap;gap:var(--s-1) 12px;list-style:none;padding:0}
+.facts li+li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:12px;vertical-align:.16em}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s-3);margin-top:var(--s-6)}
+.hero-pic{position:relative;justify-self:center;width:min(100%,440px)}
+.hero-pic .photo{box-shadow:var(--sh-3)}
+.hero-pic img{object-position:50% 40%}
+.chip{position:absolute;left:clamp(-72px,-4vw,-24px);bottom:clamp(28px,4vw,52px);z-index:2;display:grid;gap:2px;padding:var(--s-4) var(--s-5);border-radius:var(--r-card);color:var(--on-deep);max-width:280px}
+.chip b{font:500 .8125rem/1.3 var(--font);color:var(--pale);letter-spacing:.01em}
+.chip span{font:500 1.125rem/1.35 var(--font)}
+.chip small{font-size:.875rem;color:var(--on-deep-muted)}
+
+.sec{padding-top:var(--sec)}
+.band{margin-top:var(--sec);padding-block:var(--band-pad);background:var(--tint)}
+.hero + .band,.band + .band{margin-top:0}
+.band.deep{position:relative;isolation:isolate;overflow:clip;background:var(--deep)}
+.band.deep::before,.band.deep::after{content:"";position:absolute;z-index:-1;border-radius:50%;pointer-events:none}
+.band.deep::before{width:640px;height:640px;right:-140px;top:60px;background:radial-gradient(closest-side,rgb(var(--glow-a) / .5),transparent)}
+.band.deep::after{width:720px;height:720px;left:-220px;bottom:-260px;background:radial-gradient(closest-side,rgb(var(--glow-b) / .6),transparent)}
+.head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-4) var(--s-7);align-items:end;padding-bottom:var(--s-6)}
+.head h2{font-size:var(--t-h2)}
+.head p{color:var(--muted);max-width:46ch;font-size:var(--t-lead)}
+
+/* signature: the hair or nails switch */
+.switch fieldset{border:0;padding:0;margin:0;min-width:0}
+.sw{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-areas:"pic tog" "pic sets";grid-template-rows:auto 1fr;gap:var(--s-5) var(--s-8);align-items:start}
+.toggle{grid-area:tog;position:relative;display:grid;grid-template-columns:1fr 1fr;width:min(100%,340px);padding:6px;border-radius:999px}
+.toggle label{position:relative;z-index:1;display:grid;place-items:center;min-height:48px;border-radius:999px;font:600 1rem/1 var(--font);letter-spacing:.02em;color:var(--on-deep);cursor:pointer;transition:color 220ms ease}
+.toggle label:active{transform:scale(.97)}
+.thumb{position:absolute;top:6px;bottom:6px;left:6px;width:calc(50% - 6px);border-radius:999px;background:var(--accent);box-shadow:var(--sh-1);transition:transform 280ms var(--ease)}
+#k-nails:checked ~ .sw .thumb{transform:translateX(100%)}
+#k-hair:checked ~ .sw [for=k-hair],#k-nails:checked ~ .sw [for=k-nails]{color:var(--on-accent)}
+#k-hair:focus-visible ~ .sw [for=k-hair],#k-nails:focus-visible ~ .sw [for=k-nails]{outline:2px solid var(--pale);outline-offset:3px}
+.sets{grid-area:sets;display:grid;gap:var(--s-5)}
+.set{display:none;list-style:none;padding:0;gap:var(--s-3)}
+#k-hair:checked ~ .sw .set-hair,#k-nails:checked ~ .sw .set-nails{display:grid}
+.set li{display:grid;grid-template-columns:minmax(0,11rem) minmax(0,1fr);gap:var(--s-2) var(--s-5);align-items:baseline;padding:var(--s-5) var(--s-6);border-radius:var(--r-card)}
+.set h3{font-size:1.625rem;line-height:1.15}
+.set p{color:var(--on-deep-muted);font-size:1rem;max-width:40ch}
+.set-note{font-size:1rem;color:var(--on-deep-muted)}
+.set-note a{color:var(--on-deep);font-weight:600;display:inline-flex;align-items:center;min-height:44px}
+.pics{grid-area:pic;position:relative}
+.pics .photo{box-shadow:var(--sh-3)}
+.pics .p-nails{position:absolute;inset:0}
+.pics .p-hair,.pics .p-nails{transition:opacity 360ms ease,visibility 0s linear 0s}
+#k-hair:checked ~ .sw .p-nails,#k-nails:checked ~ .sw .p-hair{opacity:0;visibility:hidden;transition:opacity 360ms ease,visibility 0s linear 360ms}
+.p-hair img{object-position:40% 45%}
+.p-nails img{object-position:55% 50%}
+
+/* your visit */
+.how{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:var(--s-7) var(--s-8);align-items:center}
+.how .layer{--layer:var(--deep);margin-right:var(--off);margin-bottom:var(--off)}
+.how .photo{aspect-ratio:4/3}
+.how .photo img{object-position:40% 50%}
+.steps{list-style:none;padding:0;display:grid;gap:var(--s-6);counter-reset:step}
+.steps li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:2px var(--s-5);counter-increment:step}
+.steps li::before{content:counter(step);grid-row:1 / span 2;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--on-accent);font:600 1.25rem/1 var(--font);font-variant-numeric:tabular-nums lining-nums;box-shadow:var(--sh-1)}
+.steps h3{font-size:1.5rem;line-height:1.2;padding-top:12px}
+.steps p{color:var(--muted);font-size:1rem;max-width:42ch}
+.steps a{color:var(--ink);font-weight:600}
+
+/* photo strip: a zig zag of four, each with a frosted label */
+.strip{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:clamp(220px,26vw,380px);gap:var(--s-5)}
+.strip .photo:nth-child(1){grid-column:1 / span 7}
+.strip .photo:nth-child(2){grid-column:8 / span 5}
+.strip .photo:nth-child(3){grid-column:1 / span 5}
+.strip .photo:nth-child(4){grid-column:6 / span 7}
+.strip .photo:nth-child(1) img{object-position:50% 40%}
+.strip .photo:nth-child(2) img{object-position:50% 55%}
+.strip .photo:nth-child(3) img{object-position:35% 60%}
+.strip .photo:nth-child(4) img{object-position:60% 55%}
+.tag{position:absolute;left:14px;bottom:14px;padding:9px 16px;border-radius:999px;font:600 .9375rem/1.2 var(--font);color:var(--on-deep)}
+
+/* find us */
+.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7);align-items:stretch}
+.reach{align-self:start;display:grid;align-content:start;gap:var(--s-2);padding:clamp(24px,3vw,36px);border-radius:var(--r-card);color:var(--on-deep)}
+.reach a,.reach .plain{display:grid;gap:2px;padding:var(--s-3) 0;text-decoration:none;font-size:var(--t-lead);line-height:1.35;min-height:44px}
+.reach a{transition:transform 160ms var(--ease)}
+.reach a:active{transform:scale(.985)}
+.reach a b{text-decoration:underline;text-decoration-color:rgb(243 239 232 / .4);text-underline-offset:.22em;font-weight:500;transition:text-decoration-color 200ms ease}
+.reach span{font-size:.875rem;font-weight:600;color:var(--pale)}
+.reach .plain p{font-size:var(--t-lead)}
+.reach .plain small{font-size:.9375rem;color:var(--on-deep-muted)}
+@media (hover:hover) and (pointer:fine){.reach a:hover b{text-decoration-color:var(--on-deep)}}
+.map{min-height:clamp(340px,34vw,480px);height:100%}
+.map iframe{display:block;width:100%;height:100%;min-height:inherit;border:0}
+
+.foot{margin-top:var(--sec);background:var(--deep-2);padding-block:var(--s-7) var(--s-7);font-size:.875rem;color:var(--muted)}
+main:has(> .band:last-child) + .foot{margin-top:0}
+.foot .wrap{display:grid;grid-template-columns:1fr auto;gap:var(--s-3) var(--s-6);align-items:center}
+.foot b{color:var(--ink);font:400 1.25rem/1.3 var(--font-display)}
+.foot a{color:var(--muted)}
+.foot .right{text-align:right}
+.foot .right a{display:inline-flex;align-items:center;min-height:44px}
+.foot .credit{grid-column:1/-1;max-width:none}
+
+/* footer mark */
+.gcd{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:14px;margin-top:12px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505;box-shadow:0 0 0 1px rgb(243 239 232 / .2)}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font:500 .875rem/1.35 var(--font)}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--tint)}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
+
+.bar{display:none}
+
+/* motion: slow, once, transform and opacity. Glass panes and their text only slide, never fade. */
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;transform:translateY(16px);transition:opacity 700ms var(--ease),transform 700ms var(--ease)}
+  .js .rv.in{opacity:1;transform:none}
+  .js .rv.so{opacity:1}
+  .js .steps .rv:nth-child(2),.js .strip .rv:nth-child(2){transition-delay:90ms}
+  .js .steps .rv:nth-child(3),.js .strip .rv:nth-child(3){transition-delay:180ms}
+  .js .strip .rv:nth-child(4){transition-delay:270ms}
+  .hero .rise{animation:rise 800ms var(--ease) both}
+  .hero .rise:nth-child(2){animation-delay:80ms}
+  .hero-pic .photo{animation:rise 900ms var(--ease) 140ms both}
+  .hero-pic img{animation:settle 1600ms var(--ease) both}
+  .chip{animation:slide 900ms var(--ease) 260ms both}
+  .set li{animation:slide 520ms var(--ease) both}
+  .set li:nth-child(2){animation-delay:60ms}
+  .set li:nth-child(3){animation-delay:120ms}
+}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes settle{from{transform:scale(1.05)}to{transform:none}}
+@keyframes slide{from{transform:translateY(12px)}to{transform:none}}
+
+@media (max-width:960px){
+  .hero-in,.head,.how,.contact{grid-template-columns:minmax(0,1fr)}
+  .hero::before{top:auto;width:100%;height:58%}
+  .hero-pic{width:min(100%,420px)}
+  .sw{grid-template-columns:minmax(0,1fr);grid-template-areas:"tog" "sets" "pic";grid-template-rows:auto}
+  .pics{width:min(100%,460px);justify-self:center;margin-top:var(--s-5)}
+}
+
+@media (max-width:640px){
+  :root{--bar:calc(60px + env(safe-area-inset-bottom));--r-photo:18px;--r-card:14px;--off:10px}
+  .hero{padding-top:var(--s-6)}
+  .hero::before{height:46%}
+  .hero-in{gap:var(--s-7)}
+  .hero-pic{width:calc(100% - 28px)}
+  .chip{left:12px;right:12px;bottom:14px;max-width:none;padding:var(--s-3) var(--s-4)}
+  .chip span{font-size:1rem}
+  .cta .btn{flex:1 1 auto}
+  .facts li+li::before{content:none}
+  .facts{gap:2px 18px}
+  .head{padding-bottom:var(--s-5)}
+  .toggle{width:100%}
+  .set li{grid-template-columns:minmax(0,1fr);padding:var(--s-4) var(--s-5)}
+  .set h3{font-size:1.4375rem}
+  .strip{grid-template-columns:1fr 1fr;grid-auto-rows:auto;gap:var(--s-3)}
+  .strip .photo:nth-child(n){grid-column:auto;aspect-ratio:4/5}
+  .strip .photo:nth-child(1),.strip .photo:nth-child(4){grid-column:1 / -1;aspect-ratio:16/11}
+  .tag{left:10px;bottom:10px;padding:8px 13px;font-size:.875rem}
+  .map{min-height:320px}
+  .foot .wrap{grid-template-columns:minmax(0,1fr)}
+  .foot .right{text-align:left}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--deep-2);padding-bottom:env(safe-area-inset-bottom)}
+  .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:60px;font-weight:600;font-size:1rem;text-decoration:none;color:var(--ink)}
+  .bar a:first-child{background:var(--accent);color:var(--on-accent)}
+  .bar a:active{opacity:.85}
+  .bar svg{width:17px;height:17px}
+}
+@media (max-width:640px) and (max-height:740px){
+  body .hero{padding-top:var(--s-5)}
+  body .hero h1{font-size:clamp(2.5rem,1.9rem + 2.4vw,2.875rem)}
+  body .hero-copy .rise>p{font-size:1rem;line-height:1.5;margin-top:var(--s-4)}
+  body .cta{margin-top:var(--s-5)}
+}
+@media (max-width:420px) and (max-height:600px){
+  body .hero h1{font-size:2.25rem}
+  body .hero-copy .rise>p{font-size:.9375rem;line-height:1.5}
+  body .facts{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="sample deep" role="note">Sample site made for A New Image Salon by <a href="https://granitecitydigital.me/">Granite City Digital</a>. Your real site gets your own photos, colors and services.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="A New Image Salon, back to top">A New Image <span>Salon</span></a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#how">Your visit</a></li>
+        <li><a href="#photos">Photos</a></li>
+        <li><a href="#visit">Find us</a></li>
+      </ul>
+    </nav>
+    <a class="btn line" href="tel:+14799675100"><span class="long num">(479) 967 5100</span><span class="short">Call</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <div class="wrap hero-in">
+      <div class="hero-copy">
+        <h1 class="rise" id="hero-h"><span>From hair to <span class="hl">nails</span></span> <span class="soft">on E 4th St in Russellville.</span></h1>
+        <div class="rise">
+          <p>A New Image Salon does hair and nails in Russellville, AR: haircuts, color and styling, plus manicures and pedicures.</p>
+          <ul class="facts">
+            <li>Hair and nail salon</li>
+            <li>Suite A, 802 E 4th St</li>
+          </ul>
+          <div class="cta">
+            <a class="btn" href="tel:+14799675100">Call <span class="num">(479) 967 5100</span></a>
+            <a class="btn line" href="https://www.google.com/maps/search/?api=1&amp;query=A+New+Image+Salon+802+E+4th+St+Suite+A+Russellville+AR">Get directions</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-pic">
+        <figure class="photo arch tall"><img src="hero.jpg" width="1200" height="1600" fetchpriority="high" alt="A stylist curling long brown hair with a gold curling iron"></figure>
+        <p class="chip glass strong"><b>Hours</b><span>Monday to Friday 9 to 5</span><span>Saturday 9 to 1</span><small>Call ahead to confirm.</small></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band deep" id="services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="svc-h">Hair or nails</h2>
+        <p>Choose a side of the salon to see what we do there.</p>
+      </div>
+      <form class="switch" aria-labelledby="svc-h">
+        <fieldset>
+          <legend class="vh">Show services for</legend>
+          <input class="vh" type="radio" name="kind" id="k-hair" value="hair" checked>
+          <input class="vh" type="radio" name="kind" id="k-nails" value="nails">
+          <div class="sw">
+            <div class="toggle glass"><span class="thumb" aria-hidden="true"></span><label for="k-hair"><span>Hair</span></label><label for="k-nails"><span>Nails</span></label></div>
+            <div class="sets">
+              <ul class="set set-hair" aria-label="Hair services">
+                <li class="glass"><h3>Haircuts</h3><p>From a trim to a new shape, cut in the chair.</p></li>
+                <li class="glass"><h3>Color</h3><p>Hair color in the shade you choose.</p></li>
+                <li class="glass"><h3>Styling</h3><p>Hair styled and finished before you head out.</p></li>
+              </ul>
+              <ul class="set set-nails" aria-label="Nail services">
+                <li class="glass"><h3>Manicures</h3><p>The nails on your hands, shaped and finished.</p></li>
+                <li class="glass"><h3>Pedicures</h3><p>Toenails shaped and finished.</p></li>
+                <li class="glass"><h3>Nails</h3><p>Nail work for hands and toes. Tell us what you have in mind.</p></li>
+              </ul>
+              <p class="set-note">Call <a class="num" href="tel:+14799675100">(479) 967 5100</a> to ask about any service.</p>
+            </div>
+            <div class="pics">
+              <figure class="photo arch four p-hair"><img src="blowdry.jpg" width="1200" height="1500" alt="A hand lifting a section of brown hair under a hair dryer in warm light"></figure>
+              <figure class="photo arch four p-nails"><img src="polish.jpg" width="1200" height="1500" alt="A nail tech brushing pale polish onto a client's nail"></figure>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="how" aria-labelledby="how-h">
+    <div class="head rv">
+      <h2 id="how-h">Your visit</h2>
+      <p>Three short steps, from the phone call to the chair.</p>
+    </div>
+    <div class="how">
+      <div class="layer rv"><figure class="photo"><img src="mirrors.jpg" width="1600" height="1067" alt="Two round mirrors above wooden stations in afternoon sun"></figure></div>
+      <ol class="steps">
+        <li class="rv"><h3>Call ahead</h3><p>Call <a class="num" href="tel:+14799675100">(479) 967 5100</a>. We are open Monday to Friday 9 to 5 and Saturday 9 to 1. Call ahead to confirm.</p></li>
+        <li class="rv"><h3>Come to Suite A</h3><p>The salon is at 802 E 4th St, Suite A, in Russellville.</p></li>
+        <li class="rv"><h3>Tell us what you need</h3><p>A haircut, color or styling, or a manicure or pedicure.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" id="photos" aria-labelledby="photos-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="photos-h">From hair to toes</h2>
+        <p>Haircuts, color and styling, plus manicures and pedicures, at one salon on E 4th St.</p>
+      </div>
+      <div class="strip">
+        <figure class="photo rv so"><img src="color.jpg" width="1600" height="1067" alt="A stylist brushing hair color onto a section of long hair laid over foil"><figcaption class="tag glass strong"><span>Color</span></figcaption></figure>
+        <figure class="photo rv so"><img src="toes.jpg" width="1400" height="1260" alt="Bare feet with bright blue, green and yellow toenail polish on a wooden floor"><figcaption class="tag glass strong"><span>Pedicures</span></figcaption></figure>
+        <figure class="photo rv so"><img src="nails-soft.jpg" width="1600" height="1000" loading="lazy" alt="Two hands with shaped pale pink nails resting on a soft white rug"><figcaption class="tag glass strong"><span>Nails</span></figcaption></figure>
+        <figure class="photo rv so"><img src="manicure.jpg" width="1600" height="1067" loading="lazy" alt="A nail tech painting a client's nails a deep berry color"><figcaption class="tag glass strong"><span>Manicures</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band deep" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="visit-h">Find us on E 4th St</h2>
+        <p>Suite A, 802 E 4th St, Russellville. Call before you head over.</p>
+      </div>
+      <div class="contact">
+        <div class="reach glass rv so">
+          <a class="num" href="tel:+14799675100"><span>Call</span><b>(479) 967 5100</b></a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=A+New+Image+Salon+802+E+4th+St+Suite+A+Russellville+AR"><span>Find us at</span><b>802 E 4th St, Suite A, Russellville, AR</b></a>
+          <div class="plain"><span>Hours</span><p>Monday to Friday 9 to 5</p><p>Saturday 9 to 1</p><small>Call ahead to confirm.</small></div>
+        </div>
+        <div class="map photo rv"><iframe src="https://maps.google.com/maps?q=802+E+4th+St%2C+Suite+A%2C+Russellville%2C+AR&amp;z=15&amp;output=embed" loading="lazy" title="Map showing A New Image Salon at 802 E 4th St, Suite A, Russellville, AR"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot deep">
+  <div class="wrap">
+    <p><b>A New Image Salon</b> &middot; 802 E 4th St, Suite A, Russellville, AR</p>
+    <p class="right"><a class="num" href="tel:+14799675100">(479) 967 5100</a></p>
+    <p class="credit">Photos are examples.</p>
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
+  </div>
+</footer>
+
+<nav class="bar deep" aria-label="Quick contact">
+  <a href="tel:+14799675100"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=A+New+Image+Salon+802+E+4th+St+Suite+A+Russellville+AR"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  /* quiet reveal, once per element */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+  addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+
+  /* quote form (runs only when the form is on the page) */
+  var f=document.getElementById('qform');
+  if(!f)return;
+  var F=f.elements,thanks=document.getElementById('thanks');
+  function setErr(id,msg){var i=document.getElementById(id),e=document.getElementById(i.getAttribute('aria-describedby'));e.textContent=msg;if(msg){i.setAttribute('aria-invalid','true')}else{i.removeAttribute('aria-invalid')}return !msg}
+  function check(){
+    var ok=true,first=null;
+    function run(id,msg){var good=setErr(id,msg);if(!good&&!first)first=id;ok=ok&&good}
+    var name=F['name'].value.trim(),phone=F['phone'].value.replace(/\D/g,''),msg=F['message'].value.trim();
+    run('q-name',name.length<2?'Please tell us your name.':'');
+    run('q-phone',phone.length<10?'Please enter a 10 digit phone number.':'');
+    run('q-town',!F['town'].value?'Please choose your town.':'');
+    run('q-msg',msg.length<5?'A few words about the job helps us call back with the right answer.':'');
+    if(first)document.getElementById(first).focus();
+    return ok;
+  }
+  ['q-name','q-phone','q-town','q-msg'].forEach(function(id){
+    var el=document.getElementById(id);
+    el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){if(el.getAttribute('aria-invalid'))setErr(id,'')});
+  });
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!check())return;
+    var name=F['name'].value.trim().split(' ')[0],d=F['phone'].value.replace(/\D/g,'').slice(-10);
+    var nice='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6);
+    document.getElementById('t-title').textContent='Thanks, '+name+'. We have it.';
+    document.getElementById('t-body').textContent='We will call you at '+nice+' soon.';
+    f.hidden=true;thanks.hidden=false;thanks.focus();
+  });
+  document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
+})();
+</script>
+</body>
+</html>

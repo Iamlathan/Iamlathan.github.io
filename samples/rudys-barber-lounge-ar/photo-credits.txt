@@ -1,0 +1,49 @@
+Photo credits for rudys-barber-lounge-ar. All photos from Pexels (Pexels License, https://www.pexels.com/license/), shown as examples.
+
+hero.jpg
+  Shows: clippers working along the side of a short haircut, behind the ear
+  Photographer: Rahib Hamidov (https://www.pexels.com/@hamidoffstudio/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/a-person-using-clippers-18503633/
+
+fade.jpg
+  Shows: a barber with a comb and clippers working on a short haircut, seen from behind
+  Photographer: Kevin Bidwell (https://www.pexels.com/@kevinbidwell/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/back-view-of-a-person-having-a-haircut-9971240/
+
+classic-cut.jpg
+  Shows: a barber cutting curly hair with scissors over a comb
+  Photographer: Gustavo Fring (https://www.pexels.com/@gustavo-fring/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/man-getting-his-hair-trimmed-7447150/
+
+beard-trim.jpg
+  Shows: a barber trimming the edge of a short beard
+  Photographer: Danilo Gomes (https://www.pexels.com/@danilocriativo/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/close-up-of-professional-beard-trimming-41122205/
+
+shears.jpg
+  Shows: barber scissors and combs in a leather holster
+  Photographer: Th2city Santana (https://www.pexels.com/@th2city/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/professional-barber-tools-in-leather-holster-36361319/
+
+scissor-work.jpg
+  Shows: scissors and a comb at work on the back of a short haircut
+  Photographer: Gizem Toprak (https://www.pexels.com/@gizem-toprak-2156632703/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/professional-haircut-at-barbershop-close-up-37533244/
+
+the-chair.jpg
+  Shows: a barber shaking out a cape beside a customer seated in the chair
+  Photographer: RDNE Stock project (https://www.pexels.com/@rdne/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/customer-in-barbershop-chair-7697714/
+
+neck-brush.jpg
+  Shows: a barber brushing loose hair off a customer's head
+  Photographer: RDNE Stock project (https://www.pexels.com/@rdne/)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/a-mas-sitting-at-a-barber-7697279/

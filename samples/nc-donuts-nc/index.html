@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NC Donuts | Donut shop in New Bern, NC</title>
+<meta name="description" content="NC Donuts is a donut shop at 2909 Trent Rd in New Bern, NC. Glazed, frosted, filled, cake donuts and donut holes. Call (252) 631 1260.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0e5560">
+<meta property="og:title" content="NC Donuts | New Bern, NC">
+<meta property="og:description" content="NC Donuts is a donut shop at 2909 Trent Rd in New Bern, NC. Glazed, frosted, filled, cake donuts and donut holes. Call (252) 631 1260.">
+<meta property="og:image" content="https://granitecitydigital.me/samples/nc-donuts-nc/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* 1. this mockup's own look: lagoon teal and strawberry frosting */
+:root{
+  --bg:#f8f1e8;
+  --surface:#fffaf3;
+  --tint:#f9e6e2;
+  --deep:#0e5560;
+  --deep-2:#0a434c;
+  --deep-rgb:14 85 96;
+  --foot:#0a434c;
+  --ink:#161312;
+  --muted:#5b4f49;
+  --line:#e9dacd;
+  --cream:#f3efe8;
+  --cream-soft:#cfe0df;
+  --accent:#ef5a7a;
+  --accent-hover:#f4768f;
+  --accent-ink:#b3264b;
+  --accent-soft:#f6d4d9;
+  --accent-on-deep:#ff94ab;
+  --on-accent:#161312;
+  --danger:#a3392b;
+  --shadow:30 40 42;
+  --spr-1:#f6cf4a;--spr-2:#3fb7b0;--spr-3:#fdf6ea;--spr-4:#f39a4b;--spr-5:#8f7ae6;
+  --glow-1:239 90 122;
+  --glow-2:63 183 176;
+
+  --font:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Lilita One","Nunito Sans",system-ui,sans-serif;
+  --display-weight:400;
+
+  --r-ctl:14px;
+  --r-card:clamp(16px,1.6vw,22px);
+  --r-photo:clamp(18px,2.4vw,28px);
+}
+/* 2. the system */
+:root{
+  --t-small:.875rem;
+  --t-body:1.0625rem;
+  --t-lead:clamp(1.0625rem,1rem + .35vw,1.25rem);
+  --t-h3:1.25rem;
+  --t-h2:clamp(2rem,1.4rem + 2vw,3.25rem);
+  --t-h1:clamp(3rem,1.9rem + 4.6vw,6rem);
+
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+  --sec:clamp(88px,10vw,144px);
+  --band-pad:clamp(64px,8vw,112px);
+  --off:clamp(10px,1.4vw,18px);
+
+  --sh-1:1px 1px 2px rgb(var(--shadow) / .06),2px 6px 16px -6px rgb(var(--shadow) / .16);
+  --sh-2:1px 2px 4px rgb(var(--shadow) / .08),4px 14px 32px -10px rgb(var(--shadow) / .26);
+  --sh-3:2px 4px 8px rgb(var(--shadow) / .09),8px 28px 56px -16px rgb(var(--shadow) / .36);
+
+  --wrap:1140px;
+  --m:clamp(20px,4vw,32px);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --bar:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+@media (max-width:760px){html{scroll-padding-bottom:96px}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+::selection{background:var(--accent);color:var(--on-accent)}
+:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px}
+h1,h2,h3{font-family:var(--font-display);font-weight:var(--display-weight);letter-spacing:-.01em;line-height:1.02;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:var(--r-ctl)}
+.skip:focus{top:12px}
+.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* buttons: raised; hover lifts, press sinks */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2);min-height:52px;padding:0 24px;border-radius:var(--r-ctl);border:1px solid transparent;background:var(--accent);color:var(--on-accent);font:800 1rem/1 var(--font);text-decoration:none;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,border-color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.ghost{background:transparent;color:var(--cream);border-color:rgb(243 239 232 / .55);box-shadow:none}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--accent-hover);box-shadow:var(--sh-2);transform:translateY(-1px)}
+  .btn.ghost:hover{background:rgb(243 239 232 / .12);border-color:var(--cream)}
+  .btn:active{transform:scale(.97);box-shadow:none}
+}
+
+/* sample banner */
+.sample{background:var(--deep-2);color:var(--cream-soft);font-size:.8125rem;text-align:center;padding:8px var(--m);line-height:1.45}
+.sample a{color:var(--cream)}
+
+/* glass: only over a photo or the glowing plate */
+.glass{background:rgb(var(--deep-rgb) / .72);-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);border:1px solid rgb(243 239 232 / .16);box-shadow:inset 0 1px 0 rgb(243 239 232 / .2),var(--sh-2);color:var(--cream)}
+.glass.deep{background:rgb(var(--deep-rgb) / .84);-webkit-backdrop-filter:blur(20px) saturate(150%);backdrop-filter:blur(20px) saturate(150%)}
+@media (max-width:600px){
+  .glass{-webkit-backdrop-filter:blur(10px) saturate(140%);backdrop-filter:blur(10px) saturate(140%);background:rgb(var(--deep-rgb) / .8)}
+  .glass.deep{-webkit-backdrop-filter:blur(12px) saturate(140%);backdrop-filter:blur(12px) saturate(140%);background:rgb(var(--deep-rgb) / .84)}
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))){
+  .glass,.glass.deep{background:rgb(var(--deep-rgb) / .95)}
+}
+
+/* header: a frosted bar floating over the hero photo */
+.top{position:absolute;z-index:5;left:0;right:0;top:var(--s-4)}
+.top-in{display:flex;align-items:center;justify-content:space-between;gap:var(--s-4);min-height:68px;padding:8px 8px 8px 18px;border-radius:20px}
+.mark{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:1.5rem;letter-spacing:0;line-height:1;text-decoration:none;min-height:44px;white-space:nowrap;color:var(--cream)}
+.mark i{width:24px;height:24px;flex:none;border-radius:50%;background:radial-gradient(circle closest-side,transparent 0 34%,var(--accent) 37% 86%,transparent 90%)}
+.nav{display:flex;align-items:center;gap:4px;list-style:none;padding:0;font-size:.9375rem;font-weight:700}
+.nav a{color:var(--cream);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:12px;transition:background-color 200ms ease}
+.top .btn{min-height:48px;padding:0 18px;font-size:.9375rem;flex:none}
+.top .short{display:none}
+@media (hover:hover) and (pointer:fine){.nav a:hover{background:rgb(243 239 232 / .12)}}
+@media (max-width:900px){.nav{display:none}}
+@media (max-width:480px){.top .long{display:none}.top .short{display:inline}.top-in{min-height:60px;padding-left:14px}}
+
+/* hero: deep teal veil over the photo */
+.hero{position:relative;isolation:isolate;background:var(--deep);color:var(--cream);overflow:clip}
+.hero-photo{position:absolute;inset:0;z-index:-2}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgb(var(--deep-rgb) / .97) 0%,rgb(var(--deep-rgb) / .94) 36%,rgb(var(--deep-rgb) / .6) 54%,rgb(var(--deep-rgb) / 0) 74%)}
+.hero-in{min-height:min(880px,calc(100svh - 36px));display:flex;flex-direction:column;justify-content:center;padding-block:150px 96px}
+.hero-copy{max-width:600px}
+.hero h1{font-size:var(--t-h1);line-height:.96}
+.hero h1 .pop{color:var(--accent-on-deep)}
+.hero p.lead{margin-top:var(--s-5);font-size:var(--t-lead);color:var(--cream);max-width:40ch}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s-3);margin-top:var(--s-6)}
+.facts{margin-top:var(--s-5);font-size:var(--t-small);color:var(--cream-soft);display:flex;flex-wrap:wrap;gap:var(--s-1) 10px;list-style:none;padding:0;font-weight:600}
+.facts li+li::before{content:"\00b7";margin-right:10px}
+.chip{position:absolute;z-index:3;right:var(--m);bottom:clamp(24px,4vw,48px);width:min(300px,calc(100% - var(--m)*2));border-radius:var(--r-card);padding:var(--s-4) var(--s-5);display:grid;gap:2px}
+.chip b{font-size:.8125rem;font-weight:800;color:var(--cream);letter-spacing:.02em}
+.chip p{font-size:1rem;line-height:1.4;font-weight:600}
+.chip p.small{font-size:.875rem;color:var(--cream);font-weight:800;margin-top:4px}
+
+/* sections */
+.sec{padding-top:var(--sec)}
+.head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:var(--s-4) var(--s-7);align-items:end;padding-bottom:var(--s-7)}
+.head h2{font-size:var(--t-h2)}
+.head h2 .pop{color:var(--accent-ink)}
+.head p{color:var(--muted);max-width:46ch;font-size:var(--t-lead)}
+
+/* photo cards */
+.photo{position:relative;border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-1)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.layer{position:relative;isolation:isolate}
+.layer::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--accent-soft);transform:translate(var(--off),var(--off))}
+
+/* the kinds: picker plus photos */
+.kinds{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-7) var(--s-8);align-items:start}
+.picker{border:0;padding:0;margin:0;min-width:0}
+.picker input{position:absolute;opacity:0;width:1px;height:1px;margin:0;pointer-events:none}
+.chips{display:flex;flex-wrap:wrap;gap:var(--s-2);margin-bottom:var(--s-5)}
+.chips label{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 18px 0 14px;border-radius:var(--r-ctl);background:var(--surface);color:var(--ink);font-weight:800;font-size:.9375rem;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.chips label::before{content:"";width:16px;height:16px;flex:none;border-radius:50%;background:radial-gradient(circle closest-side,transparent 0 32%,var(--dot) 36% 92%,transparent 96%)}
+.chips label:active{transform:scale(.97);box-shadow:none}
+@media (hover:hover) and (pointer:fine){.chips label:hover{box-shadow:var(--sh-2);transform:translateY(-1px)}.chips label:active{transform:scale(.97);box-shadow:none}}
+label[for="k-glazed"]{--dot:#e0a35a}
+label[for="k-frosted"]{--dot:#f27c97}
+label[for="k-filled"]::before{background:radial-gradient(circle closest-side,#efb76c 0 70%,#c9823d 92%,transparent 96%)}
+label[for="k-cake"]{--dot:#9c5a28}
+label[for="k-holes"]::before{width:12px;height:12px;background:radial-gradient(circle closest-side,#e9ad66 0 70%,#b9732f 92%,transparent 96%)}
+#k-glazed:checked ~ .chips label[for="k-glazed"],#k-frosted:checked ~ .chips label[for="k-frosted"],#k-filled:checked ~ .chips label[for="k-filled"],#k-cake:checked ~ .chips label[for="k-cake"],#k-holes:checked ~ .chips label[for="k-holes"]{background:var(--deep);color:var(--cream);box-shadow:var(--sh-2)}
+#k-glazed:focus-visible ~ .chips label[for="k-glazed"],#k-frosted:focus-visible ~ .chips label[for="k-frosted"],#k-filled:focus-visible ~ .chips label[for="k-filled"],#k-cake:focus-visible ~ .chips label[for="k-cake"],#k-holes:focus-visible ~ .chips label[for="k-holes"]{outline:2px solid var(--accent-ink);outline-offset:3px}
+
+.stage{position:relative;isolation:isolate;aspect-ratio:6/5;border-radius:var(--r-photo);overflow:hidden;background:radial-gradient(circle at 78% 18%,rgb(var(--glow-1) / .55),transparent 46%),radial-gradient(circle at 12% 92%,rgb(var(--glow-2) / .5),transparent 50%),var(--deep);box-shadow:var(--sh-3)}
+.stage::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(rgb(243 239 232 / .09) 1.3px,transparent 1.7px) 0 0/22px 22px}
+.plate{position:absolute;left:34%;top:50%;width:min(64%,74cqh);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle closest-side,#fbf6ee 0 66%,#ece0cf 69% 72%,#f7efe3 75% 98%,transparent 100%);box-shadow:4px 22px 40px -14px rgb(4 30 34 / .55)}
+@media (min-width:641px){.stage{container-type:size}}
+.dn{position:absolute;left:34%;top:50%;width:min(44%,51cqh);aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%) scale(.9) rotate(-14deg);opacity:0;container-type:inline-size;filter:drop-shadow(3px 9px 8px rgb(70 34 10 / .32))}
+.dn::before,.dn::after{content:"";position:absolute;inset:0;border-radius:50%}
+.ring{background:radial-gradient(circle closest-side,transparent 0 29%,#b8702f 30.5%,#dea15a 40%,#eab872 58%,#dd9c52 78%,#b46d2e 95%,transparent 97%)}
+.dn-glazed::before{background:radial-gradient(circle closest-side,transparent 0 31%,rgb(255 226 170 / .55) 35%,rgb(255 238 205 / .22) 60%,rgb(255 222 165 / .5) 88%,transparent 94%)}
+.dn-glazed::after,.dn-frosted::after,.dn-filled::after{background:radial-gradient(ellipse 22% 11% at 33% 24%,rgb(255 250 240 / .8),transparent 72%),radial-gradient(ellipse 13% 6% at 70% 76%,rgb(255 250 240 / .4),transparent 72%)}
+.dn-frosted::before{background:radial-gradient(circle closest-side,transparent 0 33%,#ec6d8b 35%,#f591a9 52%,#f27c97 76%,#e8617f 86%,transparent 89%)}
+.spr{position:absolute;left:50%;top:50%;width:3.4cqi;height:9cqi;margin:-4.5cqi 0 0 -1.7cqi;border-radius:9px;transform:rotate(28deg);box-shadow:22cqi 2cqi 0 var(--spr-1),-24cqi 6cqi 0 var(--spr-2),3cqi 27cqi 0 var(--spr-3),-6cqi -28cqi 0 var(--spr-4),26cqi -16cqi 0 var(--spr-5),-20cqi -20cqi 0 var(--spr-3),15cqi 24cqi 0 var(--spr-2),-27cqi -6cqi 0 var(--spr-1),32cqi 10cqi 0 var(--spr-3),-14cqi 30cqi 0 var(--spr-4)}
+.spr2{transform:rotate(-58deg);box-shadow:30cqi 16cqi 0 var(--spr-2),-11cqi 20cqi 0 var(--spr-4),22cqi 6cqi 0 var(--spr-3),8cqi 31cqi 0 var(--spr-5),-18cqi -20cqi 0 var(--spr-1),30cqi -23cqi 0 var(--spr-3),-33cqi 16cqi 0 var(--spr-4),-11cqi -35cqi 0 var(--spr-2),-19cqi -9cqi 0 var(--spr-5)}
+.dn-filled{background:radial-gradient(circle closest-side,#f2c07a 0 34%,#e8ad63 58%,#dc9a4c 78%,rgb(246 228 190 / .9) 84% 87%,#d08a42 91%,#a9662a 96%,transparent 97.5%)}
+.dn-filled::before{background:radial-gradient(circle at 42% 38%,rgb(255 236 200 / .55) 0 18%,transparent 52%)}
+.dn-cake{background:radial-gradient(circle closest-side,transparent 0 28%,#8a4a1d 29.5%,#b7753a 40%,#c98a4b 60%,#b06b31 84%,#874719 95%,transparent 97%)}
+.dn-cake::before{background:radial-gradient(circle,rgb(92 46 16 / .3) 20%,transparent 26%) 0 0/5.3cqi 5.3cqi,radial-gradient(circle,rgb(244 206 156 / .28) 16%,transparent 22%) 2.1cqi 3.4cqi/7.7cqi 7.7cqi,radial-gradient(circle,rgb(120 62 22 / .28) 14%,transparent 20%) 4.4cqi 1.2cqi/9.9cqi 9.9cqi;-webkit-mask:radial-gradient(circle closest-side,transparent 0 31%,#111110 33% 93%,transparent 95%);mask:radial-gradient(circle closest-side,transparent 0 31%,#111110 33% 93%,transparent 95%)}
+.dn-cake::after{background:radial-gradient(ellipse 20% 10% at 34% 25%,rgb(255 240 220 / .35),transparent 72%)}
+.dn-holes{border-radius:0}
+.dn-holes::before,.dn-holes::after{content:none}
+.dn-holes i{position:absolute;width:44%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 36% 30%,#fbe3b4 0 7%,#ecb46d 22%,#d08b43 58%,#a5612a 92%)}
+.dn-holes i:nth-child(1){left:6%;top:30%}
+.dn-holes i:nth-child(2){left:46%;top:16%}
+.dn-holes i:nth-child(3){left:30%;top:52%}
+#k-glazed:checked ~ .stage .dn-glazed,#k-frosted:checked ~ .stage .dn-frosted,#k-filled:checked ~ .stage .dn-filled,#k-cake:checked ~ .stage .dn-cake,#k-holes:checked ~ .stage .dn-holes{opacity:1;transform:translate(-50%,-50%)}
+@media (prefers-reduced-motion:no-preference){.dn{transition:opacity 220ms ease-out,transform 420ms var(--ease)}}
+
+.pane{display:none;position:absolute;z-index:2;right:var(--s-4);top:50%;transform:translateY(-50%);width:min(40%,280px);border-radius:var(--r-card);padding:var(--s-5)}
+.pane h3{font-size:clamp(1.5rem,1.2rem + 1vw,2rem);line-height:1.05}
+.pane p{margin-top:var(--s-2);font-size:1rem;line-height:1.45}
+.pane a{display:inline-flex;align-items:center;gap:.3em;min-height:44px;margin-top:var(--s-2);font-weight:800;color:var(--cream);text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px}
+#k-glazed:checked ~ .stage .p-glazed,#k-frosted:checked ~ .stage .p-frosted,#k-filled:checked ~ .stage .p-filled,#k-cake:checked ~ .stage .p-cake,#k-holes:checked ~ .stage .p-holes{display:block}
+
+.kinds-pics{position:relative;padding-bottom:var(--s-8)}
+.kinds-pics .layer{margin-right:var(--off)}
+.kinds-pics .tall{aspect-ratio:4/5}
+.kinds-pics .small{position:absolute;left:calc(var(--s-6) * -1);bottom:0;width:62%;aspect-ratio:16/11;border:6px solid var(--bg);box-shadow:var(--sh-3)}
+.kinds-pics .small img{object-position:50% 55%}
+
+/* deep band: how a visit goes */
+.band{margin-top:var(--sec);padding-block:var(--band-pad);background:var(--deep);color:var(--cream);position:relative;isolation:isolate;overflow:clip}
+.band::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(rgb(243 239 232 / .07) 1.3px,transparent 1.7px) 0 0/24px 24px}
+.band .head p{color:var(--cream-soft)}
+.band .head h2 .pop{color:var(--accent-on-deep)}
+.visit-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7) var(--s-8);align-items:center}
+.visit-grid .head{grid-template-columns:minmax(0,1fr);padding-bottom:0;align-items:start}
+.visit-grid .head .btn{margin-top:var(--s-5);width:fit-content}
+.steps-card{position:relative;isolation:isolate;border-radius:var(--r-photo);overflow:hidden;padding:clamp(20px,3vw,40px);box-shadow:var(--sh-3)}
+.steps-card > img{position:absolute;inset:0;z-index:-1;width:100%;height:100%;object-fit:cover;object-position:58% 50%}
+.steps{list-style:none;padding:0;display:grid;gap:var(--s-4);counter-reset:step;max-width:440px}
+.steps li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:2px var(--s-4);counter-increment:step;padding:var(--s-4) var(--s-5) var(--s-4) var(--s-4);border-radius:var(--r-card)}
+.steps li::before{content:counter(step);grid-row:1 / span 2;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--on-accent);font-family:var(--font-display);font-size:1.25rem;font-variant-numeric:tabular-nums}
+.steps h3{font-size:1.375rem;line-height:1.2;padding-top:8px}
+.steps p{font-size:1rem;line-height:1.5}
+.steps a{color:var(--cream);font-weight:800;text-decoration-color:var(--accent);text-decoration-thickness:2px;display:inline-flex;align-items:center;min-height:32px}
+
+/* photo strip */
+.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s-5);align-items:start}
+.strip .photo{aspect-ratio:4/5}
+.strip .photo:nth-child(even){margin-top:var(--s-8);aspect-ratio:3/4}
+.strip .photo:nth-child(2) img{object-position:52% 50%}
+
+/* find us: pale frosting band */
+.find{margin-top:var(--sec);padding-block:var(--band-pad);background:radial-gradient(rgb(239 90 122 / .16) 1.4px,transparent 1.9px) 0 0/26px 26px,radial-gradient(rgb(14 85 96 / .12) 1.4px,transparent 1.9px) 13px 13px/26px 26px,var(--tint)}
+.find-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-6) var(--s-7);align-items:stretch}
+.hours-card{position:relative;isolation:isolate;min-height:520px;display:flex;align-items:flex-end;padding:var(--s-4)}
+.hours-card > img{position:absolute;inset:0;z-index:-1;width:100%;height:100%;object-fit:cover}
+.hours{width:100%;border-radius:var(--r-card);padding:var(--s-5)}
+.hours h3{font-size:1.625rem}
+.hours dl{margin-top:var(--s-3);display:grid;grid-template-columns:auto 1fr;gap:6px var(--s-4);font-size:1rem}
+.hours dt{font-weight:800}
+.hours dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
+.hours p{margin-top:var(--s-3);font-size:.9375rem;font-weight:800;color:var(--cream)}
+.find-side{display:grid;gap:var(--s-4);grid-template-rows:1fr auto}
+.map{border-radius:var(--r-photo);overflow:hidden;background:var(--surface);box-shadow:var(--sh-1);min-height:360px}
+.map iframe{display:block;width:100%;height:100%;min-height:360px;border:0}
+.ways{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:var(--s-4)}
+.ways a{display:grid;gap:2px;height:100%;padding:var(--s-4) var(--s-5);border-radius:var(--r-card);background:var(--surface);text-decoration:none;font-size:var(--t-lead);font-weight:700;line-height:1.35;box-shadow:var(--sh-1);transition:box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.ways a:active{transform:scale(.985);box-shadow:none}
+.ways .lbl{font-size:.8125rem;font-weight:800;color:var(--accent-ink);letter-spacing:.02em}
+@media (hover:hover) and (pointer:fine){.ways a:hover{box-shadow:var(--sh-2);transform:translateY(-2px)}.ways a:active{transform:scale(.985);box-shadow:none}}
+
+/* footer: deep teal */
+.foot{background:var(--foot);padding-block:var(--s-7);font-size:.875rem;color:var(--cream-soft)}
+.foot .wrap{display:grid;grid-template-columns:1fr auto;gap:var(--s-3) var(--s-6);align-items:center}
+.foot b{color:var(--cream);font-family:var(--font-display);font-weight:400;font-size:1.375rem;letter-spacing:0}
+.foot a{color:var(--cream-soft)}
+.foot .right{text-align:right}
+.foot .right a{display:inline-flex;align-items:center;min-height:44px;font-weight:700;color:var(--cream)}
+.foot .credit{grid-column:1/-1;max-width:none}
+
+/* footer mark: a 2 s logo build that plays once in view, muted; the still logo shows until it really plays and is the fallback */
+.gcd{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:14px;margin-top:12px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font-weight:500}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--tint)}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
+.foot .gcd{color:var(--cream-soft)}
+.foot .gcd-text b{color:var(--cream);font-family:var(--font);font-size:.875rem;font-weight:700}
+@media (hover:hover) and (pointer:fine){.foot .gcd:hover{background:rgb(243 239 232 / .08)}}
+.hero :focus-visible,.band :focus-visible,.stage :focus-visible,.foot :focus-visible,.foot .gcd:focus-visible{outline-color:var(--cream)}
+
+/* phone bar */
+.bar{display:none}
+
+/* motion: slow, once, opacity and a few pixels; never on glass text */
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;transform:translateY(18px);transition:opacity 700ms var(--ease),transform 700ms var(--ease)}
+  .js .rv.in{opacity:1;transform:none}
+  .js .strip .rv:nth-child(2){transition-delay:70ms}
+  .js .strip .rv:nth-child(3){transition-delay:140ms}
+  .js .strip .rv:nth-child(4){transition-delay:210ms}
+  .hero .rise{animation:rise 800ms var(--ease) both}
+  .hero .rise.d2{animation-delay:90ms}
+  .hero .rise.d3{animation-delay:180ms}
+  .hero-photo img{animation:settle 1800ms var(--ease) both}
+}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes settle{from{transform:scale(1.06)}to{transform:none}}
+
+/* tablet */
+@media (max-width:960px){
+  .head,.kinds,.visit-grid,.find-grid{grid-template-columns:minmax(0,1fr)}
+  .kinds-pics{max-width:560px}
+  .hours-card{min-height:440px}
+  .steps{max-width:none}
+}
+
+/* phone: photo on top, teal below */
+@media (max-width:760px){
+  .hero::before{content:none}
+  .hero-photo{position:relative;inset:auto;aspect-ratio:4/3.1}
+  .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgb(var(--deep-rgb) / .35) 0%,rgb(var(--deep-rgb) / 0) 30%,rgb(var(--deep-rgb) / 0) 72%,rgb(var(--deep-rgb) / 1) 100%)}
+  .hero-photo img{object-position:40% 50%}
+  .hero-in{min-height:0;padding-block:8px 56px;display:block}
+  .hero-in{position:relative}
+  .chip{right:auto;left:var(--m);bottom:calc(100% + 10px);width:auto;max-width:calc(100% - var(--m)*2);padding:var(--s-3) var(--s-4)}
+  .chip p{font-size:.9375rem}
+}
+@media (max-width:640px){
+  :root{--bar:calc(64px + env(safe-area-inset-bottom));--r-photo:18px;--r-card:16px;--off:10px}
+  .cta .btn{flex:1 1 auto}
+  .facts{gap:2px 16px}
+  .facts li+li::before{content:none}
+  .head{padding-bottom:var(--s-6)}
+  .stage{aspect-ratio:auto;height:auto;min-height:0;padding:var(--s-4);padding-top:calc(min(70vw,300px) + var(--s-4))}
+  .plate{left:50%;top:calc(min(70vw,300px) / 2 + 8px);width:min(64vw,276px)}
+  .dn{left:50%;top:calc(min(70vw,300px) / 2 + 8px);width:min(44vw,190px)}
+  .pane{position:relative;right:auto;top:auto;transform:none;width:auto}
+  .kinds-pics .small{left:auto;right:var(--s-4);width:58%}
+  .strip{grid-template-columns:1fr 1fr;gap:var(--s-3)}
+  .strip .photo:nth-child(even){margin-top:var(--s-6)}
+  .hours-card{min-height:420px;padding:var(--s-3)}
+  .ways{grid-template-columns:minmax(0,1fr)}
+  .map,.map iframe{min-height:300px}
+  .foot .wrap{grid-template-columns:minmax(0,1fr)}
+  .foot .right{text-align:left}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+  .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:62px;font-weight:800;font-size:1rem;text-decoration:none;color:var(--ink)}
+  .bar a:first-child{background:var(--accent);color:var(--on-accent)}
+  .bar a:active{opacity:.85}
+  .bar svg{width:18px;height:18px}
+}
+@media (max-width:640px) and (max-height:740px){
+  .hero-photo{aspect-ratio:16/10}
+  .hero h1{font-size:2.75rem}
+  .hero p.lead{margin-top:var(--s-3);font-size:1rem;line-height:1.5}
+  .cta{margin-top:var(--s-4)}
+}
+@media (max-width:420px) and (max-height:600px){
+  .hero-photo{aspect-ratio:2/1}
+  .chip{display:none}
+  .hero h1{font-size:2.25rem}
+  .hero p.lead{font-size:.9375rem}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="sample" role="note">Sample site made for NC Donuts by <a href="https://granitecitydigital.me/">Granite City Digital</a>. Your real site gets your own photos, colors and menu.</div>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-h">
+    <header class="top">
+      <div class="wrap">
+        <div class="top-in glass">
+          <a class="mark" href="#top" aria-label="NC Donuts, back to top"><i aria-hidden="true"></i><span>NC Donuts</span></a>
+          <nav aria-label="Main">
+            <ul class="nav">
+              <li><a href="#kinds">The kinds</a></li>
+              <li><a href="#visit">Stopping by</a></li>
+              <li><a href="#photos">Photos</a></li>
+              <li><a href="#find">Find us</a></li>
+            </ul>
+          </nav>
+          <a class="btn" href="tel:+12526311260"><span class="long">Call <span class="num">(252) 631 1260</span></span><span class="short">Call</span></a>
+        </div>
+      </div>
+    </header>
+    <figure class="hero-photo"><img src="hero.jpg" width="1600" height="1067" fetchpriority="high" alt="Teal, pink and lilac frosted donuts covered in sprinkles, close up"></figure>
+    <div class="wrap hero-in">
+      <div class="hero-copy">
+        <h1 class="rise" id="hero-h"><span class="pop">Donuts</span> on Trent Rd.</h1>
+        <p class="lead rise d2">NC Donuts is a donut shop at 2909 Trent Rd in New Bern. Glazed, frosted, filled, cake donuts and donut holes.</p>
+        <div class="cta rise d3">
+          <a class="btn" href="tel:+12526311260"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call <span class="num">(252) 631 1260</span></a>
+          <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=NC+Donuts+2909+Trent+Rd+New+Bern+NC">Get directions</a>
+        </div>
+        <ul class="facts rise d3">
+          <li>Open Tuesday to Sunday</li>
+          <li>Closed Monday</li>
+          <li>Call ahead to confirm</li>
+        </ul>
+      </div>
+      <div class="chip glass deep">
+        <b>Hours</b>
+        <p>Tuesday to Saturday 6 to 5</p>
+        <p>Sunday 6 to 3, closed Monday</p>
+        <p class="small">Call ahead to confirm</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="kinds" aria-labelledby="kinds-h">
+    <div class="head rv">
+      <h2 id="kinds-h">Pick a <span class="pop">kind</span></h2>
+      <p>Glazed, frosted, filled, cake donuts and donut holes. Tap one to see it, then call ahead to ask what we have.</p>
+    </div>
+    <div class="kinds">
+      <form class="kinds-form" aria-label="Pick a kind of donut">
+        <fieldset class="picker">
+          <legend class="vh">Kind of donut</legend>
+          <input type="radio" name="kind" id="k-glazed" value="glazed" checked>
+          <input type="radio" name="kind" id="k-frosted" value="frosted">
+          <input type="radio" name="kind" id="k-filled" value="filled">
+          <input type="radio" name="kind" id="k-cake" value="cake">
+          <input type="radio" name="kind" id="k-holes" value="holes">
+          <div class="chips">
+            <label for="k-glazed">Glazed</label>
+            <label for="k-frosted">Frosted</label>
+            <label for="k-filled">Filled</label>
+            <label for="k-cake">Cake</label>
+            <label for="k-holes">Holes</label>
+          </div>
+          <div class="stage">
+            <div class="plate" aria-hidden="true"></div>
+            <div class="dn ring dn-glazed" aria-hidden="true"></div>
+            <div class="dn ring dn-frosted" aria-hidden="true"><i class="spr"></i><i class="spr spr2"></i></div>
+            <div class="dn dn-filled" aria-hidden="true"></div>
+            <div class="dn dn-cake" aria-hidden="true"></div>
+            <div class="dn dn-holes" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="pane p-glazed glass"><h3>Glazed donuts</h3><p>Call ahead to ask what we have.</p><a href="tel:+12526311260">Call <span class="num">(252) 631 1260</span></a></div>
+            <div class="pane p-frosted glass"><h3>Frosted donuts</h3><p>Call ahead to ask what we have.</p><a href="tel:+12526311260">Call <span class="num">(252) 631 1260</span></a></div>
+            <div class="pane p-filled glass"><h3>Filled donuts</h3><p>Call ahead to ask what we have.</p><a href="tel:+12526311260">Call <span class="num">(252) 631 1260</span></a></div>
+            <div class="pane p-cake glass"><h3>Cake donuts</h3><p>Call ahead to ask what we have.</p><a href="tel:+12526311260">Call <span class="num">(252) 631 1260</span></a></div>
+            <div class="pane p-holes glass"><h3>Donut holes</h3><p>Call ahead to ask what we have.</p><a href="tel:+12526311260">Call <span class="num">(252) 631 1260</span></a></div>
+          </div>
+        </fieldset>
+      </form>
+      <div class="kinds-pics rv">
+        <div class="layer"><figure class="photo tall"><img src="glazed.jpg" width="1200" height="1600" alt="Rows of glazed donuts seen from above"></figure></div>
+        <figure class="photo small"><img src="frosted-glazed.jpg" width="1600" height="1022" alt="Two frosted donuts with sprinkles on either side of a glazed donut"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="visit" aria-labelledby="visit-h">
+    <div class="wrap visit-grid">
+      <div class="head rv">
+        <h2 id="visit-h">Stopping <span class="pop">by</span></h2>
+        <p>We are on Trent Rd in New Bern, open Tuesday to Sunday. Call ahead to confirm.</p>
+        <a class="btn" href="tel:+12526311260">Call <span class="num">(252) 631 1260</span></a>
+      </div>
+      <div class="steps-card">
+        <img src="frosted-teal.jpg" width="1600" height="1067" alt="Teal frosted donuts with rainbow sprinkles on a baking tray">
+        <ol class="steps">
+          <li class="glass deep"><h3>Call ahead</h3><p><a class="num" href="tel:+12526311260">(252) 631 1260</a>. Call ahead to confirm hours.</p></li>
+          <li class="glass deep"><h3>Head to Trent Rd</h3><p>Find us at 2909 Trent Rd in New Bern.</p></li>
+          <li class="glass deep"><h3>Pick your kinds</h3><p>Glazed, frosted, filled, cake donuts or donut holes.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="photos" aria-labelledby="photos-h">
+    <div class="head rv">
+      <h2 id="photos-h">Glazed, frosted <span class="pop">and filled</span></h2>
+      <p>Plus cake donuts and donut holes, at 2909 Trent Rd.</p>
+    </div>
+    <div class="strip">
+      <figure class="photo rv"><img src="pink-stack.jpg" width="1200" height="1452" alt="A stack of four pink frosted donuts with sprinkles"></figure>
+      <figure class="photo rv"><img src="donut-holes.jpg" width="1600" height="945" alt="Donut holes topped with sprinkles on a small plate"></figure>
+      <figure class="photo rv"><img src="sugar-rings.jpg" width="1600" height="1067" alt="A row of ring donuts on brown paper"></figure>
+      <figure class="photo rv"><img src="kraft-box.jpg" width="1200" height="1600" alt="Four frosted and glazed donuts in an open paper box"></figure>
+    </div>
+  </section>
+
+  <section class="find" id="find" aria-labelledby="find-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="find-h">Find us on <span class="pop">Trent Rd</span></h2>
+        <p>2909 Trent Rd, New Bern, NC. Call ahead to confirm hours.</p>
+      </div>
+      <div class="find-grid">
+        <div class="photo hours-card">
+          <img src="sprinkle-rows.jpg" width="1067" height="1600" loading="lazy" alt="Rows of frosted donuts with sprinkles on an aqua table">
+          <div class="hours glass deep">
+            <h3>Hours</h3>
+            <dl>
+              <dt>Tuesday to Saturday</dt><dd>6 to 5</dd>
+              <dt>Sunday</dt><dd>6 to 3</dd>
+              <dt>Monday</dt><dd>Closed</dd>
+            </dl>
+            <p>Call ahead to confirm</p>
+          </div>
+        </div>
+        <div class="find-side">
+          <div class="map rv"><iframe src="https://maps.google.com/maps?q=2909%20Trent%20Rd%2C%20New%20Bern%2C%20NC&amp;z=15&amp;output=embed" loading="lazy" title="Map showing NC Donuts at 2909 Trent Rd, New Bern, NC"></iframe></div>
+          <ul class="ways">
+            <li><a href="tel:+12526311260"><span class="lbl">Call</span><span class="num">(252) 631 1260</span></a></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=NC+Donuts+2909+Trent+Rd+New+Bern+NC"><span class="lbl">Get directions</span>2909 Trent Rd, New Bern</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><b>NC Donuts</b><br>2909 Trent Rd, New Bern, NC</p>
+    <p class="right"><a class="num" href="tel:+12526311260">(252) 631 1260</a></p>
+    <p class="credit">Photos are examples.</p>
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a href="tel:+12526311260"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=NC+Donuts+2909+Trent+Rd+New+Bern+NC"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  /* quiet reveal, once per element */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+  addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Paleteria La Reyna Michoacana | Paletas and ice cream in Las Cruces, NM</title>
+<meta name="description" content="Paleteria La Reyna Michoacana is a paleta and ice cream shop at 870 E Madrid Ave, Suite 3, in Las Cruces, NM. Paletas and ice cream in cups and cones. Call (575) 524 7888.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#fcf4ef">
+<meta property="og:title" content="Paleteria La Reyna Michoacana | Las Cruces, NM">
+<meta property="og:description" content="Paleteria La Reyna Michoacana is a paleta and ice cream shop at 870 E Madrid Ave, Suite 3, in Las Cruces, NM. Paletas and ice cream in cups and cones. Call (575) 524 7888.">
+<meta property="og:image" content="https://granitecitydigital.me/samples/paleteria-la-reyna-michoacana-nm/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&family=Shrikhand&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* 1. this page's own look: rosa mexicano and mango */
+:root{
+  --bg:#fcf4ef;          /* page ground, warm pink cream */
+  --surface:#fffaf6;     /* raised cards */
+  --tint:#f8e7e3;        /* light bands */
+  --foot:#23121a;        /* footer ground, warm near black */
+  --ink:#23121a;
+  --muted:#6b4b57;
+  --line:#ecd5d2;
+  --deep:#9e1259;        /* rosa mexicano band */
+  --deep-2:#7c0d45;      /* darker rosa for depth and glass tint */
+  --deep-rgb:124 13 69;
+  --cream:#f8eee6;       /* text on deep grounds */
+  --cream-soft:#f1d7e0;  /* secondary text on deep grounds */
+  --accent:#f7a41d;      /* mango: buttons, one headline word, labels, numbers */
+  --accent-hover:#ffb847;
+  --accent-ink:#8f4f00;  /* mango shade for small text on the light ground */
+  --accent-soft:#fde2b4; /* offset blocks behind photos */
+  --on-accent:#23121a;
+  --ring:#9e1259;        /* focus ring on light grounds */
+  --danger:#a3392b;
+  --shadow:88 18 48;     /* shadow color as r g b, a tint of the ink */
+  --texture:radial-gradient(rgb(255 248 240 / .07) 1.2px,transparent 1.6px) 0 0/24px 24px;
+
+  --font:"Rubik",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Shrikhand","Rubik",Georgia,serif;
+  --display-weight:400;
+
+  --r-ctl:999px;
+  --r-card:clamp(16px,1.6vw,22px);
+  --r-photo:clamp(18px,2.2vw,28px);
+}
+/* 2. the system */
+:root{
+  --t-small:.875rem;
+  --t-body:1.0625rem;
+  --t-lead:clamp(1.0625rem,1rem + .35vw,1.25rem);
+  --t-h3:1.1875rem;
+  --t-h2:clamp(2rem,1.4rem + 2.2vw,3.25rem);
+  --t-h1:clamp(2.5rem,1.45rem + 3.9vw,4.75rem);
+
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+  --sec:clamp(88px,10vw,144px);
+  --band-pad:clamp(64px,8vw,112px);
+  --off:clamp(10px,1.4vw,18px);
+
+  --sh-1:1px 1px 2px rgb(var(--shadow) / .06),2px 6px 16px -6px rgb(var(--shadow) / .18);
+  --sh-2:1px 2px 4px rgb(var(--shadow) / .07),4px 14px 32px -10px rgb(var(--shadow) / .26);
+  --sh-3:2px 4px 8px rgb(var(--shadow) / .08),8px 28px 56px -16px rgb(var(--shadow) / .36);
+
+  --wrap:1160px;
+  --m:clamp(20px,4vw,32px);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --bar:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+@media (max-width:760px){html{scroll-padding-bottom:96px}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased;caret-color:var(--deep);scrollbar-color:var(--deep) var(--tint)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+::selection{background:var(--deep);color:var(--cream)}
+:focus-visible{outline:2px solid var(--ring);outline-offset:3px}
+h1,h2,h3{font-family:var(--font-display);font-weight:var(--display-weight);letter-spacing:-.01em;line-height:1.08;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:10px}
+.skip:focus{top:12px}
+.num{font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+
+/* buttons: raised level; hover lifts, press sinks */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2);min-height:50px;padding:0 24px;border-radius:var(--r-ctl);border:1px solid transparent;background:var(--accent);color:var(--on-accent);font:600 1rem/1 var(--font);text-decoration:none;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,border-color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.btn svg{width:17px;height:17px;flex:none}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.line{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.btn.ghost{background:transparent;color:var(--cream);border-color:rgb(248 238 230 / .45);box-shadow:none}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--accent-hover);box-shadow:var(--sh-2);transform:translateY(-1px)}
+  .btn.line:hover{background:var(--surface);border-color:var(--muted)}
+  .btn.ghost:hover{background:rgb(248 238 230 / .1);border-color:var(--cream)}
+  .btn:active{transform:scale(.97);box-shadow:none}
+}
+
+/* sample banner */
+.sample{background:var(--tint);color:var(--muted);font-size:.8125rem;text-align:center;padding:8px var(--m);line-height:1.45}
+.sample a{color:var(--ink)}
+
+/* header */
+.top{border-bottom:1px solid var(--line);background:var(--bg)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s-5);min-height:76px}
+.brand{display:grid;gap:0;text-decoration:none;min-height:44px;align-content:center;line-height:1.1}
+.brand small{font:500 .75rem/1.2 var(--font);color:var(--deep);letter-spacing:.02em}
+.brand b{font:400 1.25rem/1.15 var(--font-display);color:var(--ink);letter-spacing:-.005em;white-space:nowrap}
+.nav{display:flex;align-items:center;gap:28px;list-style:none;padding:0;font-size:var(--t-small);font-weight:500}
+.nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 200ms ease}
+.top .btn{min-height:44px;padding:0 18px;font-size:var(--t-small)}
+.top .short{display:none}
+@media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--deep)}}
+@media (max-width:880px){.nav{display:none}}
+@media (max-width:480px){.top .long{display:none}.top .short{display:inline}.top .wrap{gap:var(--s-3)}}
+@media (max-width:360px){.brand b{font-size:1rem}.brand small{font-size:.6875rem}.top .btn{padding:0 14px}}
+
+/* photo cards */
+.photo{position:relative;border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-1)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.layer{position:relative;isolation:isolate}
+.layer::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--accent-soft);transform:translate(var(--off),var(--off))}
+
+/* glass: only over a photo or rich color */
+.glass{background:rgb(var(--deep-rgb) / var(--ga,.62));-webkit-backdrop-filter:blur(16px) saturate(160%);backdrop-filter:blur(16px) saturate(160%);border:1px solid rgb(248 238 230 / .16);box-shadow:inset 0 1px 0 rgb(255 248 240 / .2),var(--sh-2);color:var(--cream)}
+@media (max-width:600px){.glass{-webkit-backdrop-filter:blur(10px) saturate(150%);backdrop-filter:blur(10px) saturate(150%)}}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.glass{background:var(--deep-2)}}
+
+/* hero */
+.hero{padding-top:clamp(32px,5vw,72px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,6.2fr) minmax(0,5.8fr);gap:var(--s-7) clamp(40px,6vw,88px);align-items:center}
+.hero h1{font-size:var(--t-h1);line-height:1.04}
+.hero h1 .w{color:var(--deep);position:relative;white-space:nowrap}
+.hero h1 .w::after{content:"";position:absolute;left:2%;right:4%;bottom:.02em;height:.14em;border-radius:99px;background:var(--accent);z-index:-1;transform:rotate(-1.5deg)}
+.hero h1 .w{isolation:isolate;display:inline-block}
+.intro{margin-top:var(--s-5);color:var(--muted);font-size:var(--t-lead);max-width:44ch}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s-3);margin-top:var(--s-6)}
+.facts{margin-top:var(--s-6);display:flex;flex-wrap:wrap;gap:var(--s-2);list-style:none;padding:0}
+.facts li{font-size:var(--t-small);font-weight:500;color:var(--ink);background:var(--surface);border-radius:999px;padding:7px 14px;box-shadow:var(--sh-1)}
+.hero-pic{margin-right:var(--off);margin-bottom:var(--off)}
+.hero-pic .photo{aspect-ratio:4/5;max-height:min(720px,calc(100svh - 150px));margin-left:auto}
+.hero-pic img{object-position:50% 40%}
+.chip{position:absolute;z-index:2;left:var(--s-5);bottom:var(--s-5);max-width:calc(100% - var(--s-7));border-radius:var(--r-card);padding:var(--s-4) var(--s-5);display:grid;gap:2px;--ga:.8}
+.chip b{font:400 1.25rem/1.2 var(--font-display)}
+.chip span{font-size:.9375rem;color:var(--cream)}
+
+/* the paleta stick row: decor only */
+.sticks{position:relative;z-index:2;margin-top:var(--sec);height:150px;display:flex;justify-content:center;gap:clamp(10px,1.4vw,18px);overflow:hidden;pointer-events:none}
+.sticks i{position:relative;flex:none;width:clamp(34px,3.4vw,46px);height:var(--h,96px);margin-top:calc(110px - var(--h,96px));border-radius:22px 22px 9px 9px;background:var(--c);transform:rotate(var(--r,0deg));box-shadow:inset -6px 0 0 rgb(35 18 26 / .07),2px 6px 14px -6px rgb(var(--shadow) / .35)}
+.sticks i::before{content:"";position:absolute;left:22%;top:12%;width:16%;height:46%;border-radius:9px;background:rgb(255 248 240 / .38)}
+.sticks i::after{content:"";position:absolute;left:50%;bottom:-44px;width:10px;height:48px;margin-left:-5px;border-radius:0 0 5px 5px;background:#e9c891;box-shadow:inset -2px 0 0 rgb(120 80 30 / .18);z-index:-1}
+.menu{margin-top:-40px;padding-top:calc(var(--band-pad) + 40px)}
+
+/* deep band */
+.band{padding-block:var(--band-pad);background:var(--tint)}
+.band.deep{background:var(--deep) var(--texture);color:var(--cream)}
+.band.deep .head p{color:var(--cream-soft)}
+.band.deep :focus-visible{outline-color:var(--accent)}
+.band + .sec,.sec{padding-top:var(--sec)}
+.head{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:var(--s-4) var(--s-7);align-items:end;padding-bottom:var(--s-7)}
+.head h2{font-size:var(--t-h2)}
+.head p{color:var(--muted);max-width:46ch;font-size:var(--t-lead)}
+.acc{color:var(--accent)}
+
+/* menu */
+.treats{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s-6) var(--s-5)}
+.treats li{display:grid;gap:var(--s-4);align-content:start}
+.treats li:nth-child(2){margin-top:var(--s-7)}
+.treats .photo{aspect-ratio:4/5;box-shadow:var(--sh-2)}
+.treats .label{position:absolute;left:var(--s-4);top:var(--s-4);border-radius:999px;padding:8px 16px;--ga:.72}
+.treats .label h3{font-size:1.25rem;line-height:1.2}
+.treats p{color:var(--cream-soft);max-width:34ch}
+.treats li:nth-child(1) img{object-position:50% 50%}
+.treats li:nth-child(3) img{object-position:38% 50%}
+.more{margin-top:var(--s-8);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--s-4) var(--s-6);align-items:center;padding:var(--s-6);border-radius:var(--r-card);background:var(--deep-2);box-shadow:var(--sh-2)}
+.more h3{font-size:1.5rem}
+.more p{color:var(--cream-soft);margin-top:4px}
+
+/* photo strip */
+.strip{display:grid;grid-template-columns:5fr 4fr 5fr;gap:var(--s-5);align-items:start}
+.strip .photo{aspect-ratio:4/5}
+.strip .photo:nth-child(2){margin-top:var(--s-8);aspect-ratio:3/4}
+.strip .photo:nth-child(3) img{object-position:30% 50%}
+
+/* picker: cup, cone or paleta */
+.stage{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--s-6);align-items:center;padding:clamp(28px,4vw,56px);border-radius:clamp(22px,2.6vw,32px);background:var(--deep);color:var(--cream);box-shadow:var(--sh-3)}
+.stage::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(420px 320px at 18% 30%,rgb(247 164 29 / .55),transparent 70%),radial-gradient(380px 300px at 82% 78%,rgb(255 122 162 / .5),transparent 70%),radial-gradient(300px 260px at 70% 10%,rgb(155 209 60 / .28),transparent 70%)}
+.stage input{position:absolute;opacity:0;pointer-events:none}
+.art{position:relative;min-height:340px;display:grid;place-items:center}
+.art figure{grid-area:1/1;display:grid;justify-items:center;gap:var(--s-5);opacity:0;visibility:hidden;transition:opacity 220ms ease,transform 320ms var(--ease),visibility 0s linear 220ms;transform:translateY(10px) scale(.96)}
+.art figcaption{font-size:var(--t-lead);font-weight:500;text-align:center;max-width:30ch;color:var(--cream)}
+#p-paleta:checked ~ .art .d-paleta,#p-cup:checked ~ .art .d-cup,#p-cone:checked ~ .art .d-cone{opacity:1;visibility:visible;transform:none;transition:opacity 220ms ease,transform 320ms var(--ease),visibility 0s}
+.draw{position:relative;width:220px;height:250px}
+.d-paleta .body{position:absolute;left:55px;top:0;width:110px;height:170px;border-radius:55px 55px 18px 18px;background:var(--accent);box-shadow:inset -14px 0 0 rgb(35 18 26 / .08),6px 16px 30px -12px rgb(30 0 15 / .5)}
+.d-paleta .body::before{content:"";position:absolute;left:20px;top:22px;width:16px;height:80px;border-radius:9px;background:rgb(255 248 240 / .42)}
+.d-paleta .stick{position:absolute;left:96px;top:160px;width:28px;height:90px;border-radius:0 0 14px 14px;background:#e9c891;box-shadow:inset -5px 0 0 rgb(120 80 30 / .18)}
+.d-cup .scoop{position:absolute;left:40px;top:12px;width:140px;height:120px;border-radius:70px 70px 40px 40px;background:#ff7aa2;box-shadow:inset -12px -6px 0 rgb(35 18 26 / .07)}
+.d-cup .scoop::before{content:"";position:absolute;left:26px;top:22px;width:34px;height:16px;border-radius:99px;background:rgb(255 248 240 / .45);transform:rotate(-18deg)}
+.d-cup .cup{position:absolute;left:28px;top:96px;width:164px;height:140px;clip-path:polygon(0 0,100% 0,86% 100%,14% 100%);background:linear-gradient(var(--cream) 0 30%,var(--accent) 30% 44%,var(--cream) 44%);box-shadow:6px 16px 30px -12px rgb(30 0 15 / .5)}
+.d-cone .scoop{position:absolute;left:45px;top:0;width:130px;height:118px;border-radius:65px 65px 36px 36px;background:#9bd13c;box-shadow:inset -12px -6px 0 rgb(35 18 26 / .07)}
+.d-cone .scoop::before{content:"";position:absolute;left:24px;top:20px;width:30px;height:14px;border-radius:99px;background:rgb(255 248 240 / .45);transform:rotate(-18deg)}
+.d-cone .cone{position:absolute;left:52px;top:96px;width:116px;height:154px;clip-path:polygon(0 0,100% 0,50% 100%);background-color:#e0a458;background-image:repeating-linear-gradient(45deg,transparent 0 13px,rgb(140 80 20 / .35) 13px 15px),repeating-linear-gradient(-45deg,transparent 0 13px,rgb(140 80 20 / .35) 13px 15px)}
+.pickband{margin-top:var(--sec)}
+.choose{min-width:0;border-radius:var(--r-card);padding:clamp(20px,2.6vw,32px);display:grid;gap:var(--s-4);--ga:.5}
+.choose h3{font-size:1.5rem}
+.choose p{color:var(--cream)}
+.opts{display:grid;gap:var(--s-3)}
+.opts label{display:flex;align-items:center;gap:var(--s-3);min-height:56px;padding:0 var(--s-5);border-radius:999px;border:1px solid rgb(248 238 230 / .35);background:rgb(var(--deep-rgb) / .82);color:var(--cream);font-weight:500;font-size:1.0625rem;cursor:pointer;transition:background-color 200ms ease,border-color 200ms ease,color 200ms ease,transform 160ms var(--ease)}
+.opts label::before{content:"";width:18px;height:18px;flex:none;border-radius:50%;border:2px solid currentColor;box-shadow:inset 0 0 0 3px transparent;transition:background-color 160ms ease}
+.opts label:active{transform:scale(.98)}
+#p-paleta:checked ~ .choose label[for="p-paleta"],#p-cup:checked ~ .choose label[for="p-cup"],#p-cone:checked ~ .choose label[for="p-cone"]{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+#p-paleta:checked ~ .choose label[for="p-paleta"]::before,#p-cup:checked ~ .choose label[for="p-cup"]::before,#p-cone:checked ~ .choose label[for="p-cone"]::before{background:currentColor;box-shadow:inset 0 0 0 3px var(--accent)}
+#p-paleta:focus-visible ~ .choose label[for="p-paleta"],#p-cup:focus-visible ~ .choose label[for="p-cup"],#p-cone:focus-visible ~ .choose label[for="p-cone"]{outline:2px solid var(--cream);outline-offset:3px}
+@media (hover:hover) and (pointer:fine){.opts label:hover{border-color:var(--cream)}}
+.choose .btn{justify-self:start;margin-top:var(--s-2)}
+
+/* visit */
+.visit{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7) clamp(40px,5vw,72px);align-items:start}
+.visit .layer{margin-right:var(--off)}
+.visit .photo{aspect-ratio:4/5}
+.visit .photo img{object-position:50% 60%}
+.findcard{position:absolute;z-index:2;left:var(--s-4);right:var(--s-4);bottom:var(--s-4);border-radius:var(--r-card);padding:var(--s-5);display:grid;gap:var(--s-4);--ga:.78}
+.findcard dl{display:grid;gap:var(--s-3)}
+.findcard dt{font-size:.8125rem;font-weight:500;color:var(--cream-soft)}
+.findcard dd{margin:0;font-size:1.0625rem;line-height:1.4}
+.findcard dd a{color:var(--cream);text-decoration-color:rgb(248 238 230 / .5);display:inline-flex;min-height:44px;align-items:center}
+.findcard .btn{justify-self:start;min-height:48px;padding:0 20px;font-size:.9375rem}
+.steps{list-style:none;padding:0;display:grid;gap:var(--s-5);counter-reset:step}
+.steps li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:2px var(--s-4);counter-increment:step}
+.steps li::before{content:counter(step);grid-row:1 / span 2;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--on-accent);font-weight:600;font-variant-numeric:tabular-nums;box-shadow:var(--sh-1)}
+.steps h3{font:600 var(--t-h3)/1.35 var(--font);letter-spacing:-.01em;padding-top:10px}
+.steps p{color:var(--muted);max-width:44ch}
+.steps a{color:var(--ink);display:inline-flex;align-items:center;min-height:44px}
+.map{margin-top:var(--s-7);aspect-ratio:16/10;border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-2)}
+.map iframe{display:block;width:100%;height:100%;border:0}
+
+/* footer */
+.foot{--ink:var(--cream);--muted:#dcc3cd;--tint:rgb(248 238 230 / .08);--accent:#f7a41d;margin-top:var(--sec);background:var(--foot);padding-block:var(--s-8) var(--s-7);font-size:.875rem;color:var(--muted)}
+.foot .wrap{display:grid;grid-template-columns:1fr auto;gap:var(--s-3) var(--s-6);align-items:center}
+.foot .name{font:400 1.75rem/1.15 var(--font-display);color:var(--cream);grid-column:1/-1;margin-bottom:var(--s-3)}
+.foot b{color:var(--ink);font-weight:600}
+.foot a{color:var(--muted)}
+.foot .right{text-align:right}
+.foot .right a{display:inline-flex;align-items:center;min-height:44px;color:var(--cream)}
+.foot .credit{grid-column:1/-1;max-width:none}
+.foot :focus-visible{outline-color:var(--accent)}
+
+/* footer mark: a 2 s logo build that plays once in view, muted; the still logo shows until it really plays and is the fallback */
+.gcd{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:14px;margin-top:12px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font-weight:500}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--tint)}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
+
+/* phone bar */
+.bar{display:none}
+
+/* motion: slow, once. Panes with text on glass slide only, never fade. */
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;transform:translateY(16px);transition:opacity 700ms var(--ease),transform 700ms var(--ease)}
+  .js .rv.in{opacity:1;transform:none}
+  .js .rv.slide{opacity:1}
+  .js .treats .rv:nth-child(2),.js .strip .rv:nth-child(2),.js .steps .rv:nth-child(2){transition-delay:90ms}
+  .js .treats .rv:nth-child(3),.js .strip .rv:nth-child(3),.js .steps .rv:nth-child(3){transition-delay:180ms}
+  .js .sticks.rv{opacity:1;transform:none}
+  .js .sticks.rv i{transform:translateY(40px) rotate(var(--r,0deg))}
+  .js .sticks.rv.in i{transform:rotate(var(--r,0deg));transition:transform 800ms var(--ease) calc(var(--n) * 45ms)}
+  .hero .rise{animation:rise 800ms var(--ease) both}
+  .hero .rise:nth-child(2){animation-delay:80ms}
+  .hero-pic.rise{animation:slideup 900ms var(--ease) 120ms both}
+  .hero-pic img{animation:settle 1600ms var(--ease) both}
+}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes slideup{from{transform:translateY(22px)}to{transform:none}}
+@keyframes settle{from{transform:scale(1.05)}to{transform:none}}
+@media (prefers-reduced-motion:reduce){.art figure{transition:opacity 160ms ease,visibility 0s;transform:none}}
+
+/* tablet */
+@media (max-width:960px){
+  .hero-grid,.head,.visit,.stage{grid-template-columns:minmax(0,1fr)}
+  .hero-pic .photo{max-height:none;aspect-ratio:4/3}
+  .hero-pic img{object-position:50% 30%}
+  .treats{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .treats li:nth-child(2){margin-top:0}
+  .treats li:nth-child(3){grid-column:1/-1}
+  .treats li:nth-child(3) .photo{aspect-ratio:16/9}
+  .visit .photo{aspect-ratio:4/3}
+  .art{min-height:320px}
+}
+
+/* phone */
+@media (max-width:640px){
+  :root{--bar:calc(62px + env(safe-area-inset-bottom));--r-photo:18px;--r-card:16px;--off:10px}
+  .hero-pic .photo{aspect-ratio:4/5}
+  .cta .btn{flex:1 1 auto}
+  .facts{margin-top:var(--s-5)}
+  .head{padding-bottom:var(--s-6)}
+  .sticks{height:120px}
+  .sticks i{width:32px;height:calc(var(--h,96px) * .78);margin-top:calc(86px - var(--h,96px) * .78)}
+  .treats{grid-template-columns:minmax(0,1fr);gap:var(--s-6)}
+  .treats li:nth-child(3){grid-column:auto}
+  .treats .photo,.treats li:nth-child(3) .photo{aspect-ratio:4/3}
+  .more{grid-template-columns:minmax(0,1fr);padding:var(--s-5)}
+  .more .btn{width:100%}
+  .strip{grid-template-columns:1fr 1fr;gap:var(--s-3)}
+  .strip .photo:first-child{grid-column:1/-1;aspect-ratio:16/11}
+  .strip .photo:nth-child(2){margin-top:0;aspect-ratio:4/5}
+  .stage{padding:var(--s-5) var(--s-4)}
+  .art{min-height:300px}
+  .draw{transform:scale(.88)}
+  .choose .btn{width:100%}
+  .visit .photo{aspect-ratio:4/5}
+  .findcard{left:var(--s-3);right:var(--s-3);bottom:var(--s-3);padding:var(--s-4)}
+  .map{aspect-ratio:4/5}
+  .foot .wrap{grid-template-columns:minmax(0,1fr)}
+  .foot .right{text-align:left}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+  .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:60px;font-weight:600;font-size:1rem;text-decoration:none;color:var(--ink)}
+  .bar a:first-child{background:var(--accent);color:var(--on-accent)}
+  .bar a:active{opacity:.85}
+  .bar svg{width:17px;height:17px}
+}
+@media (max-width:640px) and (min-height:800px){
+  .hero{padding-top:var(--s-5)}
+  .hero-grid{gap:var(--s-5)}
+  .hero-pic{order:-1;margin-bottom:0}
+  .hero-pic .photo{aspect-ratio:16/10}
+  .hero-pic img{object-position:50% 14%}
+  .chip{left:var(--s-3);bottom:var(--s-3);padding:var(--s-3) var(--s-4)}
+  .chip b{font-size:1.0625rem}
+  .chip span{font-size:.875rem}
+}
+@media (max-width:640px) and (max-height:740px){
+  body .hero{padding-top:var(--s-5)}
+  body .hero h1{font-size:clamp(2.125rem,1.6rem + 2.4vw,2.5rem)}
+  body .intro{margin-top:var(--s-4);font-size:1rem}
+  body .cta{margin-top:var(--s-5)}
+}
+@media (max-width:420px) and (max-height:600px){
+  body .hero h1{font-size:1.875rem}
+  body .intro{font-size:.9375rem;line-height:1.5}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="sample" role="note">Sample site made for Paleteria La Reyna Michoacana by <a href="https://granitecitydigital.me/">Granite City Digital</a>. Your real site gets your own photos, colors and menu.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Paleteria La Reyna Michoacana, back to top"><small>Paleteria</small><b>La Reyna Michoacana</b></a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#pick">Cup, cone or paleta</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="btn line" href="tel:+15755247888"><span class="long num">(575) 524 7888</span><span class="short">Call</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap hero" id="top" aria-labelledby="hero-h">
+    <div class="hero-grid">
+      <div>
+        <h1 class="rise" id="hero-h"><span class="w">Paletas</span> and ice cream in Las Cruces</h1>
+        <div class="rise">
+          <p class="intro">Paleteria La Reyna Michoacana is a paleta and ice cream shop at 870 E Madrid Ave, Suite 3. Come in for a paleta, or ice cream in a cup or a cone.</p>
+          <div class="cta">
+            <a class="btn" href="tel:+15755247888"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg><span>Call</span> <span class="num">(575) 524 7888</span></a>
+            <a class="btn line" href="https://www.google.com/maps/search/?api=1&amp;query=Paleteria+La+Reyna+Michoacana+870+E+Madrid+Ave+Suite+3+Las+Cruces+NM">Get directions</a>
+          </div>
+          <ul class="facts">
+            <li>Paletas</li>
+            <li>Ice cream in cups and cones</li>
+            <li>Cold treats</li>
+          </ul>
+        </div>
+      </div>
+      <div class="hero-pic layer rise">
+        <figure class="photo"><img src="hero.jpg" width="1280" height="1600" fetchpriority="high" alt="A hand holding up two orange and pink ice pops against a blue sky"></figure>
+        <p class="chip glass"><b>Open seven days a week</b><span>Call ahead to confirm.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="sticks rv" aria-hidden="true">
+    <i style="--c:#b48ee0;--h:98px;--r:3deg;--n:0"></i><i style="--c:#ff8a1f;--h:92px;--r:-4deg;--n:1"></i><i style="--c:#9bd13c;--h:104px;--r:3deg;--n:2"></i><i style="--c:#fff1d6;--h:96px;--r:-2deg;--n:3"></i><i style="--c:#ff7aa2;--h:108px;--r:4deg;--n:4"></i><i style="--c:#f7a41d;--h:98px;--r:-3deg;--n:5"></i><i style="--c:#36c2c9;--h:90px;--r:2deg;--n:6"></i><i style="--c:#d81b72;--h:106px;--r:-1deg;--n:7"></i><i style="--c:#ffd23f;--h:94px;--r:3deg;--n:8"></i><i style="--c:#b48ee0;--h:102px;--r:-4deg;--n:9"></i><i style="--c:#ff6b4a;--h:96px;--r:2deg;--n:10"></i><i style="--c:#9bd13c;--h:90px;--r:-2deg;--n:11"></i><i style="--c:#fff1d6;--h:104px;--r:4deg;--n:12"></i><i style="--c:#ff7aa2;--h:94px;--r:-3deg;--n:13"></i><i style="--c:#f7a41d;--h:100px;--r:2deg;--n:14"></i><i style="--c:#36c2c9;--h:92px;--r:-3deg;--n:15"></i><i style="--c:#ff8a1f;--h:106px;--r:3deg;--n:16"></i><i style="--c:#fff1d6;--h:96px;--r:-2deg;--n:17"></i><i style="--c:#d81b72;--h:100px;--r:4deg;--n:18"></i>
+  </div>
+
+  <section class="band deep menu" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="menu-h">Paletas, cups and <span class="acc">cones</span></h2>
+        <p>Paletas on a stick, water based and cream based, and ice cream in a cup or on a cone.</p>
+      </div>
+      <ul class="treats">
+        <li class="rv slide">
+          <figure class="photo"><img src="paletas-on-ice.jpg" width="1600" height="1067" alt="Four orange ice pops standing on a bed of ice"><figcaption class="label glass"><h3>Paletas</h3></figcaption></figure>
+          <p>Frozen on a stick, water based or cream based.</p>
+        </li>
+        <li class="rv slide">
+          <figure class="photo"><img src="cups.jpg" width="1600" height="1067" alt="Five small cups of ice cream in a row, from pale yellow to deep red"><figcaption class="label glass"><h3>Ice cream in a cup</h3></figcaption></figure>
+          <p>A cup of ice cream.</p>
+        </li>
+        <li class="rv slide">
+          <figure class="photo"><img src="cone-yellow.jpg" width="1600" height="1067" alt="A hand holding a two scoop ice cream cone against a bright yellow wall"><figcaption class="label glass"><h3>Ice cream on a cone</h3></figcaption></figure>
+          <p>On a cone, held in one hand.</p>
+        </li>
+      </ul>
+      <div class="more rv">
+        <div>
+          <h3>Looking for a cold treat?</h3>
+          <p>Open seven days a week. Call ahead to confirm, or to ask what we have.</p>
+        </div>
+        <a class="btn" href="tel:+15755247888"><span>Call</span> <span class="num">(575) 524 7888</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="photos" aria-label="Photos">
+    <div class="strip">
+      <figure class="photo rv"><img src="cream-paleta.jpg" width="1200" height="1500" alt="A hand holding a cream colored ice pop in front of green leaves"></figure>
+      <figure class="photo rv"><img src="cone-pink.jpg" width="1200" height="1500" alt="A hand holding a two scoop ice cream cone against a pink wall"></figure>
+      <figure class="photo rv"><img src="paleta-sky.jpg" width="1600" height="1067" loading="lazy" alt="An orange and red ice pop held up against a clear blue sky"></figure>
+    </div>
+  </section>
+
+  <section class="band pickband" id="pick" aria-labelledby="pick-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="pick-h">Cup, cone or paleta?</h2>
+        <p>Everybody has a favorite way to eat it. Tap one.</p>
+      </div>
+      <form class="stage rv slide" aria-label="Cup, cone or paleta">
+        <input type="radio" name="kind" id="p-paleta" value="paleta" checked>
+        <input type="radio" name="kind" id="p-cup" value="cup">
+        <input type="radio" name="kind" id="p-cone" value="cone">
+        <div class="art" aria-live="polite">
+          <figure class="d-paleta"><div class="draw" aria-hidden="true"><span class="body"></span><span class="stick"></span></div><figcaption>A paleta on a stick, water based or cream based.</figcaption></figure>
+          <figure class="d-cup"><div class="draw" aria-hidden="true"><span class="scoop"></span><span class="cup"></span></div><figcaption>Ice cream in a cup.</figcaption></figure>
+          <figure class="d-cone"><div class="draw" aria-hidden="true"><span class="scoop"></span><span class="cone"></span></div><figcaption>Ice cream on a cone.</figcaption></figure>
+        </div>
+        <fieldset class="choose glass">
+          <legend class="vh">Pick one</legend>
+          <h3>How do you like it?</h3>
+          <div class="opts">
+            <label for="p-paleta"><span>Paleta</span></label>
+            <label for="p-cup"><span>Cup</span></label>
+            <label for="p-cone"><span>Cone</span></label>
+          </div>
+          <a class="btn" href="tel:+15755247888"><span>Call</span> <span class="num">(575) 524 7888</span></a>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="visit" aria-labelledby="visit-h">
+    <div class="head rv">
+      <h2 id="visit-h">Come see us on E Madrid Ave</h2>
+      <p>Here is where to find us, with the map to get there.</p>
+    </div>
+    <div class="visit">
+      <div class="layer rv slide">
+        <figure class="photo"><img src="cone-street.jpg" width="1200" height="1500" loading="lazy" alt="A hand holding a yellow ice cream cone on a sunny street"></figure>
+        <div class="findcard glass">
+          <dl>
+            <div><dt>Find us at</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Paleteria+La+Reyna+Michoacana+870+E+Madrid+Ave+Suite+3+Las+Cruces+NM">870 E Madrid Ave, Suite 3, Las Cruces, NM</a></dd></div>
+            <div><dt>Hours</dt><dd>Open seven days a week. Call ahead to confirm.</dd></div>
+          </dl>
+          <a class="btn" href="tel:+15755247888"><span>Call</span> <span class="num">(575) 524 7888</span></a>
+        </div>
+      </div>
+      <div>
+        <ol class="steps">
+          <li class="rv"><h3>Find us on E Madrid Ave</h3><p>Look for Suite 3.</p></li>
+          <li class="rv"><h3>Pick your treat</h3><p>A paleta, a cup or a cone.</p></li>
+          <li class="rv"><h3>Questions? Give us a call</h3><p><a class="num" href="tel:+15755247888">(575) 524 7888</a>. Open seven days a week. Call ahead to confirm.</p></li>
+        </ol>
+        <div class="map rv"><iframe src="https://maps.google.com/maps?q=870%20E%20Madrid%20Ave%2C%20Suite%203%2C%20Las%20Cruces%2C%20NM&amp;z=15&amp;output=embed" loading="lazy" title="Map showing Paleteria La Reyna Michoacana at 870 E Madrid Ave, Suite 3, Las Cruces, NM"></iframe></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="name">Paleteria La Reyna Michoacana</p>
+    <p><b>870 E Madrid Ave, Suite 3</b> &middot; Las Cruces, NM</p>
+    <p class="right"><a class="num" href="tel:+15755247888">(575) 524 7888</a></p>
+    <p class="credit">Photos are examples.</p>
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a href="tel:+15755247888"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Paleteria+La+Reyna+Michoacana+870+E+Madrid+Ave+Suite+3+Las+Cruces+NM"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  /* quiet reveal, once per element */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+  addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+
+  /* quote form (runs only when the form is on the page) */
+  var f=document.getElementById('qform');
+  if(!f)return;
+  var F=f.elements,thanks=document.getElementById('thanks');
+  function setErr(id,msg){var i=document.getElementById(id),e=document.getElementById(i.getAttribute('aria-describedby'));e.textContent=msg;if(msg){i.setAttribute('aria-invalid','true')}else{i.removeAttribute('aria-invalid')}return !msg}
+  function check(){
+    var ok=true,first=null;
+    function run(id,msg){var good=setErr(id,msg);if(!good&&!first)first=id;ok=ok&&good}
+    var name=F['name'].value.trim(),phone=F['phone'].value.replace(/\D/g,''),msg=F['message'].value.trim();
+    run('q-name',name.length<2?'Please tell us your name.':'');
+    run('q-phone',phone.length<10?'Please enter a 10 digit phone number.':'');
+    run('q-town',!F['town'].value?'Please choose your town.':'');
+    run('q-msg',msg.length<5?'A few words about the job helps us call back with the right answer.':'');
+    if(first)document.getElementById(first).focus();
+    return ok;
+  }
+  ['q-name','q-phone','q-town','q-msg'].forEach(function(id){
+    var el=document.getElementById(id);
+    el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){if(el.getAttribute('aria-invalid'))setErr(id,'')});
+  });
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!check())return;
+    var name=F['name'].value.trim().split(' ')[0],d=F['phone'].value.replace(/\D/g,'').slice(-10);
+    var nice='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6);
+    document.getElementById('t-title').textContent='Thanks, '+name+'. We have it.';
+    document.getElementById('t-body').textContent='We will call you at '+nice+' soon.';
+    f.hidden=true;thanks.hidden=false;thanks.focus();
+  });
+  document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
+})();
+</script>
+</body>
+</html>
