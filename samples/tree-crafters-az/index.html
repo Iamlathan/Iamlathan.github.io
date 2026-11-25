@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tree Crafters | Tree service in Payson, AZ</title>
+<meta name="description" content="Tree Crafters is a family owned tree service in Payson, Arizona. Tree removal, trimming, pruning, storm damage and fire mitigation. Call (928) 978 0223.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#10261b">
+<meta property="og:title" content="Tree Crafters | Payson, AZ">
+<meta property="og:description" content="Tree Crafters is a family owned tree service in Payson, Arizona. Tree removal, trimming, pruning, storm damage and fire mitigation. Call (928) 978 0223.">
+<meta property="og:image" content="https://granitecitydigital.me/samples/tree-crafters-az/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Besley:wght@600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* 1. this page's own look */
+:root{
+  --bg:#f4f1e7;          /* page ground, warm cream with a little pine in it */
+  --surface:#fcfaf3;     /* raised cards and the form */
+  --tint:#e9e7d8;        /* contained bands */
+  --ink:#14211a;
+  --muted:#4d5a52;
+  --line:#d7d5c3;
+  --deep:#10261b;        /* full width bands */
+  --deep-2:#183525;      /* cards and chips on deep ground */
+  --deep-line:#2d5641;   /* growth rings, offset blocks */
+  --foot:#0b1b13;
+  --scrim:11 27 19;      /* hero scrim color as r g b */
+  --on-deep:#f4efe2;
+  --on-deep-muted:#b9c7b8;
+  --accent:#f6a821;      /* amber: buttons, stars, one headline word, icons */
+  --accent-hover:#ffbc47;
+  --on-accent:#1a1406;
+  --star:var(--accent);
+  --focus-l:#1d5e3f;     /* focus ring and small icons on light ground */
+  --focus:var(--focus-l);
+  --field:#737d6f;       /* field outlines */
+  --danger:#a12f1c;
+  --shadow:14 34 24;     /* shadow color as r g b */
+
+  --font:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Besley",Georgia,"Times New Roman",serif;
+
+  --r-ctl:10px;
+  --r-card:16px;
+  --r-photo:clamp(16px,2vw,24px);
+}
+/* 2. the system */
+:root{
+  --t-small:.875rem;
+  --t-body:1.0625rem;
+  --t-lead:clamp(1.0625rem,1rem + .35vw,1.25rem);
+  --t-h3:clamp(1.5rem,1.2rem + 1.1vw,2.125rem);
+  --t-h2:clamp(1.875rem,1.35rem + 2vw,3rem);
+  --t-h1:clamp(2rem,1.1rem + 3.5vw,3.625rem);
+
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+  --sec:clamp(80px,9.5vw,136px);
+  --band-pad:clamp(64px,8vw,112px);
+  --off:clamp(10px,1.4vw,18px);
+
+  /* three levels. Light comes from the top left, so shadows fall down and to the right. */
+  --sh-1:1px 1px 2px rgb(var(--shadow) / .06),2px 6px 16px -6px rgb(var(--shadow) / .16);
+  --sh-2:1px 2px 4px rgb(var(--shadow) / .07),4px 14px 32px -10px rgb(var(--shadow) / .24);
+  --sh-3:2px 4px 8px rgb(var(--shadow) / .09),10px 30px 60px -16px rgb(var(--shadow) / .38);
+
+  --wrap:1200px;
+  --m:clamp(20px,4vw,32px);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --bar:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased;accent-color:var(--focus);caret-color:var(--focus)}
+img{display:block;max-width:100%;height:auto}
+svg{display:block}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+::selection{background:var(--accent);color:var(--on-accent)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+.on-deep{--focus:var(--accent);color:var(--on-deep)}
+h1,h2,h3{font-family:var(--font-display);font-weight:700;letter-spacing:-.02em;line-height:1.08;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:var(--r-ctl)}
+.skip:focus{top:12px}
+.num{font-variant-numeric:tabular-nums}
+.nb{white-space:nowrap}
+.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+
+/* buttons: raised; hover lifts, press sinks */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:var(--r-ctl);border:0;background:var(--accent);color:var(--on-accent);font:600 1rem/1.1 var(--font);text-decoration:none;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.cream{background:var(--on-deep);color:var(--ink)}
+.btn.dark{background:var(--deep);color:var(--on-deep)}
+.textlink{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;text-decoration:underline;text-decoration-color:var(--focus-l);text-decoration-thickness:2px;transition:text-decoration-color 200ms ease}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--accent-hover);box-shadow:var(--sh-2);transform:translateY(-1px)}
+  .btn.cream:hover{background:var(--surface)}
+  .btn.dark:hover{background:var(--deep-2)}
+  .btn:active{transform:scale(.97);box-shadow:none}
+  .textlink:hover{text-decoration-color:currentColor}
+}
+
+/* sample note */
+.sample{background:var(--tint);color:var(--muted);font-size:.8125rem;text-align:center;padding:8px var(--m);line-height:1.45}
+.sample a{color:var(--ink)}
+
+/* header */
+.top{background:var(--deep)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s-5);min-height:68px}
+.brand{display:inline-flex;align-items:center;gap:10px;min-height:44px;font:700 1.1875rem/1 var(--font-display);letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+.brand svg{width:26px;height:26px;flex:none;color:var(--accent);fill:none;stroke:currentColor;stroke-width:1.6}
+.top nav{display:none}
+.nav{display:flex;align-items:center;gap:26px;list-style:none;padding:0;font-size:.9375rem}
+.nav a{color:var(--on-deep-muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 200ms ease}
+.top .btn{min-height:44px;padding:0 16px;font-size:.9375rem}
+.top .long{display:none}
+@media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--on-deep)}}
+@media (min-width:480px){.top .long{display:inline}.top .short{display:none}}
+@media (min-width:1060px){
+  html{scroll-padding-top:104px}
+  .top{position:sticky;top:0;z-index:30}
+  .top .wrap{min-height:76px}
+  .top nav{display:block}
+}
+
+/* photo cards: the wrapper is rounded so the picture clips cleanly */
+.photo{position:relative;border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-2)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.layer{position:relative;isolation:isolate}
+.layer::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--line);transform:translate(var(--off),var(--off))}
+
+/* stars */
+.stars{display:inline-flex;gap:3px;color:var(--star)}
+.stars svg{width:18px;height:18px;fill:currentColor}
+
+/* hero: photo fills the first screen on laptops; on phones it sits on top and fades into the deep panel */
+.hero{position:relative;isolation:isolate;background:rgb(var(--scrim))}
+.hero-bg{position:relative;height:clamp(150px,25svh,240px);overflow:hidden}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 42%;transform:scale(1.7);transform-origin:62% 76%}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgb(var(--scrim) / 0) 42%,rgb(var(--scrim) / .8) 78%,rgb(var(--scrim)) 100%)}
+.hero-in{position:relative;z-index:1;display:grid;gap:var(--s-7);max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding:0 var(--m) var(--s-7)}
+.hero-copy{margin-top:-34px;min-width:0}
+.rate{display:inline-flex;flex-wrap:wrap;align-items:center;gap:4px 10px;min-height:48px;padding:9px 14px;border-radius:14px;background:var(--deep-2);box-shadow:var(--sh-2);text-decoration:none;font-size:1rem;line-height:1.2}
+.rate .stars svg{width:18px;height:18px}
+.rate b{font:700 1.25rem/1 var(--font-display);letter-spacing:-.01em}
+@media (min-width:1100px){.rate{gap:4px 12px;padding:10px 18px 10px 16px;font-size:1.0625rem}.rate .stars svg{width:21px;height:21px}.rate b{font-size:1.375rem}}
+.rate .lbl{text-decoration:underline;text-decoration-color:var(--deep-line);text-decoration-thickness:2px}
+.hero h1{font-size:var(--t-h1);margin-top:var(--s-4);max-width:15.5em}
+.hero h1 .hl{color:var(--accent)}
+.lede{margin-top:var(--s-4);font-size:var(--t-lead);line-height:1.5;color:var(--on-deep);max-width:34em}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s-3);margin-top:var(--s-5)}
+.hrs{display:flex;align-items:flex-start;gap:10px;margin-top:var(--s-4);font-size:1rem;line-height:1.4;color:var(--on-deep-muted)}
+.hrs .i{color:var(--accent);margin-top:1px}
+.hrs b{color:var(--on-deep);font-weight:600}
+@media (hover:hover) and (pointer:fine){.rate:hover .lbl{text-decoration-color:var(--accent)}}
+
+/* the request form */
+.quote{background:var(--surface);color:var(--ink);border-radius:var(--r-card);box-shadow:var(--sh-3);padding:clamp(20px,2.4vw,30px);--focus:var(--focus-l);scroll-margin-top:16px}
+.quote h2{font-size:1.5625rem;line-height:1.15}
+.quote .sub{margin-top:6px;color:var(--muted);font-size:.9375rem;line-height:1.45}
+.quote .sub b{color:var(--ink);font-weight:600;white-space:nowrap}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px 12px}
+form[hidden]{display:none}
+.f{display:grid;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label{font-size:var(--t-small);font-weight:600}
+.f input,.f select,.f textarea{width:100%;min-height:48px;padding:11px 14px;border:1px solid var(--field);border-radius:var(--r-ctl);background:var(--bg);color:var(--ink);font:inherit;font-size:1rem;transition:border-color 200ms ease,background-color 200ms ease;appearance:none;-webkit-appearance:none}
+.f select{background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%234d5a52' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:40px}
+.f textarea{min-height:84px;resize:vertical;line-height:1.5}
+.f input::placeholder,.f textarea::placeholder{color:var(--muted);opacity:1}
+.f input:focus-visible,.f select:focus-visible,.f textarea:focus-visible{outline:2px solid var(--focus);outline-offset:1px;border-color:var(--focus);background-color:var(--surface)}
+@media (hover:hover) and (pointer:fine){.f input:hover,.f select:hover,.f textarea:hover{border-color:var(--ink)}}
+.f [aria-invalid="true"]{border-color:var(--danger)}
+.err{font-size:.8125rem;line-height:1.35;color:var(--danger)}
+.err:empty{display:none}
+.submit{grid-column:1/-1}
+.submit .btn{width:100%}
+.fin{margin-top:14px;display:flex;align-items:flex-start;gap:8px;font-size:.875rem;line-height:1.4;color:var(--muted)}
+.fin .i{width:18px;height:18px;color:var(--focus);margin-top:1px}
+.thanks[hidden]{display:none}
+.thanks:focus{outline:none}
+.thanks h3{font-size:1.75rem}
+.thanks p{margin-top:var(--s-3);max-width:40ch;color:var(--muted)}
+#t-body{display:none}
+.thanks .btn{margin-top:var(--s-5)}
+
+@media (min-width:641px) and (max-width:959px){
+  .hero-bg{height:300px}
+  .hero-bg img{transform:scale(1.2);transform-origin:62% 30%;object-position:50% 46%}
+}
+@media (min-width:960px){
+  .hero{display:grid;min-height:clamp(600px,calc(100svh - 110px),800px)}
+  .hero-bg{position:absolute;inset:0;height:auto;z-index:0}
+  /* the photo is slid left so the climber stands in the gap between the words and the form; never wider than its real 1600 px at 1440 */
+  .hero-bg img{width:126%;max-width:none;margin-left:-26%;transform:none;object-position:50% 20%}
+  .hero-bg::after{background:linear-gradient(0deg,rgb(var(--scrim) / .6) 0%,rgb(var(--scrim) / 0) 28%),rgb(var(--scrim) / .1)}
+  /* the scrim is tied to the text column, so the words always sit on the solid part at any laptop width */
+  .hero-in::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:calc(50% - 50vw);width:calc(50vw - 50% + var(--m) + (100% - var(--m)*2 - var(--s-8))*.5 + 150px);background:linear-gradient(90deg,rgb(var(--scrim) / .97) 0,rgb(var(--scrim) / .93) calc(100% - 210px),rgb(var(--scrim) / .5) calc(100% - 95px),rgb(var(--scrim) / 0) 100%)}
+  .hero-in{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:var(--s-8);width:100%;padding-block:var(--s-7) calc(var(--s-7) + 48px)}
+  .hero-copy{margin-top:0;padding-right:56px}
+  .hero h1{font-size:clamp(2.375rem,4.1vw,3.375rem)}
+  .quote{justify-self:end;width:100%;max-width:424px;scroll-margin-top:104px}
+}
+
+@media (min-width:1200px){.hero-bg img{width:116%;margin-left:-16%}}
+@media (min-width:1380px){.hero-bg img{width:111%;margin-left:-11%}}
+
+/* trust strip: a raised card that overlaps the hero edge on laptops */
+.trust{position:relative;z-index:2;padding-top:var(--s-6)}
+.trust ul{list-style:none;padding:var(--s-3);display:grid;gap:2px;background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-2)}
+.trust li{display:flex;align-items:center;gap:12px;padding:10px 12px;font-weight:600;font-size:1rem;line-height:1.25}
+.ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--deep);color:var(--accent);display:grid;place-items:center}
+.ic .i{width:22px;height:22px}
+@media (min-width:600px){.trust ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:800px){.trust ul{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:960px){
+  .trust{padding-top:0;margin-top:-48px}
+}
+@media (min-width:1100px){
+  .trust ul{grid-template-columns:repeat(5,minmax(0,1fr));padding:var(--s-4)}
+  .trust li{font-size:.9375rem}
+}
+
+/* reviews: the peak of the page. A cut log end, growth rings around the number. */
+.rev{position:relative;overflow:hidden;margin-top:var(--sec);background:var(--deep);padding-block:clamp(72px,10vw,140px)}
+.rev .wrap{position:relative;display:grid;gap:var(--s-7);align-items:center;justify-items:center;text-align:center}
+.rev-fig{position:relative;display:grid;place-items:center;width:100%}
+.rings{position:absolute;left:50%;top:50%;width:min(1240px,230vw);aspect-ratio:1;translate:-50% -50%;color:var(--deep-line);pointer-events:none}
+.rings svg{width:100%;height:100%;fill:none;stroke:currentColor}
+.rev-num{position:relative;font:800 clamp(8.5rem,24vw,19rem)/.82 var(--font-display);letter-spacing:-.035em}
+.rev-body{position:relative;display:grid;gap:var(--s-5);justify-items:center}
+.rev .stars{gap:8px}
+.rev .stars svg{width:clamp(34px,4.4vw,52px);height:clamp(34px,4.4vw,52px)}
+.rev h2{font-size:clamp(2rem,1.3rem + 2.9vw,3.25rem)}
+.rev .of{font-size:var(--t-lead);color:var(--on-deep-muted);margin-top:-12px}
+@media (min-width:960px){
+  .rev .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s-8);text-align:left;justify-items:start}
+  .rev-body{justify-items:start}
+  .rev-fig{justify-self:stretch}
+}
+
+/* sections */
+.sec{padding-top:var(--sec)}
+.band{margin-top:var(--sec);padding-block:var(--band-pad)}
+.band.tint{background:var(--tint)}
+.band.deep{background:var(--deep)}
+.head{display:grid;gap:var(--s-4) var(--s-8);padding-bottom:var(--s-7)}
+.head h2{font-size:var(--t-h2)}
+.head p{font-size:var(--t-lead);line-height:1.55;max-width:38em;color:var(--muted)}
+.on-deep .head p{color:var(--on-deep-muted)}
+@media (min-width:960px){.head{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:end}}
+
+/* services: two rows that read like service pages */
+.row{display:grid;gap:var(--s-7);align-items:center}
+.row + .row{margin-top:clamp(72px,9vw,128px)}
+.row h3{font-size:var(--t-h3)}
+.row .txt p{margin-top:var(--s-4);max-width:36em}
+.ticks{list-style:none;padding:0;margin-top:var(--s-5);display:grid;gap:var(--s-3)}
+.ticks li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:12px;align-items:start;font-weight:500;line-height:1.4}
+.tick{width:26px;height:26px;border-radius:50%;background:var(--deep);color:var(--accent);display:grid;place-items:center}
+.tick .i{width:14px;height:14px;stroke-width:2.6}
+.row .txt .textlink{margin-top:var(--s-5)}
+.pics{position:relative;margin-right:var(--off)}
+.pics .tall{aspect-ratio:5/6}
+.pics .tall img{object-position:100% 50%}
+.pics .wide{aspect-ratio:4/3}
+.pics .inset{position:absolute;right:calc(var(--s-4) * -1);bottom:calc(var(--s-6) * -1);width:46%;aspect-ratio:4/3;box-shadow:var(--sh-3);outline:6px solid var(--bg)}
+.row.has-inset{padding-bottom:var(--s-6)}
+@media (min-width:960px){
+  .row{grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--s-9)}
+  .row.flip{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+  .pics .inset{right:auto;left:calc(var(--s-5) * -1);bottom:calc(var(--s-7) * -1)}
+  .row.has-inset{padding-bottom:var(--s-7)}
+}
+
+/* storm: a tree down, so the photo card leans */
+.storm .wrap{display:grid;gap:var(--s-7);align-items:center}
+.storm h2{font-size:var(--t-h2)}
+.storm .lead{margin-top:var(--s-4);font-size:var(--t-lead);line-height:1.55;max-width:32em}
+.chips{list-style:none;padding:0;margin-top:var(--s-5);display:flex;flex-wrap:wrap;gap:var(--s-2)}
+.chips li{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:6px 14px 6px 10px;border-radius:10px;background:var(--deep-2);font-weight:600;font-size:.9375rem}
+.chips .i{width:16px;height:16px;color:var(--accent);stroke-width:2.6}
+.storm .cta{margin-top:var(--s-6)}
+.lean{position:relative;margin:var(--s-4) var(--s-3) var(--s-5);isolation:isolate}
+.lean::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--deep-line);transform:rotate(1.6deg) translate(10px,12px)}
+.lean .photo{aspect-ratio:3/2;transform:rotate(-2.2deg);box-shadow:var(--sh-3)}
+.lean .tag{position:absolute;left:-6px;top:18px;z-index:2;transform:rotate(-2.2deg);background:var(--accent);color:var(--on-accent);font-weight:700;font-size:.9375rem;line-height:1.2;padding:9px 14px;border-radius:8px;box-shadow:var(--sh-2)}
+@media (min-width:960px){.storm .wrap{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:var(--s-9)}.lean{margin:0 var(--s-4) 0 0}}
+
+/* fire mitigation */
+.fire{display:grid;gap:var(--s-8) var(--s-8);align-items:start}
+.ways{list-style:none;padding:var(--s-3);display:grid;gap:2px;background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-1)}
+.ways li{display:flex;align-items:center;gap:14px;padding:12px;font-weight:600;line-height:1.35}
+.fire-side{display:grid;gap:var(--s-5);min-width:0}
+.promise{background:var(--deep);border-radius:var(--r-card);padding:clamp(24px,3vw,40px);box-shadow:var(--sh-2)}
+.promise blockquote{font:600 clamp(1.3125rem,1.1rem + .8vw,1.6875rem)/1.32 var(--font-display);letter-spacing:-.01em;text-wrap:balance}
+.promise figcaption{margin-top:var(--s-4);color:var(--on-deep-muted);font-size:1rem}
+.promise figcaption b{color:var(--accent);font-weight:600}
+.fire .pics .inset{left:auto;right:calc(var(--s-4) * -1)}
+@media (min-width:960px){.fire{grid-template-columns:minmax(0,6fr) minmax(0,5fr)}.fire .pics{margin-bottom:var(--s-7)}.fire .pics .wide{aspect-ratio:6/5}}
+
+/* arborist */
+.arb{display:grid;gap:var(--s-7);align-items:center}
+.arb .photo{aspect-ratio:4/5}
+.arb .photo img{object-position:50% 70%}
+.arb .layer{margin-right:var(--off);max-width:460px}
+.arb .layer::before{background:var(--line)}
+.arb h2{font-size:var(--t-h2)}
+.arb p{margin-top:var(--s-4);max-width:36em}
+.arb .big{font-size:var(--t-lead);line-height:1.55}
+.arb .cta{margin-top:var(--s-6);align-items:center;gap:var(--s-3) var(--s-5)}
+@media (min-width:960px){.arb{grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:var(--s-9)}}
+
+/* photo strip: three rounded tiles, the middle one sits lower */
+.strip{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-3)}
+.strip .photo{aspect-ratio:4/5}
+.strip .photo:first-child{grid-column:1/-1;aspect-ratio:16/10}
+@media (min-width:700px){
+  .strip{grid-template-columns:5fr 4fr 5fr;gap:var(--s-5);align-items:start}
+  .strip .photo:first-child{grid-column:auto;aspect-ratio:4/5}
+  .strip .photo:nth-child(2){margin-top:var(--s-8);aspect-ratio:3/4}
+}
+
+/* service area: the map sits in a framed card with its own top and bottom bars */
+.area{display:grid;gap:var(--s-6);align-items:start}
+.mapcard{background:var(--surface);border-radius:var(--r-photo);box-shadow:var(--sh-3);padding:8px;overflow:hidden}
+.mapcard .bar-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 16px;padding:12px 14px 16px}
+.mapcard .bar-top b{display:inline-flex;align-items:center;gap:10px;font:700 1.1875rem/1.2 var(--font-display)}
+.mapcard .bar-top b .i{color:var(--focus)}
+.mapcard .bar-top span{font-size:.9375rem;color:var(--muted)}
+.mapcard .bar-top .where{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.mapcard .bar-top .lab{display:inline-flex;align-items:center;min-height:28px;padding:4px 10px;border-radius:8px;background:var(--deep);color:var(--on-deep);font-size:.8125rem;font-weight:600;line-height:1.2}
+.mapcard .frame{position:relative;border-radius:calc(var(--r-photo) - 6px);overflow:hidden;background:var(--tint);aspect-ratio:4/3}
+.mapcard iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.towns{list-style:none;padding:12px 6px 6px;display:flex;flex-wrap:wrap;gap:var(--s-2)}
+.towns li{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:6px 14px 6px 10px;border-radius:10px;background:var(--tint);font-weight:600;font-size:.9375rem}
+.towns .i{width:16px;height:16px;color:var(--focus)}
+.side{display:grid;gap:var(--s-5)}
+.side .based{font-size:var(--t-lead);line-height:1.55}
+.hours{background:var(--deep);border-radius:var(--r-card);padding:clamp(22px,2.6vw,32px);box-shadow:var(--sh-2);scroll-margin-top:104px}
+.hours h3{font:600 1rem/1.2 var(--font);letter-spacing:0;color:var(--on-deep-muted);display:flex;align-items:center;gap:10px}
+.hours h3 .i{color:var(--accent)}
+.hours .when{margin-top:var(--s-3);font:700 clamp(1.75rem,1.3rem + 1.6vw,2.5rem)/1.1 var(--font-display);letter-spacing:-.02em}
+.week{list-style:none;padding:0;margin-top:var(--s-4);display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.week li{display:grid;justify-items:center;gap:6px;padding:9px 0 8px;border-radius:8px;background:var(--deep-2);font-size:.75rem;font-weight:600;line-height:1.1}
+.week li::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.hours .note{margin-top:var(--s-4);color:var(--on-deep);font-weight:600}
+.side .cta{margin-top:0}
+@media (min-width:960px){
+  .area{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-8);align-items:stretch}
+  .side{grid-template-rows:1fr auto}
+  .hours{padding:clamp(28px,3vw,40px);display:grid;align-content:center}
+  .hours .when{font-size:clamp(2rem,1.2rem + 2vw,2.875rem)}
+  .week{margin-top:var(--s-5)}
+  .week li{font-size:.8125rem;padding:12px 0 10px}
+  .mapcard .frame{aspect-ratio:16/11}
+}
+
+/* footer */
+.foot{margin-top:var(--sec);background:var(--foot);color:var(--on-deep-muted);padding-block:var(--s-8) calc(var(--s-7) + var(--bar));font-size:.9375rem;--tint:var(--deep-2);--ink:var(--on-deep);--muted:var(--on-deep-muted)}
+.foot .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s-3) var(--s-6);align-items:start}
+.foot .name{font:700 1.5rem/1.1 var(--font-display);letter-spacing:-.01em;color:var(--on-deep)}
+.foot .tagline{margin-top:6px;color:var(--accent);font-weight:600}
+.foot .where{margin-top:var(--s-3)}
+.foot .right{display:grid;gap:2px}
+.foot .right a{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:var(--on-deep);font-weight:600;font-size:1.125rem;text-decoration:none;width:fit-content}
+.foot .right a .i{color:var(--accent)}
+.foot .credit{grid-column:1/-1;margin-top:var(--s-4);font-size:.875rem}
+@media (min-width:700px){.foot .wrap{grid-template-columns:1fr auto}.foot .right{justify-items:end;text-align:right}}
+
+/* footer mark: a 2 s logo build that plays once in view, muted; the still logo shows until it really plays and is the fallback */
+.gcd{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:14px;margin-top:12px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font-weight:500}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--tint)}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
+
+/* phone bar */
+.bar{display:none}
+
+/* motion: slow, once, slide only. Nothing fades, so text keeps its contrast the whole way. Content shows without scripts and with reduced motion. */
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{transform:translateY(22px);transition:transform 900ms var(--ease)}
+  .js .rv.in{transform:none}
+  .js .row .rv + .rv,.js .fire-side .rv + .rv{transition-delay:90ms}
+  .js .rings.rv{transform:scale(.93);transition:transform 1600ms var(--ease)}
+  .js .rings.rv.in{transform:none}
+  .js .lean.rv .photo,.js .lean.rv .tag{transform:none;transition:transform 1200ms var(--ease) 200ms}
+  .js .lean.rv.in .photo,.js .lean.rv.in .tag{transform:rotate(-2.2deg)}
+  .hero-copy > *{animation:rise 900ms var(--ease) both}
+  .hero-copy > :nth-child(2){animation-delay:60ms}
+  .hero-copy > :nth-child(3){animation-delay:120ms}
+  .hero-copy > :nth-child(4){animation-delay:180ms}
+  .hero-copy > :nth-child(5){animation-delay:240ms}
+  .quote{animation:rise 1000ms var(--ease) 200ms both}
+  .bar{transition:transform 220ms var(--ease)}
+  body:has(#qform :focus) .bar{transition:none}
+}
+@keyframes rise{from{transform:translateY(18px)}to{transform:none}}
+
+/* phone */
+@media (max-width:640px){
+  :root{--bar:calc(62px + env(safe-area-inset-bottom));--r-photo:16px;--r-card:14px;--off:10px}
+  html{scroll-padding-bottom:104px}
+  .cta .btn{flex:1 1 100%}
+  form{grid-template-columns:minmax(0,1fr)}
+  .f{grid-column:1/-1}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--deep);padding-bottom:env(safe-area-inset-bottom);box-shadow:0 -6px 20px -8px rgb(var(--shadow) / .5)}
+  .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:62px;font-weight:600;font-size:1rem;text-decoration:none;color:var(--on-deep)}
+  .bar a:first-child{background:var(--accent);color:var(--on-accent)}
+  .bar a:active{opacity:.85}
+  .bar a:focus-visible{outline-offset:-4px}
+  /* the bar steps aside while a field in the request form has focus, so it never covers the field; it comes back when focus leaves the form */
+  body:has(#qform :focus) .bar{transform:translateY(100%);visibility:hidden}
+}
+/* short phones: keep the headline, the rating and the call button above the phone bar */
+@media (max-width:640px) and (max-height:740px){
+  .hero-bg{height:118px}
+  .hero-copy{margin-top:-30px}
+  .lede{display:none}
+  .hero h1{font-size:1.875rem;margin-top:var(--s-3)}
+  .cta{margin-top:var(--s-4)}
+}
+@media (max-width:360px){
+  .rate{padding-inline:12px;gap:4px 8px;font-size:.9375rem}
+  .rate .stars{gap:2px}
+  .rate .stars svg{width:15px;height:15px}
+  .rate b{font-size:1.125rem}
+  .top .wrap{gap:var(--s-3)}
+  .brand{font-size:1.0625rem;gap:8px}
+  .brand svg{width:22px;height:22px}
+  .top .btn{padding:0 13px}
+  .hours .when{font-size:1.5rem}
+  .week li{font-size:.6875rem}
+  .hero h1{font-size:1.75rem}
+}
+@media (max-width:360px) and (max-height:600px){
+  .hero-bg{height:84px}
+  .hero h1{font-size:1.625rem}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.6l2.9 6 6.5.9-4.7 4.6 1.1 6.5L12 17.5l-5.8 3.1 1.1-6.5L2.6 9.5l6.5-.9z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5.2 3.5h3.6l1.9 4.8-2.4 1.6a12.4 12.4 0 005.8 5.8l1.6-2.4 4.8 1.9v3.6a1.7 1.7 0 01-1.9 1.7A16.6 16.6 0 013.5 5.4a1.7 1.7 0 011.7-1.9z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.8"/><path d="M12 7v5.2l3.4 2"/></symbol>
+  <symbol id="i-tick" viewBox="0 0 24 24"><path d="M5 12.6l4.4 4.4L19 7.4"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.6-5.7-6.6-11.1a6.6 6.6 0 0113.2 0C18.600 15.3 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M8 16L17 7M9.500 7H17v7.5"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-pine" viewBox="0 0 24 24"><path d="M12 2.800l4.300 5.700h-2.200l4 5.500h-2.800l3.700 4.500H5l3.700-4.500H5.900l4-5.500H7.700zM12 18.500v3"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.200 2.700v5.500c0 4.400-2.900 8-7.200 9.800-4.300-1.800-7.200-5.400-7.200-9.800V5.700z"/><path d="M8.800 12.100l2.300 2.300 4.200-4.300"/></symbol>
+  <symbol id="i-family" viewBox="0 0 24 24"><circle cx="8.500" cy="8" r="3"/><path d="M2.800 19.500c0-3.200 2.500-5.700 5.700-5.700s5.700 2.500 5.700 5.700"/><circle cx="17" cy="9.500" r="2.300"/><path d="M16 14.300c2.900-.5 5.300 1.600 5.300 4.600"/></symbol>
+  <symbol id="i-rings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.600"/><circle cx="12" cy="12" r="2.200"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><path d="M9 3.500h6v3H9zM9 5H6.500a1 1 0 00-1 1v13.500a1 1 0 001 1h11a1 1 0 001-1V6a1 1 0 00-1-1H15"/><path d="M8.800 13.600l2.200 2.200 4.200-4.300"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.500" width="18" height="13" rx="2"/><path d="M3 10h18M7 14.500h4"/></symbol>
+  <symbol id="i-brush" viewBox="0 0 24 24"><path d="M4 20c2-5 4-8 8-11M12 9c1.500-3 4-5 8-5-0.500 4-2.500 6.500-5.500 8M12 9l2.500 3M4 20h9"/></symbol>
+  <symbol id="i-lift" viewBox="0 0 24 24"><path d="M12 21V9M12 3l4.500 6h-9zM7 14l5 0M12 17.500h5"/></symbol>
+  <symbol id="i-needles" viewBox="0 0 24 24"><path d="M4 19h16M7 19l2.500-8M12 19V8.500M17 19l-2.500-8M5 14.500l3 1M19 14.500l-3 1"/></symbol>
+  <symbol id="i-break" viewBox="0 0 24 24"><path d="M4 11l8-6.500 8 6.500v8.500H4z"/><path d="M1.800 21.500h20.400" stroke-dasharray="2.600 2.600"/></symbol>
+</svg>
+
+<div class="sample" role="note">Sample site made for Tree Crafters by <a href="https://granitecitydigital.me/">Granite City Digital</a>. Your real site gets your own photos, colors and services.</div>
+
+<header class="top on-deep">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Tree Crafters, back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-rings"/></svg>
+      Tree Crafters
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#storm">Storm damage</a></li>
+        <li><a href="#fire">Fire mitigation</a></li>
+        <li><a href="#arborist">Arborist</a></li>
+        <li><a href="#area">Service area</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="tel:+19289780223"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="long num">(928) 978 0223</span><span class="short">Call</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero on-deep" id="top" aria-labelledby="hero-h">
+    <div class="hero-bg"><img src="hero.jpg" width="1600" height="1067" fetchpriority="high" alt="A tree climber roped high in a tall pine under a blue sky"></div>
+    <div class="hero-in">
+      <div class="hero-copy">
+        <a class="rate" href="#reviews">
+          <span class="stars" role="img" aria-label="Rated 5.0 out of 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <b>5.0</b>
+          <span class="lbl"><span class="num">151</span> Google reviews</span>
+        </a>
+        <h1 id="hero-h">We remove and trim trees across the <span class="hl">Rim Country.</span></h1>
+        <p class="lede">Family owned in Payson, Arizona. ISA arborist certified, licensed and insured.</p>
+        <div class="cta">
+          <a class="btn" href="tel:+19289780223"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>Call <span class="num">(928) 978 0223</span></span></a>
+          <a class="btn cream" href="#quote">Request a free evaluation</a>
+        </div>
+        <p class="hrs"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg><span><b>Every day, <span class="num">7 to 6</span>.</b> Call ahead to confirm.</span></p>
+      </div>
+
+      <div class="quote" id="quote">
+        <form id="qform" method="post" novalidate>
+          <div class="f full head-f">
+            <h2>Request a free evaluation</h2>
+            <p class="sub">Tell us about the tree and where it is, or call <b class="num">(928) 978 0223</b>.</p>
+          </div>
+          <div class="f">
+            <label for="q-name">Your name</label>
+            <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+            <span class="err" id="e-name"></span>
+          </div>
+          <div class="f">
+            <label for="q-phone">Phone</label>
+            <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(928) 555 0123" required aria-describedby="e-phone">
+            <span class="err" id="e-phone"></span>
+          </div>
+          <div class="f full">
+            <label for="q-town">Town</label>
+            <select id="q-town" name="town" required aria-describedby="e-town">
+              <option value="">Choose your town</option>
+              <option>Payson</option>
+              <option>Pine</option>
+              <option>Somewhere else in Rim Country</option>
+              <option>White Mountain area</option>
+            </select>
+            <span class="err" id="e-town"></span>
+          </div>
+          <div class="f full">
+            <label for="q-msg">What needs doing?</label>
+            <textarea id="q-msg" name="message" required aria-describedby="e-msg" placeholder="A dead pine near the house"></textarea>
+            <span class="err" id="e-msg"></span>
+          </div>
+          <div class="submit">
+            <button class="btn" type="submit">Send request</button>
+          </div>
+        </form>
+        <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
+          <h3 id="t-title">Thanks. We have it.</h3>
+          <p id="t-body">We will call you back soon.</p>
+          <p class="muted">This is a sample site, so nothing was actually sent.</p>
+          <button class="btn dark" type="button" id="t-again">Send another request</button>
+        </div>
+        <p class="fin"><svg class="i" aria-hidden="true"><use href="#i-card"/></svg><span>Financing is available. Ask when you call.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap trust" aria-label="About Tree Crafters">
+    <ul>
+      <li><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-pine"/></svg></span>ISA Certified Arborist</li>
+      <li><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span>Licensed and insured</li>
+      <li><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-family"/></svg></span>Family owned</li>
+      <li><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-rings"/></svg></span>Over 20 years in Rim Country</li>
+      <li><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-clip"/></svg></span>Free evaluation</li>
+    </ul>
+  </section>
+
+  <section class="rev on-deep" id="reviews" aria-labelledby="rev-h">
+    <div class="wrap">
+      <div class="rev-fig">
+        <div class="rings rv" aria-hidden="true">
+          <svg viewBox="0 0 1000 1000">
+            <g transform="rotate(-14 500 500)">
+              <ellipse cx="500" cy="500" rx="150" ry="141" stroke-width="2" opacity=".5"/>
+              <ellipse cx="501" cy="499" rx="182" ry="170" stroke-width="3.500" opacity=".85"/>
+              <ellipse cx="503" cy="498" rx="210" ry="197" stroke-width="1.500" opacity=".5"/>
+              <ellipse cx="504" cy="497" rx="246" ry="230" stroke-width="2.500" opacity=".75"/>
+              <ellipse cx="506" cy="496" rx="270" ry="254" stroke-width="1.500" opacity=".45"/>
+              <ellipse cx="507" cy="495" rx="304" ry="284" stroke-width="4" opacity=".9"/>
+              <ellipse cx="509" cy="494" rx="330" ry="310" stroke-width="1.500" opacity=".5"/>
+              <ellipse cx="510" cy="493" rx="352" ry="331" stroke-width="2" opacity=".65"/>
+              <ellipse cx="512" cy="492" rx="386" ry="362" stroke-width="3" opacity=".8"/>
+              <ellipse cx="513" cy="491" rx="408" ry="384" stroke-width="1.500" opacity=".45"/>
+              <ellipse cx="515" cy="490" rx="438" ry="412" stroke-width="2.500" opacity=".7"/>
+              <ellipse cx="516" cy="489" rx="462" ry="435" stroke-width="1.500" opacity=".5"/>
+              <ellipse cx="518" cy="488" rx="490" ry="461" stroke-width="5" opacity=".95"/>
+              <path d="M505 495L742 372M498 508L392 742M512 501L700 660" stroke-width="2" opacity=".45"/>
+            </g>
+          </svg>
+        </div>
+        <p class="rev-num" aria-hidden="true">5.0</p>
+      </div>
+      <div class="rev-body">
+        <span class="stars" aria-hidden="true"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+        <h2 id="rev-h">151 Google reviews</h2>
+        <p class="of">Rated <span class="num">5.0</span> out of <span class="num">5</span></p>
+        <a class="btn cream" href="https://maps.google.com/?cid=3892423911034487391" target="_blank" rel="noopener">Read reviews on Google<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="services" aria-labelledby="svc-h">
+    <div class="head rv">
+      <h2 id="svc-h">Removal, trimming and pruning</h2>
+      <p>Some trees have to come out. Others only need trimming. Tree Crafters does both in Payson and across the Rim Country.</p>
+    </div>
+
+    <article class="row has-inset">
+      <div class="pics rv">
+        <figure class="photo tall"><img src="removal.jpg" width="1400" height="933" alt="A climber at the top of a pine trunk with its limbs already cut off"></figure>
+        <figure class="photo inset"><img src="cut-rings.jpg" width="1200" height="800" alt="The cut end of a pine log, with sawdust on the growth rings"></figure>
+      </div>
+      <div class="txt rv">
+        <h3>Tree removal</h3>
+        <p>A tree interfering with phone or power lines. Roots causing structural damage. An unsightly tree in your yard. Whatever the reason, Tree Crafters removes it.</p>
+        <ul class="ticks">
+          <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Dead trees, and trees near a building or lines</li>
+          <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Roots near a driveway</li>
+          <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Stumps cut level with the ground or taken out</li>
+          <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Logs cut for you to store, or for disposal</li>
+        </ul>
+        <a class="textlink" href="#quote">Request a free evaluation<svg class="i" aria-hidden="true"><use href="#i-down"/></svg></a>
+      </div>
+    </article>
+
+    <article class="row flip">
+      <div class="txt rv">
+        <h3>Tree trimming and pruning</h3>
+        <p>Sometimes a tree does not need to be fully removed. It only needs trimming, and we trim it to your specifications.</p>
+        <ul class="ticks">
+          <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Dead, sickly or overgrown branches pruned</li>
+          <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Cabling and bracing</li>
+        </ul>
+        <a class="textlink" href="tel:+19289780223"><span>Call <span class="num">(928) 978 0223</span></span></a>
+      </div>
+      <div class="pics layer rv">
+        <figure class="photo wide"><img src="trimmed-pine.jpg" width="1400" height="788" alt="A pine top with spreading branches against a pale blue sky"></figure>
+      </div>
+    </article>
+  </section>
+
+  <section class="band deep storm on-deep" id="storm" aria-labelledby="storm-h">
+    <div class="wrap">
+      <div class="rv">
+        <h2 id="storm-h">Emergency storm damage</h2>
+        <p class="lead">When a storm brings limbs or entire trees down on your house or property, we come remove the problem trees so your home or property can be fixed.</p>
+        <ul class="chips">
+          <li><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg>Fallen trees</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg>Limbs on roofs</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg>Storm cleanup</li>
+        </ul>
+        <div class="cta">
+          <a class="btn" href="tel:+19289780223"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>Call <span class="num">(928) 978 0223</span></span></a>
+        </div>
+        <p class="hrs"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg><span><b>Every day, <span class="num">7 to 6</span>.</b> Call ahead to confirm.</span></p>
+      </div>
+      <div class="lean rv">
+        <span class="tag">Tree down</span>
+        <figure class="photo"><img src="tree-down.jpg" width="1300" height="867" alt="The upturned roots of a fallen pine on dry ground among standing pines and boulders"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="fire" aria-labelledby="fire-h">
+    <div class="head rv">
+      <h2 id="fire-h">Fire mitigation</h2>
+      <p>Many Rim Country homes and businesses are built near dense forest and thick brush. We are trained to provide fire mitigation, and there are four ways we make a property defensible and fire wise.</p>
+    </div>
+    <div class="fire">
+      <div class="pics has-inset rv">
+        <figure class="photo wide"><img src="pine-stand.jpg" width="1300" height="975" alt="Tall pines with open ground between the trunks in low sun"></figure>
+        <figure class="photo inset"><img src="needles.jpg" width="1200" height="800" alt="Dry pine needles, cones and twigs on the ground"></figure>
+      </div>
+      <div class="fire-side">
+      <ul class="ways rv">
+        <li><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-brush"/></svg></span>Thinning and removing brush and ladder fuels</li>
+        <li><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-lift"/></svg></span>Trimming and elevating trees</li>
+        <li><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-needles"/></svg></span>Removing fallen leaves, pine needles and other ground fuels</li>
+        <li><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-break"/></svg></span>Creating a fire break around the perimeter of the home</li>
+      </ul>
+      <figure class="promise on-deep rv">
+        <blockquote>&ldquo;We promise to meet or exceed town standards for fire mitigation requirements on your property.&rdquo;</blockquote>
+        <figcaption><b>Tree Crafters</b>, Payson, Arizona</figcaption>
+      </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band tint" id="arborist" aria-labelledby="arb-h">
+    <div class="wrap arb">
+      <div class="layer rv"><figure class="photo"><img src="dead-pine.jpg" width="1000" height="1500" alt="A bare dead pine beside a green one under a blue sky"></figure></div>
+      <div class="rv">
+        <h2 id="arb-h">ISA Certified Arborist</h2>
+        <p class="big">Tree Crafters is ISA arborist certified. ISA is the International Society of Arboriculture.</p>
+        <p>Being certified gives us &ldquo;the skills and knowledge to make sound tree care decisions&rdquo; so we can &ldquo;preserve, care for, and remove trees in the best way possible&rdquo;, tailored to the Rim Country area and its ecosystem.</p>
+        <div class="cta">
+          <a class="btn dark" href="#quote">Request a free evaluation</a>
+          <a class="textlink" href="tel:+19289780223"><span>Call <span class="num">(928) 978 0223</span></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" aria-label="Photos">
+    <div class="strip">
+      <figure class="photo rv"><img src="hillside.jpg" width="1600" height="1070" alt="Pines and one broken trunk on a dry hillside"></figure>
+      <figure class="photo rv"><img src="logs.jpg" width="1400" height="933" alt="Cut pine logs stacked with the rings showing"></figure>
+      <figure class="photo rv"><img src="crowns.jpg" width="1200" height="801" loading="lazy" alt="Looking up into the branches of tall pines"></figure>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="area" aria-labelledby="area-h">
+    <div class="head rv">
+      <h2 id="area-h">Service area</h2>
+      <p>Based in Payson, Arizona. Tree Crafters serves the entire Rim Country and the White Mountain area.</p>
+    </div>
+    <div class="area">
+      <div class="mapcard rv">
+        <div class="bar-top"><div class="where"><span class="lab">Service area</span><b><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Payson, Arizona</b></div><span>Rim Country and the White Mountain area</span></div>
+        <div class="frame"><iframe src="https://maps.google.com/maps?q=Payson%2C%20AZ&amp;z=10&amp;output=embed" loading="lazy" title="Map of the Tree Crafters service area around Payson, Arizona"></iframe></div>
+        <ul class="towns" aria-label="Where we work">
+          <li><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Payson</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Pine</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Rim Country</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>White Mountain area</li>
+        </ul>
+      </div>
+      <div class="side rv">
+        <div class="hours on-deep" id="hours">
+          <h3><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Hours</h3>
+          <p class="when">Every day, <span class="nb">7 to 6</span></p>
+          <ul class="week" aria-hidden="true">
+            <li>Mon</li>
+            <li>Tue</li>
+            <li>Wed</li>
+            <li>Thu</li>
+            <li>Fri</li>
+            <li>Sat</li>
+            <li>Sun</li>
+          </ul>
+          <p class="note">Call ahead to confirm.</p>
+        </div>
+        <div class="cta">
+          <a class="btn" href="tel:+19289780223"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>Call <span class="num">(928) 978 0223</span></span></a>
+          <a class="btn dark" href="#quote">Request a free evaluation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot on-deep">
+  <div class="wrap">
+    <div>
+      <p class="name">Tree Crafters</p>
+      <p class="tagline">Rooted In Service</p>
+      <p class="where">Payson, Arizona. Serving the Rim Country for over <span class="num">20</span> years.</p>
+    </div>
+    <div class="right">
+      <a href="tel:+19289780223"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="num">(928) 978 0223</span></a>
+      <p>Every day, <span class="num">7 to 6</span>. Call ahead to confirm.</p>
+    </div>
+    <p class="credit">Photos are examples.</p>
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a href="tel:+19289780223"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+  <a href="#quote"><svg class="i" aria-hidden="true"><use href="#i-clip"/></svg>Free evaluation</a>
+</nav>
+
+<script>
+(function(){
+  /* quiet reveal, once per element */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+  addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+
+  /* quote form (runs only when the form is on the page) */
+  var f=document.getElementById('qform');
+  if(!f)return;
+  var F=f.elements,thanks=document.getElementById('thanks');
+  function setErr(id,msg){var i=document.getElementById(id),e=document.getElementById(i.getAttribute('aria-describedby'));e.textContent=msg;if(msg){i.setAttribute('aria-invalid','true')}else{i.removeAttribute('aria-invalid')}return !msg}
+  function check(){
+    var ok=true,first=null;
+    function run(id,msg){var good=setErr(id,msg);if(!good&&!first)first=id;ok=ok&&good}
+    var name=F['name'].value.trim(),phone=F['phone'].value.replace(/\D/g,''),msg=F['message'].value.trim();
+    run('q-name',name.length<2?'Please tell us your name.':'');
+    run('q-phone',phone.length<10?'Please enter a 10 digit phone number.':'');
+    run('q-town',!F['town'].value?'Please choose your town.':'');
+    run('q-msg',msg.length<5?'A few words about the job helps us call back with the right answer.':'');
+    if(first)document.getElementById(first).focus();
+    return ok;
+  }
+  ['q-name','q-phone','q-town','q-msg'].forEach(function(id){
+    var el=document.getElementById(id);
+    el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){if(el.getAttribute('aria-invalid'))setErr(id,'')});
+  });
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!check())return;
+    var name=F['name'].value.trim().split(' ')[0],d=F['phone'].value.replace(/\D/g,'').slice(-10);
+    var nice='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6);
+    document.getElementById('t-title').textContent='Thanks, '+name+'. We have it.';
+    document.getElementById('t-body').textContent='We will call you at '+nice+' soon.';
+    f.hidden=true;thanks.hidden=false;thanks.focus();
+  });
+  document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
+})();
+</script>
+</body>
+</html>
