@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pow-A-Wash LLC | Power washing, yard work and fences in Billings, MT</title>
+<meta name="description" content="Pow-A-Wash LLC in Billings, MT: power washing, house washing, lawn service, fences, gutter cleaning, painting and handy man work. Call (406) 561 0866.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#24363f">
+<meta property="og:title" content="Pow-A-Wash LLC | Billings, MT">
+<meta property="og:description" content="Pow-A-Wash LLC in Billings, MT: power washing, house washing, lawn service, fences, gutter cleaning, painting and handy man work. Call (406) 561 0866.">
+<meta property="og:image" content="https://granitecitydigital.me/samples/pow-a-wash-mt/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=Gabarito:wght@700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* 1. this mockup's own look: wet slate siding, a yellow rain jacket, clean rinse water */
+:root{
+  --bg:#eff2f0;            /* page ground, rinsed pale grey */
+  --surface:#fafbf9;       /* raised cards and panels */
+  --tint:#dde6e6;          /* light band */
+  --ink:#16232a;           /* slate near black text */
+  --muted:#46555d;         /* secondary text on light grounds */
+  --line:#c6d2d3;
+  --deep:#24363f;          /* deep grounds, wet slate siding */
+  --deep-2:#324a55;        /* the washed stretch, and raised cards on a deep ground */
+  --deep-line:#4a6571;
+  --foot:#1a2830;          /* footer ground, one step deeper */
+  --on-deep:#f3f2ea;       /* cream text on deep grounds */
+  --on-deep-muted:#cbd8dc;
+  --accent:#f8c82e;        /* jacket yellow: buttons, one headline line, numerals, offset blocks */
+  --accent-hover:#ffd75a;
+  --on-accent:#16232a;
+  --layer:#f8c82e;         /* offset block behind a photo */
+  --focus:#16232a;
+  --shadow:20 35 43;       /* shadow color as r g b, a tint of the ink */
+  --laps:repeating-linear-gradient(180deg,rgb(255 255 255 / .045) 0 1px,transparent 1px 34px,rgb(8 18 24 / .16) 34px 36px); /* lap siding */
+
+  --font:"Albert Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Gabarito","Albert Sans",system-ui,sans-serif;
+  --display-weight:800;
+
+  --r-ctl:12px;                      /* buttons */
+  --r-card:clamp(14px,1.5vw,20px);   /* cards and panels */
+  --r-photo:clamp(18px,2.2vw,28px);  /* photo cards */
+}
+/* 2. the system */
+:root{
+  --t-small:.875rem;
+  --t-body:1rem;
+  --t-lead:clamp(1.0625rem,1rem + .3vw,1.1875rem);
+  --t-h3:1.25rem;
+  --t-h2:clamp(2rem,1.45rem + 2.2vw,3.125rem);
+  --t-h1:clamp(1.75rem,.25rem + 8.2vw,3.75rem);
+
+  /* spacing scale: every gap on the page is one of these */
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+  --sec:clamp(80px,9vw,128px);         /* the one space between sections */
+  --band-pad:clamp(64px,8vw,112px);    /* inside a band */
+  --off:clamp(10px,1.4vw,18px);        /* offset of the color block behind a photo */
+
+  /* three levels only. Light comes from the top left, so every shadow falls down and to the right.
+     page: no shadow. raised: cards, photos, buttons. floating: cards that overlap a photo or a band edge. */
+  --sh-1:1px 1px 2px rgb(var(--shadow) / .05),2px 6px 16px -6px rgb(var(--shadow) / .16);
+  --sh-2:1px 2px 4px rgb(var(--shadow) / .06),4px 14px 32px -10px rgb(var(--shadow) / .24);
+  --sh-3:2px 4px 8px rgb(var(--shadow) / .08),8px 28px 56px -16px rgb(var(--shadow) / .34);
+
+  --wrap:1120px;
+  --m:clamp(20px,4vw,32px);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --bar:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+@media (max-width:760px){html{scroll-padding-bottom:96px}} /* keyboard focus never lands under the phone bar */
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+::selection{background:var(--accent);color:var(--on-accent)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+h1,h2,h3{font-family:var(--font-display);font-weight:var(--display-weight);letter-spacing:-.022em;line-height:1.02;text-wrap:balance}
+p{text-wrap:pretty}
+ul,ol{list-style:none;padding:0}
+/* deep grounds: the same parts read cream on slate */
+.deep{color:var(--on-deep);--ink:var(--on-deep);--muted:var(--on-deep-muted);--bg:var(--deep);--surface:var(--deep-2);--tint:var(--deep-2);--line:var(--deep-line);--focus:var(--accent);--shadow:6 14 19}
+.wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:var(--r-ctl)}
+.skip:focus{top:12px}
+.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* buttons: raised level; hover lifts, press sinks */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2);min-height:50px;padding:0 22px;border-radius:var(--r-ctl);border:1px solid transparent;background:var(--accent);color:var(--on-accent);font:600 1rem/1 var(--font);text-decoration:none;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,border-color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.btn svg{width:17px;height:17px;flex:none}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.line{background:var(--surface);color:var(--ink);border-color:var(--line);font-weight:500}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--accent-hover);box-shadow:var(--sh-2);transform:translateY(-1px)}
+  .btn.line:hover{background:var(--surface);border-color:var(--muted)}
+  .btn:active{transform:scale(.97);box-shadow:none}
+}
+
+/* sample banner */
+.sample{background:var(--tint);color:var(--muted);font-size:.8125rem;text-align:center;padding:8px var(--m);line-height:1.4}
+.sample a{color:var(--ink)}
+
+/* header */
+.top{background:var(--deep)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s-5);min-height:72px}
+.mark{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:var(--display-weight);font-size:1.5rem;line-height:1;letter-spacing:-.02em;text-decoration:none;min-height:44px;white-space:nowrap}
+.mark svg{width:30px;height:26px;flex:none;color:var(--accent)}
+.mark small{font-family:var(--font);font-size:.75rem;font-weight:500;letter-spacing:.02em;color:var(--muted)}
+.nav{display:flex;align-items:center;gap:28px;font-size:.9375rem}
+.nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 200ms ease}
+.top .btn{min-height:44px;padding:0 16px;font-size:var(--t-small)}
+.top .short{display:none}
+@media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--ink)}}
+@media (max-width:1040px){.nav{display:none}}
+@media (max-width:520px){.top .long{display:none}.top .short{display:inline}}
+
+/* photo cards: one radius, one treatment. The wrapper is rounded so the picture clips cleanly. */
+.photo{position:relative;border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-1)}
+.photo img{width:100%;height:100%;object-fit:cover}
+/* layered photo: a yellow block sits behind the card, offset down and right like its shadow */
+.layer{position:relative;isolation:isolate}
+.layer::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--layer);transform:translate(var(--off),var(--off))}
+/* floating card: overlaps the edge of a photo */
+.float{position:absolute;z-index:2;background:#fafbf9;color:#16232a;border-radius:var(--r-card);box-shadow:var(--sh-3);padding:var(--s-4) var(--s-5);display:grid;gap:2px}
+.float span{font-size:.8125rem;color:#46555d;line-height:1.4}
+.float p{font-size:1.0625rem;line-height:1.3;font-weight:600}
+.float b{font-weight:inherit;white-space:nowrap}
+
+/* washed stretch: on a deep ground one diagonal piece of the siding is already lighter, as if just rinsed */
+.siding{position:relative;isolation:isolate;background:var(--laps),var(--deep)}
+.siding::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--laps),var(--deep-2);clip-path:polygon(100% 0,100% 100%,var(--from,18%) 100%)}
+
+/* hero */
+.hero{padding-top:clamp(20px,2.6vw,36px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);grid-template-areas:"text pic" "jobs jobs";gap:var(--s-7);align-items:center}
+.hero-text{grid-area:text}
+.hero h1{font-size:var(--t-h1);line-height:.98}
+.hero h1 > span{display:block}
+.hl{color:var(--accent)}
+.hero .lead{margin-top:var(--s-5);color:var(--muted);font-size:var(--t-lead);max-width:40ch}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s-3);margin-top:var(--s-5)}
+.fav{margin-top:var(--s-5);display:flex;align-items:center;gap:10px;font-size:.9375rem;line-height:1.35;color:var(--ink)}
+.fav svg{width:20px;height:20px;flex:none;color:var(--accent)}
+.hero-pic{grid-area:pic;margin-right:var(--off)}
+.hero-pic .photo{aspect-ratio:6/5}
+.hero-pic img{object-position:60% 40%}
+.hero-pic .float{left:calc(var(--s-5) * -1);bottom:var(--s-5)}
+
+/* job cards: four taps to the services, floating over the bottom edge of the hero */
+.jobs{grid-area:jobs;margin-bottom:calc(var(--s-7) * -1);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s-4)}
+.jobs a{height:100%;display:grid;grid-template-columns:44px minmax(0,1fr);gap:0 var(--s-3);align-items:center;padding:var(--s-4);border-radius:var(--r-card);background:#fafbf9;color:#16232a;text-decoration:none;box-shadow:var(--sh-3);transition:transform 200ms var(--ease),background-color 200ms ease}
+.jobs svg{width:44px;height:44px;padding:9px;border-radius:12px;background:var(--accent);color:var(--on-accent)}
+.jobs b{display:block;font-family:var(--font-display);font-weight:700;font-size:1.1875rem;letter-spacing:-.015em;line-height:1.1}
+.jobs small{display:block;margin-top:3px;font-size:.8125rem;line-height:1.35;color:#46555d}
+.jobs a:active{transform:scale(.98)}
+.jobs a:focus-visible{outline-color:#16232a;outline-offset:-5px} /* the cards sit half on slate and half on the pale page */
+@media (hover:hover) and (pointer:fine){.jobs a:hover{transform:translateY(-4px);background:#fff8df}.jobs a:active{transform:scale(.98)}}
+
+/* sections: open sections sit on the page ground, bands run the full width */
+.sec{padding-top:var(--sec)}
+.hero + .sec{padding-top:calc(var(--sec) + var(--s-7))}
+.band{margin-top:var(--sec);padding-block:var(--band-pad);background-color:var(--tint)}
+.band.siding{background:var(--laps),var(--deep)}
+.sec h2,.band h2{font-size:var(--t-h2)}
+.intro{margin-top:var(--s-4);color:var(--muted);font-size:var(--t-lead);max-width:44ch}
+
+/* service rows: the name of the job, one line about it */
+.rows{margin-top:var(--s-6);display:grid}
+.rows li{padding:var(--s-4) 0;border-top:1px solid var(--line)}
+.rows li:last-child{border-bottom:1px solid var(--line)}
+.rows h3{font-size:1.375rem;font-weight:700}
+.rows p{margin-top:var(--s-1);color:var(--muted);max-width:44ch}
+
+/* washing: two photos, the second laid over the corner of the first */
+.wash{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-8);align-items:center}
+.wash-text{order:2}
+.wash-pics{order:1;position:relative;padding-bottom:clamp(72px,9vw,120px);padding-right:clamp(20px,4vw,56px)}
+.wash-pics .layer .photo{aspect-ratio:4/3}
+.wash-pics .layer img{object-position:30% 50%}
+.wash-pics .over{position:absolute;right:0;bottom:0;width:46%;aspect-ratio:6/5;box-shadow:var(--sh-3)}
+.wash-pics .over{border:6px solid var(--bg)}
+
+/* yard: a list beside the heading, then a strip of three rounded tiles, the middle one lower */
+.yard-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-5) var(--s-8);align-items:end}
+.ticks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s-3) var(--s-5);font-weight:600;font-size:1.0625rem}
+.ticks li{display:flex;align-items:center;gap:12px;line-height:1.3}
+.ticks li::before{content:"";width:18px;height:18px;flex:none;border-radius:6px;background:var(--accent)}
+.strip{margin-top:var(--s-7);display:grid;grid-template-columns:4fr 5fr 5fr;gap:var(--s-5);align-items:start}
+.strip li:nth-child(2){margin-top:var(--s-8)}
+.strip .photo{aspect-ratio:5/6}
+.strip li:nth-child(1) .photo{aspect-ratio:4/5}
+.strip .cap{margin-top:var(--s-3);font-family:var(--font-display);font-weight:700;font-size:1.25rem;line-height:1.2;letter-spacing:-.015em}
+.strip li:nth-child(1) img{object-position:40% 80%}
+.strip li:nth-child(2) img{object-position:66% 50%;filter:contrast(.88) brightness(1.16)}
+.strip li:nth-child(3) img{object-position:34% 50%;filter:saturate(.8) sepia(.15) contrast(.9) brightness(1.14)} /* the photo was taken at dusk: lift the shadows, hold the sky, keep the grey couch grey */
+
+/* fences: a wide yard photo with a tall photo and a floating card over its edge */
+.fence{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:var(--s-5);align-items:stretch;margin-top:var(--s-7)}
+.fence .layer{--layer:#c9d6d8;margin-bottom:var(--off)}
+.fence .photo{height:100%}
+.fence-wide .photo{aspect-ratio:8/5}
+.fence-wide img{object-position:88% 60%;scale:1.2;transform-origin:100% 72%}
+.fence-tall{margin-top:calc(var(--s-8) * -1);margin-right:var(--off);position:relative}
+.fence-tall img{object-position:42% 45%}
+.fence-tall .float{left:calc(var(--s-6) * -1);bottom:var(--s-6)}
+.fence-top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-5) var(--s-8);align-items:end}
+.fence-top .intro{margin-top:var(--s-4)}
+
+/* paint */
+.paint{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-8);align-items:center}
+.paint .layer{margin-right:var(--off)}
+.paint .photo{aspect-ratio:16/11}
+.paint img{object-position:30% 50%}
+
+/* how it works, with the job picker */
+.how{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s-7) var(--s-8);align-items:start;margin-top:var(--s-7)}
+.steps{display:grid;gap:var(--s-5);counter-reset:step}
+.steps li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:2px var(--s-4);counter-increment:step}
+.steps li::before{content:counter(step);grid-row:1 / span 2;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--deep);color:var(--accent);font-family:var(--font-display);font-weight:800;font-size:1.5rem;line-height:1}
+.steps h3{font-size:1.375rem;font-weight:700;padding-top:4px}
+.steps p{color:var(--muted);max-width:42ch}
+.how-pic{margin-top:var(--s-6)}
+.how-pic .photo{aspect-ratio:16/8}
+.pick{background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3);padding:clamp(20px,3vw,36px)}
+.pick fieldset{border:0;padding:0;min-width:0}
+.pick legend{font-family:var(--font-display);font-weight:800;font-size:1.625rem;letter-spacing:-.02em;line-height:1.1;padding:0}
+.opts{margin-top:var(--s-4);display:grid;grid-template-columns:1fr 1fr;gap:var(--s-2)}
+.opts label{position:relative;display:flex;align-items:center;gap:10px;min-height:52px;padding:8px 14px;border:1px solid var(--line);border-radius:var(--r-ctl);font-weight:600;line-height:1.2;cursor:pointer;transition:background-color 180ms ease,border-color 180ms ease}
+.opts input{appearance:none;-webkit-appearance:none;width:18px;height:18px;flex:none;margin:0;border:2px solid var(--muted);border-radius:50%;background:var(--surface);cursor:pointer}
+.opts input:checked{border-color:var(--ink);background:var(--ink);box-shadow:inset 0 0 0 3px var(--accent)}
+.opts input:focus-visible{outline:none}
+.opts label:has(input:checked){background:var(--accent);border-color:var(--accent)}
+.opts label:has(input:focus-visible){outline:2px solid var(--focus);outline-offset:3px}
+@media (hover:hover) and (pointer:fine){.opts label:hover{border-color:var(--ink)}}
+.panel{margin-top:var(--s-5)}
+.panel h3{font-size:var(--t-h3);font-weight:700}
+.panel ul{margin-top:var(--s-3);display:grid;gap:var(--s-2)}
+.panel li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:12px;line-height:1.45}
+.panel li::before{content:"";width:10px;height:10px;margin:7px 4px 0;border-radius:50%;background:var(--accent);box-shadow:0 0 0 2px var(--ink)}
+@supports selector(:has(a)){
+  .pick .panel{display:none}
+  .pick:has(#j-wash:checked) .p-wash,.pick:has(#j-yard:checked) .p-yard,.pick:has(#j-fence:checked) .p-fence,.pick:has(#j-paint:checked) .p-paint{display:block}
+}
+.pick .btn{margin-top:var(--s-5);width:100%}
+
+/* contact: the phone number on the light band, the hours on a slate card */
+.contact{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-7) var(--s-8);align-items:center}
+.bigtel{display:inline-flex;align-items:center;min-height:48px;margin-top:var(--s-5);font-family:var(--font-display);font-weight:800;font-size:clamp(2rem,1.1rem + 3.8vw,3.75rem);line-height:1.1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:6px;text-underline-offset:.16em}
+.town{margin-top:var(--s-4);color:var(--muted)}
+.town b{margin-right:var(--s-2);font-weight:600;color:var(--ink)}
+.hrs{overflow:hidden;border-radius:var(--r-card);box-shadow:var(--sh-3);padding:clamp(24px,3vw,40px)}
+.hrs h3{font-size:1.625rem}
+.hrs dl{margin-top:var(--s-4);display:grid}
+.hrs dl div{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:0 var(--s-4);padding:var(--s-3) 0;border-top:1px solid var(--line)}
+.hrs dt{font-weight:600}
+.hrs dd{margin:0;font-variant-numeric:tabular-nums;color:var(--muted)}
+.hrs .confirm{margin-top:var(--s-3);display:flex;align-items:center;gap:10px;font-weight:600;color:var(--accent)}
+.hrs .confirm svg{width:20px;height:20px;flex:none}
+
+/* footer */
+.foot{background:var(--foot);padding-block:var(--s-7) var(--s-7);font-size:.8125rem;color:var(--muted)}
+.foot .wrap{display:grid;grid-template-columns:1fr auto;gap:var(--s-3) var(--s-6);align-items:center}
+.foot b{color:var(--ink);font-weight:600}
+.foot a{color:var(--muted)}
+.foot .right{text-align:right}
+.foot .right a{display:inline-flex;align-items:center;min-height:44px}
+.foot .credit{grid-column:1/-1;max-width:none}
+
+/* footer mark: a 2 s logo build that plays once in view, muted; the still logo shows until it really plays and is the fallback */
+.gcd{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:14px;margin-top:12px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505;box-shadow:0 0 0 1px var(--deep-line)}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font-weight:500}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--tint)}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
+
+/* phone bar */
+.bar{display:none}
+
+/* motion: slow, once, a few pixels of travel and no fading, so text holds its contrast the whole way.
+   Content stays in place without scripts and with reduced motion. */
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{transform:translateY(18px);transition:transform 700ms var(--ease)}
+  .js .rv.in{transform:none}
+  .js .strip .rv:nth-child(2),.js .steps .rv:nth-child(2){transition-delay:80ms}
+  .js .strip .rv:nth-child(3),.js .steps .rv:nth-child(3){transition-delay:160ms}
+  .hero .rise{animation:rise 800ms var(--ease) both}
+  .hero-pic.rise{animation-delay:120ms}
+  .hero-pic img{animation:settle 1600ms var(--ease) both}
+  .hero.siding::before{animation:rinse 1500ms var(--ease) 200ms both}
+}
+@keyframes rise{from{transform:translateY(14px)}to{transform:none}}
+@keyframes settle{from{transform:scale(1.05)}to{transform:none}}
+/* the washed stretch opens once, like one pass of the spray */
+@keyframes rinse{from{clip-path:polygon(100% 0,100% 100%,88% 100%)}}
+
+/* tablet */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"text" "jobs" "pic";gap:var(--s-5)}
+  .jobs{margin-bottom:0;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s-3)}
+  .hero-pic{margin-bottom:calc(var(--s-7) * -1)}
+  .hero-pic .photo{aspect-ratio:16/11}
+  .hero-pic .float{left:var(--s-5)}
+  .wash,.yard-head,.fence-top,.paint,.how,.contact{grid-template-columns:minmax(0,1fr)}
+  .wash,.paint{gap:var(--s-6)}
+  .wash-text{order:0}
+  .wash-pics{order:0}
+}
+@media (min-width:961px){.hero h1{font-size:clamp(3rem,5vw,4rem)}}
+
+/* phone */
+@media (max-width:640px){
+  :root{--bar:calc(64px + env(safe-area-inset-bottom));--r-photo:18px;--r-card:16px;--off:10px}
+  .sample{font-size:.75rem;padding-block:6px}
+  .top .wrap{min-height:60px;gap:var(--s-3)}
+  .hero{padding-top:var(--s-4)}
+  .hero .lead{margin-top:var(--s-3)}
+  .cta{margin-top:var(--s-4)}
+  .cta .btn{flex:1 1 auto;padding-inline:16px}
+  .hero .cta .line{display:none} /* the four job cards right below do this job on a phone */
+  .fav{margin-top:var(--s-4);font-size:.875rem}
+  .hero-grid{gap:var(--s-4)}
+  .jobs{gap:var(--s-2)}
+  .jobs a{grid-template-columns:36px minmax(0,1fr);gap:0 10px;padding:10px;min-height:60px}
+  .jobs svg{width:36px;height:36px;padding:7px;border-radius:10px}
+  .jobs b{font-size:1.0625rem}
+  .jobs small{display:none}
+  .hero-pic{margin-top:var(--s-2)}
+  .hero-pic .photo{aspect-ratio:5/4}
+  .hero-pic .float{position:relative;left:auto;bottom:auto;margin:calc(var(--s-7) * -1) var(--s-4) 0}
+  .hero-pic.layer::before{bottom:auto;aspect-ratio:5/4} /* the offset block follows the photo, not the hours card under it */
+  .wash-pics{padding-right:0;padding-bottom:88px}
+  .wash-pics .layer{margin-right:var(--off)}
+  .wash-pics .over{width:54%}
+  .ticks{grid-template-columns:minmax(0,1fr)}
+  .strip{margin-top:var(--s-6);grid-template-columns:1fr 1fr;gap:var(--s-5) var(--s-3)}
+  .strip li:nth-child(2){margin-top:0}
+  .strip li:nth-child(1) .photo,.strip li:nth-child(2) .photo{aspect-ratio:4/5}
+  .strip li:nth-child(3){grid-column:1/-1}
+  .strip li:nth-child(3) .photo{aspect-ratio:16/10}
+  .strip li:nth-child(3) img{object-position:50% 50%}
+  .fence{margin-top:var(--s-6);grid-template-columns:minmax(0,1fr)}
+  .fence-wide .photo{aspect-ratio:4/3}
+  .fence .fence-wide{margin-right:var(--off)}
+  .fence-tall{margin:calc(var(--s-8) * -1) 0 0 auto;width:62%}
+  .fence-tall .photo{aspect-ratio:4/5;border:6px solid var(--bg)}
+  .fence-tall .float{left:calc(var(--s-7) * -1)}
+  .paint .photo{aspect-ratio:4/3}
+  .opts label{padding-inline:10px;gap:8px;font-size:.9375rem}
+  .foot .wrap{grid-template-columns:minmax(0,1fr)}
+  .foot .right{text-align:left}
+  .foot{box-shadow:0 6px 0 var(--foot)} /* the footer color runs on under the phone bar */
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--deep);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+  .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:60px;font-weight:600;font-size:1rem;text-decoration:none;color:var(--ink)}
+  .bar a:first-child{background:var(--accent);color:var(--on-accent)}
+  .bar a:first-child:focus-visible{outline-color:var(--on-accent);outline-offset:-5px}
+  .bar a:last-child:focus-visible{outline-offset:-5px}
+  .bar a:active{opacity:.85}
+  .bar svg{width:17px;height:17px}
+}
+/* narrow phones: the name and the Call button stay on one line */
+@media (max-width:360px){
+  .mark{font-size:1.25rem;gap:8px}
+  .mark svg{width:24px;height:21px}
+  .top .btn{padding:0 14px}
+  .opts{grid-template-columns:minmax(0,1fr)}
+}
+/* short phones: keep the hero call button and the job cards clear of the phone bar */
+@media (max-width:640px) and (max-height:740px){
+  body .hero{padding-top:var(--s-3)}
+  body .hero .lead{font-size:1rem;line-height:1.45;margin-top:var(--s-2)}
+  body .cta{margin-top:var(--s-3)}
+  body .fav{margin-top:var(--s-3)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="sample" role="note">Sample site made for Pow-A-Wash LLC by <a href="https://granitecitydigital.me/">Granite City Digital</a>. Your real site gets your own photos, colors and services.</div>
+
+<header class="top deep">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Pow-A-Wash LLC, back to top">
+      <svg viewBox="0 0 30 26" aria-hidden="true"><path d="M3 23L11 13" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M14 9l3-7M17 12l9-6M18 16l10 1" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+      <span>Pow-A-Wash <small>LLC</small></span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="#washing">Washing</a></li>
+        <li><a href="#yard">Lawn and yard</a></li>
+        <li><a href="#fences">Fences</a></li>
+        <li><a href="#paint">Painting</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="tel:+14065610866"><span class="long num">(406) 561 0866</span><span class="short">Call</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero siding deep" id="top" aria-labelledby="hero-h">
+    <div class="wrap hero-grid">
+      <div class="hero-text rise">
+        <h1 id="hero-h"><span class="hl">Houses washed.</span> <span>Yards cleaned up.</span> <span>Fences built.</span></h1>
+        <p class="lead">Power washing, lawn and yard care, fences and painting in Billings, MT.</p>
+        <div class="cta">
+          <a class="btn" href="tel:+14065610866"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call <span class="num">(406) 561 0866</span></a>
+          <a class="btn line" href="#washing">See our services</a>
+        </div>
+        <p class="fav"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2.5 9.5L10 3l7.500 6.500M4.500 8.500V17h11V8.500M10 14.300c-1.900-1.300-2.900-2.200-2.900-3.300a1.500 1.500 0 012.900-.6 1.500 1.500 0 012.900.6c0 1.100-1 2-2.900 3.300z" fill="none" stroke="currentColor" stroke-width="1.700" stroke-linejoin="round" stroke-linecap="round"/></svg>Nextdoor Neighborhood Favorite, 2024 and 2025</p>
+      </div>
+      <nav class="jobs rise" aria-label="Jump to a service">
+        <a href="#washing"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M3 23l8-9M14 10l2.500-7M17 13l7-4.500M17.500 17l6.500 1.500" fill="none" stroke="currentColor" stroke-width="2.600" stroke-linecap="round"/></svg><span><b>Washing</b><small>Power, house and gutters</small></span></a>
+        <a href="#yard"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M3 22h20M7 22c0-6-1-9-3-11M13 22V6M19 22c0-6 1-9 3-11" fill="none" stroke="currentColor" stroke-width="2.600" stroke-linecap="round"/></svg><span><b>Lawn and yard</b><small>Lawn, leaves, hedges and junk</small></span></a>
+        <a href="#fences"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M4 23V8l3-4 3 4v15M16 23V8l3-4 3 4v15M2 12h22M2 18h22" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linejoin="round" stroke-linecap="round"/></svg><span><b>Fences</b><small>Fences, stain and seal</small></span></a>
+        <a href="#paint"><svg viewBox="0 0 26 26" aria-hidden="true"><path d="M4 4h15v6H4zM19 7h4v6H13v4M11 17h4v6h-4z" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linejoin="round" stroke-linecap="round"/></svg><span><b>Painting</b><small>Plus handy man work</small></span></a>
+      </nav>
+      <div class="hero-pic layer rise">
+        <figure class="photo"><img src="hero.jpg" width="1600" height="1333" fetchpriority="high" alt="Person in a yellow rain jacket pressure washing the siding of a house, seen from behind"></figure>
+        <div class="float"><span>Hours</span><p>Monday to Saturday, <b>7 AM to 9 PM</b></p><span>Call ahead to confirm</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="washing" aria-labelledby="wash-h">
+    <div class="wash">
+      <div class="wash-text rv">
+        <h2 id="wash-h">Washing</h2>
+        <p class="intro">Power washing, house washing and gutter cleaning.</p>
+        <ul class="rows">
+          <li><h3>Power washing</h3><p>Call and tell us what is dirty and about how big it is.</p></li>
+          <li><h3>House washing</h3><p>The outside of your house, washed down.</p></li>
+          <li><h3>Gutter cleaning</h3><p>For gutters holding leaves and grit.</p></li>
+        </ul>
+      </div>
+      <div class="wash-pics rv">
+        <div class="layer"><figure class="photo"><img src="spray.jpg" width="1400" height="934" alt="Hand holding a hose nozzle with a wide fan of water coming out"></figure></div>
+        <figure class="photo over"><img src="gutter.jpg" width="1400" height="933" alt="White gutter streaked with green grime below a deep blue sky"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="yard" aria-labelledby="yard-h">
+    <div class="wrap">
+      <div class="yard-head rv">
+        <div>
+          <h2 id="yard-h">Lawn and yard</h2>
+          <p class="intro">One call for the grass, the hedge, the leaves and the pile by the fence.</p>
+        </div>
+        <ul class="ticks">
+          <li>Lawn service</li>
+          <li>Yard clean outs</li>
+          <li>Leaf clean up</li>
+          <li>Hedge cleanup</li>
+          <li>Junk removal</li>
+        </ul>
+      </div>
+      <ul class="strip">
+        <li class="rv"><figure class="photo"><img src="leaves.jpg" width="1000" height="1250" alt="Rake beside a pile of fallen leaves on a green lawn"></figure><p class="cap">Leaf clean up</p></li>
+        <li class="rv"><figure class="photo"><img src="hedge.jpg" width="1400" height="934" alt="Hands trimming the top of a hedge with long shears"></figure><p class="cap">Hedge cleanup</p></li>
+        <li class="rv"><figure class="photo"><img src="couch.jpg" width="1400" height="934" alt="Torn old couch sitting on the grass beside a curb"></figure><p class="cap">Junk removal</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="fences" aria-labelledby="fence-h">
+    <div class="fence-top rv">
+      <div>
+        <h2 id="fence-h">We build fences</h2>
+        <p class="intro">Call and tell us where the fence goes and about how long it runs. We stain and seal too.</p>
+      </div>
+    </div>
+    <div class="fence">
+      <div class="fence-wide layer rv"><figure class="photo"><img src="fence.jpg" width="1600" height="1067" alt="Wooden privacy fence around a green back yard under a blue sky"></figure></div>
+      <div class="fence-tall rv">
+        <figure class="photo"><img src="stain.jpg" width="1100" height="1375" alt="Hand brushing reddish brown stain onto a wooden fence post"></figure>
+        <div class="float"><p>Stain and seal</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band siding deep" id="paint" aria-labelledby="paint-h" style="--from:52%">
+    <div class="wrap paint">
+      <div class="rv">
+        <h2 id="paint-h">Painting and handy man work</h2>
+        <ul class="rows">
+          <li><h3>Painting, exterior</h3><p>The outside of the house.</p></li>
+          <li><h3>Painting, interior</h3><p>The rooms inside.</p></li>
+          <li><h3>Handy man work</h3><p>Call and describe what needs doing.</p></li>
+        </ul>
+      </div>
+      <div class="layer rv"><figure class="photo"><img src="roller.jpg" width="1600" height="720" alt="Paint roller covering a white wall with blue paint"></figure></div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="how" aria-labelledby="how-h">
+    <div class="rv">
+      <h2 id="how-h">How it works</h2>
+      <p class="intro">Pick the job to see what to mention when you call.</p>
+    </div>
+    <div class="how">
+      <div>
+        <ol class="steps">
+          <li class="rv"><h3>Pick the job</h3><p>Washing, lawn and yard, a fence or painting.</p></li>
+          <li class="rv"><h3>Call us</h3><p>The number is <span class="num">(406) 561 0866</span>. Call ahead to confirm hours.</p></li>
+          <li class="rv"><h3>Describe it</h3><p>Use the short list for your job, and ask your questions.</p></li>
+        </ol>
+        <div class="how-pic rv"><figure class="photo"><img src="deck.jpg" width="1400" height="789" loading="lazy" alt="Water sitting in the grain of weathered grey deck boards"></figure></div>
+      </div>
+      <form class="pick rv">
+        <fieldset>
+          <legend>What do you need done?</legend>
+          <div class="opts">
+            <label for="j-wash"><input type="radio" name="job" id="j-wash" checked>Washing</label>
+            <label for="j-yard"><input type="radio" name="job" id="j-yard">Lawn and yard</label>
+            <label for="j-fence"><input type="radio" name="job" id="j-fence">Fence</label>
+            <label for="j-paint"><input type="radio" name="job" id="j-paint">Painting</label>
+          </div>
+        </fieldset>
+        <div class="panel p-wash">
+          <h3>When you call about washing, mention</h3>
+          <ul><li>What needs washing</li><li>About how big it is</li><li>If the gutters need cleaning</li></ul>
+        </div>
+        <div class="panel p-yard">
+          <h3>When you call about the yard, mention</h3>
+          <ul><li>Lawn, hedge, leaves or a clean out</li><li>About how big the yard is</li><li>Any junk you want removed</li></ul>
+        </div>
+        <div class="panel p-fence">
+          <h3>When you call about a fence, mention</h3>
+          <ul><li>Where the fence goes</li><li>About how long it runs</li><li>If you want stain and seal</li></ul>
+        </div>
+        <div class="panel p-paint">
+          <h3>When you call about painting, mention</h3>
+          <ul><li>Exterior, interior or both</li><li>About how much there is to paint</li><li>Any handy man work to add</li></ul>
+        </div>
+        <a class="btn" href="tel:+14065610866">Call <span class="num">(406) 561 0866</span></a>
+      </form>
+    </div>
+  </section>
+
+  <section class="band" id="contact" aria-labelledby="contact-h">
+    <div class="wrap contact">
+      <div class="rv">
+        <h2 id="contact-h">Call Pow-A-Wash LLC</h2>
+        <p class="intro">Washing, yards, fences and painting in Billings, MT.</p>
+        <a class="bigtel" href="tel:+14065610866">(406) 561 0866</a>
+        <p class="town"><b>Town</b> Billings, MT</p>
+      </div>
+      <div class="hrs siding deep rv" style="--from:60%">
+        <h3>Hours</h3>
+        <dl>
+          <div><dt>Monday to Saturday</dt><dd>7 AM to 9 PM</dd></div>
+          <div><dt>Sunday</dt><dd>Closed</dd></div>
+        </dl>
+        <p class="confirm"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5.500l3.500 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Call ahead to confirm</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot deep">
+  <div class="wrap">
+    <p><b>Pow-A-Wash LLC</b> &middot; Billings, MT</p>
+    <p class="right"><a class="num" href="tel:+14065610866">(406) 561 0866</a></p>
+    <p class="credit">Photos are examples.</p>
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
+  </div>
+</footer>
+
+<nav class="bar deep" aria-label="Quick contact">
+  <a href="tel:+14065610866"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>
+  <a href="#washing"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Services</a>
+</nav>
+
+<script>
+(function(){
+  /* quiet reveal, once per element */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+  addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
+})();
+</script>
+</body>
+</html>
