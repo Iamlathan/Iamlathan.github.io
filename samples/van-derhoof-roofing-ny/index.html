@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Van Derhoof Roofing Co., Inc. | Roofing in Syracuse, NY</title>
+<meta name="description" content="Van Derhoof Roofing Co., Inc. in Syracuse, New York. Since 1939. Residential and commercial roofing, siding, gutters and windows. Call (315) 475 9541.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#7b2015">
+<meta property="og:title" content="Van Derhoof Roofing Co., Inc. | Syracuse, NY">
+<meta property="og:description" content="Van Derhoof Roofing Co., Inc. in Syracuse, New York. Since 1939. Residential and commercial roofing, siding, gutters and windows. Call (315) 475 9541.">
+<meta property="og:image" content="https://granitecitydigital.me/samples/van-derhoof-roofing-ny/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* 1. this page's own look */
+:root{
+  --bg:#f6efe2;          /* page ground, warm paper */
+  --surface:#fdf9f0;     /* raised cards and the form */
+  --tint:#eee2cf;        /* contained bands */
+  --ink:#23150f;
+  --muted:#5e4b40;
+  --line:#decdb4;
+  --deep:#7b2015;        /* full width bands */
+  --deep-2:#62180f;      /* chips and cards on the deep ground */
+  --deep-line:#a24536;   /* rings, offset blocks */
+  --foot:#1e110d;
+  --foot-2:#2e1b15;
+  --on-deep:#fbf1e0;
+  --on-deep-muted:#f0d3c4;
+  --on-foot-muted:#cdb7a8;
+  --accent:#ffab1c;      /* buttons, stars, one headline phrase, icons */
+  --accent-hover:#ffc04f;
+  --btn:var(--accent);
+  --btn-hover:var(--accent-hover);
+  --on-accent:#281603;
+  --mark:var(--deep);    /* accents and big numerals on the light ground */
+  --tile:var(--deep);    /* shingle tiles behind the stars */
+  --seal:var(--deep);    /* seal ink */
+  --seal-paper:#fbf1e0;
+  --field:#8a786a;       /* field outlines */
+  --danger:#a32015;
+  --shadow:52 24 14;     /* shadow color as r g b */
+
+  --font:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Arvo",Rockwell,Georgia,serif;
+
+  --r-ctl:10px;
+  --r-card:16px;
+  --r-photo:clamp(16px,2vw,24px);
+}
+/* 2. the system */
+:root{
+  --t-small:.9375rem;
+  --t-body:1.0625rem;
+  --t-lead:clamp(1.0625rem,1rem + .4vw,1.25rem);
+  --t-h3:clamp(1.3125rem,1.15rem + .6vw,1.625rem);
+  --t-h2:clamp(1.875rem,1.35rem + 2vw,2.875rem);
+
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+  --sec:clamp(80px,9.5vw,136px);
+  --band-pad:clamp(64px,8vw,112px);
+  --off:clamp(10px,1.4vw,18px);
+
+  /* three levels. Light comes from the top left, so shadows fall down and to the right. */
+  --sh-1:1px 1px 2px rgb(var(--shadow) / .06),2px 6px 16px -6px rgb(var(--shadow) / .18);
+  --sh-2:1px 2px 4px rgb(var(--shadow) / .08),4px 14px 32px -10px rgb(var(--shadow) / .26);
+  --sh-3:2px 4px 8px rgb(var(--shadow) / .10),10px 30px 60px -16px rgb(var(--shadow) / .40);
+
+  --wrap:1200px;
+  --m:clamp(20px,4vw,32px);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --bar:0px;
+  --split:.46;           /* where the hero seam sits inside the page width */
+}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased;accent-color:var(--mark);caret-color:var(--mark)}
+img{display:block;max-width:100%;height:auto}
+svg{display:block}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+::selection{background:var(--accent);color:var(--on-accent)}
+:focus-visible{outline:2px solid var(--focus,var(--mark));outline-offset:3px}
+.on-deep{--focus:var(--accent);color:var(--on-deep)}
+h1,h2,h3{font-family:var(--font-display);font-weight:700;letter-spacing:-.02em;line-height:1.1;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:var(--r-ctl);min-height:44px;display:inline-flex;align-items:center}
+.skip:focus{top:12px}
+.num{font-family:var(--font);font-variant-numeric:tabular-nums lining-nums}
+.nb{white-space:nowrap}
+.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+
+/* buttons: raised; hover lifts, press sinks */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:var(--r-ctl);border:0;background:var(--btn);color:var(--on-accent);font:600 1.0625rem/1.1 var(--font);text-decoration:none;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.cream{background:var(--on-deep);color:var(--ink)}
+.btn.dark{background:var(--deep);color:var(--on-deep)}
+.textlink{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;text-decoration:underline;text-decoration-color:var(--mark);text-decoration-thickness:2px;transition:text-decoration-color 200ms ease}
+.on-deep .textlink{text-decoration-color:var(--accent)}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--btn-hover);box-shadow:var(--sh-2);transform:translateY(-1px)}
+  .btn.cream:hover{background:var(--surface)}
+  .btn.dark:hover{background:var(--deep-2)}
+  .btn:active{transform:scale(.97);box-shadow:none}
+  .textlink:hover{text-decoration-color:currentColor}
+}
+
+/* sample note */
+.sample{background:var(--tint);color:var(--muted);font-size:.8125rem;text-align:center;padding:8px var(--m);line-height:1.45}
+.sample a{color:var(--ink)}
+
+/* header: paper, with the name in the sign red */
+.top{background:var(--surface);box-shadow:0 1px 0 var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s-4);min-height:60px}
+.brand{display:inline-flex;align-items:center;gap:10px;min-height:44px;font:700 1.125rem/1 var(--font-display);letter-spacing:-.01em;text-decoration:none;white-space:nowrap;color:var(--mark)}
+.brand svg{display:none;width:30px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.top nav{display:none}
+.nav{display:flex;align-items:center;gap:26px;list-style:none;padding:0;font-size:1rem}
+.nav a{color:var(--muted);font-weight:500;text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 200ms ease}
+.top .btn{min-height:44px;padding:0 14px;font-size:1rem}
+.top .long{display:none}
+@media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--ink)}}
+@media (min-width:420px){.brand svg{display:block}.brand{font-size:1.1875rem}}
+@media (min-width:520px){.top .long{display:inline}.top .short{display:none}.top .btn{padding:0 16px}}
+@media (min-width:1100px){
+  html{scroll-padding-top:100px}
+  .top{position:sticky;top:0;z-index:30}
+  .top .wrap{min-height:72px}
+  .top nav{display:block}
+  .brand{font-size:1.3125rem}
+}
+@media (min-width:1100px) and (max-width:1239px){.nav{gap:20px}.nav .opt{display:none}}
+
+/* photo cards: the wrapper is rounded so the picture clips cleanly */
+.photo{position:relative;border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-2)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.layer{position:relative;isolation:isolate}
+.layer::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--line);transform:translate(var(--off),var(--off))}
+.tag{position:absolute;left:14px;bottom:14px;z-index:1;background:var(--surface);color:var(--ink);font-weight:600;font-size:1rem;line-height:1.2;padding:9px 14px;border-radius:9px;box-shadow:var(--sh-1)}
+
+/* stars */
+.stars{display:inline-flex;gap:3px;color:var(--accent)}
+.stars svg{width:18px;height:18px;fill:currentColor}
+
+/* the seal: paper disc, ring text, the year */
+.seal{position:absolute;z-index:3;width:var(--seal-size,104px);aspect-ratio:1;border-radius:50%;filter:drop-shadow(3px 8px 14px rgb(var(--shadow) / .42))}
+.seal svg{width:100%;height:100%}
+.s-disc{fill:var(--seal-paper)}
+.s-ring{fill:none;stroke:var(--seal);stroke-width:3}
+.s-ring.thin{stroke-width:1.2}
+.s-dot{fill:var(--seal)}
+.s-arc{font:700 12.5px var(--font-display);letter-spacing:1.9px;fill:var(--seal)}
+.s-since{font:600 12.5px var(--font);letter-spacing:4px;fill:var(--seal)}
+.s-year{font:700 43px var(--font-display);letter-spacing:-.5px;fill:var(--seal)}
+
+/* hero: a solid deep field beside one big roof photo, the seal across the seam, the request form along the foot */
+.hero{position:relative;isolation:isolate;display:flow-root;background:var(--deep)}
+.hero-pic{position:relative;height:clamp(150px,22svh,190px);overflow:hidden;background:var(--deep-2)}
+.hero-pic img{width:100%;height:100%;object-fit:cover;object-position:72% 46%}
+.hero-in{position:relative;max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding:0 var(--m) var(--s-6)}
+.hero .seal{right:var(--m);top:-78px}
+.hero-copy{padding-top:38px;min-width:0}
+.rate{display:inline-flex;flex-wrap:wrap;align-items:center;gap:4px 10px;min-height:44px;padding:8px 14px;border-radius:12px;background:var(--deep-2);text-decoration:none;font-size:1.0625rem;line-height:1.2}
+.rate b{font:700 1.25rem/1 var(--font);font-variant-numeric:lining-nums}
+.rate .lbl{font-weight:500}
+.hero h1{font-size:clamp(1.875rem,1.1rem + 3.4vw,2.5rem);margin-top:var(--s-4);max-width:13em}
+.hero h1 .l{display:block}
+.hero h1 .hl{color:var(--accent)}
+.lede{margin-top:var(--s-3);font-size:var(--t-lead);line-height:1.45;max-width:30em}
+.lede b{font-weight:700}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s-3);margin-top:var(--s-5)}
+
+/* the request form */
+.est{position:relative;z-index:2;max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding:0 var(--m) var(--s-7)}
+.quote{background:var(--surface);color:var(--ink);border-radius:var(--r-card);box-shadow:var(--sh-3);padding:clamp(20px,2.2vw,26px);--focus:var(--mark);scroll-margin-top:16px}
+form{display:grid;grid-template-columns:minmax(0,1fr);gap:14px 12px}
+form[hidden]{display:none}
+.f{display:grid;gap:6px;min-width:0;align-content:start}
+.head-f{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 24px}
+.quote h2{font-size:1.5rem;line-height:1.15}
+.quote .sub{color:var(--muted);font-size:1rem;line-height:1.4}
+.quote .sub b{color:var(--ink);font-weight:600;white-space:nowrap}
+.f label{font-size:var(--t-small);font-weight:600;line-height:1.3}
+.f input,.f select,.f textarea{width:100%;min-height:48px;padding:11px 14px;border:1px solid var(--field);border-radius:var(--r-ctl);background:var(--bg);color:var(--ink);font:inherit;font-size:1rem;line-height:1.5;transition:border-color 200ms ease,background-color 200ms ease;appearance:none;-webkit-appearance:none}
+.f select{background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%235e4b40' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:40px}
+.f textarea{min-height:84px;resize:vertical}
+.f input::placeholder,.f textarea::placeholder{color:var(--muted);opacity:1}
+.f input:focus-visible,.f select:focus-visible,.f textarea:focus-visible{outline:2px solid var(--focus);outline-offset:1px;border-color:var(--focus);background-color:var(--surface)}
+@media (hover:hover) and (pointer:fine){.f input:hover,.f select:hover,.f textarea:hover{border-color:var(--ink)}}
+.f [aria-invalid="true"]{border-color:var(--danger)}
+.err{font-size:.875rem;line-height:1.35;color:var(--danger)}
+.err:empty{display:none}
+.submit .btn{width:100%}
+.thanks[hidden]{display:none}
+.thanks:focus{outline:none}
+.thanks h3{font-size:1.75rem}
+.thanks p{margin-top:var(--s-3);max-width:40ch;color:var(--muted)}
+#t-body{display:none}
+.thanks .btn{margin-top:var(--s-5)}
+@media (min-width:560px){
+  form{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .head-f,.f.wide,.submit{grid-column:1/-1}
+}
+@media (min-width:760px){
+  .hero-pic{height:320px}
+  .hero-pic img{object-position:60% 50%}
+  .hero{--seal-size:132px}
+  .hero .seal{top:-96px}
+  form{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .f.wide{grid-column:1/3}
+  .submit{grid-column:3;padding-top:26px}
+}
+@media (min-width:1024px){
+  .hero-pic{position:absolute;z-index:0;top:0;bottom:0;right:0;height:auto;left:calc((100% - min(100%,var(--wrap) + var(--m)*2))/2 + var(--m) + (min(100%,var(--wrap) + var(--m)*2) - var(--m)*2)*var(--split))}
+  .hero-pic img{object-position:64% 50%}
+  .hero-in{display:grid;grid-template-columns:calc(var(--split)*100%) minmax(0,1fr);align-items:center;min-height:clamp(500px,calc(100svh - 250px),640px);padding-block:var(--s-7) calc(var(--s-8) + var(--s-6))}
+  .hero-copy{padding-top:0;padding-right:92px}
+  .hero{--seal-size:150px}
+  .hero .seal{right:auto;top:40px;left:calc(var(--m) + (100% - var(--m)*2)*var(--split) - 52px)}
+  .hero h1{font-size:clamp(2.5rem,3.3vw,2.75rem)}
+  .est{margin-top:calc(var(--s-8) * -1);margin-bottom:-110px;padding-bottom:0}
+  .quote{scroll-margin-top:110px}
+}
+@media (min-width:1024px) and (max-width:1199px){
+  .hero-copy{padding-right:68px}
+  .hero h1{font-size:2.25rem}
+}
+@media (min-width:1200px){
+  form{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.1fr) minmax(0,1.7fr) auto;align-items:start}
+  .f.wide{grid-column:auto}
+  .submit{grid-column:auto}
+  .submit .btn{width:auto;min-height:48px}
+  .f textarea{min-height:48px;height:48px;resize:none}
+}
+
+/* reviews: the number, and five stars on five shingle tiles */
+.rev{background:var(--tint);padding-block:clamp(56px,8vw,104px)}
+.rev .wrap{display:grid;gap:var(--s-6) var(--s-8);align-items:center}
+.rev-num{font:700 clamp(7.5rem,30vw,17rem)/.8 var(--font-display);letter-spacing:-.045em;color:var(--mark)}
+.rev-body{display:grid;gap:var(--s-4);justify-items:start}
+.course{position:relative;display:inline-flex;gap:clamp(5px,.8vw,9px);padding-top:10px}
+.course::before{content:"";position:absolute;left:-10px;right:-10px;top:0;height:10px;border-radius:3px;background:var(--deep-2)}
+.course span{display:grid;place-items:center;width:clamp(50px,15.6vw,96px);aspect-ratio:1/1.08;background:var(--tile);color:var(--accent);border-radius:0 0 14px 14px;box-shadow:var(--sh-1)}
+.course span:nth-child(even){aspect-ratio:1/1.16}
+.course svg{width:56%;height:auto;aspect-ratio:1;fill:currentColor}
+.rev h2{font-size:clamp(2rem,1.3rem + 2.9vw,3.25rem);margin-top:var(--s-3)}
+.rev .of{font-size:var(--t-lead);color:var(--muted)}
+@media (min-width:860px){.rev .wrap{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}.rev-num{justify-self:end}}
+@media (min-width:1024px){.rev{padding-top:calc(110px + clamp(64px,7vw,104px))}}
+
+/* sections */
+.sec{padding-top:var(--sec)}
+.band{margin-top:var(--sec);padding-block:var(--band-pad)}
+.band.tint{background:var(--tint)}
+.band.deep{background:var(--deep)}
+.head{display:grid;gap:var(--s-4) var(--s-8);padding-bottom:var(--s-7)}
+.head h2{font-size:var(--t-h2)}
+.head p{font-size:var(--t-lead);line-height:1.55;max-width:36em;color:var(--muted)}
+@media (min-width:960px){.head{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:end}}
+
+/* roofing: one big photo with the three kinds of roofing beside it, then two more photos */
+.roof{display:grid;gap:var(--s-6)}
+.roof .r1{aspect-ratio:4/3}
+.roof .r2{aspect-ratio:4/3}
+.roof .r3{aspect-ratio:3/2}
+.roof .r3 img{object-position:40% 60%}
+.kinds{list-style:none;padding:0;display:grid;gap:var(--s-5)}
+.kinds li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 16px;align-items:start}
+.peak{grid-row:1 / span 2;width:44px;height:44px;border-radius:12px;background:var(--mark);color:var(--accent);display:grid;place-items:center}
+.peak .i{width:24px;height:24px;stroke-width:2.1}
+.kinds h3{font-size:var(--t-h3);padding-top:6px}
+.kinds p{max-width:32em}
+.roof-side .cta{margin-top:var(--s-6);align-items:center;gap:var(--s-3) var(--s-5)}
+.also{margin-top:var(--s-7);display:grid;gap:var(--s-3)}
+.also h3{font:600 1.0625rem/1.3 var(--font);letter-spacing:0;color:var(--muted)}
+.chips{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:var(--s-2)}
+.chips li{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:6px 16px 6px 12px;border-radius:10px;background:var(--tint);font-weight:600;font-size:1rem}
+.chips .i{width:16px;height:16px;color:var(--mark);stroke-width:2.6}
+@media (min-width:900px){
+  .roof{grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--s-6) var(--s-5);align-items:center}
+  .roof .r1{grid-column:1 / 8;margin-right:var(--off)}
+  .roof-side{grid-column:8 / 13;padding-left:var(--s-5)}
+  .roof .r2{grid-column:2 / 7;margin-top:var(--s-7)}
+  .roof .r3{grid-column:7 / 13;align-self:start}
+}
+
+/* history: the seal again, large, beside their motto; a photo strip laps over the lower edge */
+.history{position:relative;display:flow-root;margin-top:var(--sec);background:var(--deep);padding-top:var(--band-pad)}
+.story{display:grid;gap:var(--s-8);align-items:center;justify-items:center}
+.seal-wrap{position:relative;width:min(300px,62vw);aspect-ratio:1;margin:46px;border-radius:50%;box-shadow:0 0 0 20px var(--deep),0 0 0 22px var(--deep-line),0 0 0 44px var(--deep),0 0 0 45px var(--deep-line)}
+.seal-wrap .seal{position:relative;width:100%}
+.story-txt{min-width:0}
+.story blockquote{font:700 clamp(1.625rem,1.15rem + 2.1vw,2.75rem)/1.2 var(--font-display);letter-spacing:-.02em;text-wrap:balance}
+.story blockquote span{display:block}
+.story blockquote span + span{margin-top:.35em}
+.story .by{margin-top:var(--s-5);font-size:var(--t-lead);color:var(--on-deep-muted)}
+.story .by b{color:var(--on-deep);font-weight:700}
+.story .cta{margin-top:var(--s-6)}
+@media (min-width:900px){.story{grid-template-columns:auto minmax(0,1fr);gap:var(--s-9);justify-items:start}.seal-wrap{width:clamp(240px,24vw,320px)}}
+.strip{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-3);margin-top:var(--s-8);margin-bottom:-56px}
+.strip .photo{aspect-ratio:4/5;box-shadow:var(--sh-3)}
+.strip .photo:first-child{grid-column:1/-1;aspect-ratio:16/10}
+.strip .p-sky img{object-position:28% 40%}
+.strip .p-shg img{object-position:62% 100%;transform:scale(1.5);transform-origin:62% 100%}
+@media (min-width:700px){
+  .strip{grid-template-columns:5fr 4fr 5fr;gap:var(--s-5);align-items:start;margin-bottom:-120px}
+  .strip .photo:first-child{grid-column:auto;aspect-ratio:4/5}
+  .strip .photo:nth-child(2){margin-top:var(--s-7);aspect-ratio:3/4}
+}
+.history + .sec{padding-top:calc(var(--sec) + 56px)}
+@media (min-width:700px){.history + .sec{padding-top:calc(var(--sec) + 120px)}}
+
+/* siding, gutters and windows */
+.ext{display:grid;gap:var(--s-8);align-items:center}
+.ext h2{font-size:var(--t-h2)}
+.ext .big{margin-top:var(--s-4);font-size:var(--t-lead);line-height:1.55;max-width:32em}
+.ticks{list-style:none;padding:0;margin-top:var(--s-5);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s-3) var(--s-5)}
+.ticks li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:10px;align-items:start;font-weight:600;line-height:1.4}
+.tick{width:26px;height:26px;border-radius:50%;background:var(--mark);color:var(--accent);display:grid;place-items:center}
+.tick .i{width:14px;height:14px;stroke-width:2.6}
+.ext .note{margin-top:var(--s-5);color:var(--muted);max-width:34em}
+.ext .cta{margin-top:var(--s-6)}
+.pics{position:relative;margin-right:var(--off);padding-bottom:var(--s-8)}
+.pics .wide{aspect-ratio:16/10}
+.pics .wide img{object-position:58% 50%}
+.pics .wide .tag{top:14px;bottom:auto}
+.pics .inset{position:absolute;right:calc(var(--s-3) * -1);bottom:0;width:52%;aspect-ratio:3/2;box-shadow:var(--sh-3);outline:6px solid var(--bg)}
+@media (min-width:960px){.ext{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:var(--s-9)}.pics .inset{right:auto;left:calc(var(--s-6) * -1)}}
+
+/* staff and what comes with the work */
+.staff{display:grid;gap:var(--s-7) var(--s-9);align-items:start}
+.staff h2{font-size:var(--t-h2)}
+.staff .big{margin-top:var(--s-4);font-size:var(--t-lead);line-height:1.55;max-width:30em}
+.roles{list-style:none;padding:0;margin-top:var(--s-6);display:grid;gap:var(--s-2)}
+.roles li{font:700 clamp(1.375rem,1.1rem + 1.2vw,2rem)/1.2 var(--font-display);letter-spacing:-.02em;color:var(--mark)}
+.terms{background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-2);padding:var(--s-3);display:grid;gap:2px}
+.terms div{display:grid;gap:2px 20px;padding:16px 16px;border-radius:10px}
+.terms div:nth-child(odd){background:var(--bg)}
+.terms dt{font:700 1.1875rem/1.25 var(--font-display);letter-spacing:-.01em}
+.terms dd{color:var(--muted);line-height:1.5}
+.staff .cta{margin-top:var(--s-5)}
+@media (min-width:600px){.terms div{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:baseline;padding:18px 20px}}
+@media (min-width:960px){.staff{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}}
+
+/* the office: the map sits in a framed card with the address on its top bar */
+.office{display:grid;gap:var(--s-6);align-items:stretch}
+.mapcard{background:var(--surface);border-radius:var(--r-photo);box-shadow:var(--sh-3);padding:8px;overflow:hidden}
+.mapcard .bar-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:12px 14px 16px}
+.mapcard .lab{display:inline-flex;align-items:center;min-height:28px;padding:4px 10px;border-radius:8px;background:var(--deep);color:var(--on-deep);font-size:.875rem;font-weight:600;line-height:1.2}
+.mapcard .bar-top b{display:inline-flex;align-items:center;gap:10px;font:700 1.125rem/1.25 var(--font);font-variant-numeric:lining-nums}
+.mapcard .bar-top b .i{color:var(--mark)}
+.mapcard .frame{position:relative;border-radius:calc(var(--r-photo) - 6px);overflow:hidden;background:var(--tint);aspect-ratio:4/3}
+.mapcard iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.where{background:var(--deep);border-radius:var(--r-card);box-shadow:var(--sh-2);padding:clamp(24px,3vw,40px);display:grid;align-content:center;gap:var(--s-2)}
+.where h3{font:600 1.0625rem/1.2 var(--font);letter-spacing:0;color:var(--on-deep-muted);display:flex;align-items:center;gap:10px}
+.where h3 .i{color:var(--accent)}
+.where .addr{font:700 clamp(1.625rem,1.25rem + 1.5vw,2.25rem)/1.15 var(--font-display);letter-spacing:-.02em;margin-top:var(--s-2)}
+.where .addr span{display:block;font:500 1.125rem/1.4 var(--font);letter-spacing:0;color:var(--on-deep-muted);margin-top:6px;font-variant-numeric:lining-nums}
+.where .cta{margin-top:var(--s-5)}
+.where .textlink{margin-top:var(--s-2)}
+@media (min-width:960px){.office{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-7)}.mapcard .frame{aspect-ratio:16/10}}
+
+/* footer */
+.foot{margin-top:var(--sec);background:var(--foot);color:var(--on-foot-muted);padding-block:var(--s-8) calc(var(--s-7) + var(--bar));font-size:1rem;--tint:var(--foot-2);--ink:var(--on-deep);--muted:var(--on-foot-muted)}
+.foot .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s-3) var(--s-6);align-items:start}
+.foot .name{font:700 1.5rem/1.15 var(--font-display);letter-spacing:-.01em;color:var(--on-deep)}
+.foot .tagline{margin-top:6px;color:var(--accent);font-weight:600}
+.foot .where-f{margin-top:var(--s-3);font-variant-numeric:lining-nums}
+.foot .right{display:grid;gap:2px}
+.foot .right a{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:var(--on-deep);font-weight:600;font-size:1.125rem;text-decoration:none;width:fit-content}
+.foot .right a .i{color:var(--accent)}
+.foot .credit{grid-column:1/-1;margin-top:var(--s-4);font-size:.9375rem}
+@media (min-width:700px){.foot .wrap{grid-template-columns:1fr auto}.foot .right{justify-items:end;text-align:right}}
+
+/* footer mark: a 2 s logo build that plays once in view, muted; the still logo shows until it really plays and is the fallback */
+.gcd{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:14px;margin-top:12px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font-weight:500}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--tint)}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
+
+/* phone bar */
+.bar{display:none}
+
+/* motion: slow, once, slide and turn only. Nothing fades, so text keeps its contrast the whole way. Content shows without scripts and with reduced motion. */
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{transform:translateY(22px);transition:transform 900ms var(--ease)}
+  .js .rv.in{transform:none}
+  .js .roof .rv:nth-child(2),.js .strip .rv:nth-child(2){transition-delay:90ms}
+  .js .strip .rv:nth-child(3){transition-delay:180ms}
+  .js .seal-wrap.rv{transform:rotate(-32deg);transition:transform 1500ms var(--ease)}
+  .js .seal-wrap.rv.in{transform:none}
+  .js .course.rv{transform:none}
+  .js .course.rv span{transform:translateY(-14px);transition:transform 700ms var(--ease)}
+  .js .course.rv.in span{transform:none}
+  .js .course.rv span:nth-child(2){transition-delay:70ms}
+  .js .course.rv span:nth-child(3){transition-delay:140ms}
+  .js .course.rv span:nth-child(4){transition-delay:210ms}
+  .js .course.rv span:nth-child(5){transition-delay:280ms}
+  .hero-copy > *{animation:rise 900ms var(--ease) both}
+  .hero-copy > :nth-child(2){animation-delay:60ms}
+  .hero-copy > :nth-child(3){animation-delay:120ms}
+  .hero-copy > :nth-child(4){animation-delay:180ms}
+  .hero .seal{animation:stamp 1400ms var(--ease) 200ms both}
+  .quote{animation:rise 1000ms var(--ease) 240ms both}
+  .bar{transition:transform 220ms var(--ease)}
+  body:has(#qform :focus) .bar{transition:none}
+}
+@keyframes rise{from{transform:translateY(18px)}to{transform:none}}
+@keyframes stamp{from{transform:rotate(-38deg) scale(1.08)}to{transform:none}}
+
+/* phone */
+@media (max-width:640px){
+  :root{--bar:calc(62px + env(safe-area-inset-bottom));--r-photo:16px;--r-card:14px;--off:10px}
+  html{scroll-padding-bottom:104px}
+  .cta .btn{flex:1 1 100%}
+  .ticks{grid-template-columns:minmax(0,1fr)}
+  .seal-wrap{margin:40px auto}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--foot);padding-bottom:env(safe-area-inset-bottom);box-shadow:0 -6px 20px -8px rgb(var(--shadow) / .5)}
+  .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:62px;font-weight:600;font-size:1.0625rem;text-decoration:none;color:var(--on-deep)}
+  .bar a:first-child{background:var(--btn);color:var(--on-accent)}
+  .bar a:active{opacity:.85}
+  .bar a:focus-visible{outline:2px solid var(--on-deep);outline-offset:-4px}
+  .bar a:first-child:focus-visible{outline-color:var(--on-accent)}
+  /* the bar steps aside while a field in the request form has focus, so it never covers the field; it comes back when focus leaves the form */
+  body:has(#qform :focus) .bar{transform:translateY(100%);visibility:hidden}
+}
+/* short phones: keep the seal, the headline, the rating and the call button above the phone bar */
+@media (max-width:640px) and (max-height:740px){
+  .hero-pic{height:108px}
+  .hero{--seal-size:92px}
+  .hero .seal{top:-66px}
+  .hero-copy{padding-top:34px}
+  .lede .more{display:none}
+  .hero h1{font-size:1.75rem;margin-top:var(--s-3)}
+  .cta{margin-top:var(--s-4)}
+}
+@media (max-width:360px){
+  .top .wrap{gap:var(--s-2)}
+  .brand{font-size:1rem}
+  .top .btn{padding:0 12px}
+  .rate{padding-inline:11px;gap:4px 8px;font-size:.9375rem}
+  .rate .stars{gap:2px}
+  .rate .stars svg{width:14px;height:14px}
+  .rate b{font-size:1.125rem}
+  .hero h1{font-size:1.6875rem}
+}
+@media (max-width:640px) and (max-height:650px){
+  .hero .cta .cream{display:none}
+}
+@media (max-width:360px) and (max-height:600px){
+  .hero-pic{height:84px}
+  .hero{--seal-size:84px}
+  .hero .seal{top:-58px}
+  .hero-copy{padding-top:32px}
+  .hero h1{font-size:1.5625rem}
+}
+@media (max-width:319px){
+  .hero-pic{height:64px}
+  .hero h1{font-size:1.5rem}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="seal-top" d="M27 100A73 73 0 0 1 173 100"/>
+    <path id="seal-bot" d="M16 100A84 84 0 0 0 184 100"/>
+  </defs>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.6l2.9 6 6.5.9-4.7 4.6 1.1 6.5L12 17.5l-5.8 3.1 1.1-6.5L2.6 9.500l6.5-.9z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5.200 3.500h3.600l1.900 4.800-2.400 1.600a12.400 12.400 0 005.800 5.800l1.600-2.400 4.800 1.900v3.600a1.700 1.700 0 01-1.900 1.700A16.600 16.600 0 013.500 5.400a1.700 1.700 0 011.700-1.900z"/></symbol>
+  <symbol id="i-tick" viewBox="0 0 24 24"><path d="M5 12.600l4.400 4.400L19 7.400"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.600-5.700-6.600-11.100a6.600 6.600 0 0113.200 0C18.600 15.300 12 21 12 21z"/><circle cx="12" cy="9.800" r="2.400"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M8 16L17 7M9.500 7H17v7.500"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><path d="M9 3.500h6v3H9zM9 5H6.500a1 1 0 00-1 1v13.500a1 1 0 001 1h11a1 1 0 001-1V6a1 1 0 00-1-1H15"/><path d="M8.800 13.600l2.200 2.200 4.200-4.300"/></symbol>
+  <symbol id="i-peak" viewBox="0 0 24 24"><path d="M2.500 13.500L12 5l9.500 8.500M5.500 11.500V19h13v-7.500"/></symbol>
+  <symbol id="i-flat" viewBox="0 0 24 24"><path d="M3 8.500h18M5 8.500V19h14V8.500M9 19v-5h6v5M8 5.500h8"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.500 6.200a4 4 0 005.300 5.300l-8.600 8.600a1.900 1.900 0 01-2.700-2.700zM14.500 6.200l2.600-2.600a4 4 0 00-5.200 5.200"/></symbol>
+  <symbol id="i-roofline" viewBox="0 0 30 20"><path d="M2 14L15 3l13 11M7 18h16"/></symbol>
+</svg>
+
+<div class="sample" role="note">Sample site made for Van Derhoof Roofing Co., Inc. by <a href="https://granitecitydigital.me/">Granite City Digital</a>. Your real site gets your own photos, colors and services.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Van Derhoof Roofing, back to top">
+      <svg viewBox="0 0 30 20" aria-hidden="true"><use href="#i-roofline"/></svg>
+      Van Derhoof Roofing
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#services">Roofing</a></li>
+        <li><a href="#history">Since 1939</a></li>
+        <li><a href="#exterior">Siding and gutters</a></li>
+        <li class="opt"><a href="#staff">Our staff</a></li>
+        <li><a href="#office">Our office</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="tel:+13154759541"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="long num">(315) 475 9541</span><span class="short">Call</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero on-deep" id="top" aria-labelledby="hero-h">
+    <div class="hero-pic"><img src="hero.jpg" width="1600" height="1067" fetchpriority="high" alt="A gray metal roof with a dormer window, a gutter and white siding under a blue sky"></div>
+    <div class="hero-in">
+      <div class="hero-copy">
+        <a class="rate" href="#reviews">
+          <span class="stars" role="img" aria-label="Rated 4.8 out of 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <b>4.8</b>
+          <span class="lbl"><span class="num">333</span> Google reviews</span>
+        </a>
+        <h1 id="hero-h"><span class="l">We are Syracuse</span> <span class="l">roofers, in business</span> <span class="l hl">since 1939.</span></h1>
+        <p class="lede"><b>Over 80 years strong.</b> <span class="more">Residential and commercial roofing, siding, gutters and windows in Syracuse and Central New York.</span></p>
+        <div class="cta">
+          <a class="btn" href="tel:+13154759541"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>Call <span class="num">(315) 475 9541</span></span></a>
+          <a class="btn cream" href="#estimate">Request a free estimate</a>
+        </div>
+      </div>
+      <div class="seal">
+        <svg viewBox="0 0 200 200" role="img" aria-label="Seal: Van Derhoof Roofing, Syracuse, New York, since 1939">
+          <circle class="s-disc" cx="100" cy="100" r="99"/>
+          <circle class="s-ring" cx="100" cy="100" r="93"/>
+          <circle class="s-ring thin" cx="100" cy="100" r="64"/>
+          <text class="s-arc" text-anchor="middle"><textPath href="#seal-top" startOffset="50%">VAN DERHOOF ROOFING</textPath></text>
+          <text class="s-arc" text-anchor="middle"><textPath href="#seal-bot" startOffset="50%">SYRACUSE, NEW YORK</textPath></text>
+          <circle class="s-dot" cx="21.500" cy="100" r="3"/>
+          <circle class="s-dot" cx="178.500" cy="100" r="3"/>
+          <text class="s-since" x="102" y="83" text-anchor="middle">SINCE</text>
+          <text class="s-year" x="100" y="124" text-anchor="middle">1939</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="est">
+      <div class="quote" id="estimate">
+        <form id="qform" method="post" novalidate>
+          <div class="head-f">
+            <h2>Request a free estimate</h2>
+            <p class="sub">Tell us what is going on, or call <b class="num">(315) 475 9541</b>.</p>
+          </div>
+          <div class="f">
+            <label for="q-name">Your name</label>
+            <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+            <span class="err" id="e-name"></span>
+          </div>
+          <div class="f">
+            <label for="q-phone">Phone</label>
+            <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Your phone number" required aria-describedby="e-phone">
+            <span class="err" id="e-phone"></span>
+          </div>
+          <div class="f">
+            <label for="q-town">Your town or area</label>
+            <select id="q-town" name="town" required aria-describedby="e-town">
+              <option value="">Choose your area</option>
+              <option>Syracuse</option>
+              <option>Onondaga County</option>
+              <option>Somewhere else in Central New York</option>
+            </select>
+            <span class="err" id="e-town"></span>
+          </div>
+          <div class="f wide">
+            <label for="q-msg">What do you need?</label>
+            <textarea id="q-msg" name="message" required aria-describedby="e-msg" placeholder="Shingles came loose over the porch"></textarea>
+            <span class="err" id="e-msg"></span>
+          </div>
+          <div class="submit">
+            <button class="btn dark" type="submit">Send request</button>
+          </div>
+        </form>
+        <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
+          <h3 id="t-title">Thanks. We have it.</h3>
+          <p id="t-body">We will call you back soon.</p>
+          <p class="muted">This is a sample site, so nothing was actually sent.</p>
+          <button class="btn dark" type="button" id="t-again">Send another request</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rev" id="reviews" aria-labelledby="rev-h">
+    <div class="wrap">
+      <p class="rev-num" aria-hidden="true">4.8</p>
+      <div class="rev-body">
+        <div class="course rv" role="img" aria-label="Rated 4.8 out of 5">
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span>
+          <span><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg></span>
+        </div>
+        <h2 id="rev-h">333 Google reviews</h2>
+        <p class="of">Rated <span class="num">4.8</span> out of <span class="num">5</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="services" aria-labelledby="svc-h">
+    <div class="head rv">
+      <h2 id="svc-h">Residential and commercial roofing</h2>
+      <p>Whether you are a homeowner with a residential property or a business owner with some commercial space, contact us for a free estimate.</p>
+    </div>
+    <div class="roof">
+      <div class="layer r1 rv">
+        <figure class="photo r1"><img src="residential.jpg" width="1400" height="933" alt="A white two story house with a gray roof and a brick chimney among autumn trees"><figcaption class="tag">Residential roofing</figcaption></figure>
+      </div>
+      <div class="roof-side rv">
+        <ul class="kinds">
+          <li><span class="peak"><svg class="i" aria-hidden="true"><use href="#i-peak"/></svg></span><h3>Residential roofing</h3><p>For a homeowner with a residential property. Our staff includes experienced and loyal residential roofers.</p></li>
+          <li><span class="peak"><svg class="i" aria-hidden="true"><use href="#i-flat"/></svg></span><h3>Commercial roofing</h3><p>For a business owner with some commercial space. Our commercial mechanics are on staff.</p></li>
+          <li><span class="peak"><svg class="i" aria-hidden="true"><use href="#i-wrench"/></svg></span><h3>Repairs and maintenance</h3><p>Servicemen are on our staff too.</p></li>
+        </ul>
+        <div class="cta">
+          <a class="btn dark" href="#estimate">Request a free estimate</a>
+          <a class="textlink" href="tel:+13154759541"><span>Call <span class="num">(315) 475 9541</span></span></a>
+        </div>
+      </div>
+      <figure class="photo r2 rv"><img src="commercial.jpg" width="1400" height="933" alt="A flat white roof on a commercial building, with brick buildings beyond"><figcaption class="tag">Commercial roofing</figcaption></figure>
+      <figure class="photo r3 rv"><img src="repairs.jpg" width="1400" height="933" alt="Hands tightening a fitting on a metal roof with a ratchet"><figcaption class="tag">Repairs and maintenance</figcaption></figure>
+    </div>
+    <div class="also rv">
+      <h3>More roofing work</h3>
+      <ul class="chips">
+        <li><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg>Metal roofing</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg>Low slope roofing</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg>Custom and specialty roofing</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg>Churches</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="history on-deep" id="history" aria-labelledby="his-h">
+    <div class="wrap">
+      <h2 class="vh" id="his-h">Since 1939</h2>
+      <div class="story">
+        <div class="seal-wrap rv">
+          <div class="seal">
+            <svg viewBox="0 0 200 200" role="img" aria-label="Seal: Van Derhoof Roofing, Syracuse, New York, since 1939">
+              <circle class="s-disc" cx="100" cy="100" r="99"/>
+              <circle class="s-ring" cx="100" cy="100" r="93"/>
+              <circle class="s-ring thin" cx="100" cy="100" r="64"/>
+              <text class="s-arc" text-anchor="middle"><textPath href="#seal-top" startOffset="50%">VAN DERHOOF ROOFING</textPath></text>
+              <text class="s-arc" text-anchor="middle"><textPath href="#seal-bot" startOffset="50%">SYRACUSE, NEW YORK</textPath></text>
+              <circle class="s-dot" cx="21.500" cy="100" r="3"/>
+              <circle class="s-dot" cx="178.500" cy="100" r="3"/>
+              <text class="s-since" x="102" y="83" text-anchor="middle">SINCE</text>
+              <text class="s-year" x="100" y="124" text-anchor="middle">1939</text>
+            </svg>
+          </div>
+        </div>
+        <div class="story-txt rv">
+          <blockquote><span>&ldquo;We&rsquo;re not the best because we&rsquo;re the oldest.</span> <span>We&rsquo;re the oldest because we&rsquo;re the best.&rdquo;</span></blockquote>
+          <p class="by"><b>Over 80 years strong.</b> Van Derhoof Roofing Co., Inc., Syracuse, New York.</p>
+          <div class="cta">
+            <a class="btn" href="tel:+13154759541"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>Call <span class="num">(315) 475 9541</span></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="strip">
+        <figure class="photo rv"><img src="slate.jpg" width="1300" height="868" alt="A steep gray roof meeting a stone wall, with metal flashing along the joint"></figure>
+        <figure class="photo p-shg rv"><img src="shingles.jpg" width="1400" height="933" alt="A dark red roof over white siding under a clear blue sky"></figure>
+        <figure class="photo p-sky rv"><img src="skylight.jpg" width="1200" height="800" alt="An open skylight seen from inside, with blue sky beyond"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="exterior" aria-labelledby="ext-h">
+    <div class="ext">
+      <div class="rv">
+        <h2 id="ext-h">Siding, gutters and windows</h2>
+        <p class="big">Roofing, siding, gutters, and windows are a few of the products we offer to install. Siding and gutter installers are on our staff.</p>
+        <ul class="ticks">
+          <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Siding</li>
+          <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Gutters</li>
+          <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Windows</li>
+          <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Skylights</li>
+          <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Trim, soffit and fascia</li>
+          <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Stone work</li>
+          <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Solar power</li>
+        </ul>
+        <div class="cta">
+          <a class="btn dark" href="#estimate">Request a free estimate</a>
+        </div>
+      </div>
+      <div class="pics rv">
+        <figure class="photo wide"><img src="siding.jpg" width="1600" height="800" loading="lazy" alt="The corner of a building with white siding, red trim and brackets under the eave, against a deep blue sky"><figcaption class="tag">Siding and trim</figcaption></figure>
+        <figure class="photo inset"><img src="gutters.jpg" width="1200" height="800" loading="lazy" alt="A dark gutter and downspout along a roof edge, with a gable behind"><figcaption class="tag">Gutters</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band tint" id="staff" aria-labelledby="staff-h">
+    <div class="wrap staff">
+      <div class="rv">
+        <h2 id="staff-h">A staff of more than 35</h2>
+        <p class="big">Experienced and loyal. On our staff:</p>
+        <ul class="roles">
+          <li>Residential roofers</li>
+          <li>Commercial mechanics</li>
+          <li>Siding and gutter installers</li>
+          <li>Servicemen</li>
+        </ul>
+      </div>
+      <div class="rv">
+        <dl class="terms">
+          <div><dt>Factory certified foremen</dt><dd>All of our foremen are factory certified.</dd></div>
+          <div><dt>5 year workmanship warranty</dt><dd>Our standard workmanship warranty runs for 5 years.</dd></div>
+          <div><dt>Free estimate</dt><dd>Contact us for a free estimate.</dd></div>
+          <div><dt>Financing</dt><dd>Financing is available. Ask when you call.</dd></div>
+        </dl>
+        <div class="cta">
+          <a class="btn dark" href="#estimate">Request a free estimate</a>
+          <a class="textlink" href="tel:+13154759541"><span>Call <span class="num">(315) 475 9541</span></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="office" aria-labelledby="office-h">
+    <div class="head rv">
+      <h2 id="office-h">Our office in Syracuse</h2>
+      <p>Van Derhoof Roofing Co., Inc. is at 145 Ainsley Drive. We work in Syracuse and Central New York.</p>
+    </div>
+    <div class="office">
+      <div class="mapcard rv">
+        <div class="bar-top"><span class="lab">Our office</span><b><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>145 Ainsley Drive, Syracuse, NY 13210</b></div>
+        <div class="frame"><iframe src="https://maps.google.com/maps?q=145%20Ainsley%20Drive%2C%20Syracuse%2C%20NY%2013210&amp;z=15&amp;output=embed" loading="lazy" title="Map showing Van Derhoof Roofing at 145 Ainsley Drive, Syracuse, New York"></iframe></div>
+      </div>
+      <div class="where on-deep rv">
+        <h3><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Find us at</h3>
+        <p class="addr">145 Ainsley Drive<span>Syracuse, NY 13210</span></p>
+        <div class="cta">
+          <a class="btn" href="tel:+13154759541"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>Call <span class="num">(315) 475 9541</span></span></a>
+          <a class="btn cream" href="https://www.google.com/maps/dir/?api=1&amp;destination=145+Ainsley+Drive%2C+Syracuse%2C+NY+13210" target="_blank" rel="noopener">Get directions<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></a>
+        </div>
+        <a class="textlink" href="#estimate">Request a free estimate<svg class="i" aria-hidden="true"><use href="#i-down"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot on-deep">
+  <div class="wrap">
+    <div>
+      <p class="name">Van Derhoof Roofing Co., Inc.</p>
+      <p class="tagline">Over 80 years strong. Since 1939.</p>
+      <p class="where-f">145 Ainsley Drive, Syracuse, NY 13210</p>
+    </div>
+    <div class="right">
+      <a href="tel:+13154759541"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="num">(315) 475 9541</span></a>
+      <a href="#estimate"><svg class="i" aria-hidden="true"><use href="#i-clip"/></svg>Request a free estimate</a>
+    </div>
+    <p class="credit">Photos are examples.</p>
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a href="tel:+13154759541"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+  <a href="#estimate"><svg class="i" aria-hidden="true"><use href="#i-clip"/></svg>Free estimate</a>
+</nav>
+
+<script>
+(function(){
+  /* quiet reveal, once per element */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+  addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+
+  /* quote form (runs only when the form is on the page) */
+  var f=document.getElementById('qform');
+  if(!f)return;
+  var F=f.elements,thanks=document.getElementById('thanks');
+  function setErr(id,msg){var i=document.getElementById(id),e=document.getElementById(i.getAttribute('aria-describedby'));e.textContent=msg;if(msg){i.setAttribute('aria-invalid','true')}else{i.removeAttribute('aria-invalid')}return !msg}
+  function check(){
+    var ok=true,first=null;
+    function run(id,msg){var good=setErr(id,msg);if(!good&&!first)first=id;ok=ok&&good}
+    var name=F['name'].value.trim(),phone=F['phone'].value.replace(/\D/g,''),msg=F['message'].value.trim();
+    run('q-name',name.length<2?'Please tell us your name.':'');
+    run('q-phone',phone.length<10?'Please enter a 10 digit phone number.':'');
+    run('q-town',!F['town'].value?'Please choose your town.':'');
+    run('q-msg',msg.length<5?'A few words about the job helps us call back with the right answer.':'');
+    if(first)document.getElementById(first).focus();
+    return ok;
+  }
+  ['q-name','q-phone','q-town','q-msg'].forEach(function(id){
+    var el=document.getElementById(id);
+    el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){if(el.getAttribute('aria-invalid'))setErr(id,'')});
+  });
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!check())return;
+    var name=F['name'].value.trim().split(' ')[0],d=F['phone'].value.replace(/\D/g,'').slice(-10);
+    var nice='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6);
+    document.getElementById('t-title').textContent='Thanks, '+name+'. We have it.';
+    document.getElementById('t-body').textContent='We will call you at '+nice+' soon.';
+    f.hidden=true;thanks.hidden=false;thanks.focus();
+  });
+  document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
+})();
+</script>
+</body>
+</html>

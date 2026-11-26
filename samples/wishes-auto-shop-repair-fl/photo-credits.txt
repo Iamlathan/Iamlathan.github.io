@@ -1,0 +1,10 @@
+Photo credits for this sample page. All photos are free to use under the Unsplash License and are shown as examples.
+
+hero.jpg | Hands working under the raised hood of a red car | set.sj | https://unsplash.com/photos/c2ZR3x1Zwwg | Unsplash License
+brakes.jpg | A brake disc and caliper on a raised car | ün LIU | https://unsplash.com/photos/yqsgL2wKEHA | Unsplash License
+paint.jpg | A gloved hand spraying blue paint on a masked car in a paint booth | Dylan Calluy | https://unsplash.com/photos/WfCKPOVPKLo | Unsplash License
+wheel.jpg | Gloved hands tightening a wheel nut with a ratchet | Erik Mclean | https://unsplash.com/photos/ivDY7OGdBs4 | Unsplash License
+detail.jpg | A gloved hand polishing a headlight with a yellow foam pad | Vladyslav Lytvyshchenko | https://unsplash.com/photos/9-muyFk7RC4 | Unsplash License
+panel-red.jpg | Close view of glossy red car paint along a body line | Johannes Plenio | https://unsplash.com/photos/E8w5XMGaRQQ | Unsplash License
+drops.jpg | Water beads on dark car paint with a red light glowing behind | Ben Wicks | https://unsplash.com/photos/7EMYjpQ4IG4 | Unsplash License
+panel-pearl.jpg | Light reflecting off a glossy pearl white car panel | Franck V. | https://unsplash.com/photos/G06TupapB-w | Unsplash License

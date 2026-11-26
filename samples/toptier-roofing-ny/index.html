@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TopTier Roofing | Roofing in Syracuse, NY</title>
+<meta name="description" content="TopTier Roofing does new roofs, roof replacement, roof inspection, emergency roof repairs, commercial asphalt roofing and skylight installation in Syracuse, New York. Call (315) 877 3760.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1b2a7a">
+<meta property="og:title" content="TopTier Roofing | Syracuse, NY">
+<meta property="og:description" content="TopTier Roofing does new roofs, roof replacement, roof inspection, emergency roof repairs, commercial asphalt roofing and skylight installation in Syracuse, New York. Call (315) 877 3760.">
+<meta property="og:image" content="https://granitecitydigital.me/samples/toptier-roofing-ny/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Khand:wght@500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* 1. this page's own look */
+:root{
+  --bg:#f5f1e6;          /* page ground, trim board cream */
+  --surface:#fdfbf4;     /* raised cards and the estimate bar */
+  --tint:#e9e6d9;        /* contained bands */
+  --ink:#14183a;
+  --muted:#494e66;
+  --line:#d5d2c4;
+  --deep:#1b2a7a;        /* ultramarine: full width bands */
+  --deep-2:#273a94;      /* cards and chips on deep ground */
+  --deep-line:#3f54b8;   /* fascia stripes, offset blocks */
+  --foot:#111b52;
+  --scrim:13 18 48;      /* photo scrim color as r g b */
+  --on-deep:#f6f1e3;
+  --on-deep-muted:#c7cdea;
+  --accent:#ffc83d;      /* star gold: buttons, stars, one headline word, icons */
+  --accent-hover:#ffd768;
+  --on-accent:#16183a;
+  --star:var(--accent);
+  --focus-l:#1b2a7a;     /* focus ring and small icons on light ground */
+  --focus:var(--focus-l);
+  --field:#70748a;       /* field outlines */
+  --danger:#a12f1c;
+  --shadow:20 26 74;     /* shadow color as r g b */
+
+  --font:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Khand","Arial Narrow",system-ui,sans-serif;
+
+  --r-ctl:10px;
+  --r-card:16px;
+  --r-photo:clamp(16px,2vw,24px);
+}
+/* 2. the system */
+:root{
+  --t-small:.875rem;
+  --t-body:1.0625rem;
+  --t-lead:clamp(1.0625rem,1rem + .35vw,1.25rem);
+  --t-h3:clamp(1.625rem,1.3rem + 1.1vw,2.125rem);
+  --t-h2:clamp(2.25rem,1.6rem + 2.6vw,3.75rem);
+  --t-h1:clamp(2.125rem,1.2rem + 3.9vw,4rem);
+
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+  --sec:clamp(80px,9.5vw,136px);
+  --band-pad:clamp(64px,8vw,112px);
+  --off:clamp(10px,1.4vw,18px);
+  --rise:clamp(26px,6.4vw,92px);   /* height of the roof peak cut into the reviews band */
+
+  /* three levels. Light comes from the top left, so shadows fall down and to the right. */
+  --sh-1:1px 1px 2px rgb(var(--shadow) / .06),2px 6px 16px -6px rgb(var(--shadow) / .16);
+  --sh-2:1px 2px 4px rgb(var(--shadow) / .07),4px 14px 32px -10px rgb(var(--shadow) / .24);
+  --sh-3:2px 4px 8px rgb(var(--shadow) / .09),10px 30px 60px -16px rgb(var(--shadow) / .38);
+
+  --wrap:1200px;
+  --m:clamp(20px,4vw,32px);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --bar:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased;accent-color:var(--focus);caret-color:var(--focus)}
+img{display:block;max-width:100%;height:auto}
+svg{display:block}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+::selection{background:var(--accent);color:var(--on-accent)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+.on-deep{--focus:var(--accent);color:var(--on-deep)}
+h1,h2,h3{font-family:var(--font-display);font-weight:700;letter-spacing:-.005em;line-height:1.02;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;min-height:44px;display:inline-flex;align-items:center;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:var(--r-ctl)}
+.skip:focus{top:12px}
+.num{font-family:var(--font);font-variant-numeric:tabular-nums;white-space:nowrap}
+.nb{white-space:nowrap}
+.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+
+/* buttons: raised; hover lifts, press sinks */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:var(--r-ctl);border:0;background:var(--accent);color:var(--on-accent);font:700 1rem/1.1 var(--font);text-decoration:none;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.cream{background:var(--on-deep);color:var(--ink)}
+.btn.dark{background:var(--deep);color:var(--on-deep)}
+.textlink{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;text-decoration:underline;text-decoration-color:var(--deep-line);text-decoration-thickness:2px;transition:text-decoration-color 200ms ease}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--accent-hover);box-shadow:var(--sh-2);transform:translateY(-1px)}
+  .btn.cream:hover{background:var(--surface)}
+  .btn.dark:hover{background:var(--deep-2)}
+  .btn:active{transform:scale(.97);box-shadow:none}
+  .textlink:hover{text-decoration-color:currentColor}
+}
+
+/* sample note */
+.sample{background:var(--tint);color:var(--muted);font-size:.8125rem;text-align:center;padding:8px var(--m);line-height:1.45}
+.sample a{color:var(--ink)}
+
+/* header: cream, so the blue hero starts under it */
+.top{background:var(--surface);box-shadow:0 1px 0 var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s-5);min-height:64px}
+.brand{display:inline-flex;align-items:center;gap:9px;min-height:44px;font:700 1.4375rem/1 var(--font-display);letter-spacing:.005em;text-decoration:none;white-space:nowrap;padding-top:2px}
+.brand svg{width:30px;height:22px;flex:none;margin-top:-3px}
+.brand .pk{fill:none;stroke:var(--deep);stroke-width:3.2;stroke-linejoin:miter}
+.brand .pk2{fill:none;stroke:var(--accent);stroke-width:3.2}
+.top nav{display:none}
+.nav{display:flex;align-items:center;gap:26px;list-style:none;padding:0;font-size:.9375rem;font-weight:500}
+.nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 200ms ease}
+.top .btn{min-height:44px;padding:0 16px;font-size:.9375rem}
+.top .long{display:none}
+@media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--ink)}}
+@media (min-width:480px){.top .long{display:inline}.top .short{display:none}}
+@media (min-width:1060px){
+  html{scroll-padding-top:100px}
+  .top{position:sticky;top:0;z-index:30}
+  .top .wrap{min-height:76px}
+  .top nav{display:block}
+  .brand{font-size:1.625rem}
+}
+
+/* photo cards: the wrapper is rounded so the picture clips cleanly */
+.photo{position:relative;border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-2)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.layer{position:relative;isolation:isolate}
+.layer::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--line);transform:translate(var(--off),var(--off))}
+
+/* stars */
+.stars{display:inline-flex;gap:3px;color:var(--star)}
+.stars svg{width:18px;height:18px;fill:currentColor}
+
+/* hero: a solid ultramarine field. On phones the photo sits on top and the field rises into it as a roof peak;
+   on laptops the photo fills the right side and its left edge is cut at a roof pitch. */
+.hero{position:relative;isolation:isolate;background:var(--deep)}
+.hero-pic{position:relative;height:clamp(140px,22svh,210px);background:var(--deep-line);clip-path:polygon(0 0,100% 0,100% 100%,50% calc(100% - 26px),0 100%)}
+.hero-pic img{width:100%;height:100%;object-fit:cover;object-position:50% 34%;clip-path:polygon(0 0,100% 0,100% calc(100% - 7px),50% calc(100% - 33px),0 calc(100% - 7px))}
+.hero-in{position:relative;z-index:1;padding-block:var(--s-4) calc(var(--s-7) + 28px)}
+.hero h1{font-size:var(--t-h1);max-width:12.5em}
+.hero h1 .hl{color:var(--accent)}
+.rate{display:inline-flex;flex-wrap:wrap;align-items:center;gap:4px 12px;min-height:48px;margin-top:var(--s-3);text-decoration:none;font-size:1.0625rem;font-weight:600;line-height:1.2}
+.rate b{font:700 2rem/1 var(--font);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.rate .stars svg{width:21px;height:21px}
+.rate .lbl{text-decoration:underline;text-decoration-color:var(--deep-line);text-decoration-thickness:2px}
+.lede{margin-top:var(--s-3);font-size:var(--t-lead);line-height:1.5;max-width:30em}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s-3);margin-top:var(--s-5)}
+.award{display:flex;align-items:flex-start;gap:10px;margin-top:var(--s-5);font-size:1rem;font-weight:600;line-height:1.35}
+.award .i{color:var(--accent);margin-top:1px}
+@media (hover:hover) and (pointer:fine){.rate:hover .lbl{text-decoration-color:var(--accent)}}
+@media (min-width:641px) and (max-width:959px){.hero-pic{height:300px}.hero-pic img{object-position:50% 40%}}
+@media (min-width:960px){
+  .hero{display:grid;align-items:center;min-height:clamp(540px,calc(100svh - 209px),720px)}
+  .hero-pic{position:absolute;z-index:0;top:0;bottom:0;right:0;left:50%;height:auto;clip-path:polygon(13% 0,100% 0,100% 100%,0 100%)}
+  .hero-pic img{object-position:58% 42%;clip-path:polygon(calc(13% + 12px) 0,100% 0,100% 100%,12px 100%)}
+  .hero-in{width:100%;padding-block:var(--s-7) calc(var(--s-8) + var(--s-7))}
+  .hero-copy{max-width:min(580px,calc(50vw - max(var(--m),(100vw - var(--wrap))/2) - 30px))}
+  @media (max-width:1199px){.hero-pic{left:53%}.hero-copy{max-width:calc(53vw - var(--m) - 30px)}}
+  .hero h1{font-size:clamp(2.75rem,4.5vw,4.125rem)}
+  .rate{margin-top:var(--s-4)}
+  .rate b{font-size:2.375rem}
+  .rate .stars svg{width:24px;height:24px}
+  .rate{font-size:1.125rem}
+  .lede{margin-top:var(--s-4)}
+}
+
+/* the estimate bar: the real form, laid out like a booking bar across the bottom edge of the hero */
+.est{position:relative;z-index:3;margin-top:-28px;scroll-margin-top:16px}
+.quote{background:var(--surface);color:var(--ink);border-radius:var(--r-card);box-shadow:var(--sh-3);padding:clamp(20px,2.2vw,26px);display:grid;gap:var(--s-4)}
+.quote h2{font-size:1.875rem;line-height:1}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px 12px}
+form[hidden]{display:none}
+.f{display:grid;gap:6px;min-width:0;align-content:start}
+.f.full{grid-column:1/-1}
+.f label{font-size:var(--t-small);font-weight:600;line-height:20px}
+.f input,.f select,.f textarea{width:100%;min-height:48px;padding:11px 14px;border:1px solid var(--field);border-radius:var(--r-ctl);background:var(--bg);color:var(--ink);font:inherit;font-size:1rem;transition:border-color 200ms ease,background-color 200ms ease;appearance:none;-webkit-appearance:none}
+.f select{background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23494e66' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:40px}
+.f textarea{min-height:84px;resize:vertical;line-height:1.5}
+.f input::placeholder,.f textarea::placeholder{color:var(--muted);opacity:1}
+.f input:focus-visible,.f select:focus-visible,.f textarea:focus-visible{outline:2px solid var(--focus);outline-offset:1px;border-color:var(--focus);background-color:var(--surface)}
+@media (hover:hover) and (pointer:fine){.f input:hover,.f select:hover,.f textarea:hover{border-color:var(--ink)}}
+.f [aria-invalid="true"]{border-color:var(--danger)}
+.err{font-size:.8125rem;line-height:1.35;color:var(--danger)}
+.err:empty{display:none}
+.submit{grid-column:1/-1}
+.submit .btn{width:100%}
+.thanks[hidden]{display:none}
+.thanks:focus{outline:none}
+.thanks h3{font-size:1.875rem}
+.thanks p{margin-top:var(--s-2);max-width:44ch;color:var(--muted)}
+#t-body{display:none}
+.thanks .btn{margin-top:var(--s-4)}
+@media (min-width:700px) and (max-width:1039px){
+  form{grid-template-columns:1fr 1fr}
+  .f.full{grid-column:auto}
+  .f.msg{grid-column:1/-1}
+}
+@media (min-width:960px){.est{margin-top:-64px;scroll-margin-top:104px}}
+/* laptops: the four fields and the button sit in one row */
+@media (min-width:1040px){
+  form{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr) minmax(0,1.25fr) minmax(0,1.65fr) auto;align-items:start}
+  .f input{padding-inline:12px}
+  .f select{padding-right:34px;background-position:right 12px center}
+  .f textarea{padding-inline:12px;white-space:nowrap;overflow:hidden;min-height:48px;height:48px}
+  .f textarea:focus{white-space:normal;overflow:auto}
+  .f.full{grid-column:auto}
+  .submit{grid-column:auto;padding-top:26px}
+  .submit .btn{width:auto;min-height:48px}
+}
+/* wide laptops: the title moves beside the row */
+@media (min-width:1240px){
+  .quote{grid-template-columns:172px minmax(0,1fr);gap:var(--s-5);align-items:center}
+  .thanks{grid-column:2}
+}
+
+/* reviews: the proof, under a roof peak. The one centered moment on the page. */
+.proof{position:relative;margin-top:clamp(40px,5vw,72px);background:var(--deep);clip-path:polygon(0 var(--rise),50% 0,100% var(--rise),100% 100%,0 100%);padding-block:calc(var(--rise) + clamp(44px,5vw,72px)) clamp(64px,8vw,112px);text-align:center;overflow:hidden}
+.proof::before{content:"";position:absolute;left:0;right:0;top:0;height:calc(var(--rise) + 14px);background:var(--deep-line);clip-path:polygon(0 var(--rise),50% 0,100% var(--rise),100% calc(var(--rise) + 14px),50% 14px,0 calc(var(--rise) + 14px))}
+.proof .wrap{position:relative;display:grid;justify-items:center}
+.motto{font:600 clamp(1.5rem,1.1rem + 1.6vw,2.25rem)/1.1 var(--font-display);letter-spacing:.01em;color:var(--accent)}
+.proof-num{font:700 clamp(10.5rem,31vw,23rem)/.74 var(--font-display);letter-spacing:-.02em;margin-top:clamp(28px,4vw,52px);padding-top:.06em}
+.proof .stars{gap:clamp(6px,1vw,12px);margin-top:clamp(18px,2.4vw,30px)}
+.proof .stars svg{width:clamp(38px,5vw,60px);height:clamp(38px,5vw,60px)}
+.proof h2{font-size:clamp(2.375rem,1.5rem + 3.6vw,4.25rem);margin-top:clamp(16px,2vw,24px)}
+.proof .of{font-size:var(--t-lead);color:var(--on-deep-muted);margin-top:6px}
+.proofs{list-style:none;padding:0;margin-top:clamp(36px,4.5vw,60px);display:grid;gap:var(--s-2);width:100%;max-width:980px;text-align:left}
+.proofs li{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:12px;background:var(--deep-2);font-weight:600;line-height:1.3}
+.proofs .i{width:22px;height:22px;color:var(--accent)}
+@media (min-width:800px){.proofs{grid-template-columns:1.35fr 1.15fr .8fr}}
+
+/* sections */
+.sec{padding-top:var(--sec)}
+.band{margin-top:var(--sec);padding-block:var(--band-pad)}
+.band.tint{background:var(--tint)}
+.head{display:grid;gap:var(--s-4) var(--s-8);padding-bottom:var(--s-7)}
+.head h2{font-size:var(--t-h2)}
+.head p{font-size:var(--t-lead);line-height:1.55;max-width:36em;color:var(--muted)}
+@media (min-width:960px){.head{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:end}}
+
+/* services: an uneven board, no two tiles the same size */
+.board{display:grid;gap:var(--s-7) var(--s-5)}
+.svc{display:grid;gap:var(--s-4);align-content:start;min-width:0}
+.svc h3{font-size:var(--t-h3)}
+.svc p{max-width:30em;margin-top:-6px}
+.svc .textlink{width:fit-content;margin-top:-10px}
+.svc .photo{aspect-ratio:16/10}
+.svc.sky .photo{aspect-ratio:4/5}
+.svc.sky .photo img{object-position:50% 44%}
+.svc.insp .photo{aspect-ratio:1}
+.svc.com{background:var(--deep);border-radius:var(--r-photo);box-shadow:var(--sh-2);padding:clamp(24px,3vw,36px);padding-top:42%;align-content:end;gap:var(--s-3);min-height:260px;position:relative;overflow:hidden}
+.svc.com svg.roofline{position:absolute;left:0;right:0;top:0;width:100%;height:auto;color:var(--deep-line)}
+.svc.com h3,.svc.com p,.svc.com a{position:relative}
+.svc.com p{margin-top:0;color:var(--on-deep)}
+.svc.com .textlink{text-decoration-color:var(--accent);margin-top:0}
+.fin{display:flex;align-items:flex-start;gap:12px;margin-top:var(--s-7);padding:18px 20px;border-radius:var(--r-card);background:var(--tint);font-weight:600;line-height:1.4}
+.fin .i{color:var(--focus);margin-top:2px}
+@media (min-width:700px){
+  .board{grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--s-8) var(--s-6)}
+  .svc.rep{grid-column:1/8}
+  .svc.new{grid-column:8/13;padding-top:var(--s-8)}
+  .svc.new .photo{aspect-ratio:5/4}
+  .svc.insp{grid-column:1/5}
+  .svc.sky{grid-column:5/9;margin-top:calc(var(--s-7) * -1)}
+  .svc.com{grid-column:9/13;align-self:stretch}
+}
+
+/* emergency: its own strong card, a storm sky behind the words */
+.emg{position:relative;isolation:isolate;border-radius:var(--r-photo);overflow:hidden;background:rgb(var(--scrim));box-shadow:var(--sh-3);display:grid;min-height:clamp(420px,44vw,520px)}
+.emg > img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:60% 60%}
+.emg::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgb(var(--scrim) / .9) 0%,rgb(var(--scrim) / .86) 58%,rgb(var(--scrim) / .55) 100%)}
+.emg-in{align-self:center;padding:clamp(24px,5vw,64px);max-width:640px}
+.emg h2{font-size:var(--t-h2)}
+.emg .lead{margin-top:var(--s-4);font-size:var(--t-lead);line-height:1.55;max-width:28em}
+.emg .cta{margin-top:var(--s-6)}
+.btn.xl{min-height:68px;padding:0 30px;font-size:clamp(1.25rem,1.05rem + .9vw,1.625rem);border-radius:14px;gap:14px;box-shadow:var(--sh-2)}
+.btn.xl .i{width:26px;height:26px;stroke-width:2.1}
+/* laptops: the scrim is set in px from the left, so it always covers the 640 px text column whatever the card width */
+@media (min-width:960px){.emg::before{background:linear-gradient(90deg,rgb(var(--scrim) / .93) 0,rgb(var(--scrim) / .9) 640px,rgb(var(--scrim) / .4) 880px,rgb(var(--scrim) / .12) 100%)}}
+
+/* photo pair: roofs from the air */
+.pair{display:grid;gap:var(--s-3)}
+.pair .photo:first-child{aspect-ratio:16/9}
+.pair .photo:last-child{aspect-ratio:16/10}
+@media (min-width:700px){
+  .pair{grid-template-columns:7fr 5fr;gap:var(--s-5);align-items:start}
+  .pair .photo:first-child{aspect-ratio:16/10}
+  .pair .photo:last-child{aspect-ratio:4/5;margin-top:var(--s-8)}
+}
+
+/* service area: the map in a framed card, the towns typeset beside it */
+.area{display:grid;gap:var(--s-6);align-items:start}
+.mapcard{background:var(--surface);border-radius:var(--r-photo);box-shadow:var(--sh-3);padding:8px;overflow:hidden}
+.mapcard .bar-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:12px 14px 16px}
+.mapcard .lab{display:inline-flex;align-items:center;min-height:28px;padding:4px 10px;border-radius:8px;background:var(--deep);color:var(--on-deep);font-size:.8125rem;font-weight:600;line-height:1.2}
+.mapcard .bar-top b{display:inline-flex;align-items:center;gap:8px;font:700 1.5rem/1 var(--font-display);padding-top:3px}
+.mapcard .bar-top b .i{color:var(--focus);margin-top:-3px}
+.mapcard .frame{position:relative;border-radius:calc(var(--r-photo) - 6px);overflow:hidden;background:var(--tint);aspect-ratio:4/3}
+.mapcard iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.side{display:grid;gap:var(--s-5);min-width:0}
+.towns{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px var(--s-5)}
+.towns li{display:flex;align-items:center;gap:10px;font:600 clamp(1.375rem,1.2rem + .7vw,1.75rem)/1.15 var(--font-display);padding-block:5px}
+.towns svg{width:18px;height:12px;flex:none;fill:none;stroke:var(--deep);stroke-width:3;margin-top:-3px}
+.side .else{font-weight:500}
+.side .cta{margin-top:0}
+@media (min-width:960px){
+  .area{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-8);align-items:center}
+  .mapcard .frame{aspect-ratio:16/11}
+}
+
+/* footer */
+.foot{margin-top:0;background:var(--foot);color:var(--on-deep-muted);padding-block:var(--s-8) calc(var(--s-7) + var(--bar));font-size:.9375rem;--tint:var(--deep-2);--ink:var(--on-deep);--muted:var(--on-deep-muted)}
+.foot .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s-3) var(--s-6);align-items:end}
+.foot .name{font:700 clamp(3rem,1.6rem + 7vw,7rem)/.9 var(--font-display);color:var(--on-deep);padding-top:.08em}
+.foot .where{margin-top:var(--s-3);max-width:34em}
+.foot .right{display:grid;gap:2px}
+.foot .right a{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:var(--on-deep);font-weight:700;font-size:1.25rem;text-decoration:none;width:fit-content}
+.foot .right a .i{color:var(--accent)}
+.foot .credit{grid-column:1/-1;margin-top:var(--s-4);font-size:.875rem}
+@media (min-width:700px){.foot .wrap{grid-template-columns:1fr auto}.foot .right{justify-items:end;text-align:right}}
+
+/* footer mark: a 2 s logo build that plays once in view, muted; the still logo shows until it really plays and is the fallback */
+.gcd{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:14px;margin-top:12px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font-weight:500}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--tint)}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
+
+/* phone bar */
+.bar{display:none}
+
+/* motion: slow, once, slide only. Nothing fades, so text keeps its contrast the whole way. Content shows without scripts and with reduced motion. */
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{transform:translateY(22px);transition:transform 900ms var(--ease)}
+  .js .rv.in{transform:none}
+  .js .board .rv:nth-child(2n){transition-delay:90ms}
+  .js .stars.rv{transform:none}
+  .js .stars.rv svg{transform:translateY(34px) rotate(-24deg);transition:transform 1000ms var(--ease)}
+  .js .stars.rv svg:nth-child(2){transition-delay:80ms}
+  .js .stars.rv svg:nth-child(3){transition-delay:160ms}
+  .js .stars.rv svg:nth-child(4){transition-delay:240ms}
+  .js .stars.rv svg:nth-child(5){transition-delay:320ms}
+  .js .stars.rv.in svg{transform:none}
+  .hero-copy > *{animation:rise 900ms var(--ease) both}
+  .hero-copy > :nth-child(2){animation-delay:60ms}
+  .hero-copy > :nth-child(3){animation-delay:120ms}
+  .hero-copy > :nth-child(4){animation-delay:180ms}
+  .hero-copy > :nth-child(5){animation-delay:240ms}
+  .quote{animation:rise 1000ms var(--ease) 200ms both}
+  .bar{transition:transform 220ms var(--ease)}
+  body:has(#qform :focus) .bar{transition:none}
+}
+@keyframes rise{from{transform:translateY(18px)}to{transform:none}}
+
+/* phone */
+@media (max-width:640px){
+  :root{--bar:calc(62px + env(safe-area-inset-bottom));--r-photo:16px;--r-card:14px;--off:10px}
+  html{scroll-padding-bottom:104px}
+  .cta .btn{flex:1 1 100%}
+  form{grid-template-columns:minmax(0,1fr)}
+  .f{grid-column:1/-1}
+  .towns li{font-size:1.3125rem}
+  /* phones: a lighter scrim so the storm sky shows; the worst text contrast over it stays near 7.9 */
+  .emg::before{background:linear-gradient(180deg,rgb(var(--scrim) / .76) 0%,rgb(var(--scrim) / .76) 58%,rgb(var(--scrim) / .5) 100%)}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--deep);padding-bottom:env(safe-area-inset-bottom);box-shadow:0 -6px 20px -8px rgb(var(--shadow) / .5)}
+  .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:62px;font-weight:700;font-size:1rem;text-decoration:none;color:var(--on-deep)}
+  .bar a:first-child{background:var(--accent);color:var(--on-accent)}
+  .bar a:active{opacity:.85}
+  .bar a{--focus:var(--accent)}
+  .bar a:first-child{--focus:var(--on-accent)}
+  .bar a:focus-visible{outline-offset:-4px}
+  /* the bar steps aside while a field in the estimate form has focus, so it never covers the field; it comes back when focus leaves the form */
+  body:has(#qform :focus) .bar{transform:translateY(100%);visibility:hidden}
+}
+/* short phones: keep the headline, the rating and the call button above the phone bar */
+@media (max-width:640px) and (max-height:740px){
+  .hero-pic{height:112px}
+  /* the short line is kept for screen readers and taken out of the layout (display stays as it is, so its slide never replays) */
+  .lede{position:absolute;width:1px;height:1px;margin:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .hero h1{font-size:1.9375rem}
+  .cta{margin-top:var(--s-4)}
+}
+@media (max-width:360px){
+  .rate{gap:4px 9px;font-size:1rem}
+  .rate b{font-size:1.75rem}
+  .rate .stars{gap:2px}
+  .rate .stars svg{width:17px;height:17px}
+  .top .wrap{gap:var(--s-3)}
+  .brand{font-size:1.3125rem;gap:7px}
+  .brand svg{width:26px;height:19px}
+  .top .btn{padding:0 13px}
+  .hero h1{font-size:1.875rem}
+  .towns{gap:4px var(--s-3)}
+  .towns li{font-size:1.1875rem}
+  .btn.xl{min-height:60px;padding:0 14px;gap:8px;font-size:1.0625rem}
+  .btn.xl .i{width:22px;height:22px}
+}
+@media (max-width:360px) and (max-height:600px){
+  .hero-pic{height:64px;clip-path:polygon(0 0,100% 0,100% 100%,50% calc(100% - 18px),0 100%)}
+  .hero-pic img{clip-path:polygon(0 0,100% 0,100% calc(100% - 6px),50% calc(100% - 24px),0 calc(100% - 6px))}
+  .hero-in{padding-top:var(--s-3)}
+  .hero h1{font-size:1.75rem}
+  .rate{margin-top:var(--s-2)}
+  .cta{margin-top:var(--s-3);gap:var(--s-2)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.6l2.9 6 6.5.9-4.7 4.6 1.1 6.5L12 17.5l-5.8 3.1 1.1-6.5L2.6 9.5l6.5-.9z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5.2 3.5h3.6l1.9 4.8-2.4 1.6a12.4 12.4 0 005.8 5.8l1.6-2.4 4.8 1.9v3.6a1.7 1.7 0 01-1.9 1.7A16.6 16.6 0 013.5 5.4a1.7 1.7 0 011.7-1.9z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.6-5.7-6.6-11.1a6.6 6.6 0 0113.2 0C18.6 15.3 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><path d="M9 3.5h6v3H9zM9 5H6.5a1 1 0 00-1 1v13.500a1 1 0 001 1h11a1 1 0 001-1V6a1 1 0 00-1-1H15"/><path d="M8.800 13.600l2.200 2.200 4.200-4.300"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M7 14.5h4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.200 2.700v5.500c0 4.400-2.900 8-7.200 9.800-4.300-1.800-7.200-5.400-7.200-9.800V5.700z"/><path d="M8.800 12.100l2.300 2.300 4.200-4.300"/></symbol>
+  <symbol id="i-ribbon" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.500"/><path d="M8.500 13.500L7 21l5-2.600 5 2.600-1.500-7.500"/></symbol>
+  <symbol id="i-peak" viewBox="0 0 18 12"><path d="M1.500 10.500L9 2.500l7.500 8"/></symbol>
+</svg>
+
+<div class="sample" role="note">Sample site made for TopTier Roofing by <a href="https://granitecitydigital.me/">Granite City Digital</a>. Your real site gets your own photos, colors and services.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="TopTier Roofing, back to top">
+      <svg viewBox="0 0 30 22" aria-hidden="true"><path class="pk2" d="M8 20.500L18.500 9.500"/><path class="pk" d="M2 15.500L12.500 4l10.500 11.500"/></svg>
+      TopTier Roofing
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#emergency">Emergency repairs</a></li>
+        <li><a href="#area">Service area</a></li>
+        <li><a href="#estimate">Free estimate</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="tel:+13158773760"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="long num">(315) 877 3760</span><span class="short">Call</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero on-deep" id="top" aria-labelledby="hero-h">
+    <div class="hero-pic"><img src="hero.jpg" width="1600" height="1201" fetchpriority="high" alt="A white house with a gray shingle roof, three dormers and two brick chimneys among green trees"></div>
+    <div class="hero-in wrap">
+      <div class="hero-copy">
+        <h1 id="hero-h">We install, replace and repair roofs around <span class="hl">Syracuse.</span></h1>
+        <a class="rate" href="#reviews">
+          <b>5.0</b>
+          <span class="stars" role="img" aria-label="Rated 5.0 out of 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <span class="lbl"><span class="num">349</span> Google reviews</span>
+        </a>
+        <p class="lede">TopTier Roofing serves Syracuse and Central New York. Licensed, bonded and insured.</p>
+        <div class="cta">
+          <a class="btn" href="tel:+13158773760"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>Call <span class="num">(315) 877 3760</span></span></a>
+          <a class="btn cream" href="#estimate">Request a free estimate<svg class="i" aria-hidden="true"><use href="#i-down"/></svg></a>
+        </div>
+        <p class="award"><svg class="i" aria-hidden="true"><use href="#i-ribbon"/></svg><span><span class="num">2025</span> CNY Readers' Choice Best Roofer</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="est" id="estimate" aria-labelledby="est-h">
+    <div class="wrap">
+      <div class="quote">
+        <h2 id="est-h">Request a free estimate</h2>
+        <form id="qform" method="post" novalidate>
+          <div class="f">
+            <label for="q-name">Your name</label>
+            <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+            <span class="err" id="e-name"></span>
+          </div>
+          <div class="f">
+            <label for="q-phone">Phone</label>
+            <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Your phone number" required aria-describedby="e-phone">
+            <span class="err" id="e-phone"></span>
+          </div>
+          <div class="f full">
+            <label for="q-town">Town</label>
+            <select id="q-town" name="town" required aria-describedby="e-town">
+              <option value="">Choose your town</option>
+              <option>Syracuse</option>
+              <option>Baldwinsville</option>
+              <option>Camillus</option>
+              <option>Cicero</option>
+              <option>Liverpool</option>
+              <option>Manlius</option>
+              <option>Skaneateles</option>
+              <option>Somewhere else in Central New York</option>
+            </select>
+            <span class="err" id="e-town"></span>
+          </div>
+          <div class="f full msg">
+            <label for="q-msg">What do you need?</label>
+            <textarea id="q-msg" name="message" required aria-describedby="e-msg" placeholder="A leak over the back bedroom"></textarea>
+            <span class="err" id="e-msg"></span>
+          </div>
+          <div class="submit">
+            <button class="btn" type="submit">Send request</button>
+          </div>
+        </form>
+        <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
+          <h3 id="t-title">Thanks. We have it.</h3>
+          <p id="t-body">We will call you back soon.</p>
+          <p class="muted">This is a sample site, so nothing was actually sent.</p>
+          <button class="btn dark" type="button" id="t-again">Send another request</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof on-deep" id="reviews" aria-labelledby="rev-h">
+    <div class="wrap">
+      <p class="motto">&ldquo;The proof is in the roof!&rdquo;</p>
+      <p class="proof-num" aria-hidden="true">5.0</p>
+      <span class="stars rv" role="img" aria-label="Rated 5.0 out of 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+      <h2 id="rev-h">349 Google reviews</h2>
+      <p class="of">Rated <span class="num">5.0</span> out of <span class="num">5</span></p>
+      <ul class="proofs">
+        <li><svg class="i" aria-hidden="true"><use href="#i-ribbon"/></svg><span><span class="num">2025</span> CNY Readers' Choice Best Roofer</span></li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Licensed, bonded and insured</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-clip"/></svg>Free estimate</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="services" aria-labelledby="svc-h">
+    <div class="head rv">
+      <h2 id="svc-h">Syracuse roofing services</h2>
+      <p>TopTier Roofing works on roofs in Syracuse and across Central New York. Here is what we do.</p>
+    </div>
+    <div class="board">
+      <article class="svc rep rv">
+        <figure class="photo"><img src="replacement.jpg" width="1600" height="1060" alt="A gray house with a dark shingle roof and white trim behind a mowed lawn"></figure>
+        <h3>Roof replacement</h3>
+        <p>When an old roof has had its day, we replace it.</p>
+        <a class="textlink" href="#estimate">Request a free estimate<svg class="i" aria-hidden="true"><use href="#i-up"/></svg></a>
+      </article>
+      <article class="svc new rv">
+        <figure class="photo"><img src="new-roof.jpg" width="1400" height="1096" alt="A white house with a gray roof, three dormers and a front porch"></figure>
+        <h3>New roof</h3>
+        <p>We install new roofs in Syracuse and across Central New York.</p>
+        <a class="textlink" href="#estimate">Request a free estimate<svg class="i" aria-hidden="true"><use href="#i-up"/></svg></a>
+      </article>
+      <article class="svc insp rv">
+        <figure class="photo"><img src="shingles.jpg" width="1200" height="1200" alt="Rows of roof shingles in low sun"></figure>
+        <h3>Roof inspection</h3>
+        <p>Not sure what shape your roof is in? Ask us for a roof inspection.</p>
+        <a class="textlink" href="tel:+13158773760"><span>Call <span class="num">(315) 877 3760</span></span></a>
+      </article>
+      <article class="svc sky rv">
+        <figure class="photo"><img src="skylight.jpg" width="1066" height="1600" alt="An open skylight seen from inside, with sky and trees beyond"></figure>
+        <h3>Skylight installation</h3>
+        <p>Want more daylight in a room? We install skylights.</p>
+        <a class="textlink" href="tel:+13158773760"><span>Call <span class="num">(315) 877 3760</span></span></a>
+      </article>
+      <article class="svc com on-deep rv">
+        <svg class="roofline" viewBox="0 0 400 150" aria-hidden="true"><path d="M-10 132L200 22l210 110" fill="none" stroke="currentColor" stroke-width="14"/><path d="M-10 176L200 66l210 110" fill="none" stroke="currentColor" stroke-width="5"/></svg>
+        <h3>Commercial asphalt roofing</h3>
+        <p>We do asphalt roofing on commercial buildings.</p>
+        <a class="textlink" href="tel:+13158773760"><span>Call <span class="num">(315) 877 3760</span></span></a>
+      </article>
+    </div>
+    <p class="fin rv"><svg class="i" aria-hidden="true"><use href="#i-card"/></svg><span>Financing is available. Ask when you call.</span></p>
+  </section>
+
+  <section class="wrap sec" id="emergency" aria-labelledby="emg-h">
+    <div class="emg on-deep rv">
+      <img src="storm.jpg" width="1600" height="900" alt="Dark storm clouds above the roof line of a house">
+      <div class="emg-in">
+        <h2 id="emg-h">Emergency roof repairs</h2>
+        <p class="lead">We do emergency roof repairs. If your roof is leaking or damaged, call TopTier Roofing.</p>
+        <div class="cta">
+          <a class="btn xl" href="tel:+13158773760"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>Call <span class="num">(315) 877 3760</span></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" aria-label="Photos">
+    <div class="pair">
+      <figure class="photo rv"><img src="snow-roofs.jpg" width="1600" height="1067" alt="House roofs under a light cover of snow, with a cloudy sky behind"></figure>
+      <figure class="photo rv"><img src="neighborhood.jpg" width="1400" height="933" loading="lazy" alt="A neighborhood of houses beside autumn woods, seen from above"></figure>
+    </div>
+  </section>
+
+  <section class="band tint" id="area" aria-labelledby="area-h">
+    <div class="wrap">
+      <div class="head rv">
+        <h2 id="area-h">Service area</h2>
+        <p>We work across Syracuse and Central New York. Find your town below.</p>
+      </div>
+      <div class="area">
+        <div class="mapcard rv">
+          <div class="bar-top"><span class="lab">Service area</span><b><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Syracuse, New York</b></div>
+          <div class="frame"><iframe src="https://maps.google.com/maps?q=Syracuse%2C%20NY&amp;z=10&amp;output=embed" loading="lazy" title="Map of the TopTier Roofing service area around Syracuse, New York"></iframe></div>
+        </div>
+        <div class="side rv">
+          <ul class="towns" aria-label="Towns we serve">
+            <li><svg viewBox="0 0 18 12" aria-hidden="true"><use href="#i-peak"/></svg>Syracuse</li>
+            <li><svg viewBox="0 0 18 12" aria-hidden="true"><use href="#i-peak"/></svg>Baldwinsville</li>
+            <li><svg viewBox="0 0 18 12" aria-hidden="true"><use href="#i-peak"/></svg>Camillus</li>
+            <li><svg viewBox="0 0 18 12" aria-hidden="true"><use href="#i-peak"/></svg>Cicero</li>
+            <li><svg viewBox="0 0 18 12" aria-hidden="true"><use href="#i-peak"/></svg>Clay</li>
+            <li><svg viewBox="0 0 18 12" aria-hidden="true"><use href="#i-peak"/></svg>East Syracuse</li>
+            <li><svg viewBox="0 0 18 12" aria-hidden="true"><use href="#i-peak"/></svg>Fayetteville</li>
+            <li><svg viewBox="0 0 18 12" aria-hidden="true"><use href="#i-peak"/></svg>Liverpool</li>
+            <li><svg viewBox="0 0 18 12" aria-hidden="true"><use href="#i-peak"/></svg>Manlius</li>
+            <li><svg viewBox="0 0 18 12" aria-hidden="true"><use href="#i-peak"/></svg>Marcellus</li>
+            <li><svg viewBox="0 0 18 12" aria-hidden="true"><use href="#i-peak"/></svg>Skaneateles</li>
+            <li><svg viewBox="0 0 18 12" aria-hidden="true"><use href="#i-peak"/></svg>Tully</li>
+          </ul>
+          <p class="else">Somewhere else in Central New York? Call <span class="num nb">(315) 877 3760</span>.</p>
+          <div class="cta">
+            <a class="btn" href="tel:+13158773760"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>Call <span class="num">(315) 877 3760</span></span></a>
+            <a class="btn dark" href="#estimate">Request a free estimate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot on-deep">
+  <div class="wrap">
+    <div>
+      <p class="name">TopTier Roofing</p>
+      <p class="where">Roofing in Syracuse and Central New York. Licensed, bonded and insured.</p>
+    </div>
+    <div class="right">
+      <a href="tel:+13158773760"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="num">(315) 877 3760</span></a>
+      <p>Syracuse, New York</p>
+    </div>
+    <p class="credit">Photos are examples.</p>
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a href="tel:+13158773760"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+  <a href="#estimate"><svg class="i" aria-hidden="true"><use href="#i-clip"/></svg>Free estimate</a>
+</nav>
+
+<script>
+(function(){
+  /* quiet reveal, once per element */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+  addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+
+  /* quote form (runs only when the form is on the page) */
+  var f=document.getElementById('qform');
+  if(!f)return;
+  var F=f.elements,thanks=document.getElementById('thanks');
+  function setErr(id,msg){var i=document.getElementById(id),e=document.getElementById(i.getAttribute('aria-describedby'));e.textContent=msg;if(msg){i.setAttribute('aria-invalid','true')}else{i.removeAttribute('aria-invalid')}return !msg}
+  function check(){
+    var ok=true,first=null;
+    function run(id,msg){var good=setErr(id,msg);if(!good&&!first)first=id;ok=ok&&good}
+    var name=F['name'].value.trim(),phone=F['phone'].value.replace(/\D/g,''),msg=F['message'].value.trim();
+    run('q-name',name.length<2?'Please tell us your name.':'');
+    run('q-phone',phone.length<10?'Please enter a 10 digit phone number.':'');
+    run('q-town',!F['town'].value?'Please choose your town.':'');
+    run('q-msg',msg.length<5?'A few words about the job helps us call back with the right answer.':'');
+    if(first)document.getElementById(first).focus();
+    return ok;
+  }
+  ['q-name','q-phone','q-town','q-msg'].forEach(function(id){
+    var el=document.getElementById(id);
+    el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){if(el.getAttribute('aria-invalid'))setErr(id,'')});
+  });
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!check())return;
+    var name=F['name'].value.trim().split(' ')[0],d=F['phone'].value.replace(/\D/g,'').slice(-10);
+    var nice='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6);
+    document.getElementById('t-title').textContent='Thanks, '+name+'. We have it.';
+    document.getElementById('t-body').textContent='We will call you at '+nice+' soon.';
+    f.hidden=true;thanks.hidden=false;thanks.focus();
+  });
+  document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
+})();
+</script>
+</body>
+</html>

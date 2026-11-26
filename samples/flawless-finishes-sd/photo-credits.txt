@@ -1,0 +1,46 @@
+Photo credits for flawless-finishes-sd. Photos from Unsplash (Unsplash License, https://unsplash.com/license) and Pexels (Pexels License, https://www.pexels.com/license/), shown as examples. None of them show this business's own work.
+
+hero.jpg
+  Photographer: Sobolev Maksim
+  License: Unsplash License
+  Source: https://unsplash.com/photos/6_Rv_qzog90
+
+spray-booth.jpg
+  Photographer: Eugenia Pan'kiv
+  License: Unsplash License
+  Source: https://unsplash.com/photos/Vno9rNyyzxo
+
+silver-lines.jpg
+  Photographer: Quentin Martinez (Pexels handle quentin-martinez)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/40135926/
+
+blue-mirror.jpg
+  Photographer: Hebert Santos
+  License: Pexels License
+  Source: https://www.pexels.com/photo/17059959/
+
+silver-hood.jpg
+  Photographer: Pascal Frei
+  License: Unsplash License
+  Source: https://unsplash.com/photos/ewM598hu_PI
+
+red-glow.jpg
+  Photographer: Sylwia Bartyzel
+  License: Unsplash License
+  Source: https://unsplash.com/photos/a-U02mxH6gw
+
+blue-window.jpg
+  Photographer: Daniel Splisser
+  License: Unsplash License
+  Source: https://unsplash.com/photos/JTR_n83ggA4
+
+white-panel.jpg
+  Photographer: Jan van der Wolf (Pexels handle jan-van-der-wolf)
+  License: Pexels License
+  Source: https://www.pexels.com/photo/17977773/
+
+door-line.jpg
+  Photographer: Joel Durkee
+  License: Unsplash License
+  Source: https://unsplash.com/photos/vVwbcapKjmw

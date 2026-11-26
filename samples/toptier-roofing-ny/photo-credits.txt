@@ -1,0 +1,49 @@
+Photo credits. All photos are examples and are not photos of TopTier Roofing or its jobs.
+
+hero.jpg
+  Shows: a white house with a gray shingle roof, three dormers and two brick chimneys among green trees
+  Photographer: Elijah Crouch
+  Source: https://unsplash.com/photos/kcNB4_0HRLA
+  License: Unsplash License
+
+replacement.jpg
+  Shows: a gray house with a dark shingle roof and white trim behind a mowed lawn
+  Photographer: Roger Starnes Sr
+  Source: https://unsplash.com/photos/1XRV7Z4lhGo
+  License: Unsplash License
+
+new-roof.jpg
+  Shows: a white house with a gray roof, three dormers and a front porch
+  Photographer: Roger Starnes Sr
+  Source: https://unsplash.com/photos/be8ri_4oVag
+  License: Unsplash License
+
+shingles.jpg
+  Shows: rows of roof shingles in low sun
+  Photographer: Jonathan Lim
+  Source: https://unsplash.com/photos/Vd69aKmzZAQ
+  License: Unsplash License
+
+skylight.jpg
+  Shows: an open skylight seen from inside, with sky and trees beyond
+  Photographer: Oleksii Tsaryuk
+  Source: https://unsplash.com/photos/Wbcd-Ba5eHQ
+  License: Unsplash License
+
+storm.jpg
+  Shows: dark storm clouds above the roof line of a house
+  Photographer: Eastman Childs
+  Source: https://unsplash.com/photos/EbIiK_AwusQ
+  License: Unsplash License
+
+snow-roofs.jpg
+  Shows: house roofs under a light cover of snow, with a cloudy sky behind
+  Photographer: Jay Eshie
+  Source: https://unsplash.com/photos/zHBjdg5ovh8
+  License: Unsplash License
+
+neighborhood.jpg
+  Shows: a neighborhood of houses beside autumn woods, seen from above
+  Photographer: Compagnons
+  Source: https://unsplash.com/photos/fpxGvrCFPcs
+  License: Unsplash License

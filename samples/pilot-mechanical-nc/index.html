@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pilot Mechanical Inc | Heating and air in Pilot Mountain, NC</title>
+<meta name="description" content="Pilot Mechanical Inc is a heating and air contractor in Pilot Mountain, North Carolina, serving the Piedmont Triad since 2000. Commercial, residential and design build. Call (336) 368 1173.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#24323b">
+<meta property="og:title" content="Pilot Mechanical Inc | Pilot Mountain, NC">
+<meta property="og:description" content="Pilot Mechanical Inc is a heating and air contractor in Pilot Mountain, North Carolina, serving the Piedmont Triad since 2000. Commercial, residential and design build. Call (336) 368 1173.">
+<meta property="og:image" content="https://granitecitydigital.me/samples/pilot-mechanical-nc/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Titillium+Web:wght@600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* 1. this page's own look */
+:root{
+  --bg:#f4f0e9;          /* page ground, warm plaster */
+  --surface:#fcfaf5;     /* raised cards and the form */
+  --tint:#e8e3d9;        /* contained bands */
+  --ink:#172027;
+  --muted:#4c575e;
+  --line:#d6d0c4;
+  --deep:#24323b;        /* steel slate: hero, bands */
+  --deep-2:#2f414c;      /* panels and chips on deep ground */
+  --deep-line:#445a6a;   /* quiet lines on deep ground */
+  --foot:#18232a;
+  --on-deep:#f3efe8;
+  --on-deep-muted:#b8c4ca;
+  --accent:#f07a2e;      /* bright copper: buttons, the pipe, one headline phrase, icons */
+  --accent-hover:#f68d49;
+  --on-accent:#1c1005;
+  --accent-ink:#954008;  /* copper for small icons and links on light grounds */
+  --pipe-hi:#fbc7a0;     /* the light edge of the copper tube */
+  --pipe-lo:#b4531a;     /* the shaded edge of the copper tube */
+  --focus-l:#24323b;     /* focus ring on light grounds */
+  --focus:var(--focus-l);
+  --field:#6d787e;       /* field outlines */
+  --danger:#a3301e;
+  --shadow:19 30 38;     /* shadow color as r g b */
+  --steel:repeating-linear-gradient(0deg,rgb(243 239 232 / .024) 0 1px,transparent 1px 4px); /* brushed sheet steel */
+
+  --font:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Titillium Web","Arial Narrow",system-ui,sans-serif;
+
+  --r-ctl:10px;
+  --r-card:16px;
+  --r-photo:clamp(16px,2vw,24px);
+}
+/* 2. the system */
+:root{
+  --t-small:.875rem;
+  --t-body:1.0625rem;
+  --t-lead:clamp(1.0625rem,1rem + .35vw,1.25rem);
+  --t-h3:clamp(1.5rem,1.25rem + .9vw,2rem);
+  --t-h2:clamp(1.875rem,1.35rem + 2vw,3rem);
+  --t-h1:clamp(1.875rem,1.2rem + 3.2vw,3.5rem);
+
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+  --sec:clamp(80px,9.5vw,136px);
+  --band-pad:clamp(64px,8vw,112px);
+  --off:clamp(10px,1.4vw,18px);
+  --tube:8px;
+
+  /* three levels. Light comes from the top left, so shadows fall down and to the right. */
+  --sh-1:1px 1px 2px rgb(var(--shadow) / .06),2px 6px 16px -6px rgb(var(--shadow) / .16);
+  --sh-2:1px 2px 4px rgb(var(--shadow) / .07),4px 14px 32px -10px rgb(var(--shadow) / .24);
+  --sh-3:2px 4px 8px rgb(var(--shadow) / .09),10px 30px 60px -16px rgb(var(--shadow) / .38);
+
+  /* the copper tube, lit from the top left */
+  --pipe-h:linear-gradient(180deg,var(--pipe-lo) 0,var(--pipe-hi) 30%,var(--accent) 58%,var(--pipe-lo) 100%);
+  --pipe-v:linear-gradient(90deg,var(--pipe-lo) 0,var(--pipe-hi) 30%,var(--accent) 58%,var(--pipe-lo) 100%);
+
+  --wrap:1200px;
+  --m:clamp(20px,4vw,32px);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --bar:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:24px;scrollbar-color:var(--field) var(--bg)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased;accent-color:var(--focus-l);caret-color:var(--accent-ink)}
+img{display:block;max-width:100%;height:auto}
+svg{display:block}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+address{font-style:normal}
+::selection{background:var(--accent);color:var(--on-accent)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+.on-deep{--focus:var(--accent);color:var(--on-deep)}
+h1,h2,h3{font-family:var(--font-display);font-weight:700;letter-spacing:-.012em;line-height:1.1;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;min-height:44px;display:inline-flex;align-items:center;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:var(--r-ctl)}
+.skip:focus{top:12px}
+.num{font-family:var(--font);font-variant-numeric:tabular-nums}
+.nb{white-space:nowrap}
+.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+
+/* buttons: raised; hover lifts, press sinks */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:var(--r-ctl);border:0;background:var(--accent);color:var(--on-accent);font:600 1rem/1.1 var(--font);text-decoration:none;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.cream{background:var(--on-deep);color:var(--ink)}
+.btn.dark{background:var(--deep);color:var(--on-deep)}
+.textlink{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;transition:text-decoration-color 200ms ease}
+.textlink .i{color:var(--accent-ink)}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--accent-hover);box-shadow:var(--sh-2);transform:translateY(-1px)}
+  .btn.cream:hover{background:var(--surface)}
+  .btn.dark:hover{background:var(--deep-2)}
+  .btn:active{transform:scale(.97);box-shadow:none}
+  .textlink:hover{text-decoration-color:currentColor}
+}
+
+/* sample note */
+.sample{background:var(--tint);color:var(--muted);font-size:.8125rem;text-align:center;padding:8px var(--m);line-height:1.45}
+.sample a{color:var(--ink)}
+
+/* header */
+.top{background:var(--deep)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s-5);min-height:64px}
+.brand{display:inline-flex;align-items:center;gap:10px;min-height:44px;font:700 1.1875rem/1 var(--font-display);letter-spacing:0;text-decoration:none;white-space:nowrap}
+.brand svg{width:24px;height:24px;flex:none}
+.top nav{display:none}
+.nav{display:flex;align-items:center;gap:26px;list-style:none;padding:0;font-size:.9375rem}
+.nav a{color:var(--on-deep-muted);text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;transition:color 200ms ease}
+.top .btn{min-height:44px;padding:0 16px;font-size:.9375rem}
+.top .long{display:none}
+@media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--on-deep)}}
+@media (min-width:480px){.top .long{display:inline}.top .short{display:none}}
+@media (min-width:1060px){
+  html{scroll-padding-top:100px}
+  .top{position:sticky;top:0;z-index:30;box-shadow:0 6px 18px -10px rgb(var(--shadow) / .55)}
+  .top .wrap{min-height:76px}
+  .top nav{display:block}
+}
+
+/* photo cards: the wrapper is rounded so the picture clips cleanly */
+.photo{position:relative;border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-2)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.layer{position:relative;isolation:isolate}
+.layer::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--line);transform:translate(var(--off),var(--off))}
+.on-deep .layer::before{background:var(--deep-line)}
+
+/* hero: a steel panel on the left, the rooftop photo on the right, and the copper line down the seam into the contact plate */
+.hero{position:relative;isolation:isolate;background:var(--deep) var(--steel)}
+.hero-in{position:relative;display:grid;max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding:0 var(--m) var(--s-6)}
+.hero-pic{position:relative;height:clamp(104px,15svh,136px);margin-inline:calc(var(--m) * -1);background:var(--foot)}
+.hero-pic img{width:100%;height:100%;object-fit:cover;object-position:50% 71%}
+.hero-pic::after{content:"";position:absolute;left:0;right:0;bottom:calc(var(--tube) / -2);height:var(--tube);background:var(--pipe-h);box-shadow:0 3px 8px rgb(var(--shadow) / .45)}
+.hero-copy{min-width:0;padding-top:var(--s-6)}
+.hero h1{font-size:var(--t-h1);max-width:16em}
+.hero h1 .hl{color:var(--accent)}
+.lede{margin-top:var(--s-3);font-size:var(--t-lead);line-height:1.5;color:var(--on-deep);max-width:30em}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s-3);margin-top:var(--s-5)}
+
+/* the contact plate: only the real details */
+.plate{position:relative;z-index:2;margin-top:var(--s-5);background:var(--surface);color:var(--ink);border-radius:var(--r-card);box-shadow:var(--sh-3);--focus:var(--focus-l)}
+.plate ul{list-style:none;padding:var(--s-2);display:grid}
+.plate li + li{border-top:1px solid var(--line)}
+.plate .cell{display:grid;grid-template-columns:28px minmax(0,1fr);gap:2px 12px;align-items:start;min-height:56px;padding:10px 10px;text-decoration:none;border-radius:10px;transition:background-color 200ms ease}
+.plate .i{grid-row:1 / span 2;width:26px;height:26px;margin-top:2px;color:var(--accent-ink)}
+.plate b{font:700 1.1875rem/1.25 var(--font-display);letter-spacing:0}
+.plate b.num{font:600 1.1875rem/1.25 var(--font);white-space:nowrap}
+.plate .cell > span{font-size:.9375rem;line-height:1.35;color:var(--muted)}
+.plate .go{white-space:nowrap;color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px}
+@media (hover:hover) and (pointer:fine){.plate a.cell:hover{background:var(--tint)}}
+
+@media (min-width:641px) and (max-width:959px){
+  .hero-pic{height:280px}
+}
+@media (min-width:800px) and (max-width:959px){
+  .plate ul{grid-template-columns:minmax(0,5fr) max-content minmax(0,4fr)}
+  .plate li + li{border-top:0;border-left:1px solid var(--line)}
+}
+@media (min-width:960px){
+  .hero-in{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:1fr auto;column-gap:var(--s-7);padding-bottom:0;min-height:clamp(540px,calc(100svh - 184px),700px)}
+  /* the photo runs from the seam to the right edge of the window */
+  .hero-pic{grid-column:2;grid-row:1 / span 2;height:auto;margin:0;margin-right:calc(max(var(--m),(100vw - var(--wrap)) / 2) * -1)}
+  .hero-pic img{position:absolute;inset:0;object-position:50% 88%}
+  .hero-pic::after{left:calc(var(--tube) / -2);right:auto;top:0;bottom:0;width:var(--tube);height:auto;background:var(--pipe-v);box-shadow:3px 0 10px rgb(var(--shadow) / .5)}
+  .hero-copy{grid-column:1;grid-row:1;align-self:center;padding-block:var(--s-7)}
+  .hero h1{font-size:clamp(2.375rem,3.7vw,3.25rem)}
+  .lede{margin-top:var(--s-4)}
+  .hero .cta{margin-top:var(--s-6)}
+  .plate{grid-column:1 / -1;grid-row:2;margin:0 0 -52px}
+  .plate ul{grid-template-columns:minmax(0,5fr) max-content minmax(0,4fr);padding:var(--s-3)}
+  .plate li + li{border-top:0;border-left:1px solid var(--line)}
+  .plate .cell{padding:14px 18px;gap:2px 14px}
+  /* the flare nut where the line meets the plate */
+  .plate::before{content:"";position:absolute;bottom:100%;left:calc((100% - var(--s-7)) / 2 + var(--s-7) - 10px);width:20px;height:14px;border-radius:3px 3px 0 0;background:var(--pipe-lo);box-shadow:inset 3px 0 0 rgb(251 199 160 / .35)}
+}
+
+/* trust row: plain facts under the plate */
+.trust{padding-top:var(--s-6)}
+.trust ul{list-style:none;padding:0;display:grid;gap:var(--s-3) var(--s-6)}
+.trust li{display:flex;align-items:center;gap:10px;font-weight:600;line-height:1.3}
+.trust .i{width:22px;height:22px;color:var(--accent-ink)}
+@media (min-width:600px){.trust ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:960px){.trust{padding-top:calc(52px + var(--s-6))}}
+@media (min-width:1200px){.plate b,.plate b.num{font-size:1.3125rem}}
+@media (min-width:1320px){.trust ul{display:flex;flex-wrap:wrap;justify-content:space-between}}
+
+/* sections */
+.sec{padding-top:var(--sec)}
+.band{margin-top:var(--sec);padding-block:var(--band-pad)}
+.band.tint{background:var(--tint)}
+.band.deep{background:var(--deep) var(--steel)}
+.head{display:grid;gap:var(--s-4) var(--s-8);padding-bottom:var(--s-7)}
+.head h2{font-size:var(--t-h2)}
+.head p{font-size:var(--t-lead);line-height:1.55;max-width:36em;color:var(--muted)}
+.head p b{color:var(--ink);font-weight:600;white-space:nowrap}
+@media (min-width:960px){.head{grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:end}}
+
+/* services: three doors fed by one copper trunk line */
+.doors{position:relative;display:grid;gap:var(--s-5)}
+.door{position:relative;display:grid;align-content:start;background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-1);padding:var(--s-2)}
+.door .photo{aspect-ratio:16/10;border-radius:calc(var(--r-card) - 5px);box-shadow:none}
+.door .body{padding:var(--s-5) var(--s-4) var(--s-4)}
+.door h3{display:flex;align-items:center;gap:12px;font-size:var(--t-h3)}
+.door h3 .i{width:28px;height:28px;color:var(--accent-ink)}
+.door p{margin-top:var(--s-3);max-width:34em}
+.ticks{list-style:none;padding:0;margin-top:var(--s-4);display:grid;gap:10px}
+.ticks li{display:grid;grid-template-columns:24px minmax(0,1fr);gap:10px;align-items:start;font-weight:500;line-height:1.4}
+.tick{width:24px;height:24px;border-radius:7px;background:var(--deep);color:var(--accent);display:grid;place-items:center}
+.tick .i{width:14px;height:14px;stroke-width:2.6}
+.door .textlink{margin-top:var(--s-4)}
+.door.a .photo img{object-position:46% 50%}
+.door.c .photo img{object-position:36% 50%}
+@media (max-width:959px){
+  .doors{padding-left:30px}
+  /* trunk on the left: it comes in above the first door and tees into each one */
+  .doors::before{content:"";position:absolute;left:6px;top:calc(var(--s-6) * -1);width:var(--tube);height:calc(var(--s-6) + 64px);background:var(--pipe-v)}
+  .door::before{content:"";position:absolute;right:100%;top:56px;width:24px;height:var(--tube);background:var(--pipe-h)}
+  .door:not(:last-child)::after{content:"";position:absolute;left:-24px;top:56px;bottom:calc((var(--s-5) + 64px) * -1);width:var(--tube);background:var(--pipe-v)}
+}
+@media (min-width:960px){
+  .doors{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;padding-top:40px}
+  .door{margin-top:var(--drop,0px)}
+  .door.b{--drop:56px}
+  .door.c{--drop:24px}
+  .door .photo{aspect-ratio:5/6}
+  /* the trunk runs in from the left edge of the window and ends in an elbow over the third door */
+  .doors::before{content:"";position:absolute;top:0;left:calc(50% - 50vw);right:calc((100% - var(--s-5) * 2) / 3 - 52px);height:var(--tube);border-radius:0 var(--tube) 0 0;background:var(--pipe-h);box-shadow:0 3px 8px rgb(var(--shadow) / .18)}
+  /* one drop per door, with a flare nut where it lands */
+  .door::before{content:"";position:absolute;left:44px;bottom:100%;width:var(--tube);height:calc(34px + var(--drop,0px));background:var(--pipe-v)}
+  .door::after{content:"";position:absolute;left:38px;bottom:100%;width:20px;height:12px;border-radius:3px 3px 0 0;background:var(--pipe-lo);box-shadow:inset 3px 0 0 rgb(251 199 160 / .35)}
+}
+.care{display:grid;gap:var(--s-3) var(--s-6);align-items:center;margin-top:var(--s-7);padding:var(--s-5);border-radius:var(--r-card);background:var(--tint)}
+.care h3{display:flex;align-items:center;gap:12px;font-size:1.375rem}
+.care h3 .i{width:26px;height:26px;color:var(--accent-ink)}
+.care p{max-width:38em}
+@media (min-width:960px){.care{grid-template-columns:auto minmax(0,1fr) auto;padding:var(--s-5) var(--s-6)}}
+
+/* on call: the pilot light. The copper line ends in a small burner with the flame lit. */
+.oncall .wrap{display:grid;gap:var(--s-7);align-items:center}
+.pilot{position:relative;height:96px;margin-bottom:var(--s-5)}
+.pilot::before{content:"";position:absolute;left:calc(50% - 50vw);bottom:0;width:calc(50vw - 50% + 30px);height:var(--tube);border-radius:0 0 var(--tube) 0;background:var(--pipe-h)}
+.pilot::after{content:"";position:absolute;left:22px;bottom:4px;width:var(--tube);height:24px;border-radius:2px 2px 0 0;background:var(--pipe-v);box-shadow:0 -6px 0 2px var(--pipe-lo)}
+.pilot svg{position:absolute;left:2px;bottom:34px;width:48px;height:60px;transform-origin:50% 100%}
+.oncall h2{font-size:var(--t-h2)}
+.oncall .lead{margin-top:var(--s-4);font-size:var(--t-lead);line-height:1.55;max-width:30em}
+.oncall .cta{margin-top:var(--s-6)}
+.hrs{display:flex;align-items:flex-start;gap:10px;margin-top:var(--s-4);font-size:1rem;line-height:1.45;color:var(--on-deep-muted);max-width:30em}
+.hrs .i{color:var(--accent);margin-top:2px}
+.hrs b{color:var(--on-deep);font-weight:600}
+.oncall .layer{margin-right:var(--off);margin-bottom:var(--off)}
+.oncall .photo{aspect-ratio:16/10;box-shadow:var(--sh-3)}
+@media (min-width:960px){.oncall .wrap{grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:var(--s-9)}.oncall .photo{aspect-ratio:5/4}}
+
+/* about */
+.about{display:grid;gap:var(--s-7);align-items:center}
+.about h2{font-size:var(--t-h2)}
+.motto{margin-top:var(--s-5);padding-left:var(--s-5);position:relative;font:600 clamp(1.375rem,1.15rem + .9vw,1.875rem)/1.25 var(--font-display)}
+.motto::before{content:"";position:absolute;left:0;top:.2em;bottom:.2em;width:var(--tube);border-radius:4px;background:var(--pipe-v)}
+.about .say{margin-top:var(--s-5);font-size:var(--t-lead);line-height:1.55;max-width:32em}
+.about .facts{list-style:none;padding:0;margin-top:var(--s-5);display:flex;flex-wrap:wrap;gap:var(--s-2)}
+.about .facts li{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:6px 14px 6px 10px;border-radius:10px;background:var(--tint);font-weight:600;font-size:.9375rem}
+.about .facts .i{width:16px;height:16px;color:var(--accent-ink);stroke-width:2.6}
+.about .layer{margin-right:var(--off);margin-bottom:var(--off)}
+.about .photo{aspect-ratio:3/2}
+.about .photo img{object-position:52% 40%}
+.about figcaption{position:absolute;left:12px;bottom:12px;max-width:calc(100% - 24px);display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:6px 12px 6px 10px;border-radius:9px;background:var(--deep);color:var(--on-deep);font-size:.875rem;font-weight:600;line-height:1.2}
+.about figcaption .i{width:16px;height:16px;color:var(--accent)}
+@media (min-width:960px){.about{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--s-8)}}
+
+/* photo strip: three rounded tiles of different widths, like duct sections */
+.strip{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-3);padding-top:var(--s-8)}
+.strip .photo{aspect-ratio:1}
+.strip .photo:first-child{grid-column:1/-1;aspect-ratio:16/10}
+@media (min-width:700px){
+  .strip{grid-template-columns:5fr 3fr 4fr;gap:var(--s-5);padding-top:var(--s-9)}
+  .strip .photo,.strip .photo:first-child{grid-column:auto;aspect-ratio:auto;height:clamp(260px,30vw,400px)}
+  .strip .photo:nth-child(2){margin-top:var(--s-7)}
+}
+
+/* request service: the full contact block beside the form */
+.request{display:grid;gap:var(--s-6);align-items:start}
+.request h2{font-size:var(--t-h2)}
+.request .lead{margin-top:var(--s-4);font-size:var(--t-lead);line-height:1.55;max-width:30em;color:var(--muted)}
+.ways{list-style:none;padding:0;display:grid;gap:var(--s-2)}
+.ways .cell{display:grid;grid-template-columns:44px minmax(0,1fr);gap:0 14px;align-items:center;min-height:64px;padding:10px 14px 10px 10px;border-radius:var(--r-card);text-decoration:none}
+.ways a.cell{background:var(--surface);box-shadow:var(--sh-1);transition:box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.ways a.cell:active{transform:scale(.985);box-shadow:none}
+.ways .ic{grid-row:1 / span 2;width:44px;height:44px;border-radius:12px;background:var(--deep);color:var(--accent);display:grid;place-items:center}
+.ways .ic .i{width:22px;height:22px}
+.ways b{font:700 1.1875rem/1.25 var(--font-display);letter-spacing:0}
+.ways b.num{font:600 1.1875rem/1.25 var(--font)}
+.ways .cell > span:not(.ic){font-size:.9375rem;line-height:1.4;color:var(--muted)}
+.ways .go{white-space:nowrap;color:var(--ink);font-weight:600;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px}
+@media (hover:hover) and (pointer:fine){.ways a.cell:hover{box-shadow:var(--sh-2);transform:translateY(-2px)}.ways a.cell:active{transform:scale(.985);box-shadow:none}}
+.panel{background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3);padding:clamp(20px,2.6vw,36px);scroll-margin-top:16px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px 12px}
+form[hidden]{display:none}
+.f{display:grid;gap:6px;min-width:0}
+.f.full{grid-column:1/-1}
+.f label{font-size:var(--t-small);font-weight:600}
+.f input,.f select,.f textarea{width:100%;min-height:48px;padding:11px 14px;border:1px solid var(--field);border-radius:var(--r-ctl);background:var(--bg);color:var(--ink);font:inherit;font-size:1rem;transition:border-color 200ms ease,background-color 200ms ease;appearance:none;-webkit-appearance:none}
+.f select{background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%234c575e' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:40px}
+.f textarea{min-height:104px;resize:vertical;line-height:1.5}
+.f input::placeholder,.f textarea::placeholder{color:var(--muted);opacity:1}
+.f input:focus-visible,.f select:focus-visible,.f textarea:focus-visible{outline:2px solid var(--focus);outline-offset:1px;border-color:var(--focus);background-color:var(--surface)}
+@media (hover:hover) and (pointer:fine){.f input:hover,.f select:hover,.f textarea:hover{border-color:var(--ink)}}
+.f [aria-invalid="true"]{border-color:var(--danger)}
+.err{font-size:.8125rem;line-height:1.35;color:var(--danger)}
+.err:empty{display:none}
+.submit{grid-column:1/-1}
+.submit .btn{width:100%}
+.thanks[hidden]{display:none}
+.thanks:focus{outline:none}
+.thanks h3{font-size:1.75rem}
+.thanks p{margin-top:var(--s-3);max-width:40ch;color:var(--muted)}
+#t-body{display:none}
+.thanks .btn{margin-top:var(--s-5)}
+@media (min-width:960px){.request{grid-template-columns:minmax(0,5fr) minmax(0,6fr);grid-template-rows:auto 1fr;gap:var(--s-6) var(--s-9)}.req-head{grid-column:1;grid-row:1}.reach{grid-column:1;grid-row:2}.panel{grid-column:2;grid-row:1 / span 2;scroll-margin-top:100px}}
+
+/* hours and map */
+.visit{display:grid;gap:var(--s-6);align-items:start}
+.mapcard{background:var(--surface);border-radius:var(--r-photo);box-shadow:var(--sh-3);padding:8px;overflow:hidden}
+.mapcard .bar-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 16px;padding:10px 12px 14px}
+.mapcard .bar-top b{display:inline-flex;align-items:center;gap:10px;font:700 1.25rem/1.2 var(--font-display)}
+.mapcard .bar-top b .i{color:var(--accent-ink)}
+.mapcard .bar-top > span{font-size:.9375rem;color:var(--muted)}
+.mapcard .frame{position:relative;border-radius:calc(var(--r-photo) - 6px);overflow:hidden;background:var(--tint);aspect-ratio:4/3}
+.mapcard iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.mapcard .bar-bot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;padding:12px 12px 6px}
+.mapcard .bar-bot p{font-size:.9375rem;color:var(--muted)}
+.side{display:grid;gap:var(--s-4)}
+.hours{border-radius:var(--r-card);overflow:hidden;box-shadow:var(--sh-2);scroll-margin-top:100px}
+.hours .office{background:var(--deep) var(--steel);padding:clamp(22px,2.6vw,36px)}
+.hours h3{font:600 1rem/1.2 var(--font);letter-spacing:0;color:var(--on-deep-muted);display:flex;align-items:center;gap:10px}
+.hours h3 .i{color:var(--accent)}
+.hours .days{margin-top:var(--s-4);font:600 1.25rem/1.2 var(--font-display)}
+.hours .when{font:700 clamp(3rem,2.2rem + 3.4vw,4.5rem)/1 var(--font-display);letter-spacing:-.02em;margin-top:4px}
+.hours .when span{color:var(--accent)}
+.hours .note{margin-top:var(--s-4);color:var(--on-deep);font-weight:600}
+.hours .after{display:grid;grid-template-columns:36px minmax(0,1fr);gap:14px;align-items:center;background:var(--deep-2);padding:var(--s-5) clamp(22px,2.6vw,36px)}
+.hours .after svg{width:30px;height:38px}
+.hours .after p{font-weight:600;line-height:1.4}
+.side .cta{margin-top:0}
+@media (min-width:960px){
+  .visit{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-8);align-items:stretch}
+  .side{grid-template-rows:1fr auto}
+  .hours{display:grid;grid-template-rows:1fr auto}
+  .hours .office{display:grid;align-content:center}
+  .mapcard .frame{aspect-ratio:16/10}
+}
+
+/* footer */
+.foot{margin-top:var(--sec);background:var(--foot);color:var(--on-deep-muted);padding-block:var(--s-8) calc(var(--s-7) + var(--bar));font-size:.9375rem;--tint:var(--deep-2);--ink:var(--on-deep);--muted:var(--on-deep-muted)}
+.foot .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s-3) var(--s-6);align-items:start}
+.foot .name{display:flex;align-items:center;gap:10px;font:700 1.5rem/1.1 var(--font-display);color:var(--on-deep)}
+.foot .name svg{width:26px;height:26px;flex:none}
+.foot .tagline{margin-top:8px;color:var(--on-deep);font-weight:500}
+.foot .where{margin-top:var(--s-3)}
+.foot .right{display:grid;gap:2px}
+.foot .right a{display:inline-flex;align-items:center;gap:10px;min-height:44px;color:var(--on-deep);font-weight:600;font-size:1.125rem;text-decoration:none;width:fit-content}
+.foot .right a .i{color:var(--accent)}
+.foot .credit{grid-column:1/-1;margin-top:var(--s-4);font-size:.875rem}
+@media (min-width:700px){.foot .wrap{grid-template-columns:1fr auto}.foot .right{justify-items:end;text-align:right}}
+
+/* footer mark: a 2 s logo build that plays once in view, muted; the still logo shows until it really plays and is the fallback */
+.gcd{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:14px;margin-top:12px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font-weight:500}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--tint)}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
+
+/* phone bar */
+.bar{display:none}
+
+/* motion: slow, once, slide only. Nothing that carries text fades. The one authored moment is the copper line running in and dropping into the three doors. Content shows without scripts and with reduced motion. */
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{transform:translateY(22px);transition:transform 900ms var(--ease)}
+  .js .rv.in{transform:none}
+  .js .doors.rv{transform:none}
+  .js .doors.rv::before{transition:transform 1500ms var(--ease)}
+  .js .door.rv::before{transition:transform 700ms var(--ease) 900ms}
+  .js .door.b.rv{transition-delay:90ms}
+  .js .door.c.rv{transition-delay:180ms}
+  .js .pilot.rv{transform:none}
+  .js .pilot.rv svg{transform:scale(.4);transition:transform 1100ms var(--ease) 250ms}
+  .js .pilot.rv.in svg{transform:none}
+  .hero-copy{animation:rise 900ms var(--ease) both}
+  .plate{animation:rise 1000ms var(--ease) 180ms both}
+  .bar{transition:transform 220ms var(--ease)}
+  body:has(#qform :focus) .bar{transition:none}
+}
+@media (prefers-reduced-motion:no-preference) and (min-width:960px){
+  .js .doors.rv::before{transform:scaleX(0);transform-origin:0 50%}
+  .js .doors.rv.in::before{transform:none}
+  .js .door.rv::before{transform:scaleY(0);transform-origin:50% 0}
+  .js .door.rv.in::before{transform:none}
+}
+@keyframes rise{from{transform:translateY(18px)}to{transform:none}}
+
+/* phone */
+@media (max-width:640px){
+  :root{--bar:calc(62px + env(safe-area-inset-bottom));--r-photo:16px;--r-card:14px;--off:10px}
+  html{scroll-padding-bottom:104px}
+  .cta .btn{flex:1 1 100%}
+  .hero .cta .cream{display:none}
+  .hero-pic{height:clamp(96px,13svh,112px)}
+  .hero-copy{padding-top:var(--s-5)}
+  .plate .cell{grid-template-columns:24px minmax(0,1fr);gap:1px 10px;padding:9px 8px}
+  .plate .i{width:24px;height:24px}
+  .plate .cell > span{font-size:.875rem}
+  form{grid-template-columns:minmax(0,1fr)}
+  .f{grid-column:1/-1}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--deep);padding-bottom:env(safe-area-inset-bottom);box-shadow:0 -6px 20px -8px rgb(var(--shadow) / .5)}
+  .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:62px;font-weight:600;font-size:1rem;text-decoration:none;color:var(--on-deep)}
+  .bar a:first-child{background:var(--accent);color:var(--on-accent)}
+  .bar a:active{opacity:.85}
+  .bar a:focus-visible{outline-offset:-4px;outline-color:var(--on-deep)}
+  /* the bar steps aside while a field in the request form has focus, so it never covers the field; it comes back when focus leaves the form */
+  body:has(#qform :focus) .bar{transform:translateY(100%);visibility:hidden}
+}
+/* short phones: keep the headline and the call button above the phone bar */
+@media (max-width:640px) and (max-height:740px){
+  .hero-pic{height:84px}
+  .hero-copy{padding-top:var(--s-5)}
+  .lede{display:none}
+  .hero h1{font-size:1.75rem}
+  .cta{margin-top:var(--s-4)}
+}
+@media (max-width:380px){
+  .brand .inc{display:none}
+  .brand{font-size:1.125rem;gap:8px}
+  .top .wrap{gap:var(--s-3)}
+  .top .btn{padding:0 13px}
+  .bar .long{display:none}
+  .bar a{font-size:.9375rem;gap:6px}
+  .bar .i{width:18px;height:18px}
+}
+@media (max-width:360px) and (max-height:600px){
+  .hero-pic{height:68px}
+  .hero h1{font-size:1.625rem}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5.2 3.5h3.6l1.9 4.800-2.400 1.600a12.400 12.400 0 005.800 5.800l1.600-2.400 4.800 1.900v3.600a1.700 1.700 0 01-1.900 1.700A16.600 16.600 0 013.500 5.400a1.700 1.700 0 011.700-1.900z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.600-5.700-6.600-11.100a6.600 6.600 0 0113.200 0C18.600 15.300 12 21 12 21z"/><circle cx="12" cy="9.800" r="2.400"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.800"/><path d="M12 7v5.200l3.400 2"/></symbol>
+  <symbol id="i-tick" viewBox="0 0 24 24"><path d="M5 12.600l4.400 4.400L19 7.400"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M8 16L17 7M9.500 7H17v7.500"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 20.500V6.500l8-3v17M12 9.500l8 2.500v8.500M2.500 20.500h19M7.500 9v.01M7.500 12.500v.01M7.500 16v.01M16 15v.01"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3.500 11.500L12 4l8.500 7.500M6 9.800v10.200h12V9.800M10 20v-5.500h4V20"/></symbol>
+  <symbol id="i-plan" viewBox="0 0 24 24"><path d="M4 4.500h16v15H4zM4 10h7v9.500M11 14h4M15 4.500V8"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.500 6.200a4 4 0 015.300-2.200l-2.600 2.600.4 2.300 2.300.4 2.600-2.600a4 4 0 01-5.500 4.900L8 20.600a1.900 1.900 0 01-2.700-2.700l9-9a4 4 0 01.2-2.700z" transform="translate(-1.500 0)"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><circle cx="12" cy="9.500" r="5.500"/><path d="M8.500 14l-1.500 7 5-2.500 5 2.500-1.500-7M9.800 9.600l1.600 1.600 3-3.100"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.500" y="5" width="17" height="15" rx="2"/><path d="M3.500 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-form" viewBox="0 0 24 24"><path d="M9 3.500h6v3H9zM9 5H6.500a1 1 0 00-1 1v13.500a1 1 0 001 1h11a1 1 0 001-1V6a1 1 0 00-1-1H15M8.500 11.500h7M8.500 15.500h4.500"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 30"><path style="fill:var(--accent)" d="M12.600 1c.9 4.700 7.400 8.300 7.400 15.800a8 8 0 01-16 0c0-3.300 1.500-5.500 3.100-7.300.2 2 .9 3.300 2.300 4.200C9.500 9 10.800 5 12.600 1z"/><path style="fill:var(--pipe-hi)" d="M12 26.500a4 4 0 004-4c0-2.700-2.200-4.200-3.700-7.500-1.900 2.900-4.300 4.800-4.300 7.500a4 4 0 004 4z"/></symbol>
+</svg>
+
+<div class="sample" role="note">Sample site made for Pilot Mechanical Inc by <a href="https://granitecitydigital.me/">Granite City Digital</a>. Your real site gets your own photos, colors and services.</div>
+
+<header class="top on-deep">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Pilot Mechanical Inc, back to top">
+      <svg class="flame" viewBox="0 0 24 30" aria-hidden="true"><use href="#i-flame"/></svg>
+      <span>Pilot Mechanical<span class="inc"> Inc</span></span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#on-call">On call</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#request">Request service</a></li>
+        <li><a href="#visit">Hours and map</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="tel:+13363681173"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="long num">(336) 368 1173</span><span class="short">Call</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero on-deep" id="top" aria-labelledby="hero-h">
+    <div class="hero-in">
+      <div class="hero-pic"><img src="hero.jpg" width="1067" height="1600" fetchpriority="high" alt="Large fan units and pipes on a rooftop, seen from above"></div>
+      <div class="hero-copy">
+        <h1 id="hero-h"><span class="hl">Heating and air</span> for Piedmont Triad homes and businesses.</h1>
+        <p class="lede">Pilot Mechanical Inc is a heating and air contractor in Pilot Mountain, serving the Piedmont Triad since <span class="num">2000</span>.</p>
+        <div class="cta">
+          <a class="btn" href="tel:+13363681173"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>Call <span class="num">(336) 368 1173</span></span></a>
+          <a class="btn cream" href="#request">Request service</a>
+        </div>
+      </div>
+      <address class="plate" aria-label="Pilot Mechanical contact details">
+        <ul>
+          <li><a class="cell" href="https://www.google.com/maps/dir/?api=1&amp;destination=722+East+Main+Street+Pilot+Mountain+NC+27041" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><b>722 East Main Street</b><span>Pilot Mountain, NC <span class="num">27041</span>. <span class="go">Get directions</span></span></a></li>
+          <li><a class="cell" href="tel:+13363681173"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><b class="num">(336) 368 1173</b><span>Call Pilot Mechanical</span></a></li>
+          <li><div class="cell"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg><b>Monday to Friday, <span class="nb">9 to 5</span></b><span>Office hours. Call ahead to confirm.</span></div></li>
+        </ul>
+      </address>
+    </div>
+  </section>
+
+  <section class="wrap trust" aria-label="About Pilot Mechanical">
+    <ul>
+      <li><svg class="i" aria-hidden="true"><use href="#i-cal"/></svg><span>Serving the Piedmont Triad since <span class="num">2000</span></span></li>
+      <li><svg class="i" aria-hidden="true"><use href="#i-badge"/></svg>NATE certified technicians</li>
+      <li><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg><span><span class="num">24</span> hour service calls</span></li>
+      <li><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Shop and office in Pilot Mountain</li>
+    </ul>
+  </section>
+
+  <section class="wrap sec" id="services" aria-labelledby="svc-h">
+    <div class="head rv">
+      <h2 id="svc-h">Commercial, residential and design build</h2>
+      <p>Pilot Mechanical does heating and air for businesses, for homes and for new structures. Find yours below, then call <b class="num">(336) 368 1173</b>.</p>
+    </div>
+
+    <div class="doors rv">
+      <article class="door a rv">
+        <figure class="photo"><img src="ducts.jpg" width="1200" height="892" alt="Large round metal ducts between building walls, seen from below"></figure>
+        <div class="body">
+          <h3><svg class="i" aria-hidden="true"><use href="#i-building"/></svg>Commercial</h3>
+          <p>Commercial heating and air. Our technicians are NATE certified.</p>
+          <ul class="ticks">
+            <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span><span><span class="num">24</span> hour service calls</span></li>
+            <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Free project estimates</li>
+            <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>System installation</li>
+            <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Maintenance</li>
+          </ul>
+          <a class="textlink" href="tel:+13363681173"><span>Call <span class="num">(336) 368 1173</span></span></a>
+        </div>
+      </article>
+
+      <article class="door b rv">
+        <figure class="photo"><img src="living-room.jpg" width="1400" height="933" alt="A living room with a sofa and armchair in soft window light"></figure>
+        <div class="body">
+          <h3><svg class="i" aria-hidden="true"><use href="#i-home"/></svg>Residential</h3>
+          <p>Heating and air for your home, with technicians on call <span class="num">24</span> hours a day for heating and cooling emergencies.</p>
+          <ul class="ticks">
+            <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Installs</li>
+            <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Repairs</li>
+            <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Maintenance</li>
+            <li><span class="tick"><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg></span>Air quality checks</li>
+          </ul>
+          <a class="textlink" href="#request">Request service<svg class="i" aria-hidden="true"><use href="#i-down"/></svg></a>
+        </div>
+      </article>
+
+      <article class="door c rv">
+        <figure class="photo"><img src="plans.jpg" width="1400" height="788" alt="Hands drawing on a large sheet of paper beside a scale ruler"></figure>
+        <div class="body">
+          <h3><svg class="i" aria-hidden="true"><use href="#i-plan"/></svg>Design build</h3>
+          <p>Design build services for new structures. We work with builders to create and implement custom climate control options.</p>
+          <a class="textlink" href="tel:+13363681173"><span>Call <span class="num">(336) 368 1173</span></span></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="care rv">
+      <h3><svg class="i" aria-hidden="true"><use href="#i-wrench"/></svg>Care and maintenance</h3>
+      <p>We do maintenance on commercial and residential systems.</p>
+      <a class="btn dark" href="#request">Request service</a>
+    </div>
+  </section>
+
+  <section class="band deep oncall on-deep" id="on-call" aria-labelledby="oncall-h">
+    <div class="wrap">
+      <div>
+        <div class="pilot rv" aria-hidden="true"><svg class="flame" viewBox="0 0 24 30"><use href="#i-flame"/></svg></div>
+        <div class="rv">
+          <h2 id="oncall-h">On call 24 hours a day</h2>
+          <p class="lead">We keep technicians on call <span class="num">24</span> hours a day for heating and cooling emergencies.</p>
+          <div class="cta">
+            <a class="btn" href="tel:+13363681173"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>Call <span class="num">(336) 368 1173</span></span></a>
+          </div>
+          <p class="hrs"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg><span><b>Office hours Monday to Friday, <span class="num nb">9 to 5</span>.</b> Call ahead to confirm.</span></p>
+        </div>
+      </div>
+      <div class="layer rv"><figure class="photo"><img src="copper-coil.jpg" width="1600" height="900" alt="A coil of copper tubing catching warm light"></figure></div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="about" aria-labelledby="about-h">
+    <div class="about">
+      <div class="layer rv">
+        <figure class="photo"><img src="pilot-mountain.jpg" width="1600" height="806" alt="The rock knob of Pilot Mountain above fall trees under a clear blue sky"><figcaption><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Pilot Mountain, North Carolina</figcaption></figure>
+      </div>
+      <div class="rv">
+        <h2 id="about-h">A heating and air contractor for the Piedmont Triad since <span class="nb">2000</span></h2>
+        <p class="motto">&ldquo;We put the customer first.&rdquo;</p>
+        <p class="say">Providing comfort solutions to our customers&rsquo; businesses and homes with pride and quality workmanship.</p>
+        <ul class="facts">
+          <li><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg>NATE certified technicians</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-tick"/></svg>Pilot Mountain and the Piedmont Triad</li>
+        </ul>
+      </div>
+    </div>
+    <div class="strip">
+      <figure class="photo rv"><img src="ceiling.jpg" width="1200" height="800" alt="Round metal ducts and light panels on a dark ceiling"></figure>
+      <figure class="photo rv"><img src="tall-ducts.jpg" width="900" height="1125" alt="Two tall round metal ducts with air grilles beside a wall of windows"></figure>
+      <figure class="photo rv"><img src="vent.jpg" width="1200" height="800" loading="lazy" alt="An air vent grille beside a long metal duct and a ceiling light"></figure>
+    </div>
+  </section>
+
+  <section class="band tint" id="request" aria-labelledby="request-h">
+    <div class="wrap request">
+      <div class="req-head rv">
+        <h2 id="request-h">Request service</h2>
+        <p class="lead">Tell us what is going on with your heating or air, or reach Pilot Mechanical with the details below.</p>
+      </div>
+
+      <div class="panel rv" id="quote">
+        <form id="qform" method="post" novalidate>
+          <div class="f">
+            <label for="q-name">Your name</label>
+            <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+            <span class="err" id="e-name"></span>
+          </div>
+          <div class="f">
+            <label for="q-phone">Phone</label>
+            <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Your phone number" required aria-describedby="e-phone">
+            <span class="err" id="e-phone"></span>
+          </div>
+          <div class="f full">
+            <label for="q-town">Town or area</label>
+            <select id="q-town" name="town" required aria-describedby="e-town">
+              <option value="">Choose your area</option>
+              <option>Pilot Mountain</option>
+              <option>Somewhere else in the Piedmont Triad</option>
+            </select>
+            <span class="err" id="e-town"></span>
+          </div>
+          <div class="f full">
+            <label for="q-msg">What is going on?</label>
+            <textarea id="q-msg" name="message" required aria-describedby="e-msg" placeholder="Heat is running but the house stays cold"></textarea>
+            <span class="err" id="e-msg"></span>
+          </div>
+          <div class="submit">
+            <button class="btn" type="submit">Send request</button>
+          </div>
+        </form>
+        <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
+          <h3 id="t-title">Thanks. We have it.</h3>
+          <p id="t-body">We will call you back soon.</p>
+          <p class="muted">This is a sample site, so nothing was actually sent.</p>
+          <button class="btn dark" type="button" id="t-again">Send another request</button>
+        </div>
+      </div>
+      <address class="reach rv">
+        <ul class="ways">
+          <li><a class="cell" href="tel:+13363681173"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></span><b class="num">(336) 368 1173</b><span>Call Pilot Mechanical</span></a></li>
+          <li><a class="cell" href="https://www.google.com/maps/dir/?api=1&amp;destination=722+East+Main+Street+Pilot+Mountain+NC+27041" target="_blank" rel="noopener"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg></span><b>722 East Main Street</b><span>Pilot Mountain, NC <span class="num">27041</span>. <span class="go">Get directions</span></span></a></li>
+          <li><div class="cell"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg></span><b>Monday to Friday, <span class="nb">9 to 5</span></b><span>Office hours. Call ahead to confirm.</span></div></li>
+        </ul>
+      </address>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="visit" aria-labelledby="visit-h">
+    <div class="head rv">
+      <h2 id="visit-h">Hours and directions</h2>
+      <p>Our shop and office is at <span class="num">722</span> East Main Street in Pilot Mountain.</p>
+    </div>
+    <div class="visit">
+      <div class="mapcard rv">
+        <div class="bar-top"><b><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg><span>722 East Main Street</span></b><span>Pilot Mountain, NC <span class="num">27041</span></span></div>
+        <div class="frame"><iframe src="https://maps.google.com/maps?q=722%20East%20Main%20Street%2C%20Pilot%20Mountain%2C%20NC%2027041&amp;z=15&amp;output=embed" loading="lazy" title="Map showing Pilot Mechanical at 722 East Main Street, Pilot Mountain, North Carolina"></iframe></div>
+        <div class="bar-bot">
+          <p>Pilot Mechanical Inc</p>
+          <a class="textlink" href="https://www.google.com/maps/dir/?api=1&amp;destination=722+East+Main+Street+Pilot+Mountain+NC+27041" target="_blank" rel="noopener">Get directions<svg class="i" aria-hidden="true"><use href="#i-out"/></svg></a>
+        </div>
+      </div>
+      <div class="side rv">
+        <div class="hours on-deep" id="hours">
+          <div class="office">
+            <h3><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>Office hours</h3>
+            <p class="days">Monday to Friday</p>
+            <p class="when">9 <span>to</span> 5</p>
+            <p class="note">Call ahead to confirm.</p>
+          </div>
+          <div class="after">
+            <svg class="flame" viewBox="0 0 24 30" aria-hidden="true"><use href="#i-flame"/></svg>
+            <p>Technicians on call <span class="num">24</span> hours a day for heating and cooling emergencies.</p>
+          </div>
+        </div>
+        <div class="cta">
+          <a class="btn" href="tel:+13363681173"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>Call <span class="num">(336) 368 1173</span></span></a>
+          <a class="btn dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=722+East+Main+Street+Pilot+Mountain+NC+27041" target="_blank" rel="noopener">Get directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot on-deep">
+  <div class="wrap">
+    <div>
+      <p class="name"><svg class="flame" viewBox="0 0 24 30" aria-hidden="true"><use href="#i-flame"/></svg>Pilot Mechanical Inc</p>
+      <p class="tagline">Heating and air. Serving the Piedmont Triad since <span class="num">2000</span>.</p>
+      <address class="where"><span class="num">722</span> East Main Street, Pilot Mountain, NC <span class="num">27041</span></address>
+    </div>
+    <div class="right">
+      <a href="tel:+13363681173"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span class="num">(336) 368 1173</span></a>
+      <p>Office hours Monday to Friday, <span class="num">9 to 5</span>. Call ahead to confirm.</p>
+    </div>
+    <p class="credit">Photos are examples.</p>
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick contact">
+  <a href="tel:+13363681173"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><span>Call<span class="long num"> (336) 368 1173</span></span></a>
+  <a href="#request"><svg class="i" aria-hidden="true"><use href="#i-form"/></svg>Request service</a>
+</nav>
+
+<script>
+(function(){
+  /* quiet reveal, once per element */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+  addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+
+  /* quote form (runs only when the form is on the page) */
+  var f=document.getElementById('qform');
+  if(!f)return;
+  var F=f.elements,thanks=document.getElementById('thanks');
+  function setErr(id,msg){var i=document.getElementById(id),e=document.getElementById(i.getAttribute('aria-describedby'));e.textContent=msg;if(msg){i.setAttribute('aria-invalid','true')}else{i.removeAttribute('aria-invalid')}return !msg}
+  function check(){
+    var ok=true,first=null;
+    function run(id,msg){var good=setErr(id,msg);if(!good&&!first)first=id;ok=ok&&good}
+    var name=F['name'].value.trim(),phone=F['phone'].value.replace(/\D/g,''),msg=F['message'].value.trim();
+    run('q-name',name.length<2?'Please tell us your name.':'');
+    run('q-phone',phone.length<10?'Please enter a 10 digit phone number.':'');
+    run('q-town',!F['town'].value?'Please choose your town.':'');
+    run('q-msg',msg.length<5?'A few words about the job helps us call back with the right answer.':'');
+    if(first)document.getElementById(first).focus();
+    return ok;
+  }
+  ['q-name','q-phone','q-town','q-msg'].forEach(function(id){
+    var el=document.getElementById(id);
+    el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){if(el.getAttribute('aria-invalid'))setErr(id,'')});
+  });
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!check())return;
+    var name=F['name'].value.trim().split(' ')[0],d=F['phone'].value.replace(/\D/g,'').slice(-10);
+    var nice='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6);
+    document.getElementById('t-title').textContent='Thanks, '+name+'. We have it.';
+    document.getElementById('t-body').textContent='We will call you at '+nice+' soon.';
+    f.hidden=true;thanks.hidden=false;thanks.focus();
+  });
+  document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
+})();
+</script>
+</body>
+</html>

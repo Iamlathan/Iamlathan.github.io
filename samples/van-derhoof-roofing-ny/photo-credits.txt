@@ -1,0 +1,11 @@
+Photo credits for this sample page. All photos are from Unsplash and are used under the Unsplash License. They are examples, not photos of the business's own work.
+
+hero.jpg | A gray metal roof with a dormer window, a gutter and white siding | Meg | https://unsplash.com/photos/YldJ2NIz1Yo | Unsplash License
+residential.jpg | A white two story house with a gray roof and a brick chimney in autumn | Aditya Parikh | https://unsplash.com/photos/kQaM1X1moNU | Unsplash License
+commercial.jpg | A flat white roof on a commercial building | Nicholas Ismael Martinez | https://unsplash.com/photos/the-roof-of-a-building-with-a-building-in-the-background-lw_NqTQZX7o | Unsplash License
+repairs.jpg | Hands tightening a fitting on a metal roof with a ratchet | Sergio Martins | https://unsplash.com/photos/E07VvBCSSNE | Unsplash License
+slate.jpg | A steep gray roof meeting a stone wall | Einar Storsul | https://unsplash.com/photos/a-bird-is-perched-on-the-roof-of-a-building-tfnHhzRvt1s | Unsplash License
+shingles.jpg | A dark red roof over white siding | Andreas Weiland | https://unsplash.com/photos/brown-wooden-roof-iS4m0uBVLaQ | Unsplash License
+skylight.jpg | An open skylight seen from inside | Reden | https://unsplash.com/photos/a-window-with-a-skylight-shining-in-it-VIcpMVQdC60 | Unsplash License
+siding.jpg | The corner of a building with white siding and red trim (cropped) | Fujiphilm | https://unsplash.com/photos/corner-of-a-house-with-white-siding-and-red-trim-IyFoABxIgRk | Unsplash License
+gutters.jpg | A dark gutter and downspout along a roof edge | Teo Sticea | https://unsplash.com/photos/brown-wooden-roof-under-white-sky-during-daytime-V25B29tzuO8 | Unsplash License

@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Boyer's Automotive Repair | Auto repair in Sioux Falls, SD</title>
+<meta name="description" content="Boyer's Automotive Repair is an auto repair shop at 2323 W Madison St in Sioux Falls, SD. Call 605 338 5611.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f4efe6">
+<meta property="og:title" content="Boyer's Automotive Repair | Sioux Falls, SD">
+<meta property="og:description" content="Boyer's Automotive Repair is an auto repair shop at 2323 W Madison St in Sioux Falls, SD. Call 605 338 5611.">
+<meta property="og:image" content="https://granitecitydigital.me/samples/boyers-automotive-repair-sd/lift-bay.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Boyer's Automotive Repair",
+  "telephone": "+16053385611",
+  "address": {"@type": "PostalAddress", "streetAddress": "2323 W Madison St", "addressLocality": "Sioux Falls", "addressRegion": "SD", "addressCountry": "US"},
+  "openingHours": "Mo-Th 08:00-17:00",
+  "image": "lift-bay.jpg"
+}
+</script>
+<style>
+/* 1. this mockup's own look: a working repair garage. Shop rag off white, worn charcoal workbench bands, one safety orange accent.
+   Light comes from the top left (the shop lights over the bays), so every shadow falls down and to the right. */
+:root{
+  --l-bg:#f4efe6;
+  --l-surface:#fcf9f3;
+  --l-tint:#ebe3d6;
+  --l-ink:#1f1a16;
+  --l-muted:#57493d;
+  --l-line:#dacfbf;
+  --l-label:#9a4314;
+  --l-shadow:48 34 22;
+
+  --accent:#b4501a;
+  --accent-hover:#9a4314;
+  --accent-soft:#f1dcc8;
+  --on-accent:#fff8ef;
+
+  --deep:#2a231d;
+  --deep-2:#1d1814;
+  --deep-card:#3a3028;
+  --deep-line:#54463a;
+  --on-deep:#f4ede2;
+  --on-deep-muted:#d4c6b5;
+  --pale:#f0a46c;
+  --deep-shadow:12 8 5;
+
+  --danger:#a3392b;
+
+  --bg:var(--l-bg);
+  --surface:var(--l-surface);
+  --tint:var(--l-tint);
+  --ink:var(--l-ink);
+  --muted:var(--l-muted);
+  --line:var(--l-line);
+  --label:var(--l-label);
+  --ring:var(--l-label);
+  --layer:var(--accent-soft);
+  --shadow:var(--l-shadow);
+  --texture:repeating-linear-gradient(0deg,rgb(var(--l-shadow) / .03) 0 1px,transparent 1px 10px);
+
+  --font:"Chivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:var(--font);
+  --display-weight:800;
+
+  --r-ctl:8px;
+  --r-card:clamp(12px,1.2vw,16px);
+  --r-photo:clamp(14px,1.8vw,22px);
+}
+/* 2. the system */
+:root{
+  --t-small:.875rem;
+  --t-body:1rem;
+  --t-lead:clamp(1.0625rem,1rem + .3vw,1.1875rem);
+  --t-h3:1.125rem;
+  --t-h2:clamp(2rem,1.4rem + 2vw,3.25rem);
+  --t-h1:clamp(2.5rem,1.3rem + 4vw,4.75rem);
+
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;
+  --sec:clamp(88px,10vw,144px);
+  --band-pad:clamp(64px,8vw,112px);
+  --off:clamp(10px,1.4vw,18px);
+
+  --sh-1:1px 1px 2px rgb(var(--shadow) / .05),2px 6px 16px -6px rgb(var(--shadow) / .14);
+  --sh-2:1px 2px 4px rgb(var(--shadow) / .06),4px 14px 32px -10px rgb(var(--shadow) / .22);
+  --sh-3:2px 4px 8px rgb(var(--shadow) / .07),8px 28px 56px -16px rgb(var(--shadow) / .30);
+
+  --wrap:1120px;
+  --m:clamp(20px,4vw,32px);
+  --ease:cubic-bezier(.23,1,.32,1);
+  --bar:0px;
+}
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+@media (max-width:760px){html{scroll-padding-bottom:96px}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:var(--t-body);line-height:1.6;overflow-x:clip;padding-bottom:var(--bar);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+::selection{background:var(--accent);color:var(--on-accent)}
+:focus-visible{outline:2px solid var(--ring);outline-offset:3px}
+h1,h2,h3{font-family:var(--font-display);font-weight:var(--display-weight);letter-spacing:-.03em;line-height:1.02;text-wrap:balance}
+p{text-wrap:pretty}
+.wrap{max-width:calc(var(--wrap) + var(--m)*2);margin-inline:auto;padding-inline:var(--m)}
+.skip{position:absolute;left:12px;top:-60px;z-index:60;background:var(--ink);color:var(--bg);padding:10px 14px;font-size:var(--t-small);text-decoration:none;border-radius:var(--r-ctl)}
+.skip:focus{top:12px}
+.num{font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+
+.deep{
+  --bg:var(--deep);--surface:var(--deep-card);--tint:var(--deep-card);--ink:var(--on-deep);--muted:var(--on-deep-muted);--line:var(--deep-line);--label:var(--pale);--ring:var(--pale);--layer:var(--accent);
+  --texture:repeating-linear-gradient(0deg,rgb(244 237 226 / .025) 0 1px,transparent 1px 10px);
+  --sh-1:1px 1px 2px rgb(var(--deep-shadow) / .3),2px 6px 16px -6px rgb(var(--deep-shadow) / .55);
+  --sh-2:1px 2px 4px rgb(var(--deep-shadow) / .32),4px 14px 32px -10px rgb(var(--deep-shadow) / .62);
+  --sh-3:2px 4px 8px rgb(var(--deep-shadow) / .34),8px 28px 56px -16px rgb(var(--deep-shadow) / .7);
+  color:var(--ink);
+}
+.lite{--bg:var(--l-bg);--surface:var(--l-surface);--tint:var(--l-tint);--ink:var(--l-ink);--muted:var(--l-muted);--line:var(--l-line);--label:var(--l-label);--ring:var(--l-label);--layer:var(--accent-soft);--shadow:var(--l-shadow);color:var(--ink)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--s-2);min-height:48px;padding:0 22px;border-radius:var(--r-ctl);border:1px solid transparent;background:var(--accent);color:var(--on-accent);font:700 .9375rem/1 var(--font);text-decoration:none;cursor:pointer;box-shadow:var(--sh-1);transition:background-color 200ms ease,border-color 200ms ease,box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.line{background:var(--surface);color:var(--ink);border-color:var(--line);font-weight:500}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{background:var(--accent-hover);box-shadow:var(--sh-2);transform:translateY(-1px)}
+  .btn.line:hover{background:var(--surface);border-color:var(--muted)}
+  .btn:active{transform:scale(.97);box-shadow:none}
+}
+
+.sample{background:var(--deep-2);color:var(--muted);font-size:.8125rem;text-align:center;padding:8px var(--m);line-height:1.45}
+.sample a{color:var(--ink)}
+
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s-5);min-height:72px}
+.mark{display:inline-flex;align-items:center;gap:.35em;font:800 1.1875rem/1 var(--font);letter-spacing:-.02em;text-decoration:none;min-height:44px;white-space:nowrap}
+.mark span{font-weight:500;color:var(--muted)}
+.nav{display:flex;align-items:center;gap:28px;list-style:none;padding:0;font-size:var(--t-small)}
+.nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;min-height:44px;transition:color 200ms ease}
+.top .btn{min-height:44px;padding:0 16px;font-size:var(--t-small)}
+.top .short{display:none}
+@media (hover:hover) and (pointer:fine){.nav a:hover{color:var(--ink)}}
+@media (max-width:940px){.nav{display:none}}
+@media (max-width:520px){.top .long{display:none}.top .short{display:inline}.mark span{display:none}}
+
+.photo{position:relative;border-radius:var(--r-photo);overflow:hidden;background:var(--tint);box-shadow:var(--sh-1)}
+.photo img{width:100%;height:100%;object-fit:cover}
+.layer{position:relative;isolation:isolate}
+.layer::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:var(--r-photo);background:var(--layer);transform:translate(var(--off),var(--off))}
+.float{position:absolute;z-index:2;background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3);padding:var(--s-4) var(--s-5);display:grid;gap:2px}
+.float span{font-size:.8125rem;font-weight:600;color:var(--label)}
+.float a,.float p{font-size:var(--t-lead);line-height:1.35;text-decoration:none}
+.float a{min-height:32px;display:inline-flex;align-items:center;width:fit-content}
+.float small{font-size:.875rem;color:var(--muted)}
+@media (hover:hover) and (pointer:fine){.float a:hover{text-decoration:underline;text-decoration-color:var(--line)}}
+
+.label{display:inline-flex;align-items:center;gap:10px;font-size:.8125rem;font-weight:700;letter-spacing:.02em;color:var(--label);margin-bottom:var(--s-4)}
+.label::before{content:"";width:22px;height:3px;background:currentColor}
+
+/* hero: words over a wide photo of a car up on the lift; two floating cards hang off its lower edge */
+.hero{padding-top:clamp(40px,6vw,88px)}
+.hero h1{font-size:var(--t-h1);line-height:.98}
+.hero h1 span{display:block}
+.hero h1 .soft{color:var(--muted);font-weight:700}
+.hero-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-5) var(--s-7);align-items:end;margin-top:var(--s-5)}
+.hero-grid p{color:var(--muted);font-size:var(--t-lead);max-width:46ch}
+.proof{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-2) var(--s-3);margin-bottom:var(--s-3);color:var(--ink)}
+.proof b{font-weight:800;font-size:1.125rem}
+.stars{display:inline-flex;gap:2px;color:var(--accent)}
+.stars svg{width:18px;height:18px}
+.proof .src{color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:var(--s-3);justify-content:flex-end}
+.hero-pic{position:relative;margin-top:clamp(32px,4vw,56px);margin-right:var(--off)}
+.hero-pic .photo{aspect-ratio:16/7}
+.hero-pic img{object-position:50% 40%}
+.hero-pic .float{bottom:calc(var(--s-6) * -1)}
+.hero-pic .f-addr{left:var(--s-5);max-width:300px}
+.hero-pic .f-hrs{right:var(--s-5);max-width:320px}
+
+.sec{padding-top:var(--sec)}
+.band{margin-top:var(--sec);padding-block:var(--band-pad);background:var(--tint) var(--texture)}
+.band.deep{background:var(--texture),var(--deep)}
+.head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-4) var(--s-7);align-items:end;padding-bottom:var(--s-6)}
+.head h2{font-size:var(--t-h2)}
+.head p{color:var(--muted);max-width:46ch;font-size:var(--t-lead)}
+
+/* ask about: a work order style list beside a layered photo */
+.svc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7) clamp(40px,5vw,80px);align-items:start}
+.svc .layer{margin-right:var(--off);margin-bottom:var(--off)}
+.svc .photo{aspect-ratio:4/5}
+.svc .photo img{object-position:60% 50%}
+.rows{list-style:none;padding:0;display:grid;gap:var(--s-3)}
+.rows li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:var(--s-2) var(--s-5);padding:var(--s-5) var(--s-6);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-1)}
+.rows .n{grid-row:1 / span 2;font:800 1.25rem/1 var(--font);color:var(--label);font-variant-numeric:tabular-nums;padding-top:6px}
+.rows h3{font-size:1.625rem}
+.rows p{color:var(--muted);max-width:50ch}
+.note{margin-top:var(--s-5);color:var(--muted)}
+.note a{color:var(--ink);font-weight:700}
+
+/* how it works */
+.how{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--s-7) clamp(40px,5vw,80px);align-items:center}
+.how .layer{margin-right:var(--off);margin-bottom:var(--off)}
+.how .photo{aspect-ratio:3/2}
+.steps{list-style:none;padding:0;display:grid;gap:var(--s-5);counter-reset:step}
+.steps li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:2px var(--s-4);counter-increment:step}
+.steps li::before{content:counter(step);grid-row:1 / span 2;width:44px;height:44px;border-radius:var(--r-ctl);display:grid;place-items:center;background:var(--accent);color:var(--on-accent);font-weight:800;font-variant-numeric:tabular-nums}
+.steps h3{font-size:1.25rem;letter-spacing:-.015em;line-height:1.25;padding-top:9px}
+.steps p{color:var(--muted);max-width:44ch}
+
+/* photo strip */
+.strip{display:grid;grid-template-columns:5fr 4fr 5fr;gap:var(--s-5);align-items:start}
+.strip .photo{aspect-ratio:4/5}
+.strip .photo:nth-child(2){margin-top:var(--s-8);aspect-ratio:3/4}
+
+/* visit: a big hours board, the address and the map card */
+.visit{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7);align-items:stretch}
+.side{display:grid;gap:var(--s-3);align-content:start}
+.board{padding:var(--s-5) var(--s-6);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-1)}
+.board h3{font-size:1.375rem;margin-bottom:var(--s-3)}
+.hrs{display:grid;grid-template-columns:auto auto;justify-content:space-between;gap:6px var(--s-5);font-size:1.0625rem}
+.hrs dt{font-weight:600}
+.hrs dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
+.hrs .closed{color:var(--label);font-weight:700}
+.board small{display:block;margin-top:var(--s-3);font-size:.9375rem;color:var(--muted)}
+.ways{list-style:none;padding:0;display:grid;gap:var(--s-3)}
+.ways a{display:grid;gap:2px;padding:var(--s-4) var(--s-5);border-radius:var(--r-card);background:var(--surface);text-decoration:none;font-size:var(--t-lead);line-height:1.35;box-shadow:var(--sh-1);transition:box-shadow 240ms var(--ease),transform 160ms var(--ease)}
+.ways a:active{transform:scale(.985);box-shadow:none}
+.ways span{font-size:.8125rem;font-weight:600;color:var(--label)}
+@media (hover:hover) and (pointer:fine){.ways a:hover{box-shadow:var(--sh-2);transform:translateY(-2px)}.ways a:active{transform:scale(.985);box-shadow:none}}
+.map-card{display:grid;grid-template-rows:minmax(0,1fr) auto;background:var(--surface);border-radius:var(--r-photo);box-shadow:var(--sh-3);overflow:hidden;min-height:clamp(340px,34vw,460px)}
+.map-card iframe{display:block;width:100%;height:100%;min-height:260px;border:0}
+.map-card p{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s-2) var(--s-5);padding:var(--s-4) var(--s-5);font-size:.9375rem;color:var(--muted)}
+.map-card p b{color:var(--ink);font-weight:700}
+
+/* request form on the deep band */
+.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s-7) clamp(40px,5vw,80px);align-items:start}
+.side-copy{display:grid;gap:var(--s-4);color:var(--muted);max-width:42ch;font-size:var(--t-lead)}
+.side-copy a{color:var(--ink);font-weight:700}
+.panel{padding:clamp(24px,3vw,40px);background:var(--surface);border-radius:var(--r-card);box-shadow:var(--sh-3)}
+.panel h3{font-size:1.625rem;margin-bottom:var(--s-5)}
+
+form{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-5) var(--s-4)}
+form[hidden]{display:none}
+.f{display:grid;gap:6px;min-width:0;align-content:start}
+.f.full{grid-column:1/-1}
+.f label{font-size:var(--t-small);font-weight:600}
+.f input,.f select,.f textarea{width:100%;min-height:48px;padding:11px 14px;border:1px solid var(--line);border-radius:var(--r-ctl);background:var(--bg);color:var(--ink);font:inherit;font-size:1rem;transition:border-color 200ms ease,box-shadow 200ms ease,background-color 200ms ease;appearance:none;-webkit-appearance:none}
+.f select{background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%2357493d' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 14px center;padding-right:40px}
+.f textarea{min-height:120px;resize:vertical;line-height:1.5}
+.f input::placeholder,.f textarea::placeholder{color:var(--muted)}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--l-label);background-color:var(--surface);box-shadow:0 0 0 3px var(--accent-soft)}
+.f input:focus-visible,.f select:focus-visible,.f textarea:focus-visible{outline:2px solid var(--l-label);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.f input:hover,.f select:hover,.f textarea:hover{border-color:var(--muted)}}
+.f [aria-invalid="true"]{border-color:var(--danger)}
+.err{font-size:.8125rem;color:var(--danger)}
+.err:empty{display:none}
+.submit{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:var(--s-3) var(--s-5)}
+.thanks[hidden]{display:none}
+.thanks:focus{outline:none}
+.thanks h3{font-size:var(--t-h2)}
+.thanks p{margin-top:var(--s-3);max-width:46ch}
+.thanks .muted{font-size:var(--t-small)}
+.thanks .btn{margin-top:var(--s-5)}
+
+.foot{background:var(--deep-2);padding-block:var(--s-8) var(--s-7);font-size:.8125rem;color:var(--muted)}
+.foot .wrap{display:grid;grid-template-columns:1fr auto;gap:var(--s-3) var(--s-6);align-items:center}
+.foot .name{grid-column:1/-1;font:800 clamp(2rem,1.1rem + 3.8vw,4.25rem)/.98 var(--font);letter-spacing:-.035em;color:var(--ink);margin-bottom:var(--s-5)}
+.foot .name span{color:var(--pale)}
+.foot b{color:var(--ink);font-weight:600}
+.foot a{color:var(--muted)}
+.foot .right{text-align:right}
+.foot .right a{display:inline-flex;align-items:center;min-height:44px}
+.foot .credit{grid-column:1/-1;max-width:none}
+
+/* footer mark */
+.gcd{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:14px;margin-top:12px;padding:4px 10px 4px 4px;margin-left:-4px;border-radius:10px;text-decoration:none;color:var(--muted);transition:background-color 180ms ease,transform 140ms var(--ease)}
+.gcd-mark{position:relative;flex:none;width:112px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:#050505;box-shadow:0 0 0 1px rgb(244 237 226 / .16)}
+.gcd-mark img,.gcd-mark video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.gcd-mark video{opacity:0;transition:opacity 160ms ease}
+.gcd-mark.live video{opacity:1}
+.gcd-text{line-height:1.35}
+.gcd-text b{display:block;color:var(--ink);font-weight:500}
+.gcd:active{transform:scale(.98)}
+.gcd:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.gcd:hover{background:var(--deep-card)}.gcd:hover b{text-decoration:underline;text-underline-offset:3px}}
+
+.bar{display:none}
+
+@media (prefers-reduced-motion:no-preference){
+  .js .rv{opacity:0;transform:translateY(16px);transition:opacity 700ms var(--ease),transform 700ms var(--ease)}
+  .js .rv.in{opacity:1;transform:none}
+  .js .rows .rv:nth-child(2),.js .steps .rv:nth-child(2),.js .strip .rv:nth-child(2){transition-delay:90ms}
+  .js .rows .rv:nth-child(3),.js .steps .rv:nth-child(3),.js .strip .rv:nth-child(3){transition-delay:180ms}
+  .hero .rise{animation:rise 800ms var(--ease) both}
+  .hero .rise:nth-child(2){animation-delay:80ms}
+  .hero-pic.rise{animation-delay:160ms}
+  .hero-pic img{animation:settle 1600ms var(--ease) both}
+}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes settle{from{transform:scale(1.05)}to{transform:none}}
+
+@media (max-width:960px){
+  .hero-grid,.head,.svc,.how,.visit,.contact{grid-template-columns:minmax(0,1fr)}
+  .cta{justify-content:flex-start}
+  .svc .layer{max-width:520px}
+  .svc .photo{aspect-ratio:4/3}
+  .hero-pic .photo{aspect-ratio:16/9}
+  .hero-pic .float{position:relative;left:auto;right:auto;bottom:auto;max-width:none}
+  .hero-pic .floats{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-3);margin:calc(var(--s-7) * -1) var(--s-4) 0;position:relative;z-index:2}
+  .strip{grid-template-columns:1fr 1fr}
+  .strip .photo:first-child{grid-column:1/-1;aspect-ratio:16/10}
+  .strip .photo:nth-child(2){margin-top:0}
+}
+@media (min-width:961px){.hero-pic .floats{display:contents}}
+
+@media (max-width:640px){
+  :root{--bar:calc(60px + env(safe-area-inset-bottom));--r-photo:14px;--r-card:12px;--off:10px}
+  .hero{padding-top:var(--s-5)}
+  .hero h1{font-size:clamp(2.375rem,1.5rem + 4.4vw,2.875rem)}
+  .hero-grid p{font-size:1rem}
+  .cta .btn{flex:1 1 auto}
+  .hero-pic .photo{aspect-ratio:4/3}
+  .hero-pic img{object-position:50% 45%}
+  .hero-pic .floats{grid-template-columns:minmax(0,1fr)}
+  .head{padding-bottom:var(--s-5)}
+  .rows li{padding:var(--s-5)}
+  .rows h3{font-size:1.375rem}
+  .how .photo{aspect-ratio:4/3}
+  .strip{gap:var(--s-3)}
+  .board{padding:var(--s-5)}
+  .map-card{min-height:360px}
+  form{grid-template-columns:minmax(0,1fr)}
+  .submit .btn{width:100%}
+  body{padding-bottom:0}
+  .foot{padding-bottom:calc(var(--s-7) + var(--bar) + 2px)}
+  .foot .wrap{grid-template-columns:minmax(0,1fr)}
+  .foot .right{text-align:left}
+  .bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--deep-2);padding-bottom:env(safe-area-inset-bottom)}
+  .bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:60px;font-weight:700;font-size:1rem;text-decoration:none;color:var(--ink)}
+  .bar a:first-child{background:var(--accent);color:var(--on-accent)}
+  .bar a:active{opacity:.85}
+  .bar svg{width:17px;height:17px}
+}
+@media (max-width:640px) and (max-height:740px){
+  body .hero{padding-top:var(--s-4)}
+  body .hero h1{font-size:2.25rem}
+  body .hero-grid{margin-top:var(--s-4);gap:var(--s-4)}
+  body .hero-grid p{font-size:.9375rem;line-height:1.5}
+}
+@media (max-width:420px) and (max-height:600px){
+  body .hero h1{font-size:2rem}
+  body .hero-grid p{display:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="sample deep" role="note">Sample site made for Boyer's Automotive Repair by <a href="https://granitecitydigital.me/">Granite City Digital</a>. Your real site gets your own photos, colors and services.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Boyer's Automotive Repair, back to top">Boyer's <span>Automotive Repair</span></a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="#services">Ask about</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#photos">The shop</a></li>
+        <li><a href="#visit">Hours and map</a></li>
+        <li><a href="#request">Request</a></li>
+      </ul>
+    </nav>
+    <a class="btn line" href="tel:+16053385611"><span class="long num">605 338 5611</span><span class="short">Call</span></a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap hero" id="top" aria-labelledby="hero-h">
+    <h1 class="rise" id="hero-h"><span>Auto repair</span> <span class="soft">in Sioux Falls, SD.</span></h1>
+    <div class="hero-grid rise">
+      <div>
+        <p class="proof"><span class="stars" aria-hidden="true"><svg viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 5.9L10 14.8l-5.4 2.9 1.2-5.9L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 5.9L10 14.8l-5.4 2.9 1.2-5.9L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 5.9L10 14.8l-5.4 2.9 1.2-5.9L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 5.9L10 14.8l-5.4 2.9 1.2-5.9L1.4 7.7l6-.7z"/></svg><svg viewBox="0 0 20 20"><path fill="currentColor" opacity=".8" d="M10 1.5l2.6 5.5 6 .7-4.4 4.1 1.2 5.9L10 14.8l-5.4 2.9 1.2-5.9L1.4 7.7l6-.7z"/></svg></span><b class="num">4.8</b><span class="src">on Google from 30 reviews</span></p>
+        <p>Boyer's Automotive Repair is an auto repair shop on W Madison St in Sioux Falls. Call the shop about your vehicle, or send a request from this page.</p>
+      </div>
+      <div class="cta">
+        <a class="btn" href="tel:+16053385611">Call <span class="num">605 338 5611</span></a>
+        <a class="btn line" href="#request">Send a request</a>
+      </div>
+    </div>
+    <div class="hero-pic layer rise">
+      <figure class="photo"><img src="lift-bay.jpg" width="1600" height="900" fetchpriority="high" alt="A mechanic in blue coveralls checks the underside of a car raised on a two post lift"></figure>
+      <div class="floats">
+        <div class="float f-addr"><span>Find us at</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Boyer%27s+Automotive+Repair+2323+W+Madison+St+Sioux+Falls+SD">2323 W Madison St</a></div>
+        <div class="float f-hrs"><span>Hours</span><p>Monday to Thursday, 8 to 5</p><small>Closed Friday to Sunday. Call ahead to confirm.</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band deep" id="services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="head rv">
+        <div>
+          <p class="label">Ask about</p>
+          <h2 id="svc-h">Bring the car that is acting up</h2>
+        </div>
+        <p>Call and ask about the work your vehicle needs. These are the kinds of jobs to ask about.</p>
+      </div>
+      <div class="svc">
+        <div class="layer rv"><figure class="photo"><img src="hood-hands.jpg" width="1600" height="1067" alt="Hands reaching in under the windshield wiper linkage of an open hood"></figure></div>
+        <div>
+          <ul class="rows">
+            <li class="rv"><span class="n">01</span><h3>Repairs</h3><p>Ask about the repair your vehicle needs, from a noise you can hear to a part that quit.</p></li>
+            <li class="rv"><span class="n">02</span><h3>Diagnostics</h3><p>Ask about a warning light or something that feels wrong.</p></li>
+            <li class="rv"><span class="n">03</span><h3>Maintenance</h3><p>Ask about the regular upkeep your vehicle is due for.</p></li>
+          </ul>
+          <p class="note rv">Not sure what it needs? Call <a class="num" href="tel:+16053385611">605 338 5611</a> and tell us what it is doing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="how" aria-labelledby="how-h">
+    <div class="head rv">
+      <div>
+        <p class="label">How it works</p>
+        <h2 id="how-h">Three steps to the shop</h2>
+      </div>
+      <p>The same plain steps, whatever your vehicle is doing.</p>
+    </div>
+    <div class="how">
+      <div class="layer rv"><figure class="photo"><img src="dipstick.jpg" width="1600" height="1067" alt="A hand wiping an oil dipstick with a white rag over an open engine bay"></figure></div>
+      <ol class="steps">
+        <li class="rv"><h3>Call or send a request</h3><p>Call <span class="num">605 338 5611</span> Monday to Thursday, 8 to 5 (call ahead to confirm), or use the form below.</p></li>
+        <li class="rv"><h3>Tell us what it is doing</h3><p>The year, make and model, and what you hear, see or feel when you drive.</p></li>
+        <li class="rv"><h3>Bring it to the shop</h3><p>2323 W Madison St in Sioux Falls. Call ahead before you come by.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" id="photos" aria-labelledby="ph-h">
+    <div class="wrap">
+      <div class="head rv">
+        <div>
+          <p class="label">The shop</p>
+          <h2 id="ph-h">Tools, tires and grease</h2>
+        </div>
+        <p>Example photos of the kind of work a repair shop does every day.</p>
+      </div>
+      <div class="strip">
+        <figure class="photo rv"><img src="tread.jpg" width="1600" height="1078" loading="lazy" alt="Close up of the tread on a car tire"></figure>
+        <figure class="photo rv"><img src="socket-rail.jpg" width="1600" height="1067" loading="lazy" alt="Rows of chrome sockets on a rail in front of wrenches"></figure>
+        <figure class="photo rv"><img src="sockets.jpg" width="1600" height="1067" loading="lazy" alt="Small chrome sockets on a dark workbench"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap sec" id="visit" aria-labelledby="visit-h">
+    <div class="head rv">
+      <div>
+        <p class="label">Hours and map</p>
+        <h2 id="visit-h">When the shop is open</h2>
+      </div>
+      <p>Open Monday to Thursday. Closed Friday, Saturday and Sunday. Call ahead to confirm.</p>
+    </div>
+    <div class="visit">
+      <div class="side rv">
+        <div class="board">
+          <h3>Shop hours</h3>
+          <dl class="hrs">
+            <dt>Monday</dt><dd>8 to 5</dd>
+            <dt>Tuesday</dt><dd>8 to 5</dd>
+            <dt>Wednesday</dt><dd>8 to 5</dd>
+            <dt>Thursday</dt><dd>8 to 5</dd>
+            <dt>Friday</dt><dd class="closed">Closed</dd>
+            <dt>Saturday</dt><dd class="closed">Closed</dd>
+            <dt>Sunday</dt><dd class="closed">Closed</dd>
+          </dl>
+          <small>Call ahead to confirm.</small>
+        </div>
+        <ul class="ways">
+          <li><a class="num" href="tel:+16053385611"><span>Call</span>605 338 5611</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Boyer%27s+Automotive+Repair+2323+W+Madison+St+Sioux+Falls+SD"><span>Find us at</span>2323 W Madison St, Sioux Falls, SD</a></li>
+        </ul>
+      </div>
+      <div class="map-card rv">
+        <iframe src="https://maps.google.com/maps?q=2323+W+Madison+St%2C+Sioux+Falls%2C+SD&amp;z=15&amp;output=embed" loading="lazy" title="Map showing Boyer's Automotive Repair at 2323 W Madison St, Sioux Falls, SD"></iframe>
+        <p><b>Boyer's Automotive Repair</b><span>2323 W Madison St, Sioux Falls, SD</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band deep" id="request" aria-labelledby="req-h">
+    <div class="wrap">
+      <div class="head rv">
+        <div>
+          <p class="label">Request</p>
+          <h2 id="req-h">Appointment or quote</h2>
+        </div>
+        <p>Tell us about the vehicle and what it is doing.</p>
+      </div>
+      <div class="contact">
+        <div class="side-copy rv">
+          <p>Rather talk it through? Call <a class="num" href="tel:+16053385611">605 338 5611</a>.</p>
+          <p>Monday to Thursday, 8 to 5. Closed Friday to Sunday. Call ahead to confirm.</p>
+        </div>
+        <div class="panel lite rv">
+          <h3>Tell us about the vehicle</h3>
+          <form id="qform" method="post" novalidate data-sample="no-backend">
+            <div class="f">
+              <label for="q-name">Your name</label>
+              <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+              <span class="err" id="e-name"></span>
+            </div>
+            <div class="f">
+              <label for="q-phone">Phone</label>
+              <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Your phone number" required aria-describedby="e-phone">
+              <span class="err" id="e-phone"></span>
+            </div>
+            <div class="f">
+              <label for="q-vehicle">Vehicle</label>
+              <input id="q-vehicle" name="vehicle" type="text" placeholder="Year, make and model">
+            </div>
+            <div class="f">
+              <label for="q-town">Town</label>
+              <select id="q-town" name="town" required aria-describedby="e-town">
+                <option value="">Choose your town</option>
+                <option>Sioux Falls</option>
+                <option>Somewhere else</option>
+              </select>
+              <span class="err" id="e-town"></span>
+            </div>
+            <div class="f full">
+              <label for="q-msg">What is it doing?</label>
+              <textarea id="q-msg" name="message" required aria-describedby="e-msg" placeholder="Example: a new noise when I drive"></textarea>
+              <span class="err" id="e-msg"></span>
+            </div>
+            <div class="submit">
+              <button class="btn" type="submit">Send request</button>
+            </div>
+          </form>
+          <div class="thanks" id="thanks" tabindex="-1" role="status" hidden>
+            <h3 id="t-title">Thanks. We have it.</h3>
+            <p id="t-body">We will call you back soon.</p>
+            <p class="muted">This is a sample site, so nothing was actually sent.</p>
+            <button class="btn line" type="button" id="t-again">Send another request</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot deep">
+  <div class="wrap">
+    <p class="name">Boyer's <span>Automotive Repair</span></p>
+    <p><b>Boyer's Automotive Repair</b> &middot; 2323 W Madison St, Sioux Falls, SD</p>
+    <p class="right"><a class="num" href="tel:+16053385611">605 338 5611</a></p>
+    <p class="credit">Photos are examples.</p>
+    <a class="gcd" href="https://granitecitydigital.me/">
+      <span class="gcd-mark" id="gcd-mark">
+        <picture>
+          <source srcset="../mark/gcd-mark-still.webp" type="image/webp">
+          <img src="../mark/gcd-mark-still.png" width="480" height="270" alt="" decoding="async" loading="lazy">
+        </picture>
+        <video muted playsinline preload="none" poster="../mark/gcd-mark-still.webp" width="480" height="270" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="../mark/gcd-mark-2s.webm" type="video/webm">
+          <source src="../mark/gcd-mark-2s.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span class="gcd-text">Website by <b>Granite City Digital</b></span>
+    </a>
+  </div>
+</footer>
+
+<nav class="bar deep" aria-label="Quick contact">
+  <a href="tel:+16053385611"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Boyer%27s+Automotive+Repair+2323+W+Madison+St+Sioux+Falls+SD"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Directions</a>
+</nav>
+
+<script>
+(function(){
+  /* quiet reveal, once per element */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+  addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in')})});
+
+  /* quote form (runs only when the form is on the page) */
+  var f=document.getElementById('qform');
+  if(!f)return;
+  var F=f.elements,thanks=document.getElementById('thanks');
+  function setErr(id,msg){var i=document.getElementById(id),e=document.getElementById(i.getAttribute('aria-describedby'));e.textContent=msg;if(msg){i.setAttribute('aria-invalid','true')}else{i.removeAttribute('aria-invalid')}return !msg}
+  function check(){
+    var ok=true,first=null;
+    function run(id,msg){var good=setErr(id,msg);if(!good&&!first)first=id;ok=ok&&good}
+    var name=F['name'].value.trim(),phone=F['phone'].value.replace(/\D/g,''),msg=F['message'].value.trim();
+    run('q-name',name.length<2?'Please tell us your name.':'');
+    run('q-phone',phone.length<10?'Please enter a 10 digit phone number.':'');
+    run('q-town',!F['town'].value?'Please choose your town.':'');
+    run('q-msg',msg.length<5?'A few words about the job helps us call back with the right answer.':'');
+    if(first)document.getElementById(first).focus();
+    return ok;
+  }
+  ['q-name','q-phone','q-town','q-msg'].forEach(function(id){
+    var el=document.getElementById(id);
+    el.addEventListener(el.tagName==='SELECT'?'change':'input',function(){if(el.getAttribute('aria-invalid'))setErr(id,'')});
+  });
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!check())return;
+    var name=F['name'].value.trim().split(' ')[0],d=F['phone'].value.replace(/\D/g,'').slice(-10);
+    var nice='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6);
+    document.getElementById('t-title').textContent='Thanks, '+name+'. We have it.';
+    document.getElementById('t-body').textContent='We will call you at '+nice+' soon.';
+    f.hidden=true;thanks.hidden=false;thanks.focus();
+  });
+  document.getElementById('t-again').addEventListener('click',function(){f.reset();thanks.hidden=true;f.hidden=false;F['name'].focus()});
+})();
+</script>
+<script>
+/* footer mark: plays once, muted, when it scrolls into view, then rests on its last frame; any failure or reduced motion keeps the still logo */
+(function(){
+  var box=document.getElementById('gcd-mark');
+  if(!box)return;
+  var v=box.querySelector('video');
+  if(!v||!v.play||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var timer,failed=false;
+  v.muted=true;v.defaultMuted=true;
+  function still(){failed=true;clearTimeout(timer);box.classList.remove('live');try{v.pause()}catch(e){}}
+  var srcs=v.querySelectorAll('source');
+  srcs[srcs.length-1].addEventListener('error',still);
+  v.addEventListener('error',still);
+  v.addEventListener('playing',function(){clearTimeout(timer);if(!failed)box.classList.add('live')});
+  /* count only the screen above the phone call bar, so the one play is never spent hidden under it */
+  var bar=document.querySelector('.bar'),barH=bar?bar.offsetHeight:0;
+  var io=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    io.disconnect();
+    timer=setTimeout(still,4000);
+    v.muted=true;v.defaultMuted=true;
+    var p=v.play();
+    if(p&&p.catch)p.catch(still);
+  },{threshold:.6,rootMargin:'0px 0px -'+barH+'px 0px'});
+  io.observe(box);
+  /* fetch the small file a little before it is needed so it starts without a pause */
+  var near=new IntersectionObserver(function(es){
+    if(!es[0].isIntersecting)return;
+    near.disconnect();
+    v.preload='auto';
+  },{rootMargin:'0px 0px 400px 0px'});
+  near.observe(box);
+  addEventListener('beforeprint',still);
+})();
+</script>
+</body>
+</html>
