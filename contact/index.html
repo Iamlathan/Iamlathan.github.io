@@ -23,6 +23,7 @@
 <link rel="preload" href="/assets/fonts/manrope-v23-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/gcd.css">
 <link rel="stylesheet" href="/assets/forms.css">
+<link rel="stylesheet" href="/assets/touches.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["ContactPage", "FAQPage"], "url": "https://granitecitydigital.me/contact/", "name": "Contact | Granite City Digital", "mainEntity": [{"@type": "Question", "name": "How do I reach you?", "acceptedAnswer": {"@type": "Answer", "text": "Call or text (743) 222-0985, email us, or fill out the short form above."}}, {"@type": "Question", "name": "Who will I work with?", "acceptedAnswer": {"@type": "Answer", "text": "The same person who designs and builds your site. Call or text (743) 222-0985 and you're talking to the one doing the work."}}, {"@type": "Question", "name": "Is the preview really free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We build it first, and you see it before paying anything."}}, {"@type": "Question", "name": "Do I have to be ready to buy?", "acceptedAnswer": {"@type": "Answer", "text": "No. Ask for the preview first, and decide once you've seen it."}}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://granitecitydigital.me/"}, {"@type": "ListItem", "position": 2, "name": "Contact", "item": "https://granitecitydigital.me/contact/"}]}]}</script>
 </head>
 <body>
@@ -44,6 +45,8 @@
     <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7.5h16M4 12h16M4 16.5h16"/></symbol>
     <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-msgr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/><path d="M8 13.6l3.1-3.4 2.8 2.6 3.1-3.4"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.2"/><path d="M17.2 6.8h.01" stroke-width="2.6"/></symbol>
   </defs>
 </svg>
 <a class="skip" href="#main">Skip to content</a>
@@ -113,6 +116,10 @@
         <a href="/about/">About</a>
         <a href="/contact/" aria-current="page">Contact</a>
       </nav>
+      <div class="lang lang-bar" role="group" aria-label="Language">
+        <span class="lang-opt is-current" aria-current="true">EN<span class="sr-only"> English, current language</span></span>
+        <a class="lang-opt" href="/es/" hreflang="es" lang="es" title="Español (Spanish)"><svg class="lflag" viewBox="0 0 21 14" aria-hidden="true" focusable="false"><rect width="21" height="14" rx="2.2" fill="#fff"/><path d="M2.2 0H7v14H2.2A2.2 2.2 0 0 1 0 11.8V2.2A2.2 2.2 0 0 1 2.2 0z" fill="#006847"/><path d="M14 0h4.8A2.2 2.2 0 0 1 21 2.2v9.6A2.2 2.2 0 0 1 18.8 14H14z" fill="#CE1126"/><circle cx="10.5" cy="7" r="1.9" fill="#8C5A2B"/><path d="M8.9 8.2q1.6 1.2 3.2 0" stroke="#3E7B3A" stroke-width=".7" fill="none"/></svg>ES<span class="sr-only"> Español</span></a>
+      </div>
       <div class="bar-actions">
         <a class="btn btn-outline btn-sm" href="/client-portal/">Client Portal</a>
         <a class="btn btn-primary btn-sm" href="/contact/">Contact us</a>
@@ -123,6 +130,13 @@
       </button>
     </div>
     <div class="menu-panel" id="menu-panel">
+      <div class="menu-lang">
+        <span id="menu-lang-h">Language</span>
+        <div class="lang" role="group" aria-labelledby="menu-lang-h">
+          <span class="lang-opt is-current" aria-current="true">EN<span class="sr-only"> English, current language</span></span>
+          <a class="lang-opt" href="/es/" hreflang="es" lang="es" title="Español (Spanish)"><svg class="lflag" viewBox="0 0 21 14" aria-hidden="true" focusable="false"><rect width="21" height="14" rx="2.2" fill="#fff"/><path d="M2.2 0H7v14H2.2A2.2 2.2 0 0 1 0 11.8V2.2A2.2 2.2 0 0 1 2.2 0z" fill="#006847"/><path d="M14 0h4.8A2.2 2.2 0 0 1 21 2.2v9.6A2.2 2.2 0 0 1 18.8 14H14z" fill="#CE1126"/><circle cx="10.5" cy="7" r="1.9" fill="#8C5A2B"/><path d="M8.9 8.2q1.6 1.2 3.2 0" stroke="#3E7B3A" stroke-width=".7" fill="none"/></svg>ES<span class="sr-only"> Español</span></a>
+        </div>
+      </div>
       <a class="menu-link" href="/">Home</a>
       <button class="menu-link menu-sub-btn" type="button" aria-expanded="false" aria-controls="menu-services">Services<svg aria-hidden="true"><use href="#nv-chev"/></svg></button>
       <div class="menu-sub" id="menu-services" hidden>
@@ -176,7 +190,7 @@
         <div class="form-step">
           <div class="field-row">
             <label class="field" for="m-name"><span class="field-label">Full name&nbsp;<span class="req" aria-hidden="true">*</span></span>
-              <input id="m-name" name="name" type="text" autocomplete="name" required aria-describedby="m-name-err">
+              <input id="m-name" name="name" type="text" autocomplete="name" required placeholder="John Doe" aria-describedby="m-name-err">
               <span class="field-error" id="m-name-err" hidden></span>
             </label>
             <label class="field" for="m-biz"><span class="field-label">Business name&nbsp;<span class="req" aria-hidden="true">*</span></span>
@@ -190,7 +204,7 @@
               <span class="field-error" id="m-email-err" hidden></span>
             </label>
             <label class="field" for="m-phone"><span class="field-label">Phone&nbsp;<span class="req" aria-hidden="true">*</span></span>
-              <input id="m-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="m-phone-err">
+              <input id="m-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="(123) 456-7890" aria-describedby="m-phone-err">
               <span class="field-error" id="m-phone-err" hidden></span>
             </label>
           </div>
@@ -224,6 +238,10 @@
       <a class="contact-way" href="tel:+17432220985"><span class="icon-tile"><svg aria-hidden="true"><use href="#i-phone"/></svg></span><span><small>Call us</small><b><span class="nowrap">(743) 222-0985</span></b></span><svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <a class="contact-way" href="sms:+17432220985"><span class="icon-tile"><svg aria-hidden="true"><use href="#i-text"/></svg></span><span><small>Text us</small><b><span class="nowrap">(743) 222-0985</span></b></span><svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       <a class="contact-way contact-email" href="mailto:lathan@granitecitydigital.me"><span class="icon-tile"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><span><small>Email us</small><b>lathan@<wbr>granitecitydigital.me</b></span><svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <div class="side-social">
+        <a class="btn btn-fb btn-block" href="https://m.me/granitecitydigital" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-msgr"/></svg>Message us on Facebook</a>
+        <a class="btn btn-ig btn-block" href="https://www.instagram.com/granitecitydigital/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>DM us on Instagram</a>
+      </div>
       <div class="contact-way contact-where"><span class="icon-tile"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><span><small>Serving</small><b>United States</b></span></div>
     </aside>
   </div>
@@ -233,7 +251,7 @@
   <div class="container reveal">
     <div class="section-head center">
       <p class="pill glass about-faq-pill"><span class="pill-dot" aria-hidden="true"></span>FAQ</p>
-      <h2 id="faq-title">Before you send it.</h2>
+      <h2 id="faq-title">Before you <span class="gold">send it.</span></h2>
     </div>
     <div class="faq center">
       <details class="faq-item"><summary>How do I reach you?</summary><p>Call or text <a href="tel:+17432220985"><span class="nowrap">(743) 222-0985</span></a>, email us, or fill out the <a href="#contact-form">short form above</a>.</p></details>
@@ -242,6 +260,22 @@
       <details class="faq-item"><summary>Do I have to be ready to buy?</summary><p>No. Ask for the preview first, and decide once you've seen it.</p></details>
     </div>
     <p class="faq-more"><a class="link-arrow" href="/faq/">See all questions <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+  </div>
+</section>
+
+<section class="section reach" id="reach" aria-labelledby="reach-title">
+  <div class="container reveal">
+    <div class="section-head center">
+      <p class="label">Reach us</p>
+      <h2 id="reach-title">Talk to us <span class="gold">your way.</span></h2>
+      <p class="lead">Pick whichever is easiest: a message, a call, a text or an email.</p>
+    </div>
+    <ul class="reach-row">
+      <li class="reach-li-fb"><a class="reach-card" href="https://m.me/granitecitydigital" target="_blank" rel="noopener"><span class="reach-icon"><svg aria-hidden="true"><use href="#i-msgr"/></svg></span><svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg><span class="reach-text"><b>Message on Facebook</b><small>Opens Messenger</small></span></a></li>
+      <li class="reach-li-ig"><a class="reach-card" href="https://www.instagram.com/granitecitydigital/" target="_blank" rel="noopener"><span class="reach-icon"><svg aria-hidden="true"><use href="#i-ig"/></svg></span><svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg><span class="reach-text"><b>DM on Instagram</b><small>@granitecitydigital</small></span></a></li>
+      <li><div class="reach-card"><span class="reach-icon"><svg aria-hidden="true"><use href="#i-phone"/></svg></span><span class="reach-acts"><a class="chip" href="tel:+17432220985" aria-label="Call (743) 222-0985">Call</a><a class="chip" href="sms:+17432220985" aria-label="Text (743) 222-0985">Text</a></span><span class="reach-text"><b>Call or text</b><small><span class="nowrap">(743) 222-0985</span></small></span></div></li>
+      <li><a class="reach-card" href="mailto:lathan@granitecitydigital.me"><span class="reach-icon"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg><span class="reach-text"><b>Email</b><small>lathan@<wbr>granitecitydigital.me</small></span></a></li>
+    </ul>
   </div>
 </section>
 
@@ -305,6 +339,9 @@
     <button class="fbar-x" type="button" aria-label="Close this message"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
   </div>
 </div>
+
+<!-- corner Messenger button: steps aside like the floating bar (assets/touches.js) -->
+<a class="fab-msg" href="https://m.me/granitecitydigital" target="_blank" rel="noopener" aria-label="Message us on Facebook Messenger"><svg aria-hidden="true"><use href="#i-msgr"/></svg></a>
 
 <script>
 (function(){
@@ -386,6 +423,7 @@
 })();
 </script>
 <script src="/assets/nav.js" defer></script>
+<script src="/assets/touches.js" defer></script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "31a3f47819f449f59b28a51b74d61f30"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

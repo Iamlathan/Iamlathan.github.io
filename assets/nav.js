@@ -101,7 +101,8 @@
   function setMenu(o){
     h.classList.toggle('is-open', o);
     mb.setAttribute('aria-expanded', o ? 'true' : 'false');
-    mb.setAttribute('aria-label', o ? 'Close menu' : 'Open menu');
+    /* a page in another language gives its own two names on the button (data-open, data-close) */
+    mb.setAttribute('aria-label', o ? (mb.getAttribute('data-close') || 'Close menu') : (mb.getAttribute('data-open') || 'Open menu'));
   }
   if(mb){
     mb.addEventListener('click', function(){ setMenu(!h.classList.contains('is-open')); });

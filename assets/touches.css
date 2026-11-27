@@ -1,0 +1,307 @@
+/*
+  Granite City Digital: the Nov 26 additions (home page and contact page). Loaded after gcd.css.
+
+  Gold words .... .gold
+  Language ...... .lang  .lang-opt  .lang-bar  .menu-lang
+  Brand buttons . .btn-fb  .btn-ig  .social-row  .side-social
+  Reach row ..... .reach-row  .reach-card  .reach-icon  .reach-text  .reach-acts
+  Corner button . .fab-msg  (.is-ready  .is-away, set by touches.js)
+  Moving strips . .mq  .mq-track  .mq-item  (.is-live  .is-drag, set by touches.js)
+  Showreel ...... .show-head  .show-mq  .show-tile  .show-cap  .show-tags
+  Reel strip .... .reels-grid  .reels-head  .reel-mq  .reel-tile  .reel-badge
+  Hub ........... .hub-points  .hub-core  .hub-disc  .hub-spoke  .hub-point  .hub-card  .hub-btn  .hub-reason  (.hub-live  .is-open)
+  Process path .. #process .steps (same HTML as before, new look)
+
+  Facebook blue and the Instagram colours are used only on the Facebook and Instagram pieces. White text on them
+  keeps 4.5 to 1 or better: the blue is 4.8 to 1, and every stop of the Instagram gradient is 4.7 to 1 or better.
+*/
+:root{
+  --fb:#0866ff;
+  --fb-deep:#075adf;
+  --ig-grad:linear-gradient(45deg,#c44d14 0%,#d1265f 32%,#c13584 56%,#833ab4 80%,#515bd4 100%);
+}
+
+/* ---------- gold words in section headlines ---------- */
+.gold{color:var(--yellow)}
+
+/* ---------- language button ---------- */
+.lang{display:inline-flex;align-items:center;flex:none;gap:2px;padding:3px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
+.lang-opt{position:relative;display:inline-flex;align-items:center;justify-content:center;min-width:36px;height:32px;padding:0 8px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.06em;line-height:1;color:var(--text-2);transition:color 200ms ease,background-color 200ms ease}
+.lang-opt.is-current{color:var(--text);background:rgba(255,255,255,.09)}
+/* the link itself is a 44 by 44 tap box; negative margins keep the bar the same height and the pill is drawn
+   inside it (::before, 36 by 32), so it looks the same as the current language beside it */
+a.lang-opt{isolation:isolate;min-width:44px;height:44px;margin:-6px -4px;padding:0 12px;background:none}
+a.lang-opt::before{content:"";position:absolute;inset:6px 4px;z-index:-1;border-radius:999px;background:transparent;transition:background-color 200ms ease}
+a.lang-opt:active::before{background:rgba(255,255,255,.08)}
+a.lang-opt:focus-visible{outline:none}
+a.lang-opt:focus-visible::before{outline:2px solid var(--yellow);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){a.lang-opt:hover{color:var(--text)}a.lang-opt:hover::before{background:rgba(255,255,255,.05)}}
+.menu-lang{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;padding:0 6px 0 14px;margin-bottom:4px;font-size:14px;font-weight:500;color:var(--text-2)}
+/* small laptops: the top bar holds one more piece, so its gaps and link padding tighten a touch */
+@media (min-width:961px) and (max-width:1040px){
+  .site-header .bar{gap:8px}
+  .nav > a{padding:0 11px}
+  .nav-dd-btn{padding:0 8px 0 11px}
+}
+/* Spanish homepage only: its menu words and two buttons are longer, so from 961 to 1100 px its top bar tightens a
+   little more to keep every link on the bar without running off the right edge. English pages never match this rule */
+@media (min-width:961px) and (max-width:1100px){
+  html[lang="es"] .site-header .bar{gap:6px;padding:0 10px 0 14px}
+  html[lang="es"] .brand{gap:9px}
+  html[lang="es"] .nav{gap:2px}
+  html[lang="es"] .nav > a{padding:0 8px}
+  html[lang="es"] .nav-dd-btn{padding:0 6px 0 8px}
+  html[lang="es"] .bar-actions{gap:6px}
+  html[lang="es"] .bar-actions .btn-sm{padding-inline:14px}
+}
+@media (max-width:960px){
+  .site-header .bar .lang-bar{margin-left:auto}
+  .site-header .bar .lang-bar ~ .menu-btn{margin-left:0}
+}
+@media (max-width:480px){.site-header .bar{gap:10px}}
+/* the narrowest phones have no room in the bar beside the name: the button is in the menu there */
+@media (max-width:374px){
+  .site-header .bar .lang-bar{display:none}
+  .site-header .bar .lang-bar ~ .menu-btn{margin-left:auto}
+}
+/* Spanish homepage only: its hero line is a few letters wider than the English one, so on phones the size follows the
+   screen width and the line stays on two lines like the English hero. English pages never match this rule */
+@media (max-width:600px){html[lang="es"] .hero-title{font-size:clamp(32px,calc((100vw - 48px) / 8.2),44px);max-width:none}}
+
+/* ---------- brand buttons: Facebook Messenger and Instagram ---------- */
+.btn-fb,.btn-ig{color:#fff}
+.btn-fb svg,.btn-ig svg{width:18px;height:18px}
+.btn-fb{background:var(--fb);box-shadow:0 16px 44px -18px rgba(8,102,255,.7),inset 0 1px 0 rgba(255,255,255,.22)}
+.btn-ig{background:var(--ig-grad);background-origin:border-box;box-shadow:0 16px 44px -18px rgba(193,53,132,.7),inset 0 1px 0 rgba(255,255,255,.22)}
+@media (hover:hover) and (pointer:fine){
+  .btn-fb:hover{background:var(--fb-deep);box-shadow:0 20px 56px -16px rgba(8,102,255,.85),inset 0 1px 0 rgba(255,255,255,.26)}
+  .btn-ig:hover{box-shadow:0 20px 56px -16px rgba(193,53,132,.85),inset 0 1px 0 rgba(255,255,255,.26)}
+}
+.social-row{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+.side-social{display:grid;gap:10px}
+
+/* ---------- reach row: four ways to reach us, each with a soft glow in its own colour ---------- */
+.reach-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.reach-row li{position:relative;isolation:isolate;display:flex;--glow:rgba(243,195,0,.7);--edge:rgba(243,195,0,.28)}
+.reach-row .reach-li-fb{--glow:rgba(8,102,255,.95);--edge:rgba(8,102,255,.45)}
+.reach-row .reach-li-ig{--glow:linear-gradient(90deg,#f58529,#dd2a7b 50%,#8134af);--edge:rgba(209,38,95,.45)}
+/* the glow sits behind the solid card and shows under and around its lower edge, so no text ever sits on it */
+.reach-row li::before{content:"";position:absolute;inset:26% 7% -12px;z-index:-1;border-radius:50%;background:var(--glow);filter:blur(30px);opacity:.6;pointer-events:none}
+.reach-card{position:relative;min-width:0;display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"icon side" "text text";align-items:center;gap:22px 12px;width:100%;padding:22px;border-radius:var(--r-panel);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,0) 55%),var(--surface);border:1px solid var(--edge);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),var(--shadow-raised);color:var(--text);transition:border-color 300ms ease,translate 300ms var(--ease-lift),scale 160ms var(--ease-out)}
+a.reach-card:active{scale:.99}
+.reach-icon{grid-area:icon;display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:rgba(243,195,0,.08);border:1px solid rgba(243,195,0,.22);color:var(--yellow)}
+.reach-icon svg{width:22px;height:22px}
+.reach-li-fb .reach-icon{background:var(--fb);border-color:transparent;color:#fff}
+.reach-li-ig .reach-icon{background:var(--ig-grad);background-origin:border-box;border-color:transparent;color:#fff}
+.reach-card .go{grid-area:side;justify-self:end;width:18px;height:18px;color:var(--text-3);transition:transform 200ms var(--ease-out),color 200ms ease}
+.reach-acts{grid-area:side;justify-self:end;display:flex;gap:8px}
+.reach-acts .chip{padding:10px 16px}
+.reach-text{grid-area:text;display:grid;gap:4px;min-width:0}
+.reach-text b{font-size:18px;font-weight:600;letter-spacing:-.015em;line-height:1.3}
+.reach-text small{font-size:14px;line-height:1.5;color:var(--text-2);overflow-wrap:anywhere}
+@media (hover:hover) and (pointer:fine){
+  .reach-card:hover{translate:0 -4px}
+  a.reach-card:hover .go{color:var(--text);transform:translateX(3px)}
+}
+@media (prefers-reduced-motion:no-preference){
+  /* a slow breath, each card a little out of step with the next */
+  .reach-row li::before{animation:gcd-breathe 7s ease-in-out infinite alternate}
+  .reach-row li:nth-child(2)::before{animation-delay:-1.75s}
+  .reach-row li:nth-child(3)::before{animation-delay:-3.5s}
+  .reach-row li:nth-child(4)::before{animation-delay:-5.25s}
+}
+@keyframes gcd-breathe{from{opacity:.42}to{opacity:.8}}
+@media (max-width:1100px){.reach-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.reach-row{grid-template-columns:minmax(0,1fr);gap:18px}}
+
+/* ---------- corner Messenger button ----------
+   Small and round in the bottom corner. touches.js keeps it off buttons, links, fields and the bar: until its first look
+   has run the button is invisible, and .is-away is a calm 160 ms fade (no clicks, out of the tab order once faded).
+   Laptops 1200 px and wider: beside the floating bar. Narrower: above it. Phones: above the call bar. */
+.fab-msg{position:fixed;right:24px;bottom:calc(29px + env(safe-area-inset-bottom));z-index:40;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--fb);color:#fff;box-shadow:0 14px 34px -10px rgba(8,102,255,.6),0 10px 30px -12px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.25);-webkit-tap-highlight-color:transparent;transition:opacity 240ms ease,transform 160ms var(--ease-out),background-color 200ms ease,visibility 0s}
+.fab-msg svg{width:24px;height:24px}
+.fab-msg:not(.is-ready){visibility:hidden}
+.fab-msg:active{transform:scale(.95)}
+.fab-msg:focus-visible{outline-offset:3px;border-radius:50%}
+.fab-msg.is-away{opacity:0;transform:scale(.92);visibility:hidden;pointer-events:none;transition:opacity 160ms ease,transform 160ms var(--ease-out),visibility 0s linear 160ms}
+@media (hover:hover) and (pointer:fine){.fab-msg:hover{background:var(--fb-deep)}}
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .fab-msg:not(.is-away):hover{transform:scale(1.05)}
+  .fab-msg:not(.is-away):hover:active{transform:scale(.95)}
+}
+@media (min-width:768px){.fbar.dismissed ~ .fab-msg{bottom:calc(24px + env(safe-area-inset-bottom))}}
+/* under 1200 px the floating bar reaches the corner (it is 70 px tall, 20 px off the bottom): the button sits 16 px above it.
+   touches.js then sets the same place from the bar's measured top edge. */
+@media (min-width:768px) and (max-width:1199px){.fab-msg{bottom:calc(106px + env(safe-area-inset-bottom))}}
+/* phones: the call bar is 90 px tall with its line and 62 px without it, 12 px off the bottom */
+@media (max-width:767px){
+  .fab-msg{right:12px;width:48px;height:48px;bottom:calc(118px + env(safe-area-inset-bottom))}
+  .fab-msg svg{width:22px;height:22px}
+  .fbar.dismissed ~ .fab-msg{bottom:calc(90px + env(safe-area-inset-bottom))}
+}
+@media (max-width:960px){.site-header.is-open ~ .fab-msg{opacity:0;visibility:hidden;pointer-events:none}}
+/* scripts off: it cannot step aside, so it is not shown; the same links are in the contact area and the reach row */
+@media (scripting:none){.fab-msg{display:none}}
+@media print{.fab-msg{display:none}}
+
+/* ---------- moving strips ----------
+   Without the script, or with reduce motion, a strip is a plain row that scrolls sideways. touches.js turns it into a
+   slow moving strip (.is-live): it pauses under a mouse, on keyboard focus, off screen and in a hidden tab, and it can
+   be dragged. The copies that close the loop are made by the script and hidden from screen readers and the keyboard. */
+.mq{position:relative;min-width:0;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:#2a2a2e transparent}
+.mq-track{position:relative;display:flex;align-items:flex-start;gap:var(--mq-gap,24px);width:max-content;margin:0;padding:12px var(--pad) 28px;list-style:none}
+.mq-item{flex:none}
+.mq.is-live{overflow:hidden;overflow:clip;cursor:grab;touch-action:pan-y;-webkit-user-select:none;user-select:none;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 var(--mq-fade,72px),#000 calc(100% - var(--mq-fade,72px)),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 var(--mq-fade,72px),#000 calc(100% - var(--mq-fade,72px)),transparent 100%)}
+.mq.is-live .mq-track{will-change:transform}
+.mq.is-drag{cursor:grabbing}
+.mq a,.mq img{-webkit-user-drag:none}
+
+/* ---------- showreel of sample designs ---------- */
+.show-head{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:24px 40px;max-width:none;margin-bottom:40px}
+.show-head > div{max-width:768px}
+.show-mq{--mq-gap:24px;--mq-fade:min(120px,9vw)}
+.show-tile{display:block;width:clamp(280px,30vw,430px);border-radius:20px;color:var(--text);transition:translate 300ms var(--ease-lift),scale 160ms var(--ease-out)}
+.show-tile .browser{box-shadow:0 18px 40px -24px rgba(0,0,0,.75),0 0 0 1px rgba(0,0,0,.4)}
+.show-tile .browser-bar{height:34px}
+.show-tile .browser-view{aspect-ratio:16/10}
+.show-cap{display:grid;gap:10px;padding:16px 4px 0}
+.show-cap b{font-size:17px;font-weight:600;letter-spacing:-.015em;line-height:1.3}
+.show-tags{display:flex;flex-wrap:wrap;gap:8px}
+.show-tile:active{scale:.99}
+.show-tile:focus-visible{outline-offset:4px;border-radius:22px}
+@media (hover:hover) and (pointer:fine){
+  .show-tile:hover{translate:0 -4px}
+  .show-tile:hover .browser{box-shadow:0 18px 40px -24px rgba(0,0,0,.75),0 0 0 1px rgba(243,195,0,.3)}
+}
+
+/* ---------- Instagram reel strip ---------- */
+.reels-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:center}
+.reels-head{margin-bottom:0}
+.reels-head .btn{margin-top:30px}
+.reel-mq{--mq-gap:16px;--mq-fade:40px}
+.reel-mq .mq-track{padding-left:6px;padding-right:6px}
+.reel-tile{position:relative;display:block;width:216px;aspect-ratio:9/16;border-radius:20px;overflow:hidden;background:var(--bg-3);border:1px solid var(--line-2);box-shadow:0 18px 40px -24px rgba(0,0,0,.75);transition:translate 300ms var(--ease-lift),scale 160ms var(--ease-out),border-color 300ms ease}
+.reel-tile img{width:100%;height:100%;object-fit:cover}
+.reel-badge{position:absolute;right:10px;bottom:10px;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ig-grad);color:#fff;box-shadow:0 6px 16px -6px rgba(0,0,0,.7)}
+.reel-badge svg{width:18px;height:18px}
+/* stand in stills: the small tag comes from the tile's data-standin attribute; take the attribute off when the real reels go in */
+.reel-tile[data-standin]::after{content:attr(data-standin);position:absolute;left:10px;top:10px;padding:5px 9px;border-radius:999px;background:rgba(11,11,12,.86);border:1px solid var(--line-2);font-size:11px;font-weight:600;letter-spacing:.04em;line-height:1.2;color:var(--text)}
+.reel-tile:active{scale:.99}
+.reel-tile:focus-visible{outline-offset:3px;border-radius:22px}
+@media (hover:hover) and (pointer:fine){.reel-tile:hover{translate:0 -4px;border-color:rgba(209,38,95,.5)}}
+@media (max-width:960px){.reels-grid{grid-template-columns:minmax(0,1fr);gap:40px}}
+
+/* ---------- hub: your website in the middle, six points around it ----------
+   Each point is a real button that opens its reason (aria-expanded). Without the script every reason is open. */
+.hub-points{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;max-width:560px;margin:0 auto}
+.hub-core{position:relative;isolation:isolate;display:grid;place-items:center;height:248px;margin-bottom:6px}
+.hub-core::before{content:"";position:absolute;left:50%;top:50%;z-index:-1;width:300px;height:200px;transform:translate(-50%,-50%);border-radius:50%;background:rgba(243,190,30,.16);filter:blur(60px);pointer-events:none}
+/* phones: one short line from the rings down to the first point */
+.hub-core::after{content:"";position:absolute;left:50%;bottom:-20px;width:1px;height:24px;background:rgba(255,255,255,.16)}
+.hub-disc{position:relative;z-index:1;display:grid;justify-items:center;align-content:center;gap:10px;width:168px;height:168px;padding:0 18px;border-radius:50%;text-align:center;background:radial-gradient(circle at 50% 0,rgba(243,195,0,.1),transparent 62%),#121110;border:1px solid rgba(243,195,0,.34);box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 0 0 1px rgba(0,0,0,.4),0 24px 60px -24px rgba(0,0,0,.8)}
+.hub-disc svg{width:30px;height:30px;color:var(--yellow)}
+.hub-disc b{font-size:15px;font-weight:600;letter-spacing:-.01em;line-height:1.2;color:var(--text)}
+.hub-disc::before,.hub-disc::after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.hub-disc::before{inset:-18px;border:1px solid rgba(243,195,0,.16)}
+.hub-disc::after{inset:-36px;border:1px solid rgba(255,255,255,.07)}
+.hub-spoke{display:none}
+.hub-point{position:relative}
+.hub-card{border-radius:var(--r-panel);background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.008)),rgba(12,11,10,.72);border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.05);transition:translate 300ms var(--ease-lift),scale 160ms var(--ease-out),border-color 300ms ease,box-shadow 300ms ease}
+.hub-h{font-size:inherit;font-weight:inherit;letter-spacing:0;line-height:inherit}
+.hub-btn{display:flex;align-items:center;gap:14px;width:100%;min-height:68px;padding:13px 18px 13px 14px;border:0;border-radius:var(--r-panel);background:transparent;font-family:inherit;text-align:left;color:var(--text);cursor:default;-webkit-tap-highlight-color:transparent}
+.hub-btn:focus-visible{outline:2px solid var(--yellow);outline-offset:3px;border-radius:var(--r-panel)}
+.hub-ico{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:12px;background:rgba(243,195,0,.08);border:1px solid rgba(243,195,0,.22);color:var(--yellow);transition:background-color 300ms ease,border-color 300ms ease,color 300ms ease,transform 160ms var(--ease-out)}
+.hub-ico svg{width:19px;height:19px}
+.hub-name{flex:1;min-width:0;font-size:17px;font-weight:600;letter-spacing:-.015em;line-height:1.3}
+.hub-plus{display:none;position:relative;flex:none;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.06);transition:transform 200ms var(--ease-lift),background-color 200ms ease}
+.hub-plus::before,.hub-plus::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;margin:-1px 0 0 -6px;border-radius:2px;background:var(--yellow)}
+.hub-plus::after{transform:rotate(90deg)}
+.hub-reason p{padding:0 20px 20px 68px;font-size:15px;line-height:1.65;color:var(--text-2)}
+/* with the script: one reason open at a time, the open point rises and lights up */
+.hub-live .hub-btn{cursor:pointer}
+.hub-live .hub-plus{display:block}
+.hub-live .hub-reason{display:grid;grid-template-rows:0fr;transition:grid-template-rows 200ms var(--ease-out)}
+.hub-live .hub-reason > div{min-height:0;overflow:hidden;visibility:hidden;transition:visibility 0s linear 200ms}
+.hub-live .is-open .hub-reason{grid-template-rows:1fr}
+.hub-live .is-open .hub-reason > div{visibility:visible;transition-delay:0s}
+.hub-live .is-open .hub-card{translate:0 -4px;border-color:rgba(243,195,0,.32);box-shadow:inset 0 1px 0 rgba(255,255,255,.07),var(--shadow-float),0 0 44px -18px rgba(243,195,0,.4)}
+.hub-live .is-open .hub-ico{background:var(--grad-yellow);border-color:transparent;color:#141106}
+.hub-live .is-open .hub-plus{transform:rotate(45deg);background:rgba(243,195,0,.12)}
+.hub-live .hub-btn:active .hub-ico{transform:scale(.94)}
+@media (hover:hover) and (pointer:fine){.hub-live .hub-point:not(.is-open) .hub-card:hover{border-color:rgba(243,195,0,.22);translate:0 -2px}}
+@media (min-width:1101px){
+  /* laptops: three points on each side of the middle; thin lines run from every point to a rail and from the rails to the middle.
+     The list is two text columns with the middle mark laid over the gap between them, so each side stacks on its own: a point
+     that opens on one side never spreads the other side apart. The mark holds still, level with the second point of a closed
+     side (35 + 68 + 16 = 119 px down), which is always inside both rails */
+  .hub-points{display:block;position:relative;columns:2;column-gap:360px;max-width:none;min-height:250px}
+  .hub-core{position:absolute;left:50%;top:-11px;width:360px;height:260px;margin:0 0 0 -180px}
+  .hub-core::after{display:none}
+  .hub-point{-webkit-column-break-inside:avoid;break-inside:avoid;margin-bottom:16px}
+  .hub-point:nth-child(4),.hub-point:nth-child(7){margin-bottom:0}
+  .hub-point:nth-child(5){-webkit-column-break-before:always;break-before:column}
+  .hub-spoke{display:block;position:absolute;top:50%;width:72px;height:1px;background:rgba(255,255,255,.16)}
+  .hub-spoke-a{left:24px}
+  .hub-spoke-b{right:24px}
+  .hub-point::before{content:"";position:absolute;top:35px;width:24px;height:1px;background:rgba(255,255,255,.16);transition:background-color 300ms ease,box-shadow 300ms ease}
+  .hub-point::after{content:"";position:absolute;top:35px;width:1px;height:calc(100% + 16px);background:rgba(255,255,255,.16)}
+  .hub-point:nth-child(-n+4)::before{left:100%}
+  .hub-point:nth-child(-n+4)::after{left:calc(100% + 24px)}
+  .hub-point:nth-child(n+5)::before{right:100%}
+  .hub-point:nth-child(n+5)::after{right:calc(100% + 24px)}
+  .hub-point:nth-child(4)::after,.hub-point:nth-child(7)::after{display:none}
+  .hub-live .hub-point.is-open::before{background:var(--yellow);box-shadow:0 0 12px rgba(243,195,0,.7)}
+}
+
+/* ---------- process: the four steps on one lit path (same words and order as before) ---------- */
+#process .steps{padding-top:30px}
+#process .steps .step{padding:54px 26px 30px}
+#process .step::after{display:none}
+#process .step-num{position:absolute;left:26px;top:-28px;z-index:2;display:grid;place-items:center;width:56px;height:56px;margin:0;border-radius:50%;font-size:20px;font-weight:600;letter-spacing:-.02em;color:var(--yellow);background:#14120d;border:1px solid rgba(243,195,0,.42);box-shadow:0 0 0 6px rgba(243,195,0,.06),0 0 28px -4px rgba(243,195,0,.45)}
+/* the last step is where the path arrives: a solid yellow mark */
+#process .step:last-child .step-num{background:var(--grad-yellow);color:#141106;border-color:transparent;box-shadow:0 0 0 6px rgba(243,195,0,.1),var(--shadow-glow-sm)}
+/* the path: a line along the top edge of the cards, from each number to the next */
+#process .step:not(:last-child)::before{content:"";position:absolute;z-index:1;left:54px;top:-3px;width:calc(100% + 20px);height:2px;border-radius:2px;background:linear-gradient(90deg,rgba(243,195,0,.8),rgba(243,195,0,.32));transform-origin:0 0;pointer-events:none}
+/* a step card stays put under the mouse (its edge still lights), so the path never slips behind a lifted card */
+@media (hover:hover) and (pointer:fine){#process .steps .step:hover{transform:none}}
+@media (min-width:768px) and (max-width:1100px){
+  #process .steps{row-gap:48px}
+  #process .step:nth-child(2n)::before{display:none}
+}
+@media (max-width:767px){
+  /* phones: one column, a short line from each card down to the next number */
+  #process .steps{gap:44px}
+  #process .step:not(:last-child)::before{left:53px;top:100%;width:2px;height:18px;background:linear-gradient(180deg,rgba(243,195,0,.32),rgba(243,195,0,.8))}
+}
+@media (prefers-reduced-motion:no-preference){
+  /* the path draws itself once as the section glides in */
+  .rv-on #process .reveal .step::before{transition:transform 900ms var(--ease-reveal) 300ms}
+  .rv-on #process .reveal .step:nth-child(2)::before{transition-delay:480ms}
+  .rv-on #process .reveal .step:nth-child(3)::before{transition-delay:660ms}
+  .rv-on #process .reveal:not(.is-in) .step::before{transform:scaleX(0)}
+  .rv-on #process .reveal.rv-now .step::before{transition:none}
+}
+@media (prefers-reduced-motion:no-preference) and (max-width:767px){
+  .rv-on #process .reveal:not(.is-in) .step::before{transform:scaleY(0)}
+}
+
+/* ---------- phones ---------- */
+@media (max-width:767px){
+  .social-row .btn{flex:1 1 auto}
+  .show-head{margin-bottom:32px}
+  .show-head .btn{flex:1 1 100%}
+  .hub-reason p{padding-left:20px}
+}
+
+/* ---------- reduced motion: nothing lifts, breathes or moves on its own ---------- */
+@media (prefers-reduced-motion:reduce){
+  .show-tile:hover,.reel-tile:hover,.reach-card:hover,.hub-live .hub-point .hub-card,.hub-live .hub-point .hub-card:hover{translate:none}
+  .reach-row li::before{animation:none}
+  .fab-msg.is-away,.fab-msg:hover{transform:none}
+}
+
+/* Nov 26: Mexico flag on the Spanish option, like docmo */
+.lang-opt .lflag{width:24px;height:16px;margin-right:7px;flex:none;border-radius:2px;box-shadow:0 0 0 1px rgba(255,255,255,.18)}
+/* Nov 26 (Lathan): the Call or text card glows green instead of yellow */
+.reach-row li:has(.reach-acts){--glow:rgba(37,211,102,.85);--edge:rgba(37,211,102,.42)}
+.reach-row li:has(.reach-acts) .reach-icon{background:rgba(37,211,102,.1);border-color:rgba(37,211,102,.32);color:#25d366}

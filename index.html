@@ -16,10 +16,13 @@
 <meta property="og:image" content="https://granitecitydigital.me/assets/share/granite-city-share.png">
 <meta property="og:url" content="https://granitecitydigital.me/">
 <link rel="canonical" href="https://granitecitydigital.me/">
+<link rel="alternate" hreflang="en" href="https://granitecitydigital.me/">
+<link rel="alternate" hreflang="es" href="https://granitecitydigital.me/es/">
 <link rel="preload" as="image" href="/assets/hero/granite-tall-1000.webp" media="(max-width:600px), (max-width:1023px) and (orientation:portrait)" fetchpriority="high">
 <link rel="preload" as="image" href="/assets/hero/granite-1440.webp" imagesrcset="/assets/hero/granite-800.webp 800w, /assets/hero/granite-1440.webp 1440w, /assets/hero/granite-2000.webp 2000w" imagesizes="100vw" media="(min-width:601px) and (orientation:landscape), (min-width:1024px)" fetchpriority="high">
 <link rel="preload" href="/assets/fonts/manrope-v23-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/gcd.css">
+<link rel="stylesheet" href="/assets/touches.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Granite City Digital","url":"https://granitecitydigital.me/","telephone":"+1-743-222-0985","logo":"https://granitecitydigital.me/apple-touch-icon.png","image":"https://granitecitydigital.me/assets/share/granite-city-share.png","description":"We build websites for local businesses across the United States.","areaServed":{"@type":"Country","name":"United States"}}</script>
 </head>
 <body>
@@ -43,6 +46,9 @@
     <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7.5h16M4 12h16M4 16.5h16"/></symbol>
     <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-msgr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/><path d="M8 13.6l3.1-3.4 2.8 2.6 3.1-3.4"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.2"/><path d="M17.2 6.8h.01" stroke-width="2.6"/></symbol>
+    <symbol id="i-growth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
   </defs>
 </svg>
 <a class="skip" href="#main">Skip to content</a>
@@ -112,6 +118,10 @@
         <a href="/about/">About</a>
         <a href="/contact/">Contact</a>
       </nav>
+      <div class="lang lang-bar" role="group" aria-label="Language">
+        <span class="lang-opt is-current" aria-current="true">EN<span class="sr-only"> English, current language</span></span>
+        <a class="lang-opt" href="/es/" hreflang="es" lang="es" title="Español (Spanish)"><svg class="lflag" viewBox="0 0 21 14" aria-hidden="true" focusable="false"><rect width="21" height="14" rx="2.2" fill="#fff"/><path d="M2.2 0H7v14H2.2A2.2 2.2 0 0 1 0 11.8V2.2A2.2 2.2 0 0 1 2.2 0z" fill="#006847"/><path d="M14 0h4.8A2.2 2.2 0 0 1 21 2.2v9.6A2.2 2.2 0 0 1 18.8 14H14z" fill="#CE1126"/><circle cx="10.5" cy="7" r="1.9" fill="#8C5A2B"/><path d="M8.9 8.2q1.6 1.2 3.2 0" stroke="#3E7B3A" stroke-width=".7" fill="none"/></svg>ES<span class="sr-only"> Español</span></a>
+      </div>
       <div class="bar-actions">
         <a class="btn btn-outline btn-sm" href="/client-portal/">Client Portal</a>
         <a class="btn btn-primary btn-sm" href="/contact/">Contact us</a>
@@ -122,6 +132,13 @@
       </button>
     </div>
     <div class="menu-panel" id="menu-panel">
+      <div class="menu-lang">
+        <span id="menu-lang-h">Language</span>
+        <div class="lang" role="group" aria-labelledby="menu-lang-h">
+          <span class="lang-opt is-current" aria-current="true">EN<span class="sr-only"> English, current language</span></span>
+          <a class="lang-opt" href="/es/" hreflang="es" lang="es" title="Español (Spanish)"><svg class="lflag" viewBox="0 0 21 14" aria-hidden="true" focusable="false"><rect width="21" height="14" rx="2.2" fill="#fff"/><path d="M2.2 0H7v14H2.2A2.2 2.2 0 0 1 0 11.8V2.2A2.2 2.2 0 0 1 2.2 0z" fill="#006847"/><path d="M14 0h4.8A2.2 2.2 0 0 1 21 2.2v9.6A2.2 2.2 0 0 1 18.8 14H14z" fill="#CE1126"/><circle cx="10.5" cy="7" r="1.9" fill="#8C5A2B"/><path d="M8.9 8.2q1.6 1.2 3.2 0" stroke="#3E7B3A" stroke-width=".7" fill="none"/></svg>ES<span class="sr-only"> Español</span></a>
+        </div>
+      </div>
       <a class="menu-link" href="/" aria-current="page">Home</a>
       <button class="menu-link menu-sub-btn" type="button" aria-expanded="false" aria-controls="menu-services">Services<svg aria-hidden="true"><use href="#nv-chev"/></svg></button>
       <div class="menu-sub" id="menu-services" hidden>
@@ -197,7 +214,7 @@
   <div class="container why reveal">
     <div class="section-head">
       <p class="label">Why Granite City</p>
-      <h2 id="why-title">You see it before you buy it.</h2>
+      <h2 id="why-title">You <span class="gold">see it</span> before you buy it.</h2>
       <p class="lead">Most owners pay for a website before they ever see it. We build yours first and show it to you, and the choice is yours.</p>
     </div>
     <figure class="why-photo"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" data-src="/assets/why/why-desk-500.webp" data-srcset="/assets/why/why-desk-500.webp 500w, /assets/why/why-desk-1000.webp 1000w" sizes="(max-width:960px) min(calc(100vw - 48px), 480px), (max-width:1280px) calc(41.7vw - 47px), 487px" width="1000" height="1000" alt="An open laptop on a wooden desk, lit by a warm floor lamp" decoding="async"><noscript><img src="/assets/why/why-desk-500.webp" srcset="/assets/why/why-desk-500.webp 500w, /assets/why/why-desk-1000.webp 1000w" sizes="(max-width:960px) min(calc(100vw - 48px), 480px), (max-width:1280px) calc(41.7vw - 47px), 487px" width="1000" height="1000" alt="An open laptop on a wooden desk, lit by a warm floor lamp" loading="lazy" decoding="async"></noscript></figure>
@@ -218,7 +235,7 @@
   <div class="container reveal">
     <div class="area-copy">
       <p class="label">Where we work</p>
-      <h2 id="area-title">We work in the United States.</h2>
+      <h2 id="area-title">We work in the <span class="gold nowrap">United States.</span></h2>
       <p class="lead">Wherever your business is, it works the same way: you call or text, we build your preview, and the finished website is yours.</p>
       <p class="area-trades-h" id="area-trades-h">Who we build for</p>
       <div class="chips area-trades">
@@ -238,7 +255,7 @@
   <div class="container reveal">
     <div class="section-head">
       <p class="label">Services</p>
-      <h2 id="services-title">Everything your business needs online.</h2>
+      <h2 id="services-title">Everything your business <span class="gold">needs online.</span></h2>
     </div>
     <div class="service-grid">
       <article class="service-card card">
@@ -301,12 +318,61 @@
   </div>
 </section>
 
+<section class="section hub" id="hub" aria-labelledby="hub-title">
+  <div class="container reveal">
+    <div class="section-head center">
+      <p class="label">Why it matters</p>
+      <h2 id="hub-title">Your website is <span class="gold">the center</span> of it all.</h2>
+      <p class="lead">Search, trust, calls and your brand all meet in one place. Pick a point to see what it does for you.</p>
+    </div>
+    <ul class="hub-points" data-hub>
+      <li class="hub-core" aria-hidden="true"><span class="hub-spoke hub-spoke-a"></span><span class="hub-spoke hub-spoke-b"></span><span class="hub-disc"><svg><use href="#i-browser"/></svg><b>Your website</b></span></li>
+      <li class="hub-point">
+        <div class="hub-card">
+          <h3 class="hub-h"><button class="hub-btn" type="button" id="hub-b1" aria-expanded="true" aria-controls="hub-r1"><span class="hub-ico"><svg aria-hidden="true"><use href="#i-search"/></svg></span><span class="hub-name">Found on Google</span><span class="hub-plus" aria-hidden="true"></span></button></h3>
+          <div class="hub-reason" id="hub-r1"><div><p>When someone looks up what you do, your website gives Google a clear answer. We write every page to say plainly what you offer and where you work.</p></div></div>
+        </div>
+      </li>
+      <li class="hub-point">
+        <div class="hub-card">
+          <h3 class="hub-h"><button class="hub-btn" type="button" id="hub-b2" aria-expanded="true" aria-controls="hub-r2"><span class="hub-ico"><svg aria-hidden="true"><use href="#i-eye"/></svg></span><span class="hub-name">Trust at first look</span><span class="hub-plus" aria-hidden="true"></span></button></h3>
+          <div class="hub-reason" id="hub-r2"><div><p>A new customer often sees your website before they meet you. We build that first screen around your work, your services and a look made for your business.</p></div></div>
+        </div>
+      </li>
+      <li class="hub-point">
+        <div class="hub-card">
+          <h3 class="hub-h"><button class="hub-btn" type="button" id="hub-b3" aria-expanded="true" aria-controls="hub-r3"><span class="hub-ico"><svg aria-hidden="true"><use href="#i-phone"/></svg></span><span class="hub-name">Calls and messages</span><span class="hub-plus" aria-hidden="true"></span></button></h3>
+          <div class="hub-reason" id="hub-r3"><div><p>Every page gives customers a clear way to reach you, whether that's a call button, a text link or a short form. Nobody has to hunt for your number.</p></div></div>
+        </div>
+      </li>
+      <li class="hub-point">
+        <div class="hub-card">
+          <h3 class="hub-h"><button class="hub-btn" type="button" id="hub-b4" aria-expanded="true" aria-controls="hub-r4"><span class="hub-ico"><svg aria-hidden="true"><use href="#i-clock"/></svg></span><span class="hub-name">Open 24/7</span><span class="hub-plus" aria-hidden="true"></span></button></h3>
+          <div class="hub-reason" id="hub-r4"><div><p>Your website answers at midnight and on Sundays. Your hours, services and contact details are there whenever someone looks.</p></div></div>
+        </div>
+      </li>
+      <li class="hub-point">
+        <div class="hub-card">
+          <h3 class="hub-h"><button class="hub-btn" type="button" id="hub-b5" aria-expanded="true" aria-controls="hub-r5"><span class="hub-ico"><svg aria-hidden="true"><use href="#i-palette"/></svg></span><span class="hub-name">Your brand</span><span class="hub-plus" aria-hidden="true"></span></button></h3>
+          <div class="hub-reason" id="hub-r5"><div><p>Online, your website is the one place that is fully yours. It shows your name, your colors and your photos, with no ads and nobody else's logo beside them.</p></div></div>
+        </div>
+      </li>
+      <li class="hub-point">
+        <div class="hub-card">
+          <h3 class="hub-h"><button class="hub-btn" type="button" id="hub-b6" aria-expanded="true" aria-controls="hub-r6"><span class="hub-ico"><svg aria-hidden="true"><use href="#i-growth"/></svg></span><span class="hub-name">Growth</span><span class="hub-plus" aria-hidden="true"></span></button></h3>
+          <div class="hub-reason" id="hub-r6"><div><p>A website grows with you. Add a service, a new town or fresh photos, and it's ready for the next customer.</p></div></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
 <section class="section has-blob grid-bg" id="process" aria-labelledby="process-title">
   <span class="blob blob-process" aria-hidden="true"></span>
   <div class="container reveal">
     <div class="section-head">
       <p class="label">The Algorithm</p>
-      <h2 id="process-title">The four step growth system.</h2>
+      <h2 id="process-title">The four step <span class="gold">growth system.</span></h2>
     </div>
     <ol class="steps">
       <li class="step glass"><span class="step-num" aria-hidden="true">01</span><h3>Tell us about your business</h3><p>Fill out the short form or call or text us, and tell us what you do and where you do it.</p></li>
@@ -318,33 +384,102 @@
 </section>
 
 <section class="section section-band" id="work" aria-labelledby="work-title">
-  <div class="container reveal">
-    <div class="section-head">
-      <p class="label">Work</p>
-      <h2 id="work-title">Here's one of our sample designs.</h2>
-    </div>
-    <article class="proof-card card hl-top">
-      <span class="glow" aria-hidden="true"></span>
-      <div class="proof-text">
-        <ul class="tags" aria-label="About this design">
-          <li class="tag tag-y">Sample design</li>
-          <li class="tag">Stone mason</li>
-        </ul>
-        <h3>Stonecrop Stoneworks</h3>
-        <p>A website for a stone mason who builds patios, walls and steps. Open it and click through every page.</p>
-        <p class="note">The business is made up, but the site is real and working.</p>
-        <div class="proof-actions">
-          <a class="btn btn-primary" href="/sample/" target="_blank" rel="noopener">Open live preview <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn-glass" href="/work/">See more designs</a>
+  <div class="reveal">
+    <div class="container">
+      <div class="section-head show-head">
+        <div>
+          <p class="label">Work</p>
+          <h2 id="work-title">Open any of our <span class="gold">sample designs.</span></h2>
+          <p class="lead">Each one is a full website you can scroll and click through. The businesses are made up, but every site here is real and working.</p>
         </div>
+        <a class="btn btn-glass" href="/work/">See more designs</a>
       </div>
-      <a class="proof-shot" href="/sample/" target="_blank" rel="noopener" tabindex="-1" aria-label="Sample design preview: open the Stonecrop Stoneworks sample design">
-        <span class="browser">
-          <span class="browser-bar" aria-hidden="true"><span class="browser-dots"><i></i><i></i><i></i></span><span class="browser-url"><svg><use href="#i-lock"/></svg>Sample design preview</span></span>
-          <span class="browser-view"><img src="/assets/proof/stonecrop-card.webp" alt="Top of the Stonecrop Stoneworks sample design: a stone house front with a flagstone patio" width="1250" height="1000" loading="lazy" decoding="async"></span>
-        </span>
-      </a>
-    </article>
+    </div>
+    <div class="mq show-mq" data-mq data-speed="34">
+      <ul class="mq-track" aria-label="Sample designs">
+        <li class="mq-item"><a class="show-tile" href="/sample/" target="_blank" rel="noopener" draggable="false">
+          <span class="browser">
+            <span class="browser-bar" aria-hidden="true"><span class="browser-dots"><i></i><i></i><i></i></span><span class="browser-url"><svg><use href="#i-lock"/></svg>Sample design preview</span></span>
+            <span class="browser-view"><img src="/work/shots/desktop/stonecrop-stoneworks-800.webp" alt="Desktop view of a sample design for a stone mason in Doylestown" width="800" height="500" loading="lazy" draggable="false"></span>
+          </span>
+          <span class="show-cap"><b>Stonecrop Stoneworks</b><span class="show-tags"><span class="tag tag-y">Sample design</span><span class="tag">Stone mason</span></span></span>
+        </a></li>
+        <li class="mq-item"><a class="show-tile" href="/designs/high-limb-tree-service/" target="_blank" rel="noopener" draggable="false">
+          <span class="browser">
+            <span class="browser-bar" aria-hidden="true"><span class="browser-dots"><i></i><i></i><i></i></span><span class="browser-url"><svg><use href="#i-lock"/></svg>Sample design preview</span></span>
+            <span class="browser-view"><img src="/work/shots/desktop/high-limb-tree-service-800.webp" alt="Desktop view of a sample design for a tree service in Springfield" width="800" height="500" loading="lazy" draggable="false"></span>
+          </span>
+          <span class="show-cap"><b>High Limb Tree Service</b><span class="show-tags"><span class="tag tag-y">Sample design</span><span class="tag">Tree service</span></span></span>
+        </a></li>
+        <li class="mq-item"><a class="show-tile" href="/designs/rainline-seamless-gutters/" target="_blank" rel="noopener" draggable="false">
+          <span class="browser">
+            <span class="browser-bar" aria-hidden="true"><span class="browser-dots"><i></i><i></i><i></i></span><span class="browser-url"><svg><use href="#i-lock"/></svg>Sample design preview</span></span>
+            <span class="browser-view"><img src="/work/shots/desktop/rainline-seamless-gutters-800.webp" alt="Desktop view of a sample design for a gutter business in Eau Claire" width="800" height="500" loading="lazy" draggable="false"></span>
+          </span>
+          <span class="show-cap"><b>Rainline Seamless Gutters</b><span class="show-tags"><span class="tag tag-y">Sample design</span><span class="tag">Seamless gutters, roofing and siding</span></span></span>
+        </a></li>
+        <li class="mq-item"><a class="show-tile" href="/designs/true-line-painting/" target="_blank" rel="noopener" draggable="false">
+          <span class="browser">
+            <span class="browser-bar" aria-hidden="true"><span class="browser-dots"><i></i><i></i><i></i></span><span class="browser-url"><svg><use href="#i-lock"/></svg>Sample design preview</span></span>
+            <span class="browser-view"><img src="/work/shots/desktop/true-line-painting-800.webp" alt="Desktop view of a sample design for a house painter in Fort Collins" width="800" height="500" loading="lazy" draggable="false"></span>
+          </span>
+          <span class="show-cap"><b>True Line Painting</b><span class="show-tags"><span class="tag tag-y">Sample design</span><span class="tag">House painting</span></span></span>
+        </a></li>
+        <li class="mq-item"><a class="show-tile" href="/designs/westbrook-body-and-tire/" target="_blank" rel="noopener" draggable="false">
+          <span class="browser">
+            <span class="browser-bar" aria-hidden="true"><span class="browser-dots"><i></i><i></i><i></i></span><span class="browser-url"><svg><use href="#i-lock"/></svg>Sample design preview</span></span>
+            <span class="browser-view"><img src="/work/shots/desktop/westbrook-body-and-tire-800.webp" alt="Desktop view of a sample design for an auto body shop in Waco" width="800" height="500" loading="lazy" draggable="false"></span>
+          </span>
+          <span class="show-cap"><b>Westbrook Body and Tire</b><span class="show-tags"><span class="tag tag-y">Sample design</span><span class="tag">Auto body, paint and tires</span></span></span>
+        </a></li>
+        <li class="mq-item"><a class="show-tile" href="/designs/red-clay-concrete-grading/" target="_blank" rel="noopener" draggable="false">
+          <span class="browser">
+            <span class="browser-bar" aria-hidden="true"><span class="browser-dots"><i></i><i></i><i></i></span><span class="browser-url"><svg><use href="#i-lock"/></svg>Sample design preview</span></span>
+            <span class="browser-view"><img src="/work/shots/desktop/red-clay-concrete-grading-800.webp" alt="Desktop view of a sample design for a concrete contractor in Gainesville" width="800" height="500" loading="lazy" draggable="false"></span>
+          </span>
+          <span class="show-cap"><b>Red Clay Concrete and Grading</b><span class="show-tags"><span class="tag tag-y">Sample design</span><span class="tag">Concrete and grading</span></span></span>
+        </a></li>
+        <li class="mq-item"><a class="show-tile" href="/designs/willow-lane-skin-studio/" target="_blank" rel="noopener" draggable="false">
+          <span class="browser">
+            <span class="browser-bar" aria-hidden="true"><span class="browser-dots"><i></i><i></i><i></i></span><span class="browser-url"><svg><use href="#i-lock"/></svg>Sample design preview</span></span>
+            <span class="browser-view"><img src="/work/shots/desktop/willow-lane-skin-studio-800.webp" alt="Desktop view of a sample design for an esthetics studio in Bend" width="800" height="500" loading="lazy" draggable="false"></span>
+          </span>
+          <span class="show-cap"><b>Willow Lane Skin Studio</b><span class="show-tags"><span class="tag tag-y">Sample design</span><span class="tag">Esthetics studio</span></span></span>
+        </a></li>
+        <li class="mq-item"><a class="show-tile" href="/designs/steady-flow-plumbing/" target="_blank" rel="noopener" draggable="false">
+          <span class="browser">
+            <span class="browser-bar" aria-hidden="true"><span class="browser-dots"><i></i><i></i><i></i></span><span class="browser-url"><svg><use href="#i-lock"/></svg>Sample design preview</span></span>
+            <span class="browser-view"><img src="/work/shots/desktop/steady-flow-plumbing-800.webp" alt="Desktop view of a sample design for a plumber in Columbus" width="800" height="500" loading="lazy" draggable="false"></span>
+          </span>
+          <span class="show-cap"><b>Steady Flow Plumbing</b><span class="show-tags"><span class="tag tag-y">Sample design</span><span class="tag">Plumber</span></span></span>
+        </a></li>
+        <li class="mq-item"><a class="show-tile" href="/designs/sunup-southern-breakfast/" target="_blank" rel="noopener" draggable="false">
+          <span class="browser">
+            <span class="browser-bar" aria-hidden="true"><span class="browser-dots"><i></i><i></i><i></i></span><span class="browser-url"><svg><use href="#i-lock"/></svg>Sample design preview</span></span>
+            <span class="browser-view"><img src="/work/shots/desktop/sunup-southern-breakfast-800.webp" alt="Desktop view of a sample design for a breakfast restaurant in Oxford" width="800" height="500" loading="lazy" draggable="false"></span>
+          </span>
+          <span class="show-cap"><b>Sunup Southern Breakfast</b><span class="show-tags"><span class="tag tag-y">Sample design</span><span class="tag">Southern breakfast and lunch</span></span></span>
+        </a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section reels" id="reels" aria-labelledby="reels-title">
+  <div class="container reveal reels-grid">
+    <div class="section-head reels-head">
+      <p class="label">Instagram</p>
+      <h2 id="reels-title">Every week we show <span class="gold">how we build.</span></h2>
+      <p class="lead">Follow along for short clips of our sample sites and how they come together.</p>
+      <a class="btn btn-ig" href="https://www.instagram.com/granitecitydigital/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Follow us on Instagram</a>
+    </div>
+    <div class="mq reel-mq" data-mq data-speed="22">
+      <ul class="mq-track" aria-label="Stills from our reels">
+        <li class="mq-item"><a class="reel-tile" href="https://www.instagram.com/granitecitydigital/" target="_blank" rel="noopener" draggable="false" data-standin="Placeholder"><img src="/assets/reels/reel-still-1.webp" alt="Reel still: a sample tree service website with its call button and headline marked" width="432" height="768" loading="lazy" draggable="false"><span class="reel-badge" aria-hidden="true"><svg><use href="#i-ig"/></svg></span></a></li>
+        <li class="mq-item"><a class="reel-tile" href="https://www.instagram.com/granitecitydigital/" target="_blank" rel="noopener" draggable="false" data-standin="Placeholder"><img src="/assets/reels/reel-still-2.webp" alt="Reel still: the Granite City rook mark over the line Websites built to generate growth" width="432" height="768" loading="lazy" draggable="false"><span class="reel-badge" aria-hidden="true"><svg><use href="#i-ig"/></svg></span></a></li>
+        <li class="mq-item"><a class="reel-tile" href="https://www.instagram.com/granitecitydigital/" target="_blank" rel="noopener" draggable="false" data-standin="Placeholder"><img src="/assets/reels/reel-still-3.webp" alt="Reel still: a sample skin studio website under the line See it before you pay anything" width="432" height="768" loading="lazy" draggable="false"><span class="reel-badge" aria-hidden="true"><svg><use href="#i-ig"/></svg></span></a></li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -352,8 +487,12 @@
   <div class="container reveal">
     <div class="section-head center hc-head">
       <p class="label">Contact</p>
-      <h2 id="contact-title">Let's see what your website can be.</h2>
+      <h2 id="contact-title">Let's see what <span class="gold">your website</span> can be.</h2>
       <p class="lead">Send a few lines about your business, or call or text <a href="tel:+17432220985"><span class="nowrap">(743) 222-0985</span></a>, and we'll start on your preview.</p>
+      <div class="social-row">
+        <a class="btn btn-fb" href="https://m.me/granitecitydigital" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-msgr"/></svg>Message us on Facebook</a>
+        <a class="btn btn-ig" href="https://www.instagram.com/granitecitydigital/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>DM us on Instagram</a>
+      </div>
     </div>
     <div class="home-contact">
       <div class="form-card hc-form">
@@ -362,7 +501,7 @@
           <div class="form-step">
             <div class="field-row">
               <label class="field" for="h-name"><span class="field-label">Full name&nbsp;<span class="req" aria-hidden="true">*</span></span>
-                <input id="h-name" name="name" type="text" autocomplete="name" required aria-describedby="h-name-err">
+                <input id="h-name" name="name" type="text" autocomplete="name" required placeholder="John Doe" aria-describedby="h-name-err">
                 <span class="field-error" id="h-name-err" hidden></span>
               </label>
               <label class="field" for="h-email"><span class="field-label">Email&nbsp;<span class="req" aria-hidden="true">*</span></span>
@@ -372,7 +511,7 @@
             </div>
             <div class="field-row">
               <label class="field" for="h-phone"><span class="field-label">Phone&nbsp;<span class="req" aria-hidden="true">*</span></span>
-                <input id="h-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="h-phone-err">
+                <input id="h-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="(123) 456-7890" aria-describedby="h-phone-err">
                 <span class="field-error" id="h-phone-err" hidden></span>
               </label>
               <label class="field" for="h-site"><span class="field-label">Website URL <span class="opt">(optional)</span></span>
@@ -410,7 +549,7 @@
   <div class="container reveal">
     <div class="section-head center">
       <p class="pill glass about-faq-pill"><span class="pill-dot" aria-hidden="true"></span>FAQ</p>
-      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <h2 id="faq-title">Frequently Asked <span class="gold">Questions</span></h2>
     </div>
     <div class="faq center">
       <details class="faq-item"><summary>What does Granite City Digital actually do?</summary><p>We design and build websites, set up Google Business Profiles, help with local SEO and make logos. If you'd like, we keep your site running after launch too.</p></details>
@@ -421,6 +560,22 @@
       <details class="faq-item"><summary>How much does it cost?</summary><p>Every business is different. You get your price with your free preview.</p></details>
     </div>
     <p class="faq-more"><a class="link-arrow" href="/faq/">See all questions <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+  </div>
+</section>
+
+<section class="section reach" id="reach" aria-labelledby="reach-title">
+  <div class="container reveal">
+    <div class="section-head center">
+      <p class="label">Reach us</p>
+      <h2 id="reach-title">Talk to us <span class="gold">your way.</span></h2>
+      <p class="lead">Pick whichever is easiest: a message, a call, a text or an email.</p>
+    </div>
+    <ul class="reach-row">
+      <li class="reach-li-fb"><a class="reach-card" href="https://m.me/granitecitydigital" target="_blank" rel="noopener"><span class="reach-icon"><svg aria-hidden="true"><use href="#i-msgr"/></svg></span><svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg><span class="reach-text"><b>Message on Facebook</b><small>Opens Messenger</small></span></a></li>
+      <li class="reach-li-ig"><a class="reach-card" href="https://www.instagram.com/granitecitydigital/" target="_blank" rel="noopener"><span class="reach-icon"><svg aria-hidden="true"><use href="#i-ig"/></svg></span><svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg><span class="reach-text"><b>DM on Instagram</b><small>@granitecitydigital</small></span></a></li>
+      <li><div class="reach-card"><span class="reach-icon"><svg aria-hidden="true"><use href="#i-phone"/></svg></span><span class="reach-acts"><a class="chip" href="tel:+17432220985" aria-label="Call (743) 222-0985">Call</a><a class="chip" href="sms:+17432220985" aria-label="Text (743) 222-0985">Text</a></span><span class="reach-text"><b>Call or text</b><small><span class="nowrap">(743) 222-0985</span></small></span></div></li>
+      <li><a class="reach-card" href="mailto:lathan@granitecitydigital.me"><span class="reach-icon"><svg aria-hidden="true"><use href="#i-mail"/></svg></span><svg class="go" aria-hidden="true"><use href="#i-arrow"/></svg><span class="reach-text"><b>Email</b><small>lathan@<wbr>granitecitydigital.me</small></span></a></li>
+    </ul>
   </div>
 </section>
 
@@ -484,6 +639,9 @@
     <button class="fbar-x" type="button" aria-label="Close this message"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M7 7l10 10M17 7 7 17"/></svg></button>
   </div>
 </div>
+
+<!-- corner Messenger button: steps aside like the floating bar (assets/touches.js) -->
+<a class="fab-msg" href="https://m.me/granitecitydigital" target="_blank" rel="noopener" aria-label="Message us on Facebook Messenger"><svg aria-hidden="true"><use href="#i-msgr"/></svg></a>
 
 <script>
 (function(){
@@ -563,6 +721,7 @@
 })();
 </script>
 <script src="/assets/nav.js" defer></script>
+<script src="/assets/touches.js" defer></script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "31a3f47819f449f59b28a51b74d61f30"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
