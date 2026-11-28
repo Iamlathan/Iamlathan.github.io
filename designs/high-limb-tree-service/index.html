@@ -16,11 +16,19 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231e2b22'/%3E%3Cpath d='M16 4v24M16 11l-7 6M16 16l7-5M16 21l-6 4' fill='none' stroke='%23e8661c' stroke-width='2.6'/%3E%3C/svg%3E" type="image/svg+xml">
 <link rel="preload" as="image" type="image/webp" imagesrcset="hero-climber-800.webp 800w, hero-climber-1600.webp 1600w" imagesizes="(max-width: 640px) 1180px, (max-width: 1100px) 1340px, 100vw" fetchpriority="high">
 <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&family=Oswald:wght@600&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="fonts/libre-franklin-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/oswald-latin.woff2" crossorigin>
 <script>document.documentElement.classList.add('js')</script>
 <style>
+/* web fonts, served from this site (SIL Open Font License); latin and latin-ext only */
+@font-face{font-family:'Libre Franklin';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/libre-franklin-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Libre Franklin';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/libre-franklin-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Libre Franklin';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/libre-franklin-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Libre Franklin';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/libre-franklin-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Libre Franklin';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/libre-franklin-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Libre Franklin';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/libre-franklin-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Oswald';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/oswald-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Oswald';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/oswald-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 /* fallback faces sized to the web fonts, so text keeps its line breaks while they load */
 @font-face{font-family:"Oswald fb";src:local("Arial Narrow Bold"),local("ArialNarrow-Bold"),local("Arial Narrow");size-adjust:91.6%}
 @font-face{font-family:"Franklin fb";src:local("Arial"),local("ArialMT"),local("Helvetica");size-adjust:102.6%}
@@ -470,7 +478,7 @@ form[hidden]{display:none}
 
 <aside class="sample" aria-label="About this sample">Sample design by <a href="https://granitecitydigital.me/">Granite City Digital</a>. The business name, phone number and details are made up.</aside>
 
-<div class="storm"><div class="wrap"><span>Tree down?</span> <span>Call <a class="num" href="tel:+14175550162">417 555 0162</a></span></div></div>
+<div class="storm" role="region" aria-label="Tree down?"><div class="wrap"><span>Tree down?</span> <span>Call <a class="num" href="tel:+14175550162">417 555 0162</a></span></div></div>
 
 <header class="top">
   <div class="wrap">

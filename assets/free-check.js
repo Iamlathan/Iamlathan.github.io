@@ -247,6 +247,9 @@ function sendW3F(subject, fields){
    One pending job per submission. The beacon goes out at most once, and when it has gone
    out the normal send is skipped. FormData body, no custom headers, so no preflight. */
 var job = null;
+/* When the check worked but the send failed, the result is kept here and reused on the next press
+   while the typed address is unchanged, so sending again does not repeat the check. */
+var held = null;
 function leftEarly(e){
   if(e && e.type === "visibilitychange" && document.visibilityState !== "hidden") return;
   if(!job || job.done || job.beaconed || !navigator.sendBeacon || !window.FormData) return;
@@ -312,7 +315,7 @@ function reveal(el){
   el.scrollIntoView({behavior: reduced ? "auto" : "smooth", block:"start"});
 }
 
-function renderResult(r, biz, site, sent){
+function renderResult(r, biz, site){
   $("fc-site").textContent = prettySite(site);
   var lines = $("fc-lines"); lines.textContent = "";
   linesFor(r).forEach(function(x){
@@ -343,14 +346,7 @@ function renderResult(r, biz, site, sent){
   $("fc-ours").src = "/work/shots/" + sm[1] + ".webp";
   $("fc-ours").alt = "Phone view of one of our sample designs, a site for " + sm[2];
   $("fc-ours-link").href = "/designs/" + sm[1] + "/";
-  var note = $("fc-sentnote"); note.textContent = "";
-  if(sent){ note.textContent = "Your details reached us too, so we can follow up."; }
-  else {
-    note.className = "fc-sentnote warn";
-    note.appendChild(document.createTextNode("Your details didn't reach us this time, so text us at "));
-    var a = document.createElement("a"); a.href = "sms:+17432220985"; a.textContent = "(743) 222-0985"; note.appendChild(a);
-    note.appendChild(document.createTextNode(" and we'll take it from there."));
-  }
+  $("fc-sentnote").textContent = "Your details reached us too, so we can follow up.";
   form.hidden = true;
   $("fc-done-site").textContent = prettySite(site);
   $("fc-done").hidden = false;
@@ -371,7 +367,7 @@ function renderManual(reason, hasPhone){
 }
 function resetAll(){
   if(job) job.done = true;
-  job = null;
+  job = null; held = null;
   form.reset(); form.hidden = false; errBox.hidden = true; errBox.textContent = "";
   ["fc-result", "fc-manual", "fc-done"].forEach(function(id){ $(id).hidden = true; });
   var note = $("fc-sentnote"); note.className = "fc-sentnote";
@@ -399,12 +395,14 @@ form.addEventListener("submit", function(e){
   var sms = form.elements.sms_consent.checked ? "Yes, agreed to text messages" : "No";
 
   busy = true;
+  var reuse = held && held.raw === rawSite ? held.chk : null;
+  held = null;
   var walled = loginWalled(site);
-  var auto = AUTO_CHECK && !walled && !blockedToday();
+  var auto = !reuse && AUTO_CHECK && !walled && !blockedToday();
   setSending(true, auto ? "Checking your site" : "Sending");
   waitBox.textContent = auto ? "Looking at your site the way a customer would. This can take up to 25 seconds." : "";
   var mine = auto ? (job = {biz:biz, site:site, phone:phone, sms:sms, beaconed:false, done:false}) : null;
-  var checking = walled ? Promise.resolve({ok:false, reason:"Facebook or Instagram page (behind a login)"}) : runCheck(site);
+  var checking = reuse ? Promise.resolve(reuse) : walled ? Promise.resolve({ok:false, reason:"Facebook or Instagram page (behind a login)"}) : runCheck(site);
 
   checking.then(function(chk){
     if(auto) waitBox.textContent = "Sending it to us.";
@@ -426,7 +424,8 @@ form.addEventListener("submit", function(e){
     return sending.then(function(sent){
       busy = false;
       setSending(false);
-      if(chk.ok){ renderResult(chk.result, biz, site, sent); }
+      if(chk.ok && sent){ renderResult(chk.result, biz, site); }
+      else if(chk.ok){ held = {raw:rawSite, chk:chk}; showErr("That didn't go through, and everything you typed is still here.", true); }
       else if(sent){ renderManual(chk.reason, !!phone); }
       else { showErr("That didn't go through, and everything you typed is still here.", true); }
     });

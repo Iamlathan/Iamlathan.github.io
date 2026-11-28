@@ -16,13 +16,23 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='6' fill='%23232320'/%3E%3Cg fill='%23e9e5dc'%3E%3Crect x='5' y='4' width='23' height='6.5' rx='1.4'/%3E%3Crect x='30' y='4' width='13' height='6.5' rx='1.4'/%3E%3Crect x='5' y='12.5' width='14' height='6.5' rx='1.4'/%3E%3Crect x='5' y='21' width='17' height='6.5' rx='1.4'/%3E%3Crect x='24' y='21' width='19' height='6.5' rx='1.4'/%3E%3Crect x='29' y='29.5' width='14' height='6.5' rx='1.4'/%3E%3Crect x='5' y='38' width='20' height='6.5' rx='1.4'/%3E%3Crect x='27' y='38' width='16' height='6.5' rx='1.4'/%3E%3C/g%3E%3Ccircle cx='31' cy='15.75' r='2.6' fill='%23bcc6a3'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-phone-828.webp 828w" media="(max-width: 699px)" fetchpriority="high">
 <link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-1280.webp 1280w, img/hero-1600.webp 1600w, img/hero-1920.webp 1920w" imagesizes="(min-width: 700px) and (max-width: 1023px) 175vw, 100vw" media="(min-width: 700px)" fetchpriority="high">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="fonts/karla-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/cormorant-latin.woff2" crossorigin>
 <script>document.documentElement.classList.add('js')</script>
 <style>
+/* web fonts, served from this site (SIL Open Font License); latin and latin-ext only */
+@font-face{font-family:'Cormorant';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/cormorant-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Cormorant';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/cormorant-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Cormorant';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/cormorant-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Cormorant';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/cormorant-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Karla';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/karla-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Karla';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/karla-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Karla';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/karla-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Karla';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/karla-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Karla';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/karla-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Karla';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/karla-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 /* fallback faces sized to the web fonts, so text keeps its line breaks while they load */
 @font-face{font-family:"Karla fb";src:local("Arial"),local("ArialMT"),local("Helvetica");size-adjust:101.8%}
 @font-face{font-family:"Cormorant fb";src:local("Times New Roman"),local("TimesNewRomanPSMT");size-adjust:96.5%}
@@ -841,11 +851,11 @@ footer{background:var(--char-3);color:var(--dark-ink);padding:clamp(72px,9vw,128
       <div class="frame left" data-r style="--d:3"><div class="ph wide"><img src="img/lily-wall-l-800.webp" width="800" height="600" loading="lazy" decoding="async" alt="A low capped stone wall in a garden, daylilies along the top and trees behind"></div></div>
     </div>
     <form id="quote" method="post" novalidate data-r style="--d:1" aria-describedby="sample-note">
-      <div class="f"><label for="f-name">Your name</label><input id="f-name" type="text" autocomplete="name" required aria-describedby="e-name"><span class="err" id="e-name">Please add your name.</span></div>
-      <div class="f"><label for="f-phone">Phone</label><input id="f-phone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="e-phone"><span class="err" id="e-phone">Please add a number I can call or text.</span></div>
-      <div class="f"><label for="f-job">What you need</label><select id="f-job" required aria-describedby="e-job"><option value="">Choose one</option><option>Patio</option><option>Retaining wall</option><option>Steps or walkway</option><option>Fire pit or seat wall</option><option>A repair</option><option>Something else</option></select><span class="err" id="e-job">Please choose what you need.</span></div>
-      <div class="f"><label for="f-town">Town <i>(optional)</i></label><input id="f-town" type="text" autocomplete="address-level2"></div>
-      <div class="f full"><label for="f-msg">Tell me about it <i>(optional)</i></label><textarea id="f-msg" placeholder="Rough size, the slope, when you would like it done"></textarea></div>
+      <div class="f"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name"><span class="err" id="e-name">Please add your name.</span></div>
+      <div class="f"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="e-phone"><span class="err" id="e-phone">Please add a number I can call or text.</span></div>
+      <div class="f"><label for="f-job">What you need</label><select id="f-job" name="service" required aria-describedby="e-job"><option value="">Choose one</option><option>Patio</option><option>Retaining wall</option><option>Steps or walkway</option><option>Fire pit or seat wall</option><option>A repair</option><option>Something else</option></select><span class="err" id="e-job">Please choose what you need.</span></div>
+      <div class="f"><label for="f-town">Town <i>(optional)</i></label><input id="f-town" name="town" type="text" autocomplete="address-level2"></div>
+      <div class="f full"><label for="f-msg">Tell me about it <i>(optional)</i></label><textarea id="f-msg" name="message" placeholder="Rough size, the slope, when you would like it done"></textarea></div>
       <div class="f-end">
         <button class="btn" type="submit">Send it</button>
         <p id="sample-note">Sample design: this form does not send anything.</p>
@@ -878,7 +888,7 @@ footer{background:var(--char-3);color:var(--dark-ink);padding:clamp(72px,9vw,128
   </div>
 </footer>
 
-<div class="qbar" id="qbar"><a href="tel:+12155550163"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Call</a><a class="go" href="#estimate">Request an estimate</a></div>
+<div class="qbar" id="qbar" role="region" aria-label="Call or request an estimate"><a href="tel:+12155550163"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Call</a><a class="go" href="#estimate">Request an estimate</a></div>
 
 <script>
 (function(){

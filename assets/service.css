@@ -46,6 +46,15 @@
 .svc-related-cta{flex:none;min-height:44px}
 .chip svg{width:16px;height:16px;color:var(--yellow)}
 
+/* ---------- Who we build for hub: one open section, a short block per trade (name left, text and links right) ---------- */
+.hub-trades .hub-trade{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:20px 64px;padding:40px 0;border-top:1px solid var(--line)}
+.hub-trades .hub-trade:last-child{padding-bottom:0}
+.hub-trades .hub-trade h3{font-size:clamp(24px,2.6vw,30px);line-height:1.15;letter-spacing:-.025em}
+.hub-trades .hub-trade-body > p:first-child{font-size:17px;line-height:1.65;color:var(--text-2);max-width:62ch}
+.hub-trades .hub-trade-body .link-arrow{display:flex;width:fit-content;margin:12px 0 -11px}
+.hub-trades .hub-samples-h{margin-top:24px;font-size:13px;font-weight:600;color:var(--yellow-soft);letter-spacing:.02em}
+.hub-trades .hub-samples{margin-top:12px}
+
 /* ---------- closing ---------- */
 .svc-close{padding-top:96px}
 .closing p.label{margin:0 auto 16px;font-size:12px;line-height:16px;color:var(--yellow);max-width:none}
@@ -56,6 +65,8 @@
 @media (max-width:960px){
   .svc-problem-grid{grid-template-columns:1fr;gap:36px}
   .svc-related-row{padding:28px}
+  .hub-trades .hub-trade{grid-template-columns:1fr;gap:14px;padding:32px 0}
+  .hub-trades .hub-trade:last-child{padding-bottom:0}
 }
 @media (max-width:767px){
   .svc-problem-text > p{font-size:17.5px}

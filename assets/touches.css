@@ -129,7 +129,7 @@ a.reach-card:active{scale:.99}
   .fab-msg:not(.is-away):hover{transform:scale(1.05)}
   .fab-msg:not(.is-away):hover:active{transform:scale(.95)}
 }
-@media (min-width:768px){.fbar.dismissed ~ .fab-msg{bottom:calc(24px + env(safe-area-inset-bottom))}}
+@media (min-width:768px){.fbar.dismissed ~ .fab-region .fab-msg{bottom:calc(24px + env(safe-area-inset-bottom))}}
 /* under 1200 px the floating bar reaches the corner (it is 70 px tall, 20 px off the bottom): the button sits 16 px above it.
    touches.js then sets the same place from the bar's measured top edge. */
 @media (min-width:768px) and (max-width:1199px){.fab-msg{bottom:calc(106px + env(safe-area-inset-bottom))}}
@@ -137,9 +137,9 @@ a.reach-card:active{scale:.99}
 @media (max-width:767px){
   .fab-msg{right:12px;width:48px;height:48px;bottom:calc(118px + env(safe-area-inset-bottom))}
   .fab-msg svg{width:22px;height:22px}
-  .fbar.dismissed ~ .fab-msg{bottom:calc(90px + env(safe-area-inset-bottom))}
+  .fbar.dismissed ~ .fab-region .fab-msg{bottom:calc(90px + env(safe-area-inset-bottom))}
 }
-@media (max-width:960px){.site-header.is-open ~ .fab-msg{opacity:0;visibility:hidden;pointer-events:none}}
+@media (max-width:960px){.site-header.is-open ~ .fab-region .fab-msg{opacity:0;visibility:hidden;pointer-events:none}}
 /* scripts off: it cannot step aside, so it is not shown; the same links are in the contact area and the reach row */
 @media (scripting:none){.fab-msg{display:none}}
 @media print{.fab-msg{display:none}}
@@ -300,8 +300,8 @@ a.reach-card:active{scale:.99}
   .fab-msg.is-away,.fab-msg:hover{transform:none}
 }
 
-/* Nov 26: Mexico flag on the Spanish option, like docmo */
+/* Nov 26: Mexico flag on the Spanish option */
 .lang-opt .lflag{width:24px;height:16px;margin-right:7px;flex:none;border-radius:2px;box-shadow:0 0 0 1px rgba(255,255,255,.18)}
-/* Nov 26 (Lathan): the Call or text card glows green instead of yellow */
+/* Nov 26: the Call or text card glows green instead of yellow */
 .reach-row li:has(.reach-acts){--glow:rgba(37,211,102,.85);--edge:rgba(37,211,102,.42)}
 .reach-row li:has(.reach-acts) .reach-icon{background:rgba(37,211,102,.1);border-color:rgba(37,211,102,.32);color:#25d366}

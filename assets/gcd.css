@@ -269,6 +269,17 @@ html{scrollbar-color:#2a2a2e var(--bg)}
   .dd-feature:hover:active{background:rgba(243,195,0,.13)}
 }
 .dd-item:focus-visible{outline-offset:3px;border-radius:16px}
+/* "Who we build for" headings (dropdown, phone menu, home Where we work) link to the hub. At rest they look exactly as before;
+   the text link family reacts: gray to --text in 200 ms on a real mouse, dim to 75% while pressed. The ::before widens the tap
+   area only into the empty space around each heading, so no row beside it loses a tap. */
+.group-h-link{position:relative;display:inline-block;color:inherit;transition:color 200ms ease,opacity 160ms var(--ease-out)}
+.group-h-link::before{content:"";position:absolute;inset:0}
+.dd-group-h .group-h-link::before{inset:-18px -10px -10px}
+.menu-group-h .group-h-link::before{inset:-18px -10px -10px}
+.area-trades-h .group-h-link::before{inset:-14px -8px}
+.group-h-link:active{opacity:.75}
+.group-h-link[aria-current="page"]{color:var(--yellow-soft)}
+@media (hover:hover) and (pointer:fine){.group-h-link:hover{color:var(--text)}}
 .bar-actions{display:flex;align-items:center;gap:8px;flex:none}
 .bar-actions .btn-primary{--cta-rest:0 0 0 1px rgba(255,226,122,.35),0 8px 30px -8px rgba(243,195,0,.65),inset 0 1px 0 rgba(255,255,255,.45);box-shadow:var(--cta-rest)}
 /* living pulse, top bar Contact us only: a ring of our yellow at 55% grows 0 to 12px as it fades out, with scale 1 to 1.04, every 2.2 s.
@@ -307,7 +318,7 @@ html{scrollbar-color:#2a2a2e var(--bg)}
   .menu-sub-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
   .menu-sub{margin:4px 0 8px 14px;padding-left:10px;border-left:1px solid rgba(255,255,255,.1)}
   .menu-sub-list{display:grid;gap:2px}
-  .menu-group-h{margin:14px 10px 6px;font-size:11px;line-height:16px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--text-3)}
+  .menu-group-h{margin:18px 10px 10px;font-size:11px;line-height:16px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--text-3)}
   .menu-sub[hidden]{display:none}
   .menu-sub-item{display:flex;align-items:flex-start;gap:12px;padding:10px 10px;border-radius:14px;color:var(--text);transition:background-color 200ms ease}
   .menu-sub-item:active{background:rgba(255,255,255,.06)}
